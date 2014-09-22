@@ -1,0 +1,23 @@
+[Form]
+Rect.L=758
+Rect.T=669
+Rect.R=1019
+Rect.B=896
+[Common]
+Synchronize=1
+RelativePath=1
+IsRealTime=1
+TimeMash=5
+fSimpleSignalLoad=2
+formstyle=0
+restartname=
+[Files]
+Count=2
+0=tpp diagram 1.prt
+1=automatics diagram 2.prt
+[Active]
+0=1
+1=1
+[TimeSync]
+0=1
+1=1
