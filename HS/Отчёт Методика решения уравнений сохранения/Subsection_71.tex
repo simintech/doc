@@ -1,0 +1,50 @@
+
+\label{sec:subsection71}
+Вновь рассмотрим уравнение сохранения энергии~\eqref{formula237}. Производную энтальпии в левой части заменим по формуле дифференцирования назад. Энтальпии в правой части распишем через значения на предыдущем шаге по времени и приращение на текущем шаге. Тогда уравнение примет вид
+\begin{align}
+\label{formula71}
+\rho\cdot V\cdot (a_j^h+b_j^h\cdot dh_j^n)=\mu_j \cdot G_j^{n+1} \cdot (h_{j-1}^{n+1}-h_j^{n+1}) - \notag \\
+-(1-\mu_{j+1})\cdot G_{j+1}^{n+1} \cdot (h_{j+1}^{n+1}-h_j^{n+1})  
++ V\cdot\frac{\partial P}{\partial\tau} + Q;
+\end{align}  
+\begin{align}
+\label{formula72}
+\rho\cdot V\cdot (a_j^h+b_j^h\cdot dh_j^n)=\mu_j \cdot G_j^{n+1} \cdot (h_{j-1}^n + dh_{j-1}^n - h_j^n - dh_j^n)- \notag \\
+-(1-\mu_{j+1})\cdot G_{j+1}^{n+1} \cdot (h_{j+1}^n + dh_{j+1}^n - h_j^n - dh_j^n) 
++ V\cdot\frac{\partial P}{\partial\tau} + Q.
+\end{align}
+
+Выделим члены перед приращениями энтальпий:
+\begin{align}
+\label{formula73}
+- \mu_j G_j^{n+1} dh_{j-1}^n + \left[\rho V b_j^h + \mu_j G_j^{n+1} - (1-\mu_{j+1}) G_{j+1}^{n+1} - min\left(\frac{\partial Q}{\partial h_j^n},0 \right) \right] dh_j^n + \notag \\
++ (1-\mu_{j+1}) G_{j+1}^{n+1} dh_{j+1}^n + \bigg[\rho V a_j^h-V \frac{\partial P}{\partial\tau}-Q - \mu_j G_j^{n+1} (h_{j-1}^n - h_j^n) + \notag \\
++ (1-\mu_{j+1}) G_{j+1}^{n+1} (h_{j+1}^n - h_j^n)\bigg] = 0.  
+\end{align}
+
+Запишем это уравнение в сокращённом виде
+\begin{equation}
+\label{formula74}
+A_j^h \cdot dh_{j-1}^n + B_j^h \cdot dh_j^n + C_j^h \cdot dh_{j+1}^n + D_j^h = 0 = F_j^h,
+\end{equation}
+где $A_j^h=- \mu_j \cdot G_j^{n+1}$; $C_j^h = (1-\mu_{j+1}) \cdot G_{j+1}^{n+1}$;
+$B_j^h = \rho \cdot V \cdot b_j^h - min\left(\frac{\partial Q}{\partial h_j^n},0 \right)-A_j^h-C_j^h$;
+
+\noindent $D_j^h=\rho \cdot V \cdot a_j^h-V \cdot \frac{\partial P}{\partial\tau}-Q - \mu_j \cdot G_j^{n+1} \cdot (h_{j-1}^n - h_j^n) + (1-\mu_{j+1}) \cdot G_{j+1}^{n+1} \cdot (h_{j+1}^n - h_j^n)$.
+
+Выполняя далее преобразования этого уравнения к виду, пригодному для решения итерационным методом Ньютона-Рафсона, получим
+\begin{equation}
+\label{formula75}
+A_j^h \cdot \Delta(dh_{j-1}^n) + B_j^h \cdot \Delta(dh_j^n) + C_j^h \cdot \Delta(dh_{j+1}^n)  = -F_j^h.
+\end{equation}
+
+Полученное уравнение связывает энтальпии в трёх соседних расчётных ячейках канала и по форме оно аналогично уравнению~\eqref{formula65}. Это означает, что весь вывод, проведённый в подразделе~\ref{sec:subsection61}, справедлив и для полученного уравнения, то есть можно использовать полученную методику для нахождения коэффициентов, связывающих приращения отклонений энтальпий в расчётных ячейках на текущей итерации с приращениями отклонений энтальпий в ограничивающих каналы узлах. 
+
+Получается, что можно для энтальпии в любой расчётной ячейке канала записать следующее уравнение:
+\begin{equation}
+\label{formula76}
+\Delta(dh_j^n)=S_j^0+S_j^1 \cdot \Delta(dh_{in}^n) + S_j^2 \cdot \Delta(dh_{out}^n).
+\end{equation}
+
+
+
