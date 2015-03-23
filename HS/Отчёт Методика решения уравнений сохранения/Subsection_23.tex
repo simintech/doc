@@ -1,0 +1,110 @@
+
+\label{sec:subsection23}
+Дифференциальное уравнение сохранения энергии жидкости и газа в переменных Эйлера выглядит следующим образом (см. ~\cite{Samarsky}):
+\begin{equation}
+\label{formula226}
+\frac{\partial}{\partial\tau}\left(\varepsilon+\frac{V^2}{2} \right) + (\vec{V} \cdot \nabla) \cdot \left(\varepsilon+\frac{V^2}{2} \right) = \frac{-1}{\rho}\cdot div(P\cdot\vec{V}) + \frac Q \rho + \frac{F\cdot\vec{V}}{\rho}-\frac 1 \rho \cdot div(\vec{W}),
+\end{equation}
+где $\varepsilon$ --- внутренняя энергия единицы массы; $\frac{V^2}{2}$ --- кинетическая энергия единицы массы; $\frac{-1}{\rho}\cdot div(P\cdot\vec{V})$ --- член, связанный с работой поверхностных сил; $\frac{F\cdot\vec{V}}{\rho}$ --- член, связанный с работой объёмных сил; $Q$ --- мощньсть объёмных источников энергии, распределённых в пространстве; $\vec{W}$ --- вектор плотности теплового потока (знак минус связан с тем, что при выводе уравнения энергии положительно направление нормали к рассматриваемому элементарному объёму принимается совпадающим с внешней нормалью). 
+
+По определению энтальпия единицы массы газа или жидкости есть 
+\begin{equation}
+\label{formula227}
+h = \varepsilon + \frac P \rho.
+\end{equation}
+
+Заменим в уравнении~\eqref{formula226} внутреннюю энергию на энтальпию, выраженную из
+
+\noindent \eqref{formula227}. Получим 
+\begin{eqnarray}
+\label{formula228}
+\frac{\partial}{\partial\tau}\left(h-\frac P \rho + \frac{V^2}{2} \right) + (\vec{V} \cdot \nabla) \cdot \left(h-\frac P \rho + \frac{V^2}{2} \right) = \nonumber ~\\
+= \frac{-1}{\rho}\cdot div(P\cdot\vec{V}) + \frac Q \rho + \frac{F\cdot\vec{V}}{\rho}-\frac 1 \rho \cdot div(\vec{W}).
+\end{eqnarray} 
+
+Запишем проекцию уравнения сохранения энергии на ось x, совпадающую с направлением потока:
+\begin{eqnarray}
+\label{formula229}
+\frac{\partial h}{\partial\tau} - \frac{\partial}{\partial\tau}\left(\frac P \rho\right)+\frac{\partial}{\partial\tau}\left(\frac{V^2}{2} \right) + V \cdot \frac{\partial h}{\partial x} - V \cdot \frac{\partial}{\partial x}\left(\frac P \rho  \right) + V \cdot \frac{\partial}{\partial x}\left(\frac{V^2}{2} \right) = \nonumber ~\\
+= -\frac 1 \rho\cdot\frac{\partial}{\partial x}(P \cdot V) + \frac Q \rho + \frac{F_x\cdot V}{\rho} -\frac 1 \rho\cdot \left(\frac{\partial W_x}{\partial x} + \frac{\partial W_y}{\partial y}\right),
+\end{eqnarray} 
+где $y$ --- направление, перпендикулярное направлению потока. Раскроем производные:
+\begin{eqnarray}
+\label{formula230}
+\frac{\partial h}{\partial\tau} - \frac{\frac{\partial P}{\partial\tau} \cdot\rho - P \cdot\frac{\partial\rho}{\partial\tau} }{\rho^2} + V \cdot\frac{\partial V}{\partial\tau} + V \cdot \frac{\partial h}{\partial x} - V \cdot \frac{\frac{\partial P}{\partial x} \cdot\rho - P \cdot\frac{\partial\rho}{\partial x} }{\rho^2} + V^2 \cdot\frac{\partial V}{\partial x} = \nonumber ~\\
+= -\frac 1 \rho\cdot \left(\frac{\partial P}{\partial x}\cdot V + P \cdot \frac{\partial V}{\partial x}  \right) + \frac Q \rho + \frac{F_x\cdot V}{\rho} -\frac 1 \rho\cdot \left(\frac{\partial W_x}{\partial x} + \frac{\partial W_y}{\partial y}\right).
+\end{eqnarray}
+
+Умножим уравнение~\eqref{formula230} на $\rho$ и сгруппируем слагаемые с учётом того, что из уравнения сохранения импульса~\eqref{formula217} $\rho\cdot\frac{\partial V}{\partial\tau}+\rho\cdot V \cdot \frac{\partial V}{\partial x} = F_x - \frac{\partial P}{\partial x}$. Получим   
+\begin{eqnarray}
+\label{formula231}
+\left(\rho\cdot\frac{\partial h}{\partial\tau}+\frac{P}{\rho}\cdot\frac{\partial\rho}{\partial\tau}   \right)+\left(\rho\cdot V \cdot\frac{\partial h}{\partial x}+\frac{P\cdot V}{\rho}\cdot\frac{\partial\rho}{\partial x}+P \cdot\frac{\partial V}{\partial x} \right) - \left(\frac{\partial P}{\partial\tau}+V\cdot\frac{\partial P}{\partial x}  \right) = \nonumber ~\\
+= Q - \left(\frac{\partial W_x}{\partial x} + \frac{\partial W_y}{\partial y} \right).
+\end{eqnarray}
+
+Выберем уровень, от которого отсчитывается внутренняя энергия, так, чтобы в рассматриваемом элементарном объёме $\varepsilon=0$. Тогда из~\eqref{formula227} получим, что $h=P/{\rho}$. Тогда слагаемые в первых скобках~\eqref{formula231} можно сгруппировать в $\frac{\partial}{\partial\tau}\left(\rho\cdot h\right)$, а во вторых скобках --- в $\frac{\partial}{\partial x}\left(\rho\cdot V \cdot h \right)$. Тогда получится
+\begin{equation}
+\label{formula232}
+\frac{\partial}{\partial\tau}\left(\rho\cdot h\right)+\frac{\partial}{\partial x}\left(\rho\cdot V \cdot h \right) - \left(\frac{\partial P}{\partial\tau}+V\cdot\frac{\partial P}{\partial x} \right) = Q - \left(\frac{\partial W_x}{\partial x} + \frac{\partial W_y}{\partial y} \right). 
+\end{equation}
+
+Добавим во втором слагаемом площадь контрольного объёма и учтём, что эта площадь может изменяться по длине. Кроме того, заменим произведение $\rho \cdot V \cdot S$ на $G$ --- массовый расход. Тогда получим
+\begin{eqnarray}
+\label{formula233}
+\frac{\partial}{\partial\tau}\left(\rho\cdot h\right)+\left(\frac 1 S \cdot \frac{\partial(G \cdot h)}{\partial x} - \rho\cdot V \cdot h \cdot \frac 1 S \cdot \frac{\partial S}{\partial x} \right) - \left(\frac{\partial P}{\partial\tau}+V\cdot\frac{\partial P}{\partial x} \right) = \nonumber ~\\
+= Q - \left(\frac{\partial W_x}{\partial x} + \frac{\partial W_y}{\partial y} \right). 
+\end{eqnarray}
+
+Проведём интегрирование полученного уравнения в пределах контрольного объёма. 
+\begin{eqnarray}
+\label{formula234}
+\int\limits_{0}^{L}\frac{\partial(\rho\cdot h)}{\partial\tau} \cdot dx + \int\limits_{0}^{L} \frac 1 S \cdot \frac{\partial(G \cdot h)}{\partial x} \cdot dx - \int\limits_{0}^{L} \rho\cdot V \cdot h \cdot \frac 1 S \cdot \frac{\partial S}{\partial x} \cdot dx - \nonumber ~\\
+- \int\limits_{0}^{L} \left(\frac{\partial P}{\partial\tau}+V\cdot\frac{\partial P}{\partial x} \right) \cdot dx = \int\limits_{0}^{L} \left( Q - \left(\frac{\partial W_x}{\partial x} + \frac{\partial W_y}{\partial y} \right) \right) \cdot dx. 
+\end{eqnarray}
+
+Вынесем не зависящие от $x$ величины из-под знака интегрирования. Производную $\partial S/\partial x$ аппроксимируем средним значением между соседними ячейками. Член с производной массового расхода запишем в виде $\int_{0}^{L} \frac{\partial(G \cdot h)}{\partial x} \cdot dx=G(L)\cdot h(L)-G(0)\cdot h(0)=-\sum_{j=1}^{N_{in}} G_j \cdot h_j + \sum_{j=1}^{N_{out}} G_j \cdot h$ (поскольку из контрольного объёма теплоноситель выходит, имея энтальпию этого контрольного объёма). Также учтём, что в рассматриваемом контрольном объёме $\frac{\partial P}{\partial x}=0$, поскольку давление не изменяется по длине контрольного объёма. Умножим обе части уравнения на площадь проходного сечения ячейки $S$. После этого получим
+\begin{eqnarray}
+\label{formula235}
+\frac{\partial(\rho\cdot h)}{\partial\tau}\cdot V-\sum_{j=1}^{N_{in}} G_j \cdot h_j + \sum_{j=1}^{N_{out}} G_j \cdot h - \rho\cdot W \cdot h \cdot \overline{\frac{\partial S}{\partial x}} \cdot L - \frac{\partial P}{\partial\tau}\cdot V = \nonumber ~\\
+= Q\cdot V - S \cdot \int\limits_{0}^{L} \left(\frac{\partial W_x}{\partial x} + \frac{\partial W_y}{\partial y} \right) \cdot dx.
+\end{eqnarray}
+
+Раскладываем член $\frac{\partial(\rho\cdot h)}{\partial\tau}$ на сумму двух слагаемых и заменяем производную $\frac{\partial\rho}{\partial\tau}$ на величину $\left( R_m + \frac 1 V \cdot \sum_{j=1}^{N} G_j + \rho\cdot W \cdot \frac 1 S \cdot \overline{\frac{\partial S}{\partial x}} \right)$, следующую из уравнения сохранения массы~\eqref{formula214}. Перепишем первые три слагаемых в уравнении~\eqref{formula235}:
+\begin{eqnarray}
+\label{formula236}
+\frac{\partial(\rho\cdot h)}{\partial\tau}\cdot V-\sum_{j=1}^{N_{in}} G_j \cdot h_j + \sum_{j=1}^{N_{out}} G_j \cdot h = \frac{\partial\rho}{\partial\tau}\cdot h \cdot V + \rho\cdot \frac{\partial h}{\partial\tau}\cdot V -\sum_{j=1}^{N_{in}} G_j \cdot h_j + \nonumber ~\\
++ \sum_{j=1}^{N_{out}} G_j \cdot h = \left( R_m + \frac 1 V \cdot \sum_{j=1}^{N} G_j + \rho\cdot W \cdot \frac 1 S \cdot \overline{\frac{\partial S}{\partial x}} \right)\cdot h \cdot V + \rho\cdot \frac{\partial h}{\partial\tau}\cdot V - \nonumber ~\\
+-\sum_{j=1}^{N_{in}} G_j \cdot h_j + \sum_{j=1}^{N_{out}} G_j \cdot h = R_m \cdot h \cdot V + h\cdot\sum_{j=1}^{N} G_j + \rho\cdot W \cdot h \cdot L \cdot \overline{\frac{\partial S}{\partial x}} + \nonumber ~\\
++ \rho\cdot \frac{\partial h}{\partial\tau}\cdot V -\sum_{j=1}^{N_{in}} G_j \cdot h_j + \sum_{j=1}^{N_{out}} G_j \cdot h = R_m \cdot h \cdot V + \rho\cdot W \cdot h \cdot L \cdot \overline{\frac{\partial S}{\partial x}} + \nonumber ~\\
++ \rho\cdot \frac{\partial h}{\partial\tau}\cdot V + \sum_{j=1}^{N_{in}} G_j \cdot (h-h_j).
+\end{eqnarray}
+
+Эти преобразования показывают, что в уравнении сохранения энергии для контрольного объёма следует учитывать только входящие в ячейку массовые расходы (то есть выходящие расходы не изменяют энергию в ячейке). Введём коэффициент $\mu_j$, зависящий от знака расхода:
+$$
+\mu_j=\begin{cases}
+1,&\text{если $G_j>0$;}\\
+0,&\text{если $G_j \le 0$.}
+\end{cases}
+$$
+
+Подставив~\eqref{formula236} в~\eqref{formula235}, получаем окончательно уравнение сохранения энергии в следующем виде
+\begin{equation}
+\label{formula237}
+\boxed{\rho\cdot V\cdot\frac{\partial h}{\partial\tau}=\sum_{j=1}^{N_{gc}} \mu_j \cdot G_j \cdot (h_j-h)+V\cdot\left(Q+\frac{\partial P}{\partial\tau}-R_m\cdot h \right) + Q_{wall} + Q_{ax}},
+\end{equation}
+где $N_{gc}$ --- количество гидравлических связей, соединённых с рассматриваемой ячейкой; $Q_{wall}$ --- тепловой поток от тепловых структур к ячейке; $Q_{ax}$ --- осевой тепловой поток из соседних расчётных ячеек в рассматриваемую. 
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
