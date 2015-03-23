@@ -1,0 +1,173 @@
+
+\section{Метод Ньютона-Рафсона}
+\label{sec:section5}
+Уравнения вида~\eqref{formula44},~\eqref{formula413} и~\eqref{formula417}, записанные для всех ячеек и гидравлических связей рассматриваемой теплогидравлической системы, образуют в совокупности систему нелинейных алгебраических уравнений относительно неизвестных приращений давлений, расходов и энтальпий на текущем шаге по времени. В первой версии для нахождения неизвестных используюется итерационный метод Ньютона-Рафсона, описанный в этом разделе.
+
+Пусть требуется найти неизвестные $x_1, x_2, \dots, x_n$, удовлетворяющие $n$ ал\-геб\-ра\-и\-чес\-ким уравнениям:
+\begin{equation}
+\label{formula51}
+\left\{
+\begin{aligned}
+f_1(x_1,x_2,\dots,x_n) & = 0 \\
+f_2(x_1,x_2,\dots,x_n) & = 0 \\
+.................... & ..... \\
+f_n(x_1,x_2,\dots,x_n) & = 0,
+\end{aligned}
+\right.
+\end{equation}
+где функции $f_1,f_2,\dots,f_n$ --- непрерывно дифференцируемые в некоторой окрестности начального приближения. 
+
+Предположим, что после $r$ итераций нам известно $r$-е приближение решения
+
+\noindent $x_1^{(r)},x_2^{(r)},\dots,x_n^{(r)}$, которое отличается от точного решения $x_1^{*}, x_2^{*}, \dots, x_n^{*}$ на величины $\Delta x_i$:
+\begin{equation}
+\label{formula52}
+x_i^{*}=x_i^{(r)}+\Delta x_i.
+\end{equation}
+
+Погрешности $\Delta x_i$ неизвестны и подлежат определению. Введём обозначение \\ $x^{(r)}=\left\{x_1^{(r)},x_2^{(r)},\dots,x_n^{(r)}\right\}$ для совокупности неизвестных на $r$-м приближении;
+
+\noindent $f_i\left(x^{(r)}\right)=f_i\left(x_1^{(r)},x_2^{(r)},\dots,x_n^{(r)}\right)$ для значений функций на $r$-м приближении; $\frac{\partial f_i\left(x^{(r)}\right)}{\partial x_j}$ --- для частных производных функций от неизвестных на $r$-м приближении. 
+
+Разложим левую часть каждого уравнения системы~\eqref{formula51} в ряд Тейлора по степеням $\Delta x_i$ в окрестности $r$-го приближения:
+\begin{align}
+\label{formula53}
+&f_i\left(x_1^{*},x_2^{*},\dots,x_n^{*}\right)=f_i\left(x^{(r)}\right)+\frac{\partial f_i\left(x^{(r)}\right)}{\partial x_1}\cdot \Delta x_1+\frac{\partial f_i\left(x^{(r)}\right)}{\partial x_2}\cdot \Delta x_2+\dots+ \frac{\partial f_i\left(x^{(r)}\right)}{\partial x_n}\cdot \Delta x_n + \notag ~\\
+&+\frac 1 2 \cdot \frac{\partial^2 f_i\left(x^{(r)}\right)}{\partial x_1^2} \cdot \Delta x_1 + \frac 1 2 \cdot \frac{\partial^2 f_i\left(x^{(r)}\right)}{\partial x_2^2} \cdot \Delta x_2 + \dots + \frac 1 2 \cdot \frac{\partial^2 f_i\left(x^{(r)}\right)}{\partial x_n^2} \cdot \Delta x_n + \dots.
+\end{align}
+
+Левая часть этого уравнения равна нулю, поскольку это точное решение. В правой части отбросим величины второго и выше порядков малости относительно $\Delta x_i$. Тогда система уравнений~\eqref{formula51} заменится следующей системой:
+\begin{equation}
+\label{formula54}
+\left\{
+\begin{aligned}
+\frac{\partial f_1\left(x^{(r)}\right)}{\partial x_1}\cdot \Delta x_1+\frac{\partial f_1\left(x^{(r)}\right)}{\partial x_2}\cdot \Delta x_2+\dots+ \frac{\partial f_1\left(x^{(r)}\right)}{\partial x_n}\cdot \Delta x_n & = -f_1\left(x^{(r)}\right) \\
+\frac{\partial f_2\left(x^{(r)}\right)}{\partial x_1}\cdot \Delta x_1+\frac{\partial f_2\left(x^{(r)}\right)}{\partial x_2}\cdot \Delta x_2+\dots+ \frac{\partial f_2\left(x^{(r)}\right)}{\partial x_n}\cdot \Delta x_n & = -f_2\left(x^{(r)}\right) \\
+............................................................................. & ................ \\
+\frac{\partial f_n\left(x^{(r)}\right)}{\partial x_1}\cdot \Delta x_1+\frac{\partial f_n\left(x^{(r)}\right)}{\partial x_2}\cdot \Delta x_2+\dots+ \frac{\partial f_n\left(x^{(r)}\right)}{\partial x_n}\cdot \Delta x_n & = -f_n\left(x^{(r)}\right),
+\end{aligned}
+\right.
+\end{equation}
+являющейся линейной системой относительно погрешностей $\Delta x_i$. Решая систему линейных алгебраических уравнений (СЛАУ)~\eqref{formula54}, вычислим следующее приближение искомого решения
+\begin{equation}
+\label{formula55}
+x_i^{(r+1)}=x_i^{(r)}+\Delta x_i.
+\end{equation} 
+
+Каждое приближение будет отличаться от точного решения, так как исходная система уравнений была линеаризована, но погрешности $\Delta x_i$ на каждом приближении будут становиться всё меньше и меньше. В математической теории доказывается, что если начальное приближение выбрано достаточно хорошо и матрица СЛАУ~\eqref{formula54} на каждой итерации достаточно хорошо обусловлена и имеет обратную матрицу, то метод Ньютона-Рафсона сходится к единственному в данной окрестности решению и, кроме того, имеет квадратичную сходимость. После очередной итерации погрешность каждой неизвестной уменьшается примерно на один или два порядка.
+
+Запишем СЛАУ~\eqref{formula54} в матричном виде
+\begin{equation}
+\label{formula56}
+\frac{dF\left(x^{(r)} \right)}{dx}\cdot \left(x^{(r+1)}-x^{(r)}\right)=-f\left(x^{(r)}\right),
+\end{equation} 
+где $\frac{dF\left(x^{(r)} \right)}{dx}$ --- матрица Якоби, которая одновременно является матрицей СЛАУ~\eqref{formula54}; $f\left(x^{(r)}\right)$ --- вектор--столбец значений функций~\eqref{formula51}; $x^{(r)}$ --- вектор--столбец неизвестных на $r$-м приближении. 
+
+Из уравнения~\eqref{formula56} можно получить рекуррентное соотношение для нахождения неизвестных в матричной форме:
+\begin{equation}
+\label{formula57}
+x^{(r+1)}=x^{(r)}-\left(\frac{dF\left(x^{(r)} \right)}{dx} \right)^{-1} \cdot f\left(x^{(r)}\right).
+\end{equation}
+
+Запишем каждое уравнение сохранения импульса типа~\eqref{formula413} в ви\-де, ана\-ло\-гич\-ном \eqref{formula51}:
+\begin{equation}
+\label{formula58}
+F_j^G = A_j^G \cdot dP_{j-1}^n + B_j^G \cdot dG_j^n + C_j^G \cdot dP_j^n + D_j^G = 0
+\end{equation} 
+
+Выполняя преобразования, такие же, как при выводе метода Ньютона-Рафсона, получим систему уравнений вида    
+\begin{equation}
+\label{formula59}
+\frac{\partial F_j^G(x^{(r)})}{\partial x_1}\cdot \Delta x_1 + \frac{\partial F_j^G(x^{(r)})}{\partial x_2}\cdot \Delta x_2 + \frac{\partial F_j^G(x^{(r)})}{\partial x_3}\cdot \Delta x_3 = -F_j^G(x^{(r)}),
+\end{equation}
+где вектор неизвестных $x^{(r)}=[x_1,x_2,x_3]^\mathrm{T}$; функция $F_j^G=A_j^G \cdot x_1 + B_j^G \cdot x_2 + C_j^G \cdot x_3 + D_j^G$;
+
+\noindent искомые неизвестные есть $x_1=dP_{j-1}^n$; $x_2=dG_j^n$; $x_3=dP_j^n$, а искомые приращения неизвестных на текущей итерации: $\Delta x_1=dP_{j-1}^{n,(r+1)}-dP_{j-1}^{n,(r)}$, $\Delta x_2=dG_j^{n,(r+1)}-dG_j^{n,(r)}$, $\Delta x_3=dP_j^{n,(r+1)}-dP_j^{n,(r)}$, где $r$ --- номер итерации на текущем шаге по времени. 
+
+Найдём составляющие матрицы Якоби для рассматриваемой системы. Уравнение сохранения импульса переписано в виде линейной комбинации неизвестных, поэтому производные по неизвестным равны множителям перед ними, то есть просто
+\begin{equation}
+\label{formula510}
+\left\{
+\begin{aligned}
+\frac{\partial F_j^G(x^{(r)})}{\partial x_1} & = A_j^G; \\
+\frac{\partial F_j^G(x^{(r)})}{\partial x_2} & = B_j^G; \\
+\frac{\partial F_j^G(x^{(r)})}{\partial x_3} & = C_j^G.
+\end{aligned}
+\right.
+\end{equation}
+
+В итоге получим уравнение сохранения импульса в следующем виде
+\begin{equation}
+\label{formula511}
+A_j^G \cdot \Delta(dP_{j-1}^n)+B_j^G \cdot \Delta(dG_j^n) + C_j^G \cdot \Delta(dP_j^n) = -F_j^G(x^{(r)}). 
+\end{equation}
+
+Аналогично получаем для уравнения сохранения массы
+\begin{equation}
+\label{formula512}
+A_j^P \cdot \Delta(dG_{j,in}^n)+B_j^P \cdot \Delta(dP_j^n) + C_j^P \cdot \Delta(dG_{j,out}^n) + D_j^P \cdot \Delta(dh_j^n) = -F_j^P(x^{(r)}) 
+\end{equation}
+и для уравнения сохранения энергии
+\begin{equation}
+\label{formula513}
+A_j^h \cdot \Delta(dG_{j,in}^n)+B_j^h \cdot \Delta(dh_j^n) + C_j^h \cdot \Delta(dG_{j,out}^n) + D_j^h \cdot \Delta(dP_j^n) = -F_j^h(x^{(r)}). 
+\end{equation}
+
+Рассмотрим несколько соседних контрольных объёмов в канале и запишем для них систему уравнений сохранения массы, импульса и энергии:
+\begin{equation}
+\label{formula514}
+\left\{
+\begin{aligned}
+A_j^P \cdot \Delta(dG_{j,in}^n)+B_j^P \cdot \Delta(dP_j^n) + C_j^P \cdot \Delta(dG_{j,out}^n) + D_j^P \cdot \Delta(dh_j^n) & = -F_j^P(x^{(r)}) \\
+A_j^h \cdot \Delta(dG_{j,in}^n)+B_j^h \cdot \Delta(dh_j^n) + C_j^h \cdot \Delta(dG_{j,out}^n) + D_j^h \cdot \Delta(dP_j^n) & = -F_j^h(x^{(r)}) \\
+A_j^G \cdot \Delta(dP_{j-1}^n)+B_j^G \cdot \Delta(dG_j^n) + C_j^G \cdot \Delta(dP_j^n) & = -F_j^G(x^{(r)}).
+\end{aligned}
+\right.
+\end{equation}
+
+Проведём некоторые преобразования полученной системы. Выразим из уравнения сохранения энергии приращение энтальпии:
+\begin{equation}
+\label{formula515}
+\Delta(dh_j^n)=\frac{-F_j^h(x^{(r)})-A_j^h \cdot \Delta(dG_{j,in}^n)-C_j^h \cdot \Delta(dG_{j,out}^n)-D_j^h \cdot \Delta(dP_j^n)}{B_j^h}
+\end{equation}
+и подставим его в уравнение сохранения массы. Получим
+\begin{eqnarray}
+\label{formula516}
+A_j^P \cdot \Delta(dG_{j,in}^n)+B_j^P \cdot \Delta(dP_j^n) + C_j^P \cdot \Delta(dG_{j,out}^n) - \nonumber ~\\
+- \frac{D_j^P}{B_j^h} \cdot \left(F_j^h(x^{(r)})+A_j^h \cdot \Delta(dG_{j,in}^n)+C_j^h \cdot \Delta(dG_{j,out}^n)+D_j^h \cdot \Delta(dP_j^n)\right)=-F_j^P(x^{(r)}).	
+\end{eqnarray}
+
+Перегруппируем слагаемые:
+\begin{eqnarray}
+\label{formula517}
+\left(A_j^P - \frac{D_j^P}{B_j^h} \cdot A_j^h \right) \cdot \Delta(dG_{j,in}^n) + \left(B_j^P - \frac{D_j^P}{B_j^h} \cdot D_j^h   \right) \cdot \Delta(dP_j^n) + \nonumber ~\\
++ \left(C_j^P - \frac{D_j^P}{B_j^h} \cdot C_j^h \right) \cdot \Delta(dG_{j,out}^n) = -\left(F_j^P(x^{(r)}) - \frac{D_j^P}{B_j^h} \cdot F_j^h(x^{(r)}) \right).	
+\end{eqnarray}
+
+Переобозначим коэффициенты, добавив штрих. Тогда~\eqref{formula517} можно будет записать в виде
+\begin{equation}
+\label{formula518}
+\left(A_j^P \right)' \cdot \Delta(dG_{j,in}^n) + \left(B_j^P \right)' \cdot \Delta(dP_j^n) + \left(C_j^P \right)' \cdot \Delta(dG_{j,out}^n) = -\left(F_j^P \right)',
+\end{equation}
+избавившись таким образом от приращения энтальпии в уравнении сохранения массы.
+\newpage 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

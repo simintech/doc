@@ -1,0 +1,50 @@
+\documentclass[12pt,a4paper,titlepage]{report}
+\usepackage{myreportstyle} 
+
+% Title Page
+%\titlepic{\includegraphics[width=8cm]{Logo.eps}}
+\title{\textbf{Описание первой версии теплогидравлического кода SimInTech\\ Методика решения уравнений сохранения \\Версия 1.0}}
+\author{Чернецов Н. Г. \and Ходаковский В. В.}
+\date{Январь 2015 г.}
+
+%\includeonly{Introduction,Section_6}
+
+\begin{document}
+	
+\maketitle
+
+\begin{abstract}
+\input{Abstract}
+\end{abstract}
+
+\setcounter{page}{3} % начало нумерации страниц с титульного листа
+
+\tableofcontents
+\newpage
+
+%\listoffigures
+%\newpage
+
+\include{Introduction}
+\include{Section_1}
+\include{Section_2}
+\include{Section_3}
+\include{Section_4}
+\include{Section_5}
+\include{Section_6}
+\include{Section_7}
+\include{Section_8}
+\include{Conclusion}
+\include{bibliography}
+
+\AtEndDocument
+
+\end{document}
+
+
+
+
+
+
+
+

@@ -1,0 +1,104 @@
+
+\label{sec:subsection21}
+Исходное уравнение сохранения массы имеет вид
+\begin{equation}
+\label{formula21}
+\frac{\partial\rho}{\partial\tau}+div\left(\rho\cdot\vec V\right)=R_m,
+\end{equation}
+где $\rho(x,y,z,t)$ \textthreequartersemdash\ плотность жидкости (или газа); $\vec V=\vec V(x,y,z,t)$ \textthreequartersemdash\ вектор скорости жидкости или газа в точке с координатами $(x,y,z)$ в момент времени $t$, $R_m$ \textthreequartersemdash\ локальный объёмный источник массы.
+
+Для течений в каналах уравнение неразрывности может быть записано в терминах средних значений по поперечному сечению канала. Умножим~\eqref{formula21} на площадь канала $S=S(x)$.
+\begin{equation}
+\label{formula22}
+S\cdot\frac{\partial\rho}{\partial\tau}+S\cdot\frac{\partial(\rho\cdot V)}{\partial x}=S\cdot R_m,
+\end{equation}
+где $\rho=\rho(x,t)$ и $V=V(x,t)$ \textthreequartersemdash\ средние значения плотности и проекции скорости на ось $x$ по поперечному сечению канала. Внесём площадь во втором слагаемом под знак производной. Получим
+\begin{equation}
+\label{formula23}
+S\cdot\frac{\partial\rho}{\partial\tau}+\left(\frac{\partial(\rho\cdot V\cdot S)}{\partial x}-\rho\cdot V \cdot \frac{\partial S}{\partial x}\right)=S\cdot R_m.
+\end{equation}
+
+Разделим уравнение на площадь $S$:
+\begin{equation}
+\label{formula24}
+\frac{\partial\rho}{\partial\tau}+\frac 1 S \cdot \frac{\partial(\rho\cdot V\cdot S)}{\partial x}-\rho\cdot V \cdot \frac 1 S \cdot \frac{\partial S}{\partial x}=R_m.
+\end{equation}
+
+Это общий вид уравнения сохранения массы в канале. Если предположить, что площадь поперечного сечения канала изменяется по длине достаточно медленно (так называемое «гидравлическое приближение»), то можно пренебречь слагаемым с производной площади и получить уравнение сохранения массы в виде
+\begin{equation}
+\label{formula25}
+\frac{\partial\rho}{\partial\tau}+\frac 1 S \cdot \frac{\partial(\rho\cdot V\cdot S)}{\partial x}=R_m.
+\end{equation}
+
+В настоящее время в теплогидравлическом коде рассматривается это упрощённое уравнение, но в дальшейших выводах для общности (и для возможной будущей модернизации кода) будем использовать~\eqref{formula24}.
+
+Перепишем уравнение сохранения массы относительно давления в контрольном объёме с использованием уравнения состояния для плотности $\rho=\rho(P,h)$, где $P$ \textthreequartersemdash\ давление, $h$ \textthreequartersemdash\ энтальпия. Заменим производную плотности по времени с использование следующего соотношения
+\begin{equation}
+\label{formula26}
+\frac{\partial\rho}{\partial\tau}=\left(\frac{\partial\rho}{\partial P}\right)_{h}\cdot \frac{\partial P}{\partial\tau}+
+\left(\frac{\partial\rho}{\partial h}\right)_{P}\cdot \frac{\partial h}{\partial\tau},
+\end{equation}
+где $\left(\frac{\partial\rho}{\partial P}\right)_{h}$ \textthreequartersemdash\ производная плотности по давлению при постоянной энтальпии; $\left(\frac{\partial\rho}{\partial h}\right)_{P}$ \textthreequartersemdash\ производная плотности по энтальпии при постоянном давлении. В настойках параметров расчёта предусмотрен выбор типа модели: сжимаемая или несжимаемая. Введём коэффициент $f_{comp}$, который равен единице, если выбрана сжимаемая модель, и равен нулю, если выбрана несжимаемая модель. Запишем производную плотности по времени с учётом этого множителя:
+\begin{equation}
+\label{formula27}
+\frac{\partial\rho}{\partial\tau}=f_{comp}\cdot\left(\frac{\partial\rho}{\partial P}\right)_{h}\cdot \frac{\partial P}{\partial\tau}+
+f_{comp}\cdot\left(\frac{\partial\rho}{\partial h}\right)_{P}\cdot \frac{\partial h}{\partial\tau},
+\end{equation} 
+
+Подставляя~\eqref{formula27} в~\eqref{formula24}, получим
+\begin{equation}
+\label{formula28}
+f_{comp}\cdot\left(\frac{\partial\rho}{\partial P}\right)_{h}\cdot \frac{\partial P}{\partial\tau}+
+f_{comp}\cdot\left(\frac{\partial\rho}{\partial h}\right)_{P}\cdot \frac{\partial h}{\partial\tau}+\frac 1 S \cdot \frac{\partial(\rho\cdot V\cdot S)}{\partial x}-\rho\cdot V \cdot \frac 1 S \cdot \frac{\partial S}{\partial x}=R_m.
+\end{equation}
+
+Проинтегрируем это уравнение по $x$ в пределах контрольного объёма (от $0$ до $L$, где $L$ \textthreequartersemdash\ длина контрольного объёма):
+\begin{equation}
+\label{formula29}
+f_{comp}\cdot\left(\frac{\partial\rho}{\partial P}\right)_{h}\cdot \frac{\partial P}{\partial\tau}=
+R_m-\frac 1 S \cdot \frac{\partial(\rho\cdot V\cdot S)}{\partial x}+\rho\cdot V \cdot \frac 1 S \cdot \frac{\partial S}{\partial x}-f_{comp}\cdot\left(\frac{\partial\rho}{\partial h}\right)_{P}\cdot \frac{\partial h}{\partial\tau};
+\end{equation}
+\begin{eqnarray}
+\label{formula210}
+\int_{0}^{L} f_{comp}\cdot\left(\frac{\partial\rho}{\partial P}\right)_{h}\cdot \frac{\partial P}{\partial\tau}\cdot dx=
+\int_{0}^{L} \bigg[R_m-\frac 1 S \cdot \frac{\partial(\rho\cdot V\cdot S)}{\partial x}+ \nonumber \\
++ \rho\cdot V \cdot \frac 1 S \cdot \frac{\partial S}{\partial x}-f_{comp}\cdot\left(\frac{\partial\rho}{\partial h}\right)_{P}\cdot \frac{\partial h}{\partial\tau}\bigg]\cdot{dx}.
+\end{eqnarray}
+
+Вынесем величины, постоянные в пределах контрольного объёма, из-под знака интеграла:
+\begin{eqnarray}
+\label{formula211}
+f_{comp}\cdot\left(\frac{\partial\rho}{\partial P}\right)_{h}\cdot \frac{\partial P}{\partial\tau} \cdot \int_{0}^{L} dx=
+R_m \cdot \int_{0}^{L} dx - \frac 1 S \cdot \int_{0}^{L} \frac{\partial(\rho\cdot V\cdot S)}{\partial x} \cdot dx + \nonumber ~\\
++ \rho\cdot V \cdot \frac 1 S \cdot \int_{0}^{L} \frac{\partial S}{\partial x} \cdot dx - f_{comp}\cdot\left(\frac{\partial\rho}{\partial h}\right)_{P}\cdot \frac{\partial h}{\partial\tau} \cdot \int_{0}^{L} dx;
+\end{eqnarray}
+\begin{eqnarray}
+\label{formula212}
+f_{comp}\cdot\left(\frac{\partial\rho}{\partial P}\right)_{h}\cdot \frac{\partial P}{\partial\tau} \cdot L=
+R_m \cdot L - \frac 1 S \cdot \int_{0}^{L} \frac{\partial(\rho\cdot V\cdot S)}{\partial x} \cdot dx + \nonumber ~\\
++ \rho\cdot V \cdot \frac 1 S \cdot \int_{0}^{L} \frac{\partial S}{\partial x} \cdot dx - f_{comp}\cdot\left(\frac{\partial\rho}{\partial h}\right)_{P}\cdot \frac{\partial h}{\partial\tau} \cdot L.
+\end{eqnarray}
+
+В уравнении~\eqref{formula212} $\rho\cdot V\cdot S = G$ \textthreequartersemdash\ массовый расход жидкости в канале. С ячейкой может быть соединено некоторое количество гидравлических связей. По определению интеграл от производной равен дифференцируемой функции, то есть $\int_{a}^{b} \frac{df(x)}{dx} \cdot dx = \left(f(x)+c\right)|_{a}^{b}\\=f(b)-f(a).$ Поэтому $\int_{0}^{L} \frac{\partial(\rho\cdot V\cdot S)}{\partial x} \cdot dx = G(L) - G(0) = -\sum_{j=1}^{N} G_j$, где $N$ \textthreequartersemdash\ общее количество подключённых к ячейке гидравлических связей, а смена знака связана с положительным направлением нормали к ячейке (положительный расход слева противоположен положительному направлению нормали, а положительный расход справа, наоборот, совпадает с этим направлением). Кроме того, и из физического смысла ясно, что если втекает расхода больше, чем вытекает, то $\partial P / \partial\tau$ должно быть больше нуля. 
+
+По теореме о среднем значении $\int_{0}^{L} \frac{\partial S}{\partial x} \cdot dx = \overline{\frac{\partial S}{\partial x}} \cdot L$, где $\overline{\frac{\partial S}{\partial x}}$ \textthreequartersemdash\ среднее значение производной площади в пределах контрольного объёма. Строго говоря, в рассматриваемом приближении площадь проходного сечения в пределах контрольного объёма считается постоянной (поэтому мы и вынесли её из-под знака интеграла в~\eqref{formula211}). Но производную $\frac{\partial S}{\partial x}$ можно аппроксимировать каким-либо образом между соседними ячейками. С учётом этого, перепишем~\eqref{formula212} в следующем виде
+\begin{eqnarray}
+\label{formula213}
+f_{comp}\cdot\left(\frac{\partial\rho}{\partial P}\right)_{h}\cdot \frac{\partial P}{\partial\tau} \cdot L=
+R_m \cdot L + \frac 1 S \cdot \sum_{j=1}^{N} G_j + \rho\cdot V \cdot \frac 1 S \cdot \overline{\frac{\partial S}{\partial x}} \cdot L - \nonumber ~\\ 
+-f_{comp}\cdot \left(\frac{\partial\rho}{\partial h}\right)_{P}\cdot \frac{\partial h}{\partial\tau} \cdot L.
+\end{eqnarray}
+
+Разделим~\eqref{formula213} на длину ячейки и получим окончательно уравнение сохранения массы в виде
+\begin{equation}
+\label{formula214}
+\boxed{f_{comp}\cdot\left(\frac{\partial\rho}{\partial P}\right)_{h}\cdot \frac{\partial P}{\partial\tau} =
+R_m + \frac 1 V \cdot \sum_{j=1}^{N} G_j + \rho\cdot W \cdot \frac 1 S \cdot \overline{\frac{\partial S}{\partial x}} - f_{comp}\cdot\left(\frac{\partial\rho}{\partial h}\right)_{P}\cdot \frac{\partial h}{\partial\tau}}
+,
+\end{equation}
+где $V = L \cdot S$ \textthreequartersemdash\ объём ячейки; $N$ \textthreequartersemdash\ количество гидравлических связей, подсоединённых к ячейке; $G_j$ \textthreequartersemdash\ массовый расход через $j$-ю гидравлическую связь; $W$ \textthreequartersemdash\ скорость жидкости в ячейке. 
+
+
+
+
+        
