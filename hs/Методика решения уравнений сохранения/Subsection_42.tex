@@ -1,0 +1,86 @@
+
+\label{sec:subsection42}
+Найдём конечно-разностный аналог уравнения сохранения импульса, записанный\linebreak для левой границы j-ой ячейки. Для этого рассмотрим уравнение сохранения импульса для гидравлической связи \eqref{formula225}. Заменим производную расхода по формуле дифференцирования назад
+\begin{equation}
+\label{formula45}
+\frac{\partial G_j^{n+1}}{\partial\tau}=a_j^G + b_j^G \cdot dG_j^n.
+\end{equation}
+
+Запишем потери на трение и на преодоление местных сопротивлений в следующем виде:
+\begin{equation}
+\label{formula46}
+\Delta P_{fr}+\Delta P_{loc}=\left(\frac{\lambda\cdot\frac L 2}{d_g} + \xi
+\right)_{in}\cdot \frac{\rho_{in}\cdot w_{in}^2}{2} + \left(\frac{\lambda\cdot\frac L 2}{d_g} + \xi
+\right)_{out}\cdot \frac{\rho_{out}\cdot w_{out}^2}{2}.
+\end{equation} 
+
+В этой формуле учитываются потери на трение на половине длины входной и выходной ячеек, а также потери на преодоление местных сопротивлений по обе стороны от гидравлической связи. Скорость жидкости можно переписать через массовый расход как $w=\frac{G}{\rho\cdot S}$. 
+
+Запишем потери на трение в полунеявном виде с использованием массового расхода на текущем и на следующем шаге по времени в виде
+\begin{eqnarray}
+\label{formula47}
+\Delta P_{fr}+\Delta P_{loc}=\left\{\left[\left(\frac{\lambda\cdot\frac L 2}{d_g} + \xi \right)\cdot \frac{1}{2\cdot\rho\cdot S^2} \right]_{in} + \left[\left(\frac{\lambda\cdot\frac L 2}{d_g} + \xi \right)\cdot \frac{1}{2\cdot\rho\cdot S^2} \right]_{out} \right\} \times \nonumber ~\\
+\times | G_j^n | \cdot G_j^{n+1}=F_{fr}^n\cdot | G_j^n | \cdot G_j^{n+1},
+\end{eqnarray}
+где $F_{fr}^n$ --- приведённый коэффициент трения, рассчитанный по параметрам на текущем шаге по времени.
+
+Запишем нивелирные потери (величину, обратную нивелирному напору) в следующем виде
+\begin{equation}
+\label{formula48}
+\Delta P_{niv}=-H_{niv}=\rho_{in}^n\cdot g \cdot \frac{\Delta Z_{in}}{2}+\rho_{out}^n\cdot g \cdot \frac{\Delta Z_{out}}{2},
+\end{equation}
+где $\Delta Z_{in}$ и $\Delta Z_{out}$ --- изменение высоты в ячейке на входе гидравлической связи и на выходе гидравлической связи соответственно. Таким образом, если изменение высоты будет положительным, то необходимо будет затратить энергию на подъём жидкости при движении её в положительном направлении. 
+
+Напор насоса запишем в виде
+\begin{equation}
+\label{formula49}
+H_{pump}=\Delta P_{pump}+min\left(\frac{\partial P_{pump}}{\partial G_j},0\right)\cdot dG_j^n.
+\end{equation}
+
+Подставим~\eqref{formula45},~\eqref{formula47} и~\eqref{formula49} в~\eqref{formula225}. Получим
+\begin{eqnarray}
+\label{formula410}
+J_j \cdot (a_j^G + b_j^G \cdot dG_j^n)  = 
+P_{j-1}^{n+1} - P_j^{n+1} - F_{fr}^n\cdot | G_j^n | \cdot G_j^{n+1} - \Delta P_{acc} - \Delta P_{niv} + \nonumber ~\\
++ \Delta P_{pump}+min\left(\frac{\partial P_{pump}}{\partial G_j},0\right)\cdot dG_j^n. 	
+\end{eqnarray}
+
+Запишем вместо $G_j^{n+1}$ в правой части его выражение через приращение на шаге по времени и значение на предыдущем шаге: $G_j^{n+1}=G_j^n+dG_j^n$. Кроме того, поскольку все уравнения сохранения в теплогидравлическом коде решаются в отклонениях, запишем давления в ячейках, примыкающих к гидравлической связи, через их приращения и значения на предыдущем шаге по времени:
+\begin{equation*}
+\left\{
+\begin{aligned}
+	P_{j-1}^{n+1} & = P_{j-1}^n + dP_{j-1}^n; \\
+	P_j^{n+1} & = P_j^n + dP_j^n.
+\end{aligned}
+\right.
+\end{equation*}
+
+Подставим эти выражения в~\eqref{formula410}:    
+\begin{eqnarray}
+\label{formula411}
+J_j \cdot (a_j^G + b_j^G \cdot dG_j^n)  = 
+(P_{j-1}^n + dP_{j-1}^n) - (P_j^n + dP_j^n) - F_{fr}^n\cdot | G_j^n | \cdot (G_j^n+dG_j^n) - \nonumber ~\\
+- \Delta P_{acc} - \Delta P_{niv} + \Delta P_{pump}+min\left(\frac{\partial P_{pump}}{\partial G_j},0\right)\cdot dG_j^n. 	
+\end{eqnarray}
+
+Перегруппируем слагаемые и перепишем полученное уравнение в следующем \hphantom{aaa} виде
+\begin{eqnarray}
+\label{formula412}
+-1\cdot dP_{j-1}^n+\left(J_j \cdot b_j^G + F_{fr}^n\cdot | G_j^n | - min\left(\frac{\partial P_{pump}}{\partial G_j},0\right)   \right)\cdot dG_j^n +1 \cdot dP_j^n + \nonumber ~\\
++ \left(J_j \cdot a_j^G - P_{j-1}^n + P_j^n + F_{fr}^n\cdot | G_j^n | \cdot G_j^n + \Delta P_{acc} + \Delta P_{niv} - \Delta P_{pump}  \right) = 0. 	
+\end{eqnarray}
+
+Получим окончательно конечно-разностное уравнение сохранения импульса для гидравлической связи в виде
+\begin{equation}
+\label{formula413}
+\boxed{A_j^G \cdot dP_{j-1}^n + B_j^G \cdot dG_j^n + C_j^G \cdot dP_j^n + D_j^G = 0 = F_j^G},
+\end{equation}
+где $A_j^G=-1$; $B_j^G = J_j \cdot b_j^G + F_{fr}^n\cdot | G_j^n | - min\left(\frac{\partial P_{pump}}{\partial G_j},0\right) $; $C_j^G=1$;
+
+\noindent $D_j^G = J_j \cdot a_j^G - P_{j-1}^n + P_j^n + F_{fr}^n\cdot | G_j^n | \cdot G_j^n + \Delta P_{acc} + \Delta P_{niv} - \Delta P_{pump} $. 
+ 
+
+
+
+
+

@@ -1,0 +1,226 @@
+
+Для перехода от дифференциальных уравнений сохранения к алгебраическим (для решения их на ЭВМ) требуется аппроксимация временных производных.
+В теплогидравлическом коде аппроксимация временных производных осуществляется с использованием так называемой "формулы дифференцирования назад" (ФДН). Она позволяет получить порядок аппроксимации временной производной выше второго. 
+
+Рассмотрим формулу дифференцирования назад
+\begin{equation}
+\label{formula31}
+\frac{dx(t_{n+1})}{d\tau}\approx -\frac 1 h\cdot \sum_{i=0}^{k}\alpha_i\cdot x(t_{n+1-i})=a_x+b_x\cdot dX(t_n),
+\end{equation} 
+где $x=\{P,h,G\}$ --- искомые неизвестные (давления и энтальпии в ячейках, расходы в гидравлических связях); $n$ --- временной слой; $k$ --- порядок формулы; $h$ --- шаг интегрирования по времени.
+
+$dX(t_n)$ в правой части это так называемая восходящая разность, которая представляет собой приращение неизвестной величины на шаге по времени (от текущего до следующего шага по времени):
+$$dX(t_n)=x(t_{n+1})-x(t_n).$$
+
+Рассмотрим способ нахождения коэффициентов $\alpha_i$. Разложим функцию $x(t_{n+1-i})$ в ряд Тейлора в окрестности точки $t=t_{n+1}$. Получим
+\begin{eqnarray}
+\label{formula32}
+x(t_{n+1-i})=x(t_{n+1})+\frac{x'(t_{n+1})}{1!}\cdot (t_{n+1-i}-t_{n+1}) + \frac{x''(t_{n+1})}{2!}\cdot (t_{n+1-i}-t_{n+1})^2  + \nonumber ~\\
++\dots+\frac{x^{(n)}(t_{n+1})}{n!}\cdot (t_{n+1-i}-t_{n+1})^n+\dots=\sum_{j=0}^{\infty}\frac{x^{(j)}(t_{n+1})}{j!}\cdot (t_{n+1-i}-t_{n+1})^j.
+\end{eqnarray}
+
+Перепишем разность временных отметок в виде $t_{n+1-i}-t_{n+1}=\frac{t_{n+1-i}-t_{n+1}}{h}\cdot h$. Тогдя ряд Тейлора примет вид
+\begin{equation}
+\label{formula33}
+x(t_{n+1-i})=\sum_{j=0}^{\infty}\frac{x^{(j)}(t_{n+1})}{j!}\cdot \left(\frac{t_{n+1-i}-t_{n+1}}{h}\right)^j\cdot h^j.
+\end{equation}
+
+Подставим~\eqref{formula33} в~\eqref{formula31}. Получим
+\begin{eqnarray}
+\label{formula34}
+\frac{dx(t_{n+1})}{d\tau}\approx -\frac 1 h\cdot \sum_{i=0}^{k}\alpha_i\cdot \sum_{j=0}^{\infty}\frac{x^{(j)}(t_{n+1})}{j!}\cdot \left(\frac{t_{n+1-i}-t_{n+1}}{h}\right)^j\cdot h^j = \nonumber ~\\
+= -\frac 1 h\cdot \sum_{i=0}^{k}\alpha_i\cdot \sum_{j=0}^{\infty}(-1)^j \cdot\frac{x^{(j)}(t_{n+1})}{j!}\cdot \left(\frac{t_{n+1}-t_{n+1-i}}{h}\right)^j\cdot h^j.
+\end{eqnarray}
+
+Выпишем несколько первых слагаемых этой двойной суммы:
+\begin{eqnarray}
+\label{formula35}
+-\frac 1 h\cdot \bigg\{\alpha_0\cdot \left[x(t_{n+1})\cdot 1 - \frac{x'(t_{n+1})}{1!}\cdot 0 + 0 - \dots \right] + \nonumber ~\\
++ \alpha_1 \cdot \bigg[1\cdot x(t_{n+1}) - 1\cdot\frac{x'(t_{n+1})}{1!}\cdot\left(\frac{t_{n+1}-t_n}{h} \right)^1\cdot h^1 + \nonumber ~\\
++ 1\cdot\frac{x''(t_{n+1})}{2!}\cdot\left(\frac{t_{n+1}-t_n}{h} \right)^2\cdot h^2 - \dots \bigg] + \nonumber ~\\
++ \alpha_2 \cdot \bigg[1\cdot x(t_{n+1}) - 1\cdot\frac{x'(t_{n+1})}{1!}\cdot\left(\frac{t_{n+1}-t_{n-1}}{h} \right)^1\cdot h^1 + \nonumber ~\\
++ 1\cdot\frac{x''(t_{n+1})}{2!}\cdot\left(\frac{t_{n+1}-t_{n-1}}{h} \right)^2\cdot h^2 - \dots \bigg] + \nonumber ~\\
++ \alpha_3 \cdot \bigg[1\cdot x(t_{n+1}) - 1\cdot\frac{x'(t_{n+1})}{1!}\cdot\left(\frac{t_{n+1}-t_{n-2}}{h} \right)^1\cdot h^1 + \nonumber ~\\
++ 1\cdot\frac{x''(t_{n+1})}{2!}\cdot\left(\frac{t_{n+1}-t_{n-2}}{h} \right)^2\cdot h^2 - \dots \bigg] + \dots \bigg\}.
+\end{eqnarray}
+
+Перегруппируем слагаемые в сумме, выделив члены при $x(t_{n+1})$, $x'(t_{n+1})$ и т.д., и подставим её в уравнение~\eqref{formula31}. Получим
+\begin{eqnarray}
+\label{formula36}
+x'(t_{n+1}) = -\frac 1 h\cdot \bigg\{x(t_{n+1})\cdot \bigg[\alpha_0+\alpha_1+\alpha_2+\alpha_3+...\bigg] + \nonumber ~\\
++ x'(t_{n+1})\cdot\bigg[0-\alpha_1\cdot\left(\frac{t_{n+1}-t_n}{h} \right)^1\cdot h^1-\alpha_2\cdot\left(\frac{t_{n+1}-t_{n-1}}{h} \right)^1\cdot h^1 - \nonumber ~\\
+- \alpha_3\cdot\left(\frac{t_{n+1}-t_{n-2}}{h} \right)^1\cdot h^1 - \dots\bigg] + \nonumber ~\\
++ x''(t_{n+1})\cdot\bigg[0+\alpha_1\cdot\left(\frac{t_{n+1}-t_n}{h} \right)^2\cdot\frac{h^2}{2!} +\alpha_2\cdot\left(\frac{t_{n+1}-t_{n-1}}{h} \right)^2\cdot\frac{h^2}{2!} + \nonumber ~\\
++ \alpha_3\cdot\left(\frac{t_{n+1}-t_{n-2}}{h} \right)^2\cdot\frac{h^2}{2!} + \dots\bigg] + \nonumber ~\\
++ x'''(t_{n+1})\cdot\bigg[0-\alpha_1\cdot\left(\frac{t_{n+1}-t_n}{h} \right)^3\cdot\frac{h^3}{3!}-\alpha_2\cdot\left(\frac{t_{n+1}-t_{n-1}}{h} \right)^3\cdot\frac{h^3}{3!} - \nonumber ~\\
+- \alpha_3\cdot\left(\frac{t_{n+1}-t_{n-2}}{h} \right)^3\cdot\frac{h^3}{3!} - \dots\bigg] + \dots \bigg\}.
+\end{eqnarray}
+
+Для того, чтобы~\eqref{formula36} было справедливо при всех $x$, коэффициенты $\alpha_i$ должны удовлетворять следующей системе уравнений:
+\begin{equation}
+\label{formula37}
+\left\{
+\begin{aligned}
+0 & =-\frac 1 h \cdot \bigg[\alpha_0+\alpha_1+\alpha_2+\alpha_3+\dots \bigg]\\
+1 & =-\frac 1 h \cdot \bigg[0-\alpha_1\left(\frac{t_{n+1}-t_n}{h} \right)^1\cdot h^1-\alpha_2\left(\frac{t_{n+1}-t_{n-1}}{h} \right)^1\cdot h^1 - \alpha_3\left(\frac{t_{n+1}-t_{n-2}}{h} \right)^1\cdot h^1 - ... \bigg] \\
+0 & =-\frac 1 h \cdot \bigg[0+\alpha_1\left(\frac{t_{n+1}-t_n}{h} \right)^2\cdot\frac{h^2}{2!} +\alpha_2\left(\frac{t_{n+1}-t_{n-1}}{h} \right)^2\cdot\frac{h^2}{2!} + \alpha_3\left(\frac{t_{n+1}-t_{n-2}}{h} \right)^2\cdot\frac{h^2}{2!} + ... \bigg] \\
+0 & =-\frac 1 h \cdot \bigg[0-\alpha_1\left(\frac{t_{n+1}-t_n}{h} \right)^3\cdot\frac{h^3}{3!}-\alpha_2\left(\frac{t_{n+1}-t_{n-1}}{h} \right)^3\cdot\frac{h^3}{3!}- \alpha_3\left(\frac{t_{n+1}-t_{n-2}}{h} \right)^3\cdot\frac{h^3}{3!} - ... \bigg] \\
+0 & = \dots
+\end{aligned}
+\right.
+\end{equation}
+
+Немного перепишем систему, сократив множители:
+\begin{equation}
+\label{formula38}
+\left\{
+\begin{aligned}
+0 & = \alpha_0+\alpha_1+\alpha_2+\alpha_3+\dots\\
+1 & = \alpha_1\cdot\left(\frac{t_{n+1}-t_n}{h} \right)^1 +\alpha_2\cdot\left(\frac{t_{n+1}-t_{n-1}}{h} \right)^1 + \alpha_3\cdot\left(\frac{t_{n+1}-t_{n-2}}{h} \right)^1 + \dots  \\
+0 & =\alpha_1\cdot\left(\frac{t_{n+1}-t_n}{h} \right)^2 +\alpha_2\cdot\left(\frac{t_{n+1}-t_{n-1}}{h} \right)^2 + \alpha_3\cdot\left(\frac{t_{n+1}-t_{n-2}}{h} \right)^2 + \dots \\
+0 & =\alpha_1\cdot\left(\frac{t_{n+1}-t_n}{h} \right)^3+\alpha_2\cdot\left(\frac{t_{n+1}-t_{n-1}}{h} \right)^3+ \alpha_3\cdot\left(\frac{t_{n+1}-t_{n-2}}{h} \right)^3 + \dots \\
+0 & = \dots
+\end{aligned}
+\right.
+\end{equation}
+
+Таким образом, для нахождения коэффициентов ФДН необходимо решить следующую систему алгебраических уравнений:
+\begin{equation}
+\label{formula39}
+\begin{pmatrix}
+1 & 1 & 1 & \dots & 1 \\
+0 & \left(\frac{t_{n+1}-t_n}{h} \right)^1 & \left(\frac{t_{n+1}-t_{n-1}}{h} \right)^1 & \dots & \left(\frac{t_{n+1}-t_{n+1-k}}{h} \right)^1 \\
+0 & \left(\frac{t_{n+1}-t_n}{h} \right)^2 & \left(\frac{t_{n+1}-t_{n-1}}{h} \right)^2 & \dots & \left(\frac{t_{n+1}-t_{n+1-k}}{h} \right)^2 \\
+\dots & \dots & \dots & \dots & \dots \\
+0 & \left(\frac{t_{n+1}-t_n}{h} \right)^k & \left(\frac{t_{n+1}-t_{n-1}}{h} \right)^k & \dots & \left(\frac{t_{n+1}-t_{n+1-k}}{h} \right)^k
+\end{pmatrix} \times 
+\begin{pmatrix}
+\alpha_0 \\
+\alpha_1 \\
+\alpha_2 \\
+\dots \\
+\alpha_k
+\end{pmatrix} =
+\begin{pmatrix}
+0 \\
+1 \\
+0 \\
+\dots \\
+0
+\end{pmatrix}.
+\end{equation}
+
+Матрица данной системы похожа на транспонированную матрицу Вандермонда. Найдём теперь коэффициенты $a_x$ и $b_x$ в уравнении~\eqref{formula31}. Выразим $x(t_{n+1-i})$ через восходящие разности:
+\begin{equation}
+\label{formula310}
+\left\{
+\begin{aligned}
+x(t_{n-k+2}) & = x(t_{n-k+1}) + dX(t_{n-k+1}) \\
+x(t_{n-k+3}) & = x(t_{n-k+1}) + dX(t_{n-k+1}) + dX(t_{n-k+2}) \\
+..... & .......................................................... \\
+x(t_n) & = x(t_{n-k+1}) + dX(t_{n-k+1}) + \dots + dX(t_{n-2}) + dX(t_{n-1}) \\
+x(t_{n+1}) & = x(t_{n-k+1}) + dX(t_{n-k+1}) + \dots + dX(t_{n-1}) + dX(t_n)
+\end{aligned}
+\right.
+\end{equation}
+
+Подставим $x$ из~\eqref{formula310} в~\eqref{formula31}:
+\begin{eqnarray}
+\label{formula311}
+-\frac 1 h \cdot \sum_{i=0}^{k}\alpha_i \cdot x(t_{n+1-i}) = \hphantom{aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa} \nonumber ~\\
+= -\frac 1 h \cdot \bigg\{\alpha_0 \cdot \bigg[ x(t_{n-k+1}) + dX(t_{n-k+1}) + \dots + dX(t_{n-1}) + dX(t_n) \bigg] + \nonumber ~\\ 
++ \alpha_1 \cdot \bigg[ x(t_{n-k+1}) + dX(t_{n-k+1}) + \dots + dX(t_{n-2}) + dX(t_{n-1}) \bigg] + \dots + \nonumber ~\\
++\alpha_{k-1} \cdot \bigg[ x(t_{n-k+1}) + dX(t_{n-k+1}) \bigg] + \alpha_k \cdot x(t_{n-k+1}) \bigg\}.
+\end{eqnarray}
+
+Перегруппируем слагаемые следующим образом:
+\begin{eqnarray}
+\label{formula312}
+-\frac 1 h \cdot \sum_{i=0}^{k}\alpha_i \cdot x(t_{n+1-i}) = \hphantom{aaaaaaaaaaaaaaaaaaaaaaa} \nonumber ~\\
+= -\frac 1 h \cdot \bigg\{\alpha_0 \cdot dX(t_n) + (\alpha_0 + \alpha_1)\cdot dX(t_{n-1}) + \dots + \nonumber ~\\
++(\alpha_0 + \alpha_1 + \dots + \alpha_{k-1})\cdot dX(t_{n-k+1}) + \nonumber ~\\
++(\alpha_0 + \alpha_1 + \dots + \alpha_{k-1} + \alpha_k)\cdot x(t_{n-k+1}) \bigg\}.
+\end{eqnarray} 
+
+Согласно первому уравнение системы~\eqref{formula38} $\alpha_0 + \alpha_1 + \dots + \alpha_{k-1} + \alpha_k=0$. С учётом этого можно~\eqref{formula312} записать в сокращённом виде:
+\begin{equation}
+\label{formula313}
+x'(t_{n+1}) = -\frac 1 h \cdot \sum_{i=0}^{k}\alpha_i \cdot x(t_{n+1-i}) = -\frac 1 h \cdot \sum_{i=0}^{k-1} \alpha'_i \cdot dX(t_{n-i}), 
+\end{equation}
+где 
+\begin{equation}
+\label{formula314}
+\alpha'_i = \sum_{j=0}^{i} \alpha_j.
+\end{equation}
+
+Перепишем~\eqref{formula313} в следующем виде
+\begin{equation}
+\label{formula315}
+x'(t_{n+1}) = -\frac 1 h \cdot \sum_{i=0}^{k-1} \alpha'_i \cdot dX(t_{n-i}) = -\frac 1 h \cdot \alpha'_0 \cdot dX(t_n) -\frac 1 h \cdot \sum_{i=1}^{k-1} \alpha'_i \cdot dX(t_{n-i}),  
+\end{equation} 
+поэтому
+\begin{equation}
+\label{formula316}
+a_x=-\frac 1 h \cdot \sum_{i=1}^{k-1} \alpha'_i \cdot dX(t_{n-i}); b_x=-\frac 1 h \cdot \alpha'_0=-\frac 1 h \cdot \alpha_0.
+\end{equation}
+
+Проиллюстрируем полученные уравнения на примере формулы дифференцирования назад 2-го порядка (k=2). В этом случае
+\begin{equation}
+\label{formula317}
+\frac{dx(t_{n+1})}{d\tau}\approx -\frac 1 h \cdot \bigg(\alpha_0\cdot x(t_{n+1}) + \alpha_1\cdot x(t_n) + \alpha_2\cdot x(t_{n-1}) \bigg),
+\end{equation} 
+где коэффициенты $\alpha_i$ находятся из следующей системы:
+\begin{equation}
+\label{formula318}
+\begin{pmatrix}
+1 & 1 & 1 \\
+0 & \left(\frac{t_{n+1}-t_n}{h} \right)^1 & \left(\frac{t_{n+1}-t_{n-1}}{h} \right)^1 \\
+0 & \left(\frac{t_{n+1}-t_n}{h} \right)^2 & \left(\frac{t_{n+1}-t_{n-1}}{h} \right)^2 
+\end{pmatrix} \times 
+\begin{pmatrix}
+\alpha_0 \\
+\alpha_1 \\
+\alpha_2
+\end{pmatrix} =
+\begin{pmatrix}
+0 \\
+1 \\
+0
+\end{pmatrix}.
+\end{equation}
+
+Чтобы решить эту систему, необходимо запоминать предыдущий момент времени $t_{n-1}$ и знать прогнозируемый следущий момент времени $t_{n+1}$. После нахождения $\alpha$ определяем коэффициенты $a_x$ и $b_x$:
+\begin{eqnarray}
+\label{formula319}
+\alpha'_0=\alpha_0; \nonumber ~\\
+\alpha'_1=\alpha_0+\alpha_1; \nonumber ~\\
+\frac{dx(t_{n+1})}{d\tau}\approx -\frac 1 h \cdot \big(\alpha'_0\cdot dX(t_n) + \alpha'_1\cdot dX(t_{n-1}) \big) = a_x+b_x \cdot dX(t_n); \nonumber ~\\
+a_x=-\frac 1 h \cdot \alpha'_1 \cdot dX(t_{n-1}); b_x=-\frac 1 h \cdot \alpha'_0.
+\end{eqnarray}
+
+Видно, что $\alpha_2$ непосредственно не используется, но оно необходимо, чтобы найти $\alpha_0$ и $\alpha_1$. Кроме того, необходимо запоминать предыдущее значение восходящей разности $dX(t_{n-1})$. Если предположить, что шаг по времени в течение двух временных шагов не изменялся и равнялся $h$, то, решая вручную систему~\eqref{formula318}, найдём
+\begin{equation*}
+\left\{
+\begin{aligned}
+\alpha_0 & = -3/2 \\
+\alpha_1 & = 2 \\
+\alpha_2 & = -1/2.
+\end{aligned}
+\right.
+\end{equation*}
+
+Тогда для производной получим
+\begin{eqnarray}
+\label{formula320}
+\frac{dx(t_{n+1})}{d\tau}\approx -\frac 1 h \cdot \bigg(-\frac 3 2\cdot x(t_{n+1}) + 2\cdot x(t_n) -\frac 1 2 \cdot x(t_{n-1}) \bigg) = \nonumber \\
+= \frac 1 h \cdot \bigg(\frac 3 2\cdot x(t_{n+1}) - 2\cdot x(t_n) +\frac 1 2 \cdot x(t_{n-1}) \bigg),
+\end{eqnarray} 
+что совпадает с выражением для формулы дифференцирования назад, полученной в
+
+\noindent \cite[стр.~110]{OpenFOAM}. Если переписать~\eqref{formula320} через восходящие разности, то получим:
+\begin{eqnarray}
+\label{formula321}
+\frac{dx(t_{n+1})}{d\tau}\approx -\frac 1 h \cdot \bigg(-\frac 3 2\cdot dX(t_n) +\frac 1 2\cdot dX(t_{n-1}) \bigg) = \frac 1 h \cdot \bigg(\frac 3 2 \cdot dX(t_n) -\frac 1 2 \cdot dX(t_{n-1}) \bigg).
+\end{eqnarray}
+
+Особенностью использования ФДН является наличие так называемого "разгонного участка" в начале расчёта, когда количество пройденных шагов по времени меньше выбранного порядка метода. В теплогидравлическом коде предусмотрено правильное прохождение разгонного участка с постепенным увеличением текущего порядка метода до выбранного.

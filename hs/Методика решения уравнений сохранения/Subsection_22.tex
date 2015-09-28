@@ -1,0 +1,110 @@
+
+\label{sec:subsection22}
+Дифференциальное уравнение сохранения импульса жидкости и газа в переменных Эйлера выглядит следующим образом (см. ~\cite{Samarsky}):
+\begin{equation}
+\label{formula215}
+\frac{\partial\vec V}{\partial\tau}+(\vec{V} \cdot \nabla)\cdot \vec{V} = \frac{-1}{\rho} \cdot grad(P) + \frac{\vec{F}}{\rho}. 
+\end{equation}
+
+В проекции на координатную ось $x$ это уравнение имеет вид
+\begin{equation}
+\label{formula216}
+\frac{\partial V_x}{\partial\tau}+\sum_{\alpha=1}^{3} V_{\alpha} \cdot \frac{\partial V_x}{\partial x_{\alpha}} = \frac{-1}{\rho} \cdot \frac{\partial P}{\partial x} + \frac{F_x}{\rho}. 
+\end{equation}
+
+В нашем случае скорость жидкости направлена только вдоль оси $x$, то есть $V_x=V$, и поэтому уравнение можно переписать следующим образом
+
+\begin{equation}
+\label{formula217}
+\rho\cdot\frac{\partial V}{\partial\tau}+\rho\cdot V \cdot \frac{\partial V}{\partial x} + \frac{\partial P}{\partial x} = R_{mom}, 
+\end{equation}
+где $R_{mom}$ --- источниковый член в уравнении сохранения импульса. В данном случае $R_{mom} = F_x$, где $F_x$ --- это составляющая объёмной внешней силы, действующая на жидкость в направлении потока (например, сила тяжести, действующая на жидкость в вертикальном канале), но в общем случае могут присутствовать и другие составляющие, например источник импульса, связанный с работой насоса.
+
+Уравнение количества движения для контрольного объёма получается путем интегрирования~\eqref{formula217} по двум полуобъёмам, примыкающим к рассматриваемой гидравлической связи слева (индекс "in") и справа (индекс "out"):
+\begin{eqnarray}
+\label{formula218}
+\int\limits_{-L_{in}/2}^{0} \left(\rho\cdot\frac{\partial V}{\partial\tau}+\rho\cdot V \cdot \frac{\partial V}{\partial x}+\frac{\partial P}{\partial x}-R_{mom}\right) \cdot dx + \nonumber ~\\
++ \int\limits_{0}^{L_{out}/2} \left(\rho\cdot\frac{\partial V}{\partial\tau}+\rho\cdot V \cdot \frac{\partial V}{\partial x}+\frac{\partial P}{\partial x}-R_{mom}\right) \cdot dx = 0.
+\end{eqnarray}
+
+Выразим скорость теплоносителя через массовый расход $\left(V = \frac{G}{\rho \cdot S}\right)$ и подставим в\linebreak \eqref{formula217}. Кроме того, объединим два слагаемых в скобках в одно
+$$\left(\rho\cdot V \cdot \frac{\partial V}{\partial x}+\frac{\partial P}{\partial x}=\frac{\partial}{\partial x}\left(P + \frac{\rho \cdot V^2}{2} \right) \right).$$ 
+Тогда получим
+\begin{eqnarray}
+\label{formula219}
+\int\limits_{-L_{in}/2}^{0} \left(\rho\cdot\frac{\partial}{\partial\tau}\left(\frac{G}{\rho \cdot S}        \right)+\frac{\partial}{\partial x}\left(P + \frac{\rho \cdot V^2}{2} \right)   -R_{mom}\right) \cdot dx + \nonumber ~\\
++ \int\limits_{0}^{L_{out}/2} \left(\rho\cdot\frac{\partial}{\partial\tau}\left(\frac{G}{\rho \cdot S}        \right)+\frac{\partial}{\partial x}\left(P + \frac{\rho \cdot V^2}{2} \right)   -R_{mom}\right) \cdot dx = 0.
+\end{eqnarray}
+
+Объединим два интеграла в один
+\begin{equation}
+\label{formula220}
+\int\limits_{-L_{in}/2}^{L_{out}/2} \left(\rho\cdot\frac{\partial}{\partial\tau}\left(\frac{G}{\rho \cdot S}        \right)+\frac{\partial}{\partial x}\left(P + \frac{\rho \cdot V^2}{2} \right)   -R_{mom}\right) \cdot dx = 0.
+\end{equation}
+
+Оставим в левой части слагаемое, содержащее массовый расход:
+\begin{equation}
+\label{formula221}
+\int\limits_{-L_{in}/2}^{L_{out}/2} \left(\rho\cdot\frac{\partial}{\partial\tau}\left(\frac{G}{\rho \cdot S}        \right)\right) \cdot dx = 
+-\int\limits_{-L_{in}/2}^{L_{out}/2} 
+\left(\frac{\partial}{\partial x}\left(P + \frac{\rho \cdot V^2}{2} \right)   -R_{mom}\right)
+\cdot dx
+\end{equation}
+
+Раскроем производную в левой части. Получим
+\begin{eqnarray}
+\label{formula222}
+\rho\cdot\frac{\partial}{\partial\tau}\left(\frac{G}{\rho \cdot S}\right) = 
+\rho\cdot \left(\frac 1 {\rho \cdot S} \cdot \frac{\partial G}{\partial\tau}-\frac{G}{\rho^2 \cdot S} \cdot \frac{\partial\rho}{\partial\tau}-\frac{G}{\rho \cdot S^2} \cdot \frac{\partial S}{\partial\tau}\right) = \nonumber ~\\
+= \frac 1 S \cdot \frac{\partial G}{\partial\tau}-\frac{G}{\rho \cdot S} \cdot \frac{\partial\rho}{\partial\tau}-\frac{G}{S^2} \cdot \frac{\partial S}{\partial\tau}
+\end{eqnarray}
+
+Подставим~\eqref{formula222} в~\eqref{formula221} и проинтегрируем по длине. Тогда получим в левой части~\eqref{formula221} следующую сумму:
+\begin{eqnarray}
+\label{formula223}
+\int\limits_{-L_{in}/2}^{L_{out}/2} \left(\rho\cdot\frac{\partial}{\partial\tau}\left(\frac{G}{\rho \cdot S}        \right)\right) \cdot dx = \int\limits_{-L_{in}/2}^{L_{out}/2} \left(\frac 1 S \cdot \frac{\partial G}{\partial\tau}-\frac{G}{\rho \cdot S} \cdot \frac{\partial\rho}{\partial\tau}-\frac{G}{S^2} \cdot \frac{\partial S}{\partial\tau}  \right) \cdot dx = \nonumber ~\\
+= \left(\frac{L_{in}}{2\cdot S_{in}}+\frac{L_{out}}{2\cdot S_{out}} \right) \cdot \frac{\partial G}{\partial\tau} - \left(\frac{L_{in}}{2\cdot\rho_{in}\cdot S_{in}}\cdot\frac{\partial\rho_{in}}{\partial\tau}+\frac{L_{out}}{2\cdot\rho_{out}\cdot S_{out}}\cdot\frac{\partial\rho_{out}}{\partial\tau} \right) \cdot G - \nonumber ~\\
+- \left(\frac{L_{in}}{2\cdot S_{in}^2}\cdot\frac{\partial S_{in}}{\partial\tau}+\frac{L_{out}}{2\cdot S_{out}^2}\cdot\frac{\partial S_{out}}{\partial\tau} \right) \cdot G
+\end{eqnarray}
+
+В первой версии теплогидравлического кода слагаемые, связанные с изменением \linebreak плотности и площади проходного сечения во времени, полагаются малыми (хотя в будущем, при модернизации кода, они возможно будут учтены). Обозначим сумму давления и скоростного напора в правой части~\eqref{formula221} через $P_{total}$ (полное давление). С учётом этого перепишем~\eqref{formula221} в следующем виде
+\begin{equation}
+\label{formula224}
+\left(\frac{L_{in}}{2\cdot S_{in}}+\frac{L_{out}}{2\cdot S_{out}} \right) \cdot \frac{\partial G}{\partial\tau} = -\int\limits_{-L_{in}/2}^{L_{out}/2} 
+\frac{\partial P_{total}}{\partial x} \cdot dx +\int\limits_{-L_{in}/2}^{L_{out}/2} 
+R_{mom} \cdot dx 
+\end{equation}
+
+Обозначим множитель в левой части через $J$. Это так называемый "инерционный коэффициент"\  гидравлической связи. Первый член в правой части есть изменение полного давления жидкости между центрами соседних контрольных объёмов. Второй член в правой части это изменение импульса жидкости за счёт внешних воздействий (например, силы тяжести или работы насоса). Падение полного давления между соседними ячейками можно расписать через статические давления в этих ячейках и сумму потерь давления и добавочных напоров. Добавим для общности также отброшенные члены. Тогда получим окончательно уравнение сохранения импульса в следующем виде
+\begin{equation}
+\label{formula225}
+\boxed{J \cdot \frac{\partial G}{\partial\tau} - A_1 \cdot G - A_2 \cdot G = 
+P_{in} - P_{out} - \Delta P_{fr} - \Delta P_{loc} - \Delta P_{acc} + H_{niv} + H_{pump}}
+, 	
+\end{equation} 
+где $A_1$ --- множитель, учитывающий производную плотности от времени; $A_2$ --- множитель, учитывающий производную площади от времени; $P_{in}$ --- давление в контрольном объёме на входе гидравлической связи; $P_{out}$ --- давление в контрольном объёме на выходе гидравлической связи; $\Delta P_{fr}$ --- потери давления на трение; $\Delta P_{loc}$ --- потери давления на преодоление местных гидравлических сопротивлений; $\Delta P_{acc}$ --- потери давления на ускорение; $H_{niv}$ --- нивелирный напор; $H_{pump}$ --- напор насоса.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
