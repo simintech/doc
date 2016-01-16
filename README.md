@@ -3,6 +3,8 @@ doc
 
 SimInTech Documentation (howto's, help pages, faq's, documents, techniques, etc.)
 
+automatics           - справка по блокам автоматики
+
 howto                - step-by-step tutorials
 
 programming_language - help pages for SimInTech internal programming language
