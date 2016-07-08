@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>Тестовая страница со стилями элементов</title>
+  <body>
+    <p>Простой текст абзаца</p>
+    <p>заголовок секции выглядит</p>
+    <section>
+      <title>Вот таким вот образом</title>
+    </section>
+    <p>пути к файлам выглядят <filepath>вот таким вот образом</filepath></p>
+    <p>элементы окон (кнопки, пункты меню и пр) выглядяд <uicontrol>вот таким вот
+        образом</uicontrol></p>
+    <p>команды меню выглядят <cmdname>вот таким вот образом</cmdname> и в них нужно использовать
+      стрелочку "→"</p>
+    <p>куски коды выглядят <codeblock>вот таким вот образом</codeblock></p>
+    <p>код к строку выглядит <codeph>вот таким вот образом</codeph></p>
+    <p>Вот пример рисунка:</p>
+    <fig id="fig_vh4_cxx_nw">
+      <title>пример рисунка</title>
+      <image placement="break" href="nachalo_raboti/poshagovoe_rukovodstvo/images/00_00.png"
+        align="center" id="image_wh4_cxx_nw"/>
+    </fig>
+    <p>А вот ссылка на рисунок: <xref href="#topic_v4b_tyc_rf/fig_vh4_cxx_nw" format="dita"/></p>
+    <p>Вот пример таблицы:</p>
+    <table frame="all" rowsep="1" colsep="1" id="table_swg_hxx_nw">
+      <title>Название таблицы</title>
+      <tgroup cols="2" align="left">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <thead>
+          <row>
+            <entry>шапка первого столба</entry>
+            <entry>шапка втоого столба</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>текст1 </entry>
+            <entry>текст2</entry>
+          </row>
+          <row>
+            <entry/>
+            <entry/>
+          </row>
+          <row>
+            <entry/>
+            <entry/>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>А вот ссылка на таблицу: <xref href="#topic_v4b_tyc_rf/table_swg_hxx_nw" format="dita"/></p>
+  </body>
+</topic>
