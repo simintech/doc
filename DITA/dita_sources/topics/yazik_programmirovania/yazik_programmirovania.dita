@@ -84,54 +84,58 @@
     </table>
     <p>Программа может содержать комментарии, заключенные в фигурные скобки:</p>
     <p>
-      <codeblock>{текст комментария}</codeblock></p>
+      <codeblock><comment>{текст комментария}</comment></codeblock></p>
     <p> либо в виде:</p>
-    <p><codeblock>//текст комментария до конца строки.</codeblock></p>
+    <p><codeblock><comment>//текст комментария до конца строки.</comment></codeblock></p>
     <p>Приведем несколько простых примеров программ для блока «Язык программирования».</p>
     <section><title>Пример 1.</title>
     <p>Выходная переменная блока – максимальное значение из двух входных переменных.</p>
-      <codeblock>input u1,u2;
-if u1>u2 then y=u1 else y=u2;
-output y;</codeblock>
-    <p>Можно упростить эту программу, используя функцию <codeph>max</codeph> языка, тогда оператор вычисления
-      выходной переменной запишется в виде <codeph>y=max(u1,u2);</codeph></p></section>
+      <codeblock><kword>input</kword> u1,u2;
+<kword>if</kword> u1>u2 <kword>then</kword> y=u1 <kword>else</kword> y=u2;
+<kword>output</kword> y;</codeblock>
+    <p>Можно упростить эту программу, используя функцию <codeph>max</codeph> языка, тогда оператор
+      вычисления выходной переменной запишется в виде <codeph>y=<funcname>max</funcname>(u1,u2);</codeph></p></section>
     <section><title>Пример 2.</title>
     <p>Выходная переменная запоминает максимальное значение входной переменной.</p>
-      <codeblock>input u;
-if time=0 then y=u else
-if goodstep then y=max(y,u);
-output y;      </codeblock>
-    <p>Значение <codeph>time=0</codeph> соответствует начальному моменту модельного времени. Переменная y практически
-      задает состояние блока. Расчет таких переменных рекомендуется выполнять только на хорошем
-      шаге, когда булевская переменная <codeph>goodstep</codeph> равна 1. В противном случае (при <codeph>goodstep=0</codeph>)
-      переменная <codeph>u</codeph> может быть вычислена, например, на промежуточной итерации решения алгебраических
-      уравнений, в результате чего значение переменной <codeph>y</codeph> будет неверным.</p></section>
+      <codeblock><kword>input</kword> u;
+<kword>if</kword> <rword>time</rword>=0 <kword>then</kword> y=u <kword>else</kword>
+if <rword>goodstep</rword> <kword>then</kword> y=<funcname>max</funcname>(y,u);
+<kword>output</kword> y;      </codeblock>
+    <p>Значение <codeph><funcname>time</funcname>=0</codeph> соответствует начальному моменту
+        модельного времени. Переменная y практически задает состояние блока. Расчет таких переменных
+        рекомендуется выполнять только на хорошем шаге, когда булевская переменная
+          <codeph>goodstep</codeph> равна 1. В противном случае (при <codeph>goodstep=0</codeph>)
+        переменная <codeph>u</codeph> может быть вычислена, например, на промежуточной итерации
+        решения алгебраических уравнений, в результате чего значение переменной <codeph>y</codeph>
+        будет неверным.</p></section>
     <section><title>Пример 3.</title>
     <p>Блок вычисляет время переходного процесса, т.е. время, в течение которого абсолютное
         значение входной переменной <codeph>z</codeph> уменьшается до <codeph>z0</codeph> и в
         дальнейшем не превышает этой величины.</p>
-      <codeblock>const z0=0.05; 
-input z;
-output T=0; //0 – начальное значение
-if goodstep and (abs(z)>z0) then T=time;     </codeblock></section>
+      <codeblock><kword>const</kword> z0=0.05; 
+<kword>input</kword> z;
+<kword>output</kword> T=0; <comment>//0 – начальное значение</comment>
+if <rword>goodstep</rword> <kword>and</kword> (<funcname>abs</funcname>(z)>z0) <kword>then</kword> T=<rword>time</rword>;     </codeblock></section>
     <section><title>Пример 4.</title>
     <p>Блок описывает уравнение Ван-дер-Поля.</p>
-      <codeblock>const mu=1e6;
-init x1=2,x2=0;
-x1’=x2;  //дифференциальные уравнения
+      <codeblock><kword>const</kword> mu=1e6;
+<kword>init</kword> x1=2,x2=0;
+x1’=x2;  <comment>//дифференциальные уравнения</comment>
 x2’=mu*((1-x1^2)*x2-x1); 
-output x1,x2;      </codeblock>
+<kword>output</kword> x1,x2;      </codeblock>
     <p>Здесь операторы присваивания задают дифференциальные уравнения и определяют новые переменные
       <codeph>x1’,x2’</codeph> (производные соответствующих переменных), которые, как и другие переменные, могут быть
       использованы в математических выражениях. </p>
  </section>
     <section><title>Пример 5.</title>
     <p>Счетчик числа поступающих на вход импульсов.</p>
-      <codeblock>input u;        
-output Nimp=0;        
-var u0=1;        
-if goodstep and (u0&lt;=0) and (u>0) then        
-begin Nimp=Nimp+1; u0=u end;      </codeblock>
+      <codeblock><kword>input</kword> u;        
+<kword>output</kword> Nimp=0;        
+<kword>var</kword> u0=1;        
+<kword>if</kword> <rword>goodstep</rword> <kword>and</kword> (u0&lt;=0) <kword>and</kword> (u>0) <kword>then</kword>        
+<kword>begin</kword> Nimp=Nimp+1;
+u0=u; 
+<kword>end</kword>;      </codeblock>
     <p>Импульсы считаются по переднему фронту, т.е. моменту модельного времени, когда входная
       переменная возрастает и становится положительной. </p></section>
     <p> В следующих подразделах справки приведены описания ключевых слов и функций языка

@@ -104,6 +104,43 @@ a.xref:hover {
   font-style: italic;
   font-size: 13.3333px;   
 }
+
+.funcname{
+  background-color: transparent;
+  color: rgb(128, 0, 0);
+  font-weight: bold;
+  font-family: monospace;
+  font-style: normal;
+  font-size: 13.3333px;   
+}
+
+.comment{
+  background-color: transparent;
+  color: rgb(0, 128, 0);
+  font-weight: normal;
+  font-family: monospace;
+  font-style: italic;
+  font-size: 13.3333px;   
+}
+
+.kword{
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-family: monospace;
+  font-style: normal;
+  font-size: 13.3333px;   
+}
+
+.rword{
+  background-color: transparent;
+  color: rgb(255, 0, 128);
+  font-weight: bold;
+  font-family: monospace;
+  font-style: normal;
+  font-size: 13.3333px;   
+}
+
 .q {
   background-color: transparent;
 }

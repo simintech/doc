@@ -14,7 +14,17 @@
     <p>команды меню выглядят <cmdname>вот таким вот образом</cmdname> и в них нужно использовать
       стрелочку "→"</p>
     <p>куски коды выглядят <codeblock>вот таким вот образом</codeblock></p>
-    <p>код к строку выглядит <codeph>вот таким вот образом</codeph></p>
+    <p>внутри куска кода возможно выделять имена функций, комменты, ключевые слова,
+      зарезервированные переменные:</p>
+    <p>
+      <codeblock><funcname>имя функции</funcname> <comment>//комментарий</comment> <kword>ключевое слово</kword> <rword>зарезервированная переменная</rword>
+например:
+<kword>const</kword> z0=0.05; 
+<kword>input</kword> z;
+<kword>output</kword> T=0; <comment>//0 – начальное значение</comment>
+if <rword>goodstep</rword> <kword>and</kword> (<funcname>abs</funcname>(z)>z0) <kword>then</kword> T=<rword>time</rword>;   </codeblock>
+    </p>
+    <p>код в строку выглядит <codeph>вот таким вот образом</codeph></p>
     <p>Вот пример рисунка:</p>
     <fig id="fig_vh4_cxx_nw">
       <title>пример рисунка</title>
