@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ENTITY % xml-d-keyword
+  "funcname|
+   comment|
+   kword|
+   rword
+  "                 
+  >
+
+<!ENTITY   xml-d-att     "(topic xml-d)"
+>
+
+
+<!-- ================== End Software Domain Entities ============= -->

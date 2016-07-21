@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Опции командной строки </title>
+  <body>
+    <section><title>Формат запуска командной строки:</title>
+    <p><codeph>mmain.exe &lt;общепрограммные опции> "имя файла проекта 1" &lt;опции запуска файла
+        проекта 1> ... "имя файла проекта 2" &lt;опции файла проекта 2></codeph>
+    </p>
+    <p>или</p>
+    <p><codeph>mstarter.exe &lt;общепрограммные опции> "имя файла проекта 1" &lt;опции запуска файла
+        проекта 1> ... "имя файла проекта 2" &lt;опции файла проекта 2></codeph>
+    </p>
+    <p><filepath>mmain.exe</filepath> – имя главного процесса программного комплекса (его
+      графическая оболочка);</p>
+      <p>вместо <filepath>mmain.exe</filepath> может стоять имя программы-пускателя <filepath>mstarter.exe</filepath> (она завершается сразу
+      после запуска и передаёт опции командной строке в <filepath>mmain.exe</filepath>). Примечание: <filepath>mstarter.exe</filepath>
+      обеспечивает режим, когда допустим только один экземпляр приложения (SimInTech) в операционной
+      системе — если запускать всё через <filepath>mmain.exe</filepath> то будет открыто столько экземпляров SimInTech
+      сколько раз был вызван <filepath>mmain.exe</filepath></p></section>
+    <section><title>Общепрограммные опции командной строки:</title> <codeph>/exitonstop</codeph> – автоматический
+      выход из программы при остановке счёта (остановка при этом может быть вызвана разными
+      причинами — как пользователем, так и окончанием времени счета, или, например, командой
+      пришедшей с сервера при распределенном расчете); <p><codeph>/exit</codeph> – выход из приложения;</p>
+      /exitonclose – автоматический выход из программы при закрытии последнего схемного окна;
+        <p><codeph>/hidemenus</codeph> – окна анимации и редактора схем будут запускаться без главных меню;</p><p>
+        <codeph>/nomainform</codeph> – скрыть главное окно программы;</p> <p><codeph>/minmainform</codeph> – минимизировать главное окно
+      приложения;</p> <p><codeph>/desctopisparent</codeph> – окна привязываются не к главному окну SimInTech, а к
+        рабочему столу (десктопу) и равноправны с приложениями;</p> <p><codeph>/nohotkeys</codeph> – заблокировать
+      обработку горячих клавиш (как для главного окна так и для других);</p> <p><codeph>/reopen</codeph> – все указанные
+        после этой опции проекты, будут открыты повторно, даже включена опция «Не открывать уже
+        открытые проекты» в параметрах SimInTech;</p>
+      <p><codeph>/runall</codeph> – запускаем всё (проекты и/или пакеты), что на данный момент загружено в программу
+        одним махом;</p> <p><codeph>/sleep</codeph> {N} – задержка на N миллисекунд;</p> <p><codeph>/select</codeph> {имя_проекта} – выбор
+      нужного файла по его имени и установка его как активного проекта;</p> <p><codeph>/selectpack</codeph> {имя проекта} –
+      выбор нужного пакета по его имени и установка его как активного;</p> <p><codeph>/compare</codeph> – сравниваем
+      последние 2 загруженных проекта между собой;</p></section>
+    <section><title>Опции командной строки, для модуля базы сигналов SDB:</title> <p><codeph>/comparedb</codeph>
+      &lt;имя_базы_сигналов_А> &lt;имя_базы_сигналов_Б>– сравнить базы сигналов А и Б;</p> <note> Для запуска процедуры сравнения необходимо чтобы модуль sdb.dll был загружен! Для этого
+        необходимо либо включить его в список плагинов в параметрах программы, либо указать его в
+        командной строке (см. <xref href="#topic_x5n_gv5_qf/li_f5k_mqq_nw" format="dita"
+          >примеры</xref>).</note></section>
+    <section><title>Опции запуска файла проекта:</title> <p><codeph>/nomenu</codeph> – проект будет
+      запущен без главного меню окна;</p> <p><codeph>/nopanels</codeph> – проект будет запущен без главного меню и панели
+      инструментов;</p> <p><codeph>/noborder</codeph> – проект запускается без рамки схемного окна;</p> <p><codeph>/nodialogs</codeph> – выключение
+      всех диалоговых окон при закрытие проекта/пакета - закрытие и выгрузка происходит бесшумно;</p>
+      <p><codeph>/stoponclose</codeph> – проект будет автоматически остановлен при выходе из программы (без вопросов
+      пользователю);</p> <p><codeph>/start</codeph> – произвести инициализацию проекта (или пакета) после загрузки файла;</p>
+      <p><codeph>/minimize</codeph> – запустить проект с минимизированным схемным окном; <codeph>/stayontop</codeph> – запуск проекта
+      поверх всех окон;</p> <p><codeph>/start</codeph> – инициализировать проект (или пакет) автоматически;</p> <p><codeph>/run</codeph> – запустить
+      проект (или пакет) на расчёт после загрузки файла;</p> <p><codeph>/runstep</codeph> – запустить проект (или пакет) на
+      расчёт ОДНОГО ШАГА синхронизации;</p> <p><codeph>/stop</codeph> – останавливаем проект (или пакет);</p> <p><codeph>/pause</codeph> – проект
+      (пакет) переводится в режим паузы;</p> <p><codeph>/loadrestart</codeph> {имя файла рестарта} – загрузить рестарт
+      проекта (пакета);</p> <p><codeph>/saverestart</codeph> {имя файла рестарта} – сохранить рестарт проекта (пакета);</p>
+      <p><codeph>/save</codeph> – если после имени файла идёт ключ /save , то проект пересохраняется в тот же файл
+      (используется при массовом обновлении файлов проектов — например, при разработке видеокадров);</p></section>
+    <section><title>Опции установки размеров окна проекта:</title> <p>/left &lt;целое число> – задаёт левую координату
+      схемного окна проекта;</p> <p><codeph>/top</codeph> &lt;целое число> – задаёт верхнюю координату схемного окна
+      проекта;</p> <p><codeph>/width</codeph> &lt;целое число> – задаёт ширину схемного окна проекта;</p> <p><codeph>/height</codeph> &lt;целое
+      число> – задаёт высоту схемного окна проекта;</p> <p><codeph>/position</codeph> &lt;4 целых числа через пробел> –
+      установить сразу все размеры окна проекта (левая, правая, ширина, высота);</p> <p><codeph>/x</codeph> &lt;вещественное
+      число> – задаёт координату центра схемы по горизонтали;</p> <p><codeph>/y</codeph> &lt;вещественное число> – задаёт
+      координату центра схемы по вертикали;</p> <p><codeph>/scale</codeph> &lt;вещественное число> – задаёт масштабный
+      коэффициент для главной страницы схемного окна;</p> <p><codeph>/setparameter</codeph> &lt;имя параметра> &lt;значение>
+      – установить из командной строки значение произвольной переменной в проекте;</p> <p><codeph>/readonly</codeph> –
+      запуск проекта без возможности его сохранения;</p> <p><codeph>/close</codeph> – закрыть активный проект (или пакет);</p></section>
+    <section><title>Генерация кода:</title> /gencode – запуск меню "Сгенерировать программу" для текущего активного
+        проекта;</section>
+    <section><title>Опции командной строки специфичные для генератора кода:</title> <p><codeph>/cgloadconfig</codeph> – загрузить
+      конфигурацию в генератор кода;</p> <p><codeph>/cgsaveconfig</codeph> – сохранить конфигурацию генератора кода в файл;</p>
+      <p><codeph>/cgsetoutdir</codeph> – установить имя папки для сгенерированного кода;</p> <p><codeph>/cggenerate</codeph> – сгенерировать код
+      для всей конфигурации;</p> <p><codeph>/cgupload</codeph> – загрузить конфигурацию на целевую систему;</p> <p><codeph>/cgsetuploadstr</codeph>
+      – установить строку настроек загрузки на целеую систему;</p> <p><codeph>/cgsethost</codeph> – установить имя хоста для
+      загрузки\отладки целевой системы;</p> <p><codeph>/cgsetcompilestr</codeph> – установить строку настроек компиляции;</p>
+      <p><codeph>/cgclearconflist</codeph> – стереть список конфигураций;</p> <p><codeph>/cgaddconfig</codeph> – добавить конфигурацию;</p>
+      <p><codeph>/cgcompileallconfigs</codeph> – запустить сборку всех конфигураций;</p> <p><codeph>/cguploadallconfigs</codeph> – залить все
+      конфигурации.</p></section>
+    <section><title>Некоторые примеры:</title> <ol><li>Запуск видеокадра без главного окна:
+      <codeph>"C:\SimInTech\bin\mstarter.exe" /nomainform "C:\SimInTech\Projects\PULTS\10CWA10_L.prt"
+      /nomenu /hidemenus /noborder /top 0 /left 1600 /width 1600 /height 1200 /run</codeph> </li><li>Запуск
+      видеокадров, организованных с главным меню: <codeph>C:\SimInTech\bin\mmain.exe ^ /nomainform
+      "menu.prt" /nomenu /hidemenus /noborder /top 0 /left 0 /width 1024 /height 40 /run ^
+      /nomainform "vc.prt" /nomenu /hidemenus /noborder /top 40 /left 0 /width 1024 /height 728 /run</codeph></li>
+      <li>Установка имени алгоритма comp_names: <codeph>c:\SimInTech\bin\mmain.exe
+      "c:\SimInTech\Demo\Automatic\Регулятор\ШРП - штатный регулятор питания БС.prt" /setparameter
+      comp_names aaabbb</codeph></li> <li>Пример: открыть проект, сгенерировать код и закрыть приложение:
+      <codeph>c:\SimInTech\bin\mmain.exe "c:\SimInTech\Demo\Automatic\Регулятор\ШРП - штатный регулятор
+      питания БС.prt" /gencode /close /exit</codeph></li> <li>Пример: открыть проект, указать имя алгоритма,
+      сгенерировать код и закрыть приложение: <codeph>c:\SimInTech\bin\mmain.exe
+      "c:\SimInTech\Demo\Automatic\Регулятор\ШРП - штатный регулятор питания БС.prt" /setparameter
+      comp_names aaabbb /gencode /exit</codeph></li> <li id="li_f5k_mqq_nw">Пример: сравнить две базы сигналов (файлы <filepath>signals.db</filepath> и
+            <filepath>signals-old.db</filepath>, находящиеся в своей папке <filepath>../База
+            сигналов</filepath> относительно текущей директории): <codeph>start "cmp_my_db"
+            "c:\SimInTech\bin\mstarter.exe" "sdb.dll" "/comparedb" "../База сигналов/signals.db"
+            "../База сигналов/signals-old.db"</codeph>.</li></ol></section>
+  </body>
+</topic>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Справочная система  SimInTech</title>
+    <topicref href="topics/test_page.dita"/>
+    <topicref href="topics/vvedenie/vvedenie.dita" navtitle="Введение">
+        <topicref href="topics/vvedenie/naznachenie.dita"/>
+        <topicref href="topics/vvedenie/dostoinstva.dita"/>
+        <topicref href="topics/vvedenie/vnedrenia.dita" navtitle="Успешные внедрения"
+            locktitle="yes"/>
+    </topicref>
+    <topicref href="topics/nachalo_raboti/nachalo_raboti.dita" navtitle="1 - Начало работы"
+        locktitle="yes">
+        <topicref href="topics/nachalo_raboti/poshagovoe_rukovodstvo/poshagovoe_rukovodstvo.dita"
+            navtitle="Пошаговое руководство создания комплексной модели" locktitle="yes">
+            <topicref
+                href="topics/nachalo_raboti/poshagovoe_rukovodstvo/sozdanie_shemi_avtomatiki_s_bazoi_signalov.dita"
+            />
+        </topicref>
+    </topicref>
+    <topicref href="topics/interfeis_polzovatelia/interfeis_polzovatelia.dita"
+        navtitle="2 - Интерфейс пользователя" locktitle="yes">
+        <topicref href="topics/interfeis_polzovatelia/glavnoe_okno/glavnoe_okno.dita"
+            navtitle="2.1 - Главное окно" locktitle="yes">
+            <topicref href="topics/interfeis_polzovatelia/glavnoe_okno/opcii_komandnoi_stroki.dita"
+                navtitle="2.1.1 - Опции командной строки" locktitle="yes"/>
+            
+        </topicref>
+        <topicref href="topics/interfeis_polzovatelia/glavnoe_menu/glavnoe_menu.dita">
+            <topicref href="topics/interfeis_polzovatelia/glavnoe_menu/file.dita"
+                navtitle="Файл" locktitle="yes"/>
+        </topicref>
+        <topicref
+            href="topics/interfeis_polzovatelia/shemnoe_okno_proekta/shemnoe_okno_proekta.dita"
+            navtitle="Схемное окно проекта" locktitle="yes">
+            <topicref
+                href="topics/interfeis_polzovatelia/shemnoe_okno_proekta/shemnoe_okno/shemnoe_okno.dita"
+                navtitle="Схемное окно" locktitle="yes">
+                <topicref
+                    href="topics/interfeis_polzovatelia/shemnoe_okno_proekta/shemnoe_okno/vid/vid.dita"
+                    navtitle="Вид" locktitle="yes">
+                    <topicref
+                        href="topics/interfeis_polzovatelia/shemnoe_okno_proekta/shemnoe_okno/vid/cvet_fona.dita"
+                    />
+                </topicref>
+            </topicref>
+        </topicref>
+    </topicref>
+    <topicref href="topics/yazik_programmirovania/yazik_programmirovania.dita"
+        navtitle="Язык программирования" locktitle="yes"/>
+</map>
