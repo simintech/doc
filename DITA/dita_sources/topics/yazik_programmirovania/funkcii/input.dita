@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>input</title>
+  <shortdesc>Декларация входных переменных блока.</shortdesc>
+  <body>
+    <section><title>Синтаксис:</title>
+    <codeblock><kword>сonst</kword> &lt;имя переменной 1>{:&lt;тип переменной 1>}{=&lt;инициирующее выражение 1>}{,&lt;имя переменной 2>{:&lt;тип переменной 2>}{=&lt;инициирующее выражение 2>}};</codeblock></section>
+    <section><title>Описание:</title>
+      <p>Декларация входных переменных блока (формат аналогичен var). 
+        Значения из входов блока будут передаваться в эти переменные. 
+        Для массивов и матриц обязательно указываются размерности в квадратных скобках.</p>
+    </section>
+    <section><title>Пример:</title>
+      <codeblock><kword>input</kword> u1, u2, 
+if u1>u2 <kword>then</kword> y=u1 <kword>else</kword> y=u2; 
+<kword>output y</kword>; </codeblock>
+   </section>
+    <p>Выходная переменная блока – максимальное значение из двух входных переменных.</p>
+  </body>
+</topic>

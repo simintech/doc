@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>extract</title>
+  <shortdesc>Функция извлечения элементов из матрицы или вектора по номерам. </shortdesc>
+<body>
+<section><title>Синтаксис:</title><codeblock>C = <funcname>extract</funcname>(M, A, B);
+D = <funcname>extract</funcname>(X, Y);</codeblock></section>
+<section><title>Аргументы:</title><p>M – входная матрица,</p>
+<p>A – входной массив номеров строк извлекаемых элементов матрицы M,</p>
+<p>B – входной массив номеров столбцов извлекаемых элементов матрицы M,</p>
+<p>X – входной вектор,</p>
+<p>Y – входной массив номеров извлекаемых элементов вектора X.</p></section>
+  
+<section><title>Описание:</title>
+<p><codeph>extract(M, A, B)</codeph> – функция извлечения из матрицы элементов, определяемых номерами строк и столбцов.</p>
+<p><codeph>extract(X, Y)</codeph> – функция извлечения из вектора элементов, определяемых номерами в векторе.</p>
+<p>Входные массивы X, Y, A, B могут задаваться:</p>
+<ul><li>как переменные типа массив, определенные ранее:</li></ul>
+<p><codeph>D = extract(X,Y)</codeph>;</p>
+<ul><li>как переменные типа массив, состоящие из переменных double, определенных ранее:</li></ul>
+<p><codeph>D = extract([x<sub>1</sub>,x<sub>2</sub>,x<sub>3</sub>,x<sub>4</sub>],[y<sub>1</sub>,y<sub>2</sub>,y<sub>3</sub>,y<sub>4</sub>])</codeph>;</p>
+<p><codeph>D = extract([x<sub>1</sub>,x<sub>2</sub>,x<sub>3</sub>,x<sub>4</sub>],Y)</codeph>;</p>
+<p><codeph>D = extract(X,[y<sub>1</sub>,y<sub>2</sub>,y<sub>3</sub>,y<sub>4</sub>])</codeph>;</p>
+<ul><li>как постоянные массивы:</li></ul>
+<p><codeph>D = extract ([-1.80, -1.60, -1.40, -1.20],Y)</codeph>;</p>
+<p><codeph>D = extract (X,[-1.80, -1.60, -1.40, -1.20])</codeph>;</p>
+<p><codeph>D = extract([-1.80, -1.60, -1.40, -1.20],[-1.40, -0.78,-0.53,-0.35])</codeph> ;</p></section>  
+<section><title>Результат:</title><p>С – выходная матрица, содержащая элементы входной матрицы, полученные в результате извлечения из входной матрицы элементов, определяемых номерами строк и столбцов,</p>
+<p>D – выходной массив, содержащий элементы входного вектора, определяемые номерами элементов.</p></section>  
+<section><title>Пример1:</title><p>Извлечение элементов из матрицы:</p><codeblock><comment>//массивы элементов матрицы</comment>
+<kword>const</kword> M = [[1, -3, 4], [4, -7, 8], [6, -7, 7]];
+C = <funcname>extract</funcname>(M, [2, 3], [1, 3]);</codeblock></section>
+<p>В результате элементам матрицы C будут присвоены значения [[4 , 8] [6, 7]].</p>   
+<section><title>Пример2:</title><p>Извлечение элементов из вектора:</p><codeblock><comment>//массивы элементов вектора</comment>
+<kword>const</kword> X = [1, -3, 4, 4, -7, 8, 6, -7, 7];;
+D = <funcname>extract</funcname>(X, [2, 3]);;</codeblock></section>
+  <p>В результате элементам массива D будут присвоены значения [-3, 4], соответствующие элементам массива X с номерами 2 и 3.</p>   
+</body>
+</topic>

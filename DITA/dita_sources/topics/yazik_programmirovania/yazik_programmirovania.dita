@@ -50,32 +50,32 @@
             <entry>Назначение</entry>
           </row>
           <row>
-            <entry>time</entry>
+            <entry><codeph>time</codeph></entry>
             <entry>Вещественное (double)</entry>
             <entry>Модельное время</entry>
           </row>
           <row>
-            <entry>stepsize</entry>
+            <entry><codeph>stepsize</codeph></entry>
             <entry>Вещественное (double)</entry>
             <entry>Шаг интегрирования</entry>
           </row>
           <row>
-            <entry>goodstep</entry>
+            <entry><codeph>goodstep</codeph></entry>
             <entry>Двоичное (Boolean)</entry>
             <entry>Флаг «хорошего» шага</entry>
           </row>
           <row>
-            <entry>getderi</entry>
+            <entry><codeph>getderi</codeph></entry>
             <entry>Двоичное (Boolean)</entry>
             <entry>Флаг вычисления значений производных</entry>
           </row>
           <row>
-            <entry>setstepflag</entry>
+            <entry><codeph>setstepflag</codeph></entry>
             <entry>Двоичное (Boolean)</entry>
             <entry>Флаг принудительного присвоения шага</entry>
           </row>
           <row>
-            <entry>newstepvalue</entry>
+            <entry><codeph>newstepvalue</codeph></entry>
             <entry>Вещественное (double)</entry>
             <entry>Принудительное значение шага при setstepflag = 1</entry>
           </row>

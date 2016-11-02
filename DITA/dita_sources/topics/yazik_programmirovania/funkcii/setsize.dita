@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>setsize</title>
+  <shortdesc>Установка размера матрицы или вектора.</shortdesc>
+<body>
+<section><title>Синтаксис:</title><codeblock>
+<funcname>setsize</funcname>(n, X);
+<funcname>setsize</funcname>(n, m, Y);</codeblock></section>
+<section><title>Аргументы:</title>
+<p>Х – входной массив или матрица.</p>
+<p>Y – входная матрица.</p>
+<p>n – количество элементов или строк результирующего вектора или матрицы,</p>
+<p>m – количество столбцов результирующей матрицы.</p></section>
+<section><title>Описание:</title>
+<p><codeph>setsize(n, X)</codeph> – устанавливает количество элементов массива или матрицы как n элементов или строк соответственно.</p>  
+<p><codeph>setsize(n, m,  X)</codeph> – устанавливает количество строк и столбцов матрицы как n  и m соответственно.</p>  
+<p>Старые данные сохраняются, новым данным устанавливаются нулевые значения. Если устанавливаемый размер меньше исходного, данные обрезаются.</p>
+<p>Входной массив X  может задаваться:</p>
+<p><ul><li>как переменная типа массив, определенная ранее:</li></ul></p>
+<p><codeph>setsize(n, X)</codeph>;</p>
+<p><ul><li>как массив, состоящий из переменных, определенных ранее:</li></ul></p>
+<p><codeph>setsize(n, [x<sub>1</sub>,x<sub>2</sub>,x<sub>3</sub>,x<sub>4</sub>])</codeph>;</p>
+<p>Входная матрица Y может задаваться:</p>
+<p><ul><li>как переменная типа матрица, определенная ранее:</li></ul></p>
+<p><codeph>setsize(n, m, Y)</codeph>;</p>
+<p><ul><li>как матрица, состоящая из переменных, определенных ранее:</li></ul></p>
+<p><codeph>setsize(n, m, [[x<sub>1</sub>,x<sub>2</sub>],[x<sub>3</sub>,x<sub>4</sub>],[x<sub>5</sub>,x<sub>6</sub>]])</codeph>;</p></section>
+<section><title>Пример2:</title>
+<p>Установка нового размера вектора</p>  
+<codeblock>
+X = [1,2,3];
+<funcname>setsize</funcname>(10, X); <comment>// [1,2,3,0,0,0,0,0,0,0]</comment></codeblock></section>
+<p>В результате элементам массива X будут присвоены значения [1,2,3,0,0,0,0,0,0,0].</p> 
+<section><title>Пример2:</title>
+<p>Установка нового количества строк в матрице</p>  
+<codeblock>
+X = [[1,2],[3,4]]; 
+<funcname>setsize</funcname>(5, X); <comment>// [[1,2],[3,4],[0,0],[0,0],[0,0]]</comment></codeblock></section>
+<p>В результате переменной Х будут присвоены значения массива [[1,2], [3,4], [0,0], [0,0], [0,0]].</p> 
+<section><title>Пример3:</title>
+<p>Установка нового количества строк и столбцов в матрице</p>  
+<codeblock>
+Y = [[1]]; 
+<funcname>setsize</funcname>(2,3, Y); <comment>//[[1 , 0 , 0],[0 , 0 , 0]]</comment></codeblock></section>
+<p>В результате переменной Y будут присвоены значения массива [[1 , 0 , 0], [0 , 0 , 0]].</p> 
+</body>
+</topic>

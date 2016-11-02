@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>limit</title>
+  <shortdesc>Функция ограничения значения заданным интервалом.</shortdesc>
+<body>
+<section><title>Синтаксис:</title>
+<codeblock>xres = <funcname>limit</funcname>(x,xmin,xmax);</codeblock></section>
+<section><title>Аргументы:</title><p>x – входное значение,</p> 
+<p>хmin – минимальное значение интервала,</p>
+<p>xmax – максимальное значение интервала.</p></section>
+<section><title>Описание:</title>
+<p><codeph>limit(x, xmin, xmax)</codeph> – функция ограничения значения x заданным интервалом xmin, xmax.</p>
+</section>
+ <section><title>Результат:</title><p>xres – равен x при выполнении условий неравенства xmin&lt;x&lt;xmax</p>
+   <p>xres – равен xmin при выполнении условия  x&lt;= xmin</p>
+   <p>xres – равен xmax при выполнении условия  x>= xmax</p></section> 
+<section><title>Пример:</title><codeblock><kword>input</kword> x1;
+<kword>output</kword> x2;
+<funcname>Min</funcname> = 0.5;  
+<funcname>Max</funcname> = 0.7;
+x2 = <funcname>limit</funcname>(x1, Min, Max);</codeblock></section>
+<p>В результате выходная переменная блока x2 будет равна входной x1, но ограничена «снизу» и «сверху» значениями 0,5 и 0,7 включительно.</p>
+  </body>
+</topic>

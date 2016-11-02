@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>det</title>
+  <shortdesc>Функция вычисления детерминанта матрицы.</shortdesc>
+<body>
+<section><title>Синтаксис:</title><codeblock>d = <funcname>det</funcname>(M);</codeblock></section>
+<section><title>Аргументы:</title><p>M – входная матрица.</p></section>
+<section><title>Описание:</title>
+<p><codeph>det(M)</codeph> – функция возвращает значение детерминанта матрицы. Матрица M должна быть квадратной.</p>
+<p>Входная матрица М может задаваться:</p>
+<p><ul><li>как переменная типа матрица, определенная ранее:</li></ul></p>
+<p>d = <codeph>det(M)</codeph>;</p>
+<p><ul><li>как матрица, состоящая из переменных, определенных ранее:</li></ul></p>
+<p>d = <codeph>det([[x1,x2],[x3,x4],[x5,x6]])</codeph>;</p>
+<p><ul><li>как постоянный массив:</li></ul></p>
+<p>d = <codeph>det([[1,2],[3,4],[5,6]])</codeph>;</p></section>
+  <section><title>Результат:</title><p>d – значение детерминанта матрицы M.</p></section>  
+<section><title>Пример:</title><codeblock>
+<kword>const</kword> M = [[2, 2, 1, 3, 4], [3, 1, 2, 3, 1], [4, -1, 2, 4, -2], [1, -1, 1, 1, 2], [4, -1, 2, 5, 6]];  
+d = <funcname>det</funcname>(M); <comment>//15</comment></codeblock></section>
+<p>В результате переменной d будет присвоено значение детерминанта матрицы М, равное 15.</p>   
+  </body>
+</topic>

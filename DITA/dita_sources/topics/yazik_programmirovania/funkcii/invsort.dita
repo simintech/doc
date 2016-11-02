@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>invsort</title>
+  <shortdesc>Функция сортировки вектора по убыванию значений.</shortdesc>
+<body>
+<section><title>Синтаксис:</title><codeblock>Y = <funcname>invsort</funcname>(X);</codeblock></section>
+<section><title>Аргументы:</title><p>Х – входной массив, содержащий элементы вектора.</p></section>
+<section><title>Описание:</title>
+<p><codeph>invsort(X)</codeph> –  производится сортировка массива по убыванию элементов. Для комплексных векторов сортировка ведётся по модулям чисел.</p>
+<p>Входной массив X может задаваться:</p>
+<ul><li>как переменная типа массив, определенная ранее:</li></ul>
+<p><codeph>Y = invsort(X)</codeph>;</p>
+<ul><li>как массив, состоящий из переменных, определенных ранее:</li></ul>
+<p><codeph>Y = invsort([x<sub>1</sub>,x<sub>2</sub>,x<sub>3</sub>,x<sub>4</sub>])</codeph>;</p>
+<ul><li>как постоянный массив:</li></ul>
+<p><codeph>Y = invsort([0,0,2,1,0])</codeph>;</p></section>  
+<section><title>Результат:</title><p>Y – выходной массив, содержащий элементы отсортированного вектора.</p></section>  
+<section><title>Пример:</title><codeblock><kword>сonst</kword> X = [2, 2, 1, 3, 4];
+Y = <funcname>invsort</funcname>(X);</codeblock></section>
+<p>В результате элементам массива Y будут присвоены значения [4, 3, 2, 2, 1], представляющие собой отсортированные по убыванию элементы входного массива.</p>   
+  </body>
+</topic>

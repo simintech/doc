@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>sum</title>
+<shortdesc>Функция суммирования элементов вещественного или комплексного вектора.</shortdesc>
+<body>
+<section><title>Синтаксис:</title><codeblock>s = <funcname>sum</funcname>(X);</codeblock></section>
+<section><title>Аргументы:</title><p>X – входной массив элементов вектора.</p></section>
+<section><title>Описание:</title>
+<p><codeph>sum(X)</codeph> – функция возвращает значение суммы всех элементов вектора. Элементы вектора могут быть как вещественными, так и комплексными.</p>
+<p>Входной массив X может задаваться:</p>
+<p><ul><li>как переменная типа массив, определенная ранее:</li></ul></p>
+<p><codeph>s = sum(X)</codeph>;</p>
+<p><ul><li>как массив, состоящий из переменных, определенных ранее:</li></ul></p>
+<p><codeph>s = sum([x<sub>1</sub>,x<sub>2</sub>,x<sub>3</sub>,x<sub>4</sub>])</codeph>;</p>
+<p><ul><li>как постоянный массив:</li></ul></p>
+<p><codeph>s = sum([1,2,3])</codeph>;</p></section>
+<section><title>Результат:</title><p>s – значение суммы всех элементов вектора X.</p></section>  
+<section><title>Пример:</title><codeblock>
+<kword>const</kword> X = [2, 2, 1, 3, 4];  
+s = <funcname>sum</funcname>(X); <comment>//12</comment></codeblock></section>
+<p>В результате переменной s будет присвоено значение 12, равное сумме всех элементов массива X.</p>   
+  </body>
+</topic>

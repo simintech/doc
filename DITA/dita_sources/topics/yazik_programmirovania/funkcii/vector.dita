@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>vector</title>
+<shortdesc>Функция создания нулевого вектора.</shortdesc>
+<body>
+<section><title>Синтаксис:</title><codeblock>X = <funcname>vector</funcname>(n);</codeblock></section>
+<section><title>Аргументы:</title><p>n – количество элементов нулевого вектора.</p></section>
+<section><title>Описание:</title>
+<p><codeph>vector(n)</codeph> – функция возвращает вектор размерностью n, у которого все элементы равны нулю.</p></section>
+<section><title>Результат:</title><p>X – возвращаемый массив элементов нулевого вектора.</p></section>  
+<section><title>Пример:</title><codeblock>
+<kword>const</kword> n = 5;  
+X = <funcname>vector</funcname>(n);</codeblock></section>
+<p>В результате переменной X будет присвоено значение массива [0, 0, 0, 0, 0], определяющего нулевой вектор, у которой все элементы равны 0.</p>   
+  </body>
+</topic>

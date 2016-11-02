@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>vector1</title>
+<shortdesc>Функция создания вектора единиц.</shortdesc>
+<body>
+<section><title>Синтаксис:</title><codeblock>X = <funcname>vector1</funcname>(n);</codeblock></section>
+<section><title>Аргументы:</title><p>n – количество элементов вектора единиц.</p></section>
+<section><title>Описание:</title><p><codeph>vector1(n)</codeph> – функция возвращает вектор размерностью n, у которого все элементы равны единице.</p></section>
+<section><title>Результат:</title><p>X – возвращаемый массив элементов вектора единиц.</p></section>  
+<section><title>Пример:</title><codeblock>
+<kword>const</kword> n = 5;  
+X = <funcname>vector1</funcname>(n);</codeblock></section>
+<p>В результате переменной X будет присвоено значение массива [1, 1, 1, 1, 1], определяющего вектор единиц, у которой все элементы равны 1.</p>   
+  </body>
+</topic>

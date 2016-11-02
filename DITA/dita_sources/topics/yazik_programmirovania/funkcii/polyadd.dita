@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>polyadd</title>
+<shortdesc>Оператор побитового логического И.</shortdesc>
+<body>
+<section><title>Синтаксис:</title><codeblock>С = <funcname>polyadd</funcname>(A, B);</codeblock></section>
+<section><title>Аргументы:</title>
+<p>A,B – входные массивы, содержащие коэффициенты a<sub>0</sub>, a<sub>1</sub>, …a<sub>n</sub>, b<sub>0</sub>, b<sub>1</sub>, …b<sub>n</sub> полиномов вида:</p>
+<p>f(t) = a<sub>0</sub>+a<sub>1</sub>t+a<sub>2</sub>t<sup>2</sup>+…+a<sub>n</sub>t<sup>n</sup></p>
+<p>g(t) = b<sub>0</sub>+b<sub>1</sub>t+b<sub>2</sub>t<sup>2</sup>+…+b<sub>n</sub>t<sup>n</sup></p></section>
+<section><title>Описание:</title>
+<p><codeph>polyadd(A, B)</codeph> – функция возвращает массив коэффициентов полинома, полученного в результате сложения полинома, заданного массивом коэффициентов А с полиномом, заданным массивом коэффициентов B.</p>
+<p>Входные массивы A, B могут задаваться:</p>
+<p><ul><li>как переменные типа массив, определенные ранее:</li></ul></p>
+<p><codeph>С = polyadd(A, B)</codeph>;</p>
+<p><ul><li>как массивы, состоящие из переменных, определенных ранее:</li></ul></p>
+<p><codeph>С = polyadd([a<sub>1</sub>,a<sub>2</sub>,a<sub>3</sub>,a<sub>4</sub>],[b<sub>1</sub>,b<sub>2</sub>,b<sub>3</sub>,b<sub>4</sub>])</codeph>;</p>
+<p><ul><li>как постоянные массивы:</li></ul></p>
+<p><codeph>С = polyadd([-1, -6, -4, -2],[-4, 7, 5, -3])</codeph>;</p></section>
+<section><title>Результат:</title>
+<p>С – выходной массив, содержащий коэффициенты полинома, полученного в результате сложения полинома, заданного массивом коэффициентов А с полиномом, заданным массивом коэффициентов B:</p>
+<p>q(t) = f(t)+g(t) = c<sub>0</sub>+c<sub>1</sub>t+c<sub>2</sub>t<sup>2</sup>+…+c<sub>n</sub>t<sup>n</sup></p></section>  
+<section><title>Пример:</title><codeblock>
+<kword>const</kword> A = [1, 2, -1, 0, 1, 2];
+<kword>const</kword> B = [-1, -1, 2, 1];  
+C = <funcname>polyadd</funcname>(A, B);</codeblock>
+  <p>В результате элементам массива C будут присвоены значения  [0, 1, 1, 1, 1, 2], являющиеся коэффициентами полинома q(t) = t+t<sup>2</sup>+ t<sup>3</sup> + t<sup>4</sup>+2t<sup>5</sup>, полученного в результате сложения полинома f(t) = 1+2t-t<sup>2</sup>+t<sup>4</sup>+2t<sup>5</sup> с полиномом g(t) = -1-t+2t<sup>2</sup>+t<sup>3</sup>. Полиномы f(t) и g(t) определенны массивами A и B.</p>
+</section>   
+  </body>
+</topic>

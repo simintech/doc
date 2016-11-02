@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>real</title>
+<shortdesc>Функция получения вещественной части комплексного числа.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>y = <funcname>real</funcname>(x);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>x – входное значение комплексного числа.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>real</codeph>(x) – функция получения вещественной части комплексно числа x. Функция может быть использована при определении переменных.</p>
+<p>Входное значение x может задаваться:</p>
+<p><ul><li>как переменная типа комплексное число:</li></ul></p>
+<p><codeph>y = imag(x)</codeph>;</p>
+<p><ul><li>как постоянное комплексное число:</li></ul></p>
+<p><codeph>y = imag(3+4i)</codeph>;</p></section>
+<section>
+      <title>Результат:</title>
+      <p>y – полученное значение. Имеет тип «целое число».</p>
+    </section>  
+<section><title>Пример:</title><codeblock><kword>var</kword>
+x:<rword>integer</rword> = <rword>real</rword>(1+5i);
+y = <rword>real</rword>(3+4i);</codeblock></section>
+<p>В результате переменной y будет присвоено значение 3, переменной x будет присвоено значение 1.</p>   
+  </body>
+</topic>

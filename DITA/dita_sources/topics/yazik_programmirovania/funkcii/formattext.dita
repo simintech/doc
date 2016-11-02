@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>formattext</title>
+<shortdesc>Задание секций текстового процессора.</shortdesc>
+<body>
+<section><title>Синтаксис:</title>
+<codeblock><kword>formattext</kword>
+&lt;переменная 1> = &lt;текст 1>;
+&lt;переменная 2> = &lt;текст 2>;
+<kword>end</kword>;</codeblock></section>
+<section><title>Описание:</title>
+<p>Задание секции текстового препроцессора. Секция выполняется перед началом инициализации 
+(как и операторы условной компиляции). Текст, заключенный в фигурные скобки, заменяется на 
+значение свойства объекта и присваивается переменной.</p></section>
+<section><title>Пример 1</title><codeblock><kword>formattext</kword>;
+TextLabel.Value={sig_name};  
+<kword>end</kword>;</codeblock></section>
+<p>Текст данного примера записан в окне текстового редактора скрипта графического контейнера (названного «Датчик»), цель которого – вывести на мнемосхему значение датчика. Значение выводится с помощью графического примитива TextLabel типа «Текст». В графическом контейнере «Датчик» создано свойство «sig_name» (имя сигнала) текстового типа, значение которого задано как «y231». Перед началом инициализации происходит обработка секции текстового препроцессора. При этом текст, заключенный в фигурные скобки (в данном случае «sig_name»), заменяется на значение этого свойства «y231». Если такая переменная существует, то полю «Value» графического примитива TextLabel присваивается значение переменной y231.</p> 
+<section><title>Пример 2</title>
+<codeblock><kword>formattext</kword>;
+<kword>idef </kword>ISST1
+SET1={Name1}_L1_SET;
+<kword>endif</kword>
+<kword>end</kword>;</codeblock></section>
+<p>В примере формируется переменная SET1 из переменной Name1 и постфикса _L1_SET.</p>
+  </body>
+</topic>

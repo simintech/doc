@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>output</title>
+  <shortdesc>Декларация выходных переменных блока.</shortdesc>
+  <body>
+    <section>
+      <title>Синтаксис:</title>
+      <codeblock><kword>output</kword> &lt;имя переменной 1>{:&lt;тип переменной 1>}{=&lt;инициирующее выражение 1>}{,&lt;имя переменной 2>{:&lt;тип переменной 2>}{=&lt;инициирующее выражение2>}};</codeblock>
+    </section>
+    <section><title>Описание:</title>
+      <p>Декларация выходных переменных блока (формат аналогичен <codeph>var</codeph>).
+        Значения этих переменных передаются на выходы блока. Для массивов
+        и матриц обязательно указываются размерности в квадратных скобках 
+        (аналогично <codeph>input</codeph>).</p>
+    </section>
+    <section><title>Пример:</title>
+      <codeblock><kword>input</kword> u1, u2, 
+if u1>u2 <kword>then</kword> y=u1 <kword>else</kword> y=u2; 
+<kword>output</kword> y; </codeblock>
+    </section>
+    <p>Выходная переменная блока – максимальное значение из двух входных переменных.</p>
+    <section><title>Пример2:</title>
+      <codeblock><kword>output</kword> Lm[5], Re[5], Im[5], fi[5], h[5], w_[5];</codeblock>
+    </section>
+    <p>В примере выходные переменные задаются векторами.</p>   
+  </body>
+</topic>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>repeat</title>
+<shortdesc>Задание цикла с постусловием.</shortdesc>
+<body>
+<section><title>Синтаксис:</title><codeblock><kword>repeat</kword>
+&lt;оператор 1>;
+...
+&lt;оператор 2>;
+<kword>until</kword> &lt;условие выхода>;</codeblock></section>
+<section><title>Описание:</title>
+<p>Выполнение операторов, заключенных между <codeph>repeat</codeph> и <codeph>until</codeph>, до тех пор, пока не будет выполнено условие выхода из цикла.</p></section>
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> i=1;
+<kword>repeat</kword>  
+i= i+1; 
+<kword>until</kword> i=10;</codeblock></section>
+<p>В результате выполнения примера переменной i будет присвоено значение 11.</p>  
+</body>
+</topic>

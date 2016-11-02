@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>exp</title>
+  <shortdesc>Функция вычисления экспоненты вещественного или комплексного числа.</shortdesc>
+  <body>
+<section><title>Синтаксис:</title>
+<codeblock>y = <funcname>exp</funcname>(x);</codeblock></section>
+<section>
+      <title>Аргументы:</title>
+      <p>x – входное значение.</p>
+    </section>    
+<section><title>Описание:</title>
+<p><codeph>exp(x)</codeph> – функция вычисления экспоненты вещественного или комплексного числа. Входное значение может быть как вещественным, так и комплексным числом.
+Входное значение может задаваться как заранее определенная переменная или как постоянное число.
+Комплексное число задается выражением a+bi, где a и b вещественные и комплексные части числа соответственно.</p></section>
+<section><title>Результат:</title>
+<p>y – экспонента входного значения x, определяется выражением e<sup>x</sup>, где e – основание натурального логарифма.</p></section> 
+ <section><title>Пример1:</title>
+<p>Экспонента вещественного числа</p>      
+<codeblock><kword>const</kword> x = 5;  
+y =<funcname>exp</funcname>(x);</codeblock></section>
+<p>В результате переменной y будет присвоено значение 148.41316</p>   
+<section><title>Пример2:</title><codeblock>y =<funcname>exp</funcname>(3+4i);</codeblock></section>
+<p>В результате переменной y будет присвоено значение -13.128783-15.200784i.</p>
+  </body>
+</topic>

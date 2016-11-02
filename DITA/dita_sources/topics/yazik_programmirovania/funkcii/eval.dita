@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>eval</title>
+<shortdesc>Задание интерпретации текстовых выражений в процессе выполнения программы.</shortdesc>
+<body>
+ <section><title>Синтаксис:</title>
+<p>
+        <codeblock><funcname>eval</funcname>(&lt;Строковая переменная>);</codeblock>
+      </p></section>
+<section><title>Описание:</title>
+<p>При помощи ключевого слова <codeph>eval</codeph> язык программирования позволяет компилировать текстовые выражения непосредственно при выполнении программы.</p></section>
+<section><title>Пример:</title><codeblock><comment>//Эта секция выполняется ДО компиляции остального скрипта</comment>
+<kword>if</kword> <funcname>signalexist</funcname>(Name1+"_L1_SET") <kword>then</kword> 
+<funcname>eval</funcname>("define ISST1") 
+<kword>else</kword> <funcname>eval</funcname>("define ISST4")
+<kword>else</kword>  <funcname>eval</funcname>("undefine ISST4");
+<comment>//определяем флаги наличия уставок</comment>
+<comment>//если какой-то уставки нет, то выключаем флаг !!! иначе -</comment>  
+<comment>//включаем</comment>
+<kword>if</kword> <funcname>signalexist</funcname>("AS_"+Name1+"_L1_ON") <kword>then</kword> <funcname>eval</funcname>("defineLAS11") <kword>else</kword> <funcname>eval</funcname>("undefine LAS11");  
+<kword>if</kword> <funcname>signalexist</funcname>("AS_"+Name1+"_H1_ON") <kword>then</kword> <funcname>eval</funcname>("defineHAS11") <kword>else</kword> <funcname>eval</funcname>("undefine HAS11"); 
+<kword>if</kword> <funcname>signalexist</funcname>("PS_"+Name1+"_L1_ON") <kword>then</kword> <funcname>eval</funcname>("defineLPS11") <kword>else</kword> <funcname>eval</funcname>("undefine LPS11");   
+<kword>if</kword> <funcname>signalexist</funcname>("PS_"+Name1+"_H1_ON") <kword>then</kword> <funcname>eval</funcname>("defineHPS11") <kword>else</kword> <funcname>eval</funcname>("undefine HPS11"); 
+<comment>//теперь, если флаг есть - то уставка есть, иначе - не делаем</comment>
+<comment>// ничего с этой уставкой</comment>
+<kword>end</kword>;</codeblock>
+</section><p>В примере определена секция скрипта, выполняемая до компиляции основного скрипта. В секции определяется наличия уставок для сигналов, если какой-то уставки нет, то выключаем флаг наличия уставки, иначе – включаем. При помощи ключевого слова eval определяются текстовые выражения, которые интерпретируются в момент выполнения скрипта.</p>
+  </body>
+</topic>

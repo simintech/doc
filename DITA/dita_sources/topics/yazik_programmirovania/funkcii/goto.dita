@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>goto</title>
+  <shortdesc>Задание безусловного перехода.</shortdesc>
+  <body>
+<section><title>Синтаксис:</title><codeblock><kword>goto</kword>&lt;имя метки>
+&lt;имя метки>:&lt;операторы назначения>;</codeblock></section>
+<section><title>Описание:</title>
+<p>Безусловный переход к операции, помеченной меткой. Безусловные переходы могут быть осуществлены только в пределах одного программного блока (функции или секции алгоритма).</p></section>
+<section><title>Пример:</title><codeblock>Label1: i=i+1;
+<kword>if</kword> i&lt;10 <kword>then</kword> <funcname>goto</funcname> Label1; </codeblock></section>
+  </body>
+</topic>

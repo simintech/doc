@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>ifndef</title>
+<shortdesc>Задание секции условной компиляции.</shortdesc>
+<body>
+<section><title>Синтаксис:</title><codeblock><kword>ifndef</kword> &lt;Имя условия компиляции>
+...
+<kword>elseif</kword>
+...
+<kword>endif</kword></codeblock></section>
+<section><title>Описание:</title>
+<p>Если условие задано ранее оператором <codeph>define</codeph>, то компилируется текст после <codeph>elseif</codeph>, а если не задано – то после <codeph>ifndef</codeph>.</p></section>
+<section><title>Пример:</title><codeblock><kword>define</kword>f_1;
+<kword>ifndef</kword>f_1;     
+Y=<funcname>sin</funcname>(X);
+<kword>elseif</kword>
+Y=<funcname>cos</funcname>(X);
+<kword>endif</kword></codeblock></section>
+<p>В примере в результате определения условия f_1 будет скомпилирована строка Y=cos(X);</p> 
+  </body>
+</topic>

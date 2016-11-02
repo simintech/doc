@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>begin</title>
+<shortdesc>Задание операторных скобок.</shortdesc>
+<body>
+<section><title>Синтаксис:</title><codeblock><kword>begin</kword>
+&lt;операция 1>;
+....
+&lt;операция n>;
+<kword>end</kword>; </codeblock></section>
+<section><title>Описание:</title>
+<p>Задание секции операторных скобок. Операторные скобки объединяют несколько операторов в один. Операторные скобки могут быть вложенными.</p></section>
+<section><title>Пример:</title><codeblock><kword>var</kword> i, id;
+if <funcname>getprop</funcname>(id, "tag") = 1 <kword>then</kword>
+<kword>begin</kword>      
+<comment>//изменим значения свойств</comment>
+<funcname>setprop</funcname>(id,"tbl_name",submodel.tbl_name);
+<funcname>setprop</funcname>(id,"ob_name",submodel.ob_name);
+<kword>end;</kword>
+i = i + 1; 
+I = 10;
+J = 5;  
+<kword>end</kword>;</codeblock>
+</section><p>В примере при помощи операторных скобок объединяются операции, выполняемые по условию.</p> 
+  </body>
+</topic>
