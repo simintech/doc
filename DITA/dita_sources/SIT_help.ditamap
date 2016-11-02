@@ -270,6 +270,85 @@
                 <topicref href="topics/yazik_programmirovania/funkcii/sqr.dita" navtitle="sqr"
                     locktitle="yes"/>
             </topicref>
+            <topicref href="topics/yazik_programmirovania/funkcii/giperbolicheskie.dita"
+                navtitle="6.6.5 Гиперболические" locktitle="yes">
+                <topicref href="topics/yazik_programmirovania/funkcii/arcch.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/arcsh.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/arcth.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/ch.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/sh.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/th.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/cth.dita"/>
+            </topicref>
+            <topicref href="topics/yazik_programmirovania/funkcii/trigonometricheskie.dita"
+                locktitle="yes" navtitle="6.6.6 Тригонометрические">
+                <topicref href="topics/yazik_programmirovania/funkcii/arccos.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/arcsin.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/arctg.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/cos.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/ctg.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/sin.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/tg.dita"/>
+            </topicref>
+            <topicref href="topics/yazik_programmirovania/funkcii/interpolyaciya.dita"
+                navtitle="6.6.7 Интерполяция" locktitle="yes">
+                <topicref href="topics/yazik_programmirovania/funkcii/cspline.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/interpol.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/linterp.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/mnkpoly.dita"/>
+            </topicref>
+            <topicref href="topics/yazik_programmirovania/funkcii/specialniye.dita"
+                navtitle="6.6.8 Специальные" locktitle="yes">
+                <topicref href="topics/yazik_programmirovania/funkcii/besseli.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/besseli0.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/besseli1.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/besselj.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/besselj0.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/besselj1.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/besselk.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/besselk0.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/besselk1.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/bessely.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/bessely0.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/bessely1.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/erf.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/erfc.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/gamma.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/gammln.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/gammp.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/gammq.dita"/>
+            </topicref>
+            <topicref
+                href="topics/yazik_programmirovania/funkcii/svoistva_vodi_i_vodyanogo_para.dita"
+                navtitle="6.6.9 Свойства воды и водяного пара" locktitle="yes">
+                <topicref href="topics/yazik_programmirovania/funkcii/waterps.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/waterts.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/waterpt.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/waterph.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/steamps.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/steamts.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/steampt.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/steamph.dita"/>
+            </topicref>
+            <topicref href="topics/yazik_programmirovania/funkcii/funkcii_sluchainih_chisel.dita"
+                navtitle="6.6.11 Функции случайных чисел" locktitle="yes">
+                <topicref href="topics/yazik_programmirovania/funkcii/rand.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/randg.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/randgamma.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/randp.dita"/>
+            </topicref>
+            <topicref href="topics/yazik_programmirovania/funkcii/geometricheskie.dita"
+                navtitle="6.6.12 Геометрические" locktitle="yes">
+                <topicref href="topics/yazik_programmirovania/funkcii/center.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/color.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/distance.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/excenter.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/getangle.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/middle.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/slide.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/xccord.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/ycoord.dita"/>
+            </topicref>
         </topicref>
     </topicref>
 </map>

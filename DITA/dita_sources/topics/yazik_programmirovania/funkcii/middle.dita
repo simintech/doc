@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>middle</title>
+<shortdesc>Функция вычисления координат середины отрезка.</shortdesc>
+<body>
+<section><title>Синтаксис:</title>M = <funcname>middle</funcname>(P1, P2);</section>
+<section><title>Аргументы:</title><codeblock>
+P1 – первая точка. Тип <rword>point</rword>,
+P2 – вторая точка. Тип <rword>point</rword>.</codeblock></section>
+<section><title>Описание:</title>
+<p><codeph>distance(P1, P2)</codeph> – функция вычисления расстояния между точками P1, P2.</p>
+<p>Входные значения могут задаваться как заранее определенные переменные или задаваться выражением (x, y), где x и y координаты точки.</p></section>
+<section><title>Результат:</title>M – точка с координатами середины отрезка. Тип <rword>point</rword>.</section>  
+<section><title>Пример:</title>
+<codeblock>
+<kword>const</kword>
+p1 = (1,3),
+p2 = (4,6);
+c = <funcname>middle</funcname>(p1, p2);</codeblock></section>
+<p>В результате переменной c будет присвоено значение  (2.5 , 4.5).</p>  
+  </body>
+</topic>

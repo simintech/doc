@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>arcch</title>
+<shortdesc>Функция вычисления гиперболического арккосинуса вещественного или комплексного числа.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>y = <funcname>arcch</funcname>(x);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>x – входное значение.</p>
+    </section>
+<section>
+      <title>Описание:</title>
+      <p><codeph>arcch(x)</codeph> – функция вычисления гиперболического арккосинуса (ареакосинуса)
+        вещественного или комплексного числа:</p>
+      <image placement="break" href="images/arcch_1.gif" align="center" id="image_xd4_gmx_5x"/>
+      <p>Входное значение может быть как вещественным, так и комплексным числом. 
+        Входное значение может задаваться как заранее определенная переменная или как постоянное
+        число.
+         Комплексное число задается выражением a+bi, где a и b вещественные и мнимые части числа
+        соответственно.</p>
+    </section>
+<section>
+      <title>Результат:</title>
+      <p>y – гиперболический арккосинус входного значения x.</p>
+    </section>  
+<section><title>Пример1:</title>
+<p>Гиперболический арккосинус вещественного числа</p><codeblock>
+<kword>const</kword> x = 5;
+y = <funcname>arcch</funcname>(x);</codeblock>
+</section>
+<p>В результате переменной y будет присвоено значение 2.2924317.</p>  
+<section><title>Пример2:</title>
+<p>Гиперболический арккосинус комплексного числа</p><codeblock>
+y = <funcname>arcch</funcname>(3+4i);</codeblock></section>
+<p>В результате переменной y будет присвоено значение 2.305509+0.93681246i.</p>   
+  </body>
+</topic>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>randgamma</title>
+<shortdesc>Функция генерации шума с Гамма-распределением заданного порядка.</shortdesc>
+<body>
+<section><title>Синтаксис:</title>y = <funcname>randgamma</funcname>(p);</section>
+<section><title>Аргументы:</title>p – входное значение, порядок распределения.</section>
+<section><title>Описание:</title><codeph>randgamma(p)</codeph> – функция возвращает случайное число, сгенерированное с Гамма-распределением порядка p.</section>
+<section><title>Результат:</title>y – выходное значение, случайное число, сгенерированное с Гамма-распределением.</section>  
+<section><title>Пример:</title>
+<codeblock>
+<kword>var</kword> t:<rword>array</rword> = 10#0; <comment>//массив из 10 элементов</comment>
+<kword>for</kword>(i=1, 10) 
+t[i] = <funcname>randgamma</funcname>(5); <comment>//заполним массив случайными числами</comment></codeblock></section>
+<p>В результате переменной t будут присвоены значения массива  [2.3628391 , 7.0827214 , 8.6338928 , 3.004949 , 5.6952188 , 1.4490291 , 5.2120766 , 7.7474082 , 5.3313184 , 2.2729491], представляющее собой случайные величины c Гамма-распределением порядка 5. Значения массива будут заполняться случайным образом на каждом шаге программы.</p>    
+  </body>
+</topic>

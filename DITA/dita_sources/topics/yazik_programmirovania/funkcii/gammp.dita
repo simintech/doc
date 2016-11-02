@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>gammp</title>
+<shortdesc>Функция вычисления матрицы коэффициентов для кубической сплайн-интерполяции по заданным координатам.</shortdesc>
+<body>
+<section><title>Синтаксис:</title>M = <funcname>cspline</funcname>(X, Y);</section>
+<section><title>Аргументы:</title><codeph>
+Х – входной массив координат по оси x для вычисления матрицы коэффициентов,
+Y – входной массив координат по оси y для вычисления матрицы коэффициентов.</codeph></section>
+<section><title>Описание:</title>
+<p>Функция вычисляет матрицу коэффициентов для кубической сплайн-интерполяции по заданным координатам точек. Вычисленная матрица коэффициентов используется функцией interpol для сплайн-интерполяции аргумента x.</p>
+<p>Входные массивы X и Y должны быть одного размера.</p>
+<p>Входные массивы X,  Y могут задаваться:</p>
+<p><ul><li>как переменные типа массив, определенные ранее:</li></ul></p>
+<p>M = <funcname>cspline</funcname>(X, Y);</p>
+<p><ul><li>как переменные типа массив, состоящие из переменных типа double, определенных ранее:</li></ul></p>
+<p>M = <funcname>cspline</funcname>([x<sub>1</sub>,x<sub>2</sub>,x<sub>3</sub>,x<sub>4</sub>],[y<sub>1</sub>,y<sub>2</sub>,y<sub>3</sub>,y<sub>4</sub>]);</p>
+<p>M = <funcname>cspline</funcname>([x<sub>1</sub>,x<sub>2</sub>,x<sub>3</sub>,x<sub>4</sub>],Y);</p>
+<p>M = <funcname>cspline</funcname>(X,[y<sub>1</sub>,y<sub>2</sub>,y<sub>3</sub>,y<sub>4</sub>]);</p>
+<p><ul><li>как постоянные массивы:</li></ul></p>
+<p>M = <funcname>cspline</funcname>([-1.80,-1.60,-1.40,-1.20],Y);</p>
+<p>M = <funcname>cspline</funcname>(X,[-1.80,-1.60,-1.40,-1.20]);</p>
+<p>M = <funcname>cspline</funcname>([-1.80,-1.60,-1.40,-1.20],[-1.40,-0.78,-0.53,-0.35]);</p></section>
+<section><title>Результат:</title>M – вычисленная матрица коэффициентов.</section>  
+<section><title>Пример:</title>
+<codeblock>
+<kword>input</kword> Q;<comment>//вход - аргумент</comment>
+<kword>output</kword> n;<comment>//выход - результат кубической сплайн-интерполяции</comment>
+<comment>//массивы координат для вычисления матрицы</comment>
+<kword>const</kword> Qpts=[-2.00, -1.80, -1.60, -1.40, -1.20,
+-1.00, -0.80, -0.60, -0.40, -0.20,
+0.00,0.20,0.40,0.60,0.80,
+1.00,1.20,1.40,1.60,1.80,2.00];
+<kword>const</kword> Hp = [-1.40,-0.78,-0.53,-0.35,-0.17,
++0.05,+0.38,+0.80,+0.94,+1.07,
+1.15,1.26,1.33,1.40,1.47,
+1.40,1.45,1.51,1.59,1.69,1.74];
+Mn=<funcname>cspline</funcname>(Qpts,Hp);
+N=<funcname>interpol</funcname>(Q,Mn);</codeblock></section>
+<p> результате переменной n будет присвоено интерполированное значение напора (по массивам Hp и Qpts) в соответствии со значением расхода Q.</p>  
+  </body>
+</topic>

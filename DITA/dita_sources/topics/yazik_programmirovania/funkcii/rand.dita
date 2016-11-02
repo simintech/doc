@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>rand</title>
+<shortdesc>Функция генерации равномерного шума в диапазоне значений от 0 до 1.</shortdesc>
+<body>
+<section><title>Синтаксис:</title>y = <funcname>rand</funcname>;</section>
+<section><title>Аргументы:</title>нет</section>
+<section><title>Описание:</title>rand – функция возвращает случайное число в диапазоне от 0 до 1.</section>
+<section><title>Результат:</title>y – выходное значение, случайное число в диапазоне от 0 до 1.</section>  
+<section><title>Пример:</title>
+<codeblock>
+<kword>var</kword> t:<rword>array</rword> = 10#0; <comment>//массив из 10 элементов</comment>
+<kword>for</kword>(i=1, 10) 
+t[i] = <funcname>rand</funcname>; <comment>//заполним массив случайными числами</comment></codeblock></section>
+<p>В результате переменной t будут присвоены значения массива  [0.14052453 , 0.41622116 , 0.72564422 , 0.87399228 , 0.6045624 , 0.36489237 , 0.77058926 , 0.40256098 , 0.74611561 , 0.46366776], представляющее собой случайные величины (равномерный шум) в диапазоне от 0 до 1. Значения массива будут заполняться случайным образом на каждом шаге программы</p>  
+  </body>
+</topic>

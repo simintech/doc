@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>xcoord</title>
+<shortdesc>Функция получения координаты точки по оси абсцисс.</shortdesc>
+<body>
+<section><title>Синтаксис:</title>x = <funcname>xcoord</funcname>(P);</section>
+<section><title>Аргументы:</title>P – координаты точки, переменная типа <rword>point</rword>.</section>
+<section><title>Описание:</title>
+<p><codeph>xcoord(P)</codeph> – функция получения координаты по оси абсцисс (координата x) точки P.</p>
+<p>Входные значения могут задаваться как заранее определенные переменные или задаваться выражением (x, y), где x и y координаты точки</p></section>
+<section><title>Результат:</title>x – координата по оси абсцисс точки.</section>  
+<section><title>Пример:</title>
+<codeblock>
+<kword>const</kword> p = (1,3);
+x = <funcname>xcoord</funcname>(p);</codeblock></section>
+<p>В результате переменной x будет присвоено значение  1.</p>  
+  </body>
+</topic>

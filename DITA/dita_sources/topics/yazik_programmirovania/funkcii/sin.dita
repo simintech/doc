@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>sin</title>
+<shortdesc>Функция вычисления синуса вещественного или комплексного числа.</shortdesc>
+<body>
+<section><title>Синтаксис:</title>y = <funcname>sin</funcname>(x);</section>
+<section><title>Аргументы:</title>x – входное значение.</section>
+<section><title>Описание:</title>
+<p><codeph>sin(x)</codeph> – функция вычисления синуса вещественного или комплексного числа.</p>
+<p>Входное значение может быть как вещественным, так и комплексным числом.</p> 
+<p>Входное значение может задаваться как заранее определенная переменная или как постоянное число.</p>
+<p>Комплексное число задается выражением <codeph>a+bi</codeph>, где a и b вещественные и мнимые части числа соответственно.</p></section>
+<section><title>Результат:</title>y – синус входного значения x.</section>  
+<section><title>Пример1:</title>
+<p>Синус вещественного числа</p><codeblock>
+<kword>const</kword> x = pi;
+y = <funcname>sin</funcname>(x);</codeblock></section>
+<p>В результате переменной y будет присвоено значение 0.</p>  
+<section><title>Пример2:</title>
+<p>Синус комплексного числа</p><codeblock>y = <funcname>sin</funcname>(3+4i);</codeblock></section>
+<p>В результате переменной y будет присвоено значение 3.853738-27.016813i.</p>   
+  </body>
+</topic>
