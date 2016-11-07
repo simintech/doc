@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>cols</title>
+  <shortdesc>Функция возвращает количество столбцов матрицы или количество элементов массива.</shortdesc>
+<body>
+<section><title>Синтаксис:</title><codeblock>
+x = <funcname>cols</funcname>(X);
+c = <funcname>cols</funcname>(M);</codeblock></section>
+<section><title>Аргументы:</title><p>Х – входной массив.</p>
+<p>M – входная матрица.</p></section>
+<section><title>Описание:</title>
+<p><codeph>cols(X)</codeph> – функция возвращает количество элементов массива.</p>
+<p><codeph>cols(M)</codeph> – функция возвращает количество столбцов матрицы.</p>
+  
+<p>Входной массив X может задаваться:</p>
+<p><ul><li>как переменная типа массив, определенная ранее:</li></ul></p>
+<p>x = <codeph>cols(X)</codeph>;</p>
+<p><ul><li>как массив, состоящий из переменных, определенных ранее:</li></ul></p>
+<p>x = <codeph>cols([x1,x2,x3,x4])</codeph>;</p>
+<p><ul><li>как постоянный массив:</li></ul></p>
+<p>x = <codeph>cols([-1.80, -1.60, -1.40, -1.20])</codeph>;</p>
+
+<p>Входная матрица М может задаваться:</p>
+<p><ul><li>как переменная типа матрица, определенная ранее:</li></ul></p>
+<p>c = <codeph>cols(M)</codeph>;</p>
+<p><ul><li>как матрица, состоящая из переменных, определенных ранее:</li></ul></p>
+<p>c = <codeph>cols([[x1,x2],[x3,x4],[x5,x6]])</codeph>;</p>
+<p><ul><li>как постоянный массив:</li></ul></p>
+<p>c = <codeph>cols([[1,2],[3,4],[5,6]])</codeph>;</p></section>
+<section><title>Результат:</title><p>x – количество элементов массива Х. Имеет тип <codeph>integer</codeph>,</p>
+<p>c – количество столбцов матрицы M. Имеет тип <codeph>integer</codeph>.</p></section>
+<section><title>Пример1:</title><codeblock><kword>output</kword> na; <comment>//выход – количество элементов массива</comment>
+a = [1,2,3,4,5];
+na = <funcname>cols</funcname>(a); <comment>// na = 5</comment></codeblock></section>
+<p>В результате переменной na будет присвоено целое число 5, соответствующее количеству элементов массива a.</p>
+<section><title>Пример2:</title><codeblock><kword>output</kword> nb; //выход – количество столбцов матрицы
+b = [[1,2],[3,4],[5,6]]; <comment>//матрица 2x3</comment>
+nb = <funcname>cols</funcname>(b); <comment>//nb = 2</comment></codeblock></section>
+<p>В результате переменной nb будет присвоено целое число 2, соответствующее количеству столбцов матрицы b.</p>  
+  </body>
+</topic>

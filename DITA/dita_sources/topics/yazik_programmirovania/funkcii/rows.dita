@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>rows</title>
+<shortdesc>Функция возвращает количество строк матрицы. </shortdesc>
+<body>
+<section><title>Синтаксис:</title><codeblock>r = <funcname>rows</funcname>(M);</codeblock></section>
+<section><title>Аргументы:</title><p>M – входная матрица.</p></section>
+<section><title>Описание:</title>
+<p><codeph>rows(M)</codeph> – функция возвращает количество строк матрицы.</p>
+<p>Входная матрица М может задаваться:</p> 
+<p><ul><li>как переменная типа матрица, определенная ранее:</li></ul></p>
+<p><codeph>c = rows(M)</codeph>;</p>
+<p><ul><li>как матрица, состоящая из переменных, определенных ранее:</li></ul></p>
+<p><codeph>x = rows([[x1,x2],[x3,x4],[x5,x6]])</codeph>;</p>
+<p><ul><li>как постоянная матрица:</li></ul></p>
+<p><codeph>x = rows([[1,2],[3,4],[5,6]])</codeph>;</p></section>
+<section><title>Результат:</title><p>r – количество строк матрицы M. Имеет тип <rword>integer</rword>.</p></section>  
+<section><title>Пример:</title><codeblock>
+<kword>output</kword> nb; <comment>//выход –количество строк матрицы</comment>
+b =   [      
+      [1,2],      
+      [3,4],      
+      [5,6]      
+      ];  <comment>//матрица 2x3</comment>  
+nb = <funcname>rows</funcname>(b); <comment>//nb = 3</comment></codeblock></section>
+<p>В результате переменной nb будет присвоено целое число 3, соответствующее количеству строк матрицы b.</p>   
+  </body>
+</topic>

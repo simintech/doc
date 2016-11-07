@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>process</title>
+  <shortdesc>Задание параллельного выполнения задач в разных потоках.</shortdesc>
+  <body>
+<section><title>Синтаксис:</title>
+<codeblock><kword>process</kword>
+&lt;задача 1>;
+...
+&lt;задача n>;
+<kword>end</kword>;</codeblock></section>
+<section><title>Описание:</title>
+<p>Задание параллельного выполнения задач в разных потоках. <codeph>process</codeph> не возвращает управление пока все задачи, выполняемые параллельно, не завершатся. Задачи задаются в виде обычных пользовательских функций без параметров, но для них будут недоступны операции записи в глобальные переменные. Внутри задач можно организовывать аналогичным образом подзадачи, которые будут выполняться параллельно.</p></section>
+<section><title>Пример:</title>  
+<codeblock><kword>var </kword>connected1:<rword>boolean</rword>,
+    connected2:<rword>boolean;</rword>;
+  
+<comment>//Функция обработки соединения 1</comment>
+<rword>procedure</rword> DoProcessConnection1  
+...
+<kword>end</kword>;
+  
+<comment>//Функция обработки соединения 2</comment>
+<rword>procedure</rword> DoProcessConnection2  
+...
+<kword>end</kword>;
+  
+<comment>//Синхронная обработка соединений в отдельных потоках</comment>
+<rword>process</rword>
+DoProcessConnection1;   <comment>//Подключение канала 1</comment>
+DoProcessConnection2;   <comment>//Подключение канала 2</comment> 
+<kword>end</kword>;     <comment> //конец секции асинхронной обработки</comment></codeblock>
+</section><p>В примере определяются пользовательские функции обработки соединения, после этого организуется параллельная обработка соединений в разных потоках. Секция не завершится, пока задачи подключения каналов не завершатся. </p>
+  </body>
+</topic>

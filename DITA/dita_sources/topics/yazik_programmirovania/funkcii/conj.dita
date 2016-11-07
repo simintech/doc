@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>conj</title>
+<shortdesc>Функция получения комплексно-сопряженного числа.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>y = <funcname>conj</funcname>(x);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>x – входное значение комплексного числа.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>conj</codeph>(x) – функция получения комплексно-сопряженного числа к комплексному числу x.</p> 
+<p>Входное значение x может задаваться:</p>
+<p><ul><li>как переменная типа комплексное число:</li></ul></p>
+<p><codeph>y = arg(x);</codeph></p>
+<p>как постоянное комплексное число:</p>
+<p><codeph>y = arg(3+4i)</codeph>;</p></section>
+<section>
+      <title>Результат:</title>
+      <p>y – полученное комплексно-сопряженное число. Имеет тип «комплексное число»</p>
+    </section>  
+<section>
+      <title>Пример:</title>
+      <codeblock>y = <funcname>conj</funcname>(3+4i);</codeblock>
+    </section>
+<p>В результате переменной y будет присвоено значение 3-4i.</p>   
+  </body>
+</topic>

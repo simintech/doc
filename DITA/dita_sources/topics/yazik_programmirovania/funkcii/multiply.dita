@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>multiply</title>
+<shortdesc>Функция размножения каждого элемента вектора.</shortdesc>
+<body>
+<section><title>Синтаксис:</title><codeblock>Y = <funcname>multiply</funcname>(n, X);</codeblock></section>
+<section><title>Аргументы:</title><p>n – множитель для элементов вектора,</p>
+<p>Х – входной массив, содержащий элементы вектора.</p></section>
+
+<section><title>Описание:</title>
+<p><codeph>multiply(n, X)</codeph> – функция размножения элементов входного вектора в n раз.</p>
+<p>Входной массив X может задаваться:</p>
+<p><ul><li>как переменная типа массив, определенная ранее:</li></ul></p>
+<p><codeph>Y = multiply(n, X)</codeph>;</p>
+<p><ul><li>как массив, состоящий из переменных, определенных ранее:</li></ul></p>
+<p><codeph>Y = multiply(n, [x<sub>1</sub>,x<sub>2</sub>,x<sub>3</sub>,x<sub>4</sub>])</codeph>;</p>
+<p><ul><li>как постоянный массив:</li></ul></p>
+<p><codeph>Y = multiply(n, [1,2,3])</codeph>;</p></section> 
+<section><title>Пример:</title><codeblock><kword>const</kword> X = [1, 2, 3];
+Y = <funcname>multiply</funcname>(2, X);</codeblock><p>В результате элементам массива Х будут присвоены значения [1, 1, 2, 2, 3, 3], представляющие собой размноженные в 2 раза элементы входного массива.</p>
+</section>   
+</body>
+
+  
+</topic>

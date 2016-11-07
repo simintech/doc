@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>include</title>
+<shortdesc>Задание операторных скобок.</shortdesc>
+<body>
+<section><title>Синтаксис:</title>
+<codeblock><kword>include</kword> "&lt;Имя файла>";
+<kword>end</kword>; </codeblock></section>
+<section><title>Описание:</title>
+<p>Язык программирования позволяет создавать библиотеки функций в виде текстовых файлов. Ключевое
+        слово <codeph>include</codeph> позволяет загрузить фрагмент программы из текстового файла.
+        Также из файла можно загрузить произвольный код (скрипт). Например, для комплекта
+        видеокадров, общий функционал можно вынести в файл, и с каждого кадра подгружать общий
+        код.</p></section>
+<section><title>Пример:</title>
+<p>
+        <codeblock><kword>include</kword> "filename.txt";</codeblock>
+      </p></section>
+  </body>
+</topic>

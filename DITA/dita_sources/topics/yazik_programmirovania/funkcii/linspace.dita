@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>linspace</title>
+  <shortdesc>Функция вычисления вектора арифметической прогрессии.</shortdesc>
+<body>
+  <section><title>Синтаксис:</title><codeblock>Y = <funcname>linspace</funcname>(x<sub>min</sub> ,x<sub>max</sub>, n);</codeblock></section>
+<section><title>Аргументы:</title><p>х<sub>min</sub> – минимальное значение арифметической прогрессии,</p>
+<p>x<sub>max</sub> – максимальное значение арифметической прогрессии,</p>
+<p>n – размерность вектора арифметической прогрессии.</p></section>
+  <section><title>Описание:</title><p><codeph>linspace(x<sub>min</sub> ,x<sub>max</sub>, n)</codeph> –  функция вычисления вектора арифметической прогрессии от значения xmin до значения xmax. Размерность вектора определяется параметром n.</p></section>
+<section><title>Результат:</title><p>Y – выходной массив, содержащий значения вектора арифметической прогрессии.</p></section>  
+<section><title>Пример:</title><codeblock><kword>const</kword> n=81;
+<kword>output</kword> x[n];
+minimum = 20.0;
+maximum = 260.0;
+x = <funcname>linspace</funcname>(minimum, maximum, n);</codeblock></section>
+<p>В результате элементам массива Х будут присвоены значения [20, 23, 26,…, 257, 260], представляющие собой значения арифметической прогрессии, размерность массива – 81 элемент.</p> 
+<p>Точное значение полученного массива Х = [20 , 23 , 26 , 29 , 32 , 35 , 38 , 41 , 44 , 47 , 50 , 53 , 56 , 59 , 62 , 65 , 68 , 71 , 74 , 77 , 80 , 83 , 86 , 89 , 92 , 95 , 98 , 101 , 104 , 107 , 110 , 113 , 116 , 119 , 122 , 125 , 128 , 131 , 134 , 137 , 140 , 143 , 146 , 149 , 152 , 155 , 158 , 161 , 164 , 167 , 170 , 173 , 176 , 179 , 182 , 185 , 188 , 191 , 194 , 197 , 200 , 203 , 206 , 209 , 212 , 215 , 218 , 221 , 224 , 227 , 230 , 233 , 236 , 239 , 242 , 245 , 248 , 251 , 254 , 257 , 260].</p>
+</body>
+</topic>

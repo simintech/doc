@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>const</title>
+  <shortdesc>Декларация констант.</shortdesc>
+  <body>
+    <section><title>Синтаксис:</title>
+    <codeblock><kword>сonst</kword> &lt;имя переменной 1>{:&lt;тип переменной 1>}{=&lt;инициирующее выражение 1>}{,&lt;имя переменной 2>{:&lt;тип переменной 2>}{=&lt;инициирующее выражение 2>}};</codeblock></section>
+    <section><title>Описание:</title>
+      <p>Декларация констант (формат аналогичен <codeph>var</codeph>). Если константа потом переопределена, 
+        она будет воспринята как переменная. Константы отличаются от переменных тем,
+        что они рассчитываются только один раз в начале моделирования.</p>
+    </section>
+    <section><title>Пример:</title>
+      <codeblock><kword>const</kword> c=1e-3, 
+v=[c,1,3.2], 
+M=[v,[1.5,2,2.2]] </codeblock>
+   </section>
+  </body>
+</topic>

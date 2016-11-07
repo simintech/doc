@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>and</title>
+  <shortdesc>Оператор побитового логического И.</shortdesc>
+<body>
+<section><title>Синтаксис:</title><codeblock>c = a <funcname>and</funcname> b;</codeblock></section>
+<section><title>Аргументы:</title><p>a, b  – операнды побитового логического И.</p></section>
+  <section><title>Описание:</title><p><codeph>and</codeph> – оператор побитового логического И. С входными операндами побитно выполняется операция логического И.</p></section>
+  <section><title>Результат:</title><p>c – результат операции.</p></section>  
+<section><title>Пример:</title><codeblock>y = 8; <comment>//1000</comment>
+x = 5; <comment>//0101</comment>
+z1 = y <funcname>and</funcname> x; <comment>//0000</comment>
+y = 9; <comment>//1001</comment>
+x = 5; <comment>//0101</comment>
+z2 = y <funcname>and</funcname> x; <comment>//0001</comment>
+y = 13; <comment>//1101</comment>
+x = 5;  <comment>//0101</comment>
+z3 = y <funcname>and</funcname> x; <comment>//0101</comment></codeblock></section>
+<p>В результате переменной z1 будет присвоено значение 0, z2 будет присвоено значение 1, z3 будет присвоено значение 5.</p>   
+  </body>
+</topic>

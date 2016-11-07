@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>if</title>
+<shortdesc>Задание условного перехода.</shortdesc>
+  <body>
+<section><title>Синтаксис:</title><codeblock>
+<kword>if</kword>&lt;условие или логическое выражение>
+<kword>then</kword>&lt;оператор при выполнении условия>
+{<kword>else</kword>&lt;оператор при невыполнения условия>}</codeblock></section>
+<section><title>Описание:</title>
+<p>Выполнение операций в зависимости от условия. Условием должно быть логическое или целочисленное выражение. При выполнении условия выполняется оператор после ключевого слова <codeph>then</codeph>, в противном случае выполняется оператор после ключевого слова <codeph>else</codeph>. Допустимо задание сложных условий.</p>
+</section><section><title>Пример:</title> <codeblock><kword>var</kword> k = 5;
+<kword>if</kword> k>0 <kword>then</kword> k=0 
+<kword>else</kword> 
+<kword>begin</kword> 
+k=-1; i=0 
+<kword>end</kword>;</codeblock></section>
+  </body>
+</topic>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>arcth</title>
+<shortdesc>Функция вычисления гиперболического арктангенса вещественного или комплексного числа.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>y = <funcname>arcth</funcname>(x);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>x – входное значение.</p>
+    </section>
+<section><title>Описание:</title><p><codeph>arcth(x)</codeph> – функция вычисления гиперболического
+  арктангенса (ареатангенса) вещественного или комплексного числа:</p>
+      <image placement="break" href="images/arcth_1.gif" align="center" id="image_dlj_vpx_5x"/><p>Входное значение может
+      быть как вещественным, так и комплексным числом. Вещественное входное значение ограничено
+      условием: -1&lt;x&lt;1 Входное значение может задаваться как заранее определенная переменная
+        или как постоянное число. Комплексное число задается выражением a+bi, где a и b
+        вещественные и мнимые части числа соответственно.</p> </section>
+<section>
+      <title>Результат:</title>
+      <p>y – гиперболический арктангенс входного значения x.</p>
+    </section>  
+<section><title>Пример1:</title>
+<p>Гиперболический арктангенс вещественного числа</p>
+<codeblock><kword>const</kword> x = -0.5;
+y = <funcname>arcth</funcname>(x);</codeblock></section>
+<p>В результате переменной y будет присвоено значение -0.54930614.</p>   
+<section><title>Пример2:</title>
+<p>Гиперболический арктангенс комплексного числа</p>
+<codeblock>y = <funcname>arcth</funcname>(3+4i);</codeblock></section>
+<p>В результате переменной y будет присвоено значение 0.11750091+1.409921i.</p>    
+  </body>
+</topic>

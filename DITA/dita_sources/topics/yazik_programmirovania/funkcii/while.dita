@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>while</title>
+<shortdesc>Задание цикла с предусловием.</shortdesc>
+<body>
+<section><title>Синтаксис:</title>
+<p>
+        <codeblock><kword>while </kword>&lt;условие цикла> <kword>do</kword> &lt;оператор цикла>;</codeblock>
+      </p></section>
+<section><title>Описание:</title>
+<p>Выполнение операции пока выполняется условие цикла.</p></section>
+<section><title>Пример:</title><codeblock><kword>var</kword> i = 1;
+<kword>while</kword> i&lt;= 10 <kword>do</kword>
+<kword>begin </kword>
+i = i + 1;  
+<kword>end</kword>;</codeblock></section>
+<p>В результате выполнения примера переменной i будет присвоено значение 11.</p>  
+  </body>
+</topic>

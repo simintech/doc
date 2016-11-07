@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>div</title>
+  <shortdesc>Оператор целочисленного деления.</shortdesc>
+<body>
+<section><title>Синтаксис:</title><codeblock>c = a <funcname>div</funcname> b;</codeblock></section>
+<section><title>Аргументы:</title><p>a  – делимое, целое число,</p>
+<p>b  – делитель, целое число.</p></section>
+<section><title>Описание:</title><p><codeph>div</codeph> – оператор целочисленного деления.</p></section>
+  <section><title>Результат:</title><p>c – результат операции, целое число.</p></section>  
+<section><title>Пример:</title><codeblock>y = 8;
+x1 = 5;
+x2 = 3;
+x3 = 2;
+z1 = y <funcname>div</funcname> x1;
+z2 = y <funcname>div</funcname> x2;
+z3 = y <funcname>div</funcname> x3;</codeblock></section>
+<p>В результате переменной z1 будет присвоено значение 1, так как если разделить целое число 8 на целое число 5, в результате получится целое число 1 и остаток 3.
+Переменной z2 будет присвоено значение 2, так как если разделить целое число 8 на целое число 3, в результате получится целое число 2 и остаток 2.
+Переменной z3 будет присвоено значение 4, так как если разделить целое число 8 на целое число 2, в результате получится целое число 4 и остаток 0.</p>   
+  </body>
+</topic>

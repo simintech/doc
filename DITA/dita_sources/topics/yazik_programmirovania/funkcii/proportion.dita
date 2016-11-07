@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>proportion</title>
+  <shortdesc>Функция вычисления значения линейной функции от заданного аргумента, заданной значениями функции и аргументов.</shortdesc>
+<body>
+<section><title>Синтаксис:</title><codeblock>y =<funcname>proportion</funcname>(x, x1, x2, y1, y2);</codeblock></section>
+<section><title>Аргументы:</title><p>x1, x2 – значения аргументов функции,</p> 
+<p>y1, y2 – значения функции от аргументов x1, x2,</p>
+<p>х – значение аргумента, от которого вычисляется значение линейной функции вида: y(x) = a<sub>0</sub> + a<sub>1</sub>x</p></section>
+<section><title>Описание:</title>
+<p>proportion(x, x1, x2, y1, y2) –  функция возвращает значение функции от аргумента x, функция задана значениями y1, y2 от аргументов x1, x2.</p>
+<p>Функцию можно определить, решив уравнение:</p>
+<p>a<sub>0</sub>+x1a<sub>1</sub>=y1</p>
+<p>a<sub>0</sub>+x2a<sub>1</sub>=y2</p></section>
+<section><title>Результат:</title>y – значение функции от аргумента x.</section>  
+<section><title>Пример:</title><codeblock><kword>const</kword> x = 10;
+<kword>const</kword> x1 = 8;
+<kword>const</kword> x2 = 6;
+<kword>const</kword> y1 = 7;
+<kword>const</kword> y2 = 9;
+y = <funcname>proportion</funcname>(x, x1, x2, y1, y2);
+</codeblock></section>
+<p>В результате переменной y будет присвоено значение 5, представляющее собой значение функции y = 15 – x при x = 10.</p>   
+  </body>
+</topic>

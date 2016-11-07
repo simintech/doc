@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>finalization</title>
+<shortdesc>Задание завершающей секции.</shortdesc>
+  <body>
+<section><title>Синтаксис:</title>
+<codeblock><kword>finalization</kword>
+&lt;операция 1>;
+....
+&lt;операция n>;
+<kword>end</kword>;</codeblock></section>
+<section><title>Описание:</title>
+<p>Задание завершающей секции. Операции выполняются после того, как все остальные вычисления будут закончены. Операции выполняются однократно при завершении моделирования (после завершения всех шагов - либо при достижении конечного времени интегрирования, либо при нажатии пользователем кнопки стоп). В пределах блока можно задавать несколько завершающих секций. </p></section>
+<section><title>Пример:</title><codeblock><kword>finalization</kword><comment>//завершающая секция</comment>      
+<funcname>freeobject</funcname>(source1);
+<funcname>freeobject</funcname>(source2);
+source1 = 0;
+source2 = 0;
+<kword>end</kword>;</codeblock></section>
+<p>В примере происходит удаление ранее созданных объектов после окончания вычислений.</p>
+  </body>
+</topic>

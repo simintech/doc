@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>deconv</title>
+  <shortdesc>Функция деления полиномов.</shortdesc>
+  <body>
+    <section><title>Синтаксис:</title><codeblock>С = <funcname>deconv</funcname>(A, B, D);</codeblock></section>
+    <section><title>Аргументы:</title><p>A, B – входные массивы, содержащие коэффициенты a<sub>0</sub>, a<sub>1</sub>, …a<sub>2n</sub>, b<sub>0</sub>, b<sub>1</sub>, …b<sub>n</sub> полиномов вида:</p>
+<p>f(t) = a<sub>0</sub>+a<sub>1</sub>t+a<sub>2</sub>t<sup>2</sup>+…+a<sub>2n</sub>t<sup>2n</sup></p>
+<p>g(t) = b<sub>0</sub>+b<sub>1</sub>t+b<sub>2</sub>t<sup>2</sup>+…+b<sub>n</sub>t<sup>n</sup></p>
+<p>D – выходной массив, содержащий коэффициенты полинома остатка от деления.</p></section>
+ <section><title>Описание:</title>
+<p><codeph>deconv(A, B, D)</codeph> – функция возвращает массив коэффициентов полинома, полученного в результате деления полинома, заданного массивом коэффициентов А на полином, заданный массивом коэффициентов B.</p>
+<p>Массив коэффициентов полинома остатка от деления возвращается в переменную D.</p>
+<p>Входные массивы A, B могут задаваться:</p>
+   <ul><li>как переменные типа массив, определенные ранее: <codeph>С = deconv(A, B, D);</codeph></li>
+   <li>как массивы, состоящие из переменных, определенных ранее: <codeph>С = deconv([a&lt;<sub>1</sub>,a<sub>2</sub>,a<sub>3</sub>,a<sub>4</sub>],[b<sub>1</sub>,b<sub>2</sub>,b<sub>3</sub>,b<sub>4</sub>], D);</codeph></li>
+   <li>как постоянные массивы: <codeph>С = deconv([-1, -6, -4, -2],[-4, 7, 5, -3], D);</codeph></li>
+   </ul></section>
+<section><title>Результат:</title><p>С – выходной массив, содержащий коэффициенты полинома, полученного в результате деления 
+полинома, заданного массивом коэффициентов А на полином, заданный массивом коэффициентов B:</p>
+<p>q(t) = f(t)/g(t) = c<sub>0</sub>+c<sub>1</sub>t+c<sub>2</sub>t<sup>2</sup>+…+c<sub>n</sub>t<sup>n</sup></p></section>
+<section><title>Пример:</title><codeblock>
+<kword>var</kword> D:array;
+<kword>const</kword> A = [1, 2, -1,0, 1, 2];
+<kword>const</kword> B = [-1, -1, 2, 1];  
+C = <funcname>deconv</funcname>(A, B, D);</codeblock></section>
+<p>В результате элементам массива C будут присвоены значения [8, -3, 1], являющиеся коэффициентами полинома q(t) = 8 - 3t + 2t<sup>2</sup>, полученного в результате деления полинома f(t) = 1 + 2t - t<sup>2</sup> + t<sup>4</sup> + 2t<sup>5</sup> на полином g(t) = -1 - t + 2t<sup>2</sup> + t<sup>3</sup>. Полиномы f(t) и g(t) определенны массивами A и B. Элементам массива D будут присвоены значения [9, 7, -18], являющиеся коэффициентами полинома остатка от деления r(t) = 9 + 7t - 18t<sup>2</sup>.</p>
+  </body>
+</topic>

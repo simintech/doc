@@ -47,5 +47,308 @@
         </topicref>
     </topicref>
     <topicref href="topics/yazik_programmirovania/yazik_programmirovania.dita"
-        navtitle="Язык программирования" locktitle="yes"/>
+        navtitle="6 Язык программирования" locktitle="yes">
+        <topicref href="topics/yazik_programmirovania/konstanti.dita" navtitle="6.1 Константы"
+            locktitle="yes"/>
+        <topicref href="topics/yazik_programmirovania/peremennie.dita" navtitle="6.2 Переменные"
+            locktitle="yes"/>
+        <topicref href="topics/yazik_programmirovania/operatori.dita" navtitle="6.3 Операторы"
+            locktitle="yes"/>
+        <topicref href="topics/yazik_programmirovania/vizov_funkcii.dita"
+            navtitle="6.4 Вызов функции" locktitle="yes"/>
+        <topicref href="topics/yazik_programmirovania/funkcii/kluchevie_slova.dita"
+            navtitle="6.5 Ключевые слова" locktitle="yes">
+            <topicref href="topics/yazik_programmirovania/funkcii/deklaraciya_peremennoi.dita"
+                locktitle="yes" navtitle="6.5.1 Декларация переменной">
+                <topicref href="topics/yazik_programmirovania/funkcii/var.dita" navtitle="var"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/const.dita" navtitle="const"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/input.dita" navtitle="input"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/output.dita" navtitle="output"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/init.dita" navtitle="init"
+                    locktitle="yes"/>
+            </topicref>
+            <topicref href="topics/yazik_programmirovania/funkcii/sekcii.dita"
+                navtitle="6.5.2 Секции" locktitle="yes">
+                <topicref href="topics/yazik_programmirovania/funkcii/initialization.dita"
+                    navtitle="initialization" locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/finalization.dita"
+                    navtitle="finalization" locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/local.dita" navtitle="local"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/beforecompile.dita"
+                    navtitle="beforecompile" locktitle="yes"/>
+            </topicref>
+            <topicref href="topics/yazik_programmirovania/funkcii/podprogrammi_cikli_usloviya.dita"
+                navtitle="6.5.3 Подпрограммы, циклы, условия" locktitle="yes">
+                <topicref href="topics/yazik_programmirovania/funkcii/begin.dita" navtitle="begin"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/exit.dita" navtitle="exit"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/for.dita" navtitle="for"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/function.dita"
+                    navtitle="function " locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/goto.dita" navtitle="goto"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/if.dita" navtitle="if"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/repeat.dita"
+                    navtitle="repeate" locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/while.dita" navtitle="while"
+                    locktitle="yes"/>
+            </topicref>
+            <topicref href="topics/yazik_programmirovania/funkcii/tekstovii_preprocessor.dita"
+                navtitle="6.5.4 Текстовый препроцессор" locktitle="yes">
+                <topicref href="topics/yazik_programmirovania/funkcii/define.dita" navtitle="define"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/formattext.dita"
+                    navtitle="formattext" locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/ifdef.dita" navtitle="idef"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/ifndef.dita" navtitle="ifndef"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/include.dita"
+                    navtitle="include" locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/undefine.dita"
+                    navtitle="undefine" locktitle="yes"/>
+            </topicref>
+            <topicref href="topics/yazik_programmirovania/funkcii/specialniye.dita"
+                navtitle="6.5.5 Специальные" locktitle="yes">
+                <topicref href="topics/yazik_programmirovania/funkcii/asyncprocess.dita"
+                    navtitle="asyncprocess" locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/eval.dita" navtitle="eval"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/loadmodule.dita"
+                    navtitle="loadmodule" locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/process.dita"
+                    navtitle="process" locktitle="yes"/>
+            </topicref>
+        </topicref>
+        <topicref href="topics/yazik_programmirovania/funkcii/funkcii.dita" navtitle="6.6 Функции"
+            locktitle="yes">
+            <topicref href="topics/yazik_programmirovania/funkcii/standartnii.dita"
+                navtitle="6.6.1 Стандартные" locktitle="yes">
+                <topicref href="topics/yazik_programmirovania/funkcii/abs.dita" navtitle="abs"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/case.dita" navtitle="case"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/exp.dita" navtitle="exp"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/lg.dita" navtitle="lg"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/limit.dita" navtitle="limit"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/ln.dita" navtitle="ln"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/max.dita" navtitle="max"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/min.dita" navtitle="min"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/proportion.dita"
+                    navtitle="proportion" locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/root.dita" navtitle="root"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/round.dita" navtitle="round"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/sign.dita" navtitle="sign"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/sqrt.dita" navtitle="sqrt"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/trunc.dita" navtitle="trunc"
+                    locktitle="yes"/>
+            </topicref>
+            <topicref href="topics/yazik_programmirovania/funkcii/logiceskie_operatori.dita"
+                navtitle="6.6.2 Логические операторы" locktitle="yes">
+                <topicref href="topics/yazik_programmirovania/funkcii/and.dita" navtitle="and"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/div.dita" navtitle="div"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/mod.dita" navtitle="mod"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/not.dita" navtitle="not"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/or.dita" navtitle="or"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/shl.dita" navtitle="shl"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/shr.dita" navtitle="shr"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/xor.dita" navtitle="xor"
+                    locktitle="yes"/>
+            </topicref>
+            <topicref href="topics/yazik_programmirovania/funkcii/vektornie_i_matricnie.dita"
+                navtitle="6.6.3 Векторные и матричные" locktitle="yes">
+                <topicref href="topics/yazik_programmirovania/funkcii/activeelement.dita"
+                    navtitle="activeelement" locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/cols.dita" navtitle="cols"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/conv.dita" navtitle="conv"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/deconv.dita" navtitle="deconv"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/det.dita" navtitle="det"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/diag.dita" navtitle="diag"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/eig.dita" navtitle="eig"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/extract.dita"
+                    navtitle="extract" locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/eye.dita" navtitle="eye"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/inv.dita" navtitle="inv"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/invsort.dita"
+                    navtitle="invsort" locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/insortby.dita"
+                    navtitle="insortby" locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/linspace.dita"
+                    navtitle="linspace" locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/logspace.dita"
+                    navtitle="logspace" locktitle="yes"/>
+                <topicref navtitle="lsolve" locktitle="yes"
+                    href="topics/yazik_programmirovania/funkcii/lsolve.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/matrix.dita" navtitle="matrix"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/matrix1.dita"
+                    navtitle="matrix1" locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/multiply.dita"
+                    navtitle="multiply" locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/norm1.dita" navtitle="norm1"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/normi.dita" navtitle="normi"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/poly.dita" navtitle="poly"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/polyadd.dita"
+                    navtitle="polyadd" locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/polyder.dita"
+                    navtitle="polyder" locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/polyroots.dita"
+                    navtitle="polyroots" locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/polysub.dita"
+                    navtitle="polysub" locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/polyval.dita"
+                    navtitle="polyval" locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/rcond.dita" navtitle="rcond"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/rows.dita" navtitle="rows"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/setsize.dita"
+                    navtitle="setsize" locktitle="yes"/>
+                <topicref navtitle="sort" locktitle="yes"
+                    href="topics/yazik_programmirovania/funkcii/sort.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/sortby.dita" navtitle="sortby"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/sum.dita" navtitle="sum"
+                    locktitle="yes"/>
+                <topicref navtitle="transp" locktitle="yes"
+                    href="topics/yazik_programmirovania/funkcii/transp.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/vector.dita" navtitle="vector"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/vector1.dita"
+                    navtitle="vector1" locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/vectorize.dita"
+                    navtitle="vectorize" locktitle="yes"/>
+            </topicref>
+            <topicref href="topics/yazik_programmirovania/funkcii/kompleksnie.dita"
+                navtitle="6.6.4 Комплексные" locktitle="yes">
+                <topicref href="topics/yazik_programmirovania/funkcii/arg.dita" navtitle="arg"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/complex.dita"
+                    navtitle="complex" locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/conj.dita" navtitle="conj"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/imag.dita" navtitle="imag"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/real.dita" navtitle="real"
+                    locktitle="yes"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/sqr.dita" navtitle="sqr"
+                    locktitle="yes"/>
+            </topicref>
+            <topicref href="topics/yazik_programmirovania/funkcii/giperbolicheskie.dita"
+                navtitle="6.6.5 Гиперболические" locktitle="yes">
+                <topicref href="topics/yazik_programmirovania/funkcii/arcch.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/arcsh.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/arcth.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/ch.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/sh.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/th.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/cth.dita"/>
+            </topicref>
+            <topicref href="topics/yazik_programmirovania/funkcii/trigonometricheskie.dita"
+                locktitle="yes" navtitle="6.6.6 Тригонометрические">
+                <topicref href="topics/yazik_programmirovania/funkcii/arccos.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/arcsin.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/arctg.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/cos.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/ctg.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/sin.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/tg.dita"/>
+            </topicref>
+            <topicref href="topics/yazik_programmirovania/funkcii/interpolyaciya.dita"
+                navtitle="6.6.7 Интерполяция" locktitle="yes">
+                <topicref href="topics/yazik_programmirovania/funkcii/cspline.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/interpol.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/linterp.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/mnkpoly.dita"/>
+            </topicref>
+            <topicref href="topics/yazik_programmirovania/funkcii/specialniye.dita"
+                navtitle="6.6.8 Специальные" locktitle="yes">
+                <topicref href="topics/yazik_programmirovania/funkcii/besseli.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/besseli0.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/besseli1.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/besselj.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/besselj0.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/besselj1.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/besselk.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/besselk0.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/besselk1.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/bessely.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/bessely0.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/bessely1.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/erf.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/erfc.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/gamma.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/gammln.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/gammp.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/gammq.dita"/>
+            </topicref>
+            <topicref
+                href="topics/yazik_programmirovania/funkcii/svoistva_vodi_i_vodyanogo_para.dita"
+                navtitle="6.6.9 Свойства воды и водяного пара" locktitle="yes">
+                <topicref href="topics/yazik_programmirovania/funkcii/waterps.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/waterts.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/waterpt.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/waterph.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/steamps.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/steamts.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/steampt.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/steamph.dita"/>
+            </topicref>
+            <topicref href="topics/yazik_programmirovania/funkcii/funkcii_sluchainih_chisel.dita"
+                navtitle="6.6.11 Функции случайных чисел" locktitle="yes">
+                <topicref href="topics/yazik_programmirovania/funkcii/rand.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/randg.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/randgamma.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/randp.dita"/>
+            </topicref>
+            <topicref href="topics/yazik_programmirovania/funkcii/geometricheskie.dita"
+                navtitle="6.6.12 Геометрические" locktitle="yes">
+                <topicref href="topics/yazik_programmirovania/funkcii/center.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/color.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/distance.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/excenter.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/getangle.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/middle.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/slide.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/xccord.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/ycoord.dita"/>
+            </topicref>
+        </topicref>
+    </topicref>
 </map>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>polyder</title>
+  <shortdesc>Функция вычисления производной от полинома.</shortdesc>
+<body>
+<section><title>Синтаксис:</title><codeblock>С = <funcname>polyder</funcname>(A);</codeblock></section>
+<section><title>Аргументы:</title>
+<p>A – входной массив, содержащий коэффициенты a<sub>0</sub>, a<sub>1,</sub> …a<sub>n</sub> полинома вида:</p>
+<p>f(t) = a<sub>0</sub>+a<sub>1</sub>t+a<sub>2</sub>t<sup>2</sup>+…+a<sub>n</sub>t<sup>n</sup></p></section>
+<section><title>Описание:</title>
+<p><codeph>polyder(A)</codeph> – функция возвращает массив коэффициентов полинома, полученного в результате вычисления производной от полинома, заданного массивом коэффициентов А.</p>
+<p>Входной массив A может задаваться:</p>
+<p><ul><li>как переменная типа массив, определенная ранее:</li></ul></p>
+<p><codeph>С = polyder(A)</codeph>;</p>
+<p><ul><li>как массив, состоящий из переменных, определенных ранее:</li></ul></p>
+<p><codeph>С = polyder([a<sub>1</sub>,a<sub>2</sub>,a<sub>3</sub>,a<sub>4</sub>])</codeph>;</p>
+<p><ul><li>как постоянный массив:</li></ul></p>
+<p><codeph>С = polyder([-1, -6, -4, -2])</codeph>;</p></section>
+<section><title>Результат:</title>
+<p>С – выходной массив, содержащий коэффициенты c<sub>0</sub>, c<sub>1</sub>, …c<sub>n-1</sub> полинома, полученного в результате вычисления производной от полинома, заданного массивом коэффициентов А:</p>
+<p>q(t) = f’(t) = c<sub>0</sub>+c<sub>1</sub>t+c<sub>2</sub>t<sup>2</sup>+…+c<sub>n-1</sub>t<sup>n-1</sup></p></section>
+<section><title>Пример:</title><codeblock><kword>const</kword> A = [1, 0, -2, -5];
+C = <funcname>polyder</funcname>(A);</codeblock></section>
+<p>В результате элементам массива C будут присвоены значения [0, -4, -15], являющиеся коэффициентами полинома q(t) = 0 - 4t - 15t<sup>2</sup>, полученного в результате вычисления производной от полинома f(t) = 1 - 2t<sup>2</sup> - 5t<sup>3</sup>. Полином f(t) определен массивом A.</p>   
+  </body>
+</topic>

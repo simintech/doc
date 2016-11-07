@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>sh</title>
+<shortdesc>Функция вычисления гиперболического синуса вещественного или комплексного числа.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>y = <funcname>sh</funcname>(x);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>x – входное значение.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>sh(x)</codeph> – функция вычисления гиперболического синуса вещественного или комплексного числа.</p>
+      <image placement="break" href="images/sh_1.gif" align="center" id="image_j3y_lsx_5x"/>
+
+
+<p>Входное значение может быть как вещественным, так и комплексным числом.
+   Входное значение может задаваться как заранее определенная переменная или как постоянное число. 
+   Комплексное число задается выражением a+bi, где a и b вещественные и мнимые части числа соответственно.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>y – гиперболический синус входного значения x.</p>
+    </section>  
+<section><title>Пример1:</title>
+<p>Гиперболический синус вещественного числа</p>
+<codeblock><kword>const </kword>x = 5;
+y = <funcname>sh</funcname>(x);</codeblock></section>
+<p>В результате переменной y будет присвоено значение 74.203211.</p>   
+<section><title>Пример2:</title>
+<p>Гиперболический синус комплексного числа</p>
+<codeblock>y = <funcname>sh</funcname>(3+4i);</codeblock></section>
+<p>В результате переменной y будет присвоено значение -6.54812-7.6192317i.</p> 
+  </body>
+</topic>

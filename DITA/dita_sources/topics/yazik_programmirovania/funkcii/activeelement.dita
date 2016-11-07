@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>activeelement</title>
+  <shortdesc>Функция возвращает индекс первого ненулевого элемента в массиве.</shortdesc>
+<body>
+<section><title>Синтаксис:</title><codeblock>x = <funcname>activeelement</funcname>(X);</codeblock></section>
+<section><title>Аргументы:</title><p>Х – входной массив</p></section>
+<section><title>Описание:</title>
+<p><codeph>activeelement(X)</codeph> –  функция возвращает индекс первого ненулевого элемента в массиве. Если все элементы нулевые, то возвращает ноль. Индексы начинаются с единицы.</p>   
+<p>Входной массив X может задаваться:</p>
+<p><ul><li>как переменная типа массив, определенная ранее:</li></ul></p>
+<p><codeph>х = activeelement(X)</codeph>;</p>
+<p><ul><li>как массив, состоящий из переменных, определенных ранее:</li></ul></p>
+<p><codeph>x = activeelement([x1,x2,x3,x4])</codeph>;</p>
+<p><ul><li>как постоянный массив:</li></ul></p>
+<p><codeph>х = activeelement([0,0,2,1,0])</codeph>;</p></section>
+<section><title>Результат:</title><p>x – индекс первого ненулевого элемента в массиве. Имеет тип integer.</p></section>  
+<section><title>Пример1:</title><codeblock><kword>output</kword> i;//выход – индекс ненулевого элемента
+i =<funcname>activeelement</funcname>([0,1,0]); <comment>// Результат: i = 2</comment></codeblock></section>
+<p>В результате переменной i будет присвоено целое число 2, соответствующее индексу первого ненулевого элемента в массиве  [0,1,0].</p> 
+<section><title>Пример2:</title><codeblock><kword>output</kword> i;<comment>//выход – индекс ненулевого элемента</comment>
+i = <funcname>activeelement</funcname>([0,0,2,1,0]); <comment>// Результат: i = 3</comment></codeblock></section>
+<p>В результате переменной i будет присвоено целое число 3, соответствующее индексу первого ненулевого элемента в массиве [0,0,2,1,0].</p>
+<section><title>Пример3:</title><codeblock><kword>output</kword> i;<comment>//выход – индекс ненулевого элемента</comment>
+<kword>const</kword> a = [0,0,0,0,0,0];
+i = <funcname>activeelement</funcname>(a); <comment>// Результат: i = 0</comment></codeblock></section>  
+<p>В результате переменной i будет присвоено целое число 0, так как все элементы в массиве [0,0,0,0,0,0] нулевые.</p>  
+  </body>
+</topic>

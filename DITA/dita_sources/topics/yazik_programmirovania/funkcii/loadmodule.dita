@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>loadmodule</title>
+<shortdesc>Динамическая загрузка библиотеки расширения программы.</shortdesc>
+<body>
+<section><title>Синтаксис:</title>
+<codeblock><kword>loadmodule</kword> "&lt;Имя файла>"</codeblock></section>
+<section><title>Описание:</title>
+<p>Ключевое слово <codeph>loadmodule</codeph> позволяет динамически загрузить модуль расширения (plug-in, плагин, т.е. DLL-библиотеку, специально сделанную заранее по определенным правилам) для системы. Функционал плагина может быть произвольный.</p></section>
+<section><title>Пример:</title>
+<p>
+        <codeblock><kword>loadmodule</kword> "filename";</codeblock>
+      </p>
+</section>
+  </body>
+</topic>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>arccos</title>
+<shortdesc>Функция вычисления арккосинуса вещественного или комплексного числа.</shortdesc>
+<body>
+<section><title>Синтаксис:</title>y = <funcname>arccos</funcname>(x);</section>
+<section><title>Аргументы:</title>x – входное значение.</section>
+<section><title>Описание:</title>
+<p><codeph>arccos(x)</codeph> – функция вычисления арккосинуса вещественного или комплексного числа.</p>
+<p>Входное значение может быть как вещественным, так и комплексным числом.</p>
+<p>Вещественное входное значение ограничено условием: -1&lt;=x&lt;=1</p>   
+<p>Входное значение может задаваться как заранее определенная переменная или как постоянное число.</p>
+<p>Комплексное число задается выражением <codeph>a+bi</codeph>, где a и b вещественные и мнимые части числа соответственно.</p></section>
+  <section><title>Результат:</title>y – арккосинус входного значения x.</section>  
+<section><title>Пример1:</title>
+<p>Арккосинус вещественного числа</p><codeblock>
+<kword>const</kword> x = 0.5;
+y = <funcname>arccos</funcname>(x);</codeblock>
+</section>
+<p>В результате переменной y будет присвоено значение 1.0471976.</p>  
+<section><title>Пример2:</title>
+<p>Арккосинус комплексного числа</p><codeblock>
+y = <funcname>arccos</funcname>(3+4i);
+</codeblock></section>
+<p>В результате переменной y будет присвоено значение 0.93681246-2.305509i.</p>   
+  </body>
+</topic>

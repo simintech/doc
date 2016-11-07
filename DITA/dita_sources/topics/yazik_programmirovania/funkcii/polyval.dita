@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>polyval</title>
+  <shortdesc>Функция вычисления значения полинома.</shortdesc>
+<body>
+<section><title>Синтаксис:</title><codeblock>
+С = <funcname>polyval</funcname>(A, B);
+x = <funcname>polyval</funcname>(A, y);</codeblock></section>
+<section><title>Аргументы:</title>
+<p>A  – входной массив, содержащий коэффициенты a<sub>0</sub>, a<sub>1</sub>, …a<sub>n</sub> полинома вида:</p>
+<p>f(t) = a<sub>0</sub>+a<sub>1</sub>t+a<sub>2</sub>t<sup>2</sup>+…+a<sub>n</sub>t<sup>n</sup>,</p>
+<p>B – входной массив, содержащий значения аргументов для вычисления значения полинома,</p>
+<p>y – значение аргумента для вычисления значения полинома.</p></section>
+<section><title>Описание:</title>
+<p><codeph>polyval(A, B)</codeph> – функция возвращает массив значений полинома заданного массивом коэффициентов A, вычисленных от набора значений аргументов, заданного массивом коэффициентов B.</p>
+<p><codeph>polyval(A, y)</codeph> – функция возвращает значение полинома, заданного массивом коэффициентов A, вычисленное от аргумента y.</p>
+<p>Входные массивы A, B могут задаваться:</p>
+<p><ul><li>как переменные типа массив, определенные ранее:</li></ul></p>
+<p><codeph>С = polyval(A,B)</codeph>;</p>
+<p><ul><li>как массивы, состоящие из переменных, определенных ранее:</li></ul></p>
+<p><codeph>С = polyval([a<sub>1</sub>,a<sub>2</sub>,a<sub>3</sub>,a<sub>4</sub>],[b<sub>1</sub>,b<sub>2</sub>,b<sub>3</sub>,b<sub>4</sub>])</codeph>;</p>
+<p><ul><li>как постоянные массивы:</li></ul></p>
+<p><codeph>С = polyval([-1, -6, -4, -2],[-4, 7, 5, -3])</codeph>;</p>
+<p>Аргумент может быть вещественным или комплексным числом.</p></section>
+<section><title>Результат:</title>
+<p>С – выходной массив, содержащий значения полинома, вычисленные от набора значений аргументов, заданного массивом коэффициентов B.</p>
+<p>x – значение полинома, заданного массивом коэффициентов A, вычисленное от аргумента y.</p></section>  
+<section><title>Пример:</title><codeblock>
+<kword>const</kword> A = [1, 2, 3];
+C = <funcname>polyval</funcname>(A, [5, 7, 9]);</codeblock></section>
+<p>В результате элементам массива C будут присвоены значения [86, 162, 262], являющиеся значениями полинома c(t) = 1 + 2t + 3t<sup>2</sup> вычисленными от аргументов 5, 7 и 9 соответственно.</p>   
+  </body>
+</topic>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>xor</title>
+  <shortdesc>Оператор побитового логического исключающего или.</shortdesc>
+<body>
+<section><title>Синтаксис:</title><codeblock>c = a <funcname>xor</funcname> b;</codeblock></section>
+<section><title>Аргументы:</title><p>a, b  – операнды побитового логического исключаещего или.</p></section>
+  <section><title>Описание:</title><p><codeph>xor</codeph> – оператор побитового логического исключаещего или. С входными операндами побитно выполняется операция логического исключаещего или.</p></section>
+<section><title>Результат:</title><p>c – результат операции.</p></section>  
+<section><title>Пример:</title><codeblock>y = 8; <comment>//1000</comment>
+x = 5; <comment>//0101</comment>
+z1 = y <funcname>xor</funcname> x; <comment>//1101</comment>
+y = 9; <comment>//1001</comment>
+x = 5; <comment>//0101</comment>
+z2 = y <funcname>xor</funcname> x; <comment>//1100</comment>
+y = 13; <comment>//1101</comment>
+x = 5;  <comment>//0101</comment>
+z3 = y <funcname>and</funcname> x; <comment>//1000</comment></codeblock></section>
+<p>В результате переменной z1 будет присвоено значение 13, z2 будет присвоено значение 12, z3 будет присвоено значение 8.</p>   
+  </body>
+</topic>

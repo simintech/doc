@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>eig</title>
+  <shortdesc>Функция вычисления собственных чисел вещественной матрицы. </shortdesc>
+<body>
+  <section><title>Синтаксис:</title><codeblock>X = <funcname>eig</funcname>(M);</codeblock></section>
+  <section><title>Аргументы:</title><p>M – входная матрица.</p></section>
+<section><title>Описание:</title>
+<p><codeph>eig(M)</codeph> – функция возвращает массив собственных чисел матрицы. Матрица M должна быть квадратной и иметь вещественные элементы. Вектор собственных чисел матрицы порядка n содержит n чисел, часть из которых могут быть одинаковыми. Соответствует выражению polyroots(poly(M)).</p>
+<p>Входная матрица М может задаваться:</p>
+<ul><li>как переменная типа матрица, определенная ранее:</li></ul>
+<p><codeph>X = eig(M)</codeph>;</p>
+<ul><li>как матрица, состоящая из переменных, определенных ранее:</li></ul>
+<p><codeph>X = eig([[x<sub>1</sub>,x<sub>2</sub>],[x<sub>3</sub>,x<sub>4</sub>],[x<sub>5</sub>,x<sub>6</sub>]])</codeph>;</p>
+<ul><li>как постоянная матрица:</li></ul>
+<p><codeph>X = eig([[1,2],[3,4],[5,6]])</codeph>;</p></section>
+<section><title>Результат:</title><p>X – массив вещественных собственных чисел матрицы M.</p></section>  
+<section><title>Пример:</title><codeblock><kword>сonst</kword> M = [[1, -3, 4], [4, -7, 8], [6, -7, 7]];  
+X = <funcname>eig</funcname>(M); //[-1, -1, 3]</codeblock></section>
+<p>В результате элементам массива X будут присвоены значения [-1, -1, 3], являющиеся вещественными собственными числами матрицы M.</p>   
+  </body>
+</topic>

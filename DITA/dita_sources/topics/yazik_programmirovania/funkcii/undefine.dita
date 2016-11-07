@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>undefine</title>
+<shortdesc>Сброс условий компиляции.</shortdesc>
+<body>
+<section><title>Синтаксис:</title>
+<p>
+        <codeblock><kword>undefine</kword> &lt;Имя условия></codeblock>
+      </p></section>
+<section><title>Описание:</title>
+<p>Сброс условия компиляции с указанным именем.</p></section>
+<section><title>Пример:</title><codeblock><kword>undefine</kword> f_1;
+<kword>ifndef</kword> f_1 
+Y=<funcname>sin</funcname>(X)
+<kword>elseif</kword>
+Y=<funcname>cos</funcname>(X)
+<kword>endif</kword></codeblock></section>
+<p>В примере в результате определения условия f_1 будет скомпилирована строка <codeph>Y=sin(X);</codeph></p> 
+  </body>
+</topic>

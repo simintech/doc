@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>arg</title>
+<shortdesc>Функция получения аргумента комплексного числа.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>y = <funcname>arg</funcname>(x);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>x – входное значение комплексного числа.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>arg</codeph>(x) – функция получения аргумента комплексного числа x. Аргументом комплексного числа называется величина угла, образованного на комплексной плоскости вектором, определяемым комплексным числом, с вещественной осью.</p>
+<p>Входное значение x может задаваться:</p>
+<p><ul><li>как переменная типа комплексное число:</li></ul></p>
+<p><codeph>y = arg(x)</codeph>;</p>
+<p><ul><li>как постоянное комплексное число:</li></ul></p>
+<p><codeph>y = arg(3+4i)</codeph>;</p></section>
+<section>
+      <title>Результат:</title>
+      <p>y – аргумент комплексного числа. Вещественное число.</p>
+    </section>  
+<section>
+      <title>Пример:</title>
+      <codeblock>y = <funcname>arg</funcname>(3+4i);</codeblock>
+    </section>
+<p>В результате переменной y будет присвоено значение 0.92729522.</p>   
+  </body>
+</topic>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>local</title>
+<shortdesc>Задание секций с локальными переменными.</shortdesc>
+<body>
+<section><title>Синтаксис:</title>
+<codeblock><kword>local</kword>
+&lt;операция 1>;
+....
+&lt;операция n>;
+<kword>end</kword>; </codeblock></section>
+ <section><title>Описание:</title>
+<p>Задается секция, внутри которой не доступны для записи внешние переменные, т.е. переменные, которые декларированы в параметрах вышестоящей по уровню субмодели или в общем списке сигналов проекта. При присваивании внешней переменной внутри этой секции автоматически создаётся внутренняя переменная с тем же именем.</p>
+</section>
+<section><title>Пример:</title><codeblock><kword>local</kword><comment> //секция с локальными переменными</comment>
+I = 10;
+J = 5;
+<kword>end</kword>;</codeblock></section>
+  </body>
+</topic>

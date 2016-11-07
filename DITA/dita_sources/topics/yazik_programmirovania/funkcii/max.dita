@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>max</title>
+  <shortdesc>Функция вычисления максимального значения из двух значений или из значений вектора.</shortdesc>
+  <body>
+    <section><title>Синтаксис:</title><codeblock>y = <funcname>max</funcname>(a, b);  
+y = <funcname>max</funcname>(X);</codeblock></section>    
+    <section><title>Аргументы:</title><p>a – первое входное значение,</p>  
+      <p>b – второе входное значение,</p>      
+      <p>Х – входной массив, содержащий элементы вектора.</p></section>    
+    <section><title>Описание:</title>
+      <p><codeph>max(a, b)</codeph> –  функция возвращает максимальное значение из a и b.</p>  
+      <p><codeph>max(X)</codeph> –  функция возвращает максимальное значение из значений элементов входного вектора.</p>  
+      <p>Входной массив X может задаваться:</p>
+      <p><ul><li> как переменная типа массив, определенная ранее:</li></ul></p>
+      <p><codeph>y =max(X)</codeph>;</p>
+      <p><ul><li>как массив, состоящий из переменных, определенных ранее:</li></ul></p>
+      <p><codeph>y =max([x1,x2,x3,x4])</codeph>;</p>
+      <p><ul><li> как постоянный массив:</li></ul></p>
+      <p><codeph>y =max([0,0,2,1,0])</codeph>;</p></section>
+    <section><title>Результат:</title>
+      <p>y – максимальное значение.</p></section> 
+    <section><title>Пример1:</title><codeblock><kword>const</kword> X = [2, 2, 1, 3, 4];  
+      y =<funcname>max</funcname>(X);</codeblock></section>
+    <p>В результате переменной y будет присвоено значение  4, представляющее собой максимальное значение из элементов входного массива.</p>   
+    <section><title>Пример2:</title><codeblock>y =<funcname>max</funcname>(1, 5);</codeblock></section>
+    <p>В результате переменной y будет присвоено значение  5, представляющее собой максимальное значение из двух входных.</p>
+  </body>
+</topic>

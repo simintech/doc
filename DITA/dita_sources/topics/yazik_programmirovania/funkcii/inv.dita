@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>inv</title>
+  <shortdesc>Функция вычисления обратной матрицы.</shortdesc>
+<body>
+<section><title>Синтаксис:</title><codeblock>C = <funcname>inv</funcname>(M);</codeblock></section>
+<section><title>Аргументы:</title><p>M – входная матрица.</p></section>
+<section><title>Описание:</title>
+<p><codeph>inv(M)</codeph> – функция возвращает матрицу, являющуюся обратной матрице M. Матрица M должна быть квадратной. При умножении обратной матрицы на исходную матрицу получается единичная матрица (все диагональные элементы которой равны 1). Для вычисления обратной матрицы можно использовать операцию деления матриц.</p>
+<p>Входная матрица М может задаваться:</p>
+<ul><li>как переменная типа матрица, определенная ранее:</li></ul>
+<p><codeph>C = inv(M)</codeph>;</p>
+<ul><li>как матрица, состоящая из переменных, определенных ранее:</li></ul>
+<p><codeph>C = inv([[x1,x2],[x3,x4]])</codeph>;</p>
+<ul><li>как постоянная матрица:</li></ul>
+<p><codeph>C = inv([[1,2],[3,4]])</codeph>;</p></section>  
+<section><title>Результат:</title><p>С – выходная матрица, являющаяся обратной матрице M.</p></section>  
+<section><title>Пример:</title><codeblock><comment>//массивы элементов матрицы</comment>
+<kword>const</kword> M = [[2, 5, 7], [6, 3, 4], [5, -2, -3]];
+C = <funcname>inv</funcname>(M);</codeblock></section>
+<p>В результате элементам матрицы C будут присвоены значения [[1, -1, 1], [-38, 41, -34], [27, -29, 24]], определяющие обратную для матрицы M матрицу C.</p>   
+</body>
+</topic>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>trunc</title>
+  <shortdesc>Функция отделяет целую часть действительного числа от дробной.</shortdesc>
+  <body>
+<section><title>Синтаксис:</title><codeblock>s1=<funcname>trunc</funcname>(x);</codeblock></section>
+<section><title>Аргументы:</title><p>x – входное значение, действительное число.</p></section>  
+<section><title>Описание:</title><p><codeph>trunc(x)</codeph> –функция получения значения целой части действительного числа.</p></section>
+<section><title>Результат:</title><p>s1 - целая часть действительного числа</p></section>   
+<section><title>Пример:</title><codeblock><kword>var</kword> s:<rword>double</rword>, s1:<rword>integer</rword>;
+<kword>Initialization</kword>;
+s=38.12;
+s1=<funcname>trunc</funcname>(s);
+<kword>end</kword>;</codeblock></section>
+<p>В результате переменной s1 будет присвоено значение 38.</p>   
+  </body>
+</topic>

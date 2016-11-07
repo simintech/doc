@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>cos</title>
+<shortdesc>Функция вычисления косинуса вещественного или комплексного числа.</shortdesc>
+<body>
+<section><title>Синтаксис:</title>y = <funcname>cos</funcname>(x);</section>
+<section><title>Аргументы:</title>x – входное значение.</section>
+<section><title>Описание:</title>
+<p><codeph>cos(x)</codeph> – функция вычисления косинуса вещественного или комплексного числа.</p>
+<p>Входное значение может быть как вещественным, так и комплексным числом.</p>
+<p>Входное значение может задаваться как заранее определенная переменная или как постоянное число.</p>
+<p>Комплексное число задается выражением <codeph>a+bi</codeph>, где a и b вещественные и мнимые части числа соответственно.</p></section>
+<section><title>Результат:</title>y – косинус входного значения x.</section>  
+<section><title>Пример1:</title>
+<p>Косинус вещественного числа</p><codeblock>
+<kword>const</kword> x = pi;
+y = <funcname>cos</funcname>(x);</codeblock></section>
+<p>В результате переменной y будет присвоено значение -1.</p>  
+<section><title>Пример2:</title>
+<p>Косинус комплексного числа</p><codeblock>y = <funcname>cos</funcname>(3+4i);</codeblock></section>
+<p>В результате переменной y будет присвоено значение -27.034946-3.8511533i.</p>   
+  </body>
+</topic>
