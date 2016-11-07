@@ -10,27 +10,26 @@
 <section><title>Описание:</title>
 <p>Задание новой пользовательской функции. Значение функции может быть не присвоено. Выходные переменные декларируются словом <codeph>out</codeph> – в такую переменную функция записывает значение.  Если тип значения функции не указан, то он определяется автоматически по типу выражения, где присваивается выходное значение функции. Вместо <codeph>function</codeph> можно использовать <codeph>procedure</codeph>. Если типы параметров функции не указаны, то при создании кода функции типы принимаются как у операндов при соответствующем вызове. </p></section>
 <section><title>Пример1:</title>
-<codeblock><funcname>function</funcname> PolyF(A,B)
+<codeblock><kword>function</kword> PolyF(A,B)
 PolyF = A*A + B*B;
 <kword>end</kword>;</codeblock></section>
 <p>В примере 1, если при вызове операнды A и B будут действительными числами, то результат тоже будет действительным числом. Если A и B будут векторами, то результат будет вектором.</p>
 <p>В тексте программы примера 2, одна и та же функция может быть по-разному определена несколько раз, а также переопределена под другим именем в соответствии со следующим форматом:</p>
 <p><kword>function</kword>&lt;имя функции>=&lt;имя ранее определённой функции></p>
- <section><title>Пример2:</title><codeblock>
- <funcname>function</funcname> PolyF(A,B)
+ <section><title>Пример2:</title><codeblock> <kword>function</kword> PolyF(A,B)
  PolyF = A*A + B*B;
  <kword>end</kword>;</codeblock></section>
  <section><title>Пример2:</title>
- <codeblock><funcname>function</funcname> SumQ(A,out R:<rword>integer</rword>):<rword>complex</rword>
+ <codeblock><kword>function</kword> SumQ(A,out R:<rword>integer</rword>):<rword>complex</rword>
 <comment>//Присваивание значений функции</comment>   
 SumQ =<funcname>sqr</funcname>(A);
 <comment>//Присваивание выходной переменной</comment>
 R = <funcname>round</funcname>(<rword>real</rword>(SumQ))
 <kword>end</kword>;
 <comment>//Переопределение SumQ как FSum</comment>
-<funcname>function</funcname> Fsum=SumQ;</codeblock></section>
+<kword>function</kword> Fsum=SumQ;</codeblock></section>
 <p>Функции и процедуры допускают также рекурсивный вызов, пример которого представлен в скрипте примера 3.</p>
-<section><title>Пример3:</title><codeblock>procedure <funcname>ScanCurrentContainer</funcname>(contid: <rword>integer</rword>)
+<section><title>Пример3:</title><codeblock><kword>procedure</kword> <funcname>ScanCurrentContainer</funcname>(contid: <rword>integer</rword>)
 <kword>for</kword>(i=1,<funcname>getobjcount</funcname>(contid) <kword>begin</kword>
 <kword>var</kword> id,imagecontid,submodelid: <rword>integer</rword>;
 <comment>//Получаем идентификатор</comment>

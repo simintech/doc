@@ -297,7 +297,7 @@
                 <topicref href="topics/yazik_programmirovania/funkcii/linterp.dita"/>
                 <topicref href="topics/yazik_programmirovania/funkcii/mnkpoly.dita"/>
             </topicref>
-            <topicref href="topics/yazik_programmirovania/funkcii/specialniye.dita"
+            <topicref href="topics/yazik_programmirovania/funkcii/specialniye_funcs.dita"
                 navtitle="6.6.8 Специальные" locktitle="yes">
                 <topicref href="topics/yazik_programmirovania/funkcii/besseli.dita"/>
                 <topicref href="topics/yazik_programmirovania/funkcii/besseli0.dita"/>
