@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>fileexist</title>
+<shortdesc>Функция получения координаты точки по оси ординат.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+  <codeblock>res = <funcname>fileexists</funcname>(name);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+  <p>name – строка, содержащая имя  файла.</p>
+    </section>
+<section>
+      <title>Описание:</title>
+      <p><codeph>fileexists(name)</codeph> – функция определяет наличие файла с именем
+          <codeph>name</codeph>.</p>
+    </section>
+<section>
+      <title>Результат:</title>
+  <p>res – возвращаемый результат:</p>
+  <p>0 – файл не существует;</p>
+  <p>1 – файл существует;</p> </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword>
+s:<kword>string</kword> = "string1" + <funcname>chr</funcname>(10) + "string2";
+res = <funcname>fileexists</funcname>("file1.dat");             
+<kword>if</kword> res = 0 <kword>then</kword>                            
+<comment>//создадим новый файл                      </comment>
+ fileid = <funcname>createfile</funcname>("file1.dat", -1)      
+<kword>else</kword>                                       
+<comment>//откроем существующий файл на запись      </comment>
+ fileid = <funcname>createfile</funcname>("file1.dat", 1)                                                  
+<comment>//запишем в него строку                    </comment>
+<funcname>writeln</funcname>(fileid, s);                        
+<comment>//закроем файл                             </comment>
+<funcname>freeobject</funcname>(fileid);</codeblock></section>
+<p>В процессе выполнения примера при помощи функции <codeph>fileexists</codeph> определим наличие
+      файла с именем <filepath>file1.dat</filepath>. По результатам функции при помощи функции
+        <codeph>createfile</codeph> будет создан новый или открыт существующий файл с
+      идентификатором <codeph>fileid</codeph>. В файл при помощи функции <codeph>writeln</codeph>
+      будет записана строка <codeph>s</codeph>. Перед завершением примера файл закрывается при
+      помощи функции <codeph>freeobject</codeph>.</p>  
+  </body>
+</topic>

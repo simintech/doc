@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>freeobject</title>
+<shortdesc>Функция уничтожения объекта по идентификатору. </shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>freeobject</funcname>(obj_id);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>obj_id – идентификатор уничтожаемого объекта.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>freeobject(obj_id)</codeph> – функция уничтожает объект с идентификатором
+          <codeph>obj_id</codeph>. Объектом может быть список строк или файл. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword>
+s:<kword>string</kword> = "string1" + <funcname>chr</funcname>(10) + "string2";
+<comment>//создадим новый файл                      </comment>
+fileid = <funcname>createfile</funcname>("file1.dat", -1)       
+<comment>//запишем в него строку                    </comment>
+<funcname>writeln</funcname>(fileid, s);                        
+<comment>//закроем файл                             </comment>
+<funcname>freeobject</funcname>(fileid);</codeblock></section>
+<p>В процессе выполнения при помощи функции <codeph>createfile</codeph> будет создан новый файл с
+      идентификатором <codeph>fileid</codeph>. В файл при помощи функции <codeph>writeln</codeph>
+      будет записана строка <codeph>s</codeph>. Перед завершением примера файл закрывается при
+      помощи функции <codeph>freeobject</codeph>. </p>  
+  </body>
+</topic>

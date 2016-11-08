@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>copyfile</title>
+  <shortdesc>Функция копирования файла.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+  <codeblock><funcname>copyfile</funcname>(src, dest);
+<funcname>copyfile</funcname>(src, dest, flag);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+  <p>src – строка, содержащая имя копируемого файла,</p>
+  <p>dest – строка, содержащая имя файла, в который происходит копирование,</p>
+<p>flag – флаг, определяющий перезапись файла, в который происходит копирование.</p></section>
+<section><title>Описание:</title>
+  <p><codeph>copyfile(src, dest)</codeph> – функция производит копирование файла с именем <codeph>src</codeph> в файл с именем <codeph>dest</codeph>.</p>
+  <p><codeph>copyfile(src, dest, flag)</codeph> – функция производит копирование файла с именем <codeph>src</codeph> в файл с именем <codeph>dest</codeph>.</p>    
+  <p>Если <codeph>flag</codeph> равен 1, то в случае, если файл с именем <codeph>dest</codeph> уже
+        существует, он не будет переписан.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+  <codeblock><funcname>copyfile</funcname>("file1.dat", "file2.dat", 0)</codeblock>
+</section>
+  <p>Файл с именем <codeph>file1.dat</codeph> будет скопирован в файл с именем
+        <filepath>file2.dat</filepath>. Файл будет создан в текущем каталоге.</p>  
+  </body>
+</topic>

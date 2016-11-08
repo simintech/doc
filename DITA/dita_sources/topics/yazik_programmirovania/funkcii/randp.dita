@@ -4,13 +4,25 @@
 <title>randp</title>
 <shortdesc>Функция генерации шума с распределением Пуассона заданным математическим ожиданием.</shortdesc>
 <body>
-<section><title>Синтаксис:</title>y = <funcname>randp</funcname>(m);</section>
-<section><title>Аргументы:</title>m – входное значение, математическое ожидание.</section>
-<section><title>Описание:</title><codeph>randp(m)</codeph> – функция возвращает случайное число, сгенерированное с распределением Пуассона с математическим ожиданием m.</section>
-<section><title>Результат:</title>y – выходное значение, случайное число, сгенерированное с распределением Пуассона.</section>  
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>y = <funcname>randp</funcname>(m);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>m – входное значение, математическое ожидание.</p>
+    </section>
+<section>
+      <title>Описание:</title>
+      <p><codeph>randp(m)</codeph> – функция возвращает случайное число, сгенерированное с
+        распределением Пуассона с математическим ожиданием m.</p>
+    </section>
+<section>
+      <title>Результат:</title>
+      <p>y – выходное значение, случайное число, сгенерированное с распределением Пуассона.</p>
+    </section>  
 <section><title>Пример:</title>
-<codeblock>
-<kword>var</kword> t:<rword>array</rword> = 10#0; <comment>//массив из 10 элементов</comment>
+<codeblock><kword>var</kword> t:<rword>array</rword> = 10#0; <comment>//массив из 10 элементов</comment>
 <kword>for</kword>(i=1, 10) 
 t[i] = <funcname>randp</funcname>(3); <comment>//заполним массив случайными числами</comment></codeblock></section>
 <p>В результате переменной t будут присвоены значения [12 , 7 , 12 , 7 , 8 , 10 , 3 , 21 , 8 , 9], представляющее собой случайные величины с распределением Пуассона с  математическим ожиданием 3. Значения массива будут заполняться случайным образом на каждом шаге программы.</p>    

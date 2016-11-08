@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>loadtab</title>
+<shortdesc>Функция чтения матрицы из текстового файла.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>M = <funcname>loadtab</funcname>(name);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>name – строка, содержащая имя файла.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>loadtab(name)</codeph> – функция чтения матрицы из текстового файла с именем
+          <codeph>name</codeph>. Матрица загружается в транспонированном виде, т.е. столбцам текста
+        соответствуют строки матрицы. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>M – матрица, загруженная из файла. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><comment>//массивы элементов матрицы </comment>
+<kword>const</kword> M1 = [[2, 5, 7], [6, 3, 4], [5, -2, -3]];
+<comment>//запишем в файл матрицу</comment>
+<funcname>savetab</funcname>(M1, "file1.dat");
+<comment>//прочитаем из файла матрицу</comment>
+M2 = <funcname>loadtab</funcname>("file1.dat");</codeblock></section>
+<p>В процессе выполнения при помощи функции <codeph>savetab</codeph> матрица <codeph>M1</codeph>
+      будет записана в файл с именем <filepath>file1.dat</filepath>, после чего при помощи функции
+        <codeph>loadtab</codeph> матрица <codeph>M2</codeph> будет прочитана из файла с именем
+        <filepath>file1.dat</filepath>.</p>
+    <p>Файл<filepath> file1.dat</filepath> будет содержать текст:</p>
+    <p>2 6 5</p>
+    <p>5 3 -2</p>
+    <p>7 4 -3 </p>  
+  </body>
+</topic>

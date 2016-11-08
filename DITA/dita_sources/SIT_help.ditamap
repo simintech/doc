@@ -349,6 +349,25 @@
                 <topicref href="topics/yazik_programmirovania/funkcii/xccord.dita"/>
                 <topicref href="topics/yazik_programmirovania/funkcii/ycoord.dita"/>
             </topicref>
+            <topicref href="topics/yazik_programmirovania/funkcii/failovie.dita"
+                navtitle="6.6.13 Файловые" locktitle="yes">
+                <topicref href="topics/yazik_programmirovania/funkcii/copyfile.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/createfile.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/fileexists.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/filesize.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/findfiles.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/freeobject.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/getpos.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/loadtab.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/loadtext.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/readfile.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/readln.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/savetab.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/seek.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/writefile.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/writeln.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/writetext.dita"/>
+            </topicref>
         </topicref>
     </topicref>
 </map>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>findfiles</title>
+<shortdesc>Функция поиска файлов по фильтру.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>findfiles</funcname>(name, attr, s_id);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>name – строка, содержащая фильтр поиска файла по имени,</p>
+      <p>attr – атрибуты для поиска файлов,</p>
+      <p>s_id – выходной параметр, идентификатор списка строк для имен найденных файлов. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>findfiles(name, attr, s_id)</codeph> – функция поиска файлов по фильтру, заданному в
+        строке <codeph>name</codeph>, с атрибутами <codeph>attr</codeph>. Имена найденных файлов
+        возвращаются в списке строк с идентификатором <codeph>s_id</codeph>.</p>
+      <p>Атрибуты файлов могут принимать значения:</p>
+      <p>0 - Файлы "только чтение". Такой атрибут устанавливается на файлы, которые не рекомендовано
+        изменять, удалять. Такой атрибут имеют файлы, например, записанные на компакт-дисках.</p>
+      <p>1 - Скрытые файлы. При обычных установках браузера и командира эти файлы невидимы.</p>
+      <p>2 - Системные файлы.</p>
+      <p>3 - Файл метки диска. Такой элемент в своем имени имеет название диска (максимум 11
+        символов).</p>
+      <p>4 - Атрибут признака каталога.</p>
+      <p>5 - Обычный файл. По умолчанию устанавливается на заново создаваемых файлах.</p>
+      <p>6 - Если установить в качестве атрибута искомых элементов, то будет произведен поиск по
+        всем вышесказанным атрибутам. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword>
+s:<kword>string</kword> = ""; 
+sl = <funcname>createstringlist</funcname>; <comment>//Создаём список строк </comment>
+<funcname>findfiles</funcname>("*.prt",0,sl);
+<comment>//Ищем файлы по заданной маске, тип атрибутов файлов -</comment>
+<comment>//обычные файлы </comment>
+<kword>for</kword>(i=0, <funcname>countstringlist</funcname>(sl)) 
+s = s + <funcname>getstringlist</funcname>(sl,i) + <funcname>chr</funcname>(13);
+<funcname>freeobject</funcname>(sl); <comment>//Освобождаем список строк</comment></codeblock></section>
+<p>В процессе выполнения примера при помощи функции <codeph>createstringlist</codeph> создается
+      пустой список строк. При помощи функции <codeph>findfiles</codeph> происходит поиск файлов по
+      фильтру и запись имен найденных файлов в список строк. Далее, из имен всех найденных файлов
+      формируется строка, содержащая текст с разделителем «перевод каретки». Перед завершением
+      примера список строк уничтожается при помощи функции <codeph>freeobject</codeph>. </p>  
+  </body>
+</topic>
