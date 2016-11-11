@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>chr</title>
+<shortdesc>Функция получения строки с символом, имеющим заданный ASCII-код.</shortdesc>
+<body><section>
+      <title>Синтаксис:</title>
+      <codeblock>str = <funcname>chr</funcname>(c);</codeblock>
+    </section><section>
+      <title>Аргументы:</title>
+      <p>c – ASCII-код символа. Целое число.</p>
+    </section><section>
+      <title>Описание:</title>
+      <p><codeph>сhr(с)</codeph> – функция возвращает строку с символом, имеющим ASCII-код, равный
+          <codeph>c</codeph>. Перечень ASCII-кодов представлен в <xref
+          href="#topic_v4b_tyc_rf/table_q4s_sp2_xx" format="dita"/></p>
+    </section><table frame="all" rowsep="1" colsep="1" id="table_q4s_sp2_xx">
+      <title>Таблица ASCII-кодов, коды в шестнадцатиричном виде.</title>
+      <tgroup cols="17" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+        <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+        <colspec colname="c4" colnum="4" colwidth="1.0*"/>
+        <colspec colname="c5" colnum="5" colwidth="1.0*"/>
+        <colspec colname="c6" colnum="6" colwidth="1.0*"/>
+        <colspec colname="c7" colnum="7" colwidth="1.0*"/>
+        <colspec colname="c8" colnum="8" colwidth="1.0*"/>
+        <colspec colname="c9" colnum="9" colwidth="1.0*"/>
+        <colspec colname="c10" colnum="10" colwidth="1.0*"/>
+        <colspec colname="c11" colnum="11" colwidth="1.0*"/>
+        <colspec colname="c12" colnum="12" colwidth="1.0*"/>
+        <colspec colname="c13" colnum="13" colwidth="1.0*"/>
+        <colspec colname="c14" colnum="14" colwidth="1.0*"/>
+        <colspec colname="c15" colnum="15" colwidth="1.0*"/>
+        <colspec colname="c16" colnum="16" colwidth="1.0*"/>
+        <colspec colname="c17" colnum="17" colwidth="1.0*"/>
+        <tbody>
+          <row>
+            <entry/>
+            <entry><b>.0</b></entry>
+            <entry><b>.1</b></entry>
+            <entry><b>.2</b></entry>
+            <entry><b>.3</b></entry>
+            <entry><b>.4</b></entry>
+            <entry><b>.5</b></entry>
+            <entry><b>.6</b></entry>
+            <entry><b>.7</b></entry>
+            <entry><b>.8</b></entry>
+            <entry><b>.9</b></entry>
+            <entry><b>.A</b></entry>
+            <entry><b>.B</b></entry>
+            <entry><b>.C</b></entry>
+            <entry><b>.D</b></entry>
+            <entry><b>.E</b></entry>
+            <entry><b>.F</b></entry>
+          </row>
+          <row>
+            <entry><b>0.</b></entry>
+            <entry>NUL</entry>
+            <entry>SOH</entry>
+            <entry>STX</entry>
+            <entry>ETX</entry>
+            <entry>EOT</entry>
+            <entry>ENQ</entry>
+            <entry>ACK</entry>
+            <entry>BEL</entry>
+            <entry>BS</entry>
+            <entry>TAB</entry>
+            <entry>LF</entry>
+            <entry>VT</entry>
+            <entry>FF</entry>
+            <entry>CR</entry>
+            <entry>SO</entry>
+            <entry>SI</entry>
+          </row>
+          <row>
+            <entry><b>1.</b></entry>
+            <entry>DLE</entry>
+            <entry>DC1</entry>
+            <entry>DC2</entry>
+            <entry>DC3</entry>
+            <entry>DC4</entry>
+            <entry>NAK</entry>
+            <entry>SYN</entry>
+            <entry>ETB</entry>
+            <entry>CAN</entry>
+            <entry>EM</entry>
+            <entry>SUB</entry>
+            <entry>ESC</entry>
+            <entry>FS</entry>
+            <entry>GS</entry>
+            <entry>RS</entry>
+            <entry>US</entry>
+          </row>
+          <row>
+            <entry><b>2.</b></entry>
+            <entry/>
+            <entry>!</entry>
+            <entry>"</entry>
+            <entry>#</entry>
+            <entry>$</entry>
+            <entry>%</entry>
+            <entry>&amp;</entry>
+            <entry>'</entry>
+            <entry>(</entry>
+            <entry>)</entry>
+            <entry>*</entry>
+            <entry>+</entry>
+            <entry>,</entry>
+            <entry>-</entry>
+            <entry>.</entry>
+            <entry>/</entry>
+          </row>
+          <row>
+            <entry><b>3.</b></entry>
+            <entry>0</entry>
+            <entry>1</entry>
+            <entry>2</entry>
+            <entry>3</entry>
+            <entry>4</entry>
+            <entry>5</entry>
+            <entry>6</entry>
+            <entry>7</entry>
+            <entry>8</entry>
+            <entry>9</entry>
+            <entry>:</entry>
+            <entry>;</entry>
+            <entry>&lt;</entry>
+            <entry>=</entry>
+            <entry>></entry>
+            <entry>?</entry>
+          </row>
+          <row>
+            <entry><b>4.</b></entry>
+            <entry>@</entry>
+            <entry>A</entry>
+            <entry>B</entry>
+            <entry>C</entry>
+            <entry>D</entry>
+            <entry>E</entry>
+            <entry>F</entry>
+            <entry>G</entry>
+            <entry>H</entry>
+            <entry>I</entry>
+            <entry>J</entry>
+            <entry>K</entry>
+            <entry>L</entry>
+            <entry>M</entry>
+            <entry>N</entry>
+            <entry>O</entry>
+          </row>
+          <row>
+            <entry><b>5.</b></entry>
+            <entry>P</entry>
+            <entry>Q</entry>
+            <entry>R</entry>
+            <entry>S</entry>
+            <entry>T</entry>
+            <entry>U</entry>
+            <entry>V</entry>
+            <entry>W</entry>
+            <entry>X</entry>
+            <entry>Y</entry>
+            <entry>Z</entry>
+            <entry>[</entry>
+            <entry>\</entry>
+            <entry>]</entry>
+            <entry>^</entry>
+            <entry>_</entry>
+          </row>
+          <row>
+            <entry><b>6.</b></entry>
+            <entry>`</entry>
+            <entry>a</entry>
+            <entry>b</entry>
+            <entry>C</entry>
+            <entry>d</entry>
+            <entry>e</entry>
+            <entry>f</entry>
+            <entry>g</entry>
+            <entry>h</entry>
+            <entry>i</entry>
+            <entry>j</entry>
+            <entry>k</entry>
+            <entry>l</entry>
+            <entry>m</entry>
+            <entry>n</entry>
+            <entry>o</entry>
+          </row>
+          <row>
+            <entry><b>7.</b></entry>
+            <entry>p</entry>
+            <entry>q</entry>
+            <entry>r</entry>
+            <entry>s</entry>
+            <entry>t</entry>
+            <entry>u</entry>
+            <entry>v</entry>
+            <entry>w</entry>
+            <entry>x</entry>
+            <entry>y</entry>
+            <entry>z</entry>
+            <entry>{</entry>
+            <entry>|</entry>
+            <entry>}</entry>
+            <entry>~</entry>
+            <entry>DEL</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table><p>Расшифровка некоторых управляющих символов:</p>
+  <ul><li><b>NUL</b>, 00 — Null, пустой.</li>
+ <li><b>SOH</b>, 01 — Start Of Heading, начало заголовка.</li> 
+    <li><b>STX</b>, 02 — Start of Text, начало текста.</li> <li><b>ETX</b>, 03 — End of Text, конец текста.</li>
+    <li><b>BS</b>, 08 — Backspace, возврат на один символ. Стирает предыдущий символ.</li>
+  <li><b>TAB</b>, 09 — Tab, горизонтальная табуляция.</li> <li><b>LF</b>, 0A — Line Feed, перевод строки. В конце каждой строчки текстового файла ставится
+        либо этот символ, либо CR, либо и тот и другой (CR, затем LF), в зависимости от операционной
+        системы. Во многих языках программирования обозначается \n и при выводе текста приводит к
+        переводу строки.</li> <li><b>VT</b>, 0B — Vertical Tab, вертикальная табуляция.</li>  <li><b>FF</b>, 0C — Form Feed, прогон страницы, новая страница.</li> <li><b>CR</b>, 0D — Carriage Return, возврат каретки. Во многих языках программирования этот
+        символ, обозначаемый \r, можно использовать для возврата в начало строчки без перевода
+        строки. В некоторых операционных системах этот же символ, обозначаемый Ctrl-M, ставится в
+        конце каждой строчки текстового файла перед LF.</li> <li><b>SO</b>, 0E — Shift Out, измени цвет ленты (использовался для двуцветных лент; цвет менялся
+        обычно на красный). В дальнейшем обозначал начало использования национальной кодировки.</li> <li><b>ESC</b>, 1B — Escape. Следующие за ним символы имеют какое-то другое значение, отличное от
+        того, которое определено в ASCII</li>
+  <li><b>FS</b>, 1C — File Separator, разделитель файлов.</li><li><b>GS</b>, 1D — Group Separator, разделитель групп.</li>
+  <li><b>RS</b>, 1E — Record Separator, разделитель записей.</li> <li><b>DEL</b>, 7F — Delete, стереть последний символ.</li> </ul> <section>
+      <title>Результат:</title>
+      <p>str – строка, содержащая символ с ASCII-кодом, равным c. </p>
+    </section><section>
+      <title>Пример:</title>
+      <codeblock>str = <funcname>chr</funcname>(115);</codeblock>
+    </section><p>В результате переменная str будет содержать строку “s”, как как дясятичное число 115
+      соответствуем шестнадцатиричному числу 73.</p></body>
+</topic>

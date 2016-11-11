@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>millisecondof </title>
+<shortdesc>Функция извлечения значения миллисекунды из значения даты и времени в системном
+    формате.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>ms = <funcname>millisecondof</funcname>(date);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>date – дата и время в системном формате. Тип double. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>millisecondof(date)</codeph> – функция извлечения значения миллисекунды из значения даты
+        и времени в системном формате. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>ms – значение миллисекунды.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>date = <funcname>now</funcname>;
+ms = <funcname>millisecondof</funcname> (date);</codeblock></section>
+<p>В результате выполнения примера переменной <codeph>date</codeph> будет присвоено значение текущей
+      даты и времени типа double, переменная <codeph>ms</codeph> будет содержать значение, равное
+      значению текущей миллисекунды во время исполнения. </p>  
+  </body>
+</topic>

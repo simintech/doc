@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>floattostr</title>
+<shortdesc>Функция формирования строки из переменной с плавающей запятой.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>str = <funcname>floattostr</funcname>(x);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>x – входная переменная.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>floattostr(x) </codeph>– функция формирует строку из переменной <codeph>x</codeph> типа
+        «число с плавающей запятой». Переменная <codeph>х</codeph> должна быть типа
+          <codeph>double</codeph>. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>str – сформированная строка.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword>
+x1:<rword>double</rword> = 2.6;
+<comment>//сформируем строки из переменных</comment>
+s1 = <funcname>floattostr</funcname>(x1);
+s2 = <funcname>floattostr</funcname>(2.5);</codeblock></section>
+<p>В результате переменная <codeph>s1</codeph> будет содержать строку «2.6», переменная
+        <codeph>s2</codeph> будет содержать строку «2.5».</p>  
+  </body>
+</topic>

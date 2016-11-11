@@ -47,7 +47,7 @@
         </topicref>
     </topicref>
     <topicref href="topics/yazik_programmirovania/yazik_programmirovania.dita"
-        navtitle="6 Язык программирования" locktitle="yes">
+        navtitle="6 - Язык программирования" locktitle="yes">
         <topicref href="topics/yazik_programmirovania/konstanti.dita" navtitle="6.1 Константы"
             locktitle="yes"/>
         <topicref href="topics/yazik_programmirovania/peremennie.dita" navtitle="6.2 Переменные"
@@ -367,6 +367,81 @@
                 <topicref href="topics/yazik_programmirovania/funkcii/writefile.dita"/>
                 <topicref href="topics/yazik_programmirovania/funkcii/writeln.dita"/>
                 <topicref href="topics/yazik_programmirovania/funkcii/writetext.dita"/>
+            </topicref>
+            <topicref href="topics/yazik_programmirovania/funkcii/rabota_s_pamiatiu.dita"
+                navtitle="6.6.14 Работа с памятью" locktitle="yes">
+                <topicref href="topics/yazik_programmirovania/funkcii/tilda.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/dispose.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/new_tilda.dita"/>
+            </topicref>
+            <topicref href="topics/yazik_programmirovania/funkcii/strokovie.dita"
+                navtitle="6.6.15 Строковые" locktitle="yes">
+                <topicref href="topics/yazik_programmirovania/funkcii/spiski_strok.dita">
+                    <topicref href="topics/yazik_programmirovania/funkcii/addstringlist.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/addtohash.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/assignstringlist.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/clearstringlist.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/countstringlist.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/createstringlist.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/createstringlisthash.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/deletestringlist.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getindexesfromhash.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getindexfromhash.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getstringlist.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/gettagstringlist.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/gettextstringlist.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/indexofstringlist.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/insertstringlist.dita"/>
+                    <topicref
+                        href="topics/yazik_programmirovania/funkcii/loadstringlistfromfile.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/removefromhash.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/savestringlisttofile.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setstringlist.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/settagstringlist.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/settextstringlist.dita"/>
+                </topicref>
+                <topicref href="topics/yazik_programmirovania/funkcii/addzeros.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/asc.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/chr.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/datatostr.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/floattostr.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/floattostrf.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/format.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/getdbfileasis.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/getitem.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/getitemscount.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/getsubstring.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/gettextsize.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/gettoken.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/inttostr.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/length.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/lowercase.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/pos.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/setitem.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/strcopy.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/translit.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/uppercase.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/valf.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/vali.dita"/>
+            </topicref>
+            <topicref href="topics/yazik_programmirovania/funkcii/funccii_vremeni.dita"
+                navtitle="6.6.16 Функции времени" locktitle="yes">
+                <topicref href="topics/yazik_programmirovania/funkcii/aperiodika.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/datetimetostr.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/datetimetounix.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/dayof.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/flash.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/hourof.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/millisecondof.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/minuteof.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/monthof.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/now.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/secondof.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/sleep.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/step.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/tickcount.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/unixtodatetime.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/yearof.dita"/>
             </topicref>
         </topicref>
     </topicref>

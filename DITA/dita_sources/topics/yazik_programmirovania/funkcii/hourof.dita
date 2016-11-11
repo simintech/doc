@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>hourof </title>
+<shortdesc>Функция извлечения значения часа из значения даты и времени в системном
+    формате.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>hh = <funcname>hourof</funcname>(date);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>date – дата и время в системном формате. Тип double.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>hourof(date) </codeph>– функция извлечения значения часа из значения даты и времени в
+        системном формате. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>hh – значение часа.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>date = <funcname>now</funcname>; 
+hh = <funcname>hourof</funcname>(date);</codeblock></section>
+<p>В результате выполнения примера переменной <codeph>date</codeph> будет присвоено значение текущей
+      даты и времени типа double, переменная <codeph>hh</codeph> будет содержать значение, равное
+      значению текущего часа. </p>  
+  </body>
+</topic>

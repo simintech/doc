@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>step</title>
+<shortdesc>Функция генерации ступенчатого входного воздействия.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>х = <funcname>flash</funcname>(time, val1, val2);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>time – время срабатывания,</p>
+      <p>val1 – значение до момента срабатывания,</p>
+      <p>val2 – значение после момента срабатывания. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>step(time, val1, val2)</codeph> – функция производит дискретное изменение значения на
+        выходе с <codeph>val1</codeph> на <codeph>val2</codeph> через время <codeph>time</codeph>.
+        Функция доступна в блоке "Язык программирования".</p></section>
+<section>
+      <title>Результат:</title>
+      <p>x – значение на выходе.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><comment>//Расчет переходной и весовой функций</comment>
+T=1;
+b=[0.1 0.3 0.5 0.7 1];
+<kword>init</kword> x1=[0,0,0,0,0], x2=[0,0,0,0,0];
+u=<funcname>step</funcname>(2,0,1);                      
+x1'=x2;                             
+x2'=-(x1+b*T*x2-5#u)/T^2;           </codeblock></section>  
+  </body>
+</topic>

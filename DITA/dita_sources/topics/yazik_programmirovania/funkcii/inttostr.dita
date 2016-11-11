@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>inttostr</title>
+<shortdesc>Функция формирования строки из переменной целого типа.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>str = <funcname>inttostr</funcname>(x);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>x – входная переменная типа integer. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>inttostr(x)</codeph> – функция формирует строку из переменной целого типа
+          <codeph>x</codeph> (integer). </p></section>
+<section>
+      <title>Результат:</title>
+      <p>str – сформированная строка.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> 
+x1:<rword>integer</rword> = 1,
+s1:<rword>string</rword>;
+<comment>//сформируем строку из переменной</comment>
+s1 = <funcname>inttostr</funcname>(x1);               </codeblock></section>
+<p>В результате выполнения, переменная <codeph>s1</codeph> будет содержать строку «1». </p>  
+  </body>
+</topic>

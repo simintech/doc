@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>datatostr</title>
+<shortdesc>Функция формирования строки из переменной произвольного типа.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>str = <funcname>datatostr</funcname>(x);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>x – входная переменная произвольного типа.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>datatostr(x)</codeph> – функция формирует строку из переменной произвольного типа. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>str – сформированная строка.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword>   
+x1:<rword>integer</rword> = 1,
+x2:<rword>boolean</rword> = 1,
+x3:<rword>array</rword> = [0,3,5];
+<comment>//сформируем строки из переменных</comment>
+s1 = <funcname>datatostr</funcname>(x1);              
+s2 = <funcname>datatostr</funcname>(x2);              
+s3 = <funcname>datatostr</funcname>(x3);              </codeblock></section>
+<p>В результате переменная <codeph>s1</codeph> будет содержать строку «1», переменная
+        <codeph>s2</codeph> будет содержать строку «Да», переменная <codeph>s3</codeph> будет
+      содержать строку «[0 , 3 , 5]». </p>  
+  </body>
+</topic>

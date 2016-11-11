@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>flash</title>
+<shortdesc>Дискретное изменение значения с 0 на 1 с заданным периодом.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>х = <funcname>flash</funcname>(time);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>time – период изменения значения в миллисекундах.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>flash(time)</codeph> – производит дискретное изменение значения на выходе с 0 на 1 с
+        заданным периодом <codeph>time</codeph> в миллисекундах. Изменение выходного значения
+        привязано к системному времени. Может использоваться для отображения мигающих элементов. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>x – значение на выходе.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> id: <rword>integer</rword>;
+<kword>initialization</kword>
+  <comment>//Установка идентификатора объекта для мигания</comment>
+  id = <funcname>findobjectbynametrans</funcname>("FillRect");       
+  stick = <funcname>tickcount</funcname>;                            
+<kword>end</kword>;                                            
+  <comment>//Мигание в течение заданного времени         </comment>
+<kword>if</kword> id &lt;> 0 <kword>then begin</kword>                           
+  <funcname>setvisible</funcname>(id, <funcname>flash</funcname>(1000));                  
+  <kword>if</kword> (<funcname>tickcount</funcname> – stick) > 5000 <kword>then begin</kword>      
+    <funcname>setvisible</funcname>(id,1);                           
+    id = 0;                                     
+  <kword>end</kword>;                                          
+<kword>end</kword>;  </codeblock></section>
+<p>В примере происходит установка мигания объекта с именем <codeph>FillRect</codeph> раз в секунду в
+      течении 5с. </p>  
+  </body>
+</topic>

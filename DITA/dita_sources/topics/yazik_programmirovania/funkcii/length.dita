@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>length </title>
+<shortdesc>Функция определения количества символов в строке.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>n = <funcname>length</funcname>(str);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>str – строка.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>length(str)</codeph> – функция возвращает количество символов в строке. Если строка
+        пустая, то возвращает 0. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>n – количество символов в строке. Целое число.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword>
+str:<rword>string</rword> = "string1";
+n = <funcname>length</funcname>(str);       </codeblock></section>
+<p>В результате переменной <codeph>n</codeph> будет присвоено значение 7. </p>  
+  </body>
+</topic>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>translit</title>
+<shortdesc>Функция перевода кириллических символов строки в латинские символы.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>s = <funcname>translit</funcname>(str);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>str – строка.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>translit(str)</codeph> – функция переводит кириллические символы строки
+          <codeph>str</codeph> в латинские символы (производит транслитерацию строки). </p>
+      <table frame="all" rowsep="1" colsep="1" id="table_t3n_3nk_xx">
+        <title>Таблица транслитерации</title>
+        <tgroup cols="10" align="center">
+          <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+          <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+          <colspec colname="c3" colnum="3" colwidth="1.0*"/>
+          <colspec colname="c4" colnum="4" colwidth="1.0*"/>
+          <colspec colname="c5" colnum="5" colwidth="1.0*"/>
+          <colspec colname="c6" colnum="6" colwidth="1.0*"/>
+          <colspec colname="c7" colnum="7" colwidth="1.0*"/>
+          <colspec colname="c8" colnum="8" colwidth="1.0*"/>
+          <colspec colname="c9" colnum="9" colwidth="1.0*"/>
+          <colspec colname="c10" colnum="10" colwidth="1.0*"/>
+          <tbody>
+            <row>
+              <entry><b>Буква</b></entry>
+              <entry>Транслит</entry>
+              <entry><b>Буква</b></entry>
+              <entry>Транслит</entry>
+              <entry><b>Буква</b></entry>
+              <entry>Транслит</entry>
+              <entry><b>Буква</b></entry>
+              <entry>Транслит</entry>
+              <entry><b>Буква</b></entry>
+              <entry>Транслит</entry>
+            </row>
+            <row>
+              <entry><b>ё</b></entry>
+              <entry>yo</entry>
+              <entry><b>ы</b></entry>
+              <entry>y</entry>
+              <entry><b>м</b></entry>
+              <entry>m</entry>
+              <entry><b>Г</b></entry>
+              <entry>G</entry>
+              <entry><b>Л</b></entry>
+              <entry>L</entry>
+            </row>
+            <row>
+              <entry><b>ц</b></entry>
+              <entry>c</entry>
+              <entry><b>в</b></entry>
+              <entry>v</entry>
+              <entry><b>и</b></entry>
+              <entry>n</entry>
+              <entry><b>Ш</b></entry>
+              <entry>SH</entry>
+              <entry><b>Д</b></entry>
+              <entry>D</entry>
+            </row>
+            <row>
+              <entry><b>у</b></entry>
+              <entry>u</entry>
+              <entry><b>а</b></entry>
+              <entry>a</entry>
+              <entry><b>т</b></entry>
+              <entry>t</entry>
+              <entry><b>Щ</b></entry>
+              <entry>XH</entry>
+              <entry><b>Ж</b></entry>
+              <entry>J</entry>
+            </row>
+            <row>
+              <entry><b>к</b></entry>
+              <entry>k</entry>
+              <entry><b>п</b></entry>
+              <entry>p</entry>
+              <entry><b>ь</b></entry>
+              <entry/>
+              <entry><b>З</b></entry>
+              <entry>Z</entry>
+              <entry><b>Э</b></entry>
+              <entry>E</entry>
+            </row>
+            <row>
+              <entry><b>е</b></entry>
+              <entry>e</entry>
+              <entry><b>р</b></entry>
+              <entry>r</entry>
+              <entry><b>б</b></entry>
+              <entry>b</entry>
+              <entry><b>Х</b></entry>
+              <entry>H</entry>
+              <entry><b>Я</b></entry>
+              <entry>Y</entry>
+            </row>
+            <row>
+              <entry><b>н</b></entry>
+              <entry>n</entry>
+              <entry><b>о</b></entry>
+              <entry>o</entry>
+              <entry><b>ю</b></entry>
+              <entry>yu</entry>
+              <entry><b>Ъ</b></entry>
+              <entry/>
+              <entry><b>Ч</b></entry>
+              <entry>CH</entry>
+            </row>
+            <row>
+              <entry><b>г</b></entry>
+              <entry>g</entry>
+              <entry><b>л</b></entry>
+              <entry>l</entry>
+              <entry><b>Ё</b></entry>
+              <entry>YO</entry>
+              <entry><b>Ф</b></entry>
+              <entry>F</entry>
+              <entry><b>С</b></entry>
+              <entry>S</entry>
+            </row>
+            <row>
+              <entry><b>ш</b></entry>
+              <entry>sh</entry>
+              <entry><b>д</b></entry>
+              <entry>d</entry>
+              <entry><b>Й</b></entry>
+              <entry>Y</entry>
+              <entry><b>Ы</b></entry>
+              <entry>Y</entry>
+              <entry><b>М</b></entry>
+              <entry>M</entry>
+            </row>
+            <row>
+              <entry><b>щ</b></entry>
+              <entry>xh</entry>
+              <entry><b>ж</b></entry>
+              <entry>j</entry>
+              <entry><b>Ц</b></entry>
+              <entry>C</entry>
+              <entry><b>В</b></entry>
+              <entry>V</entry>
+              <entry><b>И</b></entry>
+              <entry>I</entry>
+            </row>
+            <row>
+              <entry><b>з</b></entry>
+              <entry>z</entry>
+              <entry><b>э</b></entry>
+              <entry>e</entry>
+              <entry><b>У</b></entry>
+              <entry>U</entry>
+              <entry><b>А</b></entry>
+              <entry>A</entry>
+              <entry><b>Т</b></entry>
+              <entry>T</entry>
+            </row>
+            <row>
+              <entry><b>х</b></entry>
+              <entry>h</entry>
+              <entry><b>я</b></entry>
+              <entry>y</entry>
+              <entry><b>К</b></entry>
+              <entry>K</entry>
+              <entry><b>П</b></entry>
+              <entry>P</entry>
+              <entry><b>Ь</b></entry>
+              <entry/>
+            </row>
+            <row>
+              <entry><b>ъ</b></entry>
+              <entry/>
+              <entry><b>ч</b></entry>
+              <entry>ch</entry>
+              <entry><b>Е</b></entry>
+              <entry>E</entry>
+              <entry><b>Р</b></entry>
+              <entry>R</entry>
+              <entry><b>Б</b></entry>
+              <entry>B</entry>
+            </row>
+            <row>
+              <entry><b>ф</b></entry>
+              <entry>f</entry>
+              <entry><b>с</b></entry>
+              <entry>s</entry>
+              <entry><b>Н</b></entry>
+              <entry>N</entry>
+              <entry><b>О</b></entry>
+              <entry>O</entry>
+              <entry><b>Ю</b></entry>
+              <entry>YO</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></section>
+<section>
+      <title>Результат:</title>
+      <p>s – результирующая строка.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword>  
+str:<rword>string</rword> = "строка1";
+s = <funcname>translit</funcname>(str);     </codeblock></section>
+<p>В результате переменная <codeph>s</codeph> будет содержать строку “stroka1”. </p>  
+  </body>
+</topic>
