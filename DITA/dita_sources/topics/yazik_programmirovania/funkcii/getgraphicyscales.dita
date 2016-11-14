@@ -31,8 +31,8 @@
 <codeblock><comment>//получим идентификатор график</comment>
 gid = <funcname>getgraphicid</funcname>(plot);     
 <comment>//получим мин. и макс. шкалы по оси Y</comment>
-val = <funcname>getgraphicyscales</funcname>(gid);        </codeblock></section>
+val = <funcname>getgraphicyscales</funcname>(gid, 1);        </codeblock></section>
 <p>В результате выполнения данного примера происходит получение идентификатора графика и получение
-      значений минимума и максимума шкалы графика по оси Y. </p>  
+      значений минимума и максимума первой шкалы графика по оси Y. </p>  
   </body>
 </topic>

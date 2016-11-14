@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>removeprimitiv</title>
+<shortdesc>Функция удаления объекта со схемы по его идентификатору.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>removeprimitiv</funcname>(gid);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>gid – идентификатор объекта на схеме.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>removeprimitiv(gid)</codeph> – функция удаление объекта со схемы по его идентификатору
+          <codeph>gid</codeph>. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>initialization</kword>
+ gid = <funcname>createprimitiv</funcname>(6, [(0 , 0),(-28 , -48),(-88 , -108)]);
+<kword>end</kword>
+<kword>var</kword> oldfl: <rword>boolean</rword>; 
+
+<kword>if</kword> <rword>paintstep</rword> <kword>then begin</kword>
+ fl = <funcname>flash</funcname>(500);
+ <kword>if</kword> fl &lt;> oldfl <kword>then begin</kword>
+  <kword>if</kword> fl <kword>then</kword>              
+   <funcname>bringtofront</funcname>(FillRect) 
+  <kword>else</kword>                    
+   <funcname>bringtofront</funcname>(FillCircle);
+  <kword>end</kword>;                      
+ oldfl = fl;                
+<kword>end</kword>;                        
+
+<kword>finalization</kword>
+ <funcname>removeprimitiv</funcname>(gid);
+<kword>end</kword>;                 </codeblock></section>
+<p>В результате выполнения данного примера динамически создается объект «Залитый прямоугольник» с
+      идентификатором <codeph>gid</codeph>, после чего объекты c идентификаторами
+        <codeph>gid</codeph> и <codeph>FillCircle</codeph> (который уже был на схеме) будут
+      попеременно с периодом 500 мс. накладываться друг на друга. Перед остановкой выполнения
+      созданный объект с идентификатором <codeph>gid</codeph> удаляется. </p>  
+  </body>
+</topic>

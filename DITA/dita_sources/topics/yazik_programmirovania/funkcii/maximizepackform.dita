@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>maximizepackform</title>
+<shortdesc>Функция позволяет развернуть окно пакета на весь экран.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>maximizepackform</funcname></codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>нет</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>maximizepackform</codeph> – функция позволяет развернуть окно пакета, в состав которого
+        входит текущий проект, на весь экран.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>initialization</kword>
+     <funcname>maximizepackform</funcname>;
+<kword>end</kword>;                   
+
+<kword>finalization</kword>
+     <funcname>normalizepackform</funcname>;
+<kword>end</kword>;                   </codeblock></section>
+<p>Данный скрипт разворачивает окно пакета на весь экран в момент запуска расчета и восстанавливает
+      его в прежнем виде, когда расчет остановлен. </p>  
+  </body>
+</topic>

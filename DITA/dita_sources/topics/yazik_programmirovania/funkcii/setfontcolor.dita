@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setfontcolor</title>
+<shortdesc>Функция установки значения цвета шрифта для объекта на схеме.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setfontcolor</funcname>(font, val);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>font – свойство типа «шрифт» объекта,</p>
+      <p>val – значение кода цвета.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setfontcolor(font, val)</codeph> – функция установки значения кода цвета
+          <codeph>val</codeph> шрифта для объекта на схеме. Аргумент <codeph>val</codeph> должен
+        быть числом и не может быть переменной. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><funcname>setfontcolor</funcname>(TextLabel1.Font, 65280); </codeblock></section>
+<p>Происходит установка значения цвета 65280, кодирующего зеленый цвет шрифта для объекта
+        <codeph>TextLabel1</codeph>. </p>  
+  </body>
+</topic>

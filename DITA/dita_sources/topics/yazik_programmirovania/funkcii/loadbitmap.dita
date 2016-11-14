@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>loadbitmap</title>
+<shortdesc>Функция загрузки изображения в сигнал или свойство объекта из графического
+    файла.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>loadbitmap</funcname>(img, filename);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>img – свойство или сигнал типа «изображение»,</p>
+      <p>filename – строка с именем файла, содержащего изображение в формате bmp. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>loadbitmap(img, filename)</codeph> – функция загрузки изображения в сигнал или свойство
+        объекта на схеме с именем <codeph>img</codeph> из графического файла
+          <codeph>filename</codeph>. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><funcname>loadbitmap</funcname>(RasterImage.RasterImage,"test.bmp");</codeblock></section>  
+  </body>
+</topic>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>savescreenshot </title>
+<shortdesc>Функция сохранения в графический файл текущего изображения экрана проекта.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>savescreenshot</funcname>(filename, type);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>filename – строка с именем файла,</p>
+      <p>type – формат файла.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>savescreenshot(filename, type)</codeph> – функция сохранения в графический файл с именем
+          <codeph>filename</codeph> текущего изображения экрана проекта в формате, определяемом
+        кодом <codeph>type</codeph>. Формат файла <codeph>type</codeph> может принимать
+        значения:</p>
+      <p>1 или 2 – метафайл Windows;</p>
+      <p>3 – несжатое растровое изображение в формате BMP;</p>
+      <p>4 – сжатое растровое изображение в формате PNG. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><funcname>savescreenshot</funcname>("screen.png", 4);</codeblock></section>  
+  </body>
+</topic>

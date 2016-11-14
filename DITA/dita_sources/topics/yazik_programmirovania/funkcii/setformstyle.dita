@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setformstyle </title>
+<shortdesc>Функция установки режима отображения схемного окна.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setformstyle</funcname>(index);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>Index = 0 – режим отображения окна нормальный,</p>
+      <p>Index = 1 – режим отображения окна «поверх всех окон».</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setformstyle(regime_form)</codeph> – устанавливает режим отображения окна в указанный.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><funcname>setformstyle</funcname>(1);</codeblock></section>  
+  </body>
+</topic>

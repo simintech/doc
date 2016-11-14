@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setpackformvisible</title>
+<shortdesc>Функция установки видимости окна пакета, которому принадлежит проект.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setpackformvisible</funcname>(set);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>set – двоичный аргумент, где 1 – показывать окно пакета, 0 – скрыть окно пакета; </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setpackformvisible</codeph> – функция позволяет управлять видимостью окна пакета из
+        скрипта проекта, входящего в его состав. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>Функция возвращает 1, если установка видимости окна пакета просла успешно либо 0, в случае
+        если проект открыт не в составе пакета.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>initialization</kword>
+     <funcname>setpackformvisible</funcname>(0);
+<kword>end</kword>; 
+
+<kword>finalization</kword>
+     <funcname>setpackformvisible</funcname>(1);
+<kword>end</kword>;</codeblock></section>
+<p>Данный скрипт скрывает окно пакета в момент запуска расчета и делает его снова видимым, когда
+      расчет остановлен. </p>  
+  </body>
+</topic>

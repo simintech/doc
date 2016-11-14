@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>minimizepackform</title>
+<shortdesc>Функция сворачивания окна пакета, которому принадлежит проект. </shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>minimizepackform</funcname>;</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>нет</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>minimizepackform</codeph> – функция позволяет сворачивать окно пакета, в состав которого
+        входит текущий проект.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>initialization</kword>
+     <funcname>minimizepackform</funcname>;
+<kword>end</kword>;
+
+<kword>finalization</kword>
+     <funcname>normalizepackform</funcname>;
+<kword>end</kword>;</codeblock></section>
+<p>Данный скрипт сворачивает окно пакета в момент запуска расчета и разворачивает его, когда расчет
+      остановлен.</p>  
+  </body>
+</topic>

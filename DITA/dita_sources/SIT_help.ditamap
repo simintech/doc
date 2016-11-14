@@ -456,6 +456,54 @@
                     <topicref href="topics/yazik_programmirovania/funkcii/resetgraphic.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/setgraphiclegend.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/setgraphicxauto.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setgraphicxgrid.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setgraphicxinterval.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setgraphicxscales.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setgraphicyauto.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setgraphicygrid.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setgraphicyinterval.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setgraphicyscales.dita"/>
+                </topicref>
+                <topicref href="topics/yazik_programmirovania/funkcii/graficheskie.dita">
+                    <topicref href="topics/yazik_programmirovania/funkcii/bringtofront.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/bringtofrontform.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/constr2P.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/createprimitiv.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getfontsize.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/global.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/loadbitmap.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/maximizeform.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/maximizepackform.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/minimizeform.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/minimizepackform.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/move.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/normalizeform.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/normalizepackform.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/normalmodeform.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/removeprimitiv.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/restore.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/rgbtocolor.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/rotate.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/savescreenshot.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/scale.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/sendtobackform.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setfontcolor.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setfontname.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setfontprop.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setfontsize.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setfontstyle.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setformstyle.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setpackformvisible.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setpointcount.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setselection.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/settransparentcolor.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setvisible.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setwindowalfa.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/slideline.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/stayontopform.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/storeposition.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/stretch.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/zoomrect.dita"/>
                 </topicref>
             </topicref>
         </topicref>

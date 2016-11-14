@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setwindowalpha</title>
+<shortdesc>Функция установки степени прозрачности окна.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setwindowalpha</funcname>(transp);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>transp – коэффициент прозрачности (0..255). </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setwindowalpha(transp)</codeph> – функция устанавливает уровень прозрачности окна
+        проекта.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>Функция возвращает единицу, если уровень прозрачности окна проекта был успешно установлен. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>initialization</kword>
+<funcname>setwindowalpha</funcname>(127);
+<kword>end</kword>; 
+
+<kword>finalization</kword>
+<funcname>setwindowalpha</funcname>(255);
+<kword>end</kword>;</codeblock></section>
+<p>В результате выполнения примера, при запуске проекта на расчет, окно будет становиться прозрачным
+      и возвращаться в исходное состояние при остановке расчета. </p>  
+  </body>
+</topic>

@@ -18,10 +18,14 @@
           <codeph>getgraphicid(gr_name)</codeph> и имеет тип указателя на объект.  </p></section>
 <section>
       <title>Результат:</title>
-      <p>результат</p>
+      <p>fl – флага наличия легенды графика.</p>
     </section>  
 <section><title>Пример:</title>
-<codeblock>пример</codeblock></section>
-<p>описание примера</p>  
+<codeblock><comment>//получим идентификатор график</comment>
+gid = <funcname>getgraphicid</funcname>(plot);
+<comment>//получим флаг наличия легенды</comment>
+fl = <funcname>getgraphiclegend</funcname>(gid); </codeblock></section>
+<p>В результате выполнения данного примера происходит получение идентификатора графика и получение
+      флага наличия легенды на графике. </p>  
   </body>
 </topic>
