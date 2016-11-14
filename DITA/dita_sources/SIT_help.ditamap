@@ -443,6 +443,21 @@
                 <topicref href="topics/yazik_programmirovania/funkcii/unixtodatetime.dita"/>
                 <topicref href="topics/yazik_programmirovania/funkcii/yearof.dita"/>
             </topicref>
+            <topicref href="topics/yazik_programmirovania/funkcii/graficheskie_i_sistemnie.dita"
+                navtitle="6.6.17 Графические и системные" locktitle="yes">
+                <topicref href="topics/yazik_programmirovania/funkcii/grafiki.dita">
+                    <topicref href="topics/yazik_programmirovania/funkcii/getgraphicid.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getgraphiclegend.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getgraphicmousevalue.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getgraphicxinterval.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getgraphicxscales.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getgraphicyinterval.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getgraphicyscales.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/resetgraphic.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setgraphiclegend.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setgraphicxauto.dita"/>
+                </topicref>
+            </topicref>
         </topicref>
     </topicref>
 </map>

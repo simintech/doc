@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getgraphicyinterval</title>
+<shortdesc>Функция получения свойства графика «Интервал видимости по оси Y».</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>val = <funcname>getgraphicyinterval</funcname>(gid, num);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>id – идентификатор объекта типа «График»,</p>
+      <p>num – номер шкалы объекта типа «График».</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getgraphicyinterval(gid, num)</codeph> – функция получения значения свойства «Интервал
+        видимости по оси Y» объекта типа «График» по идентификатору объекта <codeph>gid</codeph> и
+        номеру шкалы <codeph>num</codeph>. Идентификатор объекта может быть получен функцией
+          <codeph>getgraphicid(gr_name)</codeph> и имеет тип указателя на объект. Номер шкалы
+        соответствует номеру графика (начиная с 0) при многошкальном режиме отображения. Если
+        используется одна шкала, то номер шкалы можно указывать произвольно. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>val – значение интервала видимости по оси Y. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><comment>//получим идентификатор график</comment>
+gid = <funcname>getgraphicid</funcname>(plot);     
+<comment>//получим флаг наличия легенды</comment>
+val = <funcname>getgraphicyinterval</funcname>(gid, 0);</codeblock></section>
+<p>В результате выполнения данного примера происходит получение идентификатора графика и получение
+      интервала видимости по оси Y. </p>  
+  </body>
+</topic>

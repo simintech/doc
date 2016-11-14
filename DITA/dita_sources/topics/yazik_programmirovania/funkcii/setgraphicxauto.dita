@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setgraphicxauto </title>
+<shortdesc>Функция установки свойства «Автомасштабирование по оси X» графика.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setgraphicxauto</funcname>(gid, fl);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>gid – идентификатор объекта типа «График»,</p>
+      <p>fl – флага наличия автомасштабирования по оси X объекта типа «График». </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setgraphicxauto(gid, fl)</codeph> – функция установки свойства «Автомасштабирование по
+        оси X» объекта типа «График» по идентификатору объекта. Аргумент <codeph>fl</codeph>
+        принимает значения: 1 – установить автомасштабирование по оси X; 0 – убрать
+        автомасштабирование по оси X. Идентификатор объекта может быть получен функцией
+          <codeph>getgraphicid(gr_name)</codeph> и имеет тип указателя на объект.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><comment>//получим идентификатор график</comment>
+gid = <funcname>getgraphicid</funcname>(plot);
+<comment>//установим флаг наличия автомасштабирования по оси X</comment>
+<funcname>setgraphicxauto</funcname>(gid, 1);                             </codeblock></section>
+<p>В результате выполнения данного примера происходит получение идентификатора графика и установка
+      флага наличия автомасштабирования по оси X на графике.</p>  
+  </body>
+</topic>
