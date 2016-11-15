@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getvisiblelayer</title>
+<shortdesc>Функция получения значения видимости слоя проекта.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>s=<funcname>getvisiblelayer</funcname>(num_layer);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>num_layer – номер слоя схемного окна проекта, начиная с 1.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getvisiblelayer(num_layer)</codeph> –функция получения значения видимости визуального
+        слоя проекта.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>S - результат выполнения, тип boolean. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>vis1 = <funcname>getvisiblelayer</funcname>(1);</codeblock></section>  
+  </body>
+</topic>

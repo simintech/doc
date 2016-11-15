@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setprojectvisiblelayer</title>
+<shortdesc>Функция установки флага видимости визуального слоя проекта.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setprojectvisiblelayer</funcname>(num, flag);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>num – номер визуального слоя,</p>
+      <p>flag – флаг видимости визуального слоя.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setprojectvisiblelayer(num, flag)</codeph> – функция установки флага видимости
+        визуального слоя <codeph>flag</codeph> (включен - 1 или выключен - 0 ) c номером
+          <codeph>num</codeph> проекта. Номер слоя задается в диапазоне от 1 до 16.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><funcname>setprojectvisiblelayer</funcname>(1, 1);</codeblock></section>  
+  </body>
+</topic>

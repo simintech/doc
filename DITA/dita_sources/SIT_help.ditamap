@@ -505,6 +505,21 @@
                     <topicref href="topics/yazik_programmirovania/funkcii/stretch.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/zoomrect.dita"/>
                 </topicref>
+                <topicref href="topics/yazik_programmirovania/funkcii/sloi_shemnogo_okna.dita">
+                    <topicref href="topics/yazik_programmirovania/funkcii/getenabledlayer.dita"/>
+                    <topicref
+                        href="topics/yazik_programmirovania/funkcii/getprojectenabledlayer.dita"/>
+                    <topicref
+                        href="topics/yazik_programmirovania/funkcii/getprojectvisiblelayer.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getvisiblelayer.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setenabledlayer.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setobjectvisuallayer.dita"/>
+                    <topicref
+                        href="topics/yazik_programmirovania/funkcii/setprojectenabledlayer.dita"/>
+                    <topicref
+                        href="topics/yazik_programmirovania/funkcii/setprojectvisiblelayer.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setvisiblelayer.dita"/>
+                </topicref>
             </topicref>
         </topicref>
     </topicref>

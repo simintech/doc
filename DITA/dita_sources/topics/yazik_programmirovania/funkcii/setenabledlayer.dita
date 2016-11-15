@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setenabledlayer </title>
+<shortdesc>Функция установки активным нужный визуальный слой проекта.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setenabledlayer</funcname>(num_layer, flag);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>num_layer – номер слоя схемного окна проекта, начиная с 1,</p>
+      <p>flag – значение флага (0 - выключить, 1 - включить);</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setenabledlayer</codeph> – функция обеспечивает установку активным указанный визуальный
+        слой проекта. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><comment>//установить активным 5-ый слой проекта</comment>
+<funcname>setenabledlayer</funcname>(5, 1);</codeblock></section>  
+  </body>
+</topic>
