@@ -520,6 +520,31 @@
                         href="topics/yazik_programmirovania/funkcii/setprojectvisiblelayer.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/setvisiblelayer.dita"/>
                 </topicref>
+                <topicref href="topics/yazik_programmirovania/funkcii/menedger_dannih.dita">
+                    <topicref href="topics/yazik_programmirovania/funkcii/addengineparam.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/addparamlogaddeddata.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/changeengineparams.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/clearengineparams.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/closeengine.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/findengine.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/gotoengine.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/loaddatamanager.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/resetengines.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/showcontrolform.dita"/>
+                </topicref>
+                <topicref href="topics/yazik_programmirovania/funkcii/mish.dita">
+                    <topicref href="topics/yazik_programmirovania/funkcii/getmousepos.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getwheeldelta.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/mouseincontainer.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setmousepos.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setmousetocenter.dita"/>
+                </topicref>
+                <topicref
+                    href="topics/yazik_programmirovania/funkcii/restarti(ishodnie_sostoyania).dita">
+                    <topicref href="topics/yazik_programmirovania/funkcii/readprojectrestart.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/writeprojectrestart.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/writerestartpoint.dita"/>
+                </topicref>
             </topicref>
         </topicref>
     </topicref>

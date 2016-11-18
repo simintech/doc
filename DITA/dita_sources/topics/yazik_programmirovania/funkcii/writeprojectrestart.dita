@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>writeprojectrestart</title>
+<shortdesc>Функция сохранения точки рестарта проекта в файл с заданным именем.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>writeprojectrestart</funcname>(filename);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>filename – строка с именем файла. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>writeprojectrestart(filename)</codeph> – функция сохранения точки рестарта проекта в файл
+        с именем <codeph>filename</codeph>.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>initialization</kword>
+  oldtime = <rword>time</rword>;
+<kword>end</kword>;
+<comment>//Периодическая запись рестарта в файл
+//через заданный период или по другому условию
+//(например, по началу переходного процесса)  </comment>
+<kword>if</kword> (<kword>not</kword> <rword>paintstep</rword>) <kword>and</kword> (<rword>time</rword> - oldtime > 50) <kword>then begin</kword>
+  <funcname>writeprojectrestart</funcname>("restart time = " + <funcname>floattostr</funcname>(<rword>time</rword>) + ".rst");
+  oldtime = <rword>time</rword>;
+<kword>end</kword>;  </codeblock></section>
+<p>В примере происходит периодическая запись рестарта в файл через заданный период времени.</p>  
+  </body>
+</topic>

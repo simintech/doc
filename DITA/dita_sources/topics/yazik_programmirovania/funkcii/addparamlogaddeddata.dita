@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>addparamlogaddeddata </title>
+<shortdesc>Функция установки данных для параметра объекта «Регистратор событий», находящегося в
+    менеджере данных.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>addparamlogaddeddata</funcname>(par_id, ust_reg, ust_prior, ust_val, ust_descr);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>par_id – ссылка на параметр объекта в менеджере данных,</p>
+      <p>ust_reg – режим уставки для параметра объекта в менеджере данных, число типа integer,</p>
+      <p>ust_prior – приоритет уставки для параметра объекта в менеджере данных, число типа
+        integer,</p>
+      <p>ust_val – значение уставки для параметра объекта в менеджере данных, переменная типа
+        строка,</p>
+      <p>ust_descr – описание уставки для параметра объекта в менеджере данных, переменная типа
+        строка.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>addparamlogaddeddata(&lt;par_id>, &lt;ust_reg>, &lt;ust_prior>, ust_val,
+          ust_descr)</codeph> – функция установки данных уставки (режим <codeph>ust_reg</codeph>,
+        приоритет <codeph>prior</codeph>, значение <codeph>ust_val</codeph>, описание
+          <codeph>ust_descr</codeph>) для параметра по ссылке <codeph>par_id</codeph> объекта
+        «Регистратор событий», находящегося в менеджере данных. Ссылка параметра
+          <codeph>par_id</codeph> – целое число, возвращаемое функцией
+          <codeph>addengineparam</codeph>. Объект в менеджере данных – устройство отображения или
+        ввода информации (графики, регистраторы, панели управления и т.п.). </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+  </body>
+</topic>

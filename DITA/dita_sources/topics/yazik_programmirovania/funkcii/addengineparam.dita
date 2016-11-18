@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>addengineparam</title>
+<shortdesc>Функция добавления сигнала или параметра блока в объект, находящийся в менеджере
+    данных.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>par_id = <funcname>addengineparam</funcname>(en_id, en_name, par_name, path);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>en_id – ссылка на объект в менеджере данных,</p>
+      <p>en_name – имя параметра объекта в менеджере данных,</p>
+      <p>par_name – имя параметра объекта в блоке,</p>
+      <p>path – полный путь блока. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>addengineparam(en_id, en_name, par_name, path)</codeph> – функция добавления параметра
+        или сигнала <codeph>par_name</codeph> из блока <codeph>path</codeph> в параметр или сигнал
+          <codeph>en_name</codeph> объекта по ссылке <codeph>en_id</codeph>, находящегося в
+        менеджере данных. Объект в менеджере данных – устройство отображения или ввода информации
+        (графики, регистраторы, панели управления и т.п.). Ссылка на объект в менеджере данных
+        возвращается функцией <codeph>findengine</codeph>.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>par_id – ссылка на параметр в менеджере данных.</p>
+    </section>  
+  </body>
+</topic>
