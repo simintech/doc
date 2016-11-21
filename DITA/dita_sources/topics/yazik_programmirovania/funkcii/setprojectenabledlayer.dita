@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setprojectenabledlayer</title>
+<shortdesc>Функция установки флага чувствительности визуального слоя проекта.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setprojectenabledlayer</funcname> (num, flag);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>num – номер визуального слоя,</p>
+      <p>flag – флаг чувствительности визуального слоя.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setprojectenabledlayer (num, flag)</codeph> – функция получения флага
+          <codeph>flag</codeph> (включен – 1 или выключен – 0) чувствительности (активности)
+        визуального слоя c номером <codeph>num</codeph> проекта. Номер слоя задается в диапазоне от
+        1 до 16.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><funcname>setprojectenabledlayer</funcname>(1, 1);</codeblock></section>  
+  </body>
+</topic>

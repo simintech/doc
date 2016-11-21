@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>changeengineparams</title>
+<shortdesc>Функция инициализации списка параметров объекта по определенной ссылке в менеджере
+    данных.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>changeengineparams</funcname>(id);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>id – ссылка на объект в менеджере данных.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>changeengineparams(id)</codeph> – функция инициализации списка параметров объекта по его
+        ссылке <codeph>id</codeph>, находящегося в менеджере данных. Объект в менеджере данных –
+        устройство отображения или ввода информации (графики, регистраторы, панели управления и
+        т.п.). Ссылка имеет тип указателя на объект. Ссылка на объект в менеджере данных
+        возвращается функцией <codeph>findengine</codeph>. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>id = <funcname>findengine</funcname>("График 1");
+<funcname>changeengineparams</funcname>(id);</codeblock></section>  
+  </body>
+</topic>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setmousepos </title>
+<shortdesc>Функция установки указателя мыши в точку с заданными координатами.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setmousepos</funcname>(x, y);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>х – координата точки по оси абсцисс,</p>
+      <p>y – координата точки по оси ординат.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setmousepos</codeph> – функция установки указателя мыши в точку с координатами x,y в
+        системе координат основного графического контейнера (окна редактора).</p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><comment>//установим координаты указателя мыши</comment>
+<funcname>setmousepos</funcname>(200, 200);</codeblock></section>  
+  </body>
+</topic>

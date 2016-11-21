@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>dispose</title>
+<shortdesc>Освобождение памяти, выделенной динамически по ссылке.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>dispose</funcname>(&lt;имя ссылки>);</codeblock>
+    </section>
+<section>
+      <title>Описание:</title>
+      <p>Освобождение памяти, выделенной по ссылке динамически при помощи функции new~ </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>p = new~<rword>double</rword>; //Выделение памяти
+~<rword>double</rword>(p) = 100; //Присвоение    
+y = ~<rword>double</rword>(p); //доступ по ссылке
+<funcname>dispose</funcname>(p); //Освобождение памяти</codeblock></section>
+<p>В процессе выполнения примера по ссылке <codeph>p</codeph> на переменную типа
+        <codeph>double</codeph> выделяется память при помощи функции <codeph>new~</codeph>. При
+      помощи функции <codeph>~</codeph> происходит доступ по ссылке к переменной и приравнивание ей
+      значения 1000. Переменной <codeph>y</codeph> присваивается значение 1000 по ссылке
+        <codeph>p</codeph>. Перед завершение примера происходит освобождение памяти при помощи
+      функции <codeph>dispose</codeph>. </p>  
+  </body>
+</topic>

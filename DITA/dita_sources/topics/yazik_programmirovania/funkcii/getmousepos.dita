@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getmousepos</title>
+<shortdesc>Функция получения координат указателя мыши.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>P = <funcname>getmousepos</funcname>;</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>нет</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getmousepos</codeph> – функция получения координаты указателя мыши в системе координат
+        основного графического контейнера (окна редактора). Тип возвращаемого значения - комплексное
+        число, где действительная часть соответствует значению по оси абсцисс, мнимая - по оси
+        ординат.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>P – точка с координатами указателя мыши. Тип complex.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><comment>//получим координаты указателя мыши</comment>
+p = <funcname>getmousepos</funcname>; </codeblock></section>  
+  </body>
+</topic>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>sleep</title>
+<shortdesc>Задержка выполнения операции на заданное число миллисекунд.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>sleep</funcname>(time);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>time – время в миллисекундах.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>sleep(time)</codeph> – здержка выполнения операций на заданное число миллисекунд. Эту
+        функцию можно использовать при выполнении асинхронных операций, для уменьшения загрузки
+        процессора при наличии там циклов. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>procedure</kword> DoMsg
+  <funcname>sleep</funcname>(1000);
+  <funcname>seterrorstr</funcname>("Msg",0);
+<kword>end</kword>;       
+<kword>asyncprocess</kword>
+  DoMsg
+<kword>end</kword>;</codeblock></section>
+<p>В примере происходит вывод сообщения при помощи асинхронной процедуры с задержкой в 1 секунду. </p>  
+  </body>
+</topic>

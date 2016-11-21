@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>normalizepackform</title>
+<shortdesc>Функция позволяет восстановить окно пакета.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>normalizepackform</funcname></codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>нет</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>normalizepackform</codeph> – функция позволяет восстановить из свернутого или из
+        развернутого на весь экран состояния окно пакета, в состав которого входит текущий проект.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>initialization</kword> 
+     <funcname>minimizepackform</funcname>;
+<kword>end</kword>; 
+
+<kword>finalization</kword>
+     <funcname>normalizepackform</funcname>;
+<kword>end</kword>;</codeblock></section>
+<p>Данный скрипт сворачивает окно пакета в момент запуска расчета и разворачивает его, когда расчет
+      остановлен. </p>  
+  </body>
+</topic>

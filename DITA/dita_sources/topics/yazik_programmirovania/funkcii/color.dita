@@ -4,18 +4,30 @@
 <title>color</title>
 <shortdesc>Функция линейной интерполяция цвета.</shortdesc>
 <body>
-<section><title>Синтаксис:</title>c = <funcname>color</funcname>(x, min_x, max_x, min_c, max_c);</section>
-<section><title>Аргументы:</title><codeblock>
-x – значение аргумента,
-min_x – минимальное значение аргумента,
-max_x – максимальное значение аргумента,
-min_c – минимальное значение цвета, тип color,
-max_c – максимальное значение цвета тип color.</codeblock></section>
-<section><title>Описание:</title><codeph>color(x, min_x, max_x, min_c, max_c)</codeph> – функция вычисления линейной интерполяция цвета, где аргумент заключён в интервале от min_x до max_x, а цвет варьируется в интервале от min_c до max_c.</section>
-<section><title>Результат:</title>с – цвет, полученный в результате интерполяции.</section>  
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>c = <funcname>color</funcname>(x, min_x, max_x, min_c, max_c);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>x – значение аргумента,</p>
+      <p>min_x – минимальное значение аргумента,</p>
+      <p>max_x – максимальное значение аргумента,</p>
+      <p>min_c – минимальное значение цвета, тип color,</p>
+      <p>max_c – максимальное значение цвета тип color.</p>
+    </section>
+<section>
+      <title>Описание:</title>
+      <p><codeph>color(x, min_x, max_x, min_c, max_c)</codeph> – функция вычисления линейной
+        интерполяция цвета, где аргумент заключён в интервале от min_x до max_x, а цвет варьируется
+        в интервале от min_c до max_c.</p>
+    </section>
+<section>
+      <title>Результат:</title>
+      <p>с – цвет, полученный в результате интерполяции.</p>
+    </section>  
 <section><title>Пример:</title>
-<codeblock>
-<kword>var</kword> startcolor:<rword>color</rword> =  1;
+<codeblock><kword>var</kword> startcolor:<rword>color</rword> =  1;
 <kword>var</kword> endcolor:<rword>color</rword> = 255;
 <kword>var</kword> c: <rword>integer</rword>;
 c = <funcname>color</funcname>(0.5,0,1,startcolor,endcolor);</codeblock></section>

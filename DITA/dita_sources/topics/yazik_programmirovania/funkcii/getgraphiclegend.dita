@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getgraphiclegend</title>
+<shortdesc>Функция получения свойства «Показывать легенду» графика.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>fl = <funcname>getgraphiclegend</funcname>(gid);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>gid – идентификатор объекта типа «График». </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getgraphiclegend(gid)</codeph> – функция получения свойства «Показывать легенду» объекта
+        типа «График» по идентификатору объекта. Идентификатор объекта может быть получен функцией
+          <codeph>getgraphicid(gr_name)</codeph> и имеет тип указателя на объект.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>fl – флага наличия легенды графика.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><comment>//получим идентификатор график</comment>
+gid = <funcname>getgraphicid</funcname>(plot);
+<comment>//получим флаг наличия легенды</comment>
+fl = <funcname>getgraphiclegend</funcname>(gid); </codeblock></section>
+<p>В результате выполнения данного примера происходит получение идентификатора графика и получение
+      флага наличия легенды на графике. </p>  
+  </body>
+</topic>

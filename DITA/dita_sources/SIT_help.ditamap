@@ -47,7 +47,7 @@
         </topicref>
     </topicref>
     <topicref href="topics/yazik_programmirovania/yazik_programmirovania.dita"
-        navtitle="6 Язык программирования" locktitle="yes">
+        navtitle="6 - Язык программирования" locktitle="yes">
         <topicref href="topics/yazik_programmirovania/konstanti.dita" navtitle="6.1 Константы"
             locktitle="yes"/>
         <topicref href="topics/yazik_programmirovania/peremennie.dita" navtitle="6.2 Переменные"
@@ -297,7 +297,7 @@
                 <topicref href="topics/yazik_programmirovania/funkcii/linterp.dita"/>
                 <topicref href="topics/yazik_programmirovania/funkcii/mnkpoly.dita"/>
             </topicref>
-            <topicref href="topics/yazik_programmirovania/funkcii/specialniye.dita"
+            <topicref href="topics/yazik_programmirovania/funkcii/specialniye_funcs.dita"
                 navtitle="6.6.8 Специальные" locktitle="yes">
                 <topicref href="topics/yazik_programmirovania/funkcii/besseli.dita"/>
                 <topicref href="topics/yazik_programmirovania/funkcii/besseli0.dita"/>
@@ -348,6 +348,203 @@
                 <topicref href="topics/yazik_programmirovania/funkcii/slide.dita"/>
                 <topicref href="topics/yazik_programmirovania/funkcii/xccord.dita"/>
                 <topicref href="topics/yazik_programmirovania/funkcii/ycoord.dita"/>
+            </topicref>
+            <topicref href="topics/yazik_programmirovania/funkcii/failovie.dita"
+                navtitle="6.6.13 Файловые" locktitle="yes">
+                <topicref href="topics/yazik_programmirovania/funkcii/copyfile.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/createfile.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/fileexists.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/filesize.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/findfiles.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/freeobject.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/getpos.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/loadtab.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/loadtext.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/readfile.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/readln.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/savetab.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/seek.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/writefile.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/writeln.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/writetext.dita"/>
+            </topicref>
+            <topicref href="topics/yazik_programmirovania/funkcii/rabota_s_pamiatiu.dita"
+                navtitle="6.6.14 Работа с памятью" locktitle="yes">
+                <topicref href="topics/yazik_programmirovania/funkcii/tilda.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/dispose.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/new_tilda.dita"/>
+            </topicref>
+            <topicref href="topics/yazik_programmirovania/funkcii/strokovie.dita"
+                navtitle="6.6.15 Строковые" locktitle="yes">
+                <topicref href="topics/yazik_programmirovania/funkcii/spiski_strok.dita">
+                    <topicref href="topics/yazik_programmirovania/funkcii/addstringlist.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/addtohash.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/assignstringlist.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/clearstringlist.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/countstringlist.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/createstringlist.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/createstringlisthash.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/deletestringlist.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getindexesfromhash.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getindexfromhash.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getstringlist.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/gettagstringlist.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/gettextstringlist.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/indexofstringlist.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/insertstringlist.dita"/>
+                    <topicref
+                        href="topics/yazik_programmirovania/funkcii/loadstringlistfromfile.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/removefromhash.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/savestringlisttofile.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setstringlist.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/settagstringlist.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/settextstringlist.dita"/>
+                </topicref>
+                <topicref href="topics/yazik_programmirovania/funkcii/addzeros.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/asc.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/chr.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/datatostr.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/floattostr.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/floattostrf.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/format.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/getdbfileasis.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/getitem.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/getitemscount.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/getsubstring.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/gettextsize.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/gettoken.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/inttostr.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/length.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/lowercase.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/pos.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/setitem.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/strcopy.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/translit.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/uppercase.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/valf.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/vali.dita"/>
+            </topicref>
+            <topicref href="topics/yazik_programmirovania/funkcii/funccii_vremeni.dita"
+                navtitle="6.6.16 Функции времени" locktitle="yes">
+                <topicref href="topics/yazik_programmirovania/funkcii/aperiodika.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/datetimetostr.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/datetimetounix.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/dayof.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/flash.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/hourof.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/millisecondof.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/minuteof.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/monthof.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/now.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/secondof.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/sleep.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/step.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/tickcount.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/unixtodatetime.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/yearof.dita"/>
+            </topicref>
+            <topicref href="topics/yazik_programmirovania/funkcii/graficheskie_i_sistemnie.dita"
+                navtitle="6.6.17 Графические и системные" locktitle="yes">
+                <topicref href="topics/yazik_programmirovania/funkcii/grafiki.dita">
+                    <topicref href="topics/yazik_programmirovania/funkcii/getgraphicid.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getgraphiclegend.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getgraphicmousevalue.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getgraphicxinterval.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getgraphicxscales.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getgraphicyinterval.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getgraphicyscales.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/resetgraphic.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setgraphiclegend.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setgraphicxauto.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setgraphicxgrid.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setgraphicxinterval.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setgraphicxscales.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setgraphicyauto.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setgraphicygrid.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setgraphicyinterval.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setgraphicyscales.dita"/>
+                </topicref>
+                <topicref href="topics/yazik_programmirovania/funkcii/graficheskie.dita">
+                    <topicref href="topics/yazik_programmirovania/funkcii/bringtofront.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/bringtofrontform.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/constr2P.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/createprimitiv.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getfontsize.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/global.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/loadbitmap.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/maximizeform.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/maximizepackform.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/minimizeform.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/minimizepackform.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/move.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/normalizeform.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/normalizepackform.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/normalmodeform.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/removeprimitiv.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/restore.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/rgbtocolor.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/rotate.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/savescreenshot.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/scale.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/sendtobackform.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setfontcolor.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setfontname.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setfontprop.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setfontsize.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setfontstyle.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setformstyle.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setpackformvisible.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setpointcount.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setselection.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/settransparentcolor.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setvisible.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setwindowalfa.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/slideline.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/stayontopform.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/storeposition.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/stretch.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/zoomrect.dita"/>
+                </topicref>
+                <topicref href="topics/yazik_programmirovania/funkcii/sloi_shemnogo_okna.dita">
+                    <topicref href="topics/yazik_programmirovania/funkcii/getenabledlayer.dita"/>
+                    <topicref
+                        href="topics/yazik_programmirovania/funkcii/getprojectenabledlayer.dita"/>
+                    <topicref
+                        href="topics/yazik_programmirovania/funkcii/getprojectvisiblelayer.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getvisiblelayer.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setenabledlayer.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setobjectvisuallayer.dita"/>
+                    <topicref
+                        href="topics/yazik_programmirovania/funkcii/setprojectenabledlayer.dita"/>
+                    <topicref
+                        href="topics/yazik_programmirovania/funkcii/setprojectvisiblelayer.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setvisiblelayer.dita"/>
+                </topicref>
+                <topicref href="topics/yazik_programmirovania/funkcii/menedger_dannih.dita">
+                    <topicref href="topics/yazik_programmirovania/funkcii/addengineparam.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/addparamlogaddeddata.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/changeengineparams.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/clearengineparams.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/closeengine.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/findengine.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/gotoengine.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/loaddatamanager.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/resetengines.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/showcontrolform.dita"/>
+                </topicref>
+                <topicref href="topics/yazik_programmirovania/funkcii/mish.dita">
+                    <topicref href="topics/yazik_programmirovania/funkcii/getmousepos.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getwheeldelta.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/mouseincontainer.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setmousepos.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setmousetocenter.dita"/>
+                </topicref>
+                <topicref
+                    href="topics/yazik_programmirovania/funkcii/restarti(ishodnie_sostoyania).dita">
+                    <topicref href="topics/yazik_programmirovania/funkcii/readprojectrestart.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/writeprojectrestart.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/writerestartpoint.dita"/>
+                </topicref>
             </topicref>
         </topicref>
     </topicref>

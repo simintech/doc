@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setmousetocenter</title>
+<shortdesc>Функция установки указателя мыши в центре окна текущего графического
+    контейнера.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setmousetocenter</funcname>;</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>нет</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setmousetocenter</codeph> – функция установки указателя мыши в центре окна текущего
+        графического контейнера (вызвавшего данную функцию).  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><comment>//установим координаты указателя мыши в центре окна</comment>
+<funcname>setmousetocenter</funcname>;</codeblock></section>  
+  </body>
+</topic>

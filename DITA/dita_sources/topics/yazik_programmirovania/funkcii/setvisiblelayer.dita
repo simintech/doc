@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setvisiblelayer</title>
+<shortdesc>Функция установки видимым нужный визуальный слой проекта.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setvisiblelayer</funcname>(num_layer, flag);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>num_layer – номер слоя схемного окна проекта, начиная с 1,</p>
+      <p>flag – значение флага (0 - выключен, 1 - включен); </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setvisiblelayer</codeph> – функция обеспечивает установку видимым нужный визуальный слой
+        проекта.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><funcname>setvisiblelayer</funcname>(6, 0); <comment>//установить 6-ой слой невидимым</comment></codeblock></section>  
+  </body>
+</topic>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getgraphicxinterval</title>
+<shortdesc>Функция получения свойства графика «Интервал видимости по оси X».</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>val = <funcname>getgraphicxinterval</funcname>(gid);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>gid – идентификатор объекта типа «График».</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getgraphicxinterval(gid)</codeph> – функция получения значения свойства «Интервал
+        видимости по оси X» объекта типа «График» по идентификатору объекта <codeph>gid</codeph>.
+        Идентификатор объекта может быть получен функцией <codeph>getgraphicid(gr_name)</codeph> и
+        имеет тип указателя на объект.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>val – значение интервала видимости по оси X.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><comment>//получим идентификатор график</comment>
+gid = <funcname>getgraphicid</funcname>(plot);     
+<comment>//получим интервал видимости по оси X</comment>
+val = <funcname>getgraphicxinterval</funcname>(gid);      </codeblock></section>
+<p>В результате выполнения данного примера происходит получение идентификатора графика и получение
+      интервала видимости по оси X.</p>  
+  </body>
+</topic>

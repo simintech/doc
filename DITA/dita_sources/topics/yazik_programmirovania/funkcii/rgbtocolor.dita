@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>rgbtocolor</title>
+<shortdesc>Функция получения кода цвета по его отдельным компонентам.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>с = <funcname>rgbtocolor</funcname>(r, g, b);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>r – красный компонент, значение от 0 до 255,</p>
+      <p>g – зеленый компонент, значение от 0 до 255,</p>
+      <p>b – синий компонент, значение от 0 до 255.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>rgbtocolor(r, g, b)</codeph> – функция получения кода цвета по его отдельным компонентам.
+        Код цвета <i>color</i> вычисляется при помощи формулы:</p></section>
+    <image placement="break" href="images/rgbtocolor_1.gif" align="center" id="image_tz4_5nh_yx"/>
+<section>
+      <title>Результат:</title>
+      <p>с – цвет, тип integer.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> c: <rword>integer</rword>;
+c = <funcname>rgbtocolor</funcname>(0, 255, 0);</codeblock></section>
+<p>В результате переменной c будет присвоено значение 65280, кодирующее зеленый цвет. </p>  
+  </body>
+</topic>

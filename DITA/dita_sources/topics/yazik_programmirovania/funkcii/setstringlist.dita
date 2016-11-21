@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setstringlist</title>
+<shortdesc>Функция вставки строки в список строк на позицию по определенному номеру.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>n = <funcname>setstringlist</funcname>(s_id, indx, str, tag);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>s_id – идентификатор списка строк,</p>
+      <p>indx – номер позиции в списке строк для вставляемой строки,</p>
+      <p>str – вставляемая строка,</p>
+      <p>tag – метка строки. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setstringlist(s_id, indx, str, tag)</codeph> – функция вставки строки
+          <codeph>str</codeph> с меткой <codeph>tag</codeph> на позицию с номером
+          <codeph>indx</codeph> в список строк с идентификатором <codeph>s_id</codeph>. Нумерация
+        строк в списке начинается с нуля. Строка вставляется вместо строки на позиции
+          <codeph>indx</codeph>. Возвращается номер позиции вставленной строки.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>n – номер позиции вставленной строки</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword>
+s_01:<rword>string</rword> = "string1" + <funcname>chr</funcname>(10) + "string2",
+s_02:<rword>string</rword> = "string3";                      
+<comment>//создание списка строк                       </comment>
+slist = <funcname>createstringlist</funcname>;                     
+<comment>//загрузим строку s_01 в список               </comment>
+<funcname>settextstringlist</funcname>(slist, s_01);               
+<comment>//вставим строку s_02 в список на позицию 1   </comment>
+i = <funcname>setstringlist</funcname>(slist, 1, s_02, 0);         
+<comment>//уничтожим список                            </comment>
+<funcname>freeobject</funcname>(slist);                            </codeblock></section>
+<p>В процессе выполнения примера при помощи функции <codeph>createstringlist</codeph> будет создан
+      список строк с идентификатором <codeph>slist</codeph>. В список строк <codeph>slist</codeph>
+      при помощи функции <codeph>settextstringlist</codeph> будет загружена строка, объявленная с
+      разделителем «перевод строки», в результате чего переменная <codeph>slist</codeph> будет
+      содержать идентификатор списка строк “”string1”“string2””. Далее, при помощи функции
+        <codeph>setstringlist</codeph> в список строк с идентификатором <codeph>slist</codeph> на
+      позицию с номером 1 будет загружена строка “string3”. В результате переменная
+        <codeph>slist</codeph> будет содержать идентификатор списка строк “”string1””string3””,
+      переменной <codeph>i</codeph> будет присвоено значение 1. Перед завершением примера список
+      строк удаляется при помощи функции <codeph>freeobject</codeph>. </p>  
+  </body>
+</topic>

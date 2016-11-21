@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setobjectvisuallayer</title>
+<shortdesc>Функция установки флага наличия визуального слоя для объектов в графическом контейнере по
+    их именам.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setobjectvisuallayer</funcname>(num, flag, obj_name1, …, obj_namen);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>num – номер визуального слоя объекта,</p>
+      <p>flag – флаг наличия визуального слоя для объекта,</p>
+      <p>obj_name1… obj_namen – имена объектов.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setobjectvisuallayer(num, flag, obj_name1, …, obj_namen)</codeph> – функция установки
+        флага <codeph>flag</codeph> (включен - 1 или выключен - 0 ) наличия визуального слоя c
+        номером num для объектов в графическом контейнере по их именам <codeph>obj_name1</codeph>…
+          <codeph>obj_namen</codeph>. Номер слоя задается в диапазоне от 1 до 16.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><funcname>setobjectvisuallayer</funcname>(1, 1, Line1, Line2);</codeblock></section>  
+  </body>
+</topic>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getfontsize</title>
+<shortdesc>Функция возвращает размер шрифта.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>sz = <funcname>getfontsize</funcname>(FontVar);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>FontVar – переменная, имеющая тип указателя на свойство с именем Font, может быть получена
+        с помощью функции getpropdata; </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getfontsize(FontVar)</codeph> – выполняет считывание размера шрифта из свойства
+          <codeph>Font</codeph>, определенного блока.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>sz - размер шрифта, в виде переменной типа String. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> sz: <rword>string</rword>;
+sz = <funcname>getfontsize</funcname>(<funcname>getpropdata</funcname>(TextLabel1,"Font"));
+<funcname>seterrorstr</funcname>("Размеры шрифтов объектов = " + sz,0);</codeblock></section>
+<p>В результате выполнения данного скрипта, переменная sz примет значение размера шрифта в текстовом
+      поле с именем <codeph>TextLabel1</codeph>. </p>  
+  </body>
+</topic>

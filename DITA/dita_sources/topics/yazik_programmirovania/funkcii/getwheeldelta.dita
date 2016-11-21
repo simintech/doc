@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getwheeldelta</title>
+<shortdesc>Функция получения величины перемещения колеса мыши.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>s = <funcname>getwheeldelta</funcname>;</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>нет</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getwheeldelta</codeph> – функция получения величины последнего перемещения колеса мыши
+        для активного графического окна. После вызова функции величина перемещения автоматически
+        сбрасывается в 0.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>s – величина перемещения колеса мыши.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><comment>//получим перемещение колеса мыши</comment>
+wdelta = <funcname>getwheeldelta</funcname>;
+<kword>var</kword> fcirclepos = 0;
+fcirclepos = fcirclepos + wdelta/10;
+<funcname>move</funcname>((fcirclepos,0), FillCircle);
+TextLabel.Text = "mouse wheel delta = " + <funcname>floattostr</funcname>(wdelta);</codeblock></section>
+<p>В примере переменной <codeph>wdelta</codeph> приравнивается значение текущего перемещения колеса
+      мыши. В соответствии с полученным перемещением вычисляется координата по оси X объекта
+        <codeph>FillCircle</codeph> и производится перемещение объект по оси X. В поле текстового
+      вывода <codeph>TextLabel</codeph> выводится значение текущего перемещения колеса мыши. </p>  
+  </body>
+</topic>

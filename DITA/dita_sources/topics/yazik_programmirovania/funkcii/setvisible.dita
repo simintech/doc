@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setvisible</title>
+<shortdesc>Функция установки свойства видимости для объекта на схеме.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setvisible</funcname>(name, fl);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>name – имя объекта на схеме,</p>
+      <p>fl – флага видимости объекта.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setvisible(name, fl)</codeph> – функция установки свойства видимости для объекта с именем
+          <codeph>name</codeph> на схеме. Аргумент <codeph>fl</codeph> принимает значения 1 – объект
+        видим или 0 – объект не видим.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><comment>//установим видимость объекта</comment>
+<funcname>setvisible</funcname>(TextLabel1, 1);</codeblock></section>
+<p>Происходит установка видимости для объекта <codeph>TextLabel1</codeph>. </p>  
+  </body>
+</topic>

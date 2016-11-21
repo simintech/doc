@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>createprimitiv</title>
+<shortdesc>Функция динамического создания графического объекта на схеме.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>gid = <funcname>createprimitiv</funcname>(type, [P1, P2,…, Pn]);
+gid = <funcname>createprimitiv</funcname>(type, [P1, P2,…, Pn], cont_id);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>type – число, кодирующее тип графического объекта объектов,</p>
+      <p>P1, P2,…, Pn – координаты, задающие расположение графического объекта на схеме,</p>
+      <p>cont_id – идентификатор страницы или графического контейнера, в котором будет создан
+        примитив.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>createprimitiv</codeph> – функция динамического создания графического объекта на схеме
+        типа <codeph>type</codeph>, расположение графического объекта задается координатами
+          <codeph>P1</codeph>, <codeph>P2</codeph>,…, <codeph>Pn</codeph>. Количество аргументов
+        (n), задающих координаты, зависит от типа объекта <codeph>type</codeph>. Количество
+        координат для объекта определенного типа можно определить, поставив вручную на схему объект
+        этого типа и скопировав его координаты из свойств объекта. Если задан аргумент
+          <codeph>cont_id</codeph>, то создание примитива происходит в указанном графическом
+        контейнере. В противном случае – в текущем. Созданный примитив динамически удаляется при
+        помощи функции <codeph>removeprimitiv</codeph>. Входные значения <codeph>P1</codeph>,
+          <codeph>P2</codeph>,…, <codeph>Pn</codeph> могут задаваться как заранее определенные
+        переменные или задаваться выражением (x, y), где x и y координаты точки. Типы объектов
+          <codeph>type</codeph>: </p>
+      <p>0 – Линия (TLine)</p>
+      <p>1 – Ломаная линия (TPolyLine) </p>
+      <p>2 – Многоугольник (полигон, TPolygon) </p>
+      <p>3 – Растровое изображение (TRasterImage) </p>
+      <p>4 – Группа (TGroup) </p>
+      <p>5 – Прямоугольник (TRectangle) </p>
+      <p>6 – Залитый прямоугольник (TFillRect) </p>
+      <p>7 – Круг (TCircle) </p>
+      <p>8 – Залитый круг (TFillCircle) </p>
+      <p>9 – Кнопка (TButtonPrimitiv) </p>
+      <p>10 – Поле ввода (TEditComponent) </p>
+      <p>11 – Сенсор (TSensor) </p>
+      <p>12 – Эллипс (TEllipse) </p>
+      <p>13 – Залитый эллипс (TFillEllipse) </p>
+      <p>14 – Линейная шкала (TAxis) </p>
+      <p>15 – Круговая шкала (TAngleAxis) </p>
+      <p>16 – Прибор круговой (TVoltmeter) </p>
+      <p>17 – Прибор линейный (TBar) </p>
+      <p>18 – Кобмо-бокс (TComboBoxComponent) </p>
+      <p>19 – Радиокнопка (TRadio) </p>
+      <p>20 – Текст (TTextLabel) </p>
+      <p>21 – Список изображений (TImgList) </p>
+      <p>22 – Поворачиваемое изображение (TRotatedImage) </p>
+      <p>23 – Звук (TSound) </p>
+      <p>24 – Дуга (TArc) </p>
+      <p>25 – OLE-объект (TOLEObj) </p>
+      <p>26 – Документ Word (TWordDoc) </p>
+      <p>27 – Невидимая точка (TGeometricPoint) </p>
+      <p>28 – Линия с подсветкой (TTube) </p>
+      <p>29 – Поворачиваемый текст (TRotatedText) </p>
+      <p>30 – Изображение из файла (TMenagedImage) </p>
+      <p>31 – Горячая клавиша (THotKey) </p>
+      <p>32 – Фрейм (TImageFrame) </p>
+      <p>33 – График (TPlotter) </p>
+      <p>34 – Залитый сектор (TFillEllipseSector) </p>
+      <p>35 – Залитый сегмент (TFillEllipseSegment) </p>
+      <p>36 – Чекбокс (TCheckBoxComponent) </p>
+      <p>37 – Прямоугольная маска фона  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>gid – идентификатор объекта на схеме. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>initialization</kword>
+ gid = <funcname>createprimitiv</funcname>(6, [(0 , 0),(-28 , -48),(-88 , -108)]);
+<kword>end</kword>
+<kword>var</kword> oldfl: <rword>boolean</rword>;
+<kword>if</kword> <rword>paintstep</rword> <kword>then begin</kword>
+ fl = <funcname>flash</funcname>(500);
+ <kword>if</kword> fl &lt;> oldfl <kword>then begin</kword>
+  <kword>if</kword> fl <kword>then</kword>  
+   <funcname>bringtofront</funcname>(FillRect)  
+  <kword>else</kword>                   
+   <funcname>bringtofront</funcname>(FillCircle);
+  <kword>end</kword>;                      
+ oldfl = fl;                
+<kword>end</kword>;                        
+<kword>finalization</kword>                
+ <funcname>removeprimitiv</funcname>(gid);       
+<kword>end</kword>;                        </codeblock></section>
+<p>В результате выполнения данного примера динамически создается объект «Залитый прямоугольник» с
+      идентификатором <codeph>gid</codeph>, после чего объекты c идентификаторами
+        <codeph>gid</codeph> и <codeph>FillCircle</codeph> (который уже был на схеме) будут
+      попеременно с периодом 500 мс. накладываться друг на друга. Перед остановкой выполнения
+      созданный объект с идентификатором <codeph>gid</codeph> удаляется. </p>  
+  </body>
+</topic>

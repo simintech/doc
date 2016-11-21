@@ -4,18 +4,25 @@
 <title>center</title>
 <shortdesc>Функция вычисления координат центра окружности, заданного тремя точками.</shortdesc>
 <body>
-<section><title>Синтаксис:</title>C = <funcname>center</funcname>(P1, P2, P3);</section>
-<section><title>Аргументы:</title><codeblock>
-P1 – первая точка, задающая окружность. Тип point,
-P2 – вторая точка, задающая окружность. Тип point,
-P3 – вторая точка, задающая окружность. Тип point.</codeblock></section>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>C = <funcname>center</funcname>(P1, P2, P3);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>P1 – первая точка, задающая окружность. Тип point,</p>
+      <p>P2 – вторая точка, задающая окружность. Тип point,</p>
+      <p>P3 – вторая точка, задающая окружность. Тип point.</p>
+    </section>
 <section><title>Описание:</title>
 <p><codeph>center(P1, P2, P3)</codeph> – функция вычисления координат центра окружности, заданной тремя точками P1, P2, P3.</p>
 <p>Входные значения могут задаваться как заранее определенные переменные или задаваться выражением (x, y), где x и y координаты точки</p></section>
-<section><title>Результат:</title>C – точка с координатами центра окружности. Тип point.</section>  
+<section>
+      <title>Результат:</title>
+      <p>C – точка с координатами центра окружности. Тип point.</p>
+    </section>  
 <section><title>Пример:</title>
-<codeblock>
-<kword>const</kword> p1 = (1,3),
+<codeblock><kword>const</kword> p1 = (1,3),
 p2 = (4,6),
 p3 = (7,2);
 c = <funcname>center</funcname>(p1, p2, p3);</codeblock></section>

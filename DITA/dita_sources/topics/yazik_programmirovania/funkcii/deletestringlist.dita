@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>deletestringlist </title>
+<shortdesc>Удаление строки из списка строк.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>deletestringlist</funcname>(s_id, indx);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>s_id – идентификатор списка строк,</p>
+      <p>indx – индекс удаляемой строки в списке строк.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>deletestringlist(s_id, indx)</codeph> – производится удаление строки с индексом (номером)
+          <codeph>indx</codeph> из списка строк с идентификатором <codeph>s_id</codeph>. Нумерация
+        строк в списке начинается с нуля. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword>
+s_01:<rword>string</rword> = "string1" + <funcname>chr</funcname>(10) + "string2";
+<comment>//создание списка строк                       </comment>
+slist = <funcname>createstringlist</funcname>;                     
+<comment>//загрузим строку s_01 в список               </comment>
+<funcname>settextstringlist</funcname>(slist, s_01);               
+<comment>//удалим строку с индексом 1 из списка        </comment>
+<funcname>deletestringlist</funcname>(slist, 1);                   
+<comment>//уничтожим список                            </comment>
+<funcname>freeobject</funcname>(slist);</codeblock></section>
+<p>В процессе выполнения примера при помощи функции <codeph>createstringlist</codeph> будет создан
+      список строк с идентификатором <codeph>slist</codeph>. В список строк <codeph>slist</codeph>
+      при помощи функции <codeph>settextstringlist</codeph> будет загружена строка, объявленная с
+      разделителем «перевод строки», в результате чего переменная <codeph>slist</codeph> будет
+      содержать идентификатор списка строк “”string1”“string2””. Далее, при помощи функции
+        <codeph>deletestringlist</codeph> из списка строк с идентификатором <codeph>slist</codeph>
+      будет удалена строка с индексом 1. В результате выполнения примера переменная
+        <codeph>slist</codeph> будет содержать идентификатор списка строк “string1”. Перед
+      завершением примера список строк удаляется при помощи функции <codeph>freeobject</codeph>. </p>  
+  </body>
+</topic>

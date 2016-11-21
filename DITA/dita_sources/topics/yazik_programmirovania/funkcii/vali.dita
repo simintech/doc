@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>vali</title>
+<shortdesc>Функция формирования целого числа, заданного строкой.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>x = <funcname>vali</funcname>(str, c);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>str – строка, содержащая значение целого числа,</p>
+      <p>c – возвращаемый код ошибки. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>vali(str, c) </codeph>– функция формирует переменную типа «целое число», заданную строкой
+          <codeph>str</codeph>. Функция возвращает код ошибки в аргумент <codeph>c</codeph> целого
+        типа, если строковое значение является не числом, или 0 в случае успеха операции. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>х – сформированное число. Число типа integer.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword>
+x1:<rword>integer</rword>,
+x2:<rword>integer</rword>,
+c1:<rword>integer</rword>,
+c2:<rword>integer</rword>;
+<comment>//сформируем переменную из строки</comment>
+х1 = <funcname>valf</funcname>("12345", c1);          
+х2 = <funcname>valf</funcname>("string", c2);         </codeblock></section>
+<p>В результате переменной <codeph>x1</codeph> будет присвоено значение 12345, переменной
+        <codeph>с1</codeph> будет присвоено значение 0, переменной <codeph>x2</codeph> будет
+      присвоено значение 0, переменной <codeph>с2</codeph> будет присвоено значение 1.</p>  
+  </body>
+</topic>

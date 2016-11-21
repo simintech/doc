@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setgraphicxscales</title>
+<shortdesc>Функция установки значения свойств графика «Минимум шкалы по оси X» и «Максимум шкалы по
+    оси X».</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setgraphicxscales</funcname>(gid, val);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>gid – идентификатор объекта типа «График»,</p>
+      <p>val – значение минимума и максимума шкалы графика по оси X. Тип complex.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setgraphicxscales(gid, val)</codeph> – функция установки значения <codeph>val</codeph>
+        свойств «Минимум шкалы по оси X» и «Максимум шкалы по оси X» объекта типа «График» по
+        идентификатору объекта <codeph>gid</codeph>. Идентификатор объекта может быть получен
+        функцией <codeph>getgraphicid(gr_name)</codeph> и имеет тип указателя на объект. Тип
+        аргумента <codeph>val</codeph> – комплексное число, где действительная часть соответствует
+        минимальному значению шкалы, мнимая – максимальному. Комплексное число задается выражением
+        a+bi, где a и b вещественные и мнимые части числа соответственно.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><comment>//получим идентификатор график</comment>
+gid = <funcname>getgraphicid</funcname>(plot);     
+<comment>//установим мин. и макс. шкалы по оси X</comment>
+val = <funcname>setgraphicxscales</funcname>(gid, 0+100i); </codeblock></section>
+<p>В результате выполнения данного примера происходит получение идентификатора графика и установка
+      значений минимума (0) и максимума (100) шкалы графика по оси X. </p>  
+  </body>
+</topic>

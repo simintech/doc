@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>stretch </title>
+<shortdesc>Функция растяжения/сжатия объектов относительно определенной точки с определенными
+    коэффициентами.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>stretch</funcname>(P, S, name1, name2,…, namen);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>P – координаты, задающие точку центра для растяжения/сжатия объектов. Тип point,</p>
+      <p>S – вектор, определяющий коэффициенты растяжения/сжатия объектов,</p>
+      <p>name1, name2,…,namen – имена объектов.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>scale(P, S, name1, name2,…, namen )</codeph> – функция масштабирования объектов на схеме
+        с именами <codeph>name1</codeph>, <codeph>name2</codeph>,…,<codeph>namen</codeph>
+        относительно центра, заданного координатами <codeph>P</codeph> с коэффициентами,
+        определяемыми вектором <codeph>S</codeph>. <codeph>S</codeph> – переменная типа point, где x
+        – коэффициент растяжения/сжатия по оси X, y – коэффициент растяжения/сжатия по оси Y.
+        Входные значения <codeph>P</codeph>, <codeph>S</codeph> могут задаваться как заранее
+        определенные переменные или задаваться выражением (x, y), где x и y координаты точки.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> oldfl: <rword>boolean</rword>;
+<kword>var</kword> p:<rword>point</rword> = (10,0);
+<kword>var</kword> s:<rword>point</rword> = (1.5,0.5);
+ 
+<kword>if</kword> <rword>paintstep</rword> <kword>then begin</kword>
+ fl = <funcname>flash</funcname>(500);
+ <kword>if</kword> fl &lt;> oldfl <kword>then begin</kword>
+  <funcname>stretch</funcname>(p, s, FillRect, FillCircle);
+  <kword>end</kword>;
+ oldfl = fl;
+<kword>end</kword>;</codeblock></section>
+<p>В результате выполнения данного примера объекты с именами <codeph>FillRect</codeph> и
+        <codeph>FillCircle</codeph> будут с периодом 500 мс. растягиваться с коэффициентом 1.5 по
+      оси X и сжиматься с коэффициентом 0.5 по оси Y относительно центра, заданного точкой с
+      координатами (10,0). </p>  
+  </body>
+</topic>

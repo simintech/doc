@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setfontstyle </title>
+<shortdesc>Функция установки стиля шрифта для объекта на схеме.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setfontstyle</funcname>(font, val);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>font – свойство типа «шрифт» объекта,</p>
+      <p>val – маска стиля шрифта. Тип integer.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setfontstyle(font, val)</codeph> – функция установки маски <codeph>val</codeph> стиля
+        шрифта для объекта на схеме. Значения битовых масок <codeph>val</codeph> для стилей
+        шрифта:</p>
+      <p>1 – жирный;</p>
+      <p>2 – курсив;</p>
+      <p>4 – подчёркнутый;</p>
+      <p>8 – зачёркнутый.</p>
+      <p>Сочетание значений осуществляется с помощью побитового ИЛИ.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> c:<rword>integer</rword> = 1 or 2;
+<funcname>setfontstyle</funcname>(TextLabel1.Font, c);</codeblock></section>
+<p>Происходит установка стиля шрифта «жирный курсив» для объекта <codeph>TextLabel1</codeph>. </p>  
+  </body>
+</topic>

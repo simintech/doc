@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>datetimetounix</title>
+<shortdesc>Функция преобразования значения даты и времени в системном формате в формат
+    UNIX.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>date_u = <funcname>datetimetounix</funcname>(date_s);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>date_s – дата и время в системном формате. Тип double.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>datetimetounix(date_s)</codeph> – функция преобразования значения даты и времени в
+        системном формате (переменная типа double) в формат UNIX (вещественное число секунд начиная
+        с 01.01.1970). Системный формат времени в строке определяется системными установками.  </p></section>
+<section><title>Результат:</title>date_u – дата и время дата и время в секундах начиная с
+      01.01.1970. Тип double. </section>  
+<section><title>Пример:</title>
+<codeblock>date = <funcname>now</funcname>;           
+date_u = <funcname>datetimetounix</funcname>(date);
+date_s = <funcname>unixtodatetime</funcname>(date_u);</codeblock></section>
+<p>В результате выполнения примера переменной <codeph>date</codeph> будет присвоено значение текущей
+      даты и времени в системном формате типа double. Переменной <codeph>date_u</codeph> будет
+      присвоено значение даты и времени в формате UNIX типа double, преобразованное из переменной
+        <codeph>date</codeph>. Переменной <codeph>date_s</codeph> будет присвоено значение даты и
+      времени в формате UNIX типа double, преобразованное из переменной <codeph>date_u</codeph>. </p>  
+  </body>
+</topic>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>addzeros</title>
+<shortdesc>Функция добавления нулей в начало строки.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>str_dest = <funcname>addzeros</funcname>(str_src, count); </codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>str_src – исходная строка,</p>
+      <p>count – новая длина строки.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>addzeros(str_src, count)</codeph> – функция добавления нулей в начало строки, количество
+        знаков строки увеличивается до количества count.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>str_dest – дополненная нулями строка. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword>
+s_01:<rword>string</rword> = "string1";
+<comment>//добавим в строку нули </comment>
+s_02 = <funcname>addzeros</funcname>(s_01, 9);</codeblock></section>
+<p>В результате переменная s_02 будет содержать строку “00string1”.</p>  
+  </body>
+</topic>
