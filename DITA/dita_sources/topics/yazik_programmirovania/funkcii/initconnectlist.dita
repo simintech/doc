@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>initconnectlist</title>
+<shortdesc>Функция переинициализации списка связей графического контейнера.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>initconnectlist</funcname>;</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>нет</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>initconnectlist</codeph> – функция позволяет выполнить принудительную переинициализацию
+        списка связей, определенного в окне «Сервис-Связи» графического контейнера. Это удобно,
+        когда в момент выполнения расчета происходит динамическое изменение списка связей.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>В случае успешной переинициализации списка связей функция возвращает двоичное значение
+        1.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>init_flag = <funcname>initconnectlist</funcname>;</codeblock></section>
+<p>В результате выполнения данного скрипта, связи текущего графического контейнера будут
+      принудительно переинициализированы.</p>  
+  </body>
+</topic>

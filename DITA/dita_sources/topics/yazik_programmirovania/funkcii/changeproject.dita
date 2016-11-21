@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>changeproject</title>
+<shortdesc>Функция загрузки проекта из файла.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>prt_id = <funcname>changeproject</funcname>(prt_file, name_id, layer_id, lcmd_id, layer_data, start_fl, resize_fl);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>prt_file – строка с именем файла, содержащего проект,</p>
+      <p>name_id – строка с именем ссылки,</p>
+      <p>layer_id – идентификатор слоя,</p>
+      <p>lcmd_id – идентификатор команды для слоя,</p>
+      <p>layer_data – стартовые данные для слоя,</p>
+      <p>start_fl – флаг запуска проекта,</p>
+      <p>resize_fl – флаг установки размеров окна. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>changeproject(prt_file, name_id, layer_id, lcmd_id, layer_data, start_fl,
+          resize_fl)</codeph> – функция загружает и открывает проект из файла
+          <codeph>prt_file</codeph> в асинхронном режиме (сразу возвращает управление). Функция
+        возвращает идентификатор открытого проекта. Если флаг <codeph>start_fl</codeph> установлен
+        равным 1, то в случае, если проект уже открыт, активизируется его окно. Если флаг установки
+        новых размеров <codeph>resize_fl</codeph> равен 0, то размеры окна не изменятся.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>prt_id – идентификатор открытого проекта.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>prt_id = <funcname>changeproject</funcname>("имя файла проекта.prt", "", 0, 0, "", 1, 0);</codeblock></section>  
+  </body>
+</topic>

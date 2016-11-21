@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>isrun</title>
+<shortdesc>Функция определения нахождения мнемосхемы в режиме отображения.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>flag = <funcname>isrun</funcname>;</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>нет</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>isrun</codeph> – функция определяет нахождения мнемосхемы в режиме отображения.
+        Возвращает 1, если мнемосхема в режиме отображения.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>flag – флаг нахождения мнемосхемы в режиме отображения. Тип boolean. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>fl = <funcname>isrun</funcname>;</codeblock></section>  
+  </body>
+</topic>

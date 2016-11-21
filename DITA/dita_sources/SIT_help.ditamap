@@ -545,6 +545,54 @@
                     <topicref href="topics/yazik_programmirovania/funkcii/writeprojectrestart.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/writerestartpoint.dita"/>
                 </topicref>
+                <topicref href="topics/yazik_programmirovania/funkcii/signaly.dita">
+                    <topicref href="topics/yazik_programmirovania/funkcii/addsignaltolist.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/clearsignallist.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/signalexist.dita"/>
+                </topicref>
+                <topicref href="topics/yazik_programmirovania/funkcii/sistemnye.dita">
+                    <topicref href="topics/yazik_programmirovania/funkcii/changeother.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/changeproject.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/changeprojectzoom.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/closeform.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/execformmethod.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/execmainformmethod.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/findindexerkey.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getformbounds.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/gethwnd.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getmainpageid.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getselection.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getsubmodelid.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getwindowid.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/gotopage.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/hideframeelements.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/initconnectlist.dita"/>
+                    <topicref
+                        href="topics/yazik_programmirovania/funkcii/is_insert_from_buf_flag.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/ismainpage.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/isrun.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/prjinited.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/reinitsubmodel.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/reinittopology.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/reloadblockimage.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/reloadsubmodel.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/removeimagefromcash.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/restoreframeelements.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setblocklabel.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setdboverride.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/seterrorflag.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/seterrorstr.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setformbounds.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setformposition.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setformsize.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/sethintautohide.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setmainformvisible.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setpainttimer.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setsignalevalstring.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setwindowcaption.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/startsecondproject.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/storeframeelements.dita"/>
+                </topicref>
             </topicref>
         </topicref>
     </topicref>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>ismainpage </title>
+<shortdesc>Функция определения нахождения исполняемого скрипта на главной странице
+    проекта.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>flag = <funcname>ismainpage</funcname>;</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>нет</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>ismainpage</codeph> – функция определяет нахождение исполняемого скрипта на главной
+        странице проекта. Возвращает 1, если скрипт находится на главное странице проекта, 0 – если
+        скрипт находится на странице субмодели. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>flag – флаг нахождения исполняемого скрипта на главной странице проекта. Тип boolean. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>fl = <funcname>ismainpage</funcname>;</codeblock></section>  
+  </body>
+</topic>

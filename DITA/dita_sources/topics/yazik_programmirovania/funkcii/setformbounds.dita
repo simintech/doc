@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setformbounds</title>
+<shortdesc>Функция установки положения и размеров окна отображения текущего графического
+    контейнера.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setformbounds</funcname>(left, top, width, height);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>left – левая граница окна,</p>
+      <p>top – верхняя граница окна,</p>
+      <p>width – ширина окна,</p>
+      <p>height – высота окна.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setformbounds(left, top, width, height)</codeph> – функция установки положения (левая
+          <codeph>left</codeph> и верхняя <codeph>top</codeph> граница) и размеров (ширина
+          <codeph>width</codeph> и высота <codeph>height</codeph>) окна отображения текущего
+        графического контейнера. Отсчёт координат по горизонтали начинается с левого края текущего
+        монитора вправо, по вертикали - с верхнего края текущего монитора вниз.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример 1:</title>
+<codeblock><funcname>setformbounds</funcname>(0, 100, 500, 300);</codeblock></section>
+<p>В примере выполняется установка положения окна редактирования: левая грань = 0 пикселей, верхняя
+      грань = 100 пикселей, ширина = 500 пикселей, высота = 300 пикселей.</p>
+    <section>
+      <title>Пример 2:</title>
+      <codeblock><funcname>setformbounds</funcname>(100+500*rand, 100+500*rand, 100+500*rand, 100+500*rand);</codeblock>
+    </section>
+    <p>В примере выполняется случайное изменение положения и размеров окна от 100 до 600 пикселей по
+      всем параметрам.</p>  
+  </body>
+</topic>

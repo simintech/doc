@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setdboverride</title>
+<shortdesc>Функция задания модуля и файла базы данных.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setdboverride</funcname>(plugin, name);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>plugin – строка, содержащая имя файла модуля базы данных,</p>
+      <p>name – строка, содержащая имя файла базы данных.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setdboverride(plugin, name)</codeph> – функция позволяет задавать имя модуля базы данных
+        проекта, как <codeph>plugin</codeph> и имя файла базы данных проекта, как
+          <codeph>name</codeph>. При этом значения соответствующих полей на вкладке «Настройки» окна
+        «Параметры проекта» также изменятся на заданные.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><funcname>setdboverride</funcname>("$(Root)\sdb.dll", "database.db")</codeblock></section>
+<p>В качестве модуля базы данных для текущего проекта будет использована библиотека с именем
+        <filepath>sdb.dll</filepath>, находящаяся в папке <filepath>\simintech\bin\</filepath>, а
+      файлом базы данных будет являться файл <filepath>database.db</filepath>, находящийся в
+      директории проекта.</p>  
+  </body>
+</topic>

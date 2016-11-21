@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setformsize </title>
+<shortdesc>Функция установки размеров окна отображения текущего графического контейнера.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setformsize</funcname>(width, height);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>width – ширина окна,</p>
+      <p>height – высота окна. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setformsize(width, height)</codeph> – функция установки размеров (ширина
+          <codeph>width</codeph> и высота <codeph>height</codeph>) окна отображения текущего
+        графического контейнера. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><funcname>setformsize</funcname>(500, 300);</codeblock></section>
+<p>В примере выполняется установка размеров окна редактирования: ширина = 500 пикселей, высота = 300
+      пикселей. </p>  
+  </body>
+</topic>

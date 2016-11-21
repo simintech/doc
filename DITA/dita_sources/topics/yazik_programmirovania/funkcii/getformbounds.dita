@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getformbounds</title>
+<shortdesc>Функция получения положения и размеров окна отображения текущего графического
+    контейнера.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>getformbounds</funcname>(left, top, width, height);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>left – левая граница окна,</p>
+      <p>top – верхняя граница окна,</p>
+      <p>width – ширина окна,</p>
+      <p>height – высота окна.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getformbounds(left, top, width, height)</codeph> – функция получения положения (левая
+          <codeph>left</codeph> и верхняя <codeph>top</codeph> граница) и размеров (ширина
+          <codeph>width</codeph> и высота <codeph>height</codeph>) окна отображения текущего
+        графического контейнера. Отсчёт координат по горизонтали начинается с левого края текущего
+        монитора вправо, по вертикали - с верхнего края текущего монитора вниз. Параметры данной
+        функции являются возвращаемыми и должны быть обязательно типа integer.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> L:<rword>integer</rword>, T:<rword>integer</rword>, W:<rword>integer</rword>, H:<rword>integer</rword>;
+<comment>//Получаем координаты и размеры</comment>
+<funcname>getformbounds</funcname>(L,T,W,H);
+<comment>//Выводим сообщение</comment>
+<funcname>seterrorstr</funcname>("FormLeft="+<funcname>floattostr</funcname>(L) + " " + "FormTop=" + <funcname>floattostr</funcname>(T) + " " + "FormWidth=" + <funcname>floattostr</funcname>(W) + " " + "FormHeight=" + <funcname>floattostr</funcname>(H), 0);</codeblock></section>  
+  </body>
+</topic>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>gethwnd</title>
+<shortdesc>Функция получения оконного контекста.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>wnd_id = <funcname>gethwnd</funcname>;</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>нет</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>gethwnd</codeph> – функция получения оконного контекста (идентификатора) окна редактора.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>wnd_id – идентификатор объекта.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>wnd_id = <funcname>gethwnd</funcname>;</codeblock></section>  
+  </body>
+</topic>

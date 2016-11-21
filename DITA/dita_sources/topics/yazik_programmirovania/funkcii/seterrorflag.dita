@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>seterrorflag</title>
+<shortdesc>Функция установки флага принудительной ошибки инициализации расчета.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>seterrorflag</funcname>(error_fl);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>error_fl – значение флага ошибки.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>seterrorflag(error_fl)</codeph> – функция устанавливает флаг принудительной ошибки
+        инициализации расчёта.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><funcname>seterrorflag</funcname>(1);</codeblock></section>  
+  </body>
+</topic>

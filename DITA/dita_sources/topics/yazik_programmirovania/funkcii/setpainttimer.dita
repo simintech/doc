@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setpainttimer</title>
+<shortdesc>Функция установки интервала перерисовки для текущего окна редактора или окна
+    управления.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setpainttimer</funcname>(time);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>time – интервал перерисовки в миллисекундах.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setpainttimer(time)</codeph> – функция устанавливает интервал перерисовки
+          <codeph>time</codeph> (в миллисекундах) для текущего окна редактора или окна
+        управления.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><funcname>setpainttimer</funcname>(500);</codeblock></section>  
+  </body>
+</topic>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setmainformvisible </title>
+<shortdesc>Функция установки видимости главного окна.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setmainformvisible</funcname>(arg);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>arg – аргумент двоичного типа, управляющий видимостью главного окна приложения. 0 – главное
+        окно не показывается; 1 – главное окно показывается.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setmainformvisible</codeph> – функция устанавливает видимость главного окна приложения.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>Все управляющие элементы окна будут скрыты. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>initialization</kword> 
+<funcname>setmainformvisible</funcname>(0); <comment>//скрытие главного окна</comment>
+<kword>end</kword>;
+
+<kword>finalization</kword>
+<funcname>setmainformvisible</funcname>(1); <comment>//восстановление видимости главного окна</comment>
+<kword>end</kword>;</codeblock></section>
+<p>При инициализации проекта с указанным скриптом, происходит скрытие элементов окна текущего
+      проекта. После остановки расчета, запомненное состояние восстанавливается. </p>  
+  </body>
+</topic>

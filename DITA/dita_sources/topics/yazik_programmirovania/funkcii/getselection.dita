@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getselection</title>
+<shortdesc>Функция проверки выделения объекта на схеме.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>getselection</funcname>(obj_id);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>obj_id – идентификатор объекта.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getselection(obj_id)</codeph> – функция выполняет проверку на то, выделен ли в данный
+        момент на схеме графический объект <codeph>obj_id</codeph>.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>Функция возвращает логическую единицу, если объект <codeph>obj_id</codeph> выделен и
+        логический ноль, в противном случае. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>a = <funcname>getselection</funcname>(macro2); <comment>// проверка, выделен ли объект macro2</comment></codeblock></section>  
+  </body>
+</topic>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>execmainformmethod</title>
+<shortdesc>Функция выполнения заданного метода главного окна приложения.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>fm = <funcname>execmainformmethod</funcname>(name);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>name – строка с названием метода.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>execmainformmethod(name)</codeph> – функция позволяет выполнить пункт меню главного окна
+        приложения с внутренним названием <codeph>name</codeph>.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>fm – функция возвращает переменную типа boolean, имеющую значение 1, если выполнение метода
+        завершилось успехом и 0 в противном случае. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><funcname>execmainformmethod</funcname>("ActionShowAllObjectsExecute"); <comment>//команды выполнения метода «Показать всё» в меню «Масштаб»</comment>
+<funcname>execmainformmethod</funcname>("ActionFindBlockExecute"); <comment>//команда выполнения метода «Поиск блока» в меню «Поиск»</comment></codeblock></section>
+<p>С помощью описанной функции можно выполнять в нужном контексте из скрипта желаемые пункты меню
+      главного окна.</p>
+    <p>
+      <note>Полный перечень всех методов главного окна приложения достаточно обширен и имя
+        конкретного можно получить по запросу в службу поддержки. </note>
+    </p>  
+  </body>
+</topic>

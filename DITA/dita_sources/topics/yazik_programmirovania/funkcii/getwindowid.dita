@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getwindowid</title>
+<shortdesc>Функция получения идентификатора окна проекта по его номеру.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>wnd_id = <funcname>getwindowid</funcname>(num);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>num – номер окна проекта, целое число. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getwindowid(num)</codeph> – функция получения идентификатора окна проекта по его номеру.
+        Нумерация начинается с нуля. Если окно есть – результат не нулевой.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>wnd_id – идентификатор окна проекта.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>wnd_id = <funcname>getwindowid</funcname>(0);</codeblock></section>  
+  </body>
+</topic>

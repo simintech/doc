@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>removeimagefromcash </title>
+<shortdesc>Функция выгрузки определенного изображения, загруженного ранее из файла, из кэша
+    программы.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>removeimagefromcash</funcname>(img_file);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>img_file – строка с именем файла, содержащего проект.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>removeimagefromcash(img_file)</codeph> – функция производит выгрузку изображения,
+        загруженного ранее из файла с именем <codeph>img_file</codeph>, из кэша картинок программы.
+        Функция используется для принудительного освобождения места в кэше при смене изображения в
+        блоке "Картинка из файла". Перед вызовом функции необходимо в скрипте сменить изображение,
+        переназначив свойство <codeph>ImageFile</codeph> данного примитива и вызвав функцию
+          <codeph>initobject</codeph>.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>oldimage = ManagedImage.ImageFile;
+ManagedImage.ImageFile = "newimage.jpg";
+<funcname>initobject</funcname>(ManagedImage);
+<kword>if</kword> oldimage &lt;> ManagedImage.ImageFile <kword>then</kword>
+<funcname>removeimagefromcash</funcname>(oldimage);</codeblock></section>
+<p>В пример производится перегрузка изображения объекта типа "Картинка из файла" с очисткой кэша
+      изображений. </p>  
+  </body>
+</topic>

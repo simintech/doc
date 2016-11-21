@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>is_insert_from_buf_flag</title>
+<shortdesc>Функция проверки режима инициализации объекта.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>is_insert_from_buf_flag</funcname>;</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>нет</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>is_insert_from_buf_flag</codeph> – функция позволяет на этапе инициализации осуществить
+        проверку того, был ли объект только что вставлен из библиотеки/буфера.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>Функция возвращает двоичное значение. 1 в случае если объект был только что вставлен из
+        библиотеки или буфера обмена и 0, если нет.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>if</kword> <funcname>is_insert_from_buf_flag</funcname>=1 <kword>then</kword> self.Property1="";</codeblock></section>
+<p>Данный скрипт, прописанный в блоке в качестве значения свойства OnInitScript позволяет задавать
+      текстовому свойству Property1 пустое значение, в случае если блок был вставлен из буфера
+      обмена или библиотеки блоков. </p>  
+  </body>
+</topic>

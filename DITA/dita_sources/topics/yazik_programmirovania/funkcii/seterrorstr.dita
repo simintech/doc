@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>seterrorstr</title>
+<shortdesc>Функция вывода сообщения в окно сообщений проекта.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>seterrorstr</funcname>(error_str, error_type);
+<funcname>seterrorstr</funcname>(error_str, error_type, obj_id);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>error_str – строка, содержащая текст сообщения;</p>
+      <p>error_type – тип сообщения, может быть четырех типов: 0 – информация, 1 – ошибка, 2 –
+        предупреждение, 3 – скрытое сообщение;</p>
+      <p>obj_id – идентификатор объекта. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>seterrorstr(error_str, error_type)</codeph> – функция вывода сообщения типа
+          <codeph>error_type</codeph> с текстом <codeph>error_str</codeph> в окно сообщений
+        проекта.</p>
+      <p><codeph>seterrorstr(error_str, error_type, obj_id)</codeph> – функция вывода сообщения типа
+          <codeph>error_type</codeph> с текстом <codeph>error_str</codeph> в окно сообщений проекта
+        c идентификатор объекта <codeph>obj_id</codeph> для его указания по двойному щелчку.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>Вывод сообщения в окно сообщений проекта.</p>
+    </section>  
+<section><title>Пример 1:</title>
+<codeblock><funcname>seterrorstr</funcname>("Принудительная остановка",0);
+<comment>//вывод следующего сообщения: [Информация]: "Принудительная остановка"</comment></codeblock></section>
+    <section>
+      <title>Пример 2:</title>
+      <codeblock><funcname>seterrorstr</funcname>("Принудительная остановка", 2, Macro2);
+<comment>//вывод следующего сообщения: [Предупреждение]: "Принудительная остановка" в объекте Macro2 </comment></codeblock>
+    </section>
+    <p>описание примера</p>  
+  </body>
+</topic>

@@ -1,25 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="topic_v4b_tyc_rf">
-<title>Название</title>
-<shortdesc>Shortdesc.</shortdesc>
+<title>signalexist</title>
+<shortdesc>Функция определения наличия сигнала с определенным именем в проекте.</shortdesc>
 <body>
 <section>
       <title>Синтаксис:</title>
-      <codeblock>синтаксис</codeblock>
+      <codeblock>flag = <funcname>signalexist</funcname>(name);</codeblock>
     </section>
 <section>
       <title>Аргументы:</title>
-      <p>аргументы</p>
+      <p>name – строка, содержащая имя сигнала.</p>
     </section>
 <section><title>Описание:</title>
-<p><codeph>codeph</codeph> – описание. </p></section>
+<p><codeph>signalexist(name)</codeph> – функция определяет наличие сигнала с именем
+          <codeph>name</codeph> в проекте. Возвращает значение логической 1, если сигнал
+        (переменная) в данном проекте доступен.  </p></section>
 <section>
       <title>Результат:</title>
-      <p>результат</p>
+      <p>flag – признак наличия сигнала в проекте. Тип boolean. </p>
     </section>  
 <section><title>Пример:</title>
-<codeblock>пример</codeblock></section>
-<p>описание примера</p>  
+<codeblock><kword>beforecompile</kword>  
+  <kword>if not</kword> <funcname>signalexist</funcname>("gant_s") <kword>then</kword> <funcname>addsignaltolist</funcname>(13,0,"gant_s","gant_s","[[0]]",2);
+  <kword>if not</kword> <funcname>signalexist</funcname>("gant_tend") <kword>then</kword> <funcname>addsignaltolist</funcname>(13,0,"gant_tend","gant_tend","[[0]]",2);
+  <kword>if not</kword> <funcname>signalexist</funcname>("gant_t0") <kword>then</kword> <funcname>addsignaltolist</funcname>(13,0,"gant_t0","gant_t0","[[0]]",2);
+<kword>end</kword>;
+gant_s = [1,2,3];</codeblock></section>
+<p>В примере производится динамическое добавление новых сигналов в список сигналов проекта с
+      дальнейшим использованием созданных сигналов в том же скрипте. </p>  
   </body>
 </topic>

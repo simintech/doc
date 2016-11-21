@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>hideframeelements </title>
+<shortdesc>Функция скрытия всех элементов окна проекта.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>hideframeelements</funcname>;</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>нет</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>hideframeelements</codeph> – выполнение функции вызывает скрывание всех управляющих
+        элементов схемного окна проекта.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>Все управляющие элементы окна будут скрыты.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>initialization</kword>
+<funcname>storeframeelements</funcname>;  <comment>//запоминание состояния окна</comment>
+<funcname>hideframeelements</funcname>; <comment>//скрытие управляющих элементов</comment>
+<kword>end</kword>; 
+
+<kword>finalization</kword>;
+<funcname>restoreframeelements</funcname>; <comment>//восстановление состояния окна</comment>
+<kword>end</kword>;</codeblock></section>
+<p>При инициализации проекта с указанным скриптом, происходит скрытие элементов окна текущего
+      проекта. После остановки расчета, запомненное состояние восстанавливается. </p>  
+  </body>
+</topic>
