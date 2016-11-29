@@ -14,13 +14,13 @@
       <p>x – аргумент функции.</p>
     </section>
     <section><title>Описание:</title><p>Линейное обыкновенное дифференциальное уравнение второго
-        порядка вида: <image placement="break" href="images/bessili_1.gif" id="image_itx_fgh_wx"
+        порядка вида: <image placement="break" href="images/besseli_1.gif" id="image_itx_fgh_wx"
           align="center"/>называется уравнением Бесселя. Число <i>v</i> называется порядком
         уравнения Бесселя. Модифицированное уравнение Бесселя, которое получается из регулярного
         уравнения Бесселя заменой x на –ix, имеет вид: <image placement="break"
-          href="images/bessili_2.gif" id="image_nq1_pgh_wx" align="center"/> Решение данного
+          href="images/besseli_2.gif" id="image_nq1_pgh_wx" align="center"/> Решение данного
         уравнения выражается через так называемые модифицированые функции Бесселя первого и второго
-        рода:</p><image placement="break" href="images/bessili_3.gif" id="image_i4b_chh_wx"
+        рода:</p><image placement="break" href="images/besseli_3.gif" id="image_i4b_chh_wx"
         align="center"/>где C<sub>1</sub> и C<sub>2</sub> − произвольные постоянные,
         I<sub><i>v</i></sub>(x) и K<sub><i>v</i></sub>(x) обозначают модифицированные функции
       Бесселя, соответственно, первого и второго рода.<p>Функция <codeph>besselk0</codeph> вычисляет

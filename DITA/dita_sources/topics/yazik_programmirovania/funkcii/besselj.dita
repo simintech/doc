@@ -14,7 +14,7 @@
       <p>x – аргумент функции.</p>
     </section>
     <section><title>Описание:</title>Линейное обыкновенное дифференциальное уравнение второго
-      порядка вида: <image placement="break" href="images/bessili_1.gif" id="image_itx_fgh_wx"
+      порядка вида: <image placement="break" href="images/besseli_1.gif" id="image_itx_fgh_wx"
         align="center"/>называется уравнением Бесселя. Число <i>v</i> называется порядком уравнения
       Бесселя. Решение данного уравнения выражается через функции бесселя первого и второго
         рода:<image placement="break" href="images/besselj_1.gif" align="center"

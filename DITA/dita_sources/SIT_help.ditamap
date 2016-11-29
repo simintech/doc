@@ -311,12 +311,19 @@
                 <topicref href="topics/yazik_programmirovania/funkcii/bessely.dita"/>
                 <topicref href="topics/yazik_programmirovania/funkcii/bessely0.dita"/>
                 <topicref href="topics/yazik_programmirovania/funkcii/bessely1.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/ellipticintegrale.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/ellipticintegralk.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/ellipticintegralkhp.dita"/>
                 <topicref href="topics/yazik_programmirovania/funkcii/erf.dita"/>
                 <topicref href="topics/yazik_programmirovania/funkcii/erfc.dita"/>
                 <topicref href="topics/yazik_programmirovania/funkcii/gamma.dita"/>
                 <topicref href="topics/yazik_programmirovania/funkcii/gammln.dita"/>
                 <topicref href="topics/yazik_programmirovania/funkcii/gammp.dita"/>
                 <topicref href="topics/yazik_programmirovania/funkcii/gammq.dita"/>
+                <topicref
+                    href="topics/yazik_programmirovania/funkcii/incompleteellipticintegrale.dita"/>
+                <topicref
+                    href="topics/yazik_programmirovania/funkcii/incompleteellipticintegralk.dita"/>
             </topicref>
             <topicref
                 href="topics/yazik_programmirovania/funkcii/svoistva_vodi_i_vodyanogo_para.dita"
