@@ -17,7 +17,7 @@
 <section><title>Описание:</title>
 <p><codeph>rgbtocolor(r, g, b)</codeph> – функция получения кода цвета по его отдельным компонентам.
         Код цвета <i>color</i> вычисляется при помощи формулы:</p></section>
-    <image placement="break" href="images/rgbtocolor_1.gif" align="center" id="image_tz4_5nh_yx"/>
+    <image placement="break" href="images/rgbtocolor_1.png" align="center" id="image_tz4_5nh_yx"/>
 <section>
       <title>Результат:</title>
       <p>с – цвет, тип integer.</p>

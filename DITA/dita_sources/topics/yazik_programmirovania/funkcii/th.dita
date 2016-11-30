@@ -14,7 +14,7 @@
                 </section>
 <section><title>Описание:</title>
 <p><codeph>th(x)</codeph> – функция вычисления гиперболического тангенса вещественного или комплексного числа.</p>
-                        <image placement="break" href="images/th_1.gif" align="center"
+                        <image placement="break" href="images/th_1.png" align="center"
                                 id="image_djj_3tx_5x"/>
 
 <p>Входное значение может быть как вещественным, так и комплексным числом. 

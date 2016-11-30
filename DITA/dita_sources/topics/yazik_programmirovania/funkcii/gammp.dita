@@ -13,9 +13,9 @@
 <p>x – аргумент функции.</p></section>
 <section><title>Описание:</title>
 <p>Неполная Гамма функция P(a,x) задается соотношением:</p></section>
-    <image placement="break" href="images/gammap_1.gif" align="center" id="image_yzb_4b3_wx"/>
+    <image placement="break" href="images/gammap_1.png" align="center" id="image_yzb_4b3_wx"/>
   <p>где Г(<i>a</i>) - полная Гамма-функция, или</p>
-    <image placement="break" href="images/gammap_2.gif" align="center" id="image_hkg_hc3_wx"/>
+    <image placement="break" href="images/gammap_2.png" align="center" id="image_hkg_hc3_wx"/>
   <p>Функция <codeph>gammp</codeph> вычисляет неполную Гамма-функцию от аргументов a и x.
       Аргументами могут быть матрицы и вектора, их размерности должны совпадать. </p>
 <section>

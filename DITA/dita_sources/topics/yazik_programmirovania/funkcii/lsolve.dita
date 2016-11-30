@@ -10,7 +10,7 @@
           ..,a<sub>1n</sub>],…,[ a<sub>m1</sub>, ..,a<sub>mn</sub>]] , определяющий матрицу системы
         линейных алгебраических уравнений А,</p> Y – входной массив элементов [b<sub>11</sub>,
         ..,b<sub>1m</sub>], определяющий вектор B системы линейных алгебраических уравнений А.
-        <image placement="break" href="images/lsolve_1.gif" id="image_ncp_njg_tx"
+        <image placement="break" href="images/lsolve_1.png" id="image_ncp_njg_tx"
         class="- topic/image " align="center"/>
     </section>
 

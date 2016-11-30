@@ -10,7 +10,7 @@
 <p><codeph>rcond(M)</codeph> – функция возвращает значение, обратное числу обусловленности матрицы,
         основанному на первой норме. Значение также можно получить, используя
           выражение:<?oxy_insert_start author="Redmann" timestamp="20161027T155437+0300"?><image
-          placement="break" href="images/rcond_1.gif" align="center" id="image_e3t_ssg_tx"
+          placement="break" href="images/rcond_1.png" align="center" id="image_e3t_ssg_tx"
         /><?oxy_insert_end?></p>
 
 <p>Входная матрица М может задаваться:</p>
