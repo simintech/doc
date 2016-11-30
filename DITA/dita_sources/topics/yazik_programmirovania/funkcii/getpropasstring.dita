@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getpropasstring </title>
+<shortdesc>Функция получения текстового значения свойства объекта на схеме по имени
+    свойства.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>str = <funcname>getpropasstring</funcname>(id,"ob_name");</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>id – идентификатор объекта (блока на схеме или другого графического объекта).</p>
+      <p>"ob_name" – строка, содержащая имя свойства объекта (обрамляется кавычками, т.к. тип данных
+        должен быть строковый). </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getpropasstring</codeph> – функция получения текстового значения свойства объекта с
+        идентификатором <codeph>id</codeph> на схеме по имени свойства <codeph>ob_name</codeph>.
+        Идентификатор объекта может быть получен функцией <codeph>getobj</codeph> и имеет тип
+        указателя на объект. Имя свойства задается строкой, обрамляется кавычками.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>str – строка, содержащая значение свойства объекта. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> i,id;
+<kword>initialization</kword> <comment>//начальная инициализация</comment>
+i = 1;
+<kword>while</kword> i &lt;= <kword>getobjcount</kword> <kword>do</kword> <kword>begin</kword> <comment>//для всех объектов на схеме</comment>
+id = <funcname>getobj</funcname>(i); <comment>//получаем идентификатор объекта</comment>
+<comment>//получаем значение свойства tag объекта</comment>
+name = <funcname>getpropasstring</funcname>(id, "tag");
+<comment>//выводим значение свойства</comment>
+<funcname>seterrorstr</funcname>(name);
+i = i + 1;  
+<kword>end</kword>;                 
+<kword>end</kword>;</codeblock></section>
+<p>В результате выполнения данного скрипта выводятся значения свойства <codeph>tag</codeph> всех
+      блоков схемы. </p>  
+  </body>
+</topic>

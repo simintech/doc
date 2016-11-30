@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setportposition </title>
+<shortdesc>Функция устанавливает положение порта по его идентификатору.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setportposition</funcname>(port_id, auto, centr, X, Y);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>port_id – идентификатор порта;</p>
+      <p>auto – флаг «Автоматическое положение» - если значение 1, то положение порта на блоке
+        выставляется автоматически;</p>
+      <p>centr – флаг «По центру» - если значение 1, то порт устанавливается в центре блока, причем
+        флаг auto должен быть равен 1, в противном случае аргумент не имеет смысла;</p>
+      <p>X – значение горизонтальной координаты для ручного режима установки положения порта, когда
+        auto=0. Координата задается относительно ширины блока;</p>
+      <p>Y – значение горизонтальной координаты для ручного режима установки положения порта, когда
+        auto=0. Координата задается относительно высоты блока; </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setportposition</codeph> – функция позволяет назначить положение порту с идентификатором
+          <codeph>port_id</codeph>. Положение может быть задано либо автоматически, либо по центру,
+        либо вручную. Причем, если активен флаг <codeph>auto</codeph>, то аргументы
+          <codeph>X</codeph> и <codeph>Y</codeph> не имеют смысла. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>Функция возвращает логическую 1, если установка положения порта прошла успешно и 0, если
+        установить положение порта не удалось.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>portid  = <funcname>getblockportid</funcname>(SteadyNoise_source6, 0);
+<kword>if</kword> <rword>time</rword> &lt; 10 <kword>then</kword> <funcname>setportposition</funcname>(portid, 0, 0, -1, 1);
+<kword>if</kword> (<rword>time</rword> > 10) <kword>and</kword> (<rword>time</rword> &lt; 20) <kword>then</kword> <funcname>setportposition</funcname>(portid, 1, 0, -1, 1);
+<kword>if</kword> <rword>time</rword> > 20 <kword>then</kword> <funcname>setportposition</funcname>(portid, 1, 1, -1, 1);</codeblock></section>
+<p>В результате выполнения данного скрипта, порт с порядковым номером 0 в блоке с именем
+        <codeph>SteadyNoise_source6</codeph>, в первые 10 секунд расчета, будет расположен с
+      координатами (-1;1), с 10 по 20 секунду расчета расположение порта будет определяться
+      автоматически и при значениях модельного времени более 20 секунд порт будет расположен по
+      центру блока. </p>  
+  </body>
+</topic>

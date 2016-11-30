@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setobjectparent </title>
+<shortdesc>Функция привязки объекта к новому владельцу.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>np = <funcname>setobjectparent</funcname>(child_id, npar_id);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>child_id – идентификатор подчиненного объекта;</p>
+      <p>npar_id – идентификатор родительского объекта (нового). </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setobjectparent</codeph> – функция позволяет установить для объекта с идентификатором
+          <codeph>child_id</codeph> новый родительский объекта с идентификатором
+          <codeph>npar_id</codeph>. Действие может быть применимо только к объектам, которые могут
+        иметь владельца (parent). </p></section>
+<section>
+      <title>Результат:</title>
+      <p>Функция возвращает двоичное значение np, где 1 – привязка прошла успешно, 0 – привязка
+        завершилась неудачно.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><funcname>setobjectparent</funcname>(LAB10AA2, Channel_4);</codeblock></section>
+<p>Данная строка скрипта устанавливает для задвижки с именем <codeph>LAB10AA2</codeph> нового
+      владельца – канал с именем <codeph>Channel_4</codeph>. </p>  
+  </body>
+</topic>

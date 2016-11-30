@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setportinverse </title>
+<shortdesc>Функция установки флага инверсии порта.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setportinverse</funcname>(port_id, inverse);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>port_id – идентификатор порта;</p>
+      <p>inverse – флаг инверсии порта, 1 – инверсия вкл, 0 – инверсия выкл.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setportinverse </codeph>– функция позволяет управлять флагом инверсии для порта с
+        идентификатором <codeph>port_id</codeph>.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>Функция возвращает логическую 1, если установка флага инверсии порта прошла успешно и 0,
+        если установить флаг невидимости порта не удалось. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>portid  = <funcname>getblockportid</funcname>(And1, 1);
+<funcname>setportinverse</funcname>(portid, 1);</codeblock></section>
+<p>В результате выполнения данного скрипта, входной порт с порядковым номером 1 в блоке логического
+      И с именем <codeph>And1</codeph> будет сделан инверсным. </p>
+     <note>опция инверсии порта применима только к портам блоков из вкладок «Логические» и
+        «Триггеры»!</note>
+      
+  </body>
+</topic>

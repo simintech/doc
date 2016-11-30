@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>execpropscript </title>
+<shortdesc>Функция выполнения заданного скрипта свойства блока.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>fl = <funcname>execpropscript</funcname>(blok_name, prop_name);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>block_name – идентификатор блока,</p>
+      <p>prop_name – строка с названием свойства. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>execpropscript</codeph> – функция выполняет скрипт свойства с названием
+          <codeph>prop_name</codeph> блока с идентификатором <codeph>block_name</codeph>. В случае
+        успешного выполнения возвращает 1, иначе 0.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>fl – результат выполнения, тип boolean.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><funcname>execpropscript</funcname>(AddOper,"a");</codeblock></section>  
+  </body>
+</topic>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setportmode</title>
+<shortdesc>Функция устанавливает тип порта по его идентификатору.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setportmode</funcname>(port_id, mode);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>port_id – идентификатор порта;</p>
+      <p>mode – тип порта, где 0 – вход, 1 – выход, 2 – ненаправленный. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setportmode</codeph> – функция позволяет назначить тип mode для порта с идентификатором
+          <codeph>port_id</codeph>. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>Функция возвращает логическую 1, если установка типа порта прошла успешно и 0, если
+        установить тип порта не удалось.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>portid  = <funcname>getblockportid</funcname>(SteadyNoise_source6, 0);
+<funcname>setportmode</funcname>(portid, 1);</codeblock></section>
+<p>В результате выполнения данного скрипта, порт с порядковым номером 0 в блоке с именем
+        <codeph>SteadyNoise_source6</codeph> будет установлен как «Выход». </p>  
+  </body>
+</topic>

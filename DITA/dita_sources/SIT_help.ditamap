@@ -600,6 +600,78 @@
                     <topicref href="topics/yazik_programmirovania/funkcii/startsecondproject.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/storeframeelements.dita"/>
                 </topicref>
+                <topicref href="topics/yazik_programmirovania/funkcii/porty_blokov.dita">
+                    <topicref href="topics/yazik_programmirovania/funkcii/findendport.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/findstartport.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getblockportcount.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getblockportid.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getportblockid.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getportindex.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getportinfo.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getportpoint.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getportwireid.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getportwires.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setportinverse.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setportinvisible.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setportlinetype.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setportmode.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setportname.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setportposition.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setportside.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/tracestartportwires.dita"
+                    />
+                </topicref>
+                <topicref href="topics/yazik_programmirovania/funkcii/svoistva_blokov.dita">
+                    <topicref href="topics/yazik_programmirovania/funkcii/execpropscript.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getprop.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getpropasstring.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getpropdata.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getpropevalstring.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/iseditprops.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setprop.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setpropasstring.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setpropevalstring.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setpropnamebycaption.dita"/>
+                    <topicref
+                        href="topics/yazik_programmirovania/funkcii/setpropvaluebycaption.dita"/>
+                </topicref>
+                <topicref href="topics/yazik_programmirovania/funkcii/obekty.dita">
+                    <topicref href="topics/yazik_programmirovania/funkcii/doneobject.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/exchangeobjects.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/findobjectbyfullname.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/findobjectbyname.dita"/>
+                    <topicref
+                        href="topics/yazik_programmirovania/funkcii/findobjectbynametrans.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getchild.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getchildcount.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getfullname.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getobj.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getobjclassname.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getobjcontainer.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getobjcount.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getobjectparent.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getobjectvisuallayer.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getobjname.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getobjtypeid.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getownercontainer.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/initobject.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/removeobject.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setobjectparent.dita"/>
+                </topicref>
+                <topicref href="topics/yazik_programmirovania/funkcii/funkcii_OS.dita">
+                    <topicref href="topics/yazik_programmirovania/funkcii/closeapp.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/exitapp.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getsystemvar.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getwindowbycomid.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/inputbox.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/messagebox.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/openproject.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/popupmenu.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setsystemvar.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/shellexec.dita"/>
+                    <topicref
+                        href="topics/yazik_programmirovania/funkcii/showgraphicprintdialog.dita"/>
+                </topicref>
             </topicref>
         </topicref>
     </topicref>

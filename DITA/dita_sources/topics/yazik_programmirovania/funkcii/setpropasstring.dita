@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setpropasstring </title>
+<shortdesc>Функция установки текстового значения свойства объекта на схеме по имени
+    свойства.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>flag = <funcname>setpropasstring</funcname>(id,"ob_name", str);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>id – идентификатор объекта (блока на схеме или другого графического объекта);</p>
+      <p>"ob_name" – строка, содержащая имя свойства объекта (обрамляется кавычками, т.к. тип данных
+        должен быть строковый);</p>
+      <p>str – строка, содержащая значение свойства объекта. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setpropasstring</codeph> – функция установки текстового значения, содержащегося в строке
+        str свойства объекта с идентификатором <codeph>id</codeph> на схеме по имени свойства
+          <codeph>ob_name</codeph>. Идентификатор объекта может быть получен функцией
+          <codeph>getobj</codeph> и имеет тип указателя на объект. Имя свойства задается строкой,
+        обрамляется кавычками.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>flag – флаг результата выполнения операции, тип boolean. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>id = <funcname>getobj</funcname>(1); <comment>//получим идентификатор объекта</comment>
+<funcname>setpropasstring</funcname>(id, "tag", "1");</codeblock></section>
+<p>В результате выполнения данного скрипта устанавливается значение свойства <codeph>tag</codeph>
+      объекту с идентификатором <codeph>id</codeph> схемы. </p>  
+  </body>
+</topic>

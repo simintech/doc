@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getobjcontainer </title>
+<shortdesc>Функция получения идентификатора графического контейнера изображения блока.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>cont_id = <funcname>getobjcontainer</funcname>(obj_id);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>obj_id – идентификатор блока, ссылку на изображение которого необходимо получить. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getobjcontainer</codeph> – функция позволяет получить идентификатора графического
+        изображения объекта по его основному идентификатору <codeph>obj_id</codeph>. Используя
+        полученный идентификатор, можно получить доступ к динамическому изменению графического
+        изображения блока снаружи. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>cont_id – идентификатор графического изображения объекта, представляемый в виде int. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>obj_id=<funcname>findobjectbyname</funcname>("Macro5"); <comment>//получение идентификатора блока</comment>
+cont_id=<funcname>getobjcontainer</funcname>(obj_id); <comment>//получение идентификатора его графического изображения</comment>
+n2=<funcname>getobjcount</funcname>(cont_id); <comment>//определение числа элементов в графическом контейнере изображения блока</comment></codeblock></section>
+<p>В результате выполнения данного скрипта переменная <codeph>n2</codeph> получит значения
+      количества элементов в контейнере графического изображения блока. </p>  
+  </body>
+</topic>

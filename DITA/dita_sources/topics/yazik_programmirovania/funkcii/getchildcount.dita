@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getchildcount </title>
+<shortdesc>Функция возвращает количество подчиненных объектов по идентификатору
+    владельца.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>num = <funcname>getchildcount</funcname>(obj_id);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>obj_id – идентификатор объекта. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getchildcount</codeph> – функция получения количества элементов, подчиненных объекту с
+        идентификатору <codeph>obj_id</codeph>. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>num – целое число, равное количеству подчиненных объектов для владельца с идентификатором
+        obj_id. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>initialization</kword>
+<kword>for</kword>(i=1,<funcname>getchildcount</funcname>(MainObject)) <kword>begin</kword>
+id = <funcname>getchild</funcname>(MainObject,i);
+<funcname>seterrorstr</funcname>("Подчинённый объект = "+<funcname>getobjname</funcname>(id),0);
+<kword>end</kword>;
+<kword>end</kword>;</codeblock></section>
+<p>В результате выполнения данного скрипта, в окне сообщений будут отображены сообщения о всех
+      дочерних объектах, принадлежащих объекту с именем <codeph>MainObject</codeph>. </p>  
+  </body>
+</topic>

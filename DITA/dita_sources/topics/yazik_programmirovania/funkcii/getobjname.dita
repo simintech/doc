@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getobjname </title>
+<shortdesc>Функция получения имени объекта в графическом контейнере по идентификатору.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>name = <funcname>getobjname</funcname>(obj_id);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>obj_id – идентификатор объекта. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getobjname</codeph> – функция получения имени объекта в графическом контейнере по его
+        идентификатору <codeph>obj_id</codeph>. Идентификатор объекта может быть получен функцией
+          <codeph>getobj</codeph> и имеет тип указателя на объект. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>name – строка, содержащая имя объекта. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> i,id;
+<kword>initialization</kword> <comment>//начальная инициализация</comment>
+i = 1;
+<kword>while</kword> i &lt;= <funcname>getobjcount</funcname> <kword>do begin</kword> <comment>//для всех объектов на схеме</comment>
+obj_id = <funcname>getobj</funcname>(i); <comment>//получаем идентификатор объекта</comment>
+name = <funcname>getobjname</funcname>(obj_id);
+<comment>//Выводим сообщение</comment>
+<funcname>seterrorstr</funcname>(name);
+i = i + 1;  
+<kword>end</kword>;                 
+<kword>end</kword>;</codeblock></section>
+<p>В результате выполнения данного скрипта выводятся имена всех блоков схемы. </p>  
+  </body>
+</topic>

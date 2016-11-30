@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getpropdata </title>
+<shortdesc>Функция возвращает прямую ссылку на свойство или параметр блока.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>var = <funcname>getpropdata</funcname>(id,"ob_name");</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>id – идентификатор объекта (блока на схеме или другого графического объекта). </p>
+      <p>"ob_name" – строка, содержащая имя свойства объекта (обрамляется кавычками, т.к. тип данных
+        должен быть строковый). </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getpropdata</codeph> – функция получения прямой ссылки на данные параметра или свойства
+        объекта на схеме. Идентификатор объекта может быть получен функцией <codeph>getobj</codeph>
+        и имеет тип указателя на объект. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>var – прямая ссылка на свойство или параметр объекта, имеет переменный тип, зависящий от
+        типа считываемого свойства или параметра.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> sz: string, pts: <rword>carray</rword>;
+sz = <funcname>getfontsize</funcname>(<funcname>getpropdata</funcname>(TextLabel1,"Font"));
+<funcname>seterrorstr</funcname>("Размеры шрифтов объектов = " + sz,0);
+pts = <funcname>getpropdata</funcname>(FillCircle, "Points"); <comment>//получаем значения координат точек в виде массива комплексных чисел</comment></codeblock></section>
+<p>В результате выполнения данного скрипта, переменная <codeph>sz</codeph> примет значение размера
+      шрифта в текстовом поле с именем <codeph>TextLabel1</codeph>, а переменная
+        <codeph>pts</codeph> примет значение массива комплексных чисел, где вещественная часть – это
+      координаты точки по оси Х, а комплексная – по оси Y. </p>  
+  </body>
+</topic>

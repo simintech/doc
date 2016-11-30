@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getsystemvar </title>
+<shortdesc>Функция получения значения системной переменной с определенным именем.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>var_str = <funcname>getsystemvar</funcname>(name_str);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>name_str – строка, содержащая имя системной переменной. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getsystemvar</codeph> – функция получения строки со значением, установленным ранее при
+        помощи функции <codeph>setsystemvar</codeph>, системной переменной с именем
+          <codeph>name_str</codeph>. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>var_str – строка, содержащая значение системной переменной.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><funcname>setsystemvar</funcname>("a","1000");
+ss = <funcname>getsystemvar</funcname>("a"); </codeblock></section>
+<p>В результате выполнения данного скрипта переменная <codeph>ss</codeph> будет содержать строку
+      «1000». </p>  
+  </body>
+</topic>

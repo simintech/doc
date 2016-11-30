@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>tracestartportwires </title>
+<shortdesc>Функция получения списка линий на пути к начальному порту.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>w_ids = <funcname>tracestartportwires</funcname>(port_id);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>port_id – ссылка (идентификатор) порта.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>tracestartportwires</codeph> – позволяет определить список линий связи, соединяющих порт,
+        имеющий идентификатор <codeph>port_id</codeph>, с начальным портом.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>Функция возвращает целочисленный массив, состоящий из идентификаторов линий связи,
+        составляющих путь от источника сигнала к порту с указанным идентификатором.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>p_id = <funcname>getblockportid</funcname>(macro2,2);  <comment>//получение идентификатора порта</comment>
+w_ids = <funcname>tracestartportwires</funcname>(p_id); <comment>//получение массива идентификаторов линий связи, связывающий начальный порт с портом p_id</comment></codeblock></section>
+<p>В результате выполнения данного скрипта, переменная <codeph>w_ids</codeph> получит значение
+      целочисленного массива, состоящего из идентификаторов, соответствующих линий связи, образующих
+      путь к указанному порту <codeph>p_id</codeph>. </p>  
+  </body>
+</topic>
