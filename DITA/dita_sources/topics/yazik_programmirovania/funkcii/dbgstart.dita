@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>dbgstart </title>
+<shortdesc>Функция предоставляет возможность обеспечить cтарт соединения, ≠0 - ошибка
+    соединения.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>dbgstart</funcname>(&lt;obj_context>);</codeblock>
+    </section>  
+  </body>
+</topic>

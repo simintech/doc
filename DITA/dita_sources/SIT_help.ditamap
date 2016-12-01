@@ -316,7 +316,7 @@
                 <topicref href="topics/yazik_programmirovania/funkcii/ellipticintegralkhp.dita"/>
                 <topicref href="topics/yazik_programmirovania/funkcii/erf.dita"/>
                 <topicref href="topics/yazik_programmirovania/funkcii/erfc.dita"/>
-                <topicref href="topics/yazik_programmirovania/funkcii/gamma.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/gamma.dita" navtitle="gamma"/>
                 <topicref href="topics/yazik_programmirovania/funkcii/gammln.dita"/>
                 <topicref href="topics/yazik_programmirovania/funkcii/gammp.dita"/>
                 <topicref href="topics/yazik_programmirovania/funkcii/gammq.dita"/>
@@ -672,6 +672,50 @@
                     <topicref
                         href="topics/yazik_programmirovania/funkcii/showgraphicprintdialog.dita"/>
                 </topicref>
+            </topicref>
+            <topicref href="topics/yazik_programmirovania/funkcii/funkcii_raboty_s_bd.dita"
+                locktitle="yes" navtitle="6.6.18 Функции работы с БД">
+                <topicref href="topics/yazik_programmirovania/funkcii/dostup_k_bd_cherez_ado.dita"
+                    navtitle="6.6.18.1 Доступ к БД через ADO" locktitle="yes">
+                    <topicref href="topics/yazik_programmirovania/funkcii/adoqueryclose.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/adoquerycreate.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/adoqueryfirst.dita"/>
+                    <topicref
+                        href="topics/yazik_programmirovania/funkcii/adoquerygetdataasstring.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/adoquerynext.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/adoqueryprocesssql.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/adoqueryrecordcount.dita"/>
+                    <topicref
+                        href="topics/yazik_programmirovania/funkcii/adoquerysetconnection.dita"/>
+                </topicref>
+                <topicref href="topics/yazik_programmirovania/funkcii/upravlenie_signalami.dita"
+                    navtitle="6.6.18.2 Управление сигналами" locktitle="yes">
+                    <topicref href="topics/yazik_programmirovania/funkcii/dbaddcat.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/dbaddgroup.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/dbaddsignal.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/dbdelgroup.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/dbdelsignal.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/dbgetreadflag.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/dbgetwriteflag.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/dbrenamegroup.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/dbrenamesignal.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/dbsetreadflag.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/dbsetwriteflag.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/dbsignalinfo.dita"/>
+                </topicref>
+            </topicref>
+            <topicref
+                href="topics/yazik_programmirovania/funkcii/funkcii_priamogo_dostupa_k_interfeisu_obmena_s_udalennoi_sistemoi.dita"
+                navtitle="6.6.19 Функции прямого доступа к интерфейсу обмена с удаленной системой"
+                locktitle="yes">
+                <topicref href="topics/yazik_programmirovania/funkcii/createexmodule.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/dbginitialize.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/dbgaddreadvar.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/dbgaddwritevar.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/dbgstart.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/dbgexchange.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/dbgsaverestart.dita"/>
+                <topicref href="topics/yazik_programmirovania/funkcii/dbgloadrestart.dita"/>
             </topicref>
         </topicref>
     </topicref>

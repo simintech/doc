@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>dbaddcat </title>
+<shortdesc>Функция добавления новой категории в базу сигналов.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>dbaddcat</funcname>(cat);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>cat – переменная, типа string, содержащая имя категории, которую нужно создать. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>dbaddcat</codeph> – функция создания новой категории в подключенной к проекту базе
+        сигналов. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>Функция возвращает число типа boolean: 1 – категория успешно создана, 0 – категория с
+        данным именем уже имеется в базе. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> nm:<rword>string</rword>;
+nm = "категория_1";
+<funcname>dbaddcat</funcname>(nm);</codeblock></section>
+<p>В результате выполнения данного скрипта, в подключенной к проекту базе сигналов будет создана
+      новая категория с именем «категория_1». </p>  
+  </body>
+</topic>

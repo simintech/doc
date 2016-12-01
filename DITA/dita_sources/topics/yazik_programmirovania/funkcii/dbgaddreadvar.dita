@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>dbgaddreadvar </title>
+<shortdesc>Функция предоставляет возможность добавить переменную в канал обмена для чтения, =0 -
+    ошибка.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>dbgaddreadvar</funcname> (&lt;obj_context>, DATA, "имя переменной в исполнительной системе");</codeblock>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>initialization</kword>
+<comment>//Параметры соединения для каждого из контроллеров</comment>
+src1_host = "192.168.7.1:22375;connecttimeout=4000 timeout=5000";
+src2_host = "192.168.7.2:22375;connecttimeout=4000 timeout=5000";
+load_name1 = "alg#default.conf";
+load_name2 = "alg#default.conf";
+debugger_unit_name = "$(Root)\avrordbg.dll@debugger";
+stat_1=0;
+stat_2=0;
+
+<comment>//Создаём объекты для подключения проекта видеокадра к контроллерам</comment>
+source1 = <funcname>createextmodule</funcname>(debugger_unit_name); 
+source2 = <funcname>createextmodule</funcname>(debugger_unit_name); 
+
+<kword>if</kword> (source1 &lt;> 0) <kword>then</kword> <funcname>dbgaddreadvar</funcname>(source1, stat_1, "ypc02_pid_k" );
+<kword>if</kword> (source2 &lt;> 0) <kword>then</kword> <funcname>dbgaddreadvar</funcname>(source2, stat_2, "ypc02_pid_k" );
+
+<kword>end</kword>;</codeblock></section>
+<p>Скрипт установавливает соединение с двумя внешними алгоритмами, выполняющимися на контроллерах, и
+      добавляет в канал обмена на чтение для каждого контроллера (алгоритма) по одному сигналу.</p>  
+  </body>
+</topic>
