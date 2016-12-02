@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>rms </title>
+<shortdesc>Функция вычисления среднеквадратичного отклонения элементов вектора.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>y = <funcname>rms</funcname>(X);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>Х – входной массив, содержащий элементы вектора.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>rms</codeph> – функция возвращает среднеквадратичное отклонение случайной величины,
+        распределение которой представлено элементами входного вектора <codeph>X</codeph>:<image
+          placement="break" href="images/rms_1.png" align="center" id="image_ic1_vxh_dy"/>где <image
+          placement="inline" href="images/rms_2.png" id="image_rk4_zxh_dy"/>- среднее
+        арифметическое. Элементы вектора <codeph>X</codeph> должны быть вещественными числами.
+        Входной массив <codeph>X</codeph> может задаваться: <ul id="ul_r2h_2yh_dy">
+          <li>как переменная типа массив, определенная ранее:<p><codeph>y =
+            rms(X);</codeph></p></li>
+          <li>
+            <p>как массив, состоящий из переменных, определенных ранее:</p>
+            <p><codeph>y = rms([x1,x2,x3,x4]);</codeph></p>
+          </li>
+          <li>
+            <p>как постоянный массив:</p>
+            <p><codeph>y = rms([0,0,2,1,0]);</codeph></p>
+          </li>
+        </ul></p></section>
+<section>
+      <title>Результат:</title>
+      <p>y – среднеквадратичное отклонение случайной величины, распределение которой представлено
+        элементами входного вектора X. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>const</kword> X = [2, 2, 1, 3, 4];
+y = <funcname>rms</funcname>(X);</codeblock></section>
+<p>В результате переменной y будет присвоено значение 1.1401754, представляющее собой
+      среднеквадратичное отклонение случайной величины, распределение которой представлено
+      элементами входного вектора <codeph>X</codeph>. </p>  
+  </body>
+</topic>

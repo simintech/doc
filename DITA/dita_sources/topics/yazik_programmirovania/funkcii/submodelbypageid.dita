@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>submodelbypageid </title>
+<shortdesc>Функция получения идентификатора блока субмодели, по идентификатору страницы внутри
+    нее.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>subm_id = <funcname>submodelbypageid</funcname>(page_id);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>page_id – идентификатор страницы внутри субмодели. </p>
+    </section>
+<section><title>Описание:</title>
+<p><funcname>submodelbypageid</funcname> – функция получения идентификатора субмодели, содержащей в
+        себе страницу с идентификатором <codeph>page_id</codeph>.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>subm_id – идентификатор субмодели, содержащей внутри указанную страницу.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>initialization</kword>
+  self_parent_pageid = <funcname>getownercontainer</funcname>(submodel);
+  parent_block_id = <funcname>submodelbypageid</funcname>(self_parent_pageid);
+  seterrorstr("1-level submodel name = "+<funcname>getfullname</funcname>(parent_block_id), 0);
+<kword>end</kword>;</codeblock></section>
+<p>В результате выполнения данного скрипта будет получен идентификатор субмодели, находяйщейся на 2
+      уровня выше текущей страницы. </p>  
+  </body>
+</topic>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>atan2 </title>
+<shortdesc>Функция вычисления арктангенса точки с учетом квадранта.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>P = <funcname>atan2</funcname>(y, x);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>y – координата по оси ординат (действительное число или массив действительных чисел);</p>
+      <p>x – координата по оси абсцисс (действительное число или массив действительных чисел). </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>atan2</codeph> – функция вычисления арктангенса по координатам точки на плоскости четырех
+        квадрантов. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>Функция возвращает значение угла P в диапазоне [-pi; pi] на основании заданных координат y
+        и x.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> x, x1[2], x2[2,2]
+x = <funcname>atan2</funcname>(4,-3);
+x1 = <funcname>atan2</funcname>([4,-4],[-3,3]);
+x2 = <funcname>atan2</funcname>([[4,-4],[3,-3]],
+           [[-3,3],[-4,4]]);</codeblock></section>
+<p>В результате переменным будут присвоены следующие значения: x=2.21; x1=[2.21;-0.927]; x2=[2.21;
+      -0.927; 2.5; -0.644].</p>  
+  </body>
+</topic>
