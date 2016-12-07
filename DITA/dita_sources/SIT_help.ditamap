@@ -46,6 +46,18 @@
             </topicref>
         </topicref>
     </topicref>
+    <topicref href="topics/raschetnoe_yadro/raschetnoe_yadro.dita" navtitle="3 - Расчетное ядро"
+        locktitle="yes">
+        <topicref
+            href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/obschetehnicheskaya_biblioteka.dita"
+            navtitle="3.3 Общетехническая библиотека блоков" locktitle="yes">
+            <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/istochniki.dita"
+                navtitle="3.3.1 Источники" locktitle="yes">
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0208.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0000.dita"/>
+            </topicref>
+        </topicref>
+    </topicref>
     <topicref href="topics/yazik_programmirovania/yazik_programmirovania.dita"
         navtitle="6 - Язык программирования" locktitle="yes">
         <topicref href="topics/yazik_programmirovania/konstanti.dita" navtitle="6.1 Константы"
