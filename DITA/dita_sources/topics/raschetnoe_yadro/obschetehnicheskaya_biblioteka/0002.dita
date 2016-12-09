@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Константа</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/0002.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/0002s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован | Си
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> Блок формирует на выходе заданную пользователем постоянную величину: <image
+        placement="break" href="images/0002_1.png" align="center" id="image_aby_lwz_2y"/>Для работы
+      блока необходимо задать величину константы <i>k</i> (по умолчанию <i>k=</i>1). </p>
+    <section>
+      <title>Входы</title>
+      <p>нет</p>
+    </section>
+    <section>
+      <title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>output</uicontrol> - выход, содержащий значение вектора констант.</li>
+        </ul>
+      </p>
+    </section>
+    <section><title>Свойства:</title><p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Значение</uicontrol> - значение величины <i>k</i> на выходе блока.</li>
+          <li><uicontrol>Тип данных (для генерации кода)</uicontrol> - тип данных выходной
+            переменной, создаваемой при генерации кода для внешней целевой системы. Постоянная
+            величина (константа) при генерации кода может быть действительным числом (тип double)
+            или целым числом (тип integer) или логическим сигналом (тип boolean).</li>
+          <li><uicontrol>Название</uicontrol> - название формируемой постоянной величины, для
+            справки.</li>
+        </ul>
+      </p>Свойство <i>k </i>может быть вектором:
+      <i>k</i>&#xA0;=&#xA0;[<i>k</i><sub>1</sub>,<i>k</i><sub>2</sub>,…,<i>k</i><sub>n</sub>], в этом случае
+      на выходе будет также вектор: <i>y</i>(<i>t</i>)=<i>k</i></section>
+    <section>
+      <title>Параметры</title>
+      <p>нет</p>
+    </section>
+    <section>
+      <note>
+        <ol id="ul_gdn_dyz_2y">
+          <li>По умолчанию блок формирует скалярный выходной сигнал.</li>
+          <li>Именованные свойства могут быть заданы как локальные переменные модели (субмодели) во
+            вкладке <uicontrol>Параметры</uicontrol>, как глобальные сигналы проекта при помощи
+            пункта главного меню <cmdname>Сервис → Сигналы</cmdname>, или как внешние сигналы
+            проекта при помощи подключаемой базы сигналов. </li>
+        </ol>
+      </note>
+    </section>
+  </body>
+</topic>
