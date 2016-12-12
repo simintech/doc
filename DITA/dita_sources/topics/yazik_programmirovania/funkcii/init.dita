@@ -38,7 +38,7 @@ y2[1]=x3;  y2[2]=x6;
       Лоренца и соответствующую классическому сильному странному аттрактору.</p>
 <p>Система уравнений</p>
     
-<p><image placement="break" href="images/init_1.gif" align="center" id="image_bwp_t2h_tx"/>где
+<p><image placement="break" href="images/init_1.png" align="center" id="image_bwp_t2h_tx"/>где
       a=10.0; b=28.0; c=2,666(6);</p>
     
     <p>Начальные условия:  M1(0)=[5 5 5] и M2(0)=[5.1 5 5]</p>   

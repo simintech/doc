@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="topic_v4b_tyc_rf">
-<title>idef</title>
+<title>ifdef</title>
 <shortdesc>Задание условной компиляции.</shortdesc>
 <body>
 <section><title>Синтаксис:</title>
-<codeblock><kword>idef</kword> &lt;Имя условия компиляции>
+<codeblock><kword>ifdef</kword> &lt;Имя условия компиляции>
 ...
 <kword>elseif</kword>
 ...    

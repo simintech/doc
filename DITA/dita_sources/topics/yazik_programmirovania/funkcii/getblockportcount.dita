@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getblockportcount</title>
+<shortdesc>Функция получения количества портов блока.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>pnum = <funcname>getblockportcount</funcname>(obj_id);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>obj_id – идентификатор объекта.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getblockportcount</codeph> – функция позволяет определить количество портов блока,
+        имеющего идентификатор <codeph>obj_id</codeph>. Причем учитываются как входные, как и
+        выходные порты.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>Функция возвращает десятичное число, равное общему количеству портов блока, имеющего
+        идентификатор <codeph>obj_id</codeph>. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>aaa = <funcname>getblockportcount</funcname>(macro2);</codeblock></section>
+<p>В результате выполнения данного скрипта, переменной aaa будет присвоено значение, равное общему
+      числу портов блока с именем <codeph>macro2</codeph>. </p>  
+  </body>
+</topic>

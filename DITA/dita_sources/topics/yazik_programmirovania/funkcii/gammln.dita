@@ -13,7 +13,7 @@
       <title>Описание:</title>
   <p>Полная Гамма функция – функция, расширяющая понятие факториала на поле комплексных чисел.</p>
     </section>
-    <image placement="break" href="images/gamma_1.gif" align="center" id="image_wgt_myh_wx"/>
+    <image placement="break" href="images/gamma_1.png" align="center" id="image_wgt_myh_wx"/>
   <p>Функция <codeph>gammaln</codeph> вычисляет логарифм полной Гамма-функции от аргумента x. При
       этом <codeph>gammaln(x) = ln(gamma(x))</codeph>.</p>
   <section><title>Результат</title>

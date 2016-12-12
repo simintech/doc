@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getobjectparent </title>
+<shortdesc>Функция получения идентификатора родительского объекта для объекта в графическом
+    контейнере по его идентификатору.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>par_id = <funcname>getobjectparent</funcname>(obj_id);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>obj_id – идентификатор объекта. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getobjectparent</codeph> – функция получения идентификатора родительского объекта для
+        объекта в графическом контейнере по его идентификатору <codeph>obj_id</codeph>.
+        Идентификатор объекта может быть получен функцией <codeph>getobj</codeph> и имеет тип
+        указателя на объект.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>par_id – идентификатор родительского объекта. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>obj_id = <funcname>getobj</funcname>(1); <comment>//получаем идентификатор объекта</comment>
+par_id = <funcname>getobjectparent</funcname>(obj_id);
+name = <funcname>getobjname</funcname>(par_id);
+<comment>//Выводим сообщение</comment>
+<funcname>seterrorstr</funcname>(name);</codeblock></section>
+<p>В результате выполнения данного скрипта выводится имя родительского объекта для первого блока
+      схемы.</p>  
+  </body>
+</topic>

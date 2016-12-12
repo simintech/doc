@@ -13,10 +13,10 @@
       <p>x – аргумент функции.</p>
     </section>
     <section><title>Описание:</title>Линейное обыкновенное дифференциальное уравнение второго
-      порядка вида: <image placement="break" href="images/bessili_1.gif" id="image_itx_fgh_wx"
+      порядка вида: <image placement="break" href="images/besseli_1.png" id="image_itx_fgh_wx"
         align="center"/>называется уравнением Бесселя. Число <i>v</i> называется порядком уравнения
       Бесселя. Решение данного уравнения выражается через функции бесселя первого и второго
-        рода:<image placement="break" href="images/besselj_1.gif" align="center"
+        рода:<image placement="break" href="images/besselj_1.png" align="center"
         id="image_jcf_kkh_wx"/><p>где С<sub>1</sub> и С<sub>2</sub> - произвольные постоянные,
             J<sub><i>v</i></sub>(x) и Y<sub><i>v</i></sub>(x) обозначают функции Бесселя,
         соответственно, первого и второго рода.</p><p>Функция <codeph>besselj0</codeph> вычисляет

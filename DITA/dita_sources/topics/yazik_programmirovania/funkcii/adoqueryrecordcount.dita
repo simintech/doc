@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>adoqueryrecordcount </title>
+<shortdesc>Функция позволяет получить количество данных на выходе запроса.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>recs = <funcname>adoqueryrecordcount</funcname>(&lt;id объекта доступа к БД>);</codeblock>
+    </section>  
+  </body>
+</topic>

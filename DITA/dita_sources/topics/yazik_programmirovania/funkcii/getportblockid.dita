@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getportblockid</title>
+<shortdesc>Функция получения идентификатора блока-владельца для порта.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>b_id = <funcname>getportblockid</funcname>(port_id);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>port_id – ссылка (идентификатор) на порт.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getporblockid</codeph> – функция позволяет определить, какому блоку принадлежит порт с
+        известным идентификатором.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>Функция возвращает число типа integer, являющееся идентификатором блока-владельца для порта
+        с указанным идентификатором. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>p_id = <funcname>getblockportid</funcname>(macro2,2);  <comment>//получение идентификатора порта</comment>
+b_id = <funcname>getportblockid</funcname>(p_id); <comment>//получение идентификатора блока-владельца</comment></codeblock></section>
+<p>В результате выполнения данного скрипта, переменная <codeph>b_id</codeph> получит значение
+      идентификатора, соответствующего блоку <codeph>macro2</codeph>, являющегося владельцем порта с
+      идентификатором <codeph>p_id</codeph>. </p>  
+  </body>
+</topic>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getobj </title>
+<shortdesc>Функция получения идентификатора объекта в графическом контейнере по заданному
+    индексу.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>obj_id = <funcname>getobj</funcname>(indx);
+obj_id = <funcname>getobj</funcname>(contid, indx);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>indx – номер блока, целое число, начиная с единицы, соответствующее положению блока в
+        порядке перерисовки,</p>
+      <p>conid – идентификатор графического контейнера, внутри которого расположен объект с номером
+        indx. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getobj(indx)</codeph> – функция получения идентификатора (ссылки) объекта (блока на схеме
+        или другого графического объекта) по номеру блока. Если объект находится не в текущем
+        графическом контейнере, то следует указать сначала идентификатор графического контейнера,
+        внутри которого расположен объект: <codeph>getobj(contid, indx)</codeph>.
+          <codeph>indx</codeph> начинается с единицы и соответствует номеру, начинаю сверху, имени
+        блока в списке «Порядок перерисовки», который доступен по нажатию одноименной кнопки на
+        панели инструментов «Правка».</p></section>
+<section>
+      <title>Результат:</title>
+      <p>obj_id – идентификатор объекта, имеющий специфический тип указателя на объект.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> i,id;
+<kword>initialization</kword> <comment>//начальная инициализация</comment>
+i = 1;
+<kword>while</kword> i &lt;= <funcname>getobjcount</funcname> <kword>do begin</kword> <comment>//для всех объектов на схеме</comment>
+id = <funcname>getobj</funcname>(i); <comment>//получаем идентификатор объекта</comment>
+<comment>//получаем значение свойства tag объекта</comment>
+<kword>if</kword> <funcname>getprop</funcname>(id, "tag") = 1 <kword>then begin</kword>      
+<comment>//изменим значения свойств</comment>
+<funcname>setprop</funcname>(id,"tbl_name",submodel.tbl_name);
+<funcname>setprop</funcname>(id,"ob_name",submodel.ob_name);
+<kword>end</kword>;
+i = i + 1;  
+<kword>end</kword>;                 
+<kword>end</kword>;</codeblock></section>
+<p>В результате выполнения данного скрипта всем блокам субмодели, свойство <codeph>tag</codeph>
+      которых выставлено пользователем в 1, будут присвоены значения свойств
+        <codeph>tbl_name</codeph> и <codeph>ob_name</codeph>, взятые из аналогичных свойств
+      субмодели (т.е. из блока более высокого уровня, чем уровень вложенности данных блоков).</p>  
+  </body>
+</topic>

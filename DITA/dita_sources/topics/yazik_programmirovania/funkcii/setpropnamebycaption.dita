@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setpropnamebycaption</title>
+<shortdesc>Функция изменения имени свойства объекта на схеме.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setpropnamebycaption</funcname>(obj_id,"ob_name", new_name);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>obj_id – идентификатор объекта,</p>
+      <p>"ob_name" – строка, содержащая имя свойства объекта (обрамляется кавычками),</p>
+      <p>new_name – строка, содержащая новое имя свойства объекта. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setpropnamebycaption</codeph> – функция изменяет имя свойства <codeph>ob_name</codeph>
+        объекта с идентификатором <codeph>id</codeph> на схеме на имя <codeph>new_name</codeph>.
+        Идентификатор объекта может быть получен функцией <codeph>getobj</codeph> и имеет тип
+        указателя на объект. Текущее и новое имя свойства задается строкой (обрамляется кавычками). </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> id;
+<kword>initialization</kword> <comment>//начальная инициализация</comment>
+  id = <funcname>getobj</funcname>(1); <comment>//получаем идентификатор объекта</comment>
+<comment>//изменим имя свойства</comment>
+  <funcname>setpropnamebycaption</funcname>(id, "tbl_name", "new_tbl_name");
+<kword>end</kword>;</codeblock></section>  
+  </body>
+</topic>

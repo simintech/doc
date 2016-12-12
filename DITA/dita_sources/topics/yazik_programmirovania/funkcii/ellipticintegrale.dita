@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>ellipticintegrale</title>
+<shortdesc>Функция вычисления полного эллиптического интеграла второго рода.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>y = <funcname>ellipticintegrale</funcname>(m);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>m – аргумент, модуль эллиптического интеграла.</p>
+    </section>
+<section><title>Описание:</title>
+<p>Функция E полного эллиптического интеграла второго рода является частным случаем неполного
+        эллиптического интеграла второго рода при амплитуде π/2. Таким образом функция зависит
+        только от аргумента m и имеет вид: </p>
+      <image placement="break" href="images/elliptiintegrale_1.png" align="center"
+        id="image_xrt_5mm_cy"/></section>
+    <p>Частными случаями являются значения функции E(0)=π/2, а также E(1)=1.</p>
+<section>
+      <title>Результат:</title>
+      <p>y – значение полного эллиптического интеграла второго рода аргумента m.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> y; 
+y=<funcname>ellipticintegrale</funcname>(0.5);</codeblock></section>
+<p>В результате выполнения скрипта переменная y получит значение полного эллиптического интеграла
+      второго рода от аргумента 0.5.</p>  
+  </body>
+</topic>

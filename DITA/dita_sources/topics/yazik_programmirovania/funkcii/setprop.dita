@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setprop </title>
+<shortdesc>Присваивание значения свойству объекта на схеме.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setprop</funcname>(id,"ob_name",var);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>id – идентификатор объекта,</p>
+      <p>"ob_name" – строка, содержащая имя свойства объекта (обрамляется кавычками),</p>
+      <p>var – значение, присваиваемое свойству объекта. Имеет тип свойства объекта.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setprop</codeph> - присваивание значения свойству объекта на схеме. Идентификатор объекта
+        может быть получен функцией <codeph>getobj</codeph> и имеет тип указателя на объект. Имя
+        свойства задается строкой (обрамляется кавычками). Значение, присваиваемое свойству объекта,
+        должно иметь тип свойства объекта.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>Возвращаемого значения нет. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> i,id;
+<kword>initialization</kword> <comment>//начальная инициализация</comment>
+i = 1; <kword>while</kword> I &lt;= <kword>getobjcount do begin</kword> <comment>//для всех объектов на схеме</comment>
+id = <funcname>getobj</funcname>(i); <comment>//получаем идентификатор объекта</comment>
+<comment>//получаем значение свойства tag объекта </comment>
+<kword>if</kword> <funcname>getprop</funcname>(id,"tag") = 1 <kword>then begin</kword>      
+<comment>//изменим значения свойств</comment>
+<funcname>setprop</funcname>(id,"tbl_name",submodel.tbl_name);
+<funcname>setprop</funcname>(id,"ob_name",submodel.ob_name);
+<kword>end</kword>;
+i = i + 1;  
+<kword>end</kword>;                 
+<kword>end</kword>;</codeblock></section>
+<p>В результате выполнения данного скрипта всем блокам субмодели, свойство <codeph>tag</codeph>
+      которых выставлено пользователем в 1, будут присвоены значения свойств
+        <codeph>tbl_name</codeph> и <codeph>ob_name</codeph>, взятые из аналогичных свойств
+      субмодели (т.е. из блока более высокого уровня, чем уровень вложенности данных блоков). </p>  
+  </body>
+</topic>

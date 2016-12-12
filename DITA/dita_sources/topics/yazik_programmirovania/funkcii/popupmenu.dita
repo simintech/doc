@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>popupmenu </title>
+<shortdesc>Функция создания и вывода на экран всплывающего меню.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>popupmenu</funcname>(left_point, menu_str);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>left_point – левая верхняя точка положения меню, тип point,</p>
+      <p>menu_str – строка с текстом, определяющим конфигурацию меню. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>popupmenu</codeph> – функция создаёт и выводит на экран всплывающее меню с положением
+        левой верхней точки <codeph>left_point</codeph> и текстом <codeph>menu_str</codeph>,
+        определяющим конфигурацию меню. Функция возвращает управление сразу и не производит
+        ожидания, пока меню не будет выбрано. Формат текста конфигурации меню следующий:
+        &lt;уровень>;&lt;имя>;&lt;действие> Каждый пункт меню должен быть на новой строке. Уровни
+        должны начинаться с 1. Если пункт меню имеет уровень больше предыдущего, то он будет
+        находиться в подменю. Действие – это текст на встроенном языке программирования. В нём
+        допустимо использовать все его функции. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> str:<rword>string</rword> = "1;Главная;gotopage("")" + <funcname>chr</funcname>(10) + "1;Страницы" + <funcname>chr</funcname>(10) +  "2;Страница 1; gotopage("p1") " +  <funcname>chr</funcname>(10) + "2;Страница 2; gotopage("p2") ";
+<kword>var</kword> left:<rword>point</rword> = (100,0);
+<funcname>popupmenu</funcname>(point, str);</codeblock></section>
+<p>В примере создается всплывающее меню с конфигурацией:</p>
+    <p>1;Главная;gotopage(“”) </p>
+    <p>1;Страницы </p>
+    <p>2;Страница 1; gotopage(“p1”)</p>
+    <p>2;Страница 2; gotopage(“p2”)</p>
+    <p>Меню представляет собой два основных пункта <uicontrol>Главная</uicontrol> и
+        <uicontrol>Страницы</uicontrol>, пункт <uicontrol>Страницы</uicontrol> имеет подменю с двумя
+      пунктами <uicontrol>Страница 1</uicontrol> и <uicontrol>Страница 2</uicontrol>. </p>  
+  </body>
+</topic>

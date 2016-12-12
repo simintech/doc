@@ -18,7 +18,7 @@ y = <funcname>interpol</funcname>(x, M);</codeblock></section>
       <p><codeph>interpol(x, M)</codeph> – функция кубической cплайн-интерполяции аргумента x по
         вычисленной ранее при помощи функции <codeph>cspline</codeph> матрице коэффициентов M.
         Вычисление производится согласно формуле:</p>
-      <image placement="break" href="images/interpol_1.gif" align="center" id="image_vb1_4ch_wx"/>
+      <image placement="break" href="images/interpol_1.png" align="center" id="image_vb1_4ch_wx"/>
       <p><codeph>interpol(X,Y, х)</codeph> – функция двумерной линейной интерполяции аргумента x по
         заданным координатам точек.</p>
       <p><codeph>interpol(X,Y,Z, х, y)</codeph> – функция трехмерной линейной интерполяции

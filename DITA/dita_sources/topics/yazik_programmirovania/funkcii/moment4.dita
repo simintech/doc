@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>moment4 </title>
+<shortdesc>Функция вычисления четвертого центрального момента.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>y = <funcname>moment4</funcname>(X);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>Х – входной массив, содержащий элементы вектора.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>moment4</codeph> – функция возвращает значение четвертого центрального момента случайной
+        величины, распределение которой представлено элементами входного вектора <codeph>X</codeph>.
+        Четвертый центральный момент контролирует, насколько ярко выражена вершина распределения в
+        окрестности среднего. Элементы вектора <codeph>X</codeph> должны быть вещественными числами.
+        Входной массив <codeph>X</codeph> может задаваться:<ul id="ul_vlk_kwh_dy">
+          <li>как переменная типа массив, определенная ранее:<p><codeph>y =
+            moment4(X);</codeph></p></li>
+          <li>
+            <p>как массив, состоящий из переменных, определенных ранее:</p>
+            <p><codeph>y = moment4([x1,x2,x3,x4]);</codeph></p>
+          </li>
+          <li>
+            <p>как постоянный массив:</p>
+            <p><codeph>y = moment4([0,0,2,1,0]);</codeph></p>
+          </li>
+        </ul></p></section>
+<section>
+      <title>Результат:</title>
+      <p>y – значение четвертого центрального момента.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>const</kword> X = [2, 2, 1, 3, 4];
+y = <funcname>moment4</funcname>(X);</codeblock></section>
+<p>В результате переменной y будет присвоено значение 0.74059032, представляющее собой значение
+      четвертого центрального момента случайной величины, распределение которой представлено
+      элементами входного вектора <codeph>X</codeph>.</p>  
+  </body>
+</topic>

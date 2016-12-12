@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>dbgaddwritevar </title>
+<shortdesc>Функция предоставляет возможность добавить переменную в канал обмена для записи, =0 -
+    ошибка.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>dbgaddwritevar</funcname>(&lt;obj_context>,DATA,"имя переменной в исполнительной системе",&lt;флаг однократной записи = 0>);</codeblock>
+    </section>  
+  </body>
+</topic>

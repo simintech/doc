@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setportlinetype </title>
+<shortdesc>Функция установки типа линии связи порта.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setportlinetype</funcname>(port_id, type_num);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>port_id – идентификатор порта. Может быть получен функцией
+        <codeph>getblockportid</codeph>;</p>
+      <p>type_num – номер типа линии связи: 0 – математическая, 1 – гидравлическая, 2 – тепловая, 3
+        – электрическая, 4 – механическая, 5 – связь состояния, 6 – межканальный обмен, 7 – тепловое
+        излучение, 8 – связь бака с трубным пучком. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setportlinetype</codeph> – функция позволяет устанавливать для порта с идентификатором
+          <codeph>port_id</codeph> тип линии связи в соответствии с номером
+          <codeph>type_num</codeph>.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>Функция возвращает логическую 1, если установка типа линии связи прошла успешно и 0, если
+        установить тип линии связи не удалось.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> obj_id:<rword>integer</rword>, port_id:<rword>integer</rword>, coord:<rword>point</rword>;
+obj_id = <funcname>findobjectbyname</funcname>("ModelTime_source"); <comment>//получаем id блока</comment>
+port_id = <funcname>getblockportid</funcname>(obj_id, 0); <comment>//получаем id нулевого порта блока</comment>
+bbb = <funcname>setportlinetype</funcname>(port_id, 0);</codeblock></section>
+<p>В результате выполнения данного скрипта тип линии для нулевого порта блока с именем
+        <codeph>ModelTime_source</codeph> будет установлен, как «Математическая связь» </p>  
+  </body>
+</topic>

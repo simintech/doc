@@ -14,7 +14,7 @@
     </section>
 <section><title>Описание:</title>
 <p><codeph>sh(x)</codeph> – функция вычисления гиперболического синуса вещественного или комплексного числа.</p>
-      <image placement="break" href="images/sh_1.gif" align="center" id="image_j3y_lsx_5x"/>
+      <image placement="break" href="images/sh_1.png" align="center" id="image_j3y_lsx_5x"/>
 
 
 <p>Входное значение может быть как вещественным, так и комплексным числом.

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getobjtypeid </title>
+<shortdesc>Функция получения внутреннего числового идентификатора типа графического
+    примитива.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>type_id = <funcname>getobjtypeid</funcname>(obj_id);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>obj_id – идентификатор объекта.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getobjtypeid</codeph> – функция позволяет получить внутренний числовой идентификатор типа
+        графического примитива по идентификатору объекта <codeph>obj_id</codeph>.  </p></section>
+    
+<section>
+      <title>Результат:</title>
+      <p>type_id – числового идентификатора типа графического примитива. Соответствие типа объекта и
+        числового идентификатора:</p>
+    </section>
+  <simpletable frame="all" relcolwidth="1.0* 1.0*" id="simpletable_fzy_cv5_cy">
+    <strow>
+      <stentry>0 - Линия</stentry>
+      <stentry>28 - Труба</stentry>
+    </strow>
+    <strow>
+      <stentry>1 - Полилиния</stentry>
+      <stentry>29 - Повернутый текст</stentry>
+    </strow>
+    <strow>
+      <stentry>2 - Полигон</stentry>
+      <stentry>30 - Картинка из файла</stentry>
+    </strow>
+    <strow>
+      <stentry>3 - Растровое изображение</stentry>
+      <stentry>31 - Горячая клавиша</stentry>
+    </strow>
+    <strow>
+      <stentry>4 - Группа</stentry>
+      <stentry>32 - Список групп</stentry>
+    </strow>
+    <strow>
+      <stentry>5 - Прямоугольник</stentry>
+      <stentry>33 - График</stentry>
+    </strow>
+    <strow>
+      <stentry>6 - Залитый прямоугольник</stentry>
+      <stentry>34 - Сектор</stentry>
+    </strow>
+    <strow>
+      <stentry>7 - Окружность</stentry>
+      <stentry>35 - Сегмент</stentry>
+    </strow>
+    <strow>
+      <stentry>8 - Круг</stentry>
+      <stentry>36 - Чекбокс</stentry>
+    </strow>
+    <strow>
+      <stentry>9 - Кнопка</stentry>
+      <stentry>37 - Маскировочный прямоугольник</stentry>
+    </strow>
+    <strow>
+      <stentry>10 - Редактор</stentry>
+      <stentry>38 - Gif-анимация</stentry>
+    </strow>
+    <strow>
+      <stentry>11 - Сенсор</stentry>
+      <stentry>39 - Поликруг</stentry>
+    </strow>
+    <strow>
+      <stentry>12 - Эллипс</stentry>
+      <stentry>40 - Полидуга</stentry>
+    </strow>
+    <strow>
+      <stentry>13 - Залитый эллипс</stentry>
+      <stentry>100 - Простой блок</stentry>
+    </strow>
+    <strow>
+      <stentry>14 - Линейная шкала</stentry>
+      <stentry>101 - Линия связи</stentry>
+    </strow>
+    <strow>
+      <stentry>15 - Часовая шкала</stentry>
+      <stentry>102 - Макроблок</stentry>
+    </strow>
+    <strow>
+      <stentry>16 - Стрелочный прибор</stentry>
+      <stentry>103 - Блок-идентификатор порта</stentry>
+    </strow>
+    <strow>
+      <stentry>17 - Линейный прибор</stentry>
+      <stentry>104 - Блок "В память"</stentry>
+    </strow>
+    <strow>
+      <stentry>18 - Комбинированный редактор</stentry>
+      <stentry>105 - Блок "Из памяти"</stentry>
+    </strow>
+    <strow>
+      <stentry>19 - Радиогруппа</stentry>
+      <stentry>106 - Блок-точка ввода-вывода</stentry>
+    </strow>
+    <strow>
+      <stentry>20 - Текст</stentry>
+      <stentry>107 - Блок-полилиния</stentry>
+    </strow>
+    <strow>
+      <stentry>21 - Набор изображений</stentry>
+      <stentry>108 - Элемент-подпись</stentry>
+    </strow>
+    <strow>
+      <stentry>22 - Изображение с поворотом</stentry>
+      <stentry>109 - Блок со встроенным интерпретатором</stentry>
+    </strow>
+    <strow>
+      <stentry>23 - Звук</stentry>
+      <stentry>110 - Блок-точка контроля/записи данных</stentry>
+    </strow>
+    <strow>
+      <stentry>24 - Дуга</stentry>
+      <stentry>111 - Блок двунаправленный соединитель</stentry>
+    </strow>
+    <strow>
+      <stentry>25 - OLE-объект</stentry>
+      <stentry>112 - Блок-чтение/запись списка сигналов</stentry>
+    </strow>
+    <strow>
+      <stentry>26 - Документ Word </stentry>
+      <stentry>113 - Блок-узел (с автоматической установкой числа портов)</stentry>
+    </strow>
+    <strow>
+      <stentry>27 - Точка</stentry>
+      <stentry>114 - Блок с поддержкой списка контейнеров</stentry>
+    </strow>
+  </simpletable>  
+<section><title>Пример:</title>
+<codeblock>tp = <funcname>getobjtypeid</funcname>(uzel_1); <comment>//получаем идентификатор типа объекта с именем uzel_1</comment></codeblock></section>  
+  </body>
+</topic>

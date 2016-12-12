@@ -14,7 +14,7 @@
     </section>
 <section><title>Описание:</title>
   <p>Полная Гамма функция – функция, расширяющая понятие факториала на поле комплексных чисел.</p></section>
-    <image placement="break" href="images/gamma_1.gif" align="center" id="image_wgt_myh_wx"/>
+    <image placement="break" href="images/gamma_1.png" align="center" id="image_wgt_myh_wx"/>
     <fig id="fig_svf_wyh_wx">
       <title>График функции</title>
       <image placement="break" href="images/gamma_2.gif" align="center" id="image_tvf_wyh_wx"/>

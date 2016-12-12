@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setportname </title>
+<shortdesc>Функция установки имени порта.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setportname</funcname>(port_id, name);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>port_id – идентификатор порта;</p>
+      <p>name – переменная типа string, новое имя порта. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setportname</codeph> – функция позволяет установить строку name в качестве имени для
+        порта с идентификатором <codeph>port_id</codeph>. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>Функция возвращает логическую 1, если установка имени порта прошла успешно и 0, если
+        установить имя порта не удалось.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>portid  = <funcname>getblockportid</funcname>(And1, 1);
+<funcname>setportname</funcname>(portid, “Out_port”);</codeblock></section>
+<p>В результате выполнения данного скрипта, входному порту с порядковым номером 1 в блоке
+      логического И с именем <codeph>And1</codeph> будет присвоено имся «Out_port». </p>  
+  </body>
+</topic>

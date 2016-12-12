@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>incompleteellipticintegralk</title>
+<shortdesc>Функция вычисления неполного эллиптического интеграла первого рода.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>y = <funcname>incompleteellipticintegralk</funcname>(phi, m);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>phi – аргумент, амплитуда;</p>
+      <p>m – аргумент, модуль эллиптического интеграла.</p>
+    </section>
+<section><title>Описание:</title><p>Функция <i>F</i> неполного (нормального) эллиптического
+        интеграла первого рода от аргументов <i>φ</i> и <i>m</i> имеет вид: </p><image
+        placement="break" href="images/incompleteellipticintegralk_1.png" align="center"
+        id="image_zqy_lqm_cy"/>Важным частным случаем неполного эллиптического интеграла первого
+      рода является полный эллиптический интеграл первого рода, который вычисляется функцией
+        <codeph>ellipticintegralk</codeph> в котором амплитуда φ=π/2.</section>
+<section>
+      <title>Результат:</title>
+      <p>y – значение неполного эллиптического интеграла первого рода аргументов phi и m.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> y;                       
+y=<funcname>incompleteellipticintegralk</funcname>(Pi/2,0.5);</codeblock></section>
+<p>В результате выполнения скрипта переменная y получит значение неполного эллиптического интеграла
+      первого рода от аргументов π/2 и 0.5.</p>  
+  </body>
+</topic>

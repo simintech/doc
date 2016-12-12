@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setportside </title>
+<shortdesc>Функция устанавливает сторону порта по его идентификатору.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setportside</funcname>(port_id, num);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>port_id – идентификатор порта;</p>
+      <p>num – номер стороны порта, от 0 до 3, где 0 – слева, 1 – сверху, 2 – справа, 3 – снизу. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setportside</codeph> – функция позволяет назначить порту с идентификатором
+          <codeph>port_id</codeph> сторону <codeph>num</codeph>, на которой он будет отображаться. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>Функция возвращает логическую 1, если установка стороны порта прошла успешно и 0, если
+        установить сторону порта не удалось. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>portid  = <funcname>getblockportid</funcname>(SteadyNoise_source6, 0);
+<funcname>setportside</funcname>(portid,3);</codeblock></section>
+<p>В результате выполнения данного скрипта, порт с порядковым номером 0 в блоке с именем
+        <codeph>SteadyNoise_source6</codeph> будет установлен в положение «Снизу». </p>  
+  </body>
+</topic>

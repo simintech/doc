@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>messagebox </title>
+<shortdesc>Функция вывода системного окна сообщений.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>messagebox</funcname>(str, caps, type);
+<funcname>messagebox</funcname>(str, caps, type, par_id);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>str – текст в окне сообщений,</p>
+      <p>caps – заголовок окна сообщений,</p>
+      <p>type – тип окна сообщений,</p>
+      <p>par_id – идентификатор родительского окна. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>messagebox</codeph><codeph>(str, caps, type)</codeph> – функция выводит системное окно
+        сообщения типа <codeph>type</codeph> с заголовком <codeph>caps</codeph>, текстом
+          <codeph>str</codeph>.</p>
+      <p><codeph>messagebox(str, caps, type, par_id)</codeph> – функция выводит системное окно
+        сообщения типа <codeph>type</codeph> с заголовком <codeph>caps</codeph>, текстом
+          <codeph>str</codeph>. <codeph>par_id</codeph> – идентификатор родительского окна
+        сообщения. Тип окна сообщения определяет, какие кнопки отображаются в окне сообщений: </p>
+      <p>0 - Одна кнопка ОК;</p>
+      <p>1 - ОК, Отмена;</p>
+      <p>2 - Прервать, Повтор, Пропустить;</p>
+      <p>3 - Да, Нет, Отмена;</p>
+      <p>4 - Да, Нет;</p>
+      <p>5 - Повторить, Отмена.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример 1:</title>
+<codeblock><funcname>messagebox</funcname>("Ошибка при задании параметра !", "Ошибка", 0);</codeblock></section>
+    <section>
+      <title>Пример 2:</title>
+      <codeblock><funcname>messagebox</funcname>("Ошибка при задании параметра !", "Ошибка", 0, <funcname>gethwnd</funcname>);</codeblock>
+    </section>  
+  </body>
+</topic>

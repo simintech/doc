@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>removeobject </title>
+<shortdesc>Функция удаления объекта с определенным именем.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>removeobject</funcname>(obj_name);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>obj_name – имя объекта. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>removeobject</codeph> – функция удаляет объект с именем <codeph>obj_name</codeph> со
+        схемы. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><funcname>removeobject</funcname>(PolyLine1);</codeblock></section>  
+  </body>
+</topic>

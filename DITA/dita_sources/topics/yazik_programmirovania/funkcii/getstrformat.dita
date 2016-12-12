@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getstrformat </title>
+<shortdesc>Функция получения строки, интерпретированной по форматированной строке.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>str = <funcname>getstrformat</funcname>(format_str);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>format_str – строка, содержащая текст в установленном формате. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getstrformat</codeph> – функция получения интерпретированного текста по строке,
+        содержащей текст в установленном формате, аналогично форматированию, используемому в
+        свойствах блоков. Возвращаемое значение типа строка.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>str – строка, содержащая интерпретированный текст. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>A = 10;
+SS = <funcname>getstrformat</funcname>({a}_091); <comment>//SS=10_091</comment></codeblock></section>
+<p>В результате выполнения данного скрипта переменная <codeph>SS</codeph> будет содержать строку
+      «10_091». </p>  
+  </body>
+</topic>

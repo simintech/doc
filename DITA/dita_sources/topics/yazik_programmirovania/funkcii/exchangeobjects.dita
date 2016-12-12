@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>exchangeobjects</title>
+<shortdesc>Функция которая меняет местами два объекта графического контейнера в списке перерисовки
+    объектов по заданному индексу.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>exchangeobjects</funcname>(indx1, indx2);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>indx1 – индекс объекта 1, целое число, начиная с единицы;</p>
+      <p>indx2 – индекс объекта 2, также целое число, начиная с единицы. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>exchangeobjects</codeph> – функция, которая в списке перерисовки объектов ставит объект с
+        индексом <codeph>indx1</codeph> на место объекта с индексом <codeph>indx2</codeph> и
+        наоборот. Индекс начинается с единицы и список объектов перерисовки заканчивается объектом с
+        индексом, равным количеству объектов M, которое можно узнать вызвав функцию
+          <codeph>getobjcount</codeph>. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>Возвращаемого результата нет, объекты меняются местами. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><comment>// сортировка</comment>
+i = 1;
+j = 0;
+<kword>while</kword> (i &lt;= m) <kword>do begin</kword>
+id1 = <funcname>getobj</funcname>(i);
+<comment>//проходим ТОЛЬКО по блокам, у которых tag = 5</comment>
+<kword>if</kword> (<funcname>getprop</funcname>(id1,"tag") = 5) <kword>then begin</kword>    
+<kword>if</kword> ((j > 0) <kword>and</kword> (j&lt;>i)) <kword>then begin</kword>
+myt1 = <funcname>getprop</funcname>(id1,"time1");
+myt2 = <funcname>getprop</funcname>(id2,"time1");
+<kword>if</kword> (myt1 &lt; myt2) <kword>then begin</kword>
+<funcname>exchangeobjects</funcname>(i,j); <comment>//меняем местами</comment>
+id1 = id2; <comment>// это надо чтобы далее всё было гладко</comment>
+<kword>end</kword>;
+<kword>end</kword>;
+j = i; <comment>//запоминаем текущий блок, его номер будет нужен на следующем витке while</comment>
+id2 = id1; <comment>//тут будет id2 = id2 если поменяли местами блоки чуть выше</comment>
+<kword>end</kword>;
+i = i + 1;  
+<kword>end</kword>;</codeblock></section>
+<p>В результате выполнения данного скрипта всем блокам субмодели, свойство <codeph>tag</codeph>
+      которых выставлено пользователем в 1, будут присвоены значения свойств
+        <codeph>tbl_name</codeph> и <codeph>ob_name</codeph>, взятые из аналогичных свойств
+      субмодели (т.е. из блока более высокого уровня, чем уровень вложенности данных блоков). </p>  
+  </body>
+</topic>

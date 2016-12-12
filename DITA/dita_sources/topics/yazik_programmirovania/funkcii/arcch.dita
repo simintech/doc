@@ -16,7 +16,7 @@
       <title>Описание:</title>
       <p><codeph>arcch(x)</codeph> – функция вычисления гиперболического арккосинуса (ареакосинуса)
         вещественного или комплексного числа:</p>
-      <image placement="break" href="images/arcch_1.gif" align="center" id="image_xd4_gmx_5x"/>
+      <image placement="break" href="images/arcch_1.png" align="center" id="image_xd4_gmx_5x"/>
       <p>Входное значение может быть как вещественным, так и комплексным числом. 
         Входное значение может задаваться как заранее определенная переменная или как постоянное
         число.

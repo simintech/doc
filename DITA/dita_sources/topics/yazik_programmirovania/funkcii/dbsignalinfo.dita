@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>dbsignalinfo </title>
+<shortdesc>Функция получения информации о сигнале по его имени.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>dbaddsignal</funcname>(name, desc, group, cat, val, frm);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>name – входной аргумент типа string, полное имя сигнала ({имя группы}_{имя сигнала}),
+        информацию о котором нужно получить;</p>
+      <p>desc – выходной аргумент типа string, название переменной с именем name;</p>
+      <p>group – выходной аргумент типа string, название группы сигналов, в которой расположен
+        сигнал с именем name;</p>
+      <p>cat – выходной аргумент типа string, название категории в базе сигналов, в которой
+        расположен сигнал с именем name;</p>
+      <p>val – выходной аргумент, значение сигнала name;</p>
+      <p>frm – выходной аргумент, формула, используемая для расчета значения сигнала name; </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>dbsignalinfo</codeph> – функция позволяет получить полную информации о сигнале по его
+        имени.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>Функция возвращает число типа boolean: 1 – сигнал найден, 0 – сигнал не был найден.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> nazv:<rword>string</rword>, group:<rword>string</rword>, category:<rword>string</rword>, znach:<rword>string</rword>, formula:<rword>string</rword>; 
+ddd=<funcname>dbsignalinfo</funcname>("1_property",  nazv, group, category, znach, formula);</codeblock></section>
+<p>В результате выполнения данного скрипта в проекте с подключенной базой сигналов, переменные
+        <codeph>nazv</codeph>, <codeph>group</codeph>, <codeph>category</codeph>,
+        <codeph>znach</codeph>, <codeph>formula</codeph> получат значения соответствующих полей
+      сигнала "1_property". </p>  
+  </body>
+</topic>

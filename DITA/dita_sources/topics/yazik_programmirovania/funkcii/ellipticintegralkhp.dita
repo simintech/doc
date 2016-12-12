@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>ellipticintegralkhp</title>
+<shortdesc>Функция вычисления полного эллиптического интеграла первого рода в окрестностях
+    сингулярности.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>y = <funcname>ellipticintegralkhp</funcname>(m);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>m – аргумент, модуль эллиптического интеграла.</p>
+    </section>
+<section><title>Описание:</title>
+<p>Функция <codeph>ellipticintegralkhp</codeph> предназначена для расчета полного эллиптического
+        интеграла первого рода с повышенной точностью в окрестностях точки, в которой значение
+        функции стремится в бесконечность. Отличие от функции <codeph>ellipticintegralk</codeph>
+        состоит в расчете K(1-m) вместо K(m): </p>
+      <image placement="break" href="images/ellipticintegralkhp_1.png" align="center"
+        id="image_wtw_r4m_cy"/>
+      <p>Это позволяет переместить сингулярность из точки m=1 в точку m=0 и исследовать поведение
+        функции с большей точностью.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>y – значение полного эллиптического интеграла первого рода аргумента (1-m).</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> y; 
+y=<funcname>ellipticintegralkhp</funcname>(1e-200);</codeblock></section>
+<p>В результате выполнения скрипта переменная y получит значение полного эллиптического интеграла
+      первого рода от аргумента (1-1e-200).</p>  
+  </body>
+</topic>
