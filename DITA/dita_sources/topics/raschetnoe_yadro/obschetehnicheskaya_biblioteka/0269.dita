@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Интеграл от табличной функции</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/0269.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/0269s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок векторизован, реализует вычисление интегралов от таблично заданных функций методом
+        трапеций:<image placement="break" href="images/0269_1.png" align="center"
+        id="image_k4f_shr_gy"/> где <i>x</i> – числовой вектор независимой переменной;
+        <i>x</i><sub>min</sub>, <i>x</i><sub>max</sub> – минимальное и максимальное значения
+      независимой переменной, соответственно; <i>u</i>(<i>x</i>) – числовой вектор значений
+      функции.</p>
+    <section><title>Входы</title>
+    <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>input_0</uicontrol> - вход для массива аргументов таблично заданных
+            функций, размерностью <i>n</i><sub>point</sub>;</li>
+          <li><uicontrol>input_1</uicontrol> - вход для таблично заданных функций, размерностью
+              <i>n</i><sub>point</sub>×<i>n</i><sub>fun</sub>.</li>
+        </ul>
+      </p></section>
+    <section><title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>output</uicontrol> - значение интеграла. Размерность сигнала равна
+              <i>n</i><sub>fun</sub>.</li>
+        </ul>
+      </p></section>
+    <section><title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Число точек функции</uicontrol> – натуральное число
+              <i>n</i><sub>point</sub>≥2, задает число точек в таблице по независимому аргументу и
+            размерность первого входного сигнала.</li>
+          <li><uicontrol>Число функций</uicontrol> – натуральное число <i>n</i><sub>fun</sub>≥1,
+            задает число функций и, совместно с числом точек, определяет размерность второго
+            входного сигнала. Таким образом, можно одновременно вычислять интеграл от нескольких
+            функций, заданных в одних и тех же точках по независимому аргументу Размерность
+            выходного сигнала равна <i>n</i><sub>fun</sub>. </li>
+        </ul>
+      </p></section>
+    <section><title>Параметры</title>
+      <p>нет</p></section>
+    <note>
+      <ol id="ol_qhr_xjr_gy">
+        <li>Размерность выходного сигнала всегда равна числу функций. Блок формирует скалярный
+          выходной сигнал при <i>n</i><sub>fun</sub>=1.</li>
+        <li>Именованные свойства могут быть заданы как локальные переменные модели (субмодели) в
+          скрипте на языке программирования, как глобальные сигналы проекта при помощи пункта
+          главного меню <cmdname>Сервис → Сигналы</cmdname>, или как внешние сигналы проекта при
+          помощи подключаемой базы сигналов. </li>
+      </ol>
+    </note>
+    
+  </body>
+</topic>

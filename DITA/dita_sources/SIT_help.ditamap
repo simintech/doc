@@ -61,6 +61,48 @@
                 <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0004.dita"/>
                 <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0005.dita"/>
                 <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0006.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0007.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0008.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0009.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0010.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0011.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0012.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0013.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0113.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0014.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0015.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0039.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0036.dita"/>
+            </topicref>
+            <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/operatory.dita"
+                locktitle="yes" navtitle="3.3.2 Операторы">
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0024.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0038.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3003.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0101.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0025.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0102.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3004.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0026.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3005.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0040.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3006.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0075.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0105.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0076.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0265.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0266.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0269.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0121.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/1029.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/1028.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0106.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3007.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3008.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0174.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0175.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3051.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3078.dita"/>
             </topicref>
         </topicref>
     </topicref>
