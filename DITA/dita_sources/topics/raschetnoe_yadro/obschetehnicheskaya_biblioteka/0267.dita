@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Интерполяция</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/0267.png" id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/0267s.png" id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок предназначен для интерполяции таблично заданных функций. Блок имеет три векторных входа
+      и один векторный выход. Реализованы методы интерполяции полиномами Лагранжа и кубическими
+      сплайнами. Порядок интерполяции (Order) и индекс начала интерполяции (<i>Ind</i>) имеют
+      значение только для интерполяции полиномами Лагранжа. Значения <i>Order</i> и <i>Ind</i>
+      определяют области интерполяции и экстраполяции. Внутри интервала [<i>x</i>(<i>Ind</i>),
+        <i>x</i>(<i>Ind</i>+<i>Order</i>)] функция интерполируется, вне этого интервала –
+      экстраполируется. При интерполяции сплайнами на границах интервала задано условие равенства 0
+      вторых производных. </p>
+    <section><title>Входы</title>
+    <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>args_table</uicontrol> - порт для массива значений аргументов таблично
+            заданных функций размерностью <i>N</i><sub><i>pnt</i></sub>.</li>
+          <li><uicontrol>func_table</uicontrol> - порт для массива значений таблично заданных
+            функций размерностью <i>N<sub>pnt</sub></i>&#215;<i>N<sub>fun</sub>
+            </i>(таким образом, может одновременно проводится интерполяция нескольких функций,
+            заданных в одних и тех же точках по независимому аргументу).  </li>
+          <li><uicontrol>args</uicontrol> - порт для массива точек аргументов размерностью
+                <i>N<sub>arg</sub></i>, в которых необходимо вычислить значение интерполируемых
+            функций.</li>
+        </ul>
+      </p></section>
+    <section><title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>output</uicontrol> - порт для вычисленных после проведения интерполяции
+            значений функций в точках, заданных в третьем входном порте. Размер этого выхода равен
+                <i>N<sub>arg</sub></i>&#215;<i>N<sub>fun</sub></i>.</li>
+        </ul>
+      </p></section>
+    <section><title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Метод интерполяции</uicontrol> – Полином Лагранжа; Кубический сплайн;
+            Линейная.</li>
+          <li><uicontrol>Порядок интерполяции</uicontrol> – <i>Order</i> (для интерполяции
+            полиномами Лагранжа).</li>
+          <li><uicontrol>Число точек функции</uicontrol> – натуральное число
+            <i>N<sub>pnt</sub></i>.</li>
+          <li><uicontrol>Индекс начала интерполяции</uicontrol> – натуральное число <i>Ind</i> (для
+            интерполяции полиномами Лагранжа).</li>
+          <li><uicontrol>Число функций</uicontrol> – натуральное число <i>N<sub>fun</sub></i>.</li>
+        </ul>
+      </p></section>
+    <section><title>Параметры</title>
+      <p>нет</p></section>
+    
+  </body>
+</topic>

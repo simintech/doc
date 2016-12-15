@@ -104,6 +104,19 @@
                 <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3051.dita"/>
                 <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3078.dita"/>
             </topicref>
+            <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/vektornie.dita"
+                navtitle="3.3.3 Векторные" locktitle="yes">
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0019.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0020.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0021.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0022.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0023.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0146.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0147.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0148.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0267.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0268.dita"/>
+            </topicref>
         </topicref>
     </topicref>
     <topicref href="topics/yazik_programmirovania/yazik_programmirovania.dita"
