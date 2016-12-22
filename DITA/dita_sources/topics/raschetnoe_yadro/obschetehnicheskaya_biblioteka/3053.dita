@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>ДИФ-производная</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/3053.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/3053s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован | Си
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Выполняет численное дифференцирование, с использованием блока «Дискретная апериодика 1-го
+      порядка». Блок векторизован, представляет собой субмодель (сборку). Для того чтобы посмотреть
+      структуру алгоритма — нажмите правой кнопкой <cmdname>Действия → Войти в субмодель</cmdname>.
+      Алгоритм работы блока реализует численное дифференцирование входного сигнала (сигналов). </p>
+    <section><title>Входы</title>
+    <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>Признак трансляции</uicontrol> - признак, по наличию которога на выход
+            апериодики 1-го порядка (внутри субмодели) транслируется входное значение. При этом на
+            выходе блока «ДИФ-производная» сигнал = 0;</li>
+          <li><uicontrol>х</uicontrol> - дифференцируемая переменная;</li>
+          <li><uicontrol>Т</uicontrol> — постоянная времени для апериодики 1-го порядка.</li>
+        </ul>
+      </p></section>
+    <section><title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>dx/dt</uicontrol> – производная по времени сигнала x, или 0 если «Признак
+            трансляции» = 1. </li>
+        </ul>
+      </p></section>
+    <section><title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Число переменных</uicontrol> — количество дифференцируемых переменных во
+            входном векторе. </li>
+        </ul>
+      </p></section>
+    <section><title>Параметры</title>
+      <p>нет</p></section>
+    
+  </body>
+</topic>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Переменное транспортное запаздывание</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/0122.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/0122s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок реализует решение уравнения (системы уравнений) транспортного переноса распадающейся
+      скалярной субстанции вида:<image placement="break" href="images/0122_1.png" align="center"
+        id="image_pwx_tcy_3y"/> при допущении о постоянстве скорости переноса скалярной субстанции в
+      пределах участка для каждого момента времени при граничных условиях<image placement="break"
+        href="images/0122_2.png" align="center" id="image_vv1_ycy_3y"/> и начальных условиях<image
+        placement="break" href="images/0122_3.png" align="center" id="image_l35_cdy_3y"/> В
+      уравнении <i>y</i><sub>i</sub>(<i>t</i>) – переносимая скалярная субстанция,
+        <i>u</i><sub>i</sub>(<i>t</i>) – скорость переноса, <i>L</i> – длина участка транспортировки
+      (переноса) скалярной субстанции, <i>x</i> – пространственная координата. После ввода
+      безразмерной пространственной координаты <i>Z</i>=<i>x</i>/<i>L</i> и мгновенного времени
+      переноса скалярной субстанции в пределах участка
+        <i>τ</i><i><sub>i</sub></i>(<i>t</i>)=<i>L</i>/<i>u<sub>i</sub></i>(<i>t</i>) уравнение
+      записывается так:<image placement="break" href="images/0122_4.png" align="center"
+        id="image_dgp_tdy_3y"/> а начальные условия принимают вид: <image placement="break"
+        href="images/0122_5.png" align="center" id="image_o5r_zdy_3y"/>Обязательное условие:
+          <i>τ<sub>i</sub></i>(<i>t</i>)>0</p>
+    <section><title>Входы</title>
+    <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>y(0,t)</uicontrol> - сигнал, соответствующий значению скалярной субстанции
+            на входе в участок транспортировки
+              <i>y<sub>i</sub></i>(0,<i>t</i>)=<i>u<sub>i</sub></i>(<i>t</i>);</li>
+          <li><uicontrol>τ(t)</uicontrol> - сигнал, соответствующий значению мгновенного времени
+            переноса скалярной субстанции в пределах участка транспортировки
+              <i>τ<sub>i</sub></i>(<i>t</i>).</li>
+        </ul>
+      </p></section>
+    <section><title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>y(1,t)</uicontrol> - сигнал, соответствующий значению скалярной субстанции
+            на выходе из участка транспортировки <i>y<sub>i</sub></i>(1,<i>t</i>);</li>
+          <li><uicontrol>T(t)</uicontrol> - сигнал, соответствующий значению времени пребывания
+            «метки» скалярной субстанции в пределах участка транспортировки
+              <i>T<sub>i</sub></i>(<i>t</i>).</li>
+        </ul>
+      </p></section>
+    <section><title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Вектор постоянных распада</uicontrol> – вектор к-тов
+            <i>λ<sub>i</sub></i>.</li>
+          <li><uicontrol>Начальный размер стека</uicontrol> – начальный размер массива для
+            временного хранения данных блока. </li>
+        </ul>
+      </p></section>
+    <section><title>Параметры</title>
+      <p>нет</p></section>
+    <note>по умолчанию блок реализует переменное транспортное запаздывание скалярного входного
+      сигнала.</note>
+    
+  </body>
+</topic>
