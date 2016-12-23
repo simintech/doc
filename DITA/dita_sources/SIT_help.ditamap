@@ -169,6 +169,43 @@
                 <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3053.dita"/>
                 <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3054.dita"/>
             </topicref>
+            <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/nelineinye.dita"
+                navtitle="3.3.6 - Нелинейные" locktitle="yes">
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0069.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0070.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0073.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0071.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0072.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0078.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0079.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0125.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0126.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0081.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0120.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0137.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0123.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0124.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0140.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0127.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0152.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0153.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3009.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0200.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3010.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3011.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3012.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3055.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3056.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0035.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3057.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3058.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3066.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3059.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3060.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3073.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3074.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3075.dita"/>
+            </topicref>
         </topicref>
     </topicref>
     <topicref href="topics/yazik_programmirovania/yazik_programmirovania.dita"
