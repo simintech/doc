@@ -170,7 +170,7 @@
                 <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3054.dita"/>
             </topicref>
             <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/nelineinye.dita"
-                navtitle="3.3.6 - Нелинейные" locktitle="yes">
+                navtitle="3.3.6 Нелинейные" locktitle="yes">
                 <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0069.dita"/>
                 <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0070.dita"/>
                 <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0073.dita"/>
@@ -225,6 +225,12 @@
                 <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3063.dita"/>
                 <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3076.dita"/>
                 <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3077.dita"/>
+            </topicref>
+            <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/slau.dita"
+                navtitle="3.3.8 СЛАУ" locktitle="yes">
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3070.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3071.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3072.dita"/>
             </topicref>
         </topicref>
     </topicref>
