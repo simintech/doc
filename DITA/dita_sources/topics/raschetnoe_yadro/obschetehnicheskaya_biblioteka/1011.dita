@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>График Y от X</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/1011.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/1011s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок реализует вывод на график зависимости вектора Y (второй вход) от вектора X (первый
+      вход). Блок предназначен для отображения текущих результатов моделирования в виде графика
+      Y(t,x), реализующего после каждого шага интегрирования (расчета) построение кривой
+        <i>y</i>(<i>t</i>) = <i>f</i>(<i>x</i>,<i>t</i>), где <i>x</i> – вектор, содержащий
+      независимые от времени постоянные элементы. Может использоваться как при локальном
+      моделировании, так и при удаленной отладке, для отображения значений сигналов, вычисленных на
+      целевой системе. Данный блок может быть использован для отображения результатов расчета в
+      линейно распределенных динамических задачах, где, например, вектор <i>х</i> — вектор
+      относительных пространственных координат в моделируемом объекте, а вектор-функция
+        <u>y</u>(<i>t</i>) описывает нестационарное распределение какой-то физической величины в
+      моделируемом объекте. </p>
+    <section><title>Входы</title>
+    <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>X</uicontrol> - вектор значений по оси абсцисс.</li>
+        </ul>
+      </p></section>
+    <section><title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>Y</uicontrol> - вектор значений по оси ординат</li>
+        </ul>
+      </p></section>
+    <section><title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Количество графиков</uicontrol> - натуральное число N. Если введено,
+            например, число 3, то блок будет иметь 6 входных портов: порты слева для ввода данных,
+            которые соответствуют координатам по оси абсцисс, и порты снизу для ввода значений
+            вектор-функций y(t).</li>
+        </ul>
+      </p></section>
+    <section><title>Параметры</title>
+      <p>
+        <ul id="ul_t3c_l3t_2y">
+          <li><uicontrol>Значения X</uicontrol> - вектор всех значений X;</li>
+          <li><uicontrol>Значения Y</uicontrol> - вектор всех значений Y.</li>
+        </ul>
+      </p>
+      <note>Блок использует графическое окно, аналогичное блоку Временной график. Размерности входов
+        должны совпадать. </note></section>
+    
+  </body>
+</topic>

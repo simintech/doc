@@ -232,6 +232,13 @@
                 <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3071.dita"/>
                 <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3072.dita"/>
             </topicref>
+            <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/dannie.dita"
+                navtitle="3.3.9 Данные" locktitle="yes">
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/1001.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/1010.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/1011.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0017.dita"/>
+            </topicref>
         </topicref>
     </topicref>
     <topicref href="topics/yazik_programmirovania/yazik_programmirovania.dita"
