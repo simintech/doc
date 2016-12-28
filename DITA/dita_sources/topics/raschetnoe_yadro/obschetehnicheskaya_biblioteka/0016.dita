@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="topic_x5n_gv5_qf">
-  <title>Название</title>
+  <title>В файл</title>
   <body>
     <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
       <tgroup cols="3" align="center">
@@ -10,11 +10,11 @@
         <colspec colname="newCol3" colnum="3" colwidth="50*"/>
         <tbody>
           <row>
-            <entry valign="bottom"><image placement="inline" href="images/0208.png"
+            <entry valign="bottom"><image placement="inline" href="images/0016.png"
                 id="image_rxc_2ts_2y"/></entry>
-            <entry valign="bottom"><image placement="inline" href="images/0208s.png"
+            <entry valign="bottom"><image placement="inline" href="images/0016s.png"
                 id="image_hm4_2ts_2y"/></entry>
-            <entry valign="middle" align="left" morerows="1"><codeph>| Скалярный | Си
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован
               |</codeph></entry>
           </row>
           <row>
@@ -24,31 +24,31 @@
         </tbody>
       </tgroup>
     </table>
-    <p> общие слова</p>
+    <p>Блок производит запись данных в текстовый файл. Каждая строка текстового файла выводится
+      (записывается в файл) в формате:
+      <codeblock>&lt;время> &lt;величина 1> … &lt;величина n> </codeblock></p>
     <section><title>Входы</title>
     <p>
         <ul id="ul_z5d_h3t_2y">
-          <li><uicontrol>вход 1</uicontrol> - </li>
+          <li><uicontrol>input1</uicontrol> - вход для текущего значения функции.</li>
         </ul>
       </p></section>
     <section><title>Выходы</title>
-      <p>
-        <ul id="ul_l4p_sht_2y">
-          <li><uicontrol>выход 1</uicontrol> - </li>
-        </ul>
-      </p></section>
+      <p>нет</p></section>
     <section><title>Свойства:</title>
       <p>
         <ul id="ul_gmt_j3t_2y">
-          <li><uicontrol>свойство 1</uicontrol> - </li>
+          <li><uicontrol>Шаг записи значения</uicontrol> - шаг по времени, с которым будут
+            записываться значения функции;</li>
+          <li><uicontrol>Имя файла данных</uicontrol> - им файла, куда будут записываться значения
+            функции;</li>
+          <li><uicontrol>Число входов</uicontrol> - число записываемых функций;</li>
+          <li><uicontrol>Формат записи</uicontrol> - задание точности, с которой будет вестись
+            запись.</li>
         </ul>
       </p></section>
     <section><title>Параметры</title>
-      <p>
-        <ul id="ul_t3c_l3t_2y">
-          <li><uicontrol>параметр 1</uicontrol> - </li>
-        </ul>
-      </p></section>
+      <p>нет</p></section>
     
   </body>
 </topic>

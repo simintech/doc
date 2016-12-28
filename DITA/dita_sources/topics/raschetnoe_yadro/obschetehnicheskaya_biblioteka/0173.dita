@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="topic_x5n_gv5_qf">
-  <title>Название</title>
+  <title>Двумерная таблица из файла</title>
   <body>
     <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
       <tgroup cols="3" align="center">
@@ -10,11 +10,11 @@
         <colspec colname="newCol3" colnum="3" colwidth="50*"/>
         <tbody>
           <row>
-            <entry valign="bottom"><image placement="inline" href="images/0208.png"
+            <entry valign="bottom"><image placement="inline" href="images/0173.png"
                 id="image_rxc_2ts_2y"/></entry>
             <entry valign="bottom"><image placement="inline" href="images/0208s.png"
                 id="image_hm4_2ts_2y"/></entry>
-            <entry valign="middle" align="left" morerows="1"><codeph>| Скалярный | Си
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован
               |</codeph></entry>
           </row>
           <row>
@@ -24,31 +24,52 @@
         </tbody>
       </tgroup>
     </table>
-    <p> общие слова</p>
-    <section><title>Входы</title>
-    <p>
+    <p>Блок производит двумерную интерполяцию входных аргументов по заданной таблице. Первый вход
+      блока – значение аргумента по строкам таблицы. Второй вход блока – значение аргумента по
+      столбцам таблицы. Формат таблицы
+      следующий:<codeblock>&lt;значения аргументов по столбцам>
+&lt;аргумент по строке 1> &lt;значения функции>
+&lt;аргумент по строке 2> &lt;значения функции>
+…
+&lt;аргумент по строке N> &lt;значения функции> </codeblock></p>
+    <section>
+      <title>Входы</title>
+      <p>
         <ul id="ul_z5d_h3t_2y">
-          <li><uicontrol>вход 1</uicontrol> - </li>
+          <li><uicontrol>arg1</uicontrol> - порт для первого входного аргумента;</li>
+          <li><uicontrol>arg2</uicontrol> - порт для второго входного аргумента.</li>
         </ul>
-      </p></section>
-    <section><title>Выходы</title>
+      </p>
+    </section>
+    <section>
+      <title>Выходы</title>
       <p>
         <ul id="ul_l4p_sht_2y">
-          <li><uicontrol>выход 1</uicontrol> - </li>
+          <li><uicontrol>output</uicontrol> - интерполированное значение функции от двух входных
+            аргументов.</li>
         </ul>
-      </p></section>
-    <section><title>Свойства:</title>
+      </p>
+    </section>
+    <section>
+      <title>Свойства:</title>
       <p>
         <ul id="ul_gmt_j3t_2y">
-          <li><uicontrol>свойство 1</uicontrol> - </li>
+          <li>Имя файла с таблицей – относительный путь к файлу таблицы;</li>
+          <li>Способ интерполяции - выбор способа интерполяции таблицы.</li>
         </ul>
-      </p></section>
-    <section><title>Параметры</title>
+      </p>
+    </section>
+    <section>
+      <title>Параметры</title>
+      <p>нет</p>
+    </section>
+    <section>
+      <title>Пример заполнения файла таблицы</title>
       <p>
-        <ul id="ul_t3c_l3t_2y">
-          <li><uicontrol>параметр 1</uicontrol> - </li>
-        </ul>
-      </p></section>
-    
+        <codeblock>1 2 3
+1 0.1 0.2 0.3
+2 0.6 0.8 0.9</codeblock>
+      </p>
+    </section>
   </body>
 </topic>

@@ -27,27 +27,45 @@
     <p>Блок векторизован, возвращает на выходе значения таблично заданных от времени функций,
       вычисленных методом линейной интерполяции. Таблица задаются в виде текстового файла, где
       формат каждой строки должен быть следующим:
-      <codeblock>&lt;время> &lt;значение функции 1> … &lt;значение функции N> </codeblock></p>
-    <section><title>Входы</title>
-    <p>нет</p></section>
-    <section><title>Выходы</title>
+      <codeblock>&lt;время> &lt;значение функции 1> … &lt;значение функции N> </codeblock>Файл
+      считывается один раз при инициализации блока, затем интерполяция производится на основании
+      загруженных данных.</p>
+    <section>
+      <title>Входы</title>
+      <p>нет</p>
+    </section>
+    <section>
+      <title>Выходы</title>
       <p>
         <ul id="ul_l4p_sht_2y">
-          <li><uicontrol>output 1</uicontrol> - </li>
+          <li><uicontrol>output 1</uicontrol> - значение табличной функции в текущий момент
+            модельного времени.</li>
         </ul>
-      </p></section>
-    <section><title>Свойства:</title>
+      </p>
+    </section>
+    <section>
+      <title>Свойства:</title>
       <p>
         <ul id="ul_gmt_j3t_2y">
-          <li><uicontrol>свойство 1</uicontrol> - </li>
+          <li><uicontrol>Число функций в файле</uicontrol> – количество столбцов значений функций в
+            текстовом файле;</li>
+          <li><uicontrol>Имя файла данных</uicontrol> – относительный путь к файлу таблицы;</li>
+          <li><uicontrol>Коэффициент умножения аргумента</uicontrol> – коэффициент, на который
+            умножается модельное время при интерполяции.  </li>
         </ul>
-      </p></section>
-    <section><title>Параметры</title>
+      </p>
+    </section>
+    <section>
+      <title>Параметры</title>
+      <p>нет</p>
+    </section>
+    <section>
+      <title>Пример заполнения файла</title>
       <p>
-        <ul id="ul_t3c_l3t_2y">
-          <li><uicontrol>параметр 1</uicontrol> - </li>
-        </ul>
-      </p></section>
-    
+        <codeblock>0.1 1 2 6 9
+0.2 6 3 7 10
+0.3 3 5 3 9</codeblock>
+      </p>
+    </section>
   </body>
 </topic>
