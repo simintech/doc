@@ -4,10 +4,7 @@
     <title>Справочная система  SimInTech</title>
     <topicref href="topics/test_page.dita"/>
     <topicref href="topics/vvedenie/vvedenie.dita" navtitle="Введение">
-        <topicref href="topics/vvedenie/naznachenie.dita"/>
-        <topicref href="topics/vvedenie/dostoinstva.dita"/>
-        <topicref href="topics/vvedenie/vnedrenia.dita" navtitle="Успешные внедрения"
-            locktitle="yes"/>
+        <topicref href="topics/vvedenie/zakazchiki.dita"/>
     </topicref>
     <topicref href="topics/nachalo_raboti/nachalo_raboti.dita" navtitle="1 - Начало работы"
         locktitle="yes">
@@ -142,6 +139,7 @@
                 <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0177.dita"/>
                 <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3048.dita"/>
                 <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0178.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0179.dita"/>
             </topicref>
             <topicref
                 href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/dinamicheskie.dita"
