@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>dbgetgroup_signalname </title>
+<shortdesc>Получение имени сигнала с префиксом имени группы.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>sn = <codeph>dbgetgroup_signalname</codeph>(cat, group, nmb);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>cat – имя категории;</p>
+      <p>group – имя группы сигналов внутри категории cat, в которой нужно сосчитать сигналы;</p>
+      <p>nmb – номер сигнала в группе. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>dbgetgroup_signalname</codeph> – функция позволяет получить имя сигнала с префиксом
+        группы, который находится под номером <codeph>nmb</codeph> внутри группы
+          <codeph>group</codeph> категории <codeph>cat</codeph> подключенной базы сигналов.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>sn - функция возвращает текстовое значение, в виде <codeph>&lt;имя группы>_&lt;имя
+          сигнала></codeph> соответствующее заданному сигналу. Если сигнал или группа/категория не
+        найдены, то функция возвращает пустое текстовое значение – «».</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>sn = <funcname>dbgetgroup_signalname</funcname>("Датчики", "D1",9);</codeblock></section>
+<p>В результате выполнения данного скрипта, переменная <codeph>sn</codeph> получит текстовое
+      значение, содержащее имя сигнала в группе <codeph>D1</codeph> категории
+        <codeph>Датчики</codeph>, с префиксом имени группы, то есть <codeph>D1_&lt;имя
+        сигнала></codeph>. </p>  
+  </body>
+</topic>

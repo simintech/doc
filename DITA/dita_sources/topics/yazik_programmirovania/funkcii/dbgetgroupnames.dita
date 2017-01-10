@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>dbgetgroupnames </title>
+<shortdesc>Чтение имен групп в категории.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>gns = <funcname>dbgetgroupnames</funcname>(cat);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>cat – имя категории. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>dbgetgroupnames</codeph> – функция позволяет получить список имен групп сигналов, которые
+        находятся внутри категории <codeph>cat</codeph> в подключенной базе сигналов. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>gns – функция возвращает текстовое значение, соответствующее списку имен групп сигналов
+        внутри указанной категории. При этом имена сигналов отделяются друг от друга символами
+        CR+LF.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>gns = <funcname>dbgetgroupnames</funcname>("Датчики");</codeblock></section>
+<p>В результате выполнения данного скрипта, переменная gns получит текстовое значение, содержащее
+      построковый список имен групп сигналов в категории <codeph>Датчики</codeph>. </p>  
+  </body>
+</topic>

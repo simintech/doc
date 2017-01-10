@@ -666,6 +666,7 @@
                     <topicref href="topics/yazik_programmirovania/funkcii/setstringlist.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/settagstringlist.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/settextstringlist.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/stringreplaceall.dita"/>
                 </topicref>
                 <topicref href="topics/yazik_programmirovania/funkcii/addzeros.dita"/>
                 <topicref href="topics/yazik_programmirovania/funkcii/asc.dita"/>
@@ -961,11 +962,27 @@
                     <topicref href="topics/yazik_programmirovania/funkcii/dbaddsignal.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/dbdelgroup.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/dbdelsignal.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/dbgetcategorycount.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/dbgetcategoryname.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/dbgetcategorynames.dita"/>
+                    <topicref
+                        href="topics/yazik_programmirovania/funkcii/dbgetgroup_signalname.dita"/>
+                    <topicref
+                        href="topics/yazik_programmirovania/funkcii/dbgetgroup_signalnames.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/dbgetgroupcount.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/dbgetgroupname.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/dbgetgroupnames.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/dbgetreadflag.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/dbgetsignalcaption.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/dbgetsignalcaptions.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/dbgetsignalcount.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/dbgetsignalname.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/dbgetsignalnames.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/dbgetwriteflag.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/dbrenamegroup.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/dbrenamesignal.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/dbsetreadflag.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/dbsetsignalevalstring.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/dbsetwriteflag.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/dbsignalinfo.dita"/>
                 </topicref>
