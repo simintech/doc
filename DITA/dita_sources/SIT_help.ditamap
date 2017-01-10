@@ -737,6 +737,7 @@
                     <topicref href="topics/yazik_programmirovania/funkcii/bringtofrontform.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/constr2P.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/createprimitiv.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getbgracolor.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/getfontsize.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/global.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/loadbitmap.dita"/>
@@ -761,6 +762,8 @@
                     <topicref href="topics/yazik_programmirovania/funkcii/setfontsize.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/setfontstyle.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/setformstyle.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setimagepicpixels.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/setimagepicsize.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/setpackformvisible.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/setpointcount.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/setselection.dita"/>
@@ -1137,6 +1140,7 @@
             <topicref href="topics/yazik_programmirovania/funkcii/gammp.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/gammq.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/getangle.dita"/>
+            <topicref href="topics/yazik_programmirovania/funkcii/getbgracolor.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/getblockportcount.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/getblockportid.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/getchild.dita"/>
@@ -1347,6 +1351,8 @@
             <topicref href="topics/yazik_programmirovania/funkcii/setgraphicyinterval.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/setgraphicyscales.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/sethintautohide.dita"/>
+            <topicref href="topics/yazik_programmirovania/funkcii/setimagepicpixels.dita"/>
+            <topicref href="topics/yazik_programmirovania/funkcii/setimagepicsize.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/setitem.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/setmainformvisible.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/setmousepos.dita"/>

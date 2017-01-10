@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setimagepicpixels</title>
+<shortdesc>Функция установки изображения по массиву целых чисел RGBA.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setimagepicpixels</funcname>(block_id, x, y, w, h, vector);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>block_id – идентификатор (имя) блока типа «Изображение с поворотом»;</p>
+      <p>x – абсцисса левой верхней точки вставляемого изображения в координатах блока «Изображение
+        с поворотом»;</p>
+      <p>y – ордината левой верхней точки вставляемого изображения в координатах блока «Изображение
+        с поворотом»;</p>
+      <p>w – ширина вставляемого изображения, в координатах блока «Изображение с поворотом»;</p>
+      <p>h – высота вставляемого изображения, в координатах блока «Изображение с поворотом»;</p>
+      <p>vector – вектор целых чисел, каждое из которых задается точку в формате RGBA; количество
+        элементов массива равно количеству точек формируемого изображения, то есть произведению w на
+        h. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setimagepicpixels</codeph> – функция задает внутри блока «Изображение с поворотом»
+        изображение, с разрешением <codeph>w</codeph> на <codeph>h</codeph>, формируемое одномерным
+        массивом <codeph>vector</codeph>.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> w: <kword>integer</kword> = 512;
+<kword>var</kword> h: <kword>integer</kword> = 256;
+<funcname>setimagepicsize</funcname>(RotatedImage,w,h);
+<comment>//Выводим изображение на экран в картинку</comment>
+<kword>var</kword> bytes: <kword>intarray</kword>;
+bytes = (w*h)#(<funcname>getbgracolor</funcname>(<funcname>rand</funcname>*255,<funcname>rand</funcname>*255,<funcname>rand</funcname>*255,255));
+<funcname>setimagepicpixels</funcname>(RotatedImage,0,0,w,h,bytes);</codeblock></section>
+<p>В результате выполнения скрипта, блок с именем <codeph>RotatedImage</codeph>, будет произвольно
+      изменять свою окраску с заданным в параметрах проекта шагом перерисовки, независящим от
+      настроек решателя. </p>  
+  </body>
+</topic>
