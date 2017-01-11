@@ -316,6 +316,15 @@
                 <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3064.dita"/>
                 <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0170.dita"/>
             </topicref>
+            <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/triggery.dita"
+                navtitle="3.3.12 Триггеры" locktitle="yes">
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/1201.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/1202.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/1203.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/1204.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/1205.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/1206.dita"/>
+            </topicref>
         </topicref>
     </topicref>
     <topicref href="topics/yazik_programmirovania/yazik_programmirovania.dita"
