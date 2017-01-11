@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Логическое И с пассивным входом</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/0170.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/0170s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Си |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок является аналогом логического блока «И», с выделением активного (первого) и т. н.
+      «пассивного» (второго) порта. Результат работы блока зависит от последовательности во времени
+      моментов появления логических единиц на входах, а именно: <ul id="ul_qzy_jfg_4y">
+        <li>если первой появилась единица на первом (активном) входе, а единица на втором
+          (пассивном) входе появилась после первой, то выход блока становится равен 1;</li>
+        <li>если первой появилась единица на втором (пассивном) входе, а единица на первом входе
+          «пришла» после второй, то выход блока не устанавливается в 1. </li>
+      </ul></p>
+    <section><title>Входы</title>
+    <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>Вход 1-го события</uicontrol> - порт первого сигнала;</li>
+          <li><uicontrol>Вход 2-го события</uicontrol> - порт второго сигнала.</li>
+        </ul>
+      </p></section>
+    <section><title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>Выход </uicontrol>- результат операции.</li>
+        </ul>
+      </p></section>
+    <section><title>Свойства:</title>
+      <p>нет</p></section>
+    <section><title>Параметры</title>
+      <p>нет</p></section>
+    <section>
+      <title>Пример</title>
+      <p>Соберем две схемы, в одной из которых, на блок логического И с пассивным входом, подается
+        сигнал сначала на активный вход, затем на пассивный. Вот второй же схеме сначала сигнал
+        приходит на пассивный вход, затем на активный.<image placement="break"
+          href="images/0170_1.png" align="center" id="image_ow2_wfg_4y"/>Верхняя часть схемы
+        позволяет получить единицу на выходе блока пассивного И, за счет того, что единица подана в
+        первую очередь на активный вход.<image placement="break" href="images/0170_2.png"
+          align="center" id="image_en2_xfg_4y"/>Нижняя же часть не изменяет значения выхода блока,
+        так как сигнал подается в первую очередь на пассивный вход. <image placement="break"
+          href="images/0170_3.png" align="center" id="image_uz3_yfg_4y"/></p>
+    </section>
+    
+  </body>
+</topic>
