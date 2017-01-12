@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Функция взаимной корреляции</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/0216.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/0216s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Скалярный |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок реализует вычисление взаимной корреляции двух скалярных входных сигналов. Корреляционная
+      функция величин <i>х</i> и <i>у</i> определяется как:<image placement="break"
+        href="images/0216_1.png" align="center" id="image_asr_chv_4y"/>где<image placement="break"
+        href="images/0216_2.png" align="center" id="image_qy1_3hv_4y"/> – ковариационная функция,
+          <i>R<sub>xx</sub></i>, <i>R<sub>yy</sub></i> – автоковариационные функции величин <i>x</i>
+      и <i>у</i>. <i>N</i> – размер выборки; <i>r</i> = 1...<i>m</i>, <i>m</i> &lt; <i>N</i> –
+      временной сдвиг; Δ<i>t</i> – период дискретизации.</p>
+    <p>Вычисление функции взаимной корреляции производится по следующему алгоритму: <ol
+        id="ol_kxd_phv_4y">
+        <li>Реализации величин (двух сигналов) <i>х</i> и <i>у</i> делятся на отдельные серии
+          размером <i>N</i>, причём <i>N</i> должно быть целой степенью числа 2. Если необходимо, из
+          сигналов удаляются линейные тренды.</li>
+        <li>Каждый отрезок дополняется <i>N</i> нулями. </li>
+        <li>Методом БПФ вычисляются дискретные преобразования Фурье X и Y величин х и у:<image
+            placement="break" href="images/0215_1.png" align="center" id="image_mby_33v_4y"/></li>
+        <li>Вычисляется двухсторонняя взаимная спектральная плотность величин х и у:<image
+            placement="break" href="images/0216_3.png" align="center" id="image_hrz_m3v_4y"/></li>
+        <li>Производится обратное дискретное преобразование Фурье последовательности
+              <i>S<sub>xy</sub></i>, дающее смещённую оценку ковариационной функции .</li>
+        <li>Несмещённая оценка корреляционной функции вычисляется по следующей формуле:<image
+            placement="break" href="images/0216_4.png" align="center" id="image_b2f_5jv_4y"/></li>
+      </ol></p>
+    <section>
+      <title>Входы</title>
+      <p><ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>input 1</uicontrol> - первый входной сигнал;</li>
+          <li><uicontrol>input 2</uicontrol> - второй входной сигнал.</li>
+        </ul>Входные сигналы должны быть скалярными.</p>
+    </section>
+    <section>
+      <title>Выходы</title>
+      <p><ul id="ul_l4p_sht_2y">
+          <li><uicontrol>output 1</uicontrol> - вектор временных сдвигов</li>
+          <li><uicontrol>output 2</uicontrol> - вектор значений корреляционной функции.</li>
+        </ul>Размерности выходных сигналов одинаковы и равны размеру серии <i>N</i>. </p>
+    </section>
+    <section><title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Размер серии</uicontrol> – значение этого свойства определяет размер серии
+            в выборке. Размер серии должен быть целой степенью числа 2.</li>
+          <li><uicontrol>Способ расчета:</uicontrol> По всем сериям - функция взаимной корреляции
+            вычисляется по неограниченному числу значений, при этом результаты расчёта усредняются
+            по всем сериям. По каждой серии - функция взаимной корреляции вычисляется по отдельным
+            сериям.</li>
+          <li><uicontrol>Период квантования, с</uicontrol>– значение этого свойства определяет
+            длительность временного интервала между двумя последовательными считываниями значений
+            сигнала на входе блока. Если это свойство равно 0 (нулю), то считывание производится с
+            периодом, равным шагу интегрирования.</li>
+          <li><uicontrol>Удаление линейного тренда</uicontrol> (Да или Нет) – если это свойство
+            имеет значение Да, то из массива накопленных значений входных сигналов предварительно
+            вычитаются линейные тренды. </li>
+        </ul>
+      </p></section>
+    <section><title>Параметры</title>
+      <p>нет</p></section>
+    
+  </body>
+</topic>
