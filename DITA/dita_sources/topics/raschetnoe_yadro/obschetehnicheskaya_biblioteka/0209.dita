@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Разность нулевого порядка</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/0209.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/0209s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок векторизован, реализует вычисление разности 0-го порядка по формуле:<image
+        placement="break" href="images/0209_1.png" align="center" id="image_czc_1t5_4y"/>где
+        <i>x</i><sub><i>i</i></sub>(<i>t</i>), <i>x</i><sub><i>i</i></sub>(<i>t</i> – ∆<i>t</i>) –
+      значения <i>i</i>-го элемента входного сигнала в блок на текущем и предыдущем шагах
+      интегрирования; <i>y</i><sub>i</sub>(<i>t</i>) – <i>i</i>-ый элемент выходного сигнала из
+      блока в текущий момент модельного времени. </p>
+    <section>
+      <title>Входы</title>
+      <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>input</uicontrol> – порт для входного сигнала блока.</li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>output</uicontrol> – выходной порт блока.</li>
+        </ul>
+      </p>
+    </section>
+    <section><title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Начальные условия</uicontrol> – вектор начальных значений
+              <i>y<sub>i</sub></i>(0) выходной величины блока.</li>
+          <li><uicontrol>Развязка алгебраических петель</uicontrol> – флаг, указывающий должен ли
+            данный блок производить развязку петель. </li>
+        </ul>
+      </p></section>
+    <section><title>Параметры</title>
+      <p>нет</p></section>
+    <note>По умолчанию блок реализует вычисление разности 0-го порядка для скалярного входного
+      сигнала. </note>
+    
+  </body>
+</topic>
