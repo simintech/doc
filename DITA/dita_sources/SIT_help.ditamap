@@ -340,6 +340,22 @@
                 <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/0162.dita"/>
                 <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3037.dita"/>
             </topicref>
+            <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/releinye.dita"
+                navtitle="3.3.14 Релейные" locktitle="yes">
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3038.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3039.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3040.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3041.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3042.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3043.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3044.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3045.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3046.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3047.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3067.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3068.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3069.dita"/>
+            </topicref>
         </topicref>
     </topicref>
     <topicref href="topics/yazik_programmirovania/yazik_programmirovania.dita"
