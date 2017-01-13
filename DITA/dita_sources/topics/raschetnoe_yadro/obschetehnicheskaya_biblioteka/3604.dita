@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Обратное быстрое преобразование Фурье </title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/3604.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/3604s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован | Си
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок предназначен для применения обратного преобразования Фурье к последовательностям
+      комплексных чисел. </p>
+    <section><title>Входы</title>
+    <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>RealDataIn</uicontrol> – входной вектор вещественных частей входного
+            сигнала;</li>
+          <li><uicontrol>ImagDataIn</uicontrol> – входной вектор мнимых частей входного
+            сигнала;</li>
+          <li><uicontrol>Sync</uicontrol> – вход для синхроимпульсов.</li>
+        </ul>
+      </p></section>
+    <section><title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>DataOutput</uicontrol> – результирующий вектор выходного сигнала.</li>
+        </ul>
+      </p></section>
+    <section><title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Размер серии</uicontrol> – величина серии обрабатываемых данных (целое
+            число).</li>
+        </ul>
+      </p></section>
+    <section><title>Параметры</title>
+      <p>нет</p></section>
+    <note>на входной порт <uicontrol>Sync</uicontrol> должны подаваться прямоугольные синхроимпульсы
+      единичной амплитуды. Срабатывание блока происходит по переднему фронту синхроимпульсов. При
+      каждом срабатывании блока на выходе формируется массив действительных чисел по следующему
+      правилу (обратное дискретное преобразование Фурье):<image placement="break"
+        href="images/3604_1.png" align="center" id="image_kjp_lh1_py"/>где <i>N</i> – количество
+      отсчетов; <i>X</i> – массив комплексных числе; <i>x</i> – результирующий массив выходных
+      данных. Наибольшая эффективность достигается при использовании серий размера 2<i>n</i>. </note>
+    <section>
+      <title>Пример:</title>
+      <p><image placement="break" href="images/3604_2.png" align="center" id="image_wdp_qh1_py"
+        />Здесь блок обратного преобразования Фурье используется в некоторой схеме обработки
+        сигнала. Исходный сигнал представляет собой синусоиду с частотой 1 Гц. Блок буфера формирует
+        массив из 10 отсчетов с частотой дискретизации 10Гц, задаваемой меандром. Массив
+        подвергается прямому преобразованию Фурье, результат которого – это массив комплексных
+        чисел. Затем полученный массив комплексных чисел подвергается обратному преобразованию Фурье
+        с помощью описываемого блока. Итоговый массив действительных чисел выводится с помощью блока
+        буферного регистра. В качестве сигнала срабатывания блоков преобразования и сигнала записи
+        данных в регистр используется сигнал готовности данных буфера. Результаты работы схемы:
+          <image placement="break" href="images/3604_3.png" align="center" id="image_pkq_sh1_py"
+        />Запаздывание на графике выходного сигнала связано с временем накопления заданного
+        количества отсчетов. </p>
+    </section>
+    
+  </body>
+</topic>
