@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Математическая модель блока  </title>
+  <body>
+    <p>В общем случае математическая модель блока может включать в себя следующие типы уравнений,
+      соотношений и операций:</p>
+    <ul id="ul_l1k_vvn_qy">
+      <li>1) Систему обыкновенных дифференциальных уравнений (ОДУ):</li>
+    </ul>
+    <table id="table_m1k_vvn_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="core_02_03_01_images/image001.png" height="56" width="228"
+                id="image_n1k_vvn_qy"/></entry>
+            <entry>(2.3)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>где<i>x, u, y</i>– векторысостояний, входов и выходов, соответственно; <i>f(x, u)</i>,
+        <i>g(x, u, </i><i>y)</i> – известные нелинейные функции.</p>
+    <ul id="ul_o1k_vvn_qy">
+      <li>2) Систему линейных алгебраических уравнений (ЛАУ):</li>
+    </ul>
+    <table id="table_p1k_vvn_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="core_02_03_01_images/image002.png" height="33" width="74"
+                id="image_q1k_vvn_qy"/></entry>
+            <entry>(2.4)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>где <i>A</i> ­– матрица коэффициентов; <i>x</i> ­– вектор решений; <i>f</i> – вектор правых
+      частей.</p>
+    <ul id="ul_r1k_vvn_qy">
+      <li>3) Систему нелинейных алгебраических уравнений (НАУ):</li>
+    </ul>
+    <table id="table_s1k_vvn_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="core_02_03_01_images/image003.png" height="33" width="109"
+                id="image_t1k_vvn_qy"/></entry>
+            <entry>(2.5)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <ul id="ul_u1k_vvn_qy">
+      <li>4) Систему разностных уравнений</li>
+    </ul>
+    <table id="table_v1k_vvn_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="core_02_03_01_images/image004.png" height="55" width="151"
+                id="image_w1k_vvn_qy"/></entry>
+            <entry>(2.6)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>где <i>k</i> – индекс такта квантования по времени дискретной системы. </p>
+    <ul id="ul_x1k_vvn_qy">
+      <li>5) Внешние программы, описывающие поведение того или иного блока в форме входо–выходных
+        соотношений. Как правило, внешние программы обмениваются значениями переменных с шагом
+        синхронизации.</li>
+      <li>6) Логические операции и операции отношения.</li>
+      <li>7) Различные нелинейные функции (в том числе разрывные и типовые нелинейности), ключи,
+        звено переменного транспортного запаздывания и т.п.</li>
+      <li>8) Динамические звенья, описываемые обыкновенными дифференциальными уравнениями, которые
+        при нулевых начальных условиях можно представить в виде передаточных функций</li>
+    </ul>
+    <table id="table_y1k_vvn_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="core_02_03_01_images/image005.png" height="58" width="110"
+                id="image_z1k_vvn_qy"/></entry>
+            <entry>(2.7)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>где <i>W(s)</i> – передаточная функция; <i>N(s)</i>, <i>L(s)</i> – полиномы степени <i>m</i>
+      и <i>n</i>, соответственно (<i>m</i> ≤ <i>n</i>). </p>
+    <p>Примечание: пользователь может создать своё собственное звено, в общем случае динамическое,
+      на встроенном языке программирования, которое может реализовывать любую математическую модель
+      из перечисленных, или их комбинацию.</p>
+  </body>
+</topic>

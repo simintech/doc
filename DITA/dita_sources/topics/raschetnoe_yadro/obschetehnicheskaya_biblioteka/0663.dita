@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Двигатель синхронный без успокаивающих обмоток</title>
+  <body>
+    <table id="table_usv_x44_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/0663.png" height="34" width="38" id="image_vsv_x44_qy"
+              /></entry>
+            <entry>Двигатель синхронный без успокаивающих обмоток</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry/>
+          </row>
+          <row>
+            <entry><image href="images_old/0663s.png" height="49" width="89" id="image_wsv_x44_qy"
+              /></entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry/>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2">
+              <p>Блок реализует модель синхронного двигателя с постоянным магнитом без успокаивающих
+                обмоток (ДС).</p>
+              <p><b>Расчетная схема и дифференциальные уравнения ДС</b></p>
+              <p>Расчетная схема ДС аналогична схеме асинхронного электродвигателя с добавлением
+                контура обмотки возбуждения по оси<image href="images_old/0663_html_3e93e6f1.gif" height="11"
+                  width="20" id="image_xsv_x44_qy"/>, на который подано напряжение<image
+                  href="images_old/0663_html_5622a00c.gif" height="23" width="71" id="image_ysv_x44_qy"/>.
+                Уравнения равновесия напряжений обмоток ДС имеют следующий вид (в предположении, что
+                  <i>статор вращается с частотой, обратной частоте вращения ротора, а ротор
+                  неподвижен</i>):</p>
+              <p><image href="images_old/0663_html_21e898b2.gif" height="262" width="375" id="image_zsv_x44_qy"
+                />(1)</p>
+              <p>Уравнение равновесия моментов имеет вид:</p>
+              <p><image href="images_old/0663_html_7491828f.gif" height="102" width="365" id="image_atv_x44_qy"
+                />(2)</p>
+              <p>В этих уравнениях:<image href="images_old/0663_html_67d6472.gif" height="24" width="160"
+                  id="image_btv_x44_qy"/>– омические сопротивления обмоток статора, возбуждения,
+                контуров пусковой (успокоительной) обмотки;</p>
+              <p><image href="images_old/0663_html_m122fa5d5.gif" height="24" width="303" id="image_ctv_x44_qy"
+                />– токи обмоток статора и ротора;</p>
+              <p><image href="images_old/0663_html_cda30f8.gif" height="24" width="355" id="image_dtv_x44_qy"
+                />– потокосцепления обмоток статора и ротора;<image href="images_old/0663_html_m44f27ac.gif"
+                  height="21" width="44" id="image_etv_x44_qy"/>– частота вращения ротора,<image
+                  href="images_old/0663_html_244621c0.gif" height="23" width="26" id="image_ftv_x44_qy"/>–
+                число пар полюсов;<image href="images_old/0663_html_691d5a1b.gif" height="23" width="29"
+                  id="image_gtv_x44_qy"/>– число фаз питающего напряжения;<image
+                  href="images_old/0663_html_m5aeeaf11.gif" height="23" width="98" id="image_htv_x44_qy"/>–
+                частота вращения магнитного поля,<image href="images_old/0663_html_5617edf.gif" height="23"
+                  width="48" id="image_itv_x44_qy"/>– электромагнитный момент.</p>
+              <p><image href="images_old/0663_html_m317c5d18.gif" height="142" width="374"
+                  id="image_jtv_x44_qy"/>(3)</p>
+              <p>где<image href="images_old/0663_html_m35737647.gif" height="24" width="226"
+                  id="image_ktv_x44_qy"/>– собственные индуктивности контуров статора и
+                  ротора,<image href="images_old/0663_html_m159b393d.gif" height="24" width="83"
+                  id="image_ltv_x44_qy"/>– взаимные индуктивности между обмотками, лежащими по
+                продольной или по поперечной осям. (В этой системе уравнений в приведенных к статору
+                значениях параметров ротора символы ' (прим) опущены).</p>
+              <p>Запишем выражения для потокосцеплений через основные потоки и потоки рассеяния,
+                т.е.:</p>
+              <p><image href="images_old/0663_html_23b241d3.gif" height="134" width="246" id="image_mtv_x44_qy"
+                />(4)</p>
+              <p>Получаем:</p>
+              <p><image href="images_old/0663_html_m6fe3d5de.gif" height="147" width="431"
+                  id="image_ntv_x44_qy"/>(5)</p>
+              <p>В этом случае схема замещения электрической части машины имеет вид:</p>
+              <p><image href="" height="209" width="623" id="image_otv_x44_qy"/></p>
+              <p>Рисунок 1</p>
+              <p>Сгруппируем 1,3,4 и 2,5 уравнения системы (5). Имеем уравнения</p>
+              <p><image href="images_old/0663_html_6404ebf3.gif" height="147" width="431" id="image_ptv_x44_qy"
+                /></p>
+              <p>Или, если ввести матрицы и векторы</p>
+              <p><image href="images_old/0663_html_24b2f3aa.gif" height="79" width="374" id="image_qtv_x44_qy"
+                /></p>
+              <p><image href="images_old/0663_html_m7e93819f.gif" height="53" width="252" id="image_rtv_x44_qy"
+                /></p>
+              <p><image href="images_old/0663_html_2dad12f5.gif" height="29" width="223" id="image_stv_x44_qy"
+                /></p>
+              <p><image href="images_old/0663_html_m6a0ea4df.gif" height="30" width="161" id="image_ttv_x44_qy"
+                /></p>
+              <p><image href="images_old/0663_html_m5aa1ed5d.gif" height="29" width="199" id="image_utv_x44_qy"
+                /></p>
+              <p><image href="images_old/0663_html_3d060129.gif" height="30" width="137" id="image_vtv_x44_qy"
+                /></p>
+              <p>то получаем</p>
+              <p><image href="images_old/0663_html_6bf20639.gif" height="26" width="217" id="image_wtv_x44_qy"
+                />(6)</p>
+              <p>В результате имеем:</p>
+              <p><image href="images_old/0663_html_242db497.gif" height="79" width="656" id="image_xtv_x44_qy"
+                />(7)</p>
+              <p><image href="images_old/0663_html_4478677e.gif" height="53" width="286" id="image_ytv_x44_qy"
+                />(8)</p>
+              <p>и можно записать:</p>
+              <p><image href="images_old/0663_html_620bd05e.gif" height="104" width="210" id="image_ztv_x44_qy"
+                />(9)</p>
+              <p>где<image href="images_old/0663_html_76e17c21.gif" height="50" width="130"
+                  id="image_a5v_x44_qy"/></p>
+              <p>Исключив в исходной системе дифференциальных уравнений (1) токи, и введя
+                обозначения:</p>
+              <p><image href="images_old/0663_html_2dc5bcf2.gif" height="244" width="541" id="image_b5v_x44_qy"
+                /></p>
+              <p>получаем систему из пяти дифференциальных уравнений первого порядка, описывающую
+                электромагнитные процессы в синхронном двигателе:</p>
+              <p><image href="images_old/0663_html_m4993484a.gif" height="262" width="583"
+                  id="image_c5v_x44_qy"/>(10)</p>
+              <p><b>Уравнения, описывающие механические процессы в двигателе</b></p>
+              <p>Рассчитаем токи<image href="images_old/0663_html_m34edb9e.gif" height="24" width="108"
+                  id="image_d5v_x44_qy"/>и введем обозначения:</p>
+              <p><image href="images_old/0663_html_393adc36.gif" height="95" width="412" id="image_e5v_x44_qy"
+                /></p>
+              <p>Тогда получаем:</p>
+              <p><image href="images_old/0663_html_7b339588.gif" height="53" width="366" id="image_f5v_x44_qy"
+                />(12)</p>
+              <p><image href="images_old/0663_html_7491828f.gif" height="102" width="365" id="image_g5v_x44_qy"
+                />(13)</p>
+              <p><image href="images_old/0663_html_5db29d8c.gif" height="99" width="253" id="image_h5v_x44_qy"
+                />(14)</p>
+              <p>где<image href="images_old/0663_html_b05893.gif" height="21" width="20" id="image_i5v_x44_qy"
+                />– момент инерции, приведенный к валу двигателя,<image
+                  href="images_old/0663_html_m3e206545.gif" height="21" width="39" id="image_j5v_x44_qy"/>–
+                угол поворота вала двигателя,<image href="images_old/0663_html_m7a097cd0.gif" height="23"
+                  width="55" id="image_k5v_x44_qy"/>– электромагнитный момент,<image
+                  href="images_old/0663_html_m31c733b1.gif" height="23" width="72" id="image_l5v_x44_qy"/>–
+                возмущающий момент.</p>
+              <p><b>Уравнения динамики синхронного двигателя с постоянным магнитом без успокаивающих
+                  обмоток</b></p>
+              <p>Таким образом, уравнения динамики синхронного двигателя с постоянным магнитом без
+                успокаивающих обмоток имеют вид:</p>
+              <p><image href="images_old/0663_html_7b5ce8c.gif" height="242" width="525" id="image_m5v_x44_qy"
+                />(15)</p>
+              <p>Согласно уравнениям (15), переменными состояния ДС являются токи статора<image
+                  href="images_old/0663_html_m34edb9e.gif" height="24" width="108" id="image_n5v_x44_qy"/>,
+                угловая скорость вращения ротора<image href="images_old/0663_html_m44f27ac.gif" height="21"
+                  width="44" id="image_o5v_x44_qy"/>и угол поворота ротора<image
+                  href="images_old/0663_html_m3e206545.gif" height="21" width="39" id="image_p5v_x44_qy"/>.
+                Входными параметрами являются напряжения на обмотках статора и возмущающий
+                момент.</p>
+              <p>Блок имеет 3 входных и 3 выходных сигнала. </p>
+              <p><b>Входные сигналы:</b></p>
+              <ol id="ol_q5v_x44_qy">
+                <li>
+                  <p>Напряжение на обмотке статора<image href="images_old/0663_html_b0d41dd.gif" height="23"
+                      width="59" id="image_r5v_x44_qy"/>в <b>неподвижной</b> системе координат,
+                    В.</p>
+                </li>
+                <li>
+                  <p>Напряжение на обмотке статора<image href="images_old/0663_html_7926aecc.gif" height="23"
+                      width="58" id="image_s5v_x44_qy"/>в <b>неподвижной</b> системе координат,
+                    В.</p>
+                </li>
+                <li>
+                  <p>Возмущающий момент<image href="images_old/0663_html_m7a418b2b.gif" height="23" width="55"
+                      id="image_t5v_x44_qy"/>, Н·м.</p>
+                </li>
+              </ol>
+              <p><b>Выходные сигналы:</b></p>
+              <ol id="ol_u5v_x44_qy">
+                <li>
+                  <p>Угол поворота ротора<image href="images_old/0663_html_m5831b8e7.gif" height="21"
+                      width="40" id="image_v5v_x44_qy"/>, рад.</p>
+                </li>
+                <li>
+                  <p>Угловая скорость вращения<image href="images_old/0663_html_m36e07c53.gif" height="21"
+                      width="47" id="image_w5v_x44_qy"/>, рад/с.</p>
+                </li>
+                <li>
+                  <p>Электромеханический момент на валу ротора<image href="images_old/0663_html_5617edf.gif"
+                      height="23" width="48" id="image_x5v_x44_qy"/>, Н·м.</p>
+                </li>
+              </ol>
+              <p>Дополнительно на третий выход можно выводить ещё два сигнала:</p>
+              <ol id="ol_y5v_x44_qy">
+                <li>
+                  <p>Ток в обмотке статора<image href="images_old/0663_html_285a8b2d.gif" height="23"
+                      width="50" id="image_z5v_x44_qy"/>, А.</p>
+                </li>
+                <li>
+                  <p>Ток в обмотке статора<image href="images_old/0663_html_m15d807cf.gif" height="24"
+                      width="48" id="image_avv_x44_qy"/>, А.</p>
+                </li>
+              </ol>
+              <p><b>Свойства:</b></p>
+              <ul id="ul_bvv_x44_qy">
+                <li>
+                  <p>Сопротивление обмоток статора<image href="images_old/0663_html_2646893a.gif" height="21"
+                      width="21" id="image_cvv_x44_qy"/>, Ом;</p>
+                </li>
+                <li>
+                  <p>Индуктивность d-обмоток статора<image href="images_old/0663_html_285a8b2d.gif" height="23"
+                      width="50" id="image_dvv_x44_qy"/>, Гн;</p>
+                </li>
+                <li>
+                  <p>Индуктивность q-обмоток статора<image href="images_old/0663_html_614d3d2e.gif" height="23"
+                      width="48" id="image_evv_x44_qy"/>, Гн;</p>
+                </li>
+                <li>
+                  <p>Магнитный поток от постоянного магнита через обмотки статора I, Вб;</p>
+                </li>
+                <li>
+                  <p>Момент инерции, приведённый к валу ротора<image href="images_old/0663_html_b05893.gif"
+                      height="21" width="20" id="image_fvv_x44_qy"/>, кг·м2;</p>
+                </li>
+                <li>
+                  <p>Число полюсов <image href="images_old/0663_html_244621c0.gif" height="23" width="26"
+                      id="image_gvv_x44_qy"/>, шт.</p>
+                </li>
+                <li>
+                  <p>Число фаз питающего напряжения<image href="images_old/0663_html_691d5a1b.gif" height="23"
+                      width="29" id="image_hvv_x44_qy"/>, шт.</p>
+                </li>
+                <li>
+                  <p>Начальный угол поворота ротора<image href="images_old/0663_html_m1db1b05d.gif" height="21"
+                      width="43" id="image_ivv_x44_qy"/>, рад.</p>
+                </li>
+                <li>
+                  <p>Начальная частота вращения ротора<image href="images_old/0663_html_6fea424f.gif"
+                      height="21" width="51" id="image_jvv_x44_qy"/>, рад/c.</p>
+                </li>
+                <li>
+                  <p>Начальный ток в обмотке d статора<image href="images_old/0663_html_m5468dc48.gif"
+                      height="21" width="46" id="image_kvv_x44_qy"/>, А.</p>
+                </li>
+                <li>
+                  <p>Начальный ток в обмотке q статора<image href="images_old/0663_html_m2e0abc3f.gif"
+                      height="23" width="45" id="image_lvv_x44_qy"/>, А.</p>
+                </li>
+                <li>
+                  <p>Дополнительный вывод.</p>
+                </li>
+              </ul>
+              <p><b>Примечания:</b></p>
+              <p>1) Осям<image href="images_old/0663_html_3e93e6f1.gif" height="11" width="20"
+                  id="image_mvv_x44_qy"/>и<image href="images_old/0663_html_m514ceb4c.gif" height="18"
+                  width="18" id="image_nvv_x44_qy"/>соответствуют индексы d и q.</p>
+              <p>2) Напряжения на обмотках статора<image href="images_old/0663_html_m18b447b5.gif" height="23"
+                  width="60" id="image_ovv_x44_qy"/>и<image href="images_old/0663_html_m7e6efdc2.gif"
+                  height="24" width="58" id="image_pvv_x44_qy"/>являются напряжениями во вращающейся
+                системе координат. Для получения их значений из входных напряжений<image
+                  href="images_old/0663_html_b0d41dd.gif" height="23" width="59" id="image_qvv_x44_qy"/>и<image
+                  href="images_old/0663_html_7926aecc.gif" height="23" width="58" id="image_rvv_x44_qy"
+                />используются соотношения:</p>
+              <p><image href="images_old/0663_html_3c7f2b28.gif" height="58" width="415" id="image_svv_x44_qy"
+                /></p>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>

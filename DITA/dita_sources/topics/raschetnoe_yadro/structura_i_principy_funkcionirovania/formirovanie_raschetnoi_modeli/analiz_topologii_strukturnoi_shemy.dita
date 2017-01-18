@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Анализ топологии структурной схемы </title>
+  <body>
+    <p>Анализируя информационные потоки в структурной схеме, можно определить сам факт взаимосвязи
+      входа одного блока с выходом другого блока, но нельзя ничего сказать о характере этой связи.
+      Характер связи определяется особенностями модели самого блока, а именно тем, как влияет тот
+      или иной вход блока на его выход. </p>
+    <p>Если выход блока явно зависит от его входов, то на момент расчета этого блока все его входы
+      должны быть определены. В математической модели таких блоков уравнения для выходов имеют
+      следующий вид:</p>
+    <table id="table_pb1_qxn_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="core_02_07_01_images/image001.png" height="33" width="106"
+                id="image_qb1_qxn_qy"/></entry>
+            <entry>(2.9)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Примером блоков такого типа является усилитель сигнала, передаточная функция общего вида, где
+      порядок числителя равен порядку знаменателя, блок <i>Переменные состояния</i> с ненулевой
+      матрицей D и т.д. </p>
+    <p>Если в математической модели блока уравнение для выхода имеет вид</p>
+    <table id="table_rb1_qxn_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="core_02_07_01_images/image002.png" height="33" width="88"
+                id="image_sb1_qxn_qy"/></entry>
+            <entry>(2.10)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>то такой блок называется приоритетным. Выходы приоритетных блоков являются функцией только их
+      внутренних атрибутов (параметров и состояний блока). Примерами приоритетных блоков являются
+      источники сигнала, динамические блоки и т.д. </p>
+    <p>Объединяя уравнения вида (2.9), (2.10) всех блоков структурной схемы и, учитывая, что входным
+      сигналом блока является выход другого блока или переменная, зависящая от модельного времени
+        <i>t</i>, получим уравнения всей системы в виде:</p>
+    <table id="table_tb1_qxn_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="core_02_07_01_images/image003.png" height="33" width="110"
+                id="image_ub1_qxn_qy"/></entry>
+            <entry>(2.11)</entry>
+          </row>
+          <row>
+            <entry><image href="core_02_07_01_images/image004.png" height="33" width="129"
+                id="image_vb1_qxn_qy"/></entry>
+            <entry>(2.12)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>где <i>х</i> - вектор всех переменных состояния, <i>y</i> - вектор выходных переменных всех
+      блоков модели. </p>
+    <p>При реализации методов численного интегрирования необходимо получить уравнения моделируемой
+      системы в нормальной форме Коши, то есть в виде</p>
+    <table id="table_wb1_qxn_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="core_02_07_01_images/image005.png" height="33" width="91"
+                id="image_xb1_qxn_qy"/></entry>
+            <entry>(2.13)</entry>
+          </row>
+          <row>
+            <entry><image href="core_02_07_01_images/image006.png" height="33" width="111"
+                id="image_yb1_qxn_qy"/></entry>
+            <entry>(2.14)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Опишем процедуру приведения уравнений к форме Коши. Отметим, что не обязательно получать
+      явные выражения в виде (2.13-2.14), достаточно сформировать процедуру, которая позволяет по
+      заданным значениям модельного времени <i>t</i> и вектора переменных состояния <i>x</i>
+      вычислить вектор производных <i>x</i>’ и вектор выходов <i>у</i>. Идея этой процедуры –
+      упорядочение (сортировка) всех блоков таким образом, чтобы выход очередного блока мог быть
+      рассчитан по уже имеющейся к этому моменту информации. Практически сортировка позволяет
+      получить уравнения выходов блоков в виде (2.14). Затем производные могут быть рассчитаны с
+      использованием (2.11).</p>
+    <p>Перед началом сортировки будем считать, что нам известны <i>t</i> и <i>x</i>. В процессе
+      сортировки будет сформирован упорядоченный список, содержащий в общем случае <b>5 групп
+        блоков</b> и соответствующих им выходных переменных.</p>
+    <p>1) Сначала выделим и упорядочим все блоки, выходы которых могут быть рассчитаны по известному
+      модельному времени <i>t</i>:</p>
+    <table id="table_zb1_qxn_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="core_02_07_01_images/image007.png" height="33" width="81"
+                id="image_ac1_qxn_qy"/></entry>
+            <entry>(2.15)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>2) Далее выделим и упорядочим все блоки, выходы которых могут быть рассчитаны по известным
+        <image href="core_02_07_01_images/image008.png" height="33" width="50" id="image_bc1_qxn_qy"
+      />. Это соответствует записи</p>
+    <table id="table_cc1_qxn_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="core_02_07_01_images/image009.png" height="33" width="124"
+                id="image_dc1_qxn_qy"/></entry>
+            <entry>(2.16)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Этот этап завершает первичную сортировку. Если система не имеет алгебраических контуров, то
+      все блоки структурной схемы к этому моменту станут упорядоченными, и процедура будет
+      завершена, если нет – следует продолжить упорядочение.</p>
+    <p>3) Выделим все блоки, непосредственно входящие в алгебраические контуры. Из них выделим
+      определяющие (<image href="core_02_07_01_images/image010.png" height="33" width="18"
+        id="image_ec1_qxn_qy"/>). Выходы остальных входящих в алгебраические контуры блоков (<image
+        href="core_02_07_01_images/image011.png" height="33" width="18" id="image_fc1_qxn_qy"/>)
+      можно рассчитать по известным выходам уже упорядоченных и определяющих блоков:</p>
+    <table id="table_gc1_qxn_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="core_02_07_01_images/image012.png" height="33" width="124"
+                id="image_hc1_qxn_qy"/></entry>
+            <entry>(2.17)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Метод выделения определяющих переменных рассматривается ниже.</p>
+    <ul id="ul_ic1_qxn_qy">
+      <li>4) Поместим в список определяющие блоки, выходы которых запишутся в виде</li>
+    </ul>
+    <table id="table_jc1_qxn_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="core_02_07_01_images/image013.png" height="33" width="148"
+                id="image_kc1_qxn_qy"/></entry>
+            <entry>(2.18)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Можно исключить <image href="core_02_07_01_images/image011.png" height="33" width="18"
+        id="image_lc1_qxn_qy"/> из (2.18), однако приведенная запись позволяет лучше понять
+      рассмотренные ниже схемы расчета алгебраических контуров.</p>
+    <p>5) В последнюю очередь рассчитываются блоки, не входящие в алгебраические контуры, но выходы
+      которых зависят от блоков, входящих в алгебраические контуры:</p>
+    <table id="table_mc1_qxn_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="core_02_07_01_images/image014.png" height="33" width="124"
+                id="image_nc1_qxn_qy"/></entry>
+            <entry>(2.19)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>В результате сортировки будет получен такой порядок расчета блоков, который соответствует
+      использованию формул (2.15)…(2.19). Если в модели нет алгебраических контуров, можно по
+      известным <image href="core_02_07_01_images/image015.png" height="37" width="25"
+        id="image_oc1_qxn_qy"/> найти выходы всех блоков, в противном случае следует решать
+      алгебраические уравнения относительно определяющих переменных <image
+        href="core_02_07_01_images/image016.png" height="37" width="18" id="image_pc1_qxn_qy"/>.</p>
+    <p>Расчет алгебраических контуров можно выполнить по следующим итерационным схемам.</p>
+    <p>Метод простых итераций:</p>
+    <table id="table_qc1_qxn_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry> </entry>
+            <entry>
+              <p><image href="core_02_07_01_images/image017.png" height="44" width="175"
+                  id="image_rc1_qxn_qy"/></p>
+              <p><image href="core_02_07_01_images/image018.png" height="44" width="311"
+                  id="image_sc1_qxn_qy"/></p>
+            </entry>
+            <entry>(2.20)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Метод Ньютона:</p>
+    <table id="table_tc1_qxn_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry> </entry>
+            <entry>
+              <p><image href="core_02_07_01_images/image017.png" height="44" width="175"
+                  id="image_uc1_qxn_qy"/></p>
+              <p><image href="core_02_07_01_images/image019.png" height="44" width="235"
+                  id="image_vc1_qxn_qy"/></p>
+              <p><image href="core_02_07_01_images/image020.png" height="89" width="254"
+                  id="image_wc1_qxn_qy"/></p>
+              <p><image href="core_02_07_01_images/image021.png" height="44" width="419"
+                  id="image_xc1_qxn_qy"/></p>
+            </entry>
+            <entry>(2.21)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>В общем случае матрица Якоби <image href="core_02_07_01_images/image022.png" height="37"
+        width="7" id="image_yc1_qxn_qy"/> может не обновляться в течение нескольких итераций
+      (модифицированный метод Ньютона).</p>
+    <p>Алгоритм расчета выходов блоков и производных переменных состояния запишется следующим
+      образом:</p>
+    <p>1) По известным <i>t, x</i>, используя (2.15), (2.16), рассчитать <image
+        href="core_02_07_01_images/image023.png" height="33" width="43" id="image_zc1_qxn_qy"/>.</p>
+    <p>2) Используя итерационную схему (2.20) или (2.21), найти <image
+        href="core_02_07_01_images/image024.png" height="33" width="43" id="image_ad1_qxn_qy"/>.</p>
+    <p>3) Используя (2.19), вычислить <image href="core_02_07_01_images/image025.png" height="33"
+        width="18" id="image_bd1_qxn_qy"/>.</p>
+    <p>4) Рассчитать производные переменных состояния всех динамических блоков.</p>
+    <p><ph id="_Toc465407678">2.7.2 Развязка алгебраических контуров</ph></p>
+    <p>Наличие в структурной схеме алгебраических контуров означает, что входы блоков неявным
+      образом (через другие блоки и линии связи) зависят от их выходов. В математической форме
+      уравнение алгебраического контура выражается в виде неявной функции от выходов:</p>
+    <table id="table_cd1_qxn_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="core_02_07_01_images/image026.png" height="33" width="106"
+                id="image_dd1_qxn_qy"/></entry>
+            <entry>(2.22)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>На рисунке 2.3 приведен пример структурной схемы без алгебраического контура, а на рисунке
+      2.4 – при его наличии. На рисунке 2.3 обратная связь идет с выхода интегратора 4 на вход
+      сумматора 2, который зависит только от его состояния:</p>
+    <table id="table_ed1_qxn_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="core_02_07_01_images/image027.png" height="33" width="92"
+                id="image_fd1_qxn_qy"/></entry>
+            <entry>(2.23)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>поэтому при порядке расчета блоков 1, 4, 2, 3 входы сумматора 2 и усилителя 3 на момент их
+      расчета определены. На рисунке 2.4 обратная связь идет с выхода усилителя 3 на вход сумматора
+      2, и при любом порядке расчета сумматора и усилителя их входы не могут быть однозначно
+      определены. </p>
+    <p><image href="core_02_07_01_images/image028.png" height="137" width="466" id="image_gd1_qxn_qy"
+      /></p>
+    <p>Рисунок 2.3 – Пример структурной схемы без алгебраического контура</p>
+    <p><image href="core_02_07_01_images/image029.png" height="157" width="472" id="image_hd1_qxn_qy"
+      /></p>
+    <p>Рисунок 2.4 – Пример структурной схемы с алгебраическим контуром</p>
+    <p>При наличии в схеме алгебраических контуров необходимо определить их число и выделить выходы
+      блоков, относительно которых будет решаться система нелинейных уравнений. Для этого
+      используется метод определяющих переменных [21]. Суть метода заключается в том, что в
+      алгебраических контурах определяется минимальное число выходных сигналов блоков, при удалении
+      которых из схемы размыкаются все обратные связи в контурах. Рассмотрим этот метод на примере
+      системы НАУ вида:</p>
+    <table id="table_id1_qxn_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="core_02_07_01_images/image030.png" height="128" width="216"
+                id="image_jd1_qxn_qy"/></entry>
+            <entry>(2.24)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Если бы <image href="core_02_07_01_images/image031.png" height="37" width="18"
+        id="image_kd1_qxn_qy"/> и <image href="core_02_07_01_images/image032.png" height="37"
+        width="18" id="image_ld1_qxn_qy"/> были известны, то из 3-го, 4-го, 5-го уравнений можно
+      было бы последовательно определить <image href="core_02_07_01_images/image033.png" height="37"
+        width="18" id="image_md1_qxn_qy"/>, <image href="core_02_07_01_images/image016.png"
+        height="37" width="18" id="image_nd1_qxn_qy"/>, <image
+        href="core_02_07_01_images/image034.png" height="37" width="18" id="image_od1_qxn_qy"/>.
+      Неизвестные <image href="core_02_07_01_images/image031.png" height="37" width="18"
+        id="image_pd1_qxn_qy"/> и <image href="core_02_07_01_images/image032.png" height="37"
+        width="18" id="image_qd1_qxn_qy"/> называют определяющими, поскольку по ним легко могут быть
+      определены все остальные неизвестные. Подставляя последовательно 5-е, 4-е, 3-е уравнения в 1-е
+      и 2-е, получим систему уравнений для определяющих неизвестных:</p>
+    <table id="table_rd1_qxn_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="core_02_07_01_images/image035.png" height="56" width="134"
+                id="image_sd1_qxn_qy"/></entry>
+            <entry>(2.25)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>решая которую, находим <image href="core_02_07_01_images/image036.png" height="33" width="18"
+        id="image_td1_qxn_qy"/> и <image href="core_02_07_01_images/image037.png" height="33"
+        width="18" id="image_ud1_qxn_qy"/>. Остальные неизвестные находим из (2.25) прямой
+      подстановкой. В рассмотренном примере решение системы алгебраических уравнений с пятью
+      неизвестными свелось к решению системы с двумя неизвестными. Таким образом, метод определяющих
+      неизвестных позволяет уменьшить размер решаемой системы, используя топологию структурной
+      схемы.</p>
+    <p>Алгоритм выделения минимального числа определяющих блоков рассмотрен на примере структурной
+      схемы, приведенной на рисунке 2.5.</p>
+    <p>Структурная схема представляется в виде ориентированного графа, где вершинами графа являются
+      блоки, а дугами графа – линии связи. Алгоритм заключается в последовательном исключении вершин
+      графа.</p>
+    <p>В процессе первичной сортировки исключаются (вместе со всеми принадлежащими им дугами)
+      вершины, соответствующие приоритетным (на рисунке обозначены номерами 1 и 2) и первично
+      отсортированным блокам (3 и 4). В результате исходный граф приводится к виду, представленному
+      на рисунке 2.5(б). </p>
+    <p> </p>
+    <p><image href="core_02_07_01_images/image038.png" height="230" width="436" id="image_vd1_qxn_qy"
+      /></p>
+    <p>а) Исходная структурная схема</p>
+    <p><image href="core_02_07_01_images/image039.png" height="172" width="289" id="image_wd1_qxn_qy"
+      /></p>
+    <p>б) Структурная схема после первичной сортировки</p>
+    <table id="table_xd1_qxn_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="core_02_07_01_images/image040.png" height="153" width="277"
+                id="image_yd1_qxn_qy"/></entry>
+            <entry><image href="core_02_07_01_images/image041.png" height="138" width="161"
+                id="image_zd1_qxn_qy"/></entry>
+          </row>
+          <row>
+            <entry>в) Образования петли при исключении вершины 10</entry>
+            <entry>г) Определяющие блоки</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Рисунок 2.5 – Выделение определяющих переменных</p>
+    <p>Затем начинается собственно процесс выявления определяющих блоков. В качестве очередной
+      исключаемой вершины выбирается вершина, имеющая наименьшее значение из произведения числа
+      входящих и выходящих дуг. На рисунке 2.5(б) – это блок с номером 10. Если после исключения
+      очередной вершины образовалась петля, то вершина с петлей и принадлежащими ей дугами удаляется
+      из графа, соответствующая этой вершине переменная включается в список определяющих, а блок
+      считается отсортированным. На рисунке 2.5(в) таким блоком является сумматор 5. Результат
+      процесса выявления определяющих блоков показан на рисунке 2.5(г). К этому моменту все
+      определяющие блоки отсортированы, и дальнейший процесс упорядочения блоков в структурной схеме
+      аналогичен первичной сортировке. </p>
+    <p>Итоговый порядок расчета блоков структурной схемы, представленной на рисунке 2.5,
+      соответствует их нумерации на схеме (примечание: отображение нумерации включается опцией
+      Главного Окна, пункт меню Вид – Отображать номера блоков на схеме).</p>
+  </body>
+</topic>

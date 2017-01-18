@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Редуктор</title>
+  <body>
+    <table id="table_anh_sp4_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/0672.png" height="34" width="38" id="image_bnh_sp4_qy"
+              /></entry>
+            <entry>Редуктор</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry/>
+          </row>
+          <row>
+            <entry><image href="images_old/0672s.png" height="50" width="84" id="image_cnh_sp4_qy"
+              /></entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry/>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2">
+              <p>Блок реализует математическую модель элементарного звена механической передачи
+                (одноступенчатого редуктора), в которой учитываются инерционность промежуточных
+                ступеней и явления трения в упругом элементе и на выходном валу звена.</p>
+              <p>На рисунке 1 представлена кинематическая схема элементарного механического звена,
+                на котором обозначено: <image href="images_old/0672_html_m4800710b.gif" height="23" width="78"
+                  id="image_dnh_sp4_qy"/>– соответственно входной и выходной валы,<image
+                  href="images_old/0672_html_184834d.gif" height="23" width="72" id="image_enh_sp4_qy"/>– углы
+                поворота входного и выходного валов, i – безынерционный элемент зацепления (с
+                передаточным числом<image href="images_old/0672_html_2a59a968.gif" height="50" width="155"
+                  id="image_fnh_sp4_qy"/>), c – коэффициент жёсткости безынерционного упругого
+                элемента, ТР – элемент, характеризующий наличие внутренних сил вязкого трения в
+                упругом элементе, Л – безынерционный элемент, характеризующий люфт в
+                  зацеплении,<image href="images_old/0672_html_30267c42.gif" height="23" width="26"
+                  id="image_gnh_sp4_qy"/>– момент инерции на выходном валу звена, который может
+                включать в себя момент инерции шестерни, момент инерции соединительной муфты и
+                момент инерции объекта.</p>
+              <p><image href="images_old/0672_1.png" height="339" width="711" id="image_hnh_sp4_qy"
+                /></p>
+              <p>Рисунок 1</p>
+              <p><b>Уравнения динамики блока:</b></p>
+              <p><image href="images_old/0672_html_2ac9ddbe.gif" height="258" width="477" id="image_inh_sp4_qy"
+                />(1)</p>
+              <p>где:</p>
+              <p><image href="images_old/0672_html_20a5f629.gif" height="21" width="39" id="image_jnh_sp4_qy"
+                />– угол скручивания упругого элемента;</p>
+              <p><image href="images_old/0672_html_m222abdbb.gif" height="72" width="314" id="image_knh_sp4_qy"
+                /></p>
+              <p><image href="images_old/0672_html_m1e72e518.gif" height="52" width="352" id="image_lnh_sp4_qy"
+                /></p>
+              <p><image href="images_old/0672_html_46254ee4.gif" height="72" width="274" id="image_mnh_sp4_qy"
+                />– знак x(t);</p>
+              <p>i – передаточное число редуктора;</p>
+              <p><image href="images_old/0672_html_30267c42.gif" height="23" width="26" id="image_nnh_sp4_qy"
+                />– момент инерции на выходном валу звена, кг·м2;</p>
+              <p>a – половина величины люфта звена, рад;</p>
+              <p>c – коэффициент жёсткости безынерционного упругого элемента;</p>
+              <p><image href="images_old/0672_html_2a149835.gif" height="23" width="28" id="image_onh_sp4_qy"
+                />– коэффициент вязкого трения в упругом элементе, Н·м/(рад/с);</p>
+              <p><image href="images_old/0672_html_47e2965e.gif" height="23" width="28" id="image_pnh_sp4_qy"
+                />– момент, обусловленный наличием внутренних сил сухого трения в упругом элементе,
+                Н·м;</p>
+              <p><image href="images_old/0672_html_m30e7045f.gif" height="23" width="28" id="image_qnh_sp4_qy"
+                />– коэффициент вязкого трения на выходном валу, Н·м/(рад/с);</p>
+              <p><image href="images_old/0672_html_73b3cde9.gif" height="23" width="28" id="image_rnh_sp4_qy"
+                />– момент сухого трения на выходном валу, Н·м;</p>
+              <p><image href="images_old/0672_html_121561fb.gif" height="23" width="102" id="image_snh_sp4_qy"
+                />– углы поворота входного и выходного валов, рад;</p>
+              <p><image href="images_old/0672_html_m11bde72a.gif" height="23" width="108" id="image_tnh_sp4_qy"
+                />– угловые скорости входного и выходного валов, рад/с;</p>
+              <p><image href="images_old/0672_html_2bef0c43.gif" height="23" width="56" id="image_unh_sp4_qy"
+                />– момент от внутренних сил вязкого и сухого трения в упругом элементе, Н·м;</p>
+              <p><image href="images_old/0672_html_731f1809.gif" height="23" width="55" id="image_vnh_sp4_qy"
+                />– момент, приложенный к входному валу;</p>
+              <p><image href="images_old/0672_html_15c11bcd.gif" height="23" width="63" id="image_wnh_sp4_qy"
+                />– момент, приложенный к выходному валу;</p>
+              <p><image href="images_old/0672_html_687248e1.gif" height="23" width="62" id="image_xnh_sp4_qy"
+                />– момент от сил трения, действующих на выходной вал.</p>
+              <p>Блок имеет 2 входных и 2 выходных сигнала.</p>
+              <p><b>Входные сигналы:</b></p>
+              <ol id="ol_ynh_sp4_qy">
+                <li>
+                  <p><image href="images_old/0672_html_3a9b28de.gif" height="23" width="48"
+                      id="image_znh_sp4_qy"/>– угловая скорость входного вала, рад/с;</p>
+                </li>
+                <li>
+                  <p><image href="images_old/0672_html_15c11bcd.gif" height="23" width="63"
+                      id="image_a4h_sp4_qy"/>– момент, приложенный к выходному валу;</p>
+                </li>
+              </ol>
+              <p><b>Выходные сигналы:</b></p>
+              <ol id="ol_b4h_sp4_qy">
+                <li>
+                  <p><image href="images_old/0672_html_m48634264.gif" height="23" width="49"
+                      id="image_c4h_sp4_qy"/>– угловая скорость выходного вала, рад/с;</p>
+                </li>
+                <li>
+                  <p><image href="images_old/0672_html_65b71d0b.gif" height="23" width="70"
+                      id="image_d4h_sp4_qy"/>– момент, приложенный к входному валу (<i>взятый с
+                      обратным знаком!</i>);</p>
+                </li>
+              </ol>
+              <p><b>Свойства:</b></p>
+              <ul id="ul_e4h_sp4_qy">
+                <li>
+                  <p>Передаточное число редуктора i;</p>
+                </li>
+                <li>
+                  <p>Момент инерции нагрузки<image href="images_old/0672_html_30267c42.gif" height="23"
+                      width="26" id="image_f4h_sp4_qy"/>, кг·м2;</p>
+                </li>
+                <li>
+                  <p>Половина величины люфта a, рад;</p>
+                </li>
+                <li>
+                  <p>Коэффициент жёсткости с, Н·м/рад;</p>
+                </li>
+                <li>
+                  <p>Коэффициент вязкого трения в упругом элементе<image
+                      href="images_old/0672_html_2a149835.gif" height="23" width="28" id="image_g4h_sp4_qy"/>,
+                    Н·м/(рад/с);</p>
+                </li>
+                <li>
+                  <p>Момент сухого трения в упругости<image href="images_old/0672_html_47e2965e.gif"
+                      height="23" width="28" id="image_h4h_sp4_qy"/>, Н·м;</p>
+                </li>
+                <li>
+                  <p>Коэффициент вязкого трения на выходном валу<image
+                      href="images_old/0672_html_m30e7045f.gif" height="23" width="28" id="image_i4h_sp4_qy"/>,
+                    Н·м/(рад/с);</p>
+                </li>
+                <li>
+                  <p>Момент сухого трения на выходном валу<image href="images_old/0672_html_73b3cde9.gif"
+                      height="23" width="28" id="image_j4h_sp4_qy"/>, Н·м;</p>
+                </li>
+                <li>
+                  <p>Начальная угловая скорость выходного вала<image href="images_old/0672_html_4071a5f7.gif"
+                      height="23" width="52" id="image_k4h_sp4_qy"/>, рад/с;</p>
+                </li>
+                <li>
+                  <p>Начальный угол скручивания<image href="images_old/0672_html_m4db2385c.gif" height="21"
+                      width="42" id="image_l4h_sp4_qy"/>, рад;</p>
+                </li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>

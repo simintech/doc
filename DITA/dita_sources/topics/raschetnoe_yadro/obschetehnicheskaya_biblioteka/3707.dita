@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>НЛ - Нечёткое НЕТ (отрицание) </title>
+  <body>
+    <table id="table_ps4_sl4_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/3707/image001.png" height="32" width="32"
+                id="image_qs4_sl4_qy"/></entry>
+            <entry><ph id="OLE_LINK1">НЛ - Нечёткое <b>НЕТ </b>(отрицание)</ph></entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/3707/image002.png" height="69" width="132"
+                id="image_rs4_sl4_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок предназначен для формирования логических правил и расчета результата их применения в
+      системах нечеткой логики (активация правил).</p>
+    <p>Блок реализует расчет правила логики по процедуре нечеткой логической операции <b>НЕТ
+        </b>(<b>отрицание</b>). На вход подаются значения функции принадлежности терма
+      лингвистической переменной, над которой производится операция отрицания, результат –
+      заключение правила, умноженное на весовой коэффициент. Результат рассчитывается по следующей
+      формуле:</p>
+    <p><image href="images_old/3707/image003.png" height="22" width="121" id="image_ss4_sl4_qy"/></p>
+    <p> </p>
+    <p>где:</p>
+    <p>Y– значение выхода блока;</p>
+    <p><image href="images_old/3707/image004.png" height="22" width="12" id="image_ts4_sl4_qy"/> –
+      значения входа;</p>
+    <p><image href="images_old/3707/image005.png" height="22" width="14" id="image_us4_sl4_qy"/> –
+      весовой коэффициент.</p>
+    <p> </p>
+    <p><b>Блок имеет одни вход и один выход:</b></p>
+    <p>входной порт – значения функции принадлежности входного терма;</p>
+    <p>выходной порт – результат активации правила.</p>
+    <p> </p>
+    <p><b>Параметры блока</b></p>
+    <p>· Весовой коэффициент w – весовой коэффициент правила в общей базе правил.</p>
+    <ul id="ul_vs4_sl4_qy">
+      <li> </li>
+    </ul>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+  </body>
+</topic>

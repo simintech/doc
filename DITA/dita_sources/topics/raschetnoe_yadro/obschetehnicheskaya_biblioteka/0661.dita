@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Двигатель постоянного тока</title>
+  <body>
+    <table id="table_p1q_344_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/0661.png" height="33" width="38" id="image_q1q_344_qy"
+              /></entry>
+            <entry>Двигатель постоянного тока</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry/>
+          </row>
+          <row>
+            <entry><image href="images_old/0661s.png" height="52" width="88" id="image_r1q_344_qy"
+              /></entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry/>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2">
+              <p>Блок реализует математическую модель двигателя постоянного тока (ДПТ) с независимым
+                возбуждением.</p>
+              <p><b>Уравнения динамики</b> блока:</p>
+              <p><image href="images_old/0661_html_m772a0843.gif" height="132" width="267"
+                  id="image_s1q_344_qy"/>(1)</p>
+              <p>где<image href="images_old/0661_html_570427f6.gif" height="21" width="40"
+                  id="image_t1q_344_qy"/>— напряжение, приложенное к якорю двигателя, В;</p>
+              <p><image href="images_old/0661_html_480e47df.gif" height="21" width="36" id="image_u1q_344_qy"
+                />— ток в цепи якоря двигателя, А;</p>
+              <p><image href="images_old/0661_html_23be5593.gif" height="21" width="40" id="image_v1q_344_qy"
+                />— угол поворота вала двигателя, рад;</p>
+              <p><image href="images_old/0661_html_m483ce6b1.gif" height="23" width="55" id="image_w1q_344_qy"
+                />— момент, развиваемый на валу двигателя, Н·м;</p>
+              <p><image href="images_old/0661_html_m7a418b2b.gif" height="23" width="55" id="image_x1q_344_qy"
+                />— возмущающий момент на валу двигателя, Н·м;</p>
+              <p><image href="images_old/0661_html_502e9375.gif" height="23" width="24" id="image_y1q_344_qy"
+                />— коэффициент противо-ЭДС;</p>
+              <p><image href="images_old/0661_html_79677bbf.gif" height="23" width="27" id="image_z1q_344_qy"
+                />— моментный коэффициент;</p>
+              <p><image href="images_old/0661_html_2646893a.gif" height="21" width="21" id="image_abq_344_qy"
+                />— сопротивление цепи якоря двигателя, Ом;</p>
+              <p><image href="images_old/0661_html_7ebbee66.gif" height="21" width="20" id="image_bbq_344_qy"
+                />— индуктивность цепи якоря двигателя, Гн;</p>
+              <p><image href="images_old/0661_html_b05893.gif" height="21" width="20" id="image_cbq_344_qy"/>—
+                момент инерции ротора двигателя, кг·м2 (при абсолютно жесткой механической передаче
+                без люфта вместо момента инерции ротора двигателя следует рассматривать приведенный
+                момент инерции (J + Jнi2), где Jн - момент инерции нагрузки).</p>
+              <p>Блок имеет 2 входных и 3 выходных порта. </p>
+              <p><b>В</b><b>ходные сигналы</b>:</p>
+              <ol id="ol_dbq_344_qy">
+                <li>
+                  <p>Момент <image href="images_old/0661_html_m7a418b2b.gif" height="23" width="55"
+                      id="image_ebq_344_qy"/>.</p>
+                </li>
+                <li>
+                  <p>Напряжение <image href="images_old/0661_html_3e8cbd78.gif" height="21" width="40"
+                      id="image_fbq_344_qy"/>.</p>
+                </li>
+              </ol>
+              <p><b>В</b><b>ыходны</b><b>е</b><b> сигналы</b>:</p>
+              <ol id="ol_gbq_344_qy">
+                <li>
+                  <p>Угол поворота вала <image href="images_old/0661_html_m5831b8e7.gif" height="21" width="40"
+                      id="image_hbq_344_qy"/>, рад.</p>
+                </li>
+                <li>
+                  <p>Угловая скорость (частота) вращения <image href="images_old/0661_html_m36e07c53.gif"
+                      height="21" width="47" id="image_ibq_344_qy"/>, рад/с.</p>
+                </li>
+                <li>
+                  <p>Момент, развиваемый на валу двигателя <image href="images_old/0661_html_2b78d5d1.gif"
+                      height="23" width="55" id="image_jbq_344_qy"/>, Н·м;</p>
+                </li>
+              </ol>
+              <p>Дополнительно на третий выход можно выводить:</p>
+              <ol id="ol_kbq_344_qy">
+                <li>
+                  <p>Ток в цепи якоря двигателя <image href="images_old/0661_html_m2ed25e99.gif" height="21"
+                      width="36" id="image_lbq_344_qy"/>, А.</p>
+                </li>
+              </ol>
+              <p><b>Свойства</b>:</p>
+              <ul id="ul_mbq_344_qy">
+                <li>
+                  <p>Сопротивление цепи ротора <image href="images_old/0661_html_2646893a.gif" height="21"
+                      width="21" id="image_nbq_344_qy"/>, Ом;</p>
+                </li>
+                <li>
+                  <p>Индуктивность цепи ротора <image href="images_old/0661_html_7ebbee66.gif" height="21"
+                      width="20" id="image_obq_344_qy"/>, Гн;</p>
+                </li>
+                <li>
+                  <p>Моментный коэффициент <image href="images_old/0661_html_79677bbf.gif" height="23"
+                      width="27" id="image_pbq_344_qy"/>;</p>
+                </li>
+                <li>
+                  <p>Коэффициент противо-ЭДС <image href="images_old/0661_html_502e9375.gif" height="23"
+                      width="24" id="image_qbq_344_qy"/>;</p>
+                </li>
+                <li>
+                  <p>Момент инерции ротора двигателя <image href="images_old/0661_html_b05893.gif" height="21"
+                      width="20" id="image_rbq_344_qy"/>, кг·м2;</p>
+                </li>
+                <li>
+                  <p>Начальный угол поворота вала двигателя <image href="images_old/0661_html_m1db1b05d.gif"
+                      height="21" width="43" id="image_sbq_344_qy"/>, рад;</p>
+                </li>
+                <li>
+                  <p>Начальная угловая скорость (частота) вращения вала двигателя <image
+                      href="images_old/0661_html_6fea424f.gif" height="21" width="51" id="image_tbq_344_qy"/>,
+                    рад/с;</p>
+                </li>
+                <li>
+                  <p>Начальный ток в цепи якоря <image href="images_old/0661_html_mc103ec9.gif" height="21"
+                      width="39" id="image_ubq_344_qy"/>, А.</p>
+                </li>
+                <li>
+                  <p>Дополнительный вывод.</p>
+                </li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>
