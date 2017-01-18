@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Опции меню Файл </title>
+  <body>
+    <p> </p>
+    <table id="table_es2_1zm_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><b>Опция</b></entry>
+            <entry><b>Описание</b></entry>
+          </row>
+          <row>
+            <entry><b>Создать</b></entry>
+            <entry>Очистка содержимого окна редактирования</entry>
+          </row>
+          <row>
+            <entry><b>Открыть</b></entry>
+            <entry>Загрузка в окно <b><i>Графический редактор</i></b> из файла</entry>
+          </row>
+          <row>
+            <entry><b>Сохранить как</b></entry>
+            <entry>Сохранение содержимого окна <b><i>Графический редактор</i></b> в файл графики с
+              расширением *.gcn</entry>
+          </row>
+          <row>
+            <entry><b>Заменить группы из файла</b></entry>
+            <entry>Замена содержимого выделенных групп на новое из файла</entry>
+          </row>
+          <row>
+            <entry><b>Запись в видео-файл</b></entry>
+            <entry>Запись изображения в окне <b><i>Графический редактор</i></b> в видео-файл в
+              стандартном формате (*.avi)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

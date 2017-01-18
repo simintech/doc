@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Опции меню Сервис </title>
+  <body>
+    <p> </p>
+    <table id="table_xrn_3zm_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><b>Опция</b></entry>
+            <entry><b>Описание</b></entry>
+          </row>
+          <row>
+            <entry><b>Сигналы</b></entry>
+            <entry>Вызов редактора внешних сигналов <i>графического контейнера</i></entry>
+          </row>
+          <row>
+            <entry><b>Глобальные переменные</b></entry>
+            <entry>Вызов редактора глобальных переменных <i>графического контейнера</i></entry>
+          </row>
+          <row>
+            <entry><b>Локальные переменные</b></entry>
+            <entry>Вызов редактора локальных переменных <i>графического контейнера</i></entry>
+          </row>
+          <row>
+            <entry><b>Генерация сигналов и связей</b></entry>
+            <entry>Автоматическая генерация сигналов, связей и <i>скрипта</i> по шаблонам для
+              выделенных объектов </entry>
+          </row>
+          <row>
+            <entry><b>Порядок перерисовки</b></entry>
+            <entry>Изменение порядка перерисовки объектов</entry>
+          </row>
+          <row>
+            <entry><b>Опции</b></entry>
+            <entry>Установка общих свойств формы редактирования: цвет фона, имя формы, заголовок
+              формы</entry>
+          </row>
+          <row>
+            <entry><b>Связи</b></entry>
+            <entry>Вызов редактора связей и дерева проекта данного окна</entry>
+          </row>
+          <row>
+            <entry><b>Скрипт</b></entry>
+            <entry>Вызов текстового редактора для редактирования <i>скрипта</i>– текстового
+              алгоритма перерисовки</entry>
+          </row>
+          <row>
+            <entry><b>Отладка</b></entry>
+            <entry>Вызов <b><i>Окна отладки</i></b> графики текущего редактируемого
+              изображения</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

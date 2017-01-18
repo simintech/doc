@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Cтруктура подкаталога bin</title>
+  <body>
+    <table id="table_pqs_ksn_qy">
+      <tgroup cols="1">
+        <colspec colnum="1" colname="col1"/>
+        <tbody>
+          <row>
+            <entry>
+              <p>В подкаталоге bin содержатся исполняемые файлы, файлы настроек и библиотек,
+                необходимые для функционирования среды, а также файлы модулей расширения
+                (плагинов).</p>
+              <p>Путь подкаталога bin по умолчанию определен как:</p>
+              <p><b>C:\SimInTech</b><b>\bin</b></p>
+              <p>Различные версии SimInTech (профессиональная, демонстрационная, учебная) имеют
+                общие файлы и подкаталоги, размещаемые в подкаталоге bin. В профессиональной версии
+                перечень файлов с расширением <b>.dll</b> и других более полный за счет включения в
+                SimInTech дополнительных модулей расширения и/или <i>Специализированных</i>
+                библиотек типовых блоков.</p>
+              <p>На экранной копии ниже представлена типовая структура подкаталога
+                  <b>SimInTech\bin</b>:<image placement="break" href="images/bin_html_120bc7bb.png"
+                  align="center" id="image_gl3_lsn_qy"/></p>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>

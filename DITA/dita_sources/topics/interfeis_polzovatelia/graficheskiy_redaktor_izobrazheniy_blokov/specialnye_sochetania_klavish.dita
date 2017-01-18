@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Специальные сочетания клавиш </title>
+  <body>
+    <p> </p>
+    <table id="table_uwj_qzm_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><b>Сочетание клавиш</b></entry>
+            <entry><b>Описание</b></entry>
+          </row>
+          <row>
+            <entry><b>Ctrl + Левая кнопка «мыши»</b></entry>
+            <entry>Плавное масштабирование изображения в поле редактора (Zoom)</entry>
+          </row>
+          <row>
+            <entry><b>Ctrl + Правая кнопка «мыши»</b></entry>
+            <entry>Плавное перемещение изображения в поле редактора (Aerial View)</entry>
+          </row>
+          <row>
+            <entry><b>Shift + Левая кнопка «мыши»</b></entry>
+            <entry>При щелчке по полю редактирования, если удерживать клавишу Shift, будет
+              появляться окно выбора объектов, в котором можно указать нужный объект, если его
+              заслоняет другой объект</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

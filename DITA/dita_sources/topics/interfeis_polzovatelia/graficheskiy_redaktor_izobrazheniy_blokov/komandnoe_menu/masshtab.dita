@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Опции меню Масштаб </title>
+  <body>
+    <p> </p>
+    <table id="table_dnm_dzm_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><b>Опция</b></entry>
+            <entry><b>Описание</b></entry>
+          </row>
+          <row>
+            <entry><b>Увеличить в 2 раза</b></entry>
+            <entry>Увеличение масштаба изображения в 2 раза.</entry>
+          </row>
+          <row>
+            <entry><b>Уменьшить в 2 раза</b></entry>
+            <entry>Уменьшение масштаба изображения в 2 раза</entry>
+          </row>
+          <row>
+            <entry><b>Увеличить фрагмент</b></entry>
+            <entry>Увеличение выделенного фрагмента изображения во все окно (для увеличения –
+              сначала выбрать пункт меню, затем выделить фрагмент изображения) </entry>
+          </row>
+          <row>
+            <entry><b>Исходное положение</b></entry>
+            <entry>Установка центра координат изображения по центру окна (центр координат в режиме
+              показа с сеткой изображается крестиком) </entry>
+          </row>
+          <row>
+            <entry><b>Исходный масштаб</b></entry>
+            <entry>Установка масштаба изображения 1:1</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

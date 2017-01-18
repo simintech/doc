@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Меню Окно </title>
+  <body>
+    <p> Данное меню содержит команды, предназначенные для управления окнами. Меню является
+      динамически изменяемым в процессе работы среды: при открытии/закрытии новых проектов
+      пользователем формируется список открытых проектов. Пользователь в данном списке может выбрать
+      нужный ему проект, который будет развернут поверх остальных ранее развернутых проектов.</p>
+    <table id="table_a2q_vcf_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><b>Команда</b></entry>
+            <entry><b>Описание</b></entry>
+          </row>
+          <row>
+            <entry><b>Показать все</b></entry>
+            <entry>Разворачивает все схемные окна.</entry>
+          </row>
+          <row>
+            <entry><b>Скрыть все</b></entry>
+            <entry>Свораивает все схемные окна.</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>

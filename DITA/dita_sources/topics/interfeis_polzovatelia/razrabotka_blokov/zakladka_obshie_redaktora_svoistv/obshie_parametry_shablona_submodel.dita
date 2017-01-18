@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Общие параметры шаблона Блок субмодель </title>
+  <body>
+    <p>
+      <table id="table_irx_g2n_qy">
+        <tgroup cols="3">
+          <colspec colnum="1" colname="col1"/>
+          <colspec colnum="2" colname="col2"/>
+          <colspec colnum="3" colname="col3"/>
+          <thead>
+            <row>
+              <entry><b>Название</b></entry>
+              <entry><b>Имя</b></entry>
+              <entry><b>Описание</b></entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>Цвет фона субмодели</entry>
+              <entry>ModelColor</entry>
+              <entry>Определяет цвет фона, на котором создается внутренняя структурная схема.
+              </entry>
+            </row>
+            <row>
+              <entry>Закрыть субмодель</entry>
+              <entry>Locked</entry>
+              <entry>
+                <p>Позволяет скрывать от пользователя внутреннюю структуру элемента.</p>
+                <p>Возможные значения: </p>
+                <p><image href="../socrat.files/socrat_comm11_html_m75a181fb.gif" id="image_jrx_g2n_qy"
+                  /></p>
+              </entry>
+            </row>
+            <row>
+              <entry>Имя файла субмодели</entry>
+              <entry>FileName</entry>
+              <entry>Имя отдельного файла для сохранения внутренней структуры субмодели.</entry>
+            </row>
+            <row>
+              <entry>Активная модель</entry>
+              <entry>ActiveModel</entry>
+              <entry>
+                <p>Для расчета модели используется отдельный расчетный модуль.</p>
+                <p>Возможные значения: <b>Да</b> или <b>Нет </b>(по умолчанию).</p>
+              </entry>
+            </row>
+            <row>
+              <entry>Способ ассоциирования портов </entry>
+              <entry>PortAssStyle</entry>
+              <entry>
+                <p>Определяет расположение портов на графическом элементе.</p>
+                <p>Возможные значения: </p>
+                <p><image href="../socrat.files/socrat_comm11_html_m262b21f4.gif" id="image_krx_g2n_qy"
+                  /></p>
+              </entry>
+            </row>
+            <row>
+              <entry>Таблица базы данных</entry>
+              <entry>TableName</entry>
+              <entry>Позволяет установить имя таблицы, которая используется при создании в проекте
+                базы данных сигналов при условии ее использования.</entry>
+            </row>
+            <row>
+              <entry>Заморозить порты субмодели</entry>
+              <entry>NotSetPorts</entry>
+              <entry>
+                <p>Признак получения и передачи субмоделью сигналов по портам подключения.</p>
+                <p>Возможные значения: <b>Да</b><b>(</b>субмодель не принимает и не передает сигналы
+                  по портам подключения) или <b>Нет </b>(по умолчанию).</p>
+              </entry>
+            </row>
+            <row>
+              <entry>Интерпретируемый скрипт </entry>
+              <entry>Script</entry>
+              <entry>Текст (последовательность команд) на внутреннем языке программирования,
+                исполняемый при расчете модели.</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </p>
+  </body>
+</topic>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Меню Режим отладки </title>
+  <body>
+    <p>Содержит команды, которые позволяют пользователю выбрать режим отладки проекта.</p>
+    <table id="table_enb_3df_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><b>Команда</b></entry>
+            <entry><b>Описание</b></entry>
+          </row>
+          <row>
+            <entry><b>Локальный</b></entry>
+            <entry>Активирует режим, в котором расчет проекта производится на локальном комьютере
+              пользователя.</entry>
+          </row>
+          <row>
+            <entry><b>Удаленный</b></entry>
+            <entry>Активирует режим, в котором расчет проекта производится на удаленном расчетном
+              сервере.</entry>
+          </row>
+          <row>
+            <entry><b>Получать только входы</b></entry>
+            <entry>Активирует режим, в котором расчет проекта производится на локальном компьютере
+              пользователя, однако значения входных переменных приходят с удаленного расчетного
+              сервера.</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>
