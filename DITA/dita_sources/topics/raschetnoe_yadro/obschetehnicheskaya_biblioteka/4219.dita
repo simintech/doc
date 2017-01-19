@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика – трение поступательного движения   </title>
+  <body>
+    <table id="table_mxm_q5r_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4219/image001.png" height="32" width="32"
+                id="image_nxm_q5r_qy"/></entry>
+            <entry>Механика – трение поступательного движения</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4219/image002.png" height="85" width="104"
+                id="image_oxm_q5r_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> В блоке реализована математическая модель трения между двумя контактирующими телами, которые
+      двигаются поступательно. </p>
+    <p> Предполагается, что сила трения зависит от относительной скорости и является суммой
+      следующий составляющих:</p>
+    <ul id="ul_pxm_q5r_qy">
+      <li>· силы страгивания (трение Штрибека и кулоновское трение);</li>
+      <li>· силы вязкого трения.</li>
+    </ul>
+    <p>Схематически вышеперечисленные силы представлены на рисунке.</p>
+    <p><image href="images_old/4219/image003.jpg" height="373" width="425" id="image_qxm_q5r_qy"/></p>
+    <p>Математическая модель блока описывается следующей системой уравнений:</p>
+    <p> Если <image href="images_old/4219/image004.png" height="24" width="72" id="image_rxm_q5r_qy"/>,
+      то </p>
+    <p><image href="images_old/4219/image005.png" height="24" width="372" id="image_sxm_q5r_qy"/><i>,
+      </i>иначе</p>
+    <p><image href="images_old/4219/image006.png" height="44" width="342" id="image_txm_q5r_qy"/></p>
+    <table id="table_uxm_q5r_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4219/image007.png" height="24" width="11"
+                id="image_vxm_q5r_qy"/></entry>
+            <entry>-</entry>
+            <entry>сила трения</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4219/image008.png" height="24" width="15"
+                id="image_wxm_q5r_qy"/></entry>
+            <entry>-</entry>
+            <entry>кулоновская сила</entry>
+          </row>
+          <row>
+            <entry>D</entry>
+            <entry>-</entry>
+            <entry>коэффициент вязкого трения</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4219/image009.png" height="24" width="32"
+                id="image_xxm_q5r_qy"/></entry>
+            <entry>-</entry>
+            <entry>сила страгивания</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4219/image010.png" height="24" width="19"
+                id="image_yxm_q5r_qy"/></entry>
+            <entry>-</entry>
+            <entry>коэффициент затухания</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4219/image011.png" height="24" width="97"
+                id="image_zxm_q5r_qy"/></entry>
+            <entry>-</entry>
+            <entry>относительная скорость</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4219/image012.png" height="24" width="25"
+                id="image_aym_q5r_qy"/></entry>
+            <entry>-</entry>
+            <entry>пороговая скорость</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Входные порты блока:</b></p>
+    <p>Блок имеет два механических порта поступательного движения – C и R. Постулируется, что момент
+      трения положителен, если <image href="images_old/4219/image013.png" height="24" width="64"
+        id="image_bym_q5r_qy"/>.</p>
+    <p><b>Выходные порты блока – отсутствуют</b></p>
+    <p><b>Свойства блока:</b></p>
+    <table id="table_cym_q5r_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Fbrk</entry>
+            <entry>-</entry>
+            <entry>момент трения страгивания, H</entry>
+          </row>
+          <row>
+            <entry>Fc</entry>
+            <entry>-</entry>
+            <entry>момент кулоновского (сухого) трения, H</entry>
+          </row>
+          <row>
+            <entry>D</entry>
+            <entry>-</entry>
+            <entry>коэффициент вязкого трения,<image href="images_old/4219/image014.png" height="41"
+                width="25" id="image_dym_q5r_qy"/></entry>
+          </row>
+          <row>
+            <entry>Cv</entry>
+            <entry>-</entry>
+            <entry>коэффициент затухания, <image href="images_old/4219/image015.png" height="36"
+                width="10" id="image_eym_q5r_qy"/></entry>
+          </row>
+          <row>
+            <entry>Vth</entry>
+            <entry>-</entry>
+            <entry>порог угловой скорости, м/с</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_fym_q5r_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>F</entry>
+            <entry>-</entry>
+            <entry>сила, <image href="images_old/4219/image016.png" height="24" width="14"
+                id="image_gym_q5r_qy"/></entry>
+          </row>
+          <row>
+            <entry>V</entry>
+            <entry>-</entry>
+            <entry>относительная скорость, <image href="images_old/4219/image017.png" height="24"
+                width="30" id="image_hym_q5r_qy"/></entry>
+          </row>
+          <row>
+            <entry>Q</entry>
+            <entry>-</entry>
+            <entry>мощность, Вт</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

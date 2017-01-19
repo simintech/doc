@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика – Идеальный источник силы поступательного движения </title>
+  <body>
+    <table id="table_cmn_vxr_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4234/image001.png" height="32" width="32"
+                id="image_dmn_vxr_qy"/></entry>
+            <entry>Механика – Идеальный источник силы поступательного движения</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4234/image002.png" height="79" width="120"
+                id="image_emn_vxr_qy"/>
+            </entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>В блоке реализована модель идеального источника силы. Источник идеален в том смысле, что
+      предполагается, что его мощности всегда достаточно, чтобы создать требуемую силу.</p>
+    <p>Уравнения модели блока имеют следующий вид:</p>
+    <p><image href="images_old/4234/image003.png" height="22" width="49" id="image_fmn_vxr_qy"/>, где</p>
+    <table id="table_gmn_vxr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>F</entry>
+            <entry>-</entry>
+            <entry>сила на механическом входе</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4234/image004.png" height="22" width="17"
+                id="image_hmn_vxr_qy"/></entry>
+            <entry>-</entry>
+            <entry>Угловая скорость, рад/с</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p><b>Входные порты блока:</b></p>
+    <p> Блок имеет один механический порт поступательного движения и один математический порт S, на
+      который поступает заданное значение силы.</p>
+    <p>
+      <b>Выходные порты блока – отсутствуют.</b></p>
+    <p><b> Свойства блока – отсутствуют.</b></p>
+    <p><b> Параметры блока:</b></p>
+    <table id="table_imn_vxr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>F</entry>
+            <entry>-</entry>
+            <entry>Сила, н</entry>
+          </row>
+          <row>
+            <entry>V</entry>
+            <entry>-</entry>
+            <entry>Скорость, м/с</entry>
+          </row>
+          <row>
+            <entry>Q</entry>
+            <entry>-</entry>
+            <entry>Мощность, Вт</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

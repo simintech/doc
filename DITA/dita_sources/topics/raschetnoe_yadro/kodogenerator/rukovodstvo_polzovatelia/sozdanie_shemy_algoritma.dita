@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Создание схемы алгоритма</title>
+  <body>
+   
+              <p>Для создания схемы алгоритма (или регулятора) необходимо:</p>
+              <p>1) Создать новый проект. Рабочее окно редактирования нового проекта вызывают
+                командой главного меню «Файл → Новая схема → Схема автоматики» или последовательным
+                нажатием левой клавиши «мыши» на значке «Новый проект» главной панели инструментов и
+                «Схема автоматики», в соответствии с рисунком 1.</p>
+              <p><image href="rp-images/rp-4-1-ris-01.png" height="185" width="805"
+                  id="image_tgl_4ws_qy"/></p>
+              <p>Рисунок 1</p>
+              <p>2) В рабочем окне с именем «Схема автоматики.prt» создать схему алгоритма:</p>
+              <p>а) из закладки «Источники» палитры блоков главного окна графической оболочки в
+                рабочее окно проекта вставить блоки «Входной контакт s3» и «Выходной контакт s3»,
+                показано на рисунке 2;</p>
+              <p><image href="rp-images/rp-4-1-ris-02.png" height="196" width="918"
+                  id="image_ugl_4ws_qy"/></p>
+              <p>Рисунок 2</p>
+              <p>б) из любых закладок (источники, операторы, векторные и т.д.) палитры блоков
+                главного окна графической оболочки выбором требуемых функциональных или других по
+                типу блоков в рабочем окне проекта собрать схему алгоритма, показано на рисунке
+                3.</p>
+              <p><image href="rp-images/rp-4-1-ris-03.png" height="349" width="548"
+                  id="image_vgl_4ws_qy"/></p>
+              <p>Рисунок 3</p>
+              <p>Подробное описание состава блоков и их свойств приведено в общетехнической
+                библиотеке блоков справочной системы, которую вызывают командой главного меню
+                «Справка → Содержание → Подсистема автоматики → Общетехническая библиотека блоков»,
+                в соответствии с рисунком 4.</p>
+              <p><image href="rp-images/rp-4-1-ris-04.png" height="591" width="791"
+                  id="image_wgl_4ws_qy"/></p>
+              <p>Рисунок 4</p>
+              <p>3) Задать параметры блоков. Окно редактирования свойств блока вызывают двойным
+                нажатием левой кнопки «мыши» по графическому изображению блока в рабочем окне
+                проекта. В качестве примера на рисунке 5 представлено окно редактирования «Свойства
+                : …» свойств блока «Входной сигнал». Имя входного сигнала (переменной) указывают в
+                строке контрольного параметра «Имя контакта».</p>
+              <p><image href="rp-images/rp-4-1-ris-05.png" height="469" width="561"
+                  id="image_xgl_4ws_qy"/></p>
+              <p>Рисунок 5</p>
+              <p>В качестве имени сигнала можно использовать как латинские, так и русские названия,
+                при этом система автоматически транслитерирует русские наименования в латинские по
+                следующей таблице:</p>
+              <table id="table_ygl_4ws_qy">
+                <tgroup cols="2">
+                  <colspec colnum="1" colname="col1"/>
+                  <colspec colnum="2" colname="col2"/>
+                  <tbody>
+                    <row>
+                      <entry>Русские символы</entry>
+                      <entry>Латинские символы</entry>
+                    </row>
+                    <row>
+                      <entry>ё</entry>
+                      <entry>yo</entry>
+                    </row>
+                    <row>
+                      <entry>й</entry>
+                      <entry>y </entry>
+                    </row>
+                    <row>
+                      <entry>ц</entry>
+                      <entry>c </entry>
+                    </row>
+                    <row>
+                      <entry>у</entry>
+                      <entry>u </entry>
+                    </row>
+                    <row>
+                      <entry>к</entry>
+                      <entry>k </entry>
+                    </row>
+                    <row>
+                      <entry>е</entry>
+                      <entry>e </entry>
+                    </row>
+                    <row>
+                      <entry>н</entry>
+                      <entry>n </entry>
+                    </row>
+                    <row>
+                      <entry>г</entry>
+                      <entry>g </entry>
+                    </row>
+                    <row>
+                      <entry>ш</entry>
+                      <entry>sh</entry>
+                    </row>
+                    <row>
+                      <entry>щ</entry>
+                      <entry>xh</entry>
+                    </row>
+                    <row>
+                      <entry>з</entry>
+                      <entry>z </entry>
+                    </row>
+                    <row>
+                      <entry>х</entry>
+                      <entry>h </entry>
+                    </row>
+                    <row>
+                      <entry>ъ</entry>
+                      <entry/>
+                    </row>
+                    <row>
+                      <entry>ф</entry>
+                      <entry>f </entry>
+                    </row>
+                    <row>
+                      <entry>ы</entry>
+                      <entry>y </entry>
+                    </row>
+                    <row>
+                      <entry>в</entry>
+                      <entry>v </entry>
+                    </row>
+                    <row>
+                      <entry>а</entry>
+                      <entry>a </entry>
+                    </row>
+                    <row>
+                      <entry>п</entry>
+                      <entry>p </entry>
+                    </row>
+                    <row>
+                      <entry>р</entry>
+                      <entry>r </entry>
+                    </row>
+                    <row>
+                      <entry>о</entry>
+                      <entry>o </entry>
+                    </row>
+                    <row>
+                      <entry>л</entry>
+                      <entry>l </entry>
+                    </row>
+                    <row>
+                      <entry>д</entry>
+                      <entry>d </entry>
+                    </row>
+                    <row>
+                      <entry>ж</entry>
+                      <entry>j </entry>
+                    </row>
+                    <row>
+                      <entry>э</entry>
+                      <entry>e </entry>
+                    </row>
+                    <row>
+                      <entry>я</entry>
+                      <entry>y </entry>
+                    </row>
+                    <row>
+                      <entry>ч</entry>
+                      <entry>ch</entry>
+                    </row>
+                    <row>
+                      <entry>с</entry>
+                      <entry>s </entry>
+                    </row>
+                    <row>
+                      <entry>м</entry>
+                      <entry>m </entry>
+                    </row>
+                    <row>
+                      <entry>и</entry>
+                      <entry>i </entry>
+                    </row>
+                    <row>
+                      <entry>т</entry>
+                      <entry>t </entry>
+                    </row>
+                    <row>
+                      <entry>ь</entry>
+                      <entry/>
+                    </row>
+                    <row>
+                      <entry>б</entry>
+                      <entry>b </entry>
+                    </row>
+                    <row>
+                      <entry>ю</entry>
+                      <entry>yu</entry>
+                    </row>
+                    <row>
+                      <entry>Ё</entry>
+                      <entry>YO</entry>
+                    </row>
+                    <row>
+                      <entry>Й</entry>
+                      <entry>Y </entry>
+                    </row>
+                    <row>
+                      <entry>Ц</entry>
+                      <entry>C </entry>
+                    </row>
+                    <row>
+                      <entry>У</entry>
+                      <entry>U </entry>
+                    </row>
+                    <row>
+                      <entry>К</entry>
+                      <entry>K </entry>
+                    </row>
+                    <row>
+                      <entry>Е</entry>
+                      <entry>E </entry>
+                    </row>
+                    <row>
+                      <entry>Н</entry>
+                      <entry>N </entry>
+                    </row>
+                    <row>
+                      <entry>Г</entry>
+                      <entry>G </entry>
+                    </row>
+                    <row>
+                      <entry>Ш</entry>
+                      <entry>SH</entry>
+                    </row>
+                    <row>
+                      <entry>Щ</entry>
+                      <entry>XH</entry>
+                    </row>
+                    <row>
+                      <entry>З</entry>
+                      <entry>Z </entry>
+                    </row>
+                    <row>
+                      <entry>Х</entry>
+                      <entry>H </entry>
+                    </row>
+                    <row>
+                      <entry>Ъ</entry>
+                      <entry/>
+                    </row>
+                    <row>
+                      <entry>Ф</entry>
+                      <entry>F </entry>
+                    </row>
+                    <row>
+                      <entry>Ы</entry>
+                      <entry>Y </entry>
+                    </row>
+                    <row>
+                      <entry>В</entry>
+                      <entry>V </entry>
+                    </row>
+                    <row>
+                      <entry>А</entry>
+                      <entry>A </entry>
+                    </row>
+                    <row>
+                      <entry>П</entry>
+                      <entry>P </entry>
+                    </row>
+                    <row>
+                      <entry>Р</entry>
+                      <entry>R </entry>
+                    </row>
+                    <row>
+                      <entry>О</entry>
+                      <entry>O </entry>
+                    </row>
+                    <row>
+                      <entry>Л</entry>
+                      <entry>L </entry>
+                    </row>
+                    <row>
+                      <entry>Д</entry>
+                      <entry>D </entry>
+                    </row>
+                    <row>
+                      <entry>Ж</entry>
+                      <entry>J </entry>
+                    </row>
+                    <row>
+                      <entry>Э</entry>
+                      <entry>E </entry>
+                    </row>
+                    <row>
+                      <entry>Я</entry>
+                      <entry>Y </entry>
+                    </row>
+                    <row>
+                      <entry>Ч</entry>
+                      <entry>CH</entry>
+                    </row>
+                    <row>
+                      <entry>С</entry>
+                      <entry>S </entry>
+                    </row>
+                    <row>
+                      <entry>М</entry>
+                      <entry>M </entry>
+                    </row>
+                    <row>
+                      <entry>И</entry>
+                      <entry>I </entry>
+                    </row>
+                    <row>
+                      <entry>Т</entry>
+                      <entry>T </entry>
+                    </row>
+                    <row>
+                      <entry>Ь</entry>
+                      <entry/>
+                    </row>
+                    <row>
+                      <entry>Б</entry>
+                      <entry>B </entry>
+                    </row>
+                    <row>
+                      <entry>Ю</entry>
+                      <entry>YU</entry>
+                    </row>
+                    <row>
+                      <entry>-</entry>
+                      <entry>_ </entry>
+                    </row>
+                    <row>
+                      <entry>.</entry>
+                      <entry>_ </entry>
+                    </row>
+                    <row>
+                      <entry>,</entry>
+                      <entry>_ </entry>
+                    </row>
+                    <row>
+                      <entry>;</entry>
+                      <entry>_ </entry>
+                    </row>
+                    <row>
+                      <entry>/</entry>
+                      <entry>_ </entry>
+                    </row>
+                    <row>
+                      <entry>\</entry>
+                      <entry>_ </entry>
+                    </row>
+                    <row>
+                      <entry>^</entry>
+                      <entry>_ </entry>
+                    </row>
+                    <row>
+                      <entry>+</entry>
+                      <entry>_ </entry>
+                    </row>
+                    <row>
+                      <entry/>
+                      <entry>_ </entry>
+                    </row>
+                  </tbody>
+                </tgroup>
+              </table>
+              <p>4) Отредактировать параметры расчета. Окно редактирования параметров расчета
+                вызывают нажатием левой кнопки мыши на кнопку «Параметры расчёта» в рабочем окне
+                проекта, показано на рисунке 6.</p>
+              <p><image href="rp-images/rp-4-1-ris-06.png" height="144" width="204"
+                  id="image_zgl_4ws_qy"/></p>
+              <p>Рисунок 6</p>
+              <p>5) Задать имя генерируемого исполняемого файла. В окне редактирования параметров
+                расчета вводят значение контрольного параметра «Имя (имена) алгоритма», показано на
+                рисунке 7, имя my_diagram.</p>
+              <p><image href="rp-images/rp-4-1-ris-07.png" height="428" width="660"
+                  id="image_ahl_4ws_qy"/></p>
+              <p>Рисунок 7</p>
+              <p>6) Провести локальное моделирование созданной схемы алгоритма. Под локальным
+                следует понимать моделирование работы расчетной схемы при помощи встроенного ядра
+                автоматики SimInTech (ПК МВТУ-4) без загрузки ПО в прибор. Запуск расчета созданного
+                алгоритма производят нажатием кнопки «Пуск» в главной панели инструментов, показано
+                на рисунке 8, или нажатием клавиши F9.</p>
+              <p><image href="rp-images/rp-4-1-ris-08.png" height="162" width="804"
+                  id="image_bhl_4ws_qy"/></p>
+              <p>Рисунок 8</p>
+              <p>В SimInTech (ПК МВТУ-4) разработана система семантического контроля наличия ошибок,
+                которая в строке сообщений рабочего окна проекта указывает на недостатки при
+                определении свойств блоков, соединении блоков между собой и многие другие.</p>
+              <p>В качестве примера удалим значение параметра «Коэффициент усиления»
+                инерционно-дифференциального звена с именем DifAperiodika1. На рисунке 9 приведено
+                рабочее окно проекта с расчетной схемой, на которой присутствует указанный блок.</p>
+              <p><image href="rp-images/rp-4-1-ris-09.png" height="454" width="712"
+                  id="image_chl_4ws_qy"/></p>
+              <p>Рисунок 9</p>
+              <p>При запуске расчетной схемы (алгоритма) на счет в строке сообщений высвечивается
+                надпись:</p>
+              <p>«(1) Выражение задано не полностью» в объекте DifAperiodika1</p>
+              <p>«Параметр элемента: Коэффициенты усиления(k) не может быть вычислен» в объекте
+                DifAperiodika1</p>
+              <p>При двойном нажатии левой клавишей «мыши» на имя элемента в строке сообщений в
+                рабочем окне проекта будет подсвечен блок с ошибкой.</p>
+              <p>7) Сохранить созданный проект. Нажатием левой клавишей «мыши» на кнопку «Сохранить»
+                в главной панели инструментов проект сохраняют в файл на диске с расширением .prt,
+                показано на рисунке 10. Режим присваивания уникального имени проекту при сохранении
+                вызывают командой главного меню «Файл → Сохранить проект как …» или сочетание
+                нажатия клавиш Ctrl и F2.</p>
+              <p><image href="rp-images/rp-4-1-ris-10.png" height="163" width="806"
+                  id="image_dhl_4ws_qy"/></p>
+              <p>Рисунок 10</p>
+  </body>
+</topic>

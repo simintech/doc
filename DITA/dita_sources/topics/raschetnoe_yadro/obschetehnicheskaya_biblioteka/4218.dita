@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика - Фрикционный демпфер поступательного движения </title>
+  <body>
+    <table id="table_cjb_m5r_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4218/image001.png" height="32" width="32"
+                id="image_djb_m5r_qy"/></entry>
+            <entry>Механика - Фрикционный демпфер поступательного движения</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4218/image002.png" height="85" width="104"
+                id="image_ejb_m5r_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>В блоке реализована математическая модель идеального вязкостного демпфера с постоянным
+      коэффициентом демпфирования, описываемая следующим уравнением:</p>
+    <p><image href="images_old/4218/image003.png" height="24" width="138" id="image_fjb_m5r_qy"/>,
+      где</p>
+    <table id="table_gjb_m5r_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>F</entry>
+            <entry>-</entry>
+            <entry>сила демпфирования</entry>
+          </row>
+          <row>
+            <entry>D</entry>
+            <entry>-</entry>
+            <entry>коэффициент демпфирования</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4218/image004.png" height="24" width="19"
+                id="image_hjb_m5r_qy"/></entry>
+            <entry>-</entry>
+            <entry>скорость порта R</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4218/image005.png" height="24" width="19"
+                id="image_ijb_m5r_qy"/></entry>
+            <entry>-</entry>
+            <entry>скорость порта C</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Входные порты блока:</b></p>
+    <p> Блок имеет два механических порта поступательного движения – C и R. Постулируется, что
+      момент демпфирования положителен, если <image href="images_old/4218/image006.png" height="24"
+        width="62" id="image_jjb_m5r_qy"/>.</p>
+    <p><b>Выходные порты блока – отсутствуют.</b></p>
+    <p><b>Свойства блока:</b></p>
+    <table id="table_kjb_m5r_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>D</entry>
+            <entry>-</entry>
+            <entry>коэффициент демпфирования, <image href="images_old/4218/image007.png" height="39"
+                width="21" id="image_ljb_m5r_qy"/></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p><b>Параметры:</b></p>
+    <table id="table_mjb_m5r_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>F</entry>
+            <entry>-</entry>
+            <entry>сила демпфирования, <image href="images_old/4218/image008.png" height="24" width="14"
+                id="image_njb_m5r_qy"/></entry>
+          </row>
+          <row>
+            <entry>V</entry>
+            <entry>-</entry>
+            <entry>относительная скорость, <image href="images_old/4218/image009.png" height="24"
+                width="30" id="image_ojb_m5r_qy"/></entry>
+          </row>
+          <row>
+            <entry>Q</entry>
+            <entry>-</entry>
+            <entry>мощность демпфирования, Вт</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

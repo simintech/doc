@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Список имен переменных, зарезервированных под внутренние нужды сгенерированного кода </title>
+  <body>
+                  <p>Нижеуказанные имена переменных нельзя использовать в названиях сигналов на
+                схеме:</p>
+              <table id="table_qjw_1zs_qy">
+                <tgroup cols="3">
+                  <colspec colnum="1" colname="col1"/>
+                  <colspec colnum="2" colname="col2"/>
+                  <colspec colnum="3" colname="col3"/>
+                  <tbody>
+                    <row>
+                      <entry>Переменная</entry>
+                      <entry>Тип</entry>
+                      <entry>Назначение</entry>
+                    </row>
+                    <row>
+                      <entry>i</entry>
+                      <entry>int</entry>
+                      <entry>счётчик циклов</entry>
+                    </row>
+                    <row>
+                      <entry>j</entry>
+                      <entry>int</entry>
+                      <entry>счётчик циклов</entry>
+                    </row>
+                    <row>
+                      <entry>c</entry>
+                      <entry>int</entry>
+                      <entry>временная целая переменная</entry>
+                    </row>
+                    <row>
+                      <entry>ret</entry>
+                      <entry>int</entry>
+                      <entry>возвращаемое значение функции RUN_FUNC</entry>
+                    </row>
+                    <row>
+                      <entry>action</entry>
+                      <entry>int</entry>
+                      <entry>идентификатор действия для run-функций</entry>
+                    </row>
+                    <row>
+                      <entry>tmp1</entry>
+                      <entry>double</entry>
+                      <entry>временная переменная для вещественных операций</entry>
+                    </row>
+                    <row>
+                      <entry>step</entry>
+                      <entry>double</entry>
+                      <entry>шаг задачи, сек</entry>
+                    </row>
+                    <row>
+                      <entry>time</entry>
+                      <entry>double</entry>
+                      <entry>текущее условное время, сек (в данной системе оно всегда
+                        нулевое)</entry>
+                    </row>
+                    <row>
+                      <entry>f</entry>
+                      <entry>char</entry>
+                      <entry>временная переменная</entry>
+                    </row>
+                    <row>
+                      <entry>u_s</entry>
+                      <entry>char</entry>
+                      <entry>временная переменная</entry>
+                    </row>
+                    <row>
+                      <entry>u_r</entry>
+                      <entry>char</entry>
+                      <entry>временная переменная</entry>
+                    </row>
+                    <row>
+                      <entry>ext_vars_addr</entry>
+                      <entry>void*</entry>
+                      <entry>указатель на массив адресов внешних переменных</entry>
+                    </row>
+                    <row>
+                      <entry>din_vars</entry>
+                      <entry>double*</entry>
+                      <entry>указатель на область памяти динамических переменных</entry>
+                    </row>
+                    <row>
+                      <entry>derivates</entry>
+                      <entry>double*</entry>
+                      <entry>указатель на область памяти производных динамических переменных</entry>
+                    </row>
+                    <row>
+                      <entry>alg_vars</entry>
+                      <entry>double*</entry>
+                      <entry>указатель на область памяти алгебраических переменных</entry>
+                    </row>
+                    <row>
+                      <entry>alg_funcs</entry>
+                      <entry>double*</entry>
+                      <entry>указатель на область памяти алгебраических функций</entry>
+                    </row>
+                    <row>
+                      <entry>state_vars</entry>
+                      <entry>void*</entry>
+                      <entry>указатель на область памяти переменных состояния</entry>
+                    </row>
+                    <row>
+                      <entry>consts</entry>
+                      <entry>void*</entry>
+                      <entry>указатель на область памяти констант</entry>
+                    </row>
+                  </tbody>
+                </tgroup>
+              </table>
+              <p>Также в качестве имён переменных нельзя использовать строки, совпадающие по
+                названиям со стандартными функциями и переменными языка Си (стандартной и
+                математической библиотек).</p>
+  </body>
+</topic>

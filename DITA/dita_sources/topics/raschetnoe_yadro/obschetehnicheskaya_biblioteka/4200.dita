@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика - Инерция вращательного движения </title>
+  <body>
+    <table id="table_mph_crr_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4200/image001.jpg" height="32" width="32"
+                id="image_nph_crr_qy"/></entry>
+            <entry>Механика - Инерция вращательного движения</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4200/image002.jpg" height="110" width="124"
+                id="image_oph_crr_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>В модели блока реализовано решение уравнения движения вращающегося тела с постоянной
+      инерцией:</p>
+    <p> </p>
+    <p><image href="images_old/4200/image003.gif" height="41" width="98" id="image_pph_crr_qy"/>, где</p>
+    <p> </p>
+    <table id="table_qph_crr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>J</entry>
+            <entry>-</entry>
+            <entry>Момент инерции, кг*м</entry>
+          </row>
+          <row>
+            <entry>ω</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость, рад/с</entry>
+          </row>
+          <row>
+            <entry>T</entry>
+            <entry>-</entry>
+            <entry>Момент, н*м</entry>
+          </row>
+          <row>
+            <entry>t</entry>
+            <entry>-</entry>
+            <entry>Время, с</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Входные порты блока - отсутствуют</b></p>
+    <p> </p>
+    <p><b>Выходные порты блока:</b></p>
+    <p>Блок имеет один механический ненаправленный порт вращательного движения, через который на
+      вход блока поступают моменты от присоединенных блоков, а на выход - скорость вращения. </p>
+    <p> </p>
+    <p><b>Свойства блока:</b></p>
+    <table id="table_rph_crr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>J</entry>
+            <entry>-</entry>
+            <entry>Момент инерции, кг*м</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_sph_crr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Т</entry>
+            <entry>-</entry>
+            <entry>Суммарный момент, н*м</entry>
+          </row>
+          <row>
+            <entry>ω</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость, рад/с</entry>
+          </row>
+          <row>
+            <entry>Q</entry>
+            <entry>-</entry>
+            <entry>Мощность, Вт</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

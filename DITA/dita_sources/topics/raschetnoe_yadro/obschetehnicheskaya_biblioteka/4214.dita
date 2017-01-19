@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика - Инерция поступательного движения </title>
+  <body>
+    <table id="table_pgv_vtr_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4214/image001.png" height="31" width="31"
+                id="image_qgv_vtr_qy"/></entry>
+            <entry>Механика - Инерция поступательного движения</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4214/image002.png" height="99" width="108"
+                id="image_rgv_vtr_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>В модели блока реализовано решение уравнения поступательного движения тела:</p>
+    <p> </p>
+    <p><image href="images_old/4214/image003.png" height="41" width="106" id="image_sgv_vtr_qy"/>,
+      где</p>
+    <p> </p>
+    <table id="table_tgv_vtr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>M</entry>
+            <entry>-</entry>
+            <entry>Масса</entry>
+          </row>
+          <row>
+            <entry>V</entry>
+            <entry>-</entry>
+            <entry>Скорость</entry>
+          </row>
+          <row>
+            <entry>F</entry>
+            <entry>-</entry>
+            <entry>Сила</entry>
+          </row>
+          <row>
+            <entry>t</entry>
+            <entry>-</entry>
+            <entry>Время</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Входные порты блока - отсутствуют</b></p>
+    <p> </p>
+    <p><b>Выходные порты блока:</b></p>
+    <p>Блок имеет один механический ненаправленный порт поступательного движения, через который на
+      вход блока поступает значение силы от присоединенных блоков, а на выход - скорость. </p>
+    <p> </p>
+    <p><b>Свойства блока:</b></p>
+    <table id="table_ugv_vtr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>М</entry>
+            <entry>-</entry>
+            <entry>Масса, кг</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_vgv_vtr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>F</entry>
+            <entry>-</entry>
+            <entry>Сила, н</entry>
+          </row>
+          <row>
+            <entry>V</entry>
+            <entry>-</entry>
+            <entry>Cкорость, м/с</entry>
+          </row>
+          <row>
+            <entry>Q</entry>
+            <entry>-</entry>
+            <entry>Мощность, Вт</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

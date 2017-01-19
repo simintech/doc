@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика – Планетарный механизм  </title>
+  <body>
+    <table id="table_gq5_5fs_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4246/image001.png" height="32" width="32"
+                id="image_hq5_5fs_qy"/></entry>
+            <entry>Механика – Планетарный механизм</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4246/image002.png" height="89" width="150"
+                id="image_iq5_5fs_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>В блоке реализована модель планетарного механизма с двумя степенями свободы, включающего в
+      себя водило, звезду, сателлиты и коронную шестерню (обод).</p>
+    <p>Сателлиты жестко соединены с водилом и одновременно вращаются вокруг собственных осей. Звезда
+      и сателлиты имеют внешние зубья, обод - внутренние зубья.</p>
+    <p>На рисунке 1 представлен данный планетарный механизм.</p>
+    <p><image href="images_old/4246/image003.jpg" height="231" width="236" id="image_jq5_5fs_qy"/></p>
+    <p>Рисунок 1</p>
+    <p>Модель планетарного механизма представлена в виде субмодели, структурная схема которой
+      приведена на рисунке 2. </p>
+    <p><image href="images_old/4246/image004.png" height="143" width="529" id="image_kq5_5fs_qy"/></p>
+    <p>Рисунок 2</p>
+    <p>Как видно из рисунка, в состав планетарного механизма входят две планетарные передачи -
+      звезда - планета и обод - планета, имеющие общее водило.</p>
+    <p>Передаточное отношение для планетарных передач, входящих в состав механизма, задается либо
+      вручную (свойство Is_Ruch = "Да"), либо вычисляется, исходя из общего передаточного числа
+      механизма и расчета числа зубьев, соблюдения условий соосности, сборки и соседства.</p>
+    <p> </p>
+    <p><b>Входные порты блока:</b></p>
+    <p>Блок имеет три механических порта (C-водило, R-обод, S-звезда) вращательного движения.</p>
+    <p> </p>
+    <p><b>Выходные порты блока :</b></p>
+    <p>Блок имеет один математический порт, на который поступает значение потерь мощности.</p>
+    <p> </p>
+    <p><b>Свойства блока:</b></p>
+    <table id="table_lq5_5fs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>G</entry>
+            <entry>-</entry>
+            <entry>Коэффициент передачи <image href="images_old/4246/image005.png" height="22" width="51"
+                id="image_mq5_5fs_qy"/></entry>
+          </row>
+          <row>
+            <entry>KSP</entry>
+            <entry>КПД пары звезда/планета</entry>
+          </row>
+          <row>
+            <entry>KRP</entry>
+            <entry>КПД пары обод/планета</entry>
+          </row>
+          <row>
+            <entry>BSP</entry>
+            <entry>Коэффициент трения пары звезда/водило</entry>
+          </row>
+          <row>
+            <entry>BRP</entry>
+            <entry>Коэффициент трения пары обод/водило</entry>
+          </row>
+          <row>
+            <entry>Is_ruch</entry>
+            <entry>Ручное редактирование</entry>
+          </row>
+          <row>
+            <entry>Qth</entry>
+            <entry>-</entry>
+            <entry>Пороговое значение мощности, Вт</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_nq5_5fs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Wc</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость водила, рад/с</entry>
+          </row>
+          <row>
+            <entry>Tc</entry>
+            <entry>-</entry>
+            <entry>Момент на водиле, <image href="images_old/4246/image006.png" height="22" width="36"
+                id="image_oq5_5fs_qy"/></entry>
+          </row>
+          <row>
+            <entry>Ws</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость звезды, рад/с</entry>
+          </row>
+          <row>
+            <entry>Ts</entry>
+            <entry>-</entry>
+            <entry>Момент звезды, <image href="images_old/4246/image006.png" height="22" width="36"
+                id="image_pq5_5fs_qy"/></entry>
+          </row>
+          <row>
+            <entry>Wr</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость обода, рад/с</entry>
+          </row>
+          <row>
+            <entry>Tr</entry>
+            <entry>-</entry>
+            <entry>Момент на ободе, <image href="images_old/4246/image006.png" height="22" width="36"
+                id="image_qq5_5fs_qy"/></entry>
+          </row>
+          <row>
+            <entry>Q</entry>
+            <entry>-</entry>
+            <entry>Потери мощности, Вт</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p> </p>
+  </body>
+</topic>

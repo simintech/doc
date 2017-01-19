@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Сетевой протокол сервера отладки</title>
+  <body>
+               <p>Протокол обмена данными использует транспортный протокол TCP-IP:</p>
+              <p>1) На приборе запускается отдельный процесс GdbServer, который открывает и слушает
+                TCP-порт с указанным номером (по умолчанию 22375);</p>
+              <p>2) Клиент ПК МВТУ-4 инициирует соединение с прибором по протоколу TCP IP на
+                указанный порт. При этом на приборе при соединении происходит размножение (fork)
+                процесса-сервера, то есть для каждого клиентского соединения существует свой
+                процесс-обработчик;</p>
+              <p>3) Клиент ПК МВТУ-4 может удалённо запустить диспетчер расчётных модулей с
+                указанного файла конфигурации загрузки. При этом передаётся имя файла конфигурации
+                загрузки и имя начального состояния. Если начальное состояние с указанным именем
+                отсутствует, то расчётные модули запускаются с состоянием по умолчанию. Передаваемые
+                данные представлены в таблице 2.5.1.</p>
+              <p>Таблица 2.5.1</p>
+              <table id="table_j24_bbt_qy">
+                <tgroup cols="3">
+                  <colspec colnum="1" colname="col1"/>
+                  <colspec colnum="2" colname="col2"/>
+                  <colspec colnum="3" colname="col3"/>
+                  <tbody>
+                    <row>
+                      <entry>Описание</entry>
+                      <entry>Размер, байт</entry>
+                      <entry>Значение</entry>
+                    </row>
+                    <row>
+                      <entry>Размер передаваемого пакета в байтах</entry>
+                      <entry>4</entry>
+                      <entry>Равно размеру всех данных в пакете начиная со следующего параметра
+                        (идентификатора команды)</entry>
+                    </row>
+                    <row>
+                      <entry>Идентификатор команды</entry>
+                      <entry>1</entry>
+                      <entry>9</entry>
+                    </row>
+                    <row>
+                      <entry>Размер имени загрузки в байтах NameSize</entry>
+                      <entry>4</entry>
+                      <entry>целое число</entry>
+                    </row>
+                    <row>
+                      <entry>Имя загрузки в кодировке ASCII</entry>
+                      <entry>NameSize</entry>
+                      <entry>
+                        <p>Формат имени:</p>
+                        <p>&lt;имя файла конфигурации загрузки>#&lt;имя начального состояния></p>
+                        <p>Пример:</p>
+                        <p>default.conf#initstate1</p>
+                      </entry>
+                    </row>
+                  </tbody>
+                </tgroup>
+              </table>
+              <p>Одновременно клиент считывает данные, в соответствии с таблицей 2.5.2.</p>
+              <p>Таблица 2.5.2</p>
+              <table id="table_k24_bbt_qy">
+                <tgroup cols="3">
+                  <colspec colnum="1" colname="col1"/>
+                  <colspec colnum="2" colname="col2"/>
+                  <colspec colnum="3" colname="col3"/>
+                  <tbody>
+                    <row>
+                      <entry>Описание</entry>
+                      <entry>Размер, байт</entry>
+                      <entry>Значение</entry>
+                    </row>
+                    <row>
+                      <entry>Размер принимаемого пакета в байтах</entry>
+                      <entry>4</entry>
+                      <entry>Равно размеру принимаемых данных за исключением самого размера.</entry>
+                    </row>
+                    <row>
+                      <entry>Результат операции соединения</entry>
+                      <entry>1</entry>
+                      <entry>
+                        <p>0 – успешно</p>
+                        <p>!= 0 – ошибка (код ошибки)</p>
+                      </entry>
+                    </row>
+                    <row>
+                      <entry>Контрольная сумма алгоритма, присвоенная генератором кода</entry>
+                      <entry>4</entry>
+                      <entry>0 – если алгоритма не найден</entry>
+                    </row>
+                  </tbody>
+                </tgroup>
+              </table>
+              <p>4) Для инициализации обмена данными с указанным алгоритмом клиент передаёт данные,
+                в соответствии с таблицей 2.5.3.</p>
+              <p>Таблица 2.5.3</p>
+              <table id="table_l24_bbt_qy">
+                <tgroup cols="3">
+                  <colspec colnum="1" colname="col1"/>
+                  <colspec colnum="2" colname="col2"/>
+                  <colspec colnum="3" colname="col3"/>
+                  <tbody>
+                    <row>
+                      <entry>Описание</entry>
+                      <entry>Размер, байт</entry>
+                      <entry>Значение</entry>
+                    </row>
+                    <row>
+                      <entry>Размер передаваемого пакета в байтах</entry>
+                      <entry>4</entry>
+                      <entry>равно размеру всех данных в пакете начиная со следующего параметра
+                        (идентификатора команды)</entry>
+                    </row>
+                    <row>
+                      <entry>Идентификатор команды</entry>
+                      <entry>1</entry>
+                      <entry>ноль</entry>
+                    </row>
+                    <row>
+                      <entry>Идентификатор клиентской части ConnectionId</entry>
+                      <entry>4</entry>
+                      <entry>равно uid объекта внутри ПК МВТУ-4</entry>
+                    </row>
+                    <row>
+                      <entry>Размер имени алгоритма в байтах NameSize</entry>
+                      <entry>4</entry>
+                      <entry>целое число</entry>
+                    </row>
+                    <row>
+                      <entry>Имя алгоритма в кодировке ASCII</entry>
+                      <entry>NameSize</entry>
+                      <entry>
+                        <p>формат имени алгоритма, передаваемого от клиента:</p>
+                        <p>&lt;имя алгоритма>#&lt;имя конфигурации загрузки></p>
+                        <p>Пример:</p>
+                        <p>algo1#default.conf</p>
+                      </entry>
+                    </row>
+                  </tbody>
+                </tgroup>
+              </table>
+              <p>При соединении с сервером обмена клиент считывает данные, в соответствии с таблицей
+                2.5.4.</p>
+              <p>Таблица 2.5.4</p>
+              <table id="table_m24_bbt_qy">
+                <tgroup cols="3">
+                  <colspec colnum="1" colname="col1"/>
+                  <colspec colnum="2" colname="col2"/>
+                  <colspec colnum="3" colname="col3"/>
+                  <tbody>
+                    <row>
+                      <entry>Описание</entry>
+                      <entry>Размер, байт</entry>
+                      <entry>Значение</entry>
+                    </row>
+                    <row>
+                      <entry>Размер принимаемого пакета в байтах</entry>
+                      <entry>4</entry>
+                      <entry>Равно размеру принимаемых данных за исключением самого размера.</entry>
+                    </row>
+                    <row>
+                      <entry>Результат операции соединения</entry>
+                      <entry>1</entry>
+                      <entry>
+                        <p>0 – успешно</p>
+                        <p>!= 0 – ошибка (код ошибки)</p>
+                        <p>1 – сетевая ошибка,</p>
+                        <p>2 – нет такой запущенной программы</p>
+                      </entry>
+                    </row>
+                  </tbody>
+                </tgroup>
+              </table>
+              <p>После приёма от клиента пакета с данными сервер обмена подключается к областям
+                памяти диспетчера расчётных модулей и ищет по имени указанный алгоритм в списке
+                загруженных алгоритмов и получает адреса его областей данных. Если алгоритм успешно
+                найден, то клиенту возвращается код операции 0, если не найден – то 2. После этого
+                клиент может выполнять дальнейшие действия. </p>
+              <p>5) Если сервер возвратил ответ что алгоритм найден, то клиент даёт серверу обмена
+                команды на добавление нужных переменных на чтение от прибора. Команда передаётся по
+                TCP-IP. При этом если указанная клиентом переменная есть, то она добавляется в
+                список передачи данных на TCP сервере прибора. При добавлении переменной клиент
+                передаёт данные в соответствии с таблицей 2.5.5.</p>
+              <p>Таблица 2.5.5</p>
+              <table id="table_n24_bbt_qy">
+                <tgroup cols="3">
+                  <colspec colnum="1" colname="col1"/>
+                  <colspec colnum="2" colname="col2"/>
+                  <colspec colnum="3" colname="col3"/>
+                  <tbody>
+                    <row>
+                      <entry>Описание</entry>
+                      <entry>Размер, байт</entry>
+                      <entry>Значение</entry>
+                    </row>
+                    <row>
+                      <entry>Размер передаваемого пакета в байтах</entry>
+                      <entry>4</entry>
+                      <entry>Равно размеру всех данных в пакете начиная со следующего параметра
+                        (идентификатора команды)</entry>
+                    </row>
+                    <row>
+                      <entry>Идентификатор команды</entry>
+                      <entry>1</entry>
+                      <entry>1</entry>
+                    </row>
+                    <row>
+                      <entry>Количество добавляемых переменных</entry>
+                      <entry>4</entry>
+                      <entry>N – целое число >=1 – количество переменных которые надо добавить для
+                        считывания</entry>
+                    </row>
+                    <row>
+                      <entry namest="col1" nameend="col3">Цикл i = от 1 до N</entry>
+                    </row>
+                    <row>
+                      <entry>Размер имени i-й переменной в байтах NameSize(i)</entry>
+                      <entry>4</entry>
+                      <entry>целое число</entry>
+                    </row>
+                    <row>
+                      <entry>Имя i-й переменной в кодировке ASCII</entry>
+                      <entry>NameSize(i) </entry>
+                      <entry/>
+                    </row>
+                    <row>
+                      <entry namest="col1" nameend="col3">Конец цикла от 1 до N</entry>
+                    </row>
+                  </tbody>
+                </tgroup>
+              </table>
+              <p>Одновременно клиент считывает данные, в соответствии с таблицей 2.5.6.</p>
+              <p>Таблица 2.5.6</p>
+              <table id="table_o24_bbt_qy">
+                <tgroup cols="3">
+                  <colspec colnum="1" colname="col1"/>
+                  <colspec colnum="2" colname="col2"/>
+                  <colspec colnum="3" colname="col3"/>
+                  <tbody>
+                    <row>
+                      <entry>Описание</entry>
+                      <entry>Размер, байт</entry>
+                      <entry>Значение</entry>
+                    </row>
+                    <row>
+                      <entry>Размер принимаемого пакета в байтах</entry>
+                      <entry>4</entry>
+                      <entry>Равно размеру принимаемых данных за исключением самого размера.</entry>
+                    </row>
+                    <row>
+                      <entry namest="col1" nameend="col3">Цикл от 1 до N</entry>
+                    </row>
+                    <row>
+                      <entry>Тип данных в соответствии с таблицами описания переменных на
+                        приборе</entry>
+                      <entry>1</entry>
+                      <entry>
+                        <p>0 – вещественное (double)</p>
+                        <p>1 – двоичное (char)</p>
+                        <p>2 – целое (longint – 32 bit)</p>
+                        <p>Если тип = 255 то переменная не найдена</p>
+                      </entry>
+                    </row>
+                    <row>
+                      <entry>Массив размерностей переменной</entry>
+                      <entry>12 байт</entry>
+                      <entry>
+                        <p>Dims: array [0..2] of integer</p>
+                        <p>Если все размерности 0 – то переменная не найдена</p>
+                      </entry>
+                    </row>
+                    <row>
+                      <entry namest="col1" nameend="col3">Конец цикла от 1 до N</entry>
+                    </row>
+                  </tbody>
+                </tgroup>
+              </table>
+              <p>6) Клиент даёт серверу обмена команды на добавление нужных переменных на запись в
+                прибор. Команда передаётся по TCP-IP. При этом если указанная клиентом переменная
+                есть, то она добавляется в список приёма данных на TCP сервере.</p>
+              <p>При добавлении переменной клиент передаёт данные в соответствии с таблицей
+                2.5.7:</p>
+              <p>Таблица 2.5.7</p>
+              <table id="table_p24_bbt_qy">
+                <tgroup cols="3">
+                  <colspec colnum="1" colname="col1"/>
+                  <colspec colnum="2" colname="col2"/>
+                  <colspec colnum="3" colname="col3"/>
+                  <tbody>
+                    <row>
+                      <entry>Описание</entry>
+                      <entry>Размер, байт</entry>
+                      <entry>Значение</entry>
+                    </row>
+                    <row>
+                      <entry>Размер передаваемого пакета в байтах</entry>
+                      <entry>4</entry>
+                      <entry>Равно размеру всех данных в пакете начиная со следующего параметра
+                        (идентификатора команды)</entry>
+                    </row>
+                    <row>
+                      <entry>Идентификатор команды</entry>
+                      <entry>1</entry>
+                      <entry>1</entry>
+                    </row>
+                    <row>
+                      <entry>Количество добавляемых переменных</entry>
+                      <entry>4</entry>
+                      <entry>N – целое число >=1 – количество переменных которые надо добавить для
+                        запись</entry>
+                    </row>
+                    <row>
+                      <entry namest="col1" nameend="col3">Цикл i = от 1 до N</entry>
+                    </row>
+                    <row>
+                      <entry>Размер имениi-й переменнойв байтах NameSize(i)</entry>
+                      <entry>4</entry>
+                      <entry>целое число</entry>
+                    </row>
+                    <row>
+                      <entry>Имя i-й переменной в кодировке ASCII</entry>
+                      <entry>NameSize(i) </entry>
+                      <entry/>
+                    </row>
+                    <row>
+                      <entry namest="col1" nameend="col3">Конец цикла от 1 до N</entry>
+                    </row>
+                  </tbody>
+                </tgroup>
+              </table>
+              <p>Одновременно клиент считывает данные, в соответствии с таблицей 2.5.8.</p>
+              <p>Таблица 2.5.8</p>
+              <table id="table_q24_bbt_qy">
+                <tgroup cols="3">
+                  <colspec colnum="1" colname="col1"/>
+                  <colspec colnum="2" colname="col2"/>
+                  <colspec colnum="3" colname="col3"/>
+                  <tbody>
+                    <row>
+                      <entry>Описание</entry>
+                      <entry>Размер, байт</entry>
+                      <entry>Значение</entry>
+                    </row>
+                    <row>
+                      <entry>Размер принимаемого пакета в байтах</entry>
+                      <entry>4</entry>
+                      <entry>Равно размеру принимаемых данных за исключением самого размера.</entry>
+                    </row>
+                    <row>
+                      <entry namest="col1" nameend="col3">Цикл от 1 до N</entry>
+                    </row>
+                    <row>
+                      <entry>Тип данных в соответствии с таблицами описания переменных на
+                        приборе</entry>
+                      <entry>1</entry>
+                      <entry>
+                        <p>0 – вещественное (double)</p>
+                        <p>1 – двоичное (char)</p>
+                        <p>2 – целое (longint – 32 bit)</p>
+                        <p>Если тип = 255 то переменная не найдена</p>
+                      </entry>
+                    </row>
+                    <row>
+                      <entry>Массив размерностей переменной</entry>
+                      <entry>12 байт</entry>
+                      <entry>
+                        <p>Dims: array [0..2] of integer</p>
+                        <p>Если все размерности 0 – то переменная не найдена</p>
+                      </entry>
+                    </row>
+                    <row>
+                      <entry namest="col1" nameend="col3">Конец цикла от 1 до N</entry>
+                    </row>
+                  </tbody>
+                </tgroup>
+              </table>
+              <p>7) Для обмена данными (т.е. записи или чтения ранее добавленных в список
+                переменных) Клиент в заданные моменты времени транслирует данные, которые добавлены
+                в список записи в прибор и принимает данные, которые добавлены в список чтения
+                прибора. При этом данные транслируются в виде бинарного потока. Передаваемые данные
+                представлены в таблице 2.5.9.</p>
+              <p>Таблица 2.5.9</p>
+              <table id="table_r24_bbt_qy">
+                <tgroup cols="3">
+                  <colspec colnum="1" colname="col1"/>
+                  <colspec colnum="2" colname="col2"/>
+                  <colspec colnum="3" colname="col3"/>
+                  <tbody>
+                    <row>
+                      <entry>Описание</entry>
+                      <entry>Размер, байт</entry>
+                      <entry>Значение</entry>
+                    </row>
+                    <row>
+                      <entry>Размер передаваемого пакета в байтах</entry>
+                      <entry>4</entry>
+                      <entry>Равно размеру всех данных в пакете начиная со следующего параметра
+                        (идентификатора команды)</entry>
+                    </row>
+                    <row>
+                      <entry>Идентификатор команды</entry>
+                      <entry>1</entry>
+                      <entry>3</entry>
+                    </row>
+                    <row>
+                      <entry namest="col1" nameend="col3">Цикл i = от 1 до N, где N– количество
+                        переменных добавленных на запись</entry>
+                    </row>
+                    <row>
+                      <entry>Байтовый поток для i-й переменной в соответствии с её размерностью и
+                        типом данных</entry>
+                      <entry>М</entry>
+                      <entry/>
+                    </row>
+                    <row>
+                      <entry namest="col1" nameend="col3">Конец цикла от 1 до N</entry>
+                    </row>
+                  </tbody>
+                </tgroup>
+              </table>
+              <p>Принимаемые клиентом данные представлены в таблице 2.5.10.</p>
+              <p>Таблица 2.5.10</p>
+              <table id="table_s24_bbt_qy">
+                <tgroup cols="3">
+                  <colspec colnum="1" colname="col1"/>
+                  <colspec colnum="2" colname="col2"/>
+                  <colspec colnum="3" colname="col3"/>
+                  <tbody>
+                    <row>
+                      <entry>Описание</entry>
+                      <entry>Размер, байт</entry>
+                      <entry>Значение</entry>
+                    </row>
+                    <row>
+                      <entry>Размера пакета сообщения в байтах, DataSize (за исключением самого
+                        размера пакета)</entry>
+                      <entry>4</entry>
+                      <entry>DWORD</entry>
+                    </row>
+                    <row>
+                      <entry>Шаг моделирования в секундах, fStep</entry>
+                      <entry>8</entry>
+                      <entry>Double</entry>
+                    </row>
+                    <row>
+                      <entry>Условное модельное время с начала соединения с контроллером,
+                        сек</entry>
+                      <entry>8</entry>
+                      <entry>Double</entry>
+                    </row>
+                    <row>
+                      <entry>Набор флагов состояния прибора fStateFlag</entry>
+                      <entry>4</entry>
+                      <entry>DWORD</entry>
+                    </row>
+                    <row>
+                      <entry namest="col1" nameend="col3">Цикл i = от 1 до ReadList.Count,
+                        ReadList.Count – количество переменных, добавленных на чтение</entry>
+                    </row>
+                    <row>
+                      <entry>Байтовый массив для i-й переменной в соответствии с её типом данных и
+                        размерностью</entry>
+                      <entry>М</entry>
+                      <entry/>
+                    </row>
+                    <row>
+                      <entry namest="col1" nameend="col3">Конец цикла от 1 до ReadList.Count</entry>
+                    </row>
+                  </tbody>
+                </tgroup>
+              </table>
+              <p>8) Клиент ПК МВТУ-4 может передать диспетчеру расчётных модулей сигнал управления
+                (для приостановки расчёта, возобновления и для того чтобы убить процесс).
+                Соответствующие параметры представлены на рисунке 2.5.11.</p>
+              <p>Таблица 2.5.11</p>
+              <table id="table_t24_bbt_qy">
+                <tgroup cols="3">
+                  <colspec colnum="1" colname="col1"/>
+                  <colspec colnum="2" colname="col2"/>
+                  <colspec colnum="3" colname="col3"/>
+                  <tbody>
+                    <row>
+                      <entry>Описание</entry>
+                      <entry>Размер, байт</entry>
+                      <entry>Значение</entry>
+                    </row>
+                    <row>
+                      <entry>Размер передаваемого пакета в байтах</entry>
+                      <entry>4</entry>
+                      <entry>Равно размеру всех данных в пакете начиная со следующего параметра
+                        (идентификатора команды)</entry>
+                    </row>
+                    <row>
+                      <entry>Идентификатор команды</entry>
+                      <entry>1</entry>
+                      <entry>6</entry>
+                    </row>
+                    <row>
+                      <entry>Значение сигнала</entry>
+                      <entry>4</entry>
+                      <entry>
+                        <p>Значение сигнала, передаваемого процессу-диспетчеру расчётных модулей.
+                          Возможные значения:</p>
+                        <ul id="ul_u24_bbt_qy">
+                          <li>
+                            <p>пауза = 23;</p>
+                          </li>
+                          <li>
+                            <p>продолжение = 25;</p>
+                          </li>
+                          <li>
+                            <p>убить процесс = 15.</p>
+                          </li>
+                        </ul>
+                      </entry>
+                    </row>
+                  </tbody>
+                </tgroup>
+              </table>
+              <p>Одновременно клиент считывает данные, в соответствии с таблицей 2.5.12.</p>
+              <p>Таблица 2.5.12</p>
+              <table id="table_v24_bbt_qy">
+                <tgroup cols="3">
+                  <colspec colnum="1" colname="col1"/>
+                  <colspec colnum="2" colname="col2"/>
+                  <colspec colnum="3" colname="col3"/>
+                  <tbody>
+                    <row>
+                      <entry>Описание</entry>
+                      <entry>Размер, байт</entry>
+                      <entry>Значение</entry>
+                    </row>
+                    <row>
+                      <entry>Размер принимаемого пакета в байтах</entry>
+                      <entry>4</entry>
+                      <entry>Равно размеру принимаемых данных за исключением самого размера;</entry>
+                    </row>
+                    <row>
+                      <entry>Результат операции соединения</entry>
+                      <entry>1</entry>
+                      <entry>Если больше нуля, то ошибка.</entry>
+                    </row>
+                  </tbody>
+                </tgroup>
+              </table>
+              <p>9) Клиент ПК МВТУ-4 в процессе расчёта может сохранить для задачи именованный
+                рестарт. Передаваемые клиентом данные представлены в таблице 2.5.13.</p>
+              <p>Таблица 2.5.13</p>
+              <table id="table_w24_bbt_qy">
+                <tgroup cols="3">
+                  <colspec colnum="1" colname="col1"/>
+                  <colspec colnum="2" colname="col2"/>
+                  <colspec colnum="3" colname="col3"/>
+                  <tbody>
+                    <row>
+                      <entry>Описание</entry>
+                      <entry>Размер, байт</entry>
+                      <entry>Значение</entry>
+                    </row>
+                    <row>
+                      <entry>Размер передаваемого пакета в байтах</entry>
+                      <entry>4</entry>
+                      <entry>Равно размеру всех данных в пакете начиная со следующего параметра
+                        (идентификатора команды)</entry>
+                    </row>
+                    <row>
+                      <entry>Идентификатор команды</entry>
+                      <entry>1</entry>
+                      <entry>7</entry>
+                    </row>
+                    <row>
+                      <entry>Размер имени рестарта в байтах NameSize</entry>
+                      <entry>4</entry>
+                      <entry>целое число</entry>
+                    </row>
+                    <row>
+                      <entry>Имя рестарта в кодировке ASCII</entry>
+                      <entry>NameSize</entry>
+                      <entry/>
+                    </row>
+                  </tbody>
+                </tgroup>
+              </table>
+              <p>Одновременно клиент считывает данные, в соответствии с таблицей 2.5.14.</p>
+              <p>Таблица 2.5.14</p>
+              <table id="table_x24_bbt_qy">
+                <tgroup cols="3">
+                  <colspec colnum="1" colname="col1"/>
+                  <colspec colnum="2" colname="col2"/>
+                  <colspec colnum="3" colname="col3"/>
+                  <tbody>
+                    <row>
+                      <entry>Описание</entry>
+                      <entry>Размер, байт</entry>
+                      <entry>Значение</entry>
+                    </row>
+                    <row>
+                      <entry>Размер принимаемого пакета в байтах</entry>
+                      <entry>4</entry>
+                      <entry>Равно размеру принимаемых данных за исключением самого размера.</entry>
+                    </row>
+                    <row>
+                      <entry>Результат операции соединения</entry>
+                      <entry>1</entry>
+                      <entry>
+                        <p>0 – успешно</p>
+                        <p>!= 0 – ошибка (код ошибки)</p>
+                      </entry>
+                    </row>
+                  </tbody>
+                </tgroup>
+              </table>
+              <p>10) Клиент ПК МВТУ-4 может в процессе расчёта загрузить именованный рестарт.
+                Передаваемые клиентом данные представлены в таблице 2.5.15.</p>
+              <p>Таблица 2.5.15</p>
+              <table id="table_y24_bbt_qy">
+                <tgroup cols="3">
+                  <colspec colnum="1" colname="col1"/>
+                  <colspec colnum="2" colname="col2"/>
+                  <colspec colnum="3" colname="col3"/>
+                  <tbody>
+                    <row>
+                      <entry>Описание</entry>
+                      <entry>Размер, байт</entry>
+                      <entry>Значение</entry>
+                    </row>
+                    <row>
+                      <entry>Размер передаваемого пакета в байтах</entry>
+                      <entry>4</entry>
+                      <entry>Равно размеру всех данных в пакете начиная со следующего параметра
+                        (идентификатора команды)</entry>
+                    </row>
+                    <row>
+                      <entry>Идентификатор команды</entry>
+                      <entry>1</entry>
+                      <entry>8</entry>
+                    </row>
+                    <row>
+                      <entry>Размер имени рестарта в байтах NameSize</entry>
+                      <entry>4</entry>
+                      <entry>целое число</entry>
+                    </row>
+                    <row>
+                      <entry>Имя рестарта в кодировке ASCII</entry>
+                      <entry>NameSize</entry>
+                      <entry/>
+                    </row>
+                  </tbody>
+                </tgroup>
+              </table>
+              <p>Одновременно клиент считывает данные, в соответствии с таблицей 2.5.16.</p>
+              <p>Таблица 2.5.16</p>
+              <table id="table_z24_bbt_qy">
+                <tgroup cols="3">
+                  <colspec colnum="1" colname="col1"/>
+                  <colspec colnum="2" colname="col2"/>
+                  <colspec colnum="3" colname="col3"/>
+                  <tbody>
+                    <row>
+                      <entry>Описание</entry>
+                      <entry>Размер, байт</entry>
+                      <entry>Значение</entry>
+                    </row>
+                    <row>
+                      <entry>Размер принимаемого пакета в байтах</entry>
+                      <entry>4</entry>
+                      <entry>Равно размеру принимаемых данных за исключением самого размера.</entry>
+                    </row>
+                    <row>
+                      <entry>Результат операции соединения</entry>
+                      <entry>1</entry>
+                      <entry>
+                        <p>0 – успешно</p>
+                        <p>!= 0 – ошибка (код ошибки)</p>
+                      </entry>
+                    </row>
+                  </tbody>
+                </tgroup>
+              </table>
+  </body>
+</topic>

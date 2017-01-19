@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Описание категории (таблицы) «Датчики»</title>
+  <body>
+    <p>В категории (таблице) «Датчики» базы данных хранится информация об аналоговых датчиках.</p>
+    <p>В таблице 1 приведено описание структуры категории «Датчики».</p>
+    <p>Для категории "Датчики" имя группы сигналов (записи) формируется по правилу:</p>
+    <p><b>&lt;group_name> = D_&lt;dat_name></b>, где</p>
+    <p>"D_" – уникальный для датчиков префикс имени записи в БД;</p>
+    <p>&lt;dat_name> – уникальное среди всех датчиков проекта КСУ ТС имя датчика.</p>
+    <p>Пример имени группы сигналов (записи) в категории "Датчики":</p>
+    <p><b>D_T28</b> – датчик «T28»</p>
+    <p> </p>
+    <p><b>Примечание 1</b>: в случаях датчиков, расположенных в разных приборах, и имеющих
+      одинаковые наименования, к имени датчика добавляется его номер (или номер прибора в котором он
+      расположен), через символ подчеркивания: <b>D</b><b>_</b><b>n</b><b>591_1</b> – датчик
+      находится в первом приборе, <b>D</b><b>_</b><b>n</b><b>591_2</b> - датчик находится во втором
+      приборе.</p>
+    <p><b>Примечание 2</b>: есть датчики с префиксом <b>MN</b><b>_</b>, что означает следующее:
+      значение датчика вычисляемое (к примеру разница показаний нескольких датчиков), виртуальные
+      датчики (к примеру <b>MN</b><b>_</b><b>O</b> – в этом датчике отображается текущее положение
+      рукоятки оборотов) и т.д.</p>
+    <p> </p>
+    <p>Таблица 1 – описание структуры категории «Датчики»</p>
+    <table id="table_spt_gms_qy">
+      <tgroup cols="6">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <colspec colnum="4" colname="col4"/>
+        <colspec colnum="5" colname="col5"/>
+        <colspec colnum="6" colname="col6"/>
+        <tbody>
+          <row>
+            <entry><b>Название поля</b></entry>
+            <entry><b>Имя поля</b></entry>
+            <entry><b>Тип данных</b></entry>
+            <entry><b>Значение</b></entry>
+            <entry><b>Способ хранения</b></entry>
+            <entry><b>Использование</b></entry>
+          </row>
+          <row>
+            <entry>Описание *</entry>
+            <entry>Descr</entry>
+            <entry>Текст</entry>
+            <entry> </entry>
+            <entry>Константа</entry>
+            <entry>Информационное</entry>
+          </row>
+          <row>
+            <entry>Принадлежность к ФГ *</entry>
+            <entry>FG_name</entry>
+            <entry>Строка</entry>
+            <entry>ФГ00</entry>
+            <entry>Константа</entry>
+            <entry>Информационное</entry>
+          </row>
+          <row>
+            <entry>Нижний предел измерения (модель)</entry>
+            <entry>Xmin</entry>
+            <entry>Вещественное</entry>
+            <entry>Нет</entry>
+            <entry>Константа</entry>
+            <entry>Модель</entry>
+          </row>
+          <row>
+            <entry>Верхний предел измерения (модель)</entry>
+            <entry>Xmax</entry>
+            <entry>Вещественное</entry>
+            <entry>Нет</entry>
+            <entry>Константа</entry>
+            <entry>Модель</entry>
+          </row>
+          <row>
+            <entry>Постоянная времени датчика (модель)</entry>
+            <entry>Tau</entry>
+            <entry>Вещественное</entry>
+            <entry>Нет</entry>
+            <entry>Константа</entry>
+            <entry>Модель</entry>
+          </row>
+          <row>
+            <entry>Множитель при переводе из расчетного значения в значение датчика [Xd = K1*Xp+K2]
+              (модель)</entry>
+            <entry>K1</entry>
+            <entry>Вещественное</entry>
+            <entry>Нет</entry>
+            <entry>Константа</entry>
+            <entry>Модель</entry>
+          </row>
+          <row>
+            <entry>Смещение расчетного значения в значение датчика [Xd = K1*Xp+K2] (модель)</entry>
+            <entry>K2</entry>
+            <entry>Вещественное</entry>
+            <entry>Нет</entry>
+            <entry>Константа</entry>
+            <entry>Модель</entry>
+          </row>
+          <row>
+            <entry>Показание датчика</entry>
+            <entry>XQ01</entry>
+            <entry>Вещественное</entry>
+            <entry>Нет</entry>
+            <entry>Переменная</entry>
+            <entry>Штатное</entry>
+          </row>
+          <row>
+            <entry>Расчетное значение (модель)</entry>
+            <entry>XQ02</entry>
+            <entry>Вещественное</entry>
+            <entry>Нет</entry>
+            <entry>Переменная</entry>
+            <entry>Модель</entry>
+          </row>
+          <row>
+            <entry>Показания датчика в % от диапазона</entry>
+            <entry>XQ03</entry>
+            <entry>Вещественное</entry>
+            <entry>Нет</entry>
+            <entry>Переменная</entry>
+            <entry>Штатное</entry>
+          </row>
+          <row>
+            <entry>Единица измерения</entry>
+            <entry>Unit</entry>
+            <entry>Перечисление</entry>
+            <entry>
+              <p>Варианты:</p>
+              <p>0 – нет данных,</p>
+              <p>1 – МПа,</p>
+              <p>2 – мг/л,</p>
+              <p>3 – °С,</p>
+              <p>4 – м3/ч,</p>
+              <p>5 – %,</p>
+              <p>6 – об/мин,</p>
+              <p>7 – А,</p>
+              <p>8 – мм,</p>
+              <p>9 – с,</p>
+              <p>10 – Ом·м,</p>
+              <p>11 – кПа,</p>
+              <p>12 – м3.</p>
+            </entry>
+            <entry>Константа</entry>
+            <entry>Штатное</entry>
+          </row>
+          <row>
+            <entry>Краткое описание для гистограммы</entry>
+            <entry>Sh_Descr</entry>
+            <entry>Строка</entry>
+            <entry> </entry>
+            <entry>Константа</entry>
+            <entry>Штатное</entry>
+          </row>
+          <row>
+            <entry>Краткое описание для формирования сложной подписи гистограммы</entry>
+            <entry>Sh_Descr1</entry>
+            <entry>Строка</entry>
+            <entry> </entry>
+            <entry>Константа</entry>
+            <entry>Штатное</entry>
+          </row>
+          <row>
+            <entry>Неисправность (модель)</entry>
+            <entry>Err</entry>
+            <entry>Двоичное</entry>
+            <entry>Нет</entry>
+            <entry>Переменная</entry>
+            <entry>Модель</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

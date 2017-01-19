@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика - Кардан </title>
+  <body>
+    <table id="table_gpx_hds_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4265/image001.jpg" height="32" width="32"
+                id="image_hpx_hds_qy"/></entry>
+            <entry>Механика - Кардан</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4265/image002.jpg" height="63" width="120"
+                id="image_ipx_hds_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>В блоке реализована модель карданного соединения двух валов - ведущего (B) и ведомого (F).
+      Угол между осями валов – А (0 ≤А &lt; π/2). Схематически соединение представлено на рисунке 1
+      (при двух положениях угла поворота ведущего вала).</p>
+    <p><image href="images_old/4265/image003.jpg" height="214" width="570" id="image_jpx_hds_qy"/></p>
+    <p>Рисунок 1.</p>
+    <p>Уравнения модели имеют следующий вид:</p>
+    <p><image href="images_old/4265/image004.gif" height="47" width="271" id="image_kpx_hds_qy"/></p>
+    <p><image href="images_old/4265/image005.gif" height="43" width="79" id="image_lpx_hds_qy"/></p>
+    <p><image href="images_old/4265/image006.gif" height="43" width="136" id="image_mpx_hds_qy"/></p>
+    <p><image href="images_old/4265/image007.gif" height="43" width="182" id="image_npx_hds_qy"/></p>
+    <p> </p>
+    <table id="table_opx_hds_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>A</entry>
+            <entry>-</entry>
+            <entry>Угол соединения</entry>
+          </row>
+          <row>
+            <entry>T</entry>
+            <entry>-</entry>
+            <entry>Внутренний момент на ведомом валу</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4265/image008.gif" height="22" width="24"
+                id="image_ppx_hds_qy"/></entry>
+            <entry>-</entry>
+            <entry>Угловая скорость ведущего вала</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4265/image009.gif" height="22" width="23"
+                id="image_qpx_hds_qy"/></entry>
+            <entry>-</entry>
+            <entry>Угловая скорость ведомого вала</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4265/image010.gif" height="22" width="23"
+                id="image_rpx_hds_qy"/></entry>
+            <entry>-</entry>
+            <entry>Требуемая угловая скорость ведомого вала</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4265/image011.gif" height="22" width="20"
+                id="image_spx_hds_qy"/></entry>
+            <entry>-</entry>
+            <entry>Угол поворота ведущего вала</entry>
+          </row>
+          <row>
+            <entry>k</entry>
+            <entry>-</entry>
+            <entry>Коэффициент жесткости соединения</entry>
+          </row>
+          <row>
+            <entry>B</entry>
+            <entry>-</entry>
+            <entry>Коэффициент демпфирования соединения</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Входные порты блока</b></p>
+    <p>Блок имеет два механических ненаправленных порта вращательного движения (B – ведущий вал, F-
+      ведомый вал), через которые на вход блока поступают угловые скорости валов, а на выход -
+      моменты на валы. Кроме этого, блок имеет один математический порт, через который в модель
+      поступает значение угла соединения валов.</p>
+    <p> </p>
+    <p><b>Выходные порты блока - отсутствуют</b></p>
+    <p> </p>
+    <p><b>Свойства блока:</b></p>
+    <table id="table_tpx_hds_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Amax</entry>
+            <entry>-</entry>
+            <entry>Максимальный угол соединения, рад</entry>
+          </row>
+          <row>
+            <entry>K</entry>
+            <entry>-</entry>
+            <entry>Коэффициент жесткости соединения, н*м/рад</entry>
+          </row>
+          <row>
+            <entry>B</entry>
+            <entry>-</entry>
+            <entry>Коэффициент демпфирования соединения, н*м/(рад/с)</entry>
+          </row>
+          <row>
+            <entry>Fi0</entry>
+            <entry>-</entry>
+            <entry>Начальный угол ведущего вала, рад</entry>
+          </row>
+          <row>
+            <entry>T0</entry>
+            <entry>-</entry>
+            <entry>Начальный момент от ведущего вала к ведомому, н*м</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_upx_hds_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>ТB</entry>
+            <entry>-</entry>
+            <entry>Момент на ведущем валу B, н*м</entry>
+          </row>
+          <row>
+            <entry>WB</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость на ведущем валу B, рад/с</entry>
+          </row>
+          <row>
+            <entry>ТF</entry>
+            <entry>-</entry>
+            <entry>Момент на ведомом валу F, н*м</entry>
+          </row>
+          <row>
+            <entry>WF</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость на ведомом валу F, рад/с</entry>
+          </row>
+          <row>
+            <entry>Fi</entry>
+            <entry>-</entry>
+            <entry>Угол поворота ведущего вала, рад</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

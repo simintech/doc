@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика – Демпфер поступательного движения с переменными коэффициентами </title>
+  <body>
+    <table id="table_e14_zvr_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4224/image001.png" height="32" width="32"
+                id="image_f14_zvr_qy"/></entry>
+            <entry>Механика – Демпфер поступательного движения с переменными коэффициентами</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4224/image002.png" height="96" width="139"
+                id="image_g14_zvr_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> В блоке реализована математическая модель линейного вязкостного демпфера с переменным
+      коэффициентом демпфирования, описываемая следующими уравнениями:</p>
+    <p><image href="images_old/4224/image003.png" height="63" width="189" id="image_h14_zvr_qy"/>,
+      где</p>
+    <table id="table_i14_zvr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>F</entry>
+            <entry>-</entry>
+            <entry>сила</entry>
+          </row>
+          <row>
+            <entry>D</entry>
+            <entry>-</entry>
+            <entry>коэффициент демпфирования</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4224/image004.png" height="22" width="11"
+                id="image_j14_zvr_qy"/></entry>
+            <entry>-</entry>
+            <entry>относительная скорость</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4224/image005.png" height="22" width="39"
+                id="image_k14_zvr_qy"/></entry>
+            <entry>-</entry>
+            <entry>минимально возможный коэффициент демпфирования</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4224/image006.png" height="22" width="46"
+                id="image_l14_zvr_qy"/></entry>
+            <entry>-</entry>
+            <entry>скорости портов C и R, соответственно</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Входные порты блока:</b></p>
+    <p> Блок имеет два механических порта (C иR) поступательного движения и один математический порт
+      B, через который в модель поступает значение коэффициента демпфирования D.</p>
+    <p> </p>
+    <p>
+      <b>Выходные порты блока – отсутствуют.</b></p>
+    <p> </p>
+    <p><b> Свойства блока:</b></p>
+    <table id="table_m14_zvr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Dmin</entry>
+            <entry>-</entry>
+            <entry>минимальный коэффициент демпфирования, <image href="images_old/4224/image007.png"
+                height="29" width="17" id="image_n14_zvr_qy"/></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_o14_zvr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>F</entry>
+            <entry>-</entry>
+            <entry>сила, <image href="images_old/4224/image008.png" height="22" width="11"
+                id="image_p14_zvr_qy"/></entry>
+          </row>
+          <row>
+            <entry>V</entry>
+            <entry>-</entry>
+            <entry>относительная скорость, <image href="images_old/4224/image009.png" height="22"
+                width="30" id="image_q14_zvr_qy"/></entry>
+          </row>
+          <row>
+            <entry>Q</entry>
+            <entry>-</entry>
+            <entry>мощность демпфирования, Вт</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

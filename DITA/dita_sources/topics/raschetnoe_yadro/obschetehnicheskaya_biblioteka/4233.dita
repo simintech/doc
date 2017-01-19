@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика – Идеальный источник момента вращательного движения </title>
+  <body>
+    <table id="table_jxk_sxr_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4233/image001.png" height="32" width="32"
+                id="image_kxk_sxr_qy"/></entry>
+            <entry>Механика – Идеальный источник момента вращательного движения</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4233/image002.png" height="89" width="128"
+                id="image_lxk_sxr_qy"/>
+            </entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>В блоке реализована модель идеального источника момента. Источник идеален в том смысле, что
+      предполагается, что его мощности всегда достаточно, чтобы создать требуемый момент.</p>
+    <p>Уравнения модели блока имеют следующий вид:</p>
+    <p><image href="images_old/4233/image003.png" height="22" width="53" id="image_mxk_sxr_qy"/>, где</p>
+    <table id="table_nxk_sxr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>T</entry>
+            <entry>-</entry>
+            <entry>момент на механическом входе</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4233/image004.png" height="22" width="17"
+                id="image_oxk_sxr_qy"/></entry>
+            <entry>-</entry>
+            <entry>заданное значение момента на входе S</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Входные порты блока:</b></p>
+    <p> Блок имеет один механический порт вращательного движения и один математический порт S, на
+      который поступает заданное значение момента.</p>
+    <p>
+      <b>Выходные порты блока – отсутствуют.</b></p>
+    <p><b> Свойства блока – отсутствуют.</b></p>
+    <p><b> Параметры блока:</b></p>
+    <table id="table_pxk_sxr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Т</entry>
+            <entry>-</entry>
+            <entry>Момент, н*м</entry>
+          </row>
+          <row>
+            <entry>ω</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость, рад/с</entry>
+          </row>
+          <row>
+            <entry>Q</entry>
+            <entry>-</entry>
+            <entry>Мощность, Вт</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

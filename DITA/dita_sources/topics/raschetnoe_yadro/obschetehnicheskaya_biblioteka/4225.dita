@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика – Пружина поступательного движения с переменным коэффициентом </title>
+  <body>
+    <table id="table_a3j_cwr_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4225/image001.png" height="32" width="32"
+                id="image_b3j_cwr_qy"/></entry>
+            <entry>Механика – Пружина поступательного движения с переменным коэффициентом</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4225/image002.png" height="74" width="108"
+                id="image_c3j_cwr_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> В блоке реализована математическая модель пружины с переменным коэффициентом жесткости,
+      описываемая следующими уравнениями:</p>
+    <p><image href="images_old/4225/image003.png" height="22" width="73" id="image_d3j_cwr_qy"/>,</p>
+    <p><image href="images_old/4225/image004.png" height="43" width="107" id="image_e3j_cwr_qy"/></p>
+    <p><image href="images_old/4225/image005.png" height="22" width="150" id="image_f3j_cwr_qy"/>,
+      где</p>
+    <table id="table_g3j_cwr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>F</entry>
+            <entry>-</entry>
+            <entry>сила, <image href="images_old/4225/image006.png" height="22" width="11"
+                id="image_h3j_cwr_qy"/></entry>
+          </row>
+          <row>
+            <entry>K</entry>
+            <entry>-</entry>
+            <entry>коэффициент жесткости,<image href="images_old/4225/image007.png" height="32"
+                width="25" id="image_i3j_cwr_qy"/></entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4225/image008.png" height="22" width="38"
+                id="image_j3j_cwr_qy"/></entry>
+            <entry>-</entry>
+            <entry>минимально возможный коэффициент жесткости,<image href="images_old/4225/image007.png"
+                height="32" width="25" id="image_k3j_cwr_qy"/></entry>
+          </row>
+          <row>
+            <entry>S</entry>
+            <entry>-</entry>
+            <entry>расстояние между портами C и R, м</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4225/image009.png" height="22" width="19"
+                id="image_l3j_cwr_qy"/></entry>
+            <entry>-</entry>
+            <entry>скорость порта C, <image href="images_old/4225/image010.png" height="29" width="9"
+                id="image_m3j_cwr_qy"/></entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4225/image011.png" height="22" width="20"
+                id="image_n3j_cwr_qy"/></entry>
+            <entry>-</entry>
+            <entry>скорость порта R, <image href="images_old/4225/image010.png" height="29" width="9"
+                id="image_o3j_cwr_qy"/></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Входные порты блока:</b></p>
+    <p> Блок имеет два механических порта поступательного движения – C и R, и один математический
+      порт, через который в модель поступают значения коэффициента жесткости.</p>
+    <p> </p>
+    <p>
+      <b>Выходные порты блока – отсутствуют.</b></p>
+    <p> </p>
+    <p><b> Свойства блока:</b></p>
+    <table id="table_p3j_cwr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Kmin</entry>
+            <entry>-</entry>
+            <entry>минимально возможный коэффициент жесткости, <image href="images_old/4225/image012.png"
+                height="29" width="9" id="image_q3j_cwr_qy"/></entry>
+          </row>
+          <row>
+            <entry>S0</entry>
+            <entry>-</entry>
+            <entry>начальное значение расстояния, м</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_r3j_cwr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>F</entry>
+            <entry>-</entry>
+            <entry>сила, <image href="images_old/4225/image006.png" height="22" width="11"
+                id="image_s3j_cwr_qy"/></entry>
+          </row>
+          <row>
+            <entry>S</entry>
+            <entry>-</entry>
+            <entry>перемещение пружины, м</entry>
+          </row>
+          <row>
+            <entry>V</entry>
+            <entry>-</entry>
+            <entry>разность скоростей, м/с</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

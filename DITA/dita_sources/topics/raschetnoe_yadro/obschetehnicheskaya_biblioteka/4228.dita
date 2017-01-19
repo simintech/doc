@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика – Идеальный датчик поступательного движения </title>
+  <body>
+    <table id="table_ul1_kwr_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4228/image001.png" height="32" width="32"
+                id="image_vl1_kwr_qy"/></entry>
+            <entry>Механика – Идеальный датчик поступательного движения</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4228/image002.png" height="114" width="155"
+                id="image_wl1_kwr_qy"/>
+            </entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>В блоке реализована модель идеальных датчиков скорости и перемещения (без учета
+      демпфирования, инерции и других эффектов).</p>
+    <p>Уравнения модели имеют следующий вид:</p>
+    <p><image href="images_old/4228/image003.png" height="22" width="129" id="image_xl1_kwr_qy"/></p>
+    <p><image href="images_old/4228/image004.png" height="32" width="136" id="image_yl1_kwr_qy"/>,
+      где</p>
+    <table id="table_zl1_kwr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4228/image005.png" height="22" width="20"
+                id="image_am1_kwr_qy"/></entry>
+            <entry>-</entry>
+            <entry>скорость порта R</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4228/image006.png" height="22" width="19"
+                id="image_bm1_kwr_qy"/></entry>
+            <entry>-</entry>
+            <entry>скорость порта C</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4228/image007.png" height="22" width="11"
+                id="image_cm1_kwr_qy"/></entry>
+            <entry>-</entry>
+            <entry>измеряемая разность скоростей</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4228/image008.png" height="22" width="10"
+                id="image_dm1_kwr_qy"/></entry>
+            <entry>-</entry>
+            <entry>измеряемая разность перемещения портов R и C</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4228/image009.png" height="22" width="18"
+                id="image_em1_kwr_qy"/></entry>
+            <entry>-</entry>
+            <entry>начальное значение перемещения</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p><b>Входные порты блока:</b></p>
+    <p> Блок имеет два механических порта поступательного движения – C и R. Постулируется, что
+      положительное направление – от порта R к порту C.</p>
+    <p>
+      <b>Выходные порты блока:</b></p>
+    <p> Блок имеет два математических выходных порта, на которые поступают измеряемые значения
+        <image href="images_old/4228/image007.png" height="22" width="11" id="image_fm1_kwr_qy"/> и
+        <image href="images_old/4228/image008.png" height="22" width="10" id="image_gm1_kwr_qy"/>.</p>
+    <p>
+      <b>Свойства блока:</b></p>
+    <table id="table_hm1_kwr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>S0</entry>
+            <entry>-</entry>
+            <entry>начальное значение перемещения, м</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_im1_kwr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4228/image010.png" height="22" width="12"
+                id="image_jm1_kwr_qy"/></entry>
+            <entry>-</entry>
+            <entry>разность скоростей, <image href="images_old/4228/image011.png" height="29" width="9"
+                id="image_km1_kwr_qy"/></entry>
+          </row>
+          <row>
+            <entry>S</entry>
+            <entry>-</entry>
+            <entry>разность перемещений, м</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p> </p>
+  </body>
+</topic>

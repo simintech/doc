@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика - Заделка вращательного движения </title>
+  <body>
+    <table id="table_hmt_grr_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4201/image001.png" height="40" width="42"
+                id="image_imt_grr_qy"/></entry>
+            <entry>Механика - Заделка вращательного движения</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4201/image002.jpg" height="70" width="109"
+                id="image_jmt_grr_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Математическая модель блока описывается уравнением</p>
+    <p>W=0, где</p>
+    <table id="table_kmt_grr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>W</entry>
+            <entry>-</entry>
+            <entry>угловая скорость, <image href="images_old/4201/image003.png" height="31" width="21"
+                id="image_lmt_grr_qy"/></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Входные порты блока – отсутствуют.</b></p>
+    <p><b>Выходные порты блока:</b></p>
+    <p> Блок имеет один механический ненаправленный порт вращательного движения, через который на
+      вход блока поступают моменты от присоединенных блоков, а на выход – нулевая скорость
+      вращения.</p>
+    <p><b>Свойства блока – отсутствуют.</b></p>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_mmt_grr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Т</entry>
+            <entry>-</entry>
+            <entry>Суммарный момент, н*м</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p> </p>
+  </body>
+</topic>
