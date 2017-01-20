@@ -965,6 +965,112 @@
                 </topicref>
             </topicref>
         </topicref>
+        <topicref href="topics/raschetnoe_yadro/issledovania/issledovania.dita"
+            navtitle="3.6 Исследования" locktitle="yes">
+            <topicref href="topics/raschetnoe_yadro/issledovania/bloki/bloki.dita"
+                navtitle="3.5.1 Блоки" locktitle="yes">
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/4444.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/4448.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/4445.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/4446.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/4447.dita"/>
+            </topicref>
+            <topicref href="topics/raschetnoe_yadro/issledovania/metody_chastotnogo_analiza.dita"
+                navtitle="3.5.2 Методы частотного анализа" locktitle="yes"/>
+            <topicref href="topics/raschetnoe_yadro/issledovania/optimizacia.dita"
+                navtitle="3.5.3 Оптимизация" locktitle="yes"/>
+        </topicref>
+    </topicref>
+    <topicref href="topics/grafika_i_animacia/grafika_i_animacia.dita"
+        navtitle="4 Графика и анимация" locktitle="yes">
+        <topicref href="topics/grafika_i_animacia/shemnoe_okno_proekta/shemnoe_okno_proekta.dita">
+            <topicref
+                href="topics/grafika_i_animacia/shemnoe_okno_proekta/kontextnoe_menu_obekta.dita"/>
+            <topicref
+                href="topics/grafika_i_animacia/shemnoe_okno_proekta/kontextnoe_menu_v_shemnom_okne.dita"/>
+            <topicref href="topics/grafika_i_animacia/shemnoe_okno_proekta/menu_mashtab.dita"/>
+            <topicref href="topics/grafika_i_animacia/shemnoe_okno_proekta/menu_vid.dita"/>
+        </topicref>
+        <topicref href="topics/grafika_i_animacia/koordinatnoe_prostranstvo.dita"/>
+        <topicref href="topics/grafika_i_animacia/manipulacii_s_graficheskimi_obektami.dita"/>
+        <topicref href="topics/grafika_i_animacia/vizualnie_sloi.dita"/>
+        <topicref href="topics/grafika_i_animacia/svoistvo_ssilka_instance.dita"
+            navtitle="Свойство «Ссылка / Instance»" locktitle="yes"/>
+        <topicref href="topics/grafika_i_animacia/oblasti_vidimosti_inf_obektov.dita"/>
+        <topicref
+            href="topics/grafika_i_animacia/graficheskie_primitivy/graficheskie_primitivy.dita">
+            <topicref href="topics/grafika_i_animacia/graficheskie_primitivy/vstavit_iz_faila.dita"/>
+            <topicref
+                href="topics/grafika_i_animacia/graficheskie_primitivy/goriachaya_klavisha.dita"/>
+            <topicref href="topics/grafika_i_animacia/graficheskie_primitivy/grafik.dita"/>
+            <topicref href="topics/grafika_i_animacia/graficheskie_primitivy/dokument_word.dita"/>
+            <topicref href="topics/grafika_i_animacia/graficheskie_primitivy/duga.dita"/>
+            <topicref href="topics/grafika_i_animacia/graficheskie_primitivy/zvuk.dita"/>
+            <topicref href="topics/grafika_i_animacia/graficheskie_primitivy/izobrazhenie.dita"/>
+            <topicref
+                href="topics/grafika_i_animacia/graficheskie_primitivy/izobrazhenie_s_povorotom.dita"/>
+            <topicref href="topics/grafika_i_animacia/graficheskie_primitivy/kartinka_iz_faila.dita"/>
+            <topicref href="topics/grafika_i_animacia/graficheskie_primitivy/knopka.dita"/>
+            <topicref
+                href="topics/grafika_i_animacia/graficheskie_primitivy/kombinirovannyi_redaktor.dita"/>
+            <topicref href="topics/grafika_i_animacia/graficheskie_primitivy/krug.dita"/>
+            <topicref href="topics/grafika_i_animacia/graficheskie_primitivy/lineinaya_shkala.dita"/>
+            <topicref href="topics/grafika_i_animacia/graficheskie_primitivy/lineinyi_pribor.dita"/>
+            <topicref
+                href="topics/grafika_i_animacia/graficheskie_primitivy/nabor_izobrazheniy.dita"/>
+            <topicref href="topics/grafika_i_animacia/graficheskie_primitivy/okrujnost.dita"/>
+            <topicref href="topics/grafika_i_animacia/graficheskie_primitivy/poligon.dita"/>
+            <topicref href="topics/grafika_i_animacia/graficheskie_primitivy/poliduga.dita"/>
+            <topicref href="topics/grafika_i_animacia/graficheskie_primitivy/polikrug.dita"/>
+            <topicref href="topics/grafika_i_animacia/graficheskie_primitivy/polilinia.dita"/>
+            <topicref href="topics/grafika_i_animacia/graficheskie_primitivy/priamaya.dita"/>
+            <topicref href="topics/grafika_i_animacia/graficheskie_primitivy/priamougolnik.dita"/>
+            <topicref
+                href="topics/grafika_i_animacia/graficheskie_primitivy/priamougolnik_zalityi.dita"/>
+            <topicref
+                href="topics/grafika_i_animacia/graficheskie_primitivy/priamougolnik_maskirovochnyi.dita"/>
+            <topicref href="topics/grafika_i_animacia/graficheskie_primitivy/pustaya_gruppa.dita"/>
+            <topicref href="topics/grafika_i_animacia/graficheskie_primitivy/radiogruppa.dita"/>
+            <topicref href="topics/grafika_i_animacia/graficheskie_primitivy/sensor.dita"/>
+            <topicref href="topics/grafika_i_animacia/graficheskie_primitivy/spisok_grupp.dita"/>
+            <topicref
+                href="topics/grafika_i_animacia/graficheskie_primitivy/strelochnyi_pribor.dita"/>
+            <topicref href="topics/grafika_i_animacia/graficheskie_primitivy/text.dita"/>
+            <topicref
+                href="topics/grafika_i_animacia/graficheskie_primitivy/text_avtomaticheskiy.dita"/>
+            <topicref href="topics/grafika_i_animacia/graficheskie_primitivy/text_s_povorotom.dita"/>
+            <topicref
+                href="topics/grafika_i_animacia/graficheskie_primitivy/tekstovyi_redaktor.dita"/>
+            <topicref href="topics/grafika_i_animacia/graficheskie_primitivy/tochka.dita"/>
+            <topicref href="topics/grafika_i_animacia/graficheskie_primitivy/truba.dita"/>
+            <topicref href="topics/grafika_i_animacia/graficheskie_primitivy/chasovaya_shkala.dita"/>
+            <topicref href="topics/grafika_i_animacia/graficheskie_primitivy/chekbox.dita"/>
+            <topicref href="topics/grafika_i_animacia/graficheskie_primitivy/ellips.dita"/>
+            <topicref href="topics/grafika_i_animacia/graficheskie_primitivy/ellips_zalityi.dita"/>
+            <topicref
+                href="topics/grafika_i_animacia/graficheskie_primitivy/ellips_zalityi_segment.dita"/>
+            <topicref
+                href="topics/grafika_i_animacia/graficheskie_primitivy/ellips_zalityi_sektor.dita"/>
+            <topicref href="topics/grafika_i_animacia/graficheskie_primitivy/gif_animaciya.dita"/>
+            <topicref href="topics/grafika_i_animacia/graficheskie_primitivy/ole_obekt.dita"/>
+        </topicref>
+        <topicref href="topics/grafika_i_animacia/graficheskiy_redaktor/graficheskiy_redaktor.dita">
+            <topicref href="topics/grafika_i_animacia/graficheskiy_redaktor/kontextnoe_menu.dita"/>
+            <topicref href="topics/grafika_i_animacia/graficheskiy_redaktor/menu_pravka.dita"/>
+            <topicref href="topics/grafika_i_animacia/graficheskiy_redaktor/menu_fail.dita"/>
+            <topicref href="topics/grafika_i_animacia/graficheskiy_redaktor/menu_masshtab.dita"/>
+            <topicref href="topics/grafika_i_animacia/graficheskiy_redaktor/menu_servis.dita"/>
+            <topicref href="topics/grafika_i_animacia/graficheskiy_redaktor/menu_vid.dita"/>
+            <topicref href="topics/grafika_i_animacia/graficheskiy_redaktor/menu_okno.dita"/>
+        </topicref>
+        <topicref href="topics/grafika_i_animacia/paneli_upravlenia/paneli_upravlenia.dita">
+            <topicref
+                href="topics/grafika_i_animacia/paneli_upravlenia/dobavlenie_paneli_upravlenia_v_proekt.dita"/>
+            <topicref
+                href="topics/grafika_i_animacia/paneli_upravlenia/primer_paneli_upravlenia.dita"/>
+        </topicref>
+        <topicref href="topics/grafika_i_animacia/animacionnaya_sistema/animacionnaya_sistema.dita"
+        />
     </topicref>
     <topicref href="topics/yazik_programmirovania/yazik_programmirovania.dita"
         navtitle="6 - Язык программирования" locktitle="yes">

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Добавление панели управления в проект SimInTech </title>
+  <body>
+    <p>Для добавления панели управления в проект SimInTech необходимо выполнить следующие
+      действия.</p>
+    <p>1. В меню главного окна SimInTech выбрать пункт <b>«Расчёт» </b><b>→</b><b> «</b><b>Менеджер
+        данных...»</b>. Откроется одноимённое окно.</p>
+    <p><image href="control_panel_howtoadd_images/image002.png" height="169" width="279"
+        id="image_elh_1jb_ry"/></p>
+    <p>Окно «Менеджер данных»</p>
+    <p>Данное окно также можно вызвать с панели главного окна SimInTech по нажатию на кнопку .</p>
+    <p>2. Если в проекте ещё не создано категорий, то сначала нужно создать категорию, нажав кнопку
+        <image href="control_panel_howtoadd_images/image003.png" height="30" width="30"
+        id="image_flh_1jb_ry"/> «Добавить категорию» на панели инструментов окна «Менеджер данных».
+      Будет создана новая категория.</p>
+    <p>3. Затем нужно создать окно анимации, предварительно выбрав категорию в окне «Менеджер
+      данных» и нажав кнопку <image href="control_panel_howtoadd_images/image004.png" height="29"
+        width="29" id="image_glh_1jb_ry"/> «Окно анимации».</p>
+    <p><image href="control_panel_howtoadd_images/image005.png" height="169" width="279"
+        id="image_hlh_1jb_ry"/></p>
+    <p>Добавление окна анимации через окно «менеджер данных»</p>
+    <p>Созданное окно можно вызвать по двойному клику на его имени в окне «Менеджер данных».
+      Одновременно откроется панель графических примитивов SimInTech.</p>
+    <p><image href="control_panel_howtoadd_images/image006.png" height="554" width="612"
+        id="image_ilh_1jb_ry"/></p>
+    <p>Результат вызова панели управления из «менеджера данных»</p>
+  </body>
+</topic>

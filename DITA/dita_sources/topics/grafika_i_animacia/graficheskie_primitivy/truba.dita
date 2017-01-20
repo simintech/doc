@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Труба (Tube) </title>
+  <body>
+    <p>
+      <image placement="break" href="Tube_images/image001.png" align="center" id="image_c5m_py1_ry"
+      />
+    </p>
+    <p>
+      <image placement="break" href="Tube_images/image002.png" align="center" id="image_obw_py1_ry"
+      />
+    </p>
+    <p><b><i>Вставка</i></b></p>
+    <p>1. Кликнуть в панели примитивов по кнопке <image href="Tube_images/image003.png" height="31"
+        width="31" id="image_sbb_my1_ry"/>.</p>
+    <p>2. Кликнуть в поле окна проекта или графического редактора в месте начала трубы.</p>
+    <p>3. Повторно кликнуть в поле окна проекта или графического редактора для задания следующей
+      вершины трубы и т.д. </p>
+    <p>4. Для завершения кликнуть правой кнопкой мыши в месте окончания трубы.</p>
+    <p><b><i>Редактирование</i></b></p>
+    <p>1. Выделить трубу, кликнув на её изображени.</p>
+    <p>2. Для перемещения трубы навести указатель мыши на трубу - изображение указателя изменится на
+      изображение указывающей руки, нажать ЛКМ и удерживая её переместить трубу на новое место.</p>
+    <p>3. Для изменения положения одной из вершин трубы подвести указатель мыши к этой вершине -
+      изображение указателя изменится на перекрестье, нажать ЛКМ и удерживая её переместить вершину
+      на новое место.</p>
+    <p>4. Для удаления вершины трубы подвести указатель мыши к этой вершине - изображение указателя
+      изменится на перекрестье, нажать ПКМ - откроется контекстое меню, в котором нужно выбрать пукт
+        <b>«Действия → Удалить точку»</b>.</p>
+    <p>5. Для добавления вершины внутри трубы подвести указатель мыши к месту на трубе, где нужно
+      добавить вершину, нажать ПКМ - откроется контекстое меню, в котором нужно выбрать пукт
+        <b>«Действия → Вставить точку»</b>.</p>
+    <p>6. Для продления трубы кликнуть ПКМ в любом месте трубы - откроется контекстное меню, в
+      котором нужно выбрать пукт <b>«Действия → Продолжить объект»</b>. Далее по клику ЛКМ будут
+      устанавливаться новые вершины трубы. Последнюю из добавляемых вершин нужно установить по клику
+      ПКМ.</p>
+    <p>7. Для автоматической замены всех углов, образованных трубой, на углы 90° и 180° кликнуть ПКМ
+      в любом месте трубы - откроется контекстное меню, в котором нужно выбрать пукт <b>«Действия →
+        Выровнять линию»</b>. Результаты работы этой функции могут отличаться от ожидаемых
+      пользователем, поэтому для отмены данного действия можно воспользоваться сочетанием клавиш
+      [Ctrl]+[Z], либо пунктом меню <b>«Правка</b> → <image href="Tube_images/image004.png" height="25"
+          width="25" id="image_tbb_my1_ry"/> <b>Отмена»</b> в основном окне программы, либо пунктом
+      меню <b>«Правка</b> → <image href="Tube_images/image004.png" height="25" width="25"
+          id="image_ubb_my1_ry"/><b> Отмена действия»</b> при работе в графическом редакторе.</p>
+    <p/>
+    <p><b>Пример работы функции «Выровнять линию»: слева труба до применения функции, справа -
+        после.</b></p>
+    <p><b><i>Свойства</i></b></p>
+    <p><image href="Tube_images/image006.png" height="654" width="621" id="image_vbb_my1_ry"/></p>
+    <p> </p>
+    <table id="table_wbb_my1_ry">
+      <tgroup cols="6">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <colspec colnum="4" colname="col4"/>
+        <colspec colnum="5" colname="col5"/>
+        <colspec colnum="6" colname="col6"/>
+        <tbody>
+          <row>
+            <entry><b>Название</b></entry>
+            <entry><b>Имя</b></entry>
+            <entry><b>Значение по умолчанию</b></entry>
+            <entry namest="col4" nameend="col6">
+              <p><b>Допустимые значения</b></p>
+              <p><b>{в скрипте} в окне свойств</b></p>
+            </entry>
+            <entry><b>Справка</b></entry>
+          </row>
+          <row>
+            <entry><b>Имя объекта </b></entry>
+            <entry>Name</entry>
+            <entry>Tube&lt;N></entry>
+            <entry namest="col4" nameend="col6">Непрерывная последовательность цифр и латинских
+              букв</entry>
+            <entry>
+              <p>Данное имя используется для обращения к свойтсвам объекта, например, в скрипте:</p>
+              <p>Point.Visible.</p>
+            </entry>
+          </row>
+          <row>
+            <entry><b>Тип элемента</b></entry>
+            <entry>ClassName</entry>
+            <entry>Tube</entry>
+            <entry namest="col4" nameend="col6">Значение предопределено</entry>
+            <entry>Тип объекта, определяющий его внешний вид объекта и набор свойств.</entry>
+          </row>
+          <row>
+            <entry><b>Подсказка</b></entry>
+            <entry>Hint</entry>
+            <entry><i>&lt;</i><i>нет</i><i>></i></entry>
+            <entry namest="col4" nameend="col6">Любой текст</entry>
+            <entry>Текст подсказки, всплывающей при наведении курсора мыши на объект.</entry>
+          </row>
+          <row>
+            <entry><b>Отображать подсказку при редактировании</b></entry>
+            <entry>ShowHintOnEdit</entry>
+            <entry>Нет</entry>
+            <entry namest="col4" nameend="col6">
+              <p>{0} Нет</p>
+              <p>{1} Да</p>
+            </entry>
+            <entry>Включает и отключает отображение всплывающей подсказки в режиме
+              редактирования.</entry>
+          </row>
+          <row>
+            <entry><b>Видимость при выполнении</b></entry>
+            <entry>Visible</entry>
+            <entry>Да</entry>
+            <entry namest="col4" nameend="col6">
+              <p>{0} Нет</p>
+              <p>{1} Да</p>
+            </entry>
+            <entry>Включает и отключает отображение объекта в режиме «Индикация» при запуске
+              расчёта.</entry>
+          </row>
+          <row>
+            <entry><b>Цвет</b></entry>
+            <entry>Color</entry>
+            <entry><i>&lt;</i><i>черный</i><i>></i></entry>
+            <entry namest="col4" nameend="col6">Цвет выбирается из стандартной системной
+              палитры.</entry>
+            <entry>Цвет отображаемой точки. </entry>
+          </row>
+          <row>
+            <entry><b>Координаты точек</b></entry>
+            <entry>Points</entry>
+            <entry>[(X1,Y1),(X2,Y2)…(Xn,Yn)]</entry>
+            <entry namest="col4" nameend="col6">
+              <p>Значения float, имена сигналов, математические выражения:</p>
+              <p>[(56 , 104), (112 , src1),(coord3*k4 , 40)]</p>
+            </entry>
+            <entry>Координаты X и Y всех вершин отображаемой полилинии в координатном пространстве
+              окна.</entry>
+          </row>
+          <row>
+            <entry><b>Ссылка</b></entry>
+            <entry>Instance</entry>
+            <entry><i>&lt;</i><i>нет</i><i>></i></entry>
+            <entry namest="col4" nameend="col6">Значения, задаваемые в окне «Выбор ссылки».</entry>
+            <entry>Вызов окна «Выбор ссылки». Объект используется в качестве чувствительной области
+              для вызова различных действий: переключения между страницами проекта, управления
+              другими блоками, открытия файлов и пр. </entry>
+          </row>
+          <row>
+            <entry><b>Ссылка при редактировании</b></entry>
+            <entry>EditInstance</entry>
+            <entry>Нет</entry>
+            <entry namest="col4" nameend="col6">
+              <p>{0} Нет</p>
+              <p>{1} Да</p>
+            </entry>
+            <entry>Обработка объектом вызова ссылки в режиме редактирования.</entry>
+          </row>
+          <row>
+            <entry><b>Действие для вывода ссылки</b></entry>
+            <entry>InstanceMode</entry>
+            <entry>Двойной щелчок</entry>
+            <entry namest="col4" nameend="col6">
+              <p>{0} Двойной щелчок</p>
+              <p>{1} Щелчок левой кнопкой</p>
+              <p>{2} Щелчок правой кнопкой</p>
+            </entry>
+            <entry>Выбор варианта активации ссылки.</entry>
+          </row>
+          <row>
+            <entry><b>Ярлык</b></entry>
+            <entry>Tag</entry>
+            <entry>0</entry>
+            <entry namest="col4" nameend="col6">Любое целое число или интерпретируемое
+              выражение</entry>
+            <entry>Метка в виде произвольного числа. Позволяет обращаться ко всем объектам с
+              одинаковым ярлыком при написании скриптов. Например, когда в процессе счета требуется
+              скрыть или показать группу объектов.</entry>
+          </row>
+          <row>
+            <entry><b>Шаблон автозаполнения</b></entry>
+            <entry>Template</entry>
+            <entry><i>&lt;</i><i>нет</i><i>></i></entry>
+            <entry namest="col4" nameend="col6">Подробнее о шаблонах автозаполнения.</entry>
+            <entry>Заданный в специальном формате текст, позволяющий автоматически создавать связи и
+              присваивать имена сигналам объекта.</entry>
+          </row>
+          <row>
+            <entry><b>Номер решателя</b></entry>
+            <entry>Layer</entry>
+            <entry>0</entry>
+            <entry namest="col4" nameend="col6">Любое целое число или интерпретируемое
+              выражение</entry>
+            <entry>Число, задающее номер расчетного ядра, которое производит расчет математической
+              модели объекта. Применяется при использовании нескольких расчетных программ. </entry>
+          </row>
+          <row>
+            <entry><b>Скрипт инициализации объекта</b></entry>
+            <entry>OnInitScript</entry>
+            <entry><i>&lt;</i><i>нет</i><i>></i></entry>
+            <entry namest="col4" nameend="col6">Текст скрипта</entry>
+            <entry>Текст скрипта, исполняемого непосредственно перед запуском расчёта.</entry>
+          </row>
+          <row>
+            <entry><b>Скрипт исполнения объекта</b></entry>
+            <entry>OnRunScript</entry>
+            <entry><i>&lt;</i><i>нет</i><i>></i></entry>
+            <entry namest="col4" nameend="col6">Текст скрипта</entry>
+            <entry>Текст скрипта, исполняемого при выполнении расчёта.</entry>
+          </row>
+          <row>
+            <entry><b>Толщина линии</b></entry>
+            <entry>Width</entry>
+            <entry>1</entry>
+            <entry namest="col4" nameend="col6">Значения float, имена сигналов, математические
+              выражения.</entry>
+            <entry>Толщина изображаемой линии в пикселях.</entry>
+          </row>
+          <row>
+            <entry><b>Стиль линии</b></entry>
+            <entry>PenStyle</entry>
+            <entry>Сплошная</entry>
+            <entry><image href="Tube_images/image007.png" height="103" width="142"
+                id="image_xbb_my1_ry"/></entry>
+            <entry namest="col5" nameend="col6">
+              <p>{0} Сплошная</p>
+              <p>{1} Штриховая</p>
+              <p>{2} Пунктирная</p>
+              <p>{3} Штрихпунктирная</p>
+              <p>{4} С двумя точками</p>
+            </entry>
+            <entry>Выбор из набора доступных вариантов стилей линии.</entry>
+          </row>
+          <row>
+            <entry><b>Толщина границы</b></entry>
+            <entry>BorderWidth</entry>
+            <entry>0</entry>
+            <entry namest="col4" nameend="col6">Значения float, имена сигналов, математические
+              выражения.</entry>
+            <entry>Толщина абриса изображаемой линии в пикселях.</entry>
+          </row>
+          <row>
+            <entry><b>Цвет границы</b></entry>
+            <entry>BorderColor</entry>
+            <entry><i>&lt;</i><i>нет</i><i>></i></entry>
+            <entry namest="col4" nameend="col6">Цвет выбирается из стандартной системной
+              палитры.</entry>
+            <entry>Цвет абриса.</entry>
+          </row>
+          <row>
+            <entry><b>Коэффициент прозрачности</b></entry>
+            <entry>Opacity</entry>
+            <entry>1</entry>
+            <entry namest="col4" nameend="col6">Значения float от 0 до 1.</entry>
+            <entry>
+              <p>0 – полностью прозрачный объект.</p>
+              <p>1 – полностью непрозрачный объект.</p>
+            </entry>
+          </row>
+          <row>
+            <entry><b>Активный цвет</b></entry>
+            <entry>ActiveColor</entry>
+            <entry><i>&lt;</i><i>красный</i><i>></i></entry>
+            <entry namest="col4" nameend="col6">Цвет выбирается из стандартной системной
+              палитры.</entry>
+            <entry>Цвет изображаемой линии, отображаемая при нарушении уставки.</entry>
+          </row>
+          <row>
+            <entry><b>Активная толщина</b></entry>
+            <entry>ActiveWidth</entry>
+            <entry>5</entry>
+            <entry namest="col4" nameend="col6">Значения float, имена сигналов, математические
+              выражения.</entry>
+            <entry>Толщина линии в пикселях, отображаемая при нарушении уставки.</entry>
+          </row>
+          <row>
+            <entry><b>Активный стиль</b></entry>
+            <entry>ActiveStyle</entry>
+            <entry>Сплошная</entry>
+            <entry namest="col4" nameend="col5"><image href="Tube_images/image007.png" height="103"
+                width="142" id="image_ybb_my1_ry"/></entry>
+            <entry>
+              <p>{0} Сплошная</p>
+              <p>{1} Штриховая</p>
+              <p>{2} Пунктирная</p>
+              <p>{3} Штрихпунктирная</p>
+              <p>{4} С двумя точками</p>
+            </entry>
+            <entry>Выбор из набора доступных вариантов стилей линии, отображаемого при нарушении
+              уставки.</entry>
+          </row>
+          <row>
+            <entry><b>Уставка</b></entry>
+            <entry>Status</entry>
+            <entry>1</entry>
+            <entry namest="col4" nameend="col6">Значения float, имена сигналов, математические
+              выражения.</entry>
+            <entry>Значение уставки, при нарушении которой будут автоматически использоваться
+              свойства «Активный цвет», «Активная толщина», «Активный стиль», «Уставка».</entry>
+          </row>
+          <row>
+            <entry><b>Тип уставки</b></entry>
+            <entry>StatusType</entry>
+            <entry>Больше</entry>
+            <entry namest="col4" nameend="col6">
+              <p>{0} Меньше</p>
+              <p>{1} Больше</p>
+              <p>{2} Равно</p>
+              <p>{3} Меньше или равно</p>
+              <p>{4} Больше или равно</p>
+            </entry>
+            <entry>Выбор типа уставки.</entry>
+          </row>
+          <row>
+            <entry><b>Значение</b></entry>
+            <entry>Value</entry>
+            <entry>0</entry>
+            <entry namest="col4" nameend="col6">Значения float, имена сигналов, математические
+              выражения.</entry>
+            <entry>Текущее значение, сравниваемое с уставкой.</entry>
+          </row>
+          
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>
