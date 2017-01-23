@@ -982,7 +982,7 @@
         </topicref>
     </topicref>
     <topicref href="topics/grafika_i_animacia/grafika_i_animacia.dita"
-        navtitle="4 Графика и анимация" locktitle="yes">
+        navtitle="4 - Графика и анимация" locktitle="yes">
         <topicref href="topics/grafika_i_animacia/shemnoe_okno_proekta/shemnoe_okno_proekta.dita">
             <topicref
                 href="topics/grafika_i_animacia/shemnoe_okno_proekta/kontextnoe_menu_obekta.dita"/>
@@ -1094,6 +1094,41 @@
                 href="topics/grafika_i_animacia/videokadry/primer_sozdania_prostogo_videokadra.dita"
             />
         </topicref>
+    </topicref>
+    <topicref href="topics/priemy_raboty/priemy_raboty.dita" navtitle="5 - Приёмы работы"
+        locktitle="yes">
+        <topicref href="topics/priemy_raboty/ponyatie_submodel.dita"/>
+        <topicref href="topics/priemy_raboty/avtozamena_bloka.dita"/>
+        <topicref href="topics/priemy_raboty/bloki_vpamiat_izpamiati.dita"/>
+        <topicref href="topics/priemy_raboty/uroven_nepodsoedinennyh_portov.dita"/>
+        <topicref href="topics/priemy_raboty/sozdanie_svoego_bloka.dita"/>
+        <topicref
+            href="topics/priemy_raboty/standartnaya_podprogramma_ee_mnogokratnoe_ispolzovanie.dita"/>
+        <topicref href="topics/priemy_raboty/sravnenie_proektov.dita"/>
+        <topicref
+            href="topics/priemy_raboty/signaly_proekta_baza_signalov_vektorizovannyi_blok.dita"/>
+        <topicref href="topics/priemy_raboty/sravnenie_signalov_baz_dannyh_proektov.dita"/>
+        <topicref href="topics/priemy_raboty/svoistva_i_parametry_bloka.dita"/>
+        <topicref href="topics/priemy_raboty/restarty_proekta_i_paketa.dita"/>
+        <topicref href="topics/priemy_raboty/videokadr_podluch_k_modeli.dita"/>
+        <topicref href="topics/priemy_raboty/noviy_blok.dita"/>
+        <topicref href="topics/priemy_raboty/sravnenie_blokov.dita"/>
+        <topicref href="topics/priemy_raboty/zakladki.dita"/>
+        <topicref href="topics/priemy_raboty/zamorozka_obektov.dita"/>
+        <topicref href="topics/priemy_raboty/uslovnoe_vypolnenie_submodeli.dita"/>
+        <topicref href="topics/priemy_raboty/rabota_s_vis_sloyami_proekta.dita"/>
+        <topicref href="topics/priemy_raboty/poshagoviy_raschet.dita"/>
+        <topicref href="topics/priemy_raboty/sozdanie_blokov_po_tablice.dita"/>
+        <topicref href="topics/priemy_raboty/podpis_obektov.dita"/>
+        <topicref href="topics/priemy_raboty/indexator_proektov.dita"/>
+        <topicref href="topics/priemy_raboty/organizacia_raspredelennogo_setevogo_rascheta.dita"/>
+        <topicref href="topics/priemy_raboty/sozdanie_prostoi_animacii_bloka.dita"/>
+        <topicref href="topics/priemy_raboty/restarty_TPP_osobennosti.dita"/>
+        <topicref
+            href="topics/priemy_raboty/generacia_si_koda_na_osnove_vichisleniy_s_fixpoint.dita"/>
+        <topicref href="topics/priemy_raboty/zaschita_shemy_parolem.dita"/>
+        <topicref href="topics/priemy_raboty/ispolzovanie_makrosov.dita"/>
+        <topicref href="topics/priemy_raboty/sozdanie_i_podkluchenie_blokov_na_si.dita"/>
     </topicref>
     <topicref href="topics/yazik_programmirovania/yazik_programmirovania.dita"
         navtitle="6 - Язык программирования" locktitle="yes">
