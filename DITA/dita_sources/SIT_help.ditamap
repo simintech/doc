@@ -1069,8 +1069,31 @@
             <topicref
                 href="topics/grafika_i_animacia/paneli_upravlenia/primer_paneli_upravlenia.dita"/>
         </topicref>
-        <topicref href="topics/grafika_i_animacia/animacionnaya_sistema/animacionnaya_sistema.dita"
-        />
+        <topicref href="topics/grafika_i_animacia/animacionnaya_sistema/animacionnaya_sistema.dita">
+            <topicref
+                href="topics/grafika_i_animacia/animacionnaya_sistema/primer_zadania_sviazi_mezhdu_signalami.dita"/>
+            <topicref
+                href="topics/grafika_i_animacia/animacionnaya_sistema/primer_ispolzovania_shablona.dita"/>
+            <topicref
+                href="topics/grafika_i_animacia/animacionnaya_sistema/primer_sozdania_animirovannyh_obektov.dita"/>
+            <topicref
+                href="topics/grafika_i_animacia/animacionnaya_sistema/redaktor_vnutrennih_signalov_graficheskogo_konteinera.dita"/>
+            <topicref
+                href="topics/grafika_i_animacia/animacionnaya_sistema/redaktor_globalnyh_svoistv.dita"/>
+            <topicref
+                href="topics/grafika_i_animacia/animacionnaya_sistema/redaktor_lokalnyh_peremennyh.dita"/>
+            <topicref href="topics/grafika_i_animacia/animacionnaya_sistema/redaktor_sviazey.dita"/>
+            <topicref
+                href="topics/grafika_i_animacia/animacionnaya_sistema/redaktor_signalov_proekta.dita"/>
+            <topicref
+                href="topics/grafika_i_animacia/animacionnaya_sistema/sozdanie_animacii_dlya_submodeli.dita"/>
+            <topicref href="topics/grafika_i_animacia/animacionnaya_sistema/shablony.dita"/>
+        </topicref>
+        <topicref href="topics/grafika_i_animacia/videokadry/videokadry.dita">
+            <topicref
+                href="topics/grafika_i_animacia/videokadry/primer_sozdania_prostogo_videokadra.dita"
+            />
+        </topicref>
     </topicref>
     <topicref href="topics/yazik_programmirovania/yazik_programmirovania.dita"
         navtitle="6 - Язык программирования" locktitle="yes">

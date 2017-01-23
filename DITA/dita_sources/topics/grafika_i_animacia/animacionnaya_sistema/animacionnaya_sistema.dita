@@ -111,8 +111,11 @@
         href="animation_system_images/image005.png" height="25" width="25" id="image_vvf_kkb_ry"/> /
         <image href="animation_system_images/image006.png" height="25" width="25"
         id="image_wvf_kkb_ry"/> на панели инструментов схемного окна.</p>
-    <p> </p>
-    <p>Переключение режимов отображения схемного окна проекта</p>
+    <p>
+      <image placement="break" href="animation_system_images/image007.png" align="center"
+        id="image_o55_fdv_ry"/>
+    </p>
+    <p><b>Переключение режимов отображения схемного окна проекта</b></p>
     <p>В случае необходимости создания окружения для большого количества однотипных объектов в
       SimInTech можно использовать опцию «Шаблон автозаполнения», которая входит в состав свойств
       как библиотечных блоков SimInTech, так и графических примитивов. Она позволяет
