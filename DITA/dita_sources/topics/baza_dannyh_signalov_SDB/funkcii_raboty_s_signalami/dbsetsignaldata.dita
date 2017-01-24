@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>dbsetsignaldata </title>
+<shortdesc>Функция установки текущего значения сигнала в базе </shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>ss = <funcname>dbsetsignaldata</funcname>(cat, group, name, frm);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>cat – имя категории в базе сигналов;</p>
+      <p>group – имя группы сигналов в базе;</p>
+      <p>name – имя сигнала, значение которого надо установить;</p>
+      <p>frm – значение, задаваемое для сигнала name. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>dbsetsignaldata</codeph> – функция позволяет изменять текущее значение сигнала
+          <codeph>name</codeph> расположенного в группе <codeph>group</codeph>, категории
+          <codeph>cat</codeph>.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>Функция возвращает двоичную 1, если установка значения сигнала прошла успешно и 0, если
+        задание значения сигнала не удалось.</p>
+    </section>  
+<section>
+      <title>Пример:</title>
+      <codeblock>aaa = <funcname>dbsetsignaldata</funcname>("cat1", "group1", "Signal1", group1_Signal0*group1_Signal2); </codeblock>
+    </section>
+<p>Данный скрипт устанавливает значение сигнала <codeph>Signal1</codeph>, как произведение сигналов
+        <codeph>Signal0</codeph> и <codeph>Signal2</codeph>, расположенных в той же группе сигналов
+      и категории. </p>  
+  </body>
+</topic>

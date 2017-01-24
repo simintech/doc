@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>dbsetreadflag </title>
+<shortdesc>Функция записи флага разрешения чтения данных клиенту.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>rf = <funcname>dbsetreadflag</funcname>(f);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>f – двоичный аргумент, значение которого должно быть равно 1, если необходимо установить
+        флаг «Принимать данные от сервера», расположенного на вкладке «Настройки» окна «Редактор
+        базы данных сигналов SDB» и значение 0, если необходимо этот флаг снять. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>dbsetreadflag</codeph> – функция позволяет динамически изменять значение соответствующего
+        флага из скрипта в ходе выполнения расчета. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>Функция возвращает двоичную 1, если установка значения флага прошла успешно и 0, если
+        задать состояние флага не удалось. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>initialization</kword>
+<funcname>dbsetreadflag</funcname>(1);
+ss=1;
+<kword>end</kword>;
+<kword>if</kword> ss=1 <kword>then begin</kword>
+<kword>if</kword> <rword>time</rword>>600 <kword>then begin</kword>
+<funcname>dbsetreadflag</funcname>(0);
+ss=0;
+<kword>end</kword>;
+<kword>end</kword>;</codeblock></section>
+<p>Данный скрипт разрешает прием данных от сервера при запуске расчета и запрещает его по прошествии
+      600 секунд. </p>  
+  </body>
+</topic>

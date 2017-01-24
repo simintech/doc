@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getengineofblock </title>
+<shortdesc>Функция получения идентификатора объекта в менеджере данных </shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>dm_id = <funcname>getengineofblock</funcname>(obj_id);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>obj_id – идентификатор (имя) блока графика, cвязанного с объектом менеджера данных,
+        идентификатор на который необходимо получить. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getengineofblock</codeph> – функция позволяет получить идентификатор объекта в менеджере
+        данных по имени связанного с ним блока на схеме. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>dm_id – функция возвращает целое число, являющееся идентификатором объекта в менеджере
+        данных. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>initialization</kword>
+     eid = <funcname>getengineofblock</funcname>(TimeGraphic8); <comment>//получить id объекта в менеджере данных по id блока, с которым этот объект связан</comment>
+     gid = <funcname>getgraphicidbyengine</funcname>(eid);  <comment>//получение id графика по id объекта в менеджере данных</comment>
+     <funcname>setgraphicyauto</funcname>(gid,0,0); <comment>//отключение автомасштаба для графика</comment>
+<kword>end</kword>;
+<funcname>setgraphicyscales</funcname>(gid,0,(-1,1 + time/10)); <comment>//установить масштабы по оси Y</comment></codeblock></section>
+<p>В результате выполнения данного скрипта, на каждом шаге будет происходить изменение масштаба по
+      оси Y для нулевой (первой по порядку) шкалы на графике с именем <codeph>TimeGraph8</codeph>. </p>  
+  </body>
+</topic>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>dbgetreadflag </title>
+<shortdesc>Функция чтения флага разрешения чтения данных клиенту.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>rf = <funcname>dbgetreadflag</funcname>;</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>нет</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>dbgetreadflag</codeph> – функция позволяет получить значение флага «Принимать данные от
+        сервера», расположенного на вкладке «Настройки» окна «Редактор базы данных сигналов SDB».
+        Используется для динамической проверки соответствующей опции во время расчета.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>Если флаг установлен, то функция возвращает двоичную 1, если нет, то двоичный 0. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>rf = <funcname>dbgetreadflag</funcname>;</codeblock></section>  
+  </body>
+</topic>

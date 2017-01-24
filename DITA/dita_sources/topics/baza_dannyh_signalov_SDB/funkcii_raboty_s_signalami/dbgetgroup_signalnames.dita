@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>dbgetgroup_signalnames </title>
+<shortdesc>Чтение имен сигналов c префиксами имени группы.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>sns = <funcname>dbgetgroup_signalnames</funcname>(cat, group);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>cat – имя категории;</p>
+      <p>group – имя группы сигналов внутри категории cat, в которой нужно сосчитать сигналы. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>dbgetgroup_signalnames</codeph> – функция позволяет получить список имен сигналов c
+        префиксами группы, которые находятся внутри группы group категории cat подключенной базы
+        сигналов.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>sns - функция возвращает текстовое значение, соответствующее списку имен сигналов внутри
+        группы. При этом имена сигналов отеляются друг от друга символами CR+LF. Каждая строка при
+        этом имеет вид <codeph>&lt;имя группы>_&lt;имя сигнала></codeph>. Если сигнал или
+        группа/категория не найдены, то функция возвращает пустое текстовое значение – «».</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>sns = <funcname>dbgetgroup_signalnames</funcname>("Датчики", "D1");</codeblock></section>
+<p>В результате выполнения данного скрипта, переменная <codeph>sns</codeph> получит текстовое
+      значение, содержащее построковый список имен сигналов в группе <codeph>D1</codeph> категории
+        <codeph>Датчики</codeph>, с префиксами имени группы. То есть каждая строка будет состоять из
+        <codeph>D1_&lt;имя сигнала></codeph>. </p>  
+  </body>
+</topic>

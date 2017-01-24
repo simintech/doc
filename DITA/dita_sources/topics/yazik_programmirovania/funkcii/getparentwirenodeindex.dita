@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getparentwirenodeindex </title>
+<shortdesc>Функция получения номера узла родительской линии связи. </shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>node_num = <funcname>getparentwirenodeindex</funcname>(w_id);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>w_id – идентификатор линии связи. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getparentwirenodeindex</codeph> – функция получения номера точки (начиная с 1) ветвления
+        (узла) на родительской линии связи, от которой ответвляется линия связи с идентификатором
+          <codeph>w_id</codeph>. Функция используется в анализа топологической структуры схемы. </p></section>
+<section>
+      <title>Результат:</title>
+      <p><codeph>node_num</codeph> – функция возвращает целое число, являющееся порядковым номером
+        точки ветвления на родительской линии, от которой отходит указанная линия связи.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>p_id = <funcname>getblockportid</funcname>(mul_oper3,2);  <comment>//получение идентификатора порта</comment>
+w_id = <funcname>getportwireid</funcname>(p_id); <comment>//получение идентификатора линии связи, подключенной к порту</comment>
+node_num = <funcname>getparentwirenodeindex</funcname>(w_id); <comment>//получение номера узла родительской линии связи</comment></codeblock></section>
+<p>В результате выполнения данного скрипта переменная node_num получит значение номера точки
+      ветвления на родительской линии, к которой подключенa линия, соединенная с портом номер 2
+      блока с именем mul_oper3. </p>  
+  </body>
+</topic>

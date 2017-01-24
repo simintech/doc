@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>selectallbycontainerid </title>
+<shortdesc>Функция выделения всех объектов в указанном контейнере</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>group_id = <funcname>selectallbycontainerid</funcname>(page_id);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>page_id – идентификатор страницы, на которой находятся выделяемые объекты. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>selectallbycontainerid</codeph> – функция выделения всех объектов на странице с
+        идентификатором <codeph>page_id</codeph>.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><funcname>selectallbycontainerid</funcname>(<funcname>getcurrentpageid</funcname>);
+group_id = <funcname>creategroupbyselectedobjects</funcname>(<funcname>getcurrentpageid</funcname>,1);</codeblock></section>
+<p>В результате выполнения данного скрипта происходит выделение всех объектов, расположенных на
+      текущей активной странице и объединение их в группу с присвоением переменной
+        <codeph>group_id</codeph> идентификатора созданной группы. </p>  
+  </body>
+</topic>

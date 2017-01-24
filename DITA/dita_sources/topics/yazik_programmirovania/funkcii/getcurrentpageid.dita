@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getcurrentpageid </title>
+<shortdesc>Функция получения идентификатора активной страницы текущего проекта. </shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>page_id = <funcname>getcurrentpageid</funcname>;</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>нет</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getcurrentpageid</codeph> – функция получения идентификатора текущей страницы активного
+        проекта. В отличие от функции <codeph>getcurrentcontainer</codeph>, возвращает идентификатор
+        не страницы, в которой происходит выполнение функции, а текущей активной страницы проекта.
+        При этом функция может выполняться как в скрипте страницы, так и в скрипте окна анимации. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>page_id – функция возвращает целое число, являющееся идентификатором текущей активной
+        текущего проекта. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>p_id = <funcname>getcurrentpageid</funcname>; <comment>//получение идентификатора текущей активной страницы текущего проекта</comment>
+obj_c = <funcname>getobjcount</funcname>(p_id); <comment>//получение количества объектов на странице</comment></codeblock></section>
+<p>В результате выполнения данного скрипта происходит получение идентификатора текущей активной
+      страницы текущего проекта и подсчет объектов на ней. При этом скрипт может находиться в
+      скрипте окна анимации проекта. </p>  
+  </body>
+</topic>
