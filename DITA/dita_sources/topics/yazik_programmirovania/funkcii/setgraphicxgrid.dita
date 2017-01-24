@@ -6,28 +6,30 @@
 <body>
 <section>
       <title>Синтаксис:</title>
-      <codeblock><funcname>setgraphicxgrid</funcname>(gid, fl);</codeblock>
+      <codeblock><funcname>setgraphicxgrid</funcname>(gid, ax_num, fl);</codeblock>
     </section>
 <section>
       <title>Аргументы:</title>
       <p>gid – идентификатор объекта типа «График»,</p>
+      <p>ax_num – номер шкалы, начиная с 0, </p>
       <p>fl – флага наличия сетки по оси X объекта типа «График».</p>
     </section>
 <section><title>Описание:</title>
-<p><codeph>setgraphicxgrid(gid, fl)</codeph> – функция установки свойства «Сетка по оси X» объекта
-        типа «График» по идентификатору <codeph>gid</codeph>. Аргумент <codeph>fl</codeph> принимает
-        значения: 1 – установить сетку по оси X; 0 – убрать сетку по оси X. Идентификатор объекта
-        может быть получен функцией <codeph>getgraphicid(gr_name)</codeph> и имеет тип указателя на
-        объект.  </p></section>
+<p><codeph>setgraphicxgrid(gid, ax_num, fl)</codeph> – функция установки свойства «Сетка по оси X»
+        объекта типа «График» по идентификатору <codeph>gid</codeph>. Аргумент <codeph>fl</codeph>
+        принимает значения: 1 – установить сетку по оси X; 0 – убрать сетку по оси X. Идентификатор
+        объекта может быть получен функцией <codeph>getgraphicid(gr_name)</codeph> и имеет тип
+        указателя на объект. </p></section>
 <section>
       <title>Результат:</title>
       <p>нет</p>
     </section>  
 <section><title>Пример:</title>
 <codeblock><comment>//получим идентификатор график</comment>
-gid = <funcname>getgraphicid</funcname>(plot);     
+eid = <funcname>getengineofblock</funcname>(TimeGraphic8);
+gid = <funcname>getgraphicidbyengine</funcname>(eid);
 <comment>//установим флаг наличия сетки по оси X</comment>
-<funcname>setgraphicxgrid</funcname>(gid, 1);               </codeblock></section>
+<funcname>setgraphicxgrid</funcname>(gid, 0, 1);               </codeblock></section>
 <p>В результате выполнения данного примера происходит получение идентификатора графика и установка
       флага наличия сетки по оси X на графике. </p>  
   </body>

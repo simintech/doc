@@ -172,6 +172,17 @@
             <entry><codeph>submodel</codeph></entry>
             <entry>Указатель на блок-родитель субмодели</entry>
           </row>
+          <row>
+            <entry><codeph>prjinited</codeph></entry>
+            <entry>Флаг, выставляемый в единицу после завершения инициализации проекта. Пока
+              инициализация не завершена, флаг имеет значение ноль. </entry>
+          </row>
+          <row>
+            <entry><codeph>prjinitializing</codeph>
+            </entry>
+            <entry>Флаг, выставляемый в единицу в процессе инициализации модели на расчет. Когда
+              инициализация завершена, флаг сбрасывается в ноль. </entry>
+          </row>
         </tbody>
       </tgroup>
     </table>

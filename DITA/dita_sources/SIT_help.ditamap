@@ -1550,7 +1550,9 @@
             <topicref href="topics/yazik_programmirovania/funkcii/graficheskie_i_sistemnie.dita"
                 navtitle="6.6.17 Графические и системные" locktitle="yes">
                 <topicref href="topics/yazik_programmirovania/funkcii/grafiki.dita">
+                    <topicref href="topics/yazik_programmirovania/funkcii/getengineofblock.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/getgraphicid.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getgraphicidbyengine.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/getgraphiclegend.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/getgraphicmousevalue.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/getgraphicxinterval.dita"/>
@@ -1678,7 +1680,8 @@
                         href="topics/yazik_programmirovania/funkcii/is_insert_from_buf_flag.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/ismainpage.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/isrun.dita"/>
-                    <topicref href="topics/yazik_programmirovania/funkcii/prjinited.dita"/>
+                    <topicref
+                        href="topics/yazik_programmirovania/funkcii/refreshcontainerwindow.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/reinitsubmodel.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/reinittopology.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/reloadblockimage.dita"/>
@@ -1705,12 +1708,17 @@
                     <topicref href="topics/yazik_programmirovania/funkcii/findstartport.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/getblockportcount.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/getblockportid.dita"/>
+                    <topicref
+                        href="topics/yazik_programmirovania/funkcii/getparentwirenodeindex.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/getportblockid.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/getportindex.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/getportinfo.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/getportpoint.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/getportwireid.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/getportwires.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getwireendpointcoord.dita"/>
+                    <topicref
+                        href="topics/yazik_programmirovania/funkcii/getwirestartpointcoord.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/setportinverse.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/setportinvisible.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/setportlinetype.dita"/>
@@ -1736,15 +1744,22 @@
                         href="topics/yazik_programmirovania/funkcii/setpropvaluebycaption.dita"/>
                 </topicref>
                 <topicref href="topics/yazik_programmirovania/funkcii/obekty.dita">
+                    <topicref
+                        href="topics/yazik_programmirovania/funkcii/creategroupbyselectedobjects.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/doneobject.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/exchangeobjects.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/findobjectbyfullname.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/findobjectbyname.dita"/>
                     <topicref
                         href="topics/yazik_programmirovania/funkcii/findobjectbynametrans.dita"/>
+                    <topicref
+                        href="topics/yazik_programmirovania/funkcii/getactiveprojectcurrentpageid.dita"/>
+                    <topicref
+                        href="topics/yazik_programmirovania/funkcii/getactiveprojectmainpageid.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/getchild.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/getchildcount.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/getcurrentcontainer.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getcurrentpageid.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/getfullname.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/getobj.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/getobjclassname.dita"/>
@@ -1755,10 +1770,15 @@
                     <topicref href="topics/yazik_programmirovania/funkcii/getobjname.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/getobjtypeid.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/getownercontainer.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/getparentwireid.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/initobject.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/removeobject.dita"/>
+                    <topicref
+                        href="topics/yazik_programmirovania/funkcii/selectallbycontainerid.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/setobjectparent.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/submodelbypageid.dita"/>
+                    <topicref
+                        href="topics/yazik_programmirovania/funkcii/unselectallbycontainerid.dita"/>
                 </topicref>
                 <topicref href="topics/yazik_programmirovania/funkcii/funkcii_OS.dita">
                     <topicref href="topics/yazik_programmirovania/funkcii/closeapp.dita"/>
@@ -1817,7 +1837,9 @@
                     <topicref href="topics/yazik_programmirovania/funkcii/dbrenamegroup.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/dbrenamesignal.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/dbsetreadflag.dita"/>
-                    <topicref href="topics/yazik_programmirovania/funkcii/dbsetsignalevalstring.dita"/>
+                    <topicref href="topics/yazik_programmirovania/funkcii/dbsetsignaldata.dita"/>
+                    <topicref
+                        href="topics/yazik_programmirovania/funkcii/dbsetsignalevalstring.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/dbsetwriteflag.dita"/>
                     <topicref href="topics/yazik_programmirovania/funkcii/dbsignalinfo.dita"/>
                 </topicref>
@@ -1911,6 +1933,7 @@
             <topicref href="topics/yazik_programmirovania/funkcii/countstringlist.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/createexmodule.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/createfile.dita"/>
+            <topicref href="topics/yazik_programmirovania/funkcii/creategroupbyselectedobjects.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/createprimitiv.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/createstringlist.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/createstringlisthash.dita"/>
@@ -1928,7 +1951,20 @@
             <topicref href="topics/yazik_programmirovania/funkcii/dbdelsignal.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/dbgaddreadvar.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/dbgaddwritevar.dita"/>
+            <topicref href="topics/yazik_programmirovania/funkcii/dbgetcategorycount.dita"/>
+            <topicref href="topics/yazik_programmirovania/funkcii/dbgetcategoryname.dita"/>
+            <topicref href="topics/yazik_programmirovania/funkcii/dbgetcategorynames.dita"/>
+            <topicref href="topics/yazik_programmirovania/funkcii/dbgetgroup_signalname.dita"/>
+            <topicref href="topics/yazik_programmirovania/funkcii/dbgetgroup_signalnames.dita"/>
+            <topicref href="topics/yazik_programmirovania/funkcii/dbgetgroupcount.dita"/>
+            <topicref href="topics/yazik_programmirovania/funkcii/dbgetgroupname.dita"/>
+            <topicref href="topics/yazik_programmirovania/funkcii/dbgetgroupnames.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/dbgetreadflag.dita"/>
+            <topicref href="topics/yazik_programmirovania/funkcii/dbgetsignalcaption.dita"/>
+            <topicref href="topics/yazik_programmirovania/funkcii/dbgetsignalcaptions.dita"/>
+            <topicref href="topics/yazik_programmirovania/funkcii/dbgetsignalcount.dita"/>
+            <topicref href="topics/yazik_programmirovania/funkcii/dbgetsignalname.dita"/>
+            <topicref href="topics/yazik_programmirovania/funkcii/dbgetsignalnames.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/dbgetwriteflag.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/dbgexchange.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/dbginitialize.dita"/>
@@ -1938,6 +1974,9 @@
             <topicref href="topics/yazik_programmirovania/funkcii/dbrenamegroup.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/dbrenamesignal.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/dbsetreadflag.dita"/>
+            <topicref href="topics/yazik_programmirovania/funkcii/dbsetwriteflag.dita"/>
+            <topicref href="topics/yazik_programmirovania/funkcii/dbsetsignaldata.dita"/>
+            <topicref href="topics/yazik_programmirovania/funkcii/dbsetsignalevalstring.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/dbsetwriteflag.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/dbsignalinfo.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/deconv.dita"/>
@@ -1991,6 +2030,8 @@
             <topicref href="topics/yazik_programmirovania/funkcii/gammln.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/gammp.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/gammq.dita"/>
+            <topicref href="topics/yazik_programmirovania/funkcii/getactiveprojectcurrentpageid.dita"/>
+            <topicref href="topics/yazik_programmirovania/funkcii/getactiveprojectmainpageid.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/getangle.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/getbgracolor.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/getblockportcount.dita"/>
@@ -1998,12 +2039,15 @@
             <topicref href="topics/yazik_programmirovania/funkcii/getchild.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/getchildcount.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/getcurrentcontainer.dita"/>
+            <topicref href="topics/yazik_programmirovania/funkcii/getcurrentpageid.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/getdbfileasis.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/getenabledlayer.dita"/>
+            <topicref href="topics/yazik_programmirovania/funkcii/getengineofblock.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/getfontsize.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/getformbounds.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/getfullname.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/getgraphicid.dita"/>
+            <topicref href="topics/yazik_programmirovania/funkcii/getgraphicidbyengine.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/getgraphiclegend.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/getgraphicmousevalue.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/getgraphicxinterval.dita"/>
@@ -2026,6 +2070,8 @@
             <topicref href="topics/yazik_programmirovania/funkcii/getobjname.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/getobjtypeid.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/getownercontainer.dita"/>
+            <topicref href="topics/yazik_programmirovania/funkcii/getparentwireid.dita"/>
+            <topicref href="topics/yazik_programmirovania/funkcii/getparentwirenodeindex.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/getportblockid.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/getportindex.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/getportinfo.dita"/>
@@ -2053,6 +2099,8 @@
             <topicref href="topics/yazik_programmirovania/funkcii/getwheeldelta.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/getwindowbycomid.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/getwindowid.dita"/>
+            <topicref href="topics/yazik_programmirovania/funkcii/getwireendpointcoord.dita"/>
+            <topicref href="topics/yazik_programmirovania/funkcii/getwirestartpointcoord.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/global.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/goto.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/gotoengine.dita"/>
@@ -2141,7 +2189,6 @@
             <topicref href="topics/yazik_programmirovania/funkcii/polyval.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/popupmenu.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/pos.dita"/>
-            <topicref href="topics/yazik_programmirovania/funkcii/prjinited.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/process.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/proportion.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/rand.dita"/>
@@ -2153,6 +2200,7 @@
             <topicref href="topics/yazik_programmirovania/funkcii/readln.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/readprojectrestart.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/real.dita"/>
+            <topicref href="topics/yazik_programmirovania/funkcii/refreshcontainerwindow.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/reinitsubmodel.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/reinittopology.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/reloadblockimage.dita"/>
@@ -2178,6 +2226,7 @@
             <topicref href="topics/yazik_programmirovania/funkcii/scale.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/secondof.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/seek.dita"/>
+            <topicref href="topics/yazik_programmirovania/funkcii/selectallbycontainerid.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/sendtobackform.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/setblocklabel.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/setdboverride.dita"/>
@@ -2278,6 +2327,7 @@
             <topicref href="topics/yazik_programmirovania/funkcii/trunc.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/undefine.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/unixtodatetime.dita"/>
+            <topicref href="topics/yazik_programmirovania/funkcii/unselectallbycontainerid.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/uppercase.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/valf.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/vali.dita"/>
@@ -2300,6 +2350,71 @@
             <topicref href="topics/yazik_programmirovania/funkcii/ycoord.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/yearof.dita"/>
             <topicref href="topics/yazik_programmirovania/funkcii/zoomrect.dita"/>
+        </topicref>
+    </topicref>
+    <topicref href="topics/baza_dannyh_signalov_SDB/baza_dannyh_signalov_SDB.dita"
+        navtitle="7 - База данных сигналов SDB" locktitle="yes">
+        <topicref href="topics/baza_dannyh_signalov_SDB/obschie_svedenia.dita"/>
+        <topicref href="topics/baza_dannyh_signalov_SDB/zaprosy_k_baze_dannyh.dita"/>
+        <topicref href="topics/baza_dannyh_signalov_SDB/filtraciya_signalov.dita"/>
+        <topicref href="topics/baza_dannyh_signalov_SDB/kontrol_celostnosti_bd.dita"/>
+        <topicref
+            href="topics/baza_dannyh_signalov_SDB/funkcii_raboty_s_signalami/funkcii_raboty_s_signalami.dita">
+            <topicref
+                href="topics/baza_dannyh_signalov_SDB/funkcii_raboty_s_signalami/dbaddcat.dita"/>
+            <topicref
+                href="topics/baza_dannyh_signalov_SDB/funkcii_raboty_s_signalami/dbaddgroup.dita"/>
+            <topicref
+                href="topics/baza_dannyh_signalov_SDB/funkcii_raboty_s_signalami/dbaddsignal.dita"/>
+            <topicref
+                href="topics/baza_dannyh_signalov_SDB/funkcii_raboty_s_signalami/dbdelgroup.dita"/>
+            <topicref
+                href="topics/baza_dannyh_signalov_SDB/funkcii_raboty_s_signalami/dbdelsignal.dita"/>
+            <topicref
+                href="topics/baza_dannyh_signalov_SDB/funkcii_raboty_s_signalami/dbgetcategorycount.dita"/>
+            <topicref
+                href="topics/baza_dannyh_signalov_SDB/funkcii_raboty_s_signalami/dbgetcategoryname.dita"/>
+            <topicref
+                href="topics/baza_dannyh_signalov_SDB/funkcii_raboty_s_signalami/dbgetcategorynames.dita"/>
+            <topicref
+                href="topics/baza_dannyh_signalov_SDB/funkcii_raboty_s_signalami/dbgetgroup_signalname.dita"/>
+            <topicref
+                href="topics/baza_dannyh_signalov_SDB/funkcii_raboty_s_signalami/dbgetgroup_signalnames.dita"/>
+            <topicref
+                href="topics/baza_dannyh_signalov_SDB/funkcii_raboty_s_signalami/dbgetgroupcount.dita"/>
+            <topicref
+                href="topics/baza_dannyh_signalov_SDB/funkcii_raboty_s_signalami/dbgetgroupname.dita"/>
+            <topicref
+                href="topics/baza_dannyh_signalov_SDB/funkcii_raboty_s_signalami/dbgetgroupnames.dita"/>
+            <topicref
+                href="topics/baza_dannyh_signalov_SDB/funkcii_raboty_s_signalami/dbgetreadflag.dita"/>
+            <topicref
+                href="topics/baza_dannyh_signalov_SDB/funkcii_raboty_s_signalami/dbgetsignalcaption.dita"/>
+            <topicref
+                href="topics/baza_dannyh_signalov_SDB/funkcii_raboty_s_signalami/dbgetsignalcaptions.dita"/>
+            <topicref
+                href="topics/baza_dannyh_signalov_SDB/funkcii_raboty_s_signalami/dbgetsignalcount.dita"/>
+            <topicref
+                href="topics/baza_dannyh_signalov_SDB/funkcii_raboty_s_signalami/dbgetsignalname.dita"/>
+            <topicref
+                href="topics/baza_dannyh_signalov_SDB/funkcii_raboty_s_signalami/dbgetsignalnames.dita"/>
+            <topicref
+                href="topics/baza_dannyh_signalov_SDB/funkcii_raboty_s_signalami/dbgetwriteflag.dita"/>
+            <topicref
+                href="topics/baza_dannyh_signalov_SDB/funkcii_raboty_s_signalami/dbrenamegroup.dita"/>
+            <topicref
+                href="topics/baza_dannyh_signalov_SDB/funkcii_raboty_s_signalami/dbrenamesignal.dita"/>
+            <topicref
+                href="topics/baza_dannyh_signalov_SDB/funkcii_raboty_s_signalami/dbsetreadflag.dita"/>
+            <topicref
+                href="topics/baza_dannyh_signalov_SDB/funkcii_raboty_s_signalami/dbsetsignaldata.dita"/>
+            <topicref
+                href="topics/baza_dannyh_signalov_SDB/funkcii_raboty_s_signalami/dbsetsignalevalstring.dita"/>
+            <topicref
+                href="topics/baza_dannyh_signalov_SDB/funkcii_raboty_s_signalami/dbsetwriteflag.dita"/>
+            <topicref
+                href="topics/baza_dannyh_signalov_SDB/funkcii_raboty_s_signalami/dbsignalinfo.dita"
+            />
         </topicref>
     </topicref>
 </map>

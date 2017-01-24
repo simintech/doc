@@ -6,11 +6,12 @@
 <body>
 <section>
       <title>Синтаксис:</title>
-      <codeblock><funcname>setgraphicxinterval</funcname>(gid, val);</codeblock>
+      <codeblock><funcname>setgraphicxinterval</funcname>(gid, ax_num, val);</codeblock>
     </section>
 <section>
       <title>Аргументы:</title>
       <p>gid – идентификатор объекта типа «График»,</p>
+      <p>ax_num – номер шкалы, начиная с 0, </p>
       <p>val – значение интервала видимости по оси X.</p>
     </section>
 <section><title>Описание:</title>
@@ -24,9 +25,10 @@
     </section>  
 <section><title>Пример:</title>
 <codeblock><comment>//получим идентификатор график</comment>
-gid = <funcname>getgraphicid</funcname>(plot);     
+eid = <funcname>getengineofblock</funcname>(TimeGraphic8);
+gid = <funcname>getgraphicidbyengine</funcname>(eid);
 <comment>//установим интервал видимости по оси X</comment>
-<funcname>setgraphicxinterval</funcname>(gid, 100);         </codeblock></section>
+<funcname>setgraphicxinterval</funcname>(gid, 0, 100);         </codeblock></section>
 <p>В результате выполнения данного примера происходит получение идентификатора графика и установка
       интервала видимости 100 по оси X. </p>  
   </body>

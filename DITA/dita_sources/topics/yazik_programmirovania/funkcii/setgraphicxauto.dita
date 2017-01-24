@@ -6,18 +6,19 @@
 <body>
 <section>
       <title>Синтаксис:</title>
-      <codeblock><funcname>setgraphicxauto</funcname>(gid, fl);</codeblock>
+      <codeblock><funcname>setgraphicxauto</funcname>(gid, ax_num, fl);</codeblock>
     </section>
 <section>
       <title>Аргументы:</title>
       <p>gid – идентификатор объекта типа «График»,</p>
+      <p>ax_num – номер шкалы, начиная с 0, </p>
       <p>fl – флага наличия автомасштабирования по оси X объекта типа «График». </p>
     </section>
 <section><title>Описание:</title>
-<p><codeph>setgraphicxauto(gid, fl)</codeph> – функция установки свойства «Автомасштабирование по
-        оси X» объекта типа «График» по идентификатору объекта. Аргумент <codeph>fl</codeph>
-        принимает значения: 1 – установить автомасштабирование по оси X; 0 – убрать
-        автомасштабирование по оси X. Идентификатор объекта может быть получен функцией
+<p><codeph>setgraphicxauto(gid, <codeph>ax_num,</codeph> fl)</codeph> – функция установки свойства
+        «Автомасштабирование по оси X» объекта типа «График» по идентификатору объекта. Аргумент
+          <codeph>fl</codeph> принимает значения: 1 – установить автомасштабирование по оси X; 0 –
+        убрать автомасштабирование по оси X. Идентификатор объекта может быть получен функцией
           <codeph>getgraphicid(gr_name)</codeph> и имеет тип указателя на объект.</p></section>
 <section>
       <title>Результат:</title>
@@ -25,9 +26,10 @@
     </section>  
 <section><title>Пример:</title>
 <codeblock><comment>//получим идентификатор график</comment>
-gid = <funcname>getgraphicid</funcname>(plot);
+eid = <funcname>getengineofblock</funcname>(TimeGraphic8);
+gid = <funcname>getgraphicidbyengine</funcname>(eid);
 <comment>//установим флаг наличия автомасштабирования по оси X</comment>
-<funcname>setgraphicxauto</funcname>(gid, 1);                             </codeblock></section>
+<funcname>setgraphicxauto</funcname>(gid,0,1);                             </codeblock></section>
 <p>В результате выполнения данного примера происходит получение идентификатора графика и установка
       флага наличия автомасштабирования по оси X на графике.</p>  
   </body>

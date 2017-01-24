@@ -28,8 +28,7 @@
 <section><title>Пример:</title>
 <codeblock>res = <funcname>dbsetsignalevalstring</funcname>("Датчики","D1","Property7", "D1_Property1+D1_Property2");</codeblock></section>
 <p>В результате выполнения данного скрипта, интерпретируемым значение сигнала
-        <codeph>Property7</codeph> будет установлена сумма сигналов <codeph>Property1</codeph> и
-        <codeph>Property2</codeph>, расположенных в той же группе <codeph>D1</codeph> категории
-        <codeph>Датчики</codeph>. </p>  
+        <codeph>Property7</codeph> будет установлена строка
+        <codeph>"D1_Property1+D1_Property2"</codeph>.</p>  
   </body>
 </topic>
