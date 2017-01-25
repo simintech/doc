@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>lg</title>
+  <shortdesc>Функция вычисления десятичного логарифма вещественного или комплексного числа.</shortdesc>
+  <body>
+    <section><title>Синтаксис:</title>
+<codeblock>y = <funcname>lg</funcname>(x);</codeblock></section>
+<section><title>Аргументы:</title>
+<p>x – входное значение.</p></section> 
+<section><title>Описание:</title>
+<p><codeph>lg(x)</codeph> – функция вычисления десятичного логарифма вещественного или комплексного числа. Входное значение может быть как вещественным, так и комплексным числом.
+Входное значение может задаваться как заранее определенная переменная или как постоянное число.
+Комплексное число задается выражением a+bi, где a и b вещественные и комплексные части числа соответственно.</p>
+</section>
+<section><title>Результат:</title>
+<p>y – десятичный логарифм входного значения x.</p></section>
+<section><title>Пример1:</title>
+<p>Десятичный логарифм вещественного числа</p>
+<codeblock><kword>const</kword> x = 5;
+y = <funcname>lg</funcname>(x);</codeblock></section>
+<p>В результате переменной y будет присвоено значение 0.69897.</p>   
+<section><title>Пример2:</title>
+<p>Десятичный логарифм комплексного числа</p><codeblock>y =<funcname>lg</funcname>(3+4i);</codeblock></section>
+<p>В результате переменной y будет присвоено значение 0.69897+0.4027192i.</p>
+  </body>
+</topic>

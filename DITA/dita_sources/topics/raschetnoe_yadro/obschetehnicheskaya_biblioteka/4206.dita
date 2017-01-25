@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика – Ограничитель положения вращательного движения </title>
+  <body>
+    <table id="table_vvf_vrr_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4206/image001.png" height="32" width="32"
+                id="image_wvf_vrr_qy"/></entry>
+            <entry>Механика – Ограничитель положения вращательного движения</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4206/image002.png" height="92" width="111"
+                id="image_xvf_vrr_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry>
+              <p> </p>
+              <p> </p>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> В блоке реализована модель двухстороннего ступора для вращательного движения.</p>
+    <p>
+      <b>Уравнения модели имеют следующий вид:</b></p>
+    <p><image href="images_old/4206/image003.png" height="24" width="112" id="image_yvf_vrr_qy"/>, то</p>
+    <p><image href="images_old/4206/image004.png" height="26" width="237" id="image_zvf_vrr_qy"/></p>
+    <p>Иначе если <image href="images_old/4206/image005.png" height="22" width="75" id="image_awf_vrr_qy"
+      />, то</p>
+    <p><image href="images_old/4206/image006.png" height="22" width="256" id="image_bwf_vrr_qy"
+      /><i>,</i></p>
+    <p>Иначе <image href="images_old/4206/image007.png" height="22" width="46" id="image_cwf_vrr_qy"
+      />.</p>
+    <p><image href="images_old/4206/image008.png" height="43" width="190" id="image_dwf_vrr_qy"/></p>
+    <table id="table_ewf_vrr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>T</entry>
+            <entry>-</entry>
+            <entry>момент, H<image href="images_old/4206/image009.png" height="22" width="5"
+                id="image_fwf_vrr_qy"/>м</entry>
+          </row>
+          <row>
+            <entry>W</entry>
+            <entry>-</entry>
+            <entry>относительная угловая скорость между портами C и R, <image
+                href="images_old/4206/image010.png" height="29" width="21" id="image_gwf_vrr_qy"
+              /></entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4206/image011.png" height="22" width="13"
+                id="image_hwf_vrr_qy"/></entry>
+            <entry>-</entry>
+            <entry>угол между портами C и R, рад</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>
+      <b>Входные порты блока:</b></p>
+    <p>Блок имеет два механических порта вращательного движения – C и R. Постулируется, что момент
+      положителен, если <image href="images_old/4206/image012.png" height="22" width="23"
+        id="image_iwf_vrr_qy"/>><image href="images_old/4206/image013.png" height="22" width="23"
+        id="image_jwf_vrr_qy"/>.</p>
+    <p> </p>
+    <p><b> Выходные порты блока – отсутствуют.</b></p>
+    <p> </p>
+    <p>
+      <b>Свойства блока:</b></p>
+    <p> </p>
+    <table id="table_kwf_vrr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Fiup</entry>
+            <entry>-</entry>
+            <entry>верхний упор, рад</entry>
+          </row>
+          <row>
+            <entry>Filow</entry>
+            <entry>-</entry>
+            <entry>нижний упор, рад</entry>
+          </row>
+          <row>
+            <entry>Sup</entry>
+            <entry>-</entry>
+            <entry>контактная жесткость верхнего упора,<image href="images_old/4206/image014.png"
+                height="34" width="23" id="image_lwf_vrr_qy"/></entry>
+          </row>
+          <row>
+            <entry>Slow</entry>
+            <entry>-</entry>
+            <entry>контактная жесткость нижнего упора, <image href="images_old/4206/image014.png"
+                height="34" width="23" id="image_mwf_vrr_qy"/></entry>
+          </row>
+          <row>
+            <entry>Dup</entry>
+            <entry>-</entry>
+            <entry>коэффициент демпфирования верхнего упора, <image href="images_old/4206/image015.png"
+                height="34" width="34" id="image_nwf_vrr_qy"/></entry>
+          </row>
+          <row>
+            <entry>Dlow</entry>
+            <entry>-</entry>
+            <entry>коэффициент демпфирования нижнего упора, <image href="images_old/4206/image015.png"
+                height="34" width="34" id="image_owf_vrr_qy"/></entry>
+          </row>
+          <row>
+            <entry>Fi0</entry>
+            <entry>-</entry>
+            <entry>начальный угол, рад</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p> </p>
+    <p>
+      <b>Параметры блока:</b></p>
+    <p> </p>
+    <table id="table_pwf_vrr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Т</entry>
+            <entry>-</entry>
+            <entry>момент, н*м</entry>
+          </row>
+          <row>
+            <entry>W</entry>
+            <entry>-</entry>
+            <entry>разность угловых скоростей, рад/с</entry>
+          </row>
+          <row>
+            <entry>Fi</entry>
+            <entry>-</entry>
+            <entry>разность углов, рад</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

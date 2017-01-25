@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setselection</title>
+<shortdesc>Функция выделения объекта на схемном окне по его имени.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setselection</funcname>(obj_name, index);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>obj_name – имя объекта,</p>
+      <p>index = 0 – объект не выделен,</p>
+      <p>index = 1 – объект выделен.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setselection(obj_name, index)</codeph> – функция обеспечивает выделение объекта на
+        схемном окне проекта.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><funcname>setselection</funcname>(obj_name, 1);</codeblock></section>  
+  </body>
+</topic>

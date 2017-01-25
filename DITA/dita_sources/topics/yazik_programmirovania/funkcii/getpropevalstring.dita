@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getpropevalstring </title>
+<shortdesc>Функция получения интерпретированного текста, содержащего свойство с определенным именем
+    объекта на схеме.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>str = <funcname>getpropevalstring</funcname>(id,"ob_name");</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>id – идентификатор объекта (блока на схеме или другого графического объекта),</p>
+      <p>"ob_name" – строка, содержащая имя свойства объекта (обрамляется кавычками, т.к. тип данных
+        должен быть строковый). </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getpropevalstring</codeph> – функция получения интерпретированного текста (формулы),
+        содержащего свойство по имени <codeph>ob_name</codeph> объекта с идентификатором
+          <codeph>id</codeph> . Возвращаемое значение типа строка. Для не интерпретируемых типов
+        данных возвращает текстовое значение, аналогично <codeph>getpropasstring</codeph>.
+        Идентификатор объекта может быть получен функцией <codeph>getobj</codeph> и имеет тип
+        указателя на объект. Имя свойства задается строкой, обрамляется кавычками.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>str – строка, содержащая значение интерпретированной формулы свойства объекта. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>obj_id = getobj(1); //получаем идентификатор объекта
+//получаем значение свойства объекта
+name = getpropevalstring(id, "tag");
+//выводим значение свойства
+seterrorstr(name);</codeblock></section>
+<p>В результате выполнения данного скрипта выводится значение свойства <codeph>tag</codeph> объекта
+      с индексом 1. </p>  
+  </body>
+</topic>

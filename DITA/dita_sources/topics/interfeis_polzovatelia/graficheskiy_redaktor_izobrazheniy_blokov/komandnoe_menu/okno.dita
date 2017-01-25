@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Опции меню Окно </title>
+  <body>
+    <p> </p>
+    <table id="table_xhb_hzm_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><b>Опция</b></entry>
+            <entry><b>Описание</b></entry>
+          </row>
+          <row>
+            <entry><b>Скрыть все окна</b></entry>
+            <entry>Закрывает <i>все</i> анимационные окна в активном приложении</entry>
+          </row>
+          <row>
+            <entry><b>Показать все окна</b></entry>
+            <entry>Открывает <i>все</i> анимационные окна в активном приложении</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

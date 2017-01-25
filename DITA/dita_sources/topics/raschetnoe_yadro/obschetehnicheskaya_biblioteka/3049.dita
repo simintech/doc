@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Датчик</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/3049.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/3049s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован | Си
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок аналогичен блоку <xref href="3001.dita" format="dita">Входной контакт</xref>, с
+      добавлением отображения измеряемой величины. Реализует считывание переменной, передачу её на
+      выход блока, а также отображение значения переменной на схемное окно в заданном пользователем
+      формате. В режиме локальной отладки эквивалентен константе. При удалённой отладке блок
+      считывает переменную из исполнительной системы. </p>
+    <section><title>Свойства</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>Значение по умолчанию</uicontrol> – значение на выходе блока, может быть
+            векторным.</li>
+          <li><uicontrol>Тип контакта</uicontrol> – тип данных выходной переменной при генерации
+            кода для полномасштабной модели.</li>
+          <li><uicontrol>Имя контакта</uicontrol> – имя переменной, считываемой блоком.</li>
+          <li><uicontrol>Формат имени переменной</uicontrol> – правило формирования имени
+            считываемой переменной.</li>
+          <li><uicontrol>Добавить в базу сигналов</uicontrol> – флаг, указывающий необходимо ли
+            создать данную переменную в базе сигналов системы. </li>
+          <li><uicontrol>Запрос на имя из базы</uicontrol> – запрос из базы данных для формирования
+            имени считываемой переменной.</li>
+          <li><uicontrol>Функциональный план</uicontrol> – имя файла диаграммы, на который
+            необходимо перейти при двойном щелчке по объекту. </li>
+          <li><uicontrol>Отлаживаемый компонент</uicontrol> – имя компонента, который будет
+            установлен при переходе на другую диаграмму в режиме отладки. </li>
+        </ul>
+      </p></section>
+    <section><title>Свойства, влияющие только на внешний вид блока:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Тип датчика</uicontrol> – символ или строка, поясняющая тип измеряемой
+            датчиком величины и используемая в левой части изображения датчика.</li>
+          <li><uicontrol>Общее количество знаков</uicontrol> – число, определяющее общее количество
+            цифр (до и после запятой) при отображении показаний датчика.</li>
+          <li><uicontrol>Количество знаков после запятой</uicontrol> – число, определяющее
+            количество цифр после запятой при отображении показаний датчика.</li>
+          <li><uicontrol>Формат числа</uicontrol> – флаг, указывающий в каком формате выводить
+            значение измеряемой величины.</li>
+          <li><uicontrol>Описание датчика</uicontrol> – текст в пользовательском формате
+            (произвольный), описывающий датчик, измеряемую величину и т.п. Выводится по умолчанию в
+            подписи к блоку. </li>
+        </ul>
+      </p></section>
+    <section><title>Параметры</title>
+      <p>
+        <ul id="ul_t3c_l3t_2y">
+          <li><uicontrol>Значение датчика</uicontrol>. </li>
+        </ul>
+      </p></section>
+    <note>блок может быть использован для генерации кода на языке C для внешней целевой
+      системы.</note>
+    
+  </body>
+</topic>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getsubmodelid</title>
+<shortdesc>Функция получения ссылки графического контейнера страницы субмодели.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>contid = <funcname>getsubmodelid</funcname>(name);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>name – имя субмодели.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getsubmodelid(name)</codeph> – функция получения идентификатора графического контейнера
+        для страницы субмодели <codeph>name</codeph>. Полученный идентификатор может быть
+        использован для выбора объекта внутри графического контейнера субмодели. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>contid – идентификатор графического контейнера страницы субмодели.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>contid=<funcname>getsubmodelid</funcname>(macro2); <comment>//получение идентификатора контейнера субмодели</comment>
+obj_id=<funcname>getobj</funcname>(contid, 1); <comment>//получение идентификатора объекта внутри контейнера</comment></codeblock></section>
+<p>В результате выполнения данного скрипта будет получен идентификатор объекта с индексом 1,
+      расположенного внутри графического контейнера субмодели <codeph>macro2</codeph>. </p>  
+  </body>
+</topic>

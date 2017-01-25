@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Команды шаблона </title>
+  <body>
+    <table id="table_q1r_m1n_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry><b>Команда</b></entry>
+            <entry><b>Пример написания</b></entry>
+            <entry><b>Результат</b></entry>
+          </row>
+          <row>
+            <entry><b>SCRIPT</b> &lt;Строка></entry>
+            <entry><b>SCRIPT</b> $self.Name$.Width=0</entry>
+            <entry>
+              <p>Если свойство Name объекта присвоено «Line1», то будет создана строка скрипта:</p>
+              <p>Line1.Width=0</p>
+            </entry>
+          </row>
+          <row>
+            <entry><b>CONNECT</b> &lt;Источник>, &lt;Приемник></entry>
+            <entry><b>CONNECT</b> Signal1, $self.Name$.Width </entry>
+            <entry>Если имя объекта – Line1, то будет создана связь, где источник будет сигнал с
+              именем Signal1, а приемник – свойство Width объекта Line1. По этой команде создается
+              только связь; новые сигналы не создаются.</entry>
+          </row>
+          <row>
+            <entry><b>SIGNAL</b> &lt;Имя>, &lt;Режим – вход или выход>, &lt;Тип данных>,
+              &lt;Название>, &lt;Значение по умолчанию></entry>
+            <entry><b>SIGNAL</b> $self.Name $Out, out, boolean, Состояние, 0</entry>
+            <entry>
+              <p>Если имя объекта – Line1, то будет создан сигнал с именем «Line1Out», режим –
+                «выход», тип данных – двоичные, название сигнала – «Состояние». Если уже есть сигнал
+                с таким именем, то команда игнорируется. Если параметр «режим» не указан (пробел),
+                то по умолчанию сигнал будет входом, для того чтобы сигнал был выходом - указать
+                  <b>Out</b>. Если не указан тип данных, то по умолчанию – вещественное число.
+                Идентификаторы типов данных:</p>
+              <p> INTEGER – целое</p>
+              <p> BOOLEAN – вещественное </p>
+              <p> ARRAY – массив вещественных чисел</p>
+              <p> COLOR – цвет</p>
+              <p>Если не указано название, то оно совпадает с именем. В простейшем случае достаточно
+                написать: SIGNAL &lt;Имя сигнала></p>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>

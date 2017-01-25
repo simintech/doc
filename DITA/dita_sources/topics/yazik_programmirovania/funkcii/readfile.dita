@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>readfile</title>
+<shortdesc>Функция чтения значений переменных из файла. </shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>readfile</funcname>(f_id, var1, var2,…, varn);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>f_id – идентификатор файла,</p>
+      <p>var1, var2,…, varn – переменные для чтения значений из файла. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>readfile(f_id, var1, var2,…, varn)</codeph> – функция чтения переменных <codeph>var1,
+          var2,…, varn</codeph>, записанных в бинарном виде, из файла с идентификатором
+          <codeph>f_id</codeph>. Чтение данных происходит побайтово, для использования отдельных
+        битов считанного числа можно использовать оператор побитового сдвига <codeph>shl</codeph>. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> 
+var1:<rword>double</rword> = 5,
+var2:<rword>double</rword> = 3.9,
+var3:<rword>double</rword>,
+var4:<rword>double</rword>;
+<comment>//создадим новый файл</comment>
+f_id = <funcname>createfile</funcname>("file1.dat", -1)
+<comment>//запишем в него переменные       </comment>
+<funcname>writefile</funcname>(f_id, var1, var2);      
+<comment>//закроем файл                    </comment>
+<funcname>freeobject</funcname>(f_id);                 
+<comment>//откроем файл для чтения         </comment>
+f_id = <funcname>createfile</funcname>("file1.dat", 0) 
+<comment>//прочтем значения переменных     </comment>
+<funcname>readfile</funcname>(f_id, var3, var4);       
+<comment>//закроем файл                    </comment>
+<funcname>freeobject</funcname>(f_id);</codeblock></section>
+<p>В процессе выполнения при помощи функции <codeph>createfile</codeph> будет создан новый файл с
+      идентификатором <codeph>f_id</codeph>. В файл при помощи функции <codeph>writefile</codeph>
+      будет записаны переменные <codeph>var1</codeph> и <codeph>var2</codeph>. Перед чтением из
+      файла необходимо его закрыть при помощи функции <codeph>freeobject</codeph> и открыть для
+      чтения при помощи функции <codeph>createfile</codeph>. При помощи функции
+        <codeph>readfile</codeph> данные из файла будут считаны в переменные <codeph>var3</codeph> и
+        <codeph>var4</codeph>. Переменным <codeph>var3</codeph> и <codeph>var4</codeph> будет
+      присвоено значение 5 и 3.9 соответственно. Перед завершением примера файл закрывается при
+      помощи функции <codeph>freeobject</codeph>. </p>  
+  </body>
+</topic>

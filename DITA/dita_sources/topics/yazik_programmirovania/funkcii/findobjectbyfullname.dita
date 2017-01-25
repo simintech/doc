@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>findobjectbyfullname </title>
+<shortdesc>Функция поиска объекта по заданному пути в проекте.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>obj_id = <funcname>findobjectbyfullname</funcname>(name);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>name – строка с полным путем объекта в проекте. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>findobjectbyfullname</codeph> – функция выполняет поиск объекта по заданному полному пути
+          <codeph>name</codeph> в проекте.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>obj_id – идентификатор объекта. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>obj_id = <funcname>findobjectbyfullname</funcname>("a1.b2");</codeblock></section>  
+  </body>
+</topic>

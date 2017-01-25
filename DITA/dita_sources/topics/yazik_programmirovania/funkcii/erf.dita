@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>erf</title>
+  <shortdesc>Функция ошибок Гаусса.</shortdesc>
+  <body>
+    <section>
+      <title>Синтаксис:</title>
+      <codeblock>y = <funcname>erf</funcname>(x);</codeblock>
+    </section>
+    <section>
+      <title>Аргументы:</title>
+      <p>x – входной аргумент функции.</p>
+    </section>
+    <section>
+      <title>Описание:</title>
+      <p>Функция ошибок Гаусса определяется, как:</p>
+      <image placement="break" href="images/erf_1.png" align="center" id="image_w2p_pvh_wx"/>
+    </section>
+    <fig id="fig_jhz_gwh_wx">
+      <title>График функции</title>
+      <image placement="break" href="images/erf_2.gif" align="center" id="image_khz_gwh_wx"/>
+    </fig>
+    <p>Функция <codeph>erf</codeph> вычисляет функцию ошибок Гаусса от аргумента x.</p>
+    <section>
+      <title>Результат:</title>
+      <p>
+        y – значение функции ошибок Гаусса от аргумента <i>x</i>.
+      </p>
+    </section>
+  </body>
+</topic>

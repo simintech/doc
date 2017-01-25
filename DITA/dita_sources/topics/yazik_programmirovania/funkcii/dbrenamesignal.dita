@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>dbrenamesignal </title>
+<shortdesc>Функция переименования сигнала в базе.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>dbrenamesignal</funcname>(cat, group, signalname_old, signalname_new);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>cat – переменная, типа string, содержащая имя категории, в которой содержится нужный
+        сигнал;</p>
+      <p>group – переменная типа string, содержащая имя группы сигналов, в которой содержится нужный
+        сигнал;</p>
+      <p>signalname_old – переменная типа string, содержащая имя сигнала, который нужно
+        переименовать;</p>
+      <p>signalname_new – переменная типа string, содержащая новое имя для сигнала с текущим именем
+        signalname_old. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>dbrenamesignal</codeph> – функция переименования сигнала с именем
+          <codeph>signalname_old</codeph> в <codeph>signalname_new</codeph>, внутри группы
+          <codeph>group</codeph> категории <codeph>cat</codeph>. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>Функция возвращает число типа boolean: 1 – сигнал успешно переименован, 0 – переименование
+        невозможно. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> cn, gn, on, nn:<rword>string</rword>;
+cn = "категория1";
+gn = "группа1";
+on = "сигнал1";
+nn = "сигнал2";
+<funcname>dbrenamesignal</funcname>(cn, gn, on, nn);</codeblock></section>
+<p>В результате выполнения данного скрипта, в подключенной к проекту базе сигналов, в категории
+      «категория1», в группе «группа1» будет найден сигнал с именем «сигнал1» и переименована в
+      «сигнал2». </p>  
+  </body>
+</topic>

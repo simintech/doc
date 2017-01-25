@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setsignalevalstring</title>
+<shortdesc>Функция установки интерпретированного скрипта сигнала с определенным именем для
+    графического контейнера.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>flag = <funcname>setsignalevalstring</funcname>("sig_name", str);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>"sig_name" – строка, содержащая имя сигнала (обрамляется кавычками, т.к. тип данных должен
+        быть строковый),</p>
+      <p>str – строка, содержащая значение интерпретированный скрипт (формулу) сигнала.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setsignalevalstring("sig_name", str)</codeph> – функция устанавливает интерпретированный
+        скрипт (формулу) сигнала с именем <codeph>sig_name</codeph> графического контейнера, в
+        скрипте которого используется данная формула. Имя сигнала задается строкой, обрамляется
+        кавычками. Возвращаемое значение равно 1, если функция успешно присвоила свойство, и 0, если
+        этого выполнить не удалось. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>flag – флаг результата выполнения операции, тип boolean.</p>
+    </section>  
+  </body>
+</topic>

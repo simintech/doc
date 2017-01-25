@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setpointcount</title>
+<shortdesc>Функция установки количества точек графического примитива.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setpointcount</funcname>(obj_name, num);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>obj_name – имя объекта,</p>
+      <p>num – количества точек графического примитива.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setpointcount(obj_name, num)</codeph> – функция устанавливает количество
+          <codeph>num</codeph> точек графического примитива с именем <codeph>obj_name</codeph> с
+        переменным количеством точек (полилинии, многоугольника и т.п.).  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><funcname>setpointcount</funcname>(PolyLine1, 20);</codeblock></section>  
+  </body>
+</topic>

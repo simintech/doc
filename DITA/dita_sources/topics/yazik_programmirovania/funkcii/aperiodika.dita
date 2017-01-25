@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>aperiodika</title>
+<shortdesc>Функция вычисления апериодического звена 1-го порядка.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>u1 = <funcname>aperiodika</funcname>(u, time, T);
+u1 = <funcname>aperiodika</funcname> (u, T);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>u – входная величина,</p>
+      <p>time – текущее модельное время,</p>
+      <p>T – постоянная времени звена. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>aperiodika(u, time, T)</codeph> – функция вычисления апериодического звена 1-го порядка
+        входной величины <codeph>u</codeph> с постоянной времени звена <codeph>T</codeph> и текущим
+        модельным временем <codeph>time</codeph>.</p>
+      <p><codeph>aperiodika(u, T)</codeph> – функция вычисления апериодического звена 1-го порядка
+        входной величины <codeph>u</codeph> с постоянной времени звена <codeph>T</codeph>.
+        Апериодическое звено первого порядка — одноемкостное, инерционное звено, которое можно
+        описать дифференциальным уравнением<i>Ty’(t) + y(t) = kx(t), </i>где: <i>y(t)</i> – выходная
+        величина; <i>x(t)</i> – входная величина; <i>k</i> – коэффициент усиления звена; <i>T</i> –
+        постоянная времени, характеризующая инерционность звена. Чем больше постоянная времени
+        звена, тем дольше длится переходный процесс. При использовании данной функции обязательно
+        надо учитывать величину шага синхронизации.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>u1 – выходная величина.</p>
+    </section>  
+  </body>
+</topic>

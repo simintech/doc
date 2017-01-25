@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getwirestartpointcoord </title>
+<shortdesc>Функция получения координаты начальной точки линии связи. </shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>w_st_coord = <funcname>getwirestartpointcoord</funcname>(w_id);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>w_id – идентификатор линии связи. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getwirestartpointcoord</codeph> – функция получения координаты начальной точки линии
+        связи с идентификатором <codeph>w_id</codeph>. Начальной точкой может являться порт блока
+        или точка ветвления линий связи.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>w_st_coord – функция возвращает координаты в формате <codeph>point</codeph>,
+        соответствующие точке начала линии связи с идентификатором <codeph>w_id</codeph>. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> w_start: <kword>point</kword>;
+p_id = <funcname>getblockportid</funcname>(mul_oper3,2);  <comment>//получение идентификатора порта</comment>
+w_id = <funcname>getportwireid</funcname>(p_id); <comment>//получение идентификатора линии связи, подключенной к порту</comment>
+w_start = <funcname>getwirestartpointcoord</funcname>(w_id); <funcname>//получение координат начала линии</funcname></codeblock></section>
+<p>В результате выполнения данного скрипта переменная <codeph>w_start</codeph> получит значение
+      координат начальной точки линии связи, подключенной к порту с номером 2 блока с именем
+        <codeph>mul_oper3</codeph>. </p>  
+  </body>
+</topic>

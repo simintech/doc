@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getchild </title>
+<shortdesc>Функция возвращает идентификатор подчиненного объекта по идентификатору владельца и
+    порядковому номеру.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>child_id = <funcname>getchild</funcname>(par_id, obj_num);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>par_id – идентификатор объекта-владельца;</p>
+      <p>obj_num – порядковый номер необходимого объекта в списке дочерних для владельца par_id </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getchild</codeph> – функция позволяет получить идентификатор подчиненного объекта с
+        порядковым номером <codeph>obj_num</codeph>, принадлежащего родителю с идентификатором
+          <codeph>par_id</codeph>.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>child_id – целое число, идентификатор выбранного дочернего объекта.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>initialization</kword>
+<kword>for</kword>(i=1,<funcname>getchildcount</funcname>(MainObject)) <kword>begin</kword>
+id = <funcname>getchild</funcname>(MainObject,i);
+<funcname>seterrorstr</funcname>("Подчинённый объект = "+<funcname>getobjname</funcname>(id),0);
+<kword>end</kword>;
+<kword>end</kword>;</codeblock></section>
+<p>В результате выполнения данного скрипта, в окне сообщений будут отображены сообщения о всех
+      дочерних объектах, принадлежащих объекту с именем <codeph>MainObject</codeph>. </p>  
+  </body>
+</topic>

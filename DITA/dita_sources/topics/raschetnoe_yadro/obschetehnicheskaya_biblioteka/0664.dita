@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Двигатель синхронный с успокаивающими обмотками</title>
+  <body>
+    <table id="table_q24_gp4_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/0664.png" height="34" width="38" id="image_r24_gp4_qy"
+              /></entry>
+            <entry>Двигатель синхронный с успокаивающими обмотками</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry/>
+          </row>
+          <row>
+            <entry><image href="images_old/0664s.png" height="49" width="88" id="image_s24_gp4_qy"
+              /></entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry/>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2">
+              <p>Блок реализует модель синхронного двигателя с постоянным магнитом с успокаивающими
+                обмотками (ДСС).</p>
+              <p><b>Расчетная схема и уравнения динамики ДСС</b></p>
+              <p>Расчетная схема ДСС аналогична схеме синхронного двигателя без успокаивающих
+                обмоток.</p>
+              <p>Уравнения динамики электромагнитных процессов:</p>
+              <p><image href="images_old/0664_html_2937fccd.gif" height="210" width="375" id="image_t24_gp4_qy"
+                />(1)</p>
+              <p>динамика механического процесса (уравнение равновесия моментов):</p>
+              <p><image href="images_old/0664_html_7491828f.gif" height="102" width="365" id="image_u24_gp4_qy"
+                />(2)</p>
+              <p>выражения для потоксцеплений:</p>
+              <p><image href="images_old/0664_html_m6a27e1a9.gif" height="107" width="287"
+                  id="image_v24_gp4_qy"/>(3)</p>
+              <p>исключая из уравнений (3) токи, имеем</p>
+              <p><image href="images_old/0664_html_7c683ab9.gif" height="216" width="375" id="image_w24_gp4_qy"
+                />(4)</p>
+              <p>где</p>
+              <p><image href="images_old/0664_html_56357095.gif" height="26" width="352" id="image_x24_gp4_qy"
+                /></p>
+              <p>В результате можно записать уравнения динамики электромагнитных процессов в
+                пространстве состояний в форме Коши:</p>
+              <p><image href="images_old/0664_html_60dde9fb.gif" height="216" width="659" id="image_y24_gp4_qy"
+                />(5)</p>
+              <p>Если выразить индуктивности через основные и рассеяния:</p>
+              <p><image href="images_old/0664_html_m17f6e593.gif" height="107" width="150"
+                  id="image_z24_gp4_qy"/></p>
+              <p>то имеем</p>
+              <p><image href="images_old/0664_html_30b5927a.gif" height="48" width="323" id="image_af4_gp4_qy"
+                />(6)</p>
+              <p><image href="images_old/0664_html_3f17df72.gif" height="455" width="778" id="image_bf4_gp4_qy"
+                />(7)</p>
+              <p>Согласно уравнениям (7), переменными состояния ДСС являются потокосцепления<image
+                  href="images_old/0664_html_m4ab04288.gif" height="24" width="273" id="image_cf4_gp4_qy"/>,
+                угловая скорость вращения ротора<image href="images_old/0664_html_m44f27ac.gif" height="21"
+                  width="44" id="image_df4_gp4_qy"/>и угол поворота ротора<image
+                  href="images_old/0664_html_m3e206545.gif" height="21" width="39" id="image_ef4_gp4_qy"/>.
+                Входными параметрами являются напряжения на обмотках статора и возмущающий момент. </p>
+              <p><b>Входные сигналы:</b></p>
+              <ol id="ol_ff4_gp4_qy">
+                <li>
+                  <p>Напряжение на обмотке статора<image href="images_old/0664_html_b0d41dd.gif" height="23"
+                      width="59" id="image_gf4_gp4_qy"/>в <b>неподвижной</b> системе координат,
+                    В.</p>
+                </li>
+                <li>
+                  <p>Напряжение на обмотке статора<image href="images_old/0664_html_7926aecc.gif" height="23"
+                      width="58" id="image_hf4_gp4_qy"/>в <b>неподвижной</b> системе координат,
+                    В.</p>
+                </li>
+                <li>
+                  <p>Возмущающий момент<image href="images_old/0664_html_m7a418b2b.gif" height="23" width="55"
+                      id="image_if4_gp4_qy"/>, Н·м.</p>
+                </li>
+              </ol>
+              <p><b>Выходные сигналы:</b></p>
+              <ol id="ol_jf4_gp4_qy">
+                <li>
+                  <p>Угол поворота ротора<image href="images_old/0664_html_m5831b8e7.gif" height="21"
+                      width="40" id="image_kf4_gp4_qy"/>, рад.</p>
+                </li>
+                <li>
+                  <p>Угловая скорость вращения<image href="images_old/0664_html_m36e07c53.gif" height="21"
+                      width="47" id="image_lf4_gp4_qy"/>, рад/с.</p>
+                </li>
+                <li>
+                  <p>Электромеханический момент на валу ротора<image href="images_old/0664_html_5617edf.gif"
+                      height="23" width="48" id="image_mf4_gp4_qy"/>, Н·м.</p>
+                </li>
+              </ol>
+              <p>Дополнительно на третий выход можно выводить ещё два сигнала:</p>
+              <ol id="ol_nf4_gp4_qy">
+                <li>
+                  <p>Ток в обмотке статора<image href="images_old/0664_html_285a8b2d.gif" height="23"
+                      width="50" id="image_of4_gp4_qy"/>, А.</p>
+                </li>
+                <li>
+                  <p>Ток в обмотке статора<image href="images_old/0664_html_m15d807cf.gif" height="24"
+                      width="48" id="image_pf4_gp4_qy"/>, А.</p>
+                </li>
+              </ol>
+              <p><b>Свойства:</b></p>
+              <ul id="ul_qf4_gp4_qy">
+                <li>
+                  <p>Сопротивление α-обмотки статора<image href="images_old/0664_html_46300428.gif" height="23"
+                      width="35" id="image_rf4_gp4_qy"/>, Ом;</p>
+                </li>
+                <li>
+                  <p>Сопротивление β-обмотки статора<image href="images_old/0664_html_m56e1560e.gif"
+                      height="24" width="33" id="image_sf4_gp4_qy"/>, Ом;</p>
+                </li>
+                <li>
+                  <p>Индуктивность α-обмотки статора<image href="images_old/0664_html_m446a76af.gif"
+                      height="23" width="34" id="image_tf4_gp4_qy"/>, Гн;</p>
+                </li>
+                <li>
+                  <p>Индуктивность β-обмотки статора<image href="images_old/0664_html_m288a5813.gif"
+                      height="24" width="32" id="image_uf4_gp4_qy"/>, Гн;</p>
+                </li>
+                <li>
+                  <p>Магнитный поток от постоянного магнита через обмотки статора I, Вб;</p>
+                </li>
+                <li>
+                  <p>Момент инерции, приведённый к валу ротора<image href="images_old/0664_html_b05893.gif"
+                      height="21" width="20" id="image_vf4_gp4_qy"/>, кг·м2;</p>
+                </li>
+                <li>
+                  <p>Сопротивление α-обмотки ротора<image href="images_old/0664_html_3f40833b.gif" height="23"
+                      width="37" id="image_wf4_gp4_qy"/>, Ом;</p>
+                </li>
+                <li>
+                  <p>Сопротивление β-обмотки ротора<image href="images_old/0664_html_m1cc38cc.gif" height="24"
+                      width="35" id="image_xf4_gp4_qy"/>, Ом;</p>
+                </li>
+                <li>
+                  <p>Индуктивность α-обмотки ротора<image href="images_old/0664_html_77cd4011.gif" height="23"
+                      width="36" id="image_yf4_gp4_qy"/>, Гн;</p>
+                </li>
+                <li>
+                  <p>Индуктивность β-обмотки ротора<image href="images_old/0664_html_m55570aa7.gif" height="24"
+                      width="34" id="image_zf4_gp4_qy"/>, Гн;</p>
+                </li>
+                <li>
+                  <p>Взаимная индуктивность обмоток по оси α <image href="images_old/0664_html_2e1ee73a.gif"
+                      height="23" width="37" id="image_ag4_gp4_qy"/>, Гн;</p>
+                </li>
+                <li>
+                  <p>Взаимная индуктивность обмоток по оси β<image href="images_old/0664_html_m1715d515.gif"
+                      height="24" width="35" id="image_bg4_gp4_qy"/>, Гн;</p>
+                </li>
+                <li>
+                  <p>Число полюсов <image href="images_old/0664_html_244621c0.gif" height="23" width="26"
+                      id="image_cg4_gp4_qy"/>, шт.</p>
+                </li>
+                <li>
+                  <p>Число фаз питающего напряжения<image href="images_old/0664_html_691d5a1b.gif" height="23"
+                      width="29" id="image_dg4_gp4_qy"/>, шт.</p>
+                </li>
+                <li>
+                  <p>Начальный угол поворота ротора<image href="images_old/0664_html_m1db1b05d.gif" height="21"
+                      width="43" id="image_eg4_gp4_qy"/>, рад.</p>
+                </li>
+                <li>
+                  <p>Начальная частота вращения ротора<image href="images_old/0664_html_6fea424f.gif"
+                      height="21" width="51" id="image_fg4_gp4_qy"/>, рад/c.</p>
+                </li>
+                <li>
+                  <p>Начальное потокосцепление<image href="images_old/0664_html_85a5d07.gif" height="23"
+                      width="60" id="image_gg4_gp4_qy"/>, В·с.</p>
+                </li>
+                <li>
+                  <p>Начальное потокосцепление<image href="images_old/0664_html_m376795cd.gif" height="24"
+                      width="59" id="image_hg4_gp4_qy"/>, В·с.</p>
+                </li>
+                <li>
+                  <p>Начальное потокосцепление<image href="images_old/0664_html_792cfbc4.gif" height="23"
+                      width="62" id="image_ig4_gp4_qy"/>, В·с.</p>
+                </li>
+                <li>
+                  <p>Начальное потокосцепление<image href="images_old/0664_html_m664fbf12.gif" height="24"
+                      width="61" id="image_jg4_gp4_qy"/>, В·с.</p>
+                </li>
+                <li>
+                  <p>Дополнительный вывод.</p>
+                </li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>

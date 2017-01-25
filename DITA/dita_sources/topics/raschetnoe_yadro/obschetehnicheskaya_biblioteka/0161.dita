@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>M из N поэлементное</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/0161.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/0161s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован | Си
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок является аналогом логического блока M из N, векторизован и выполняет операцию
+      мажорирования по следующему алгоритму:<image placement="break" href="images/0161_1.png"
+        align="center" id="image_h2f_jlg_4y"/>где: <i>y</i>(<i>t</i>),
+      <i>y</i><sub>i</sub>(<i>t</i>) - выходной вектор и i-й элемент выходного вектора.
+        <i>x</i><sub>1</sub>(<i>t</i>), <i>x</i><sub>2</sub>(<i>t</i>), …
+        <i>x<sub>N</sub></i>(<i>t</i>) - входные векторы. M - параметр для сравнения с общим числом
+      входов N. <i>x</i><sub>1,<i>i</i></sub> - <i>i</i>-й элемент 1-ого входного вектора (и т.д.)
+      Размерности векторов входов и выхода должны быть равны. <i>Dim</i> - число сигналов в векторах
+      входов (и выхода). </p>
+    <p>Таким образом, на выходе по каждому из <i>i</i> (по каждому из сигналов входных векторов)
+      формируется логическая 1, если <i>C</i>≥<i>M</i> (количество ненулевых <i>i</i>-ых сигналов во
+      входных векторах превышает параметр <i>M</i>). Если <i>C</i>&lt;<i>M</i> то на выходе
+      формируется логический 0 (по каждому из i-ых элементов).</p>
+    <section>
+      <title>Входы</title>
+      <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>u_n</uicontrol> - n-ый входной порт. Число портов настраивается в свойствах
+            блока.</li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>Y</uicontrol> - результат выполнения операции.</li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Количество портов</uicontrol> - количество входных портов N.</li>
+          <li><uicontrol>Число входных True для срабатывания</uicontrol> - количество M входных
+            сигналов, равных единице, при достижении которого на выходе формируется логическая
+            единица. </li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <title>Параметры</title>
+      <p>нет</p>
+    </section>
+    
+  </body>
+</topic>

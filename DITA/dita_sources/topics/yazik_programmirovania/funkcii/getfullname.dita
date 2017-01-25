@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getfullname </title>
+<shortdesc>Функция получения полного пути объекта в проекте по его имени.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>path = <funcname>getfullname</funcname>(obj_name);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>obj_name – имя объекта. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getfullname</codeph> – функция получения полного пути объекта в проекте по заданному
+        имени <codeph>obj_name</codeph>. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>path – строка с полным путем объекта в проекте. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>path = <funcname>getfullname</funcname>(element1);</codeblock></section>  
+  </body>
+</topic>

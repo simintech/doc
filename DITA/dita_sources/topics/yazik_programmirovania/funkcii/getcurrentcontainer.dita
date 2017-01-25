@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getcurrentcontainer </title>
+<shortdesc>Функция получения идентификатора текущего графического контейнер.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>cont_id = <funcname>getcurrentcontainer</funcname>;</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>нет</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getcurrentcontainer</codeph> – функция позволяет получить идентификатор графического
+        контейнера, которому принадлежит текущий скрипт. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>cont_id – переменная, имеющая значение идентификатора текущего графического контейнера. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>num = <funcname>getobjcount</funcname>(getcurrentcontainer);</codeblock></section>
+<p>В результате выполнения данного скрипта переменная num получит целое значение, равное количеству
+      объектов в текущем графическом контейнере.</p>  
+  </body>
+</topic>

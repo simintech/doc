@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Импульс</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/3034.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/3034s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован | Си
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Формирует импульс заданной длительности при изменении входа от нуля до единицы. Алгоритм
+      работы блока: если входной сигнал изменился с нулевого значения на единичное (или на
+      ненулевое), то блок формирует на выходе логическую единицу в течение заданного времени. При
+      этом, в течение всего импульса (пока на выходе 1), блок не учитывает изменения входного
+      сигнала. </p>
+    <section>
+      <title>Входы</title>
+      <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>B01</uicontrol> - вход блока.</li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>B0</uicontrol> - импульсный выход блока.</li>
+        </ul>
+      </p>
+    </section>
+    <section><title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Длительность импульса</uicontrol> - время, в течение которого блок
+            формирует логическую единицу на выходе. </li>
+          <li><uicontrol>Длительность задается через</uicontrol> – способ задания длительности
+            импульса: через доволнительный вход или через параметр блока «Длительность импульса». </li>
+        </ul>
+      </p></section>
+    <section><title>Параметры</title>
+      <p>
+        <ul id="ul_t3c_l3t_2y">
+          <li><uicontrol>Длительность</uicontrol> - длительность импульса.</li>
+          <li><uicontrol>Время до остановки таймера</uicontrol> - время до остановки таймера
+            импульса.</li>
+        </ul>
+      </p></section>
+    
+  </body>
+</topic>

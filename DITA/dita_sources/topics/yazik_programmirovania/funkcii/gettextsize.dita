@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>gettextsize</title>
+<shortdesc>Функция получения размера строки (без переносов).</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>s = <funcname>gettextsize</funcname>(str, font);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>str – строка с текстом,</p>
+      <p>font – название шрифта текста. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>gettextsize</codeph> – функция получения размера строки <codeph>str</codeph>,
+        отображаемой шрифтом <codeph>font</codeph>. Тип возвращаемого значения - комплексное число,
+        где действительная часть соответствует ширине строки, мнимая - высоте.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>s – ширина и высота строки. Тип complex.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>initialization</kword> 
+  <kword>var</kword> TxtSize: <funcname>complex</funcname> = (1,1);
+  <comment>//Получаем размер шрифта     </comment>
+  TxtSize = <funcname>gettextsize</funcname>(TextLabel.Text,TextLabel.Font);
+  TextLabel1.Text = "CX=" + <funcname>floattostr</funcname>(<funcname>real</funcname>(TxtSize)) + " CY=" + <funcname>floattostr</funcname>(<funcname>imag</funcname>(TxtSize));
+<kword>end</kword>;
+<comment>//Сдвигаем индикатор</comment>
+<funcname>move</funcname>((<funcname>real</funcname>(TxtSize),0),Line,PolyLine);</codeblock></section>
+<p>В примере переменной <codeph>TxtSize</codeph> присваивается размер строки элемента
+        <codeph>TextLabel</codeph>, полученные ширина и высота строки отображается в элементе
+        <codeph>TextLabel1</codeph>. Полученная ширина используется для сдвигания элементов
+        <codeph>Line</codeph>, <codeph>PolyLine</codeph> (стрелка) в конец строки. </p>  
+  </body>
+</topic>

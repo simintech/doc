@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Общие параметры шаблона Полилиния </title>
+  <body>
+    <p/>
+    <table id="table_q4f_d2n_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <thead>
+          <row>
+            <entry><b>Название</b></entry>
+            <entry><b>Имя</b></entry>
+            <entry><b>Описание</b></entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>Координаты точек</entry>
+            <entry>Points</entry>
+            <entry>
+              <p>Значение координат точек, описывающих графический элемент в абсолютных координатах
+                схемы. Положительное направление координаты Х - слева направо. Положительное
+                направление координаты Y - сверху вниз. Точка с координатами (0,0) находится в левом
+                верхнем углу схемы.</p>
+              <p>Для графических элементов типа линия, запись представляет собой массив вида: [(X1 ,
+                Y1),(X2 , Y2),…(Xn, Yn)], где в круглых скобках перечислены координаты узлов линии. </p>
+              <p><i>Примечание. Изменения координат точек возможно непосредственно на схеме путем
+                  визуального перемещения характерных точек с помощью мыши.</i></p>
+            </entry>
+          </row>
+          <row>
+            <entry>Толщина линии</entry>
+            <entry>Width</entry>
+            <entry>
+              <p>Толщина обрисовываемой линии на экране в пикселах. При изменении масштаба
+                изображения толщина линии не изменяется.</p>
+              <p><i>Примечание. В случае, когда стиль линии отличается от стиля <b>Сплошна</b>я,
+                  толщина линии не меняется и равна 1 пикселу.</i></p>
+            </entry>
+          </row>
+          <row>
+            <entry>Стиль линии</entry>
+            <entry>PennStyle</entry>
+            <entry>
+              <p>Определяет один из доступных типов отображения линии: </p>
+              <ol id="ol_r4f_d2n_qy">
+                <li>
+                  <p>Сплошная;</p>
+                </li>
+              </ol>
+              <dl>
+                <dlentry>
+                  <dt/>
+                  <dd>
+                    <p><image href="../socrat.files/socrat_comm11_html_b93e030.png"
+                        id="image_s4f_d2n_qy"/></p>
+                  </dd>
+                </dlentry>
+              </dl>
+              <ol id="ol_t4f_d2n_qy">
+                <li>
+                  <p>Штриховая;</p>
+                </li>
+              </ol>
+              <dl>
+                <dlentry>
+                  <dt/>
+                  <dd>
+                    <p><image href="../socrat.files/socrat_comm11_html_78948220.png"
+                        id="image_u4f_d2n_qy"/></p>
+                  </dd>
+                </dlentry>
+              </dl>
+              <ol id="ol_v4f_d2n_qy">
+                <li>
+                  <p>Пунктирная;</p>
+                </li>
+              </ol>
+              <dl>
+                <dlentry>
+                  <dt/>
+                  <dd>
+                    <p><image href="../socrat.files/socrat_comm11_html_741209b7.png"
+                        id="image_w4f_d2n_qy"/></p>
+                  </dd>
+                </dlentry>
+              </dl>
+              <ol id="ol_x4f_d2n_qy">
+                <li>
+                  <p>Штрихпунктирная;</p>
+                </li>
+              </ol>
+              <dl>
+                <dlentry>
+                  <dt/>
+                  <dd>
+                    <p><image href="../socrat.files/socrat_comm11_html_376f1a29.png"
+                        id="image_y4f_d2n_qy"/></p>
+                  </dd>
+                </dlentry>
+              </dl>
+              <ol id="ol_z4f_d2n_qy">
+                <li>
+                  <p>С двумя точками.</p>
+                </li>
+              </ol>
+              <dl>
+                <dlentry>
+                  <dt/>
+                  <dd>
+                    <p><image href="../socrat.files/socrat_comm11_html_m46f2bac6.png"
+                        id="image_apf_d2n_qy"/></p>
+                  </dd>
+                </dlentry>
+              </dl>
+            </entry>
+          </row>
+          <row>
+            <entry>Толщина границы</entry>
+            <entry>BorderWidth</entry>
+            <entry>Толщина внешней линии. Если данный параметр равен нулю, то внешняя линия не
+              рисуется. </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>

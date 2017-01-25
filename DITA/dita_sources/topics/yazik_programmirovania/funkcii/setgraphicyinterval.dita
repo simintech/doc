@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setgraphicyinterval</title>
+<shortdesc>Функция установки свойства графика «Интервал видимости по оси Y».</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setgraphicyinterval</funcname>(gid, ax_num, val);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>gid – идентификатор объекта типа «График»,</p>
+      <p>ax_num – номер шкалы, начиная с 0, </p>
+      <p>val – значение интервала видимости по оси Y.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setgraphicxinterval(gid, val) </codeph>– функция установки значения <codeph>val</codeph>
+        свойства «Интервал видимости по оси Y» объекта типа «График» по идентификатору объекта
+          <codeph>gid</codeph>. Идентификатор объекта может быть получен функцией
+          <codeph>getgraphicid(gr_name)</codeph> и имеет тип указателя на объект.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><comment>//получим идентификатор график</comment>
+eid = <funcname>getengineofblock</funcname>(TimeGraphic8);
+gid = <funcname>getgraphicidbyengine</funcname>(eid);
+<comment>//установим интервал видимости по оси X</comment>
+<funcname>setgraphicyinterval</funcname>(gid, 100); </codeblock></section>
+<p>В результате выполнения данного примера происходит получение идентификатора графика и установка
+      интервала видимости 100 по оси Y.</p>  
+  </body>
+</topic>

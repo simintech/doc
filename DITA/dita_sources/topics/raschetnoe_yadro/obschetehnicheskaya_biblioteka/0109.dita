@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Задатчик с варьируемым значением</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/0109.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/0109s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован | Си
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок передает на аналоговый выход значение первого входа (x<sub>1</sub>), если разрешена
+      трансляция (если вход x<sub>2</sub> имеет значение 1) и если значение сигнала x₁ входит в
+      диапазон между максимальным и минимальным значением, задаваемым соответственно сигналами на
+      входах x<sub>3</sub> и x<sub>4</sub>. Если величина сигнала не входит в диапазон
+        x<sub>4</sub>÷x<sub>3</sub>, то сигнал на выходе приобретает соответственно значение либо
+      верхнего предела (x<sub>3</sub>), либо нижнего (x<sub>4</sub>). В случае, если трансляция
+      запрещена (x<sub>2</sub>=0), то на выходе блока фиксируется то значение, которое было на
+      момент запрещения трансляции.</p>
+    <section><title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Название</uicontrol>.</li>
+          <li><uicontrol>Начальное значение</uicontrol>.</li>
+        </ul>
+      </p></section>
+    <section><title>Параметры</title>
+      <p>нет</p></section>
+    
+  </body>
+</topic>

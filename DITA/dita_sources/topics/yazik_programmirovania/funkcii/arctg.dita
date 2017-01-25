@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>arсtg</title>
+<shortdesc>Функция вычисления арктангенса вещественного или комплексного числа.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>y = <funcname>arctg</funcname>(x);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>x – входное значение.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>arctg(x)</codeph> – функция вычисления арктангенса вещественного или комплексного числа.
+        Входное значение может быть как вещественным, так и комплексным числом. Вещественное входное
+        значение ограничено условием: -1≤x≤1. Входное значение может задаваться как заранее
+        определенная переменная или как постоянное число. Комплексное число задается выражением
+          <codeph>a+bi</codeph>, где a и b вещественные и мнимые части числа соответственно.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>y – арктангенс входного значения x.</p>
+    </section>  
+<section><title>Пример1:</title>
+<p>Арктангенс вещественного числа</p>
+<codeblock><kword>const</kword> x = 5;
+y = <funcname>arctg</funcname>(x);</codeblock></section>
+<p>В результате переменной y будет присвоено значение 1.3734008.</p>  
+<section><title>Пример2:</title>
+<p>Арктангенс комплексного числа</p><codeblock>y = <funcname>arctg</funcname>(3+4i);</codeblock></section>
+<p>В результате переменной y будет присвоено значение 1.448307+0.15899719i.</p>   
+  </body>
+</topic>

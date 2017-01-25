@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Поликруг (PolyRound) </title>
+  <body>
+    <p><image href="PolyRound_images/image001.png" height="86" width="544" id="image_iy1_vp1_ry"
+      /></p>
+    <p><image href="PolyRound_images/image002.png" height="202" width="465" id="image_jy1_vp1_ry"
+      /></p>
+    <p><b><i>Вставка</i></b></p>
+    <p>1. Кликнуть в панели примитивов по кнопке <image href="PolyRound_images/image003.png"
+        height="31" width="31" id="image_ky1_vp1_ry"/>.</p>
+    <p>2. Кликнуть в поле окна проекта или графического редактора в месте начала границы
+      поликруга.</p>
+    <p>3. Повторно кликнуть в поле окна проекта или графического редактора для задания следующей
+      вершины поликруга и т.д. </p>
+    <p>4. Повторить шаги 2 и 3 требуемое количество раз. </p>
+    <p>5. Для завершения кликнуть правой кнопкой мыши в поле окна проекта или графического редактора
+      в месте окончания поликруга.</p>
+    <p><b><i>Редактирование</i></b></p>
+    <p>1. Выделить поликруг, кликнув на его границе.</p>
+    <p>2. Для перемещения поликруга навести указатель мыши на его границу - изображение указателя
+      изменится на изображение указывающей руки, нажать ЛКМ и удерживая её переместить поликруг на
+      новое место.</p>
+    <p>3. Для изменения положения одной из вершин поликруга подвести указатель мыши к этой вершине -
+      изображение указателя изменится на перекрестье, нажать ЛКМ и удерживая её переместить вершину
+      на новое место.</p>
+    <p>4. Для удаления вершины поликруга подвести указатель мыши к этой вершине - изображение
+      указателя изменится на перекрестье, нажать ПКМ - откроется контекстое меню, в котором нужно
+      выбрать пункт <b>«Действия → Удалить точку».</b></p>
+    <p>5. Для добавления вершины поликруга подвести указатель мыши к месту на границе полигона, где
+      нужно добавить вершину, нажать ПКМ - откроется контекстое меню, в котором нужно выбрать пункт
+        <b>«Действия → Вставить точку».</b></p>
+    <p>6. Для продления границы поликруга кликнуть ПКМ в любом месте поликруга - откроется
+      контекстное меню, в котором нужно выбрать пункт <b>«Действия → Продолжить объект»</b>. Далее
+      по клику ЛКМ будут устанавливаться новые вершины поликруга. Последнюю из добавляемых вершин
+      нужно установить по клику ПКМ.</p>
+    <p> </p>
+    <p>7. Для автоматического выстраивания всехвершин поликруга вдоль линий под углами 90° кликнуть
+      ПКМ в любом месте поликруга - откроется контекстное меню, в котором нужно выбрать пункт
+        <b>«Действия → Выровнять линию»</b>. Результаты работы этой функции могут отличаться от
+      ожидаемых пользователем, поэтому для отмены данного действия можно воспользоваться сочетанием
+      клавиш [Ctrl]+[Z], либо пунктом меню <b>«Правка</b> → <image href="PolyRound_images/image004.png"
+          height="25" width="25" id="image_ly1_vp1_ry"/><b>Отмена»</b> в основном окне программы, либо
+      пунктом меню <b>«Правка</b> → <image href="PolyRound_images/image004.png" height="25" width="25"
+          id="image_my1_vp1_ry"/> <b>Отмена действия»</b> при работе в графическом редакторе.</p>
+    <p>
+      <image href="PolyRound_images/image005.png" height="365" width="755" id="image_ny1_vp1_ry"/>
+    </p>
+    <p><b>Пример работы функции «Выровнять линию»: слева поликруг до применения функции, справа –
+        после.</b></p>
+    <p><b><i>Свойства</i></b></p>
+    <table id="table_oy1_vp1_ry">
+      <tgroup cols="6">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <colspec colnum="4" colname="col4"/>
+        <colspec colnum="5" colname="col5"/>
+        <colspec colnum="6" colname="col6"/>
+        <tbody>
+          <row>
+            <entry><b>Название</b></entry>
+            <entry><b>Имя</b></entry>
+            <entry namest="col3" nameend="col4"><b>Значение по умолчанию</b></entry>
+            <entry namest="col4" nameend="col6">
+              <p><b>Допустимые значения</b></p>
+              <p><b>{в скрипте} в окне свойств</b></p>
+            </entry>
+            <entry><b>Справка</b></entry>
+          </row>
+          <row>
+            <entry><b>Имя объекта </b></entry>
+            <entry>Name</entry>
+            <entry namest="col3" nameend="col4">PolyRound&lt;N></entry>
+            <entry namest="col4" nameend="col6">Непрерывная последовательность цифр и латинских
+              букв</entry>
+            <entry>
+              <p>Данное имя используется для обращения к свойствам объекта, например, в скрипте:</p>
+              <p>PolyRoun2.Visible.</p>
+            </entry>
+          </row>
+          <row>
+            <entry><b>Тип элемента</b></entry>
+            <entry>ClassName</entry>
+            <entry namest="col3" nameend="col4">PolyRound</entry>
+            <entry namest="col4" nameend="col6">Значение предопределено</entry>
+            <entry>Тип объекта, определяющий его внешний вид объекта и набор свойств.</entry>
+          </row>
+          <row>
+            <entry><b>Подсказка</b></entry>
+            <entry>Hint</entry>
+            <entry namest="col3" nameend="col4"><i>&lt;</i><i>нет</i><i>></i></entry>
+            <entry namest="col4" nameend="col6">Любой текст</entry>
+            <entry>Текст подсказки, всплывающей при наведении курсора мыши на объект.</entry>
+          </row>
+          <row>
+            <entry><b>Отображать подсказку при редактировании</b></entry>
+            <entry>ShowHintOnEdit</entry>
+            <entry namest="col3" nameend="col4">Нет</entry>
+            <entry namest="col4" nameend="col6">
+              <p>{0} Нет</p>
+              <p>{1} Да</p>
+            </entry>
+            <entry>Включает и отключает отображение всплывающей подсказки в режиме
+              редактирования.</entry>
+          </row>
+          <row>
+            <entry><b>Видимость при выполнении</b></entry>
+            <entry>Visible</entry>
+            <entry namest="col3" nameend="col4">Да</entry>
+            <entry namest="col4" nameend="col6">
+              <p>{0} Нет</p>
+              <p>{1} Да</p>
+            </entry>
+            <entry>Включает и отключает отображение объекта в режиме «Индикация» при запуске
+              расчёта.</entry>
+          </row>
+          <row>
+            <entry><b>Цвет</b></entry>
+            <entry>Color</entry>
+            <entry namest="col3" nameend="col4"><i>&lt;</i><i>зеленый</i><i>></i></entry>
+            <entry namest="col4" nameend="col6">Цвет выбирается из стандартной системной
+              палитры.</entry>
+            <entry>Цвет заливки поликруга. </entry>
+          </row>
+          <row>
+            <entry><b>Координаты точек</b></entry>
+            <entry>Points</entry>
+            <entry namest="col3" nameend="col4">[(X1,Y1),(X2,Y2)…(Xn,Yn)]</entry>
+            <entry namest="col4" nameend="col6">
+              <p>Значения float, имена сигналов, математические выражения:</p>
+              <p>[(56 , 104), (112 , src1),(coord3*k4 , 40)]</p>
+              <p> </p>
+            </entry>
+            <entry>Координаты X и Y всех вершин отображаемого полигона в координатном пространстве
+              окна.</entry>
+          </row>
+          <row>
+            <entry><b>Ссылка</b></entry>
+            <entry>Instance</entry>
+            <entry namest="col3" nameend="col4"><i>&lt;</i><i>нет</i><i>></i></entry>
+            <entry namest="col4" nameend="col6">Значения, задаваемые в окне «Выбор ссылки».</entry>
+            <entry>Вызов окна «Выбор ссылки». Объект используется в качестве чувствительной области
+              для вызова различных действий: переключения между страницами проекта, управления
+              другими блоками, открытия файлов и пр. </entry>
+          </row>
+          <row>
+            <entry><b>Ссылка при редактировании</b></entry>
+            <entry>EditInstance</entry>
+            <entry namest="col3" nameend="col4">Нет</entry>
+            <entry namest="col4" nameend="col6">
+              <p>{0} Нет</p>
+              <p>{1} Да</p>
+            </entry>
+            <entry>Обработка объектом вызова ссылки в режиме редактирования.</entry>
+          </row>
+          <row>
+            <entry><b>Действие для вывода ссылки</b></entry>
+            <entry>InstanceMode</entry>
+            <entry namest="col3" nameend="col4">Двойной щелчок</entry>
+            <entry namest="col4" nameend="col6">
+              <p>{0} Двойной щелчок</p>
+              <p>{1} Щелчок левой кнопкой</p>
+              <p>{2} Щелчок правой кнопкой</p>
+            </entry>
+            <entry>Выбор варианта активации ссылки.</entry>
+          </row>
+          <row>
+            <entry><b>Ярлык</b></entry>
+            <entry>Tag</entry>
+            <entry namest="col3" nameend="col4">0</entry>
+            <entry namest="col4" nameend="col6">Любое целое число или интерпретируемое
+              выражение</entry>
+            <entry>Метка в виде произвольного числа. Позволяет обращаться ко всем объектам с
+              одинаковым ярлыком при написании скриптов. Например, когда в процессе счета требуется
+              скрыть или показать группу объектов.</entry>
+          </row>
+          <row>
+            <entry><b>Шаблон автозаполнения</b></entry>
+            <entry>Template</entry>
+            <entry namest="col3" nameend="col4"><i>&lt;</i><i>нет</i><i>></i></entry>
+            <entry namest="col4" nameend="col6">Подробнее о шаблонах автозаполнения.</entry>
+            <entry>Заданный в специальном формате текст, позволяющий автоматически создавать связи и
+              присваивать имена сигналам объекта.</entry>
+          </row>
+          <row>
+            <entry><b>Номер решателя</b></entry>
+            <entry>Layer</entry>
+            <entry namest="col3" nameend="col4">0</entry>
+            <entry namest="col4" nameend="col6">Любое целое число или интерпретируемое
+              выражение</entry>
+            <entry>Число, задающее номер расчетного ядра, которое производит расчет математической
+              модели объекта. Применяется при использовании нескольких расчетных программ. </entry>
+          </row>
+          <row>
+            <entry><b>Скрипт инициализации объекта</b></entry>
+            <entry>OnInitScript</entry>
+            <entry namest="col3" nameend="col4"><i>&lt;</i><i>нет</i><i>></i></entry>
+            <entry namest="col4" nameend="col6">Текст скрипта</entry>
+            <entry>Текст скрипта, исполняемого непосредственно перед запуском расчёта.</entry>
+          </row>
+          <row>
+            <entry><b>Скрипт исполнения объекта</b></entry>
+            <entry>OnRunScript</entry>
+            <entry namest="col3" nameend="col4"><i>&lt;</i><i>нет</i><i>></i></entry>
+            <entry namest="col4" nameend="col6">Текст скрипта</entry>
+            <entry>Текст скрипта, исполняемого при выполнении расчёта.</entry>
+          </row>
+          <row>
+            <entry><b>Стиль заливки</b></entry>
+            <entry namest="col2" nameend="col3">BrushStyle</entry>
+            <entry>Сплошная</entry>
+            <entry><image href="PolyRound_images/image007.png" height="158" width="16"
+                id="image_py1_vp1_ry"/></entry>
+            <entry namest="col5" nameend="col6">
+              <p>{0} Сплошная</p>
+              <p>{1} Нулевая</p>
+              <p>{2} Горизонтальная</p>
+              <p>{3} Вертикальная</p>
+              <p>{4} Диагональная</p>
+              <p>{5} Обратнодиагональная</p>
+              <p>{6} Клеточка</p>
+              <p>{7} Обратная клеточка</p>
+            </entry>
+            <entry>Выбор из набора доступных вариантов стилей внутренней заливки.</entry>
+          </row>
+          <row>
+            <entry><b>Цвет границы</b></entry>
+            <entry namest="col2" nameend="col3">BorderColor</entry>
+            <entry><i>&lt;</i><i>черный</i><i>></i></entry>
+            <entry namest="col4" nameend="col6">Цвет выбирается из стандартной системной
+              палитры.</entry>
+            <entry>Цвет абриса.</entry>
+          </row>
+          <row>
+            <entry><b>Толщина границы</b></entry>
+            <entry namest="col2" nameend="col3">BorderWidth</entry>
+            <entry>1</entry>
+            <entry namest="col4" nameend="col6">Значения float</entry>
+            <entry>Толщина абриса в пикселях.</entry>
+          </row>
+          <row>
+            <entry><b>Стиль границы</b></entry>
+            <entry>PenStyle</entry>
+            <entry namest="col3" nameend="col4">Сплошная</entry>
+            <entry namest="col4" nameend="col5"><image href="PolyRound_images/image008.png"
+                height="103" width="142" id="image_qy1_vp1_ry"/></entry>
+            <entry>
+              <p>{0} Сплошная</p>
+              <p>{1} Штриховая</p>
+              <p>{2} Пунктирная</p>
+              <p>{3} Штрихпунктирная</p>
+              <p>{4} С двумя точками</p>
+            </entry>
+            <entry>Выбор из набора доступных вариантов стилей линии.</entry>
+          </row>
+          <row>
+            <entry><b>Стиль градиента</b></entry>
+            <entry namest="col2" nameend="col3">GradientStyle</entry>
+            <entry>Без градиента</entry>
+            <entry namest="col4" nameend="col6">
+              <p>{0} Без градиента</p>
+              <p>{1} Линейный</p>
+              <p>{2} Линейный симметричный</p>
+              <p>{3} Радиальный</p>
+            </entry>
+            <entry>Различные варианты геометрии двухцветной градиентной заливки объекта.</entry>
+          </row>
+          <row>
+            <entry><b>Дополнительный цвет градиента</b></entry>
+            <entry namest="col2" nameend="col3">GradientColor</entry>
+            <entry><i>&lt;зеленый></i></entry>
+            <entry namest="col4" nameend="col6">Цвет выбирается из стандартной системной
+              палитры.</entry>
+            <entry>Второй цвет для градиентной заливки.</entry>
+          </row>
+          <row>
+            <entry><b>Коэффициент прозрачности</b></entry>
+            <entry namest="col2" nameend="col3">Opacity</entry>
+            <entry>1</entry>
+            <entry namest="col4" nameend="col6">Значения float от 0 до 1.</entry>
+            <entry>
+              <p>0 – полностью прозрачный объект.</p>
+              <p>1 – полностью непрозрачный объект.</p>
+            </entry>
+          </row>
+          <row>
+            <entry><b>Номер начальной точки градиента</b></entry>
+            <entry namest="col2" nameend="col3">StartGradPtNum</entry>
+            <entry>1</entry>
+            <entry namest="col4" nameend="col6">
+              <p>Целые числа от 0 до n-1, </p>
+              <p>где n – число вершин в массиве Points</p>
+            </entry>
+            <entry>Порядковый номер вершины из массива точек Points (см. свойство «Координаты точек
+              / Points»), в которой начинается построение градиентной заливки.</entry>
+          </row>
+          <row>
+            <entry><b>Номер начальной точки градиента</b></entry>
+            <entry namest="col2" nameend="col3">EndGradPointNum</entry>
+            <entry>0</entry>
+            <entry namest="col4" nameend="col6">
+              <p>Целые числа от 0 до n-1, </p>
+              <p>где n – число вершин в массиве Points</p>
+            </entry>
+            <entry>Порядковый номер вершины из массива точек Points (см. свойство «Координаты точек
+              / Points»), в которой заканчивается построение градиентной заливки.</entry>
+          </row>
+          <row>
+            <entry><b>Использовать объект как геометрическую маску слоя</b></entry>
+            <entry namest="col2" nameend="col3">IsMaskObject</entry>
+            <entry>Нет</entry>
+            <entry namest="col4" nameend="col6">
+              <p>{0} Нет</p>
+              <p>{1} Да</p>
+            </entry>
+            <entry>
+              <p>Включает и отключает режим обрезки изображения по контуру поликруга.</p>
+              <p>При включенном свойстве при запуске расчета будут видны только сам поликруг и та
+                часть изображения над ним, которая попадает внутрь границ поликруга. Все остальные
+                части изображения будут обрезаны.</p>
+              <p>Все объекты, размещенные на заднем фоне относительно поликруга, будут полностью
+                скрыты в независимости от степени попадания их в его границы.</p>
+            </entry>
+          </row>
+          
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>

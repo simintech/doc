@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>matrix1</title>
+  <shortdesc>Функция создания матрицы единиц.</shortdesc>
+<body>
+  <section><title>Синтаксис:</title><codeblock>M = <funcname>matrix1</funcname>(n, m);</codeblock></section>
+<section><title>Аргументы:</title><p>n – количество строк матрицы единиц,</p> 
+<p>m – количество столбцов матрицы единиц.</p></section>
+  <section><title>Описание:</title><p><codeph>matrix1(n, m)</codeph> – функция возвращает матрицу размерностью n на m, у которой все элементы равны единице.</p></section>
+<section><title>Результат:</title><p>М – возвращаемая матрица единиц.</p></section> 
+<section><title>Пример:</title><codeblock><kword>const</kword> n = 5;  
+M = <funcname>matrix1</funcname>(n, 4);</codeblock></section>
+<p>В результате переменной M будет присвоено значение массива</p>
+<p>[1, 1, 1, 1],</p> 
+<p>[1, 1, 1, 1],</p> 
+<p>[1, 1, 1, 1],</p> 
+<p>[1, 1, 1, 1],</p>
+<p>[1, 1, 1, 1],</p>
+<p>определяющего матрицу единиц, у которой все элементы равны 1.</p>   
+  </body>
+</topic>

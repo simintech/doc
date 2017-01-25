@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>rcond</title>
+<shortdesc>Функция вычисления значения, обратного числу обусловленности матрицы.</shortdesc>
+<body>
+<section><title>Синтаксис:</title><codeblock>x = <funcname>rcond</funcname>(M);</codeblock></section>
+<section><title>Аргументы:</title><p>M – входная матрица.</p></section>
+<section><title>Описание:</title>
+<p><codeph>rcond(M)</codeph> – функция возвращает значение, обратное числу обусловленности матрицы,
+        основанному на первой норме. Значение также можно получить, используя
+          выражение:<?oxy_insert_start author="Redmann" timestamp="20161027T155437+0300"?><image
+          placement="break" href="images/rcond_1.png" align="center" id="image_e3t_ssg_tx"
+        /><?oxy_insert_end?></p>
+
+<p>Входная матрица М может задаваться:</p>
+<p><ul><li>как переменная типа матрица, определенная ранее:</li></ul></p>
+<p><codeph>x = rcond(M)</codeph>;</p>
+<p><ul><li>как матрица, состоящая из переменных, определенных ранее:</li></ul></p>
+<p><codeph>x = rcond([[x<sub>1</sub>,x<sub>2</sub>],[x<sub>3</sub>,x<sub>4</sub>],[x<sub>5</sub>,x<sub>6</sub>]])</codeph>;</p>
+<p><ul><li>как постоянная матрица:</li></ul></p>
+<p><codeph>x = rcond([[1,2],[3,4],[5,6]])</codeph>;</p></section>
+<section><title>Результат:</title><p>х – значение, обратное числу обусловленности матрицы M, основанному на первой норме.</p></section>  
+<section><title>Пример:</title><codeblock>
+<kword>const</kword> M = [[1, -3, 2], [4, 5, -1], [3, 8, -6]];  
+x = <funcname>rcond</funcname>(M);</codeblock></section>
+<p>В результате переменной x будет присвоено значение, обратное числу обусловленности матрицы М, равное 0.053125.</p>   
+  </body>
+</topic>
+
+<?oxy_options track_changes="on"?>

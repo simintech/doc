@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Замыкающий контакт реле с задержкой по замыканию</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/3044.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/3044s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован | Си
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Реализует операцию логического И с задержкой по замыканию для входа блока и значения,
+      поданного на соответствующую управляющую обмотку реле:<image placement="break"
+        href="images/3044_1.png" align="center" id="image_z2y_rrt_4y"/>где <i>y</i>(<i>t</i>) –
+      выходной сигнал блока, <i>x<sub>r</sub></i>(<i>t</i>) – значение (состояние) реле,
+        <i>x</i>(<i>t</i>) – входной сигнал блока. Задержка по замыканию относится только к
+      включению реле. Для того чтобы посмотреть структуру алгоритма – нажмите правой кнопкой на блок
+      и выберите пункт <cmdname>Действия → Войти в субмодель</cmdname>. Передача сигнала с
+      управляющей обмотки реле реализуется при помощи блока <xref href="1009.dita" format="dita">Из
+        памяти</xref>. Задержка по замыканию реализована блоком <xref href="3028.dita" format="dita"
+        >Задержка по включению</xref>. </p>
+    <section>
+      <title>Входы</title>
+      <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>Вход</uicontrol> - вход замыкающего контакта реле.</li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>Выход</uicontrol> - выход замыкающего контакта реле.</li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Имя реле</uicontrol> – имя, по которому определяется управляющее
+            воздействие. </li>
+          <li><uicontrol>Время задержки</uicontrol> – время задержки T<sub>1</sub> при включении
+            контакта реле.</li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <title>Параметры</title>
+      <p>нет</p>
+    </section>
+    
+  </body>
+</topic>

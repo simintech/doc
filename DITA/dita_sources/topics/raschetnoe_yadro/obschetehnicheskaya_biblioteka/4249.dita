@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика – Планетарный механизм с двумя сателлитами  </title>
+  <body>
+    <table id="table_mmr_kfs_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4249/image001.png" height="32" width="32"
+                id="image_nmr_kfs_qy"/></entry>
+            <entry>Механика – Планетарный механизм с двумя сателлитами</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4249/image002.png" height="68" width="128"
+                id="image_omr_kfs_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>В блоке реализована модель планетарного механизма с двумя сателлитами. Схематически механизм
+      показан на рисунке 1. В состав планетарного механизма входят три пары: звездочка - внутренний
+      сателлит, внутренний сателлит – внешний сателлит, внешний сателлит – обод. Все элементы имеют
+      общее водило. Геометрия механизма представлена на рисунке 2.</p>
+    <p><image href="images_old/4249/image003.png" height="231" width="407" id="image_pmr_kfs_qy"/></p>
+    <p>Рисунок 1.</p>
+    <p><image href="images_old/4249/image004.png" height="202" width="259" id="image_qmr_kfs_qy"/></p>
+    <p>Рисунок 2.</p>
+    <p>Модель планетарного механизма представлена в виде субмодели, структурная схема которой
+      приведена на рисунке 3. </p>
+    <p>Передаточное отношение для блока «Планетарная передача Обод-Планета» на структурной схеме
+      определяется следующим образом:</p>
+    <p><image href="images_old/4249/image005.png" height="46" width="189" id="image_rmr_kfs_qy"/></p>
+    <p>Передаточное отношение для блока «Планетарная передача Звезда-Планета» определяется следующим
+      образом:</p>
+    <p><image href="images_old/4249/image006.png" height="46" width="153" id="image_smr_kfs_qy"/></p>
+    <p><image href="images_old/4249/image007.png" height="220" width="566" id="image_tmr_kfs_qy"/></p>
+    <p>Рисунок 3.</p>
+    <p> </p>
+    <p>
+      <b>Входные порты блока:</b></p>
+    <p>Блок имеет три механических ненаправленных порта вращательного движения (С –водило, S -
+      звездочка, R - обод).</p>
+    <p> </p>
+    <p><b>Выходные порты блока:</b></p>
+    <p>Блок имеет один математический порт, на который поступает значение потерь мощности.</p>
+    <p> </p>
+    <p><b>Свойства блока:</b></p>
+    <table id="table_umr_kfs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>GRS</entry>
+            <entry>-</entry>
+            <entry>Отношение числа зубьев обода и звезды Nr/Ns (>1)</entry>
+          </row>
+          <row>
+            <entry>GPP</entry>
+            <entry>-</entry>
+            <entry>Отношение числа зубьев сателлитов Npo/Npi (>1)</entry>
+          </row>
+          <row>
+            <entry>KSP</entry>
+            <entry>-</entry>
+            <entry>КПД пары звезда/планета</entry>
+          </row>
+          <row>
+            <entry>KRP</entry>
+            <entry>-</entry>
+            <entry>КПД пары обод/планета</entry>
+          </row>
+          <row>
+            <entry>KPP</entry>
+            <entry>-</entry>
+            <entry>КПД пары планета/планета</entry>
+          </row>
+          <row>
+            <entry>BSP</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения пары звезда/водило</entry>
+          </row>
+          <row>
+            <entry>BRP</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения пары обод/водило</entry>
+          </row>
+          <row>
+            <entry>BPP</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения пары планета/водило</entry>
+          </row>
+          <row>
+            <entry>Qth</entry>
+            <entry>-</entry>
+            <entry>Порог мощности, Вт</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_vmr_kfs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry><i>WC</i></entry>
+            <entry>-</entry>
+            <entry>Угловая скорость водила, рад/с</entry>
+          </row>
+          <row>
+            <entry><i>TC</i></entry>
+            <entry>-</entry>
+            <entry>Момент на водиле, н*м</entry>
+          </row>
+          <row>
+            <entry><i>WS</i></entry>
+            <entry>-</entry>
+            <entry>Угловая скорость звездочки, рад/с</entry>
+          </row>
+          <row>
+            <entry><i>TS</i></entry>
+            <entry>-</entry>
+            <entry>Момент на звездочке, н*м</entry>
+          </row>
+          <row>
+            <entry><i>WR</i></entry>
+            <entry> </entry>
+            <entry>Угловая скорость обода, рад/с</entry>
+          </row>
+          <row>
+            <entry><i>TR</i></entry>
+            <entry> </entry>
+            <entry>Момент на ободе, н*м</entry>
+          </row>
+          <row>
+            <entry><i>Q</i></entry>
+            <entry>-</entry>
+            <entry>Потери мощности, Вт</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

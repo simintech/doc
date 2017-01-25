@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>imag</title>
+<shortdesc>Функция получения мнимой части комплексного числа.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>y = <funcname>imag</funcname>(x);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>x – входное значение комплексного числа.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>imag(x)</codeph> – функция получения мнимой части комплексно числа x. Функция может быть использована при определении переменных.</p>
+<p>Входное значение x может задаваться:</p>
+<p><ul><li>как переменная типа комплексное число:</li></ul></p>
+<p><codeph>y = imag(x)</codeph>;</p>
+<p><ul><li>как постоянное комплексное число:</li></ul></p>
+<p><codeph>y = imag(3+4i)</codeph>;</p></section>
+<section>
+      <title>Результат:</title>
+      <p>y – полученное значение. Имеет тип «целое число»</p>
+    </section> 
+<section><title>Пример:</title><codeblock><kword>var</kword>
+x:<rword>integer</rword> = <funcname>imag</funcname>(1+5i);
+y = <funcname>imag</funcname>(3+4i);</codeblock></section>
+<p>В результате переменной y будет присвоено значение 4, переменной x будет присвоено значение 5.</p>   
+  </body>
+</topic>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Редактор локальных переменных </title>
+  <body>
+    <p>Локальные переменные могут объявляться и использоваться в рамках графических контейнеров.
+      Обращаться к локальным переменным можно только внутри того контейнера, в котором они были
+      объявлены, вне своего контейнера локальные переменные недоступны.</p>
+    <p>Отличие локальных переменных от переменных, объявляемых в скрипте графического контейнера,
+      заключается в том, что локальные переменные видны в Редакторе связей и могут использоваться в
+      нём наряду с сигналами и свойствами объектов.</p>
+    <p><image href="edit_local_vars_images/image001.png" height="429" width="580"
+        id="image_ujh_ghv_ry"/></p>
+    <p>Окно редактора связей со списком локальных переменных во вкладке «Переменные»</p>
+    <p> </p>
+    <p>Редактор локальных переменных позволяет редактировать список переменных, используемых внутри
+      графического контейнера, и задавать их свойства.</p>
+    <p>Для вызова окна редактора локальных переменных нужно в окне графического редактора выбрать
+      пункт меню <b>«Сервис→Локальные переменные…»</b>.</p>
+    <p> </p>
+    <p><image href="edit_local_vars_images/image002.png" height="265" width="641"
+        id="image_vjh_ghv_ry"/></p>
+    <p>Окно редактора локальных переменных</p>
+    <p> </p>
+    <p>Окно редактора содержит таблицу, заполняемую пользователем списком переменных, панель
+      инструментов и прочие вспомогательные элементы.</p>
+    <p>Значения полей таблицы</p>
+    <table id="table_wjh_ghv_ry">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry><b><i>Наименование</i></b></entry>
+            <entry><b><i>Описание</i></b></entry>
+            <entry><b><i>Значение по умолчанию/допустимые значения</i></b></entry>
+          </row>
+          <row>
+            <entry><b>Имя</b></entry>
+            <entry>Имя переменной, по которому она будет идентифицироваться в различных формах и
+              скриптах.</entry>
+            <entry>
+              <p><b>Variablel</b>&lt;N></p>
+              <p>допускаются латинские символы, цифры, подчеркивание</p>
+            </entry>
+          </row>
+          <row>
+            <entry><b>Название</b></entry>
+            <entry>Текстовое описание, краткая справка о переменной.</entry>
+            <entry><b>Переменная</b>&lt;N></entry>
+          </row>
+          <row>
+            <entry><b>Режим</b></entry>
+            <entry>??????</entry>
+            <entry>
+              <p><b>Вход</b></p>
+              <p>Выход</p>
+              <p>Ненаправленный</p>
+            </entry>
+          </row>
+          <row>
+            <entry><b>Тип данных</b></entry>
+            <entry>Тип данных, хранимых в переменной. Описание типов данных приведено в справке по
+              встроенному скриптовому языку.</entry>
+            <entry>
+              <p><b>Вещественное</b></p>
+              <p>Целое</p>
+              <p>Двоичное</p>
+              <p>Цвет</p>
+              <p>Строка</p>
+              <p>Массив</p>
+              <p>Растровое изображение</p>
+              <p>Шрифт</p>
+              <p>Текст</p>
+              <p>Стиль линии</p>
+              <p>Стиль заливки</p>
+              <p>Формат числа</p>
+              <p>Целый массив</p>
+              <p>Матрица</p>
+              <p>Точка</p>
+              <p>Перечисление</p>
+              <p>Имя файла</p>
+              <p>Имя файла базы данных</p>
+              <p>Произвольные данные</p>
+              <p>Составной тип данных</p>
+              <p>Множество</p>
+              <p>Комплексное</p>
+              <p>Комплексный вектор</p>
+              <p>Комплексная матрица</p>
+              <p>Внешний тип данных</p>
+              <p>Команда управления</p>
+            </entry>
+          </row>
+          <row>
+            <entry><b>Значение</b></entry>
+            <entry>Текущее значение переменной.</entry>
+            <entry>
+              <p><b>0</b></p>
+              <p>интерпретируемые выражения</p>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Панель инструментов</p>
+    <table id="table_xjh_ghv_ry">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="edit_local_vars_images/image003.png" id="image_hwp_wqv_ry"/></entry>
+            <entry namest="col2" nameend="col3">Добавить новую переменную в список.</entry>
+          </row>
+          <row>
+            <entry><image href="edit_local_vars_images/image004.png" id="image_nsz_wqv_ry"/></entry>
+            <entry namest="col2" nameend="col3">Удалить выделенную переменную.</entry>
+          </row>
+          <row>
+            <entry><image href="edit_local_vars_images/image005.png" id="image_zm3_xqv_ry"/></entry>
+            <entry namest="col2" nameend="col3">Полностью очистить список переменных.</entry>
+          </row>
+          <row>
+            <entry><image href="edit_local_vars_images/image006.png" id="image_rxr_xqv_ry"/></entry>
+            <entry namest="col2" nameend="col3">Поднять запись в списке.</entry>
+          </row>
+          <row>
+            <entry><image href="edit_local_vars_images/image007.png" id="image_ixq_yqv_ry"/></entry>
+            <entry namest="col2" nameend="col3">Опустить запись в списке.</entry>
+          </row>
+          <row>
+            <entry><image href="edit_local_vars_images/image008.png" id="image_xnp_zqv_ry"/></entry>
+            <entry namest="col2" nameend="col3">Копировать в буфер запись о переменной.</entry>
+          </row>
+          <row>
+            <entry><image href="edit_local_vars_images/image009.png" id="image_i3y_zqv_ry"/></entry>
+            <entry namest="col2" nameend="col3">Вставить в таблицу скопированную ранее запись о
+              переменной.</entry>
+          </row>
+          <row>
+            <entry><image href="edit_local_vars_images/image010.png" id="image_mzh_1rv_ry"/></entry>
+            <entry namest="col2" nameend="col3">Сохранить текущий список переменных в текстовый
+              файл.</entry>
+          </row>
+          <row>
+            <entry><image href="edit_local_vars_images/image011.png" id="image_tcx_1rv_ry"/></entry>
+            <entry namest="col2" nameend="col3">
+              <p>Загрузить сохранённый ранее список переменных из текстового файла.</p>
+              <p>Текущий список переменных будет полностью заменён на список из загружаемого
+                файла.</p>
+            </entry>
+          </row>
+          <row>
+            <entry><image href="edit_local_vars_images/image012.png" id="image_n4j_drv_ry"/></entry>
+            <entry namest="col2" nameend="col3">Дополнить текущий список переменными из файла.
+              Переменные из догружаемого файла, имеющие имена, совпадающие с именами переменных в
+              текущем списке будут проигнорированы.</entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2"><image href="edit_local_vars_images/image013.png"
+                id="image_xsy_drv_ry"/></entry>
+            <entry>
+              <p>Фильтрация текущего списка по маске, задаваемой для имён переменных. Список масок
+                для последующего быстрого переключения можно задать в отдельном окне по нажатию
+                кнопки <image href="edit_local_vars_images/image014.png" height="25" width="25"
+                  id="image_yjh_ghv_ry"/>. Каждая маска должна быть записана на отдельной
+                строке.</p>
+              <p>Фильтрация текущего списка по маске, задаваемой для названий сигналов. Список масок
+                для последующего быстрого переключения можно задать в отдельном окне по нажатию
+                кнопки <image href="edit_local_vars_images/image014.png" height="25" width="25"
+                  id="image_zjh_ghv_ry"/>. Каждая маска должна быть записана на отдельной
+                строке.</p>
+            </entry>
+          </row>
+          
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>

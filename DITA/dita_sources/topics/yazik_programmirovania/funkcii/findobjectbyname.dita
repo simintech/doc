@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>findobjectbyname </title>
+<shortdesc>Функция поиска объекта по заданному имени.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>obj_id = <funcname>findobjectbyname</funcname>(name);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>name – строка с именем объекта. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>findobjectbyname</codeph> – функция выполняет поиск объекта по заданному имени
+          <codeph>name</codeph> в проекте. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>obj_id – идентификатор объекта. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> id:<rword>integer</rword>;
+id = <funcname>findobjectbyname</funcname>("FillRect");
+<funcname>move</funcname>((0,100), id);</codeblock></section>
+<p>В примере происходит поиск объекта и его перемещение. </p>  
+  </body>
+</topic>

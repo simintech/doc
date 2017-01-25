@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>writerestartpoint</title>
+<shortdesc>Функция сохранения точки рестарта проекта в файл с именем, заданным в настройках
+    проекта.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>writerestarttopoint</funcname>;</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>нет</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>writerestarttopoint</codeph> – функция сохранения точки рестарта проекта в файл с именем,
+        заданным в настройках проекта. Имя файла задается в закладке "Рестарт".  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><funcname>writerestartpoint</funcname></codeblock></section>  
+  </body>
+</topic>

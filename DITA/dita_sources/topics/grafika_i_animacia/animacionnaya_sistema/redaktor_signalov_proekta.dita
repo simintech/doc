@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Редактор сигналов проекта </title>
+  <body>
+    <p>Редактор сигналов проекта позволяет редактировать список сигналов в текущем проекте, либо
+      список внутренних сигналов в редактируемой графической группе и задавать их свойства.</p>
+    <p>Для вызова окна редактора на уровне проекта нужно в основном окне выбрать пункт меню
+        <b>«Графика → Сигналы…»</b>.</p>
+    <p>Для вызова окна редактора на уровне редактирования группы нужно в окне графического редактора
+      выбрать пункт меню <b>«Сервис</b><b>→</b><b>Сигналы…»</b>.</p>
+    <p><image href="edit_signals_images/image001.png" height="387" width="723" id="image_flv_qhv_ry"
+      /></p>
+    <p>Внешний вид окна редактора сигналов проекта</p>
+    <p>Окно редактора содержит таблицу, заполняемую пользователем списком сигналов, панель
+      инструментов и прочие вспомогательные элементы.</p>
+    <p>Значения полей таблицы сигналов проекта:</p>
+    <table id="table_glv_qhv_ry">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry><b><i>Наименование</i></b></entry>
+            <entry><b><i>Описание</i></b></entry>
+            <entry><b><i>Значение по умолчанию/допустимые значения</i></b></entry>
+          </row>
+          <row>
+            <entry><b>№</b></entry>
+            <entry>Порядковый номер сигнала.</entry>
+            <entry>автонумерация</entry>
+          </row>
+          <row>
+            <entry><b>Имя</b></entry>
+            <entry>Имя сигнала, по которому он будет идентифицироваться в различных формах, блоках и
+              скриптах.</entry>
+            <entry>
+              <p><b>signal</b>&lt;N></p>
+              <p>допускаются латинские символы, цифры, подчеркивание</p>
+            </entry>
+          </row>
+          <row>
+            <entry><b>Название</b></entry>
+            <entry>Текстовое описание, краткая справка о сигнале.</entry>
+            <entry><b>Сигнал</b>&lt;N></entry>
+          </row>
+          <row>
+            <entry><b>Тип данных</b></entry>
+            <entry>Тип данных, хранимых в сигнале. Описание типов данных приведено в справке по
+              встроенному скриптовому языку.</entry>
+            <entry>
+              <p><b>Вещественное</b></p>
+              <p>Целое</p>
+              <p>Двоичное</p>
+              <p>Цвет</p>
+              <p>Строка</p>
+              <p>Массив</p>
+              <p>Растровое изображение</p>
+              <p>Шрифт</p>
+              <p>Текст</p>
+              <p>Стиль линии</p>
+              <p>Стиль заливки</p>
+              <p>Формат числа</p>
+              <p>Целый массив</p>
+              <p>Матрица</p>
+              <p>Точка</p>
+              <p>Перечисление</p>
+              <p>Имя файла</p>
+              <p>Имя файла базы данных</p>
+              <p>Произвольные данные</p>
+              <p>Составной тип данных</p>
+              <p>Множество</p>
+              <p>Комплексное</p>
+              <p>Комплексный вектор</p>
+              <p>Комплексная матрица</p>
+              <p>Внешний тип данных</p>
+              <p>Команда управления</p>
+            </entry>
+          </row>
+          <row>
+            <entry><b>Режим</b></entry>
+            <entry>??????</entry>
+            <entry>
+              <p><b>Вход</b></p>
+              <p>Выход</p>
+              <p>Ненаправленный</p>
+            </entry>
+          </row>
+          <row>
+            <entry><b>Значение</b></entry>
+            <entry>Текущее значение сигнала.</entry>
+            <entry>
+              <p><b>0</b></p>
+              <p>интерпретируемые выражения</p>
+            </entry>
+          </row>
+          <row>
+            <entry><b>Способ расчёта</b></entry>
+            <entry>Выбор возможности использования значений сигнала: переменная, доступная как для
+              чтения, так и для записи, константа - значение доступно только для чтения, либо
+              заблокированное значение, недоступное при выполнении расчёта.</entry>
+            <entry>
+              <p><b>Переменная</b></p>
+              <p>Константа</p>
+              <p>Заблокирована</p>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Панель инструментов</p>
+    <table id="table_hlv_qhv_ry">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="edit_signals_images/image002.png" id="image_ygt_whv_ry"/></entry>
+            <entry namest="col2" nameend="col4">Добавить новый сигнал в список.</entry>
+          </row>
+          <row>
+            <entry><image href="edit_signals_images/image003.png" id="image_s5j_xhv_ry"/></entry>
+            <entry namest="col2" nameend="col4">Удалить выделенный сигнал.</entry>
+          </row>
+          <row>
+            <entry><image href="edit_signals_images/image004.png" id="image_nst_xhv_ry"/></entry>
+            <entry namest="col2" nameend="col4">Полностью очистить список сигналов.</entry>
+          </row>
+          <row>
+            <entry><image href="edit_signals_images/image005.png" id="image_vcf_yhv_ry"/></entry>
+            <entry namest="col2" nameend="col4">Поднять запись в списке.</entry>
+          </row>
+          <row>
+            <entry><image href="edit_signals_images/image006.png" id="image_vl4_yhv_ry"/></entry>
+            <entry namest="col2" nameend="col4">Опустить запись в списке.</entry>
+          </row>
+          <row>
+            <entry><image href="edit_signals_images/image007.png" id="image_zmp_zhv_ry"/></entry>
+            <entry namest="col2" nameend="col4">Копировать в буфер запись о сигнале.</entry>
+          </row>
+          <row>
+            <entry><image href="edit_signals_images/image008.png" id="image_yky_zhv_ry"/></entry>
+            <entry namest="col2" nameend="col4">Вставить в таблицу скопированную ранее запись о
+              сигнале.</entry>
+          </row>
+          <row>
+            <entry><image href="edit_signals_images/image009.png" id="image_dfk_13v_ry"/></entry>
+            <entry namest="col2" nameend="col4">Сохранить текущий список сигналов в текстовый
+              файл.</entry>
+          </row>
+          <row>
+            <entry><image href="edit_signals_images/image010.png" id="image_yc1_b3v_ry"/></entry>
+            <entry namest="col2" nameend="col4">
+              <p>Загрузить сохранённый ранее списко сигналов из текстового файла.</p>
+              <p>Текущий список сигналов будет полностью заменён на список из загружаемого
+                файла.</p>
+            </entry>
+          </row>
+          <row>
+            <entry><image href="edit_signals_images/image011.png" id="image_wfl_b3v_ry"/></entry>
+            <entry namest="col2" nameend="col4">Дополнить текущий список сигналами из файла. Сигналы
+              из догружаемого файла, имеющие имена, совпадающие с именами сигналов в текущем списке
+              будут проигнорированы.</entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col3"><image href="edit_signals_images/image012.png"
+                height="27" width="215" id="image_ilv_qhv_ry"/></entry>
+            <entry>Фильтрация текущего списка по маске, задаваемой для имён сигналов. Список масок
+              для последующего быстрого переключения можно задать в отдельном окне по нажатию кнопки
+                <image href="edit_signals_images/image013.png" height="25" width="25"
+                id="image_jlv_qhv_ry"/>. Каждая маска должна быть записана на отдельной
+              строке.</entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col3"><image href="edit_signals_images/image014.png"
+                height="25" width="223" id="image_klv_qhv_ry"/></entry>
+            <entry>Фильтрация текущего списка по маске, задаваемой для названий сигналов. Список
+              масок для последующего быстрого переключения можно задать в отдельном окне по нажатию
+              кнопки <image href="edit_signals_images/image013.png" height="25" width="25"
+                id="image_llv_qhv_ry"/>. Каждая маска должна быть записана на отдельной
+              строке.</entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2"><image href="edit_signals_images/image015.png"
+                height="28" width="84" id="image_mlv_qhv_ry"/></entry>
+            <entry namest="col2" nameend="col3">Применить изменения без закрытия окна
+              редактора.</entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2"><image href="edit_signals_images/image016.png"
+                height="28" width="85" id="image_nlv_qhv_ry"/></entry>
+            <entry namest="col2" nameend="col3">Применить изменения и закрыть окно
+              редактора.</entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2"><image href="edit_signals_images/image017.png"
+                height="27" width="83" id="image_olv_qhv_ry"/></entry>
+            <entry namest="col2" nameend="col3">Закрыть окно редактора без сохранения внесённых, но
+              неприменённых изменений.</entry>
+          </row>
+          
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>dbgetsignalcount </title>
+<shortdesc>Чтение количества сигналов в группе категории.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>sc = <funcname>dbgetsignalcount</funcname>(cat, group);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>cat – имя категории;</p>
+      <p>group – имя группы сигналов внутри категории cat, в которой нужно сосчитать сигналы. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>dbgetsignalcount</codeph> – функция позволяет определить количество сигналов внутри
+        группы <codeph>group</codeph> категории <codeph>cat</codeph> подключенной базы сигналов. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>sc - функция возвращает целочисленное значение, соответствующее количеству сигналов в
+        заданной группе. Если в группе нет сигналов или группа/категория не существует, то функция
+        возвращает 0. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>sc = <funcname>dbgetsignalcount</funcname>("Датчики", "D1");</codeblock></section>
+<p>В результате выполнения данного скрипта, переменная sc получит значение соответствующее числу
+      сигналов в группе <codeph>D1</codeph> категории <codeph>Датчики</codeph>. </p>  
+  </body>
+</topic>

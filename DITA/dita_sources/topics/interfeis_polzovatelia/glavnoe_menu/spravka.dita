@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Меню Справка </title>
+  <body>
+    <p>Содержит команды, предназначенные для доступа к справочной системе среды SimInTech.</p>
+    <table id="table_fvs_1df_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><b>Команда</b></entry>
+            <entry><b>Описание</b></entry>
+          </row>
+          <row>
+            <entry><b>Содержание</b></entry>
+            <entry>Открывает главное окно справочной системы.</entry>
+          </row>
+          <row>
+            <entry><b>Контекстная справка</b></entry>
+            <entry>Открывает окно справочной системы для блока, выделенного на схемном окне.</entry>
+          </row>
+          <row>
+            <entry><b>Поиск обновлений</b></entry>
+            <entry>Запускает алгоритм поиска обновлений для среды SimInTech.</entry>
+          </row>
+          <row>
+            <entry><b>Написать в службу поддержки...</b></entry>
+            <entry>Открывает диалоговое окно, в котором пользователь может создать сообщение для
+              разработчиков среды SimInTech (в письмо автоматически добавляется системная информация
+              о состоянии операционной системы на момент создания сообщения).</entry>
+          </row>
+          <row>
+            <entry><b>О программе...</b></entry>
+            <entry>Открывает заставку среды SimInTech.</entry>
+          </row>
+          <row>
+            <entry><b>Портал SimInTech</b></entry>
+            <entry>Открывает страницу http://simintech.ru/</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>

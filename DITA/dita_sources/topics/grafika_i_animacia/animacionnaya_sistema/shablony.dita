@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Шаблоны </title>
+  <body>
+    <p>Для создания анимированных блоков в SimInTech пользователю приходится создавать и описывать
+      для этих блоков сигналы, связи сигналов со свойствами блоков, описывать логику работы блока с
+      помощью встроенного языка. Для упрощения процесса создания необходимого окружения из сигналов,
+      связей и расчётной логики для большого количества однотипных блоков в SimInTech можно
+      использовать опцию «Шаблон автозаполнения», входящую в состав общих свойств блоков SimInTech,
+      в т.ч. и графических примитивов. </p>
+    <p><image href="templates_images/image001.png" height="686" width="592" id="image_efp_hnv_ry"
+      /></p>
+    <p><b>Свойство «Шаблон автозаполнения» в списке свойств графического примитива</b></p>
+    <p>С её помощью пользователи могут описывать шаблоны:</p>
+    <ul id="ul_ffp_hnv_ry">
+      <li>- для набора сигналов проекта необходимых данному блоку (либо внутренних сигналов группы,
+        если объект размещён в группе);</li>
+      <li>- для связей между сигналами и свойствами блока;</li>
+      <li>- для генерации исполняемого скрипта.</li>
+    </ul>
+    <p>Порядок действий при использовании шаблонов следующий. Сначала шаблон описывается в
+      соответствующем свойстве исходного блока, после чего этот блок копируется требуемое количество
+      раз. Затем, чтобы описанные в шаблоне настройки были применены в проекте, нужно выделить все
+      созданные блоки с шаблоном и воспользоваться пунктом меню в главном окне<b> «ГО:</b><b>Сервис
+        </b><b>®</b><b> Генерация сигналов и связей»</b>, либо пунктом меню <b>«Сервис
+        </b><b>®</b><b> Генерация сигналов и связей»</b> в меню графического редактора, если работа
+      ведётся в графическом контейнере.</p>
+    <p>Шаблон задаётся посредством команд с параметрами, записываемыми через запятую. Если
+      содержащийся в параметре текст должен содержать запятые, его необходимо окружать
+      кавычками.</p>
+    <p>Для автоматической подстановки в код шаблона значений свойств блока в строковом виде
+      используется конструкция $self.&lt;<i>PropName</i>>$, которая при генерации заменяется на
+      значение свойства данного блока. Вместо &lt;<i>PropName</i>> должно быть вписано имя свойства
+      блока, значение которого мы хотим получить. Например, следующий код шаблона для блока с именем
+      FillRect3</p>
+    <p>SIGNAL $self.Name$_sig</p>
+    <p>приведёт к созданию сигнала проекта с именем FillRect3_sig.</p>
+    <p>Таким образом, у пользователей есть возможность создания большого количества однотипных
+      блоков с единоразовой автоматической генерацией всего перечня необходимых сигналов, созданием
+      связей и автонаписанием скриптов.</p>
+    <p>Вообще, использование конструкции $self.&lt;<i>PropName</i>>$ в шаблонах не является
+      обязательным, пользователь может указывать имена сигналов, созданных без использования
+      шаблонов. Это может быть полезно при объявлении связей сигнала со свойством блока, если нужно
+      управлять большим количеством блоков с помощью одного общего сигнала.</p>
+    <p><image href="templates_images/image002.png" height="172" width="612" id="image_gfp_hnv_ry"
+      /></p>
+    <p><b>Пример использования конструкции $</b><b>self</b><b>.&lt;</b><b><i>PropName</i></b><b>>$
+        для описания различных вариантов связей для набора однотипных блоков</b></p>
+    <p>Для шаблонов есть ограничения:</p>
+    <ul id="ul_hfp_hnv_ry">
+      <li>­ нельзя генерировать внешние свойства для группы;</li>
+      <li>­ при удалении блока из проекта сгенерированные для него ранее сигналы не будут удалены из
+        проекта.</li>
+    </ul>
+    <p>При необходимости оставшиеся сигналы нужно будет удалить вручную, вызвав окно «Сигналы» через
+      пункт меню главного окна<b> «ГО:</b><b>Графика </b><b>®</b><b> Сигналы…»</b>, либо через пункт
+        <b>«Сервис </b><b>®</b><b> Сигналы…»</b> в графическом редакторе.</p>
+    <p><b>Команды</b></p>
+    <table id="table_ifp_hnv_ry">
+      <tgroup cols="4">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <colspec colnum="4" colname="col4"/>
+        <tbody>
+          <row>
+            <entry>SIGNAL</entry>
+            <entry namest="col2" nameend="col4">Объявление сигнала</entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col4">
+              <p> </p>
+              <p> </p>
+              <p><i>Формат команды</i></p>
+            </entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col4">
+              <p> </p>
+              <p>SIGNAL &lt;Имя>, &lt;Режим>, &lt;Тип данных>, &lt;Название>, &lt;Значение по
+                умолчанию></p>
+            </entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col4">
+              <p> </p>
+              <p> </p>
+              <p><i>Краткий формат команды</i></p>
+            </entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col4">
+              <p> </p>
+              <p>SIGNAL &lt;Имя></p>
+            </entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2">
+              <p> </p>
+              <p> </p>
+              <p><i>Параметры</i></p>
+            </entry>
+            <entry namest="col2" nameend="col3">
+              <p> </p>
+              <p> </p>
+              <p><i>Возможные значения</i></p>
+            </entry>
+          </row>
+          <row>
+            <entry>Имя</entry>
+            <entry>Имя сигнала, используемое при обращении к его содержимому в скрипте, редакторе
+              связей и т.д. Если сигнал с заданным именем уже существует в проекте, команда будет
+              проигнорирована.</entry>
+            <entry namest="col3" nameend="col4"> </entry>
+          </row>
+          <row>
+            <entry morerows="2">Режим</entry>
+            <entry morerows="2">Определяет направление передачи данных (игнорируется при локальном
+              моделировании).</entry>
+            <entry>In</entry>
+            <entry>значение сигнала считывается,</entry>
+          </row>
+          <row>
+            <entry>Out</entry>
+            <entry>значение сигнала записывается</entry>
+          </row>
+          <row>
+            <entry>Ненаправленный</entry>
+            <entry>значение сигнала считывается и записывается.</entry>
+          </row>
+          <row>
+            <entry morerows="3">Тип данных</entry>
+            <entry morerows="3">
+              <p>Тип данных, хранящихся в сигнале.</p>
+              <p> </p>
+            </entry>
+            <entry>INTEGER</entry>
+            <entry>целое</entry>
+          </row>
+          <row>
+            <entry>BOOLEAN</entry>
+            <entry>вещественное</entry>
+          </row>
+          <row>
+            <entry>ARRAY</entry>
+            <entry>массив вещественных чисел</entry>
+          </row>
+          <row>
+            <entry>COLOR</entry>
+            <entry>цвет</entry>
+          </row>
+          <row>
+            <entry>Название</entry>
+            <entry>
+              <p>Текстовое описание сигнала.</p>
+              <p>Значение по умолчанию – значение, присваеваемое сигналу при запуске расчёта.</p>
+            </entry>
+            <entry namest="col3" nameend="col4"> </entry>
+          </row>
+          <row>
+            <entry>Значение по умолчанию</entry>
+            <entry>Значение, присваеваемое сигналу при запуске расчёта.</entry>
+            <entry namest="col3" nameend="col4">в соответствии с выбранным типом данных</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>При задании шаблона в кратком формате будет создан сигнал со следующими параметрами:</p>
+    <table id="table_jfp_hnv_ry">
+      <tgroup cols="5">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <colspec colnum="4" colname="col4"/>
+        <colspec colnum="5" colname="col5"/>
+        <tbody>
+          <row>
+            <entry>Имя</entry>
+            <entry>Режим</entry>
+            <entry>Тип данных</entry>
+            <entry>Название</entry>
+            <entry>Значение по умолчанию</entry>
+          </row>
+          <row>
+            <entry>заданное имя</entry>
+            <entry>In</entry>
+            <entry>BOOLEAN</entry>
+            <entry>заданное имя</entry>
+            <entry>0</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Пример</p>
+    <p>Для примитива Rectangle3 по команде</p>
+    <p>SIGNAL $self.Name$_count1, Out, INTEGER, Счётчик циклов, 0</p>
+    <p>будет сгенерирован сингал со следующими параметрами:</p>
+    <table id="table_kfp_hnv_ry">
+      <tgroup cols="5">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <colspec colnum="4" colname="col4"/>
+        <colspec colnum="5" colname="col5"/>
+        <tbody>
+          <row>
+            <entry>Имя</entry>
+            <entry>Режим</entry>
+            <entry>Тип данных</entry>
+            <entry>Название</entry>
+            <entry>Значение по умолчанию</entry>
+          </row>
+          <row>
+            <entry>Rectangle3_count1</entry>
+            <entry>Out</entry>
+            <entry>INTEGER</entry>
+            <entry>Счётчик циклов</entry>
+            <entry>0</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p> </p>
+    <table id="table_lfp_hnv_ry">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>CONNECT</entry>
+            <entry namest="col2" nameend="col3">Объявление связи между сигналом и свойством блока.
+              Содания сигнала при этом не происходит, он должен быть создан отдельно.</entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col3">
+              <p> </p>
+              <p> </p>
+              <p><i>Формат команды</i></p>
+            </entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col3">
+              <p> </p>
+              <p>CONNECT &lt;Источник>, &lt;Приемник></p>
+            </entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2">
+              <p> </p>
+              <p> </p>
+              <p><i>Параметры</i></p>
+            </entry>
+            <entry>
+              <p> </p>
+              <p> </p>
+              <p> </p>
+            </entry>
+          </row>
+          <row>
+            <entry>Источник</entry>
+            <entry>Имя сигнала, значения которого будут записываться в приёмник.</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>Приемник</entry>
+            <entry>Имя свойства блока, в которое будут записываться значения источника.</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Пример</p>
+    <p>Для примитива Rectangle3 по команде </p>
+    <p>CONNECT Signal1, $self.Name$.Width</p>
+    <p>будет сгенерирована связь сигнала Signal1 с шириной прямоугольника Rectangle3.Width</p>
+    <p> </p>
+    <table id="table_mfp_hnv_ry">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>SCRIPT</entry>
+            <entry namest="col2" nameend="col3">Команда генерации скрипта</entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col3">
+              <p> </p>
+              <p> </p>
+              <p><i>Формат команды</i></p>
+            </entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col3">
+              <p> </p>
+              <p>SCRIPT &lt;Cтрока></p>
+            </entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2">
+              <p> </p>
+              <p> </p>
+              <p><i>Параметры</i></p>
+            </entry>
+            <entry>
+              <p> </p>
+              <p> </p>
+              <p> </p>
+            </entry>
+          </row>
+          <row>
+            <entry>Строка</entry>
+            <entry>Строка скрипта.</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Пример</p>
+    <p>Для примитива Rectangle3 по команде</p>
+    <p>SCRIPT $self.Name$.Width=0</p>
+    <p>будет сгенерирован следующий код скрипта:</p>
+    <p>Rectangle3.Width=0</p>
+    <p> </p>
+  </body>
+</topic>

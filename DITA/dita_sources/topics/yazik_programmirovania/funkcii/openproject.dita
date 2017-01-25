@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>openproject </title>
+<shortdesc>Функция загрузки проекта из файла.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>prt_id = <funcname>openproject</funcname>(prt_file, start_fl);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>prt_file – строка с именем файла, содержащего проект,</p>
+      <p>start_fl – флаг запуска проекта. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>openproject</codeph> – функция загружает и открывает проект из файла
+          <codeph>prt_fil</codeph>e. Функция возвращает идентификатор открытого проекта. Если флаг
+          <codeph>start_fl</codeph> установлен равным 1, то в случае, если проект уже открыт,
+        активизируется его окно.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>prt_id – идентификатор открытого проекта. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>prt_id = <funcname>openproject</funcname>("имя файла проекта.prt", 1);</codeblock></section>  
+  </body>
+</topic>

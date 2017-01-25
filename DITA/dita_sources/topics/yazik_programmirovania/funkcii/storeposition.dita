@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>storeposition</title>
+<shortdesc>Функция запоминания координат объектов на схеме.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>storeposition</funcname>(name1, name2,…, namen);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>name1, name2,…, namen – имена объектов.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>storeposition(name1, name2,…, namen)</codeph> – функция запоминания координат объектов с
+        именами <codeph>name1</codeph>, <codeph>name2</codeph>,…, <codeph>namen</codeph> на схеме. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> oldfl: <rword>boolean</rword>;
+<kword>var</kword> p:<rword>point</rword> = (10,0);
+<kword>if</kword> <rword>paintstep</rword> <kword>then begin</kword>
+ fl = <funcname>flash</funcname>(500);
+ <kword>if</kword> fl &lt;> oldfl <kword>then begin</kword>
+  <funcname>scale</funcname>(p, 1.5, FillRect, FillCircle);
+  <funcname>storeposition</funcname>(FillRect, FillCircle);
+ <kword>end</kword>;
+ oldfl = fl;
+<kword>end</kword>;</codeblock></section>
+<p>В результате выполнения данного примера объекты с именами <codeph>FillRect</codeph> и
+        <codeph>FillCircle</codeph> будут с периодом 500 мс. увеличиватьсяв 1.5 раза относительно
+      центра, заданного точкой с координатами (10, 0). Для того, чтобы результат увеличения не
+      сбрасывался на каждом шаге моделирования, применяется функция <codeph>storeposition</codeph>. </p>  
+  </body>
+</topic>

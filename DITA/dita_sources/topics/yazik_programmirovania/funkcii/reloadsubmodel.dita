@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>reloadsubmodel </title>
+<shortdesc>Функция перезагрузки страницы субмодели.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>reloadsubmodel</funcname>(name, file);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>name – имя субмодели, содержимое которой нужно перезагрузить,</p>
+      <p>file – строка с именем .prt файла, содержимое которого будет загружено в субмодель.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>reloadsubmodel(name, file)</codeph> – функция заменяет содержимое субмодели на содержимое
+        выбранного файла и выполняет команду перезагрузки страницы для этой субмодели. При этом
+        значение общего свойства <codeph>FileName</codeph> изменяется на имя выбранного файла.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>В случае успешной перезагрузки внутренности субмодели, функция возвращает значение 1.</p>
+    </section>  
+<section><title>Пример 1:</title>
+<codeblock>a=<funcname>reloadsubmodel</funcname>(Macro2, "sr2.prt");</codeblock></section>
+<p>Содержимое субмодели <codeph>Macro2</codeph> будет заменено на содержимое файла
+        <filepath>sr2.prt</filepath>. В случае успешной замены, a приобретет значение логической
+      единицы. </p>
+    <section>
+      <title>Пример 2:</title>
+      <codeblock><funcname>reloadsubmodel</funcname>(self,"sub2.prt");</codeblock>
+    </section>
+    <p>Замена страницы субмодели изнутри. Вместо имени используется кодовое слово
+        <codeph>self</codeph>.</p>  
+  </body>
+</topic>

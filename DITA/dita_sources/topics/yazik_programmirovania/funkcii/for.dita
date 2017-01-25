@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>for</title>
+  <shortdesc>Задание конечного цикла.</shortdesc>
+  <body>
+    <section><title>Синтаксис:</title>
+<p>
+        <codeblock><kword>for</kword> (&lt;оператор присваивания переменной цикла>,&lt;конечное значение>{,&lt;шаг переменной цикла>})&lt;оператор цикла>;</codeblock>
+      </p>
+</section><section><title>Описание:</title>
+<p>Выполнение конечного цикла по указанной переменной. Операция выполняется, пока значение переменной цикла не достигнет конечного значения. На каждом шаге значение переменной изменяется на величину, равную указанному шагу. Если шаг не указан, то он равен 1 или -1 в зависимости от того, больше конечное значение начального или меньше.</p>
+</section><section><title>Пример1:</title><codeblock><kword>var</kword> s=0;
+<kword>for</kword> (i=1,10)
+s=s+i^2;</codeblock></section>
+<p>В результате выполнения примера переменной i будет присвоено значение 11, переменной s присвоено значение 385.</p>
+<section><title>Пример2:</title><codeblock><kword>var</kword> k=0, n=0;
+<kword>for</kword> (i=0.1, 1, 0.2)
+<kword>begin</kword>
+k=k+i*2;
+n=n+i^2;
+<kword>end</kword>;</codeblock></section>
+<p>В результате выполнения примера переменной i будет присвоено значение 1.1, переменной k присвоено значение 5, переменной n присвоено значение 1.65.</p>    
+  </body>
+</topic>

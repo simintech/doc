@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>findindexerkey</title>
+<shortdesc>Функция поиска ключевого слова в индексаторе проектов.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>findindexerkey</funcname>(key, filtr_name, filtr_type, sprj_id, sblkpath_id, sblktype_id, spropname_id, fl_find);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>key – строка с ключевым словом для поиска,</p>
+      <p>filtr_name – строка с фильтром имени свойства,</p>
+      <p>filtr_type – строка с фильтром типа блока,</p>
+      <p>sprj_id – идентификатор списка строк с именами найденных проектов,</p>
+      <p>sblkpath_id – идентификатор списка строк с путями найденных блоков в проекте,</p>
+      <p>sblktype_id – идентификатор списка строк с типами найденных блоков в проекте,</p>
+      <p>sprop_id – идентификатор списка строк с найденными свойствами блоков в проекте, </p>
+      <p>fl_find – флаг редукции путей поиска. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>findindexerkey(key, filtr_name, filtr_type, sprj_id, sblkpath_id, sblktype_id,
+          spropname_id, fl_find)</codeph> – функция поиска ключевого слова <codeph>key</codeph> с
+        фильтрами имен свойств <codeph>filtr_name</codeph> и типов блоков
+          <codeph>filtr_type</codeph> в индексаторе проектов. Результаты поиска возвращаются в
+        аргументах <codeph>sprj_id</codeph> – идентификатор списка строк с именами найденных
+        проектов, <codeph>sblkpath_id</codeph> – идентификатор списка строк с путями найденных
+        блоков в проекте, <codeph>sblktype_id</codeph> – идентификатор списка строк с типами
+        найденных блоков в проекте, <codeph>sprop_id</codeph> – идентификатор списка строк с
+        найденными свойствами блоков в проекте. Значения флага редукции поиска
+          <codeph>fl_find</codeph>: 1 - выводить только уникальные пути блоков, 0 - не обращать
+        внимание на уникальность путей блоков и файлов проектов.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример 1:</title>
+<codeblock>_proj = <funcname>createstringlist</funcname>;
+s_path = <funcname>createstringlist</funcname>;
+<funcname>findindexerkey</funcname>("1000","a","Сумматор",s_proj,s_path,0,0,1);</codeblock></section>
+<p>В примере происходит поиск числа 1000 в свойстве с именем "a" объектов типа "Сумматор". </p>
+    <section>
+      <title>Пример 2:</title>
+      <codeblock><kword>initialization</kword>
+s_proj = <funcname>createstringlist</funcname>;
+s_path = <funcname>createstringlist</funcname>;
+s_signal_names = <funcname>createstringlist</funcname>;
+
+<comment>//Для того чтобы показать выходы используйте ключевое слово </comment>
+
+<comment>//usedinputs</comment>
+<funcname>findindexerkey</funcname>("usedinputs","*","*",s_proj,s_path,0,s_signal_names,0);
+for(i=0, <funcname>countstringlist</funcname>(s_signal_names) - 1) 
+ <funcname>seterrorstr</funcname>(<funcname>getstringlist</funcname>(s_signal_names,i) + " in file " + <funcname>getstringlist</funcname>(s_proj,i) + " in block " + <funcname>getstringlist</funcname>(s_path,i),0); 
+<funcname>freeobject</funcname>(s_proj);
+<funcname>freeobject</funcname>(s_path); 
+<funcname>freeobject</funcname>(s_signal_names); 
+<kword>end</kword>;</codeblock>
+    </section>
+    <p>В примере происходит поиск всех использованных входных сигналов во всех проиндексированных
+      проектах в заданной директории. </p>  
+  </body>
+</topic>

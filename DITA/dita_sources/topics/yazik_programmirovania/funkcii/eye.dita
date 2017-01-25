@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>eye</title>
+<shortdesc>Функция создания единичной матрицы.</shortdesc>
+<body>
+<section><title>Синтаксис:</title><codeblock>M = <funcname>eye</funcname>(n);</codeblock></section>
+<section><title>Аргументы:</title><p>n – размерность единичной матрицы.</p></section>
+<section><title>Описание:</title><p><codeph>eye(n)</codeph> – функция возвращает матрицу размерностью n на n, у которой все диагональные элементы равны единице.</p></section>
+<section><title>Результат:</title><p>М – единичная матрица. Матрица М – квадратная.</p></section>  
+<section><title>Пример:</title><codeblock><kword>const</kword> n = 5;  
+M = <funcname>eye</funcname>(n);</codeblock></section><p>В результате переменной M будет присвоено значение массива</p>
+<p>[1, 0, 0, 0, 0],</p> 
+<p>[0, 1, 0, 0, 0],</p> 
+<p>[0, 0, 1, 0, 0],</p> 
+<p>[0, 0, 0, 1, 0],</p> 
+<p>[0, 0, 0, 0, 1],</p>
+<p>определяющего единичную матрицу, у которой все диагональные элементы равны 1.</p>   
+</body>
+</topic>

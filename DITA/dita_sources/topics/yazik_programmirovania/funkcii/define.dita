@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>define</title>
+  <shortdesc>Задание условий компиляции.</shortdesc>
+  <body>
+<section><title>Синтаксис:</title>
+<p>
+        <codeblock><kword>define</kword> &lt;Имя условия></codeblock>
+      </p></section>
+<section><title>Описание:</title>
+<p>Язык программирования позволяет компилировать программу частично в соответствии с заданными условиями. Условие компиляции задаётся при помощи ключевого слова <codeph>define</codeph>.</p></section>
+<section><title>Пример:</title>
+<codeblock><kword>define</kword> f1;
+<kword>ifdef</kword> f_1
+Y = <funcname>sin</funcname>(X); 
+<kword>elseif</kword>
+Y = <funcname>cos</funcname>(X);
+<kword>endif</kword></codeblock></section>
+<p>В примере в результате определения условия f_1 будет скомпилирована строка Y = sin(X);</p>
+  </body>
+</topic>

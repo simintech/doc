@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Запоминание сигнала</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/3074.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/3074s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Скалярный | Си
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок передает входной аналоговый сигнал на выход, если разрешена трансляция (x2=1). Если
+      признак трансляции равен 0, то на выходе фиксируется значение, которое было на момент
+      запрещения трансляции. Если в момент инициализации проекта трансляция запрещена, то на выходе
+      блока будет нулевой сигнал. На изображении блока на схеме отображается значение выходного
+      сигнала, которое равно запомненному либо совпадает с входным, если трансляция разрешена.
+      Таблица истинности блока выглядит следующим образом: </p>
+    <section><title>Входы</title>
+    <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>Входной сигнал X</uicontrol> - входной сигнал;</li>
+          <li><uicontrol>Признак трансляции</uicontrol> - команда трансляции входного сигнала на
+            выход.</li>
+        </ul>
+      </p></section>
+    <section><title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>Y</uicontrol> - выходной сигнал.</li>
+        </ul>
+      </p></section>
+    <section><title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Выход блока</uicontrol> - значение выхода блока если трансляция входа не
+            происходит.</li>
+        </ul>
+      </p></section>
+    <section><title>Параметры</title>
+      <p>нет</p></section>
+    <note>таблица инстинности блока выглядит следующим образом:<simpletable frame="all"
+        relcolwidth="1.0* 1.0* 1.0* 1.0* 1.0* 1.0*" id="simpletable_xqq_f4g_jy">
+        <strow>
+          <stentry> X1(t) (вход)</stentry>
+          <stentry> X2(t) (признак трансляции) </stentry>
+          <stentry> X1(t+1) (вход)</stentry>
+          <stentry> X2(t+1) (признак трансляции)</stentry>
+          <stentry> Y(t) (выход)</stentry>
+          <stentry> Y(t+1) (выход)</stentry>
+        </strow>
+        <strow>
+          <stentry> Q(t)</stentry>
+          <stentry>1</stentry>
+          <stentry> Q(t+1)</stentry>
+          <stentry>1</stentry>
+          <stentry> Q(t)</stentry>
+          <stentry> Q(t)</stentry>
+        </strow>
+        <strow>
+          <stentry> Q(t)</stentry>
+          <stentry>1</stentry>
+          <stentry> Q(t+1)</stentry>
+          <stentry>0</stentry>
+          <stentry> Q(t)</stentry>
+          <stentry> Q(t)</stentry>
+        </strow>
+        <strow>
+          <stentry> Q(t)</stentry>
+          <stentry>0</stentry>
+          <stentry> Q(t+1)</stentry>
+          <stentry>1</stentry>
+          <stentry> Q(t-1)</stentry>
+          <stentry> Q(t+1)</stentry>
+        </strow>
+        <strow>
+          <stentry> Q(t)</stentry>
+          <stentry>0</stentry>
+          <stentry> Q(t+1)</stentry>
+          <stentry>0</stentry>
+          <stentry> Q(t-1)</stentry>
+          <stentry> Q(t+1)</stentry>
+        </strow>
+      </simpletable></note>
+    
+  </body>
+</topic>

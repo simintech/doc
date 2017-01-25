@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Редактор внутренних сигналов графического контейнера </title>
+  <body>
+    <p>Глобальные свойства могут объявляться и использоваться в рамках графических контейнеров.
+      Глобальные свойства используются для организации обмена данными между сигналами проекта или
+      базы данных и содержимым контейнера. В отличие от внутренних переменных общие свойства
+      остаются видны на один уровень выше своего контейнера в качестве дополнительного пункта в
+      списке свойств этого контейнера. </p>
+    <p>Если создаваемое глобальное свойство будет иметь имя, идентичное уже существующему свойству
+      графического контейнера, то оно будет автоматически принимать значения этого свойства.
+      Например, графические контейнеры имеют свойство «Коэффициент прозрачности / Opacity», по
+      умолчанию равное единице. Если создать внутри графического контейнера глобальное свойство с
+      именем «Opacity» (название может отличаться от оригинального варианта), в качестве значения
+      этого свойства мы будем иметь значение степени прозрачности текущего контейнера.</p>
+    <p>Редактор глобальных (общих) свойств позволяет редактировать список этих свойств и задавать их
+      параметры.</p>
+    <p>Для вызова окна редактора нужно в окне графического редактора выбрать пункт меню <b>«Сервис →
+        Глобальные свойства …»</b>.</p>
+    <p><image href="edit_global_properties_images/image001.png" height="265" width="641"
+        id="image_ymv_kgv_ry"/></p>
+    <p>Окно редактора локальных переменных</p>
+    <p> </p>
+    <p>Окно редактора содержит таблицу, заполняемую пользователем списком глобальных свойств, панель
+      инструментов и прочие вспомогательные элементы.</p>
+    <p>Значения полей таблицы</p>
+    <table id="table_zmv_kgv_ry">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry><b><i>Наименование</i></b></entry>
+            <entry><b><i>Описание</i></b></entry>
+            <entry><b><i>Значение по умолчанию/допустимые значения</i></b></entry>
+          </row>
+          <row>
+            <entry><b>Имя</b></entry>
+            <entry>Имя глобального свойства, по которому оно будет идентифицироваться в различных
+              формах, в т.ч. в списке свойств контейнера, и в скриптах.</entry>
+            <entry>
+              <p><b>Property</b>&lt;N></p>
+              <p>допускаются латинские символы, цифры, подчеркивание</p>
+            </entry>
+          </row>
+          <row>
+            <entry><b>Название</b></entry>
+            <entry>Текстовое описание, краткая справка о глобальном свойстве.</entry>
+            <entry><b>Свойство</b>&lt;N></entry>
+          </row>
+          <row>
+            <entry><b>Режим</b></entry>
+            <entry>??????</entry>
+            <entry>
+              <p><b>Вход</b></p>
+              <p>Выход</p>
+              <p>Ненаправленный</p>
+            </entry>
+          </row>
+          <row>
+            <entry><b>Тип данных</b></entry>
+            <entry>Тип данных, хранимых в глобальном свойстве. Описание типов данных приведено в
+              справке по встроенному скриптовому языку.</entry>
+            <entry>
+              <p><b>Вещественное</b></p>
+              <p>Целое</p>
+              <p>Двоичное</p>
+              <p>Цвет</p>
+              <p>Строка</p>
+              <p>Массив</p>
+              <p>Растровое изображение</p>
+              <p>Шрифт</p>
+              <p>Текст</p>
+              <p>Стиль линии</p>
+              <p>Стиль заливки</p>
+              <p>Формат числа</p>
+              <p>Целый массив</p>
+              <p>Матрица</p>
+              <p>Точка</p>
+              <p>Перечисление</p>
+              <p>Имя файла</p>
+              <p>Имя файла базы данных</p>
+              <p>Произвольные данные</p>
+              <p>Составной тип данных</p>
+              <p>Множество</p>
+              <p>Комплексное</p>
+              <p>Комплексный вектор</p>
+              <p>Комплексная матрица</p>
+              <p>Внешний тип данных</p>
+              <p>Команда управления</p>
+            </entry>
+          </row>
+          <row>
+            <entry><b>Значение</b></entry>
+            <entry>Текущее значение глобального свойства.</entry>
+            <entry>
+              <p><b>0</b></p>
+              <p>интерпретируемые выражения</p>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Панель инструментов</p>
+    <table id="table_anv_kgv_ry">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="edit_global_properties_images/image002.png" height="25" width="25"
+                id="image_bnv_kgv_ry"/></entry>
+            <entry namest="col2" nameend="col3">Добавить новое глобальное свойство в список.</entry>
+          </row>
+          <row>
+            <entry><image href="edit_global_properties_images/image003.png" height="25" width="25"
+                id="image_cnv_kgv_ry"/></entry>
+            <entry namest="col2" nameend="col3">Удалить выделенное глобальное свойство.</entry>
+          </row>
+          <row>
+            <entry><image href="edit_global_properties_images/image004.png" height="25" width="25"
+                id="image_dnv_kgv_ry"/></entry>
+            <entry namest="col2" nameend="col3">Полностью очистить список глобальных
+              свойств.</entry>
+          </row>
+          <row>
+            <entry><image href="edit_global_properties_images/image005.png" height="25" width="25"
+                id="image_env_kgv_ry"/></entry>
+            <entry namest="col2" nameend="col3">Поднять запись в списке.</entry>
+          </row>
+          <row>
+            <entry><image href="edit_global_properties_images/image006.png" height="25" width="25"
+                id="image_fnv_kgv_ry"/></entry>
+            <entry namest="col2" nameend="col3">Опустить запись в списке.</entry>
+          </row>
+          <row>
+            <entry><image href="edit_global_properties_images/image007.png" height="25" width="25"
+                id="image_gnv_kgv_ry"/></entry>
+            <entry namest="col2" nameend="col3">Копировать в буфер запись о глобальном
+              свойстве.</entry>
+          </row>
+          <row>
+            <entry><image href="edit_global_properties_images/image008.png" height="25" width="25"
+                id="image_hnv_kgv_ry"/></entry>
+            <entry namest="col2" nameend="col3">Вставить в таблицу скопированную ранее запись о
+              глобальном свойстве.</entry>
+          </row>
+          <row>
+            <entry><image href="edit_global_properties_images/image009.png" height="25" width="25"
+                id="image_inv_kgv_ry"/></entry>
+            <entry namest="col2" nameend="col3">Сохранить текущий список переменных в текстовый
+              файл.</entry>
+          </row>
+          <row>
+            <entry><image href="edit_global_properties_images/image010.png" height="25" width="25"
+                id="image_jnv_kgv_ry"/></entry>
+            <entry namest="col2" nameend="col3">
+              <p>Загрузить сохранённый ранее список глобальных свойств из текстового файла.</p>
+              <p>Текущий список глобальных свойств будет полностью заменён на список из загружаемого
+                файла.</p>
+            </entry>
+          </row>
+          <row>
+            <entry><image href="edit_global_properties_images/image011.png" height="25" width="25"
+                id="image_knv_kgv_ry"/></entry>
+            <entry namest="col2" nameend="col3">Дополнить текущий список глобальными свойствами из
+              файла. Глобальные свойства из догружаемого файла, имеющие имена, совпадающие с именами
+              переменных в текущем списке будут проигнорированы.</entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2"><image
+                href="edit_global_properties_images/image012.png" height="25" width="188"
+                id="image_lnv_kgv_ry"/></entry>
+            <entry>
+              <p>Фильтрация текущего списка по маске, задаваемой для имён глобальных свойств. Список
+                масок для последующего быстрого переключения можно задать в отдельном окне по
+                нажатию кнопки <image href="edit_global_properties_images/image013.png" height="25"
+                  width="25" id="image_mnv_kgv_ry"/>. Каждая маска должна быть записана на отдельной
+                строке.</p>
+              <p>Фильтрация текущего списка по маске, задаваемой для названий сигналов. Список масок
+                для последующего быстрого переключения можно задать в отдельном окне по нажатию
+                кнопки <image href="edit_global_properties_images/image013.png" height="25"
+                  width="25" id="image_nnv_kgv_ry"/>. Каждая маска должна быть записана на отдельной
+                строке.</p>
+            </entry>
+          </row>
+              </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>

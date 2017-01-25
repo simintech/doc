@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setgraphicygrid</title>
+<shortdesc>Функция установки свойства «Сетка по оси Y» графика.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setgraphicygrid</funcname>(gid, ax_num, fl);</codeblock>
+    </section>
+<section><title>Аргументы:</title>gid – идентификатор объекта типа «График»,</section>
+    <p>ax_num – номер шкалы, начиная с 0, </p>
+    <section>fl – флага наличия сетки по оси Y объекта типа «График». </section>
+<section><title>Описание:</title>
+<p><codeph>setgraphicygrid(gid, ax_num, fl)</codeph> – функция установки свойства «Сетка по оси Y»
+        объекта типа «График» по идентификатору объекта. Аргумент <codeph>fl</codeph> принимает
+        значения: 1 – установить сетку по оси Y; 0 – убрать сетку по оси Y. Идентификатор объекта
+        может быть получен функцией <codeph>getgraphicid(gr_name)</codeph> и имеет тип указателя на
+        объект. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><comment>//получим идентификатор график</comment>
+eid = <funcname>getengineofblock</funcname>(TimeGraphic8);
+gid = <funcname>getgraphicidbyengine</funcname>(eid);
+<comment>//установим флаг наличия сетки по оси X</comment>
+<funcname>setgraphicygrid</funcname>(gid, 0, 1); </codeblock></section>
+<p>В результате выполнения данного примера происходит получение идентификатора графика и установка
+      флага наличия сетки по оси Y на графике.</p>  
+  </body>
+</topic>

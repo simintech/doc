@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setblocklabel</title>
+<shortdesc>Функция установки подписи прямоугольного блока. .</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setblocklabel</funcname>(obj_name, str);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>obj_name – имя объекта,</p>
+      <p>str – строка с текстом подписи.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setblocklabel(obj_name, str)</codeph> – функция устанавливает текст str подписи для
+        прямоугольного блока с именем <codeph>obj_name</codeph>, расположенного на схеме. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><funcname>setblocklabel</funcname>(Block1,"Подпись");</codeblock></section>  
+  </body>
+</topic>

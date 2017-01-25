@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>bringtofront</title>
+<shortdesc>Функция перемещения имени объекта в списке отрисовки в конец.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>bringtofront</funcname>(name);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>name – имя объекта.</p>
+    </section>
+<section><title>Описание:</title>
+<p><funcname>bringtofront(name)</funcname> – функция перемещения имени объекта в списке отрисовки в
+        конец списка, то есть объект будет отрисовываться на схеме последним.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> oldfl: <rword>boolean</rword>;
+<kword>if</kword> <rword>paintstep</rword> <kword>then begin</kword>
+ fl = <funcname>flash</funcname>(500);
+ <kword>if</kword> fl &lt;> oldfl <kword>then begin</kword>
+  <kword>if</kword> fl <kword>then</kword>  
+   <funcname>bringtofront</funcname>(FillRect)  
+  <kword>else</kword>
+   <funcname>bringtofront</funcname>(FillCircle);
+  <kword>end</kword>;
+ oldfl = fl;
+<kword>end</kword>;        </codeblock></section>
+<p>В результате выполнения данного примера объекты с именами <codeph>FillRect</codeph> и
+        <codeph>FillCircle</codeph> будут попеременно с периодом 500 мс. накладываться друг на
+      друга. </p>  
+  </body>
+</topic>

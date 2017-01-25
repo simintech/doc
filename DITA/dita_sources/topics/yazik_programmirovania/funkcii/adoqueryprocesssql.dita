@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>adoqueryprocesssql </title>
+<shortdesc>Функция позволяет произвести SQL-запрос к БД в соответствии с ранее заданной строкой
+    подключения.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>adoqueryprocesssql</funcname>(&lt;id объекта доступа к БД>,"текст SQL запроса к БД");</codeblock>
+    </section>
+<section>
+      <title>Результат:</title>
+      <p>Если запрос не обработан - возвращается false.</p>
+    </section>  
+  </body>
+</topic>

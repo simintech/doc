@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>erfc</title>
+  <shortdesc>Дополнительная функция ошибок Гаусса.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>y = <funcname>erfc</funcname>(x);</codeblock>
+    </section>
+<section><title>Аргументы:</title>
+<p>x – аргумент функции.</p></section>
+<section><title>Описание:</title>
+  <p>Дополнительная функция ошибок Гаусса определяется через функцию ошибок Гаусса.</p>
+      <image placement="break" href="images/erfc_1.png" align="center" id="image_ecy_hxh_wx"/></section>
+    <fig id="fig_nq1_mxh_wx">
+      <title>График функции</title>
+      <image placement="break" href="images/erfc_2.gif" align="center" id="image_oq1_mxh_wx"/>
+    </fig>
+    <p>Функция <codeph>erfc</codeph> вычисляет дополнительную функцию ошибок Гаусса от аргумента
+        <i>x</i>.</p>
+<section>
+      <title>Результат:</title>
+      <p>y – значение дополнительной функции ошибок Гаусса от аргумента x<i>.</i></p>
+    </section>  
+  </body>
+</topic>

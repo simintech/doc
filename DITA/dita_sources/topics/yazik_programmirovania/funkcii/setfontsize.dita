@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setfontsize</title>
+<shortdesc>Функция установки размера шрифта для объекта на схеме.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setfontsize</funcname>(font, val);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>font – свойство типа «шрифт» объекта,</p>
+      <p>val – значение размера шрифта.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setfontsize(font, val)</codeph> – функция установки размера <codeph>val</codeph> шрифта
+        для объекта на схеме.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><funcname>setfontsize</funcname>(TextLabel1.Font, 12);</codeblock></section>
+<p>Происходит установка размера шрифта 12 для объекта <codeph>TextLabel1</codeph>. </p>  
+  </body>
+</topic>

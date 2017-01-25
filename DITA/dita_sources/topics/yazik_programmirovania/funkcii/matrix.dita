@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>matrix</title>
+  <shortdesc>Функция создания нулевой матрицы.</shortdesc>
+<body>
+  <section><title>Синтаксис:</title><codeblock>M = <funcname>matrix</funcname>(n, m);</codeblock></section>
+<section><title>Аргументы:</title><p>n – количество строк нулевой матрицы,</p>
+<p>m – количество столбцов нулевой матрицы.</p></section>
+<section><title>Описание:</title><p><codeph>matrix(n, m)</codeph> – функция возвращает матрицу размерностью n на m, у которой все элементы равны нулю.</p></section>
+<section><title>Результат:</title><p>М – возвращаемая нулевая матрица.</p></section>  
+<section><title>Пример:</title><codeblock><kword>const</kword> n = 5;  
+M = <funcname>matrix</funcname>(n, 4);</codeblock></section>
+<p>В результате переменной M будет присвоено значение массива</p>
+<p>[0, 0, 0, 0],</p> 
+<p>[0, 0, 0, 0],</p> 
+<p>[0, 0, 0, 0],</p> 
+<p>[0, 0, 0, 0],</p> 
+<p>[0, 0, 0, 0],</p>
+<p>определяющего нулевую матрицу, у которой все элементы равны 0.</p>   
+</body>
+</topic>

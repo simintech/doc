@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getsubstring</title>
+<shortdesc>Функция получения подстроки в строке с разделителями.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>sub_str = <funcname>getsubstring</funcname>(str, sep_str, index);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>str – исходная строка,</p>
+      <p>sep_str – строка, содержащая разделитель,</p>
+      <p>index – индекс разделителя в исходной строке.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getsubstring(str, sep_str, index)</codeph> – функция получения подстроки в строке с
+        разделителями. Функция возвращает текст из исходной строки, от разделителя с указанным
+        номером до следующего разделителя. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>sub_str – полученная подстрока.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>Ss = <funcname>getsubstring</funcname>("a; b; c", ";" ,2); <comment>//ss=b</comment></codeblock></section>
+<p>В результате выполнения данного скрипта переменная <codeph>Ss</codeph> будет содержать строку
+      «b». </p>  
+  </body>
+</topic>

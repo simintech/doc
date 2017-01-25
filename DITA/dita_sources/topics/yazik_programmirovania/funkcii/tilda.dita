@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>~</title>
+<shortdesc>Доступ к переменной заданного типа по ссылке.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>~&lt;тип данных>(&lt;имя переменной>);</codeblock>
+    </section>
+<section><title>Описание:</title>
+<p>Доступ к переменной заданного типа по ссылке.  </p></section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> i=10,
+arr:<rword>array</rword>;
+ptr = @i; //получение ссылки
+ptr1 = @arr;
+d = ~<rword>double</rword>(ptr); //доступ по ссылке
+w = ~<rword>array</rword>(ptr1);
+~<rword>double</rword>(ptr) = 1000;</codeblock></section>
+<p>В процессе выполнения примера создается ссылка ptr на переменную i и ссылка ptr1 на массив arr.
+      При помощи функции ~ происходит доступ по ссылке к переменным i и arr. Переменной i по ссылке
+      ptr присваивается значение 1000.</p>  
+  </body>
+</topic>

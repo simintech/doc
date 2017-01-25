@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>gammln</title>
+  <shortdesc>Логарифм полной Гамма-функции.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>y = <funcname>gammaln</funcname>(x);</codeblock>
+    </section>
+<section><title>Аргументы:</title><p>x – аргумент функции, должен быть положительным вещественным числом, вектором или матрицей.</p></section>
+<section>
+      <title>Описание:</title>
+  <p>Полная Гамма функция – функция, расширяющая понятие факториала на поле комплексных чисел.</p>
+    </section>
+    <image placement="break" href="images/gamma_1.png" align="center" id="image_wgt_myh_wx"/>
+  <p>Функция <codeph>gammaln</codeph> вычисляет логарифм полной Гамма-функции от аргумента x. При
+      этом <codeph>gammaln(x) = ln(gamma(x))</codeph>.</p>
+  <section><title>Результат</title>
+    <p>y – значение логарифма полной Гамма-функции от аргумента x.</p>
+    </section>  
+  </body>
+</topic>

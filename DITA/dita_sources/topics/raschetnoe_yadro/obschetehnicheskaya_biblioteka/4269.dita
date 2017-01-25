@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика - Кулачковая муфта </title>
+  <body>
+    <table id="table_x41_wcs_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4269/image001.jpg" height="32" width="32"
+                id="image_y41_wcs_qy"/></entry>
+            <entry>Механика - Кулачковая муфта</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4269/image002.jpg" height="63" width="120"
+                id="image_z41_wcs_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>В блоке реализована модель кулачковой муфты. В состав модели входят ведущая полумуфта R,
+      ведомая полумуфта H, а также механизм управления (S). </p>
+    <p><image href="images_old/4269/image003.jpg" height="225" width="394" id="image_ap1_wcs_qy"/></p>
+    <p>Рисунок 1.</p>
+    <p>Уравнения, описывающие поведение механизма управления, имеют следующий вид:</p>
+    <p><image href="images_old/4269/image004.gif" height="46" width="280" id="image_bp1_wcs_qy"/></p>
+    <p><image href="images_old/4269/image005.gif" height="43" width="57" id="image_cp1_wcs_qy"/></p>
+    <p><image href="images_old/4269/image006.gif" height="22" width="122" id="image_dp1_wcs_qy"/></p>
+    <table id="table_ep1_wcs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>FZ</entry>
+            <entry>-</entry>
+            <entry>Сила трения, действующая на МУ</entry>
+          </row>
+          <row>
+            <entry>FN</entry>
+            <entry>-</entry>
+            <entry>Нормальная сила в зубчатом зацеплении</entry>
+          </row>
+          <row>
+            <entry>KS</entry>
+            <entry>-</entry>
+            <entry>Кинематический коэффициент трения в зубчатом зацеплении </entry>
+          </row>
+          <row>
+            <entry>V</entry>
+            <entry>-</entry>
+            <entry>Скорость МУ и ведущей полумуфты</entry>
+          </row>
+          <row>
+            <entry>Vth</entry>
+            <entry>-</entry>
+            <entry>Порог скорости МУ</entry>
+          </row>
+          <row>
+            <entry>BS</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения МУ</entry>
+          </row>
+          <row>
+            <entry>Z</entry>
+            <entry>-</entry>
+            <entry>Положение МУ</entry>
+          </row>
+          <row>
+            <entry>h</entry>
+            <entry>-</entry>
+            <entry>Высота зубьев</entry>
+          </row>
+          <row>
+            <entry>ZG</entry>
+            <entry>-</entry>
+            <entry>Зазор при полном расцеплении</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Условия зацепления двух полумуфт имеют следующий вид:</p>
+    <p><image href="images_old/4269/image007.gif" height="22" width="105" id="image_fp1_wcs_qy"/></p>
+    <p><image href="images_old/4269/image008.gif" height="22" width="176" id="image_gp1_wcs_qy"/></p>
+    <table id="table_hp1_wcs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Zmin</entry>
+            <entry>-</entry>
+            <entry>Минимальное положение МУ для зацепления</entry>
+          </row>
+          <row>
+            <entry>Hmin</entry>
+            <entry>-</entry>
+            <entry>Минимальное перекрытие зубьев для зацепления</entry>
+          </row>
+          <row>
+            <entry>ω</entry>
+            <entry>-</entry>
+            <entry>относительная угловая скорость полумуфт</entry>
+          </row>
+          <row>
+            <entry>ωmax</entry>
+            <entry>-</entry>
+            <entry>Максимальная ω для зацепления</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Уравнения, описывающие взаимодействие полумуфт, имеют следующий вид:</p>
+    <p><image href="images_old/4269/image009.gif" height="43" width="119" id="image_ip1_wcs_qy"/></p>
+    <p><image href="images_old/4269/image010.gif" height="72" width="378" id="image_jp1_wcs_qy"/></p>
+    <p><image href="images_old/4269/image011.gif" height="42" width="107" id="image_kp1_wcs_qy"/></p>
+    <p> </p>
+    <table id="table_lp1_wcs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Tfr</entry>
+            <entry>-</entry>
+            <entry>Внутренний момент контактного трения между зубьями</entry>
+          </row>
+          <row>
+            <entry>φ</entry>
+            <entry>-</entry>
+            <entry>Угол между полумуфтами</entry>
+          </row>
+          <row>
+            <entry>ω</entry>
+            <entry>-</entry>
+            <entry>Относительная угловая скорость полумуфт</entry>
+          </row>
+          <row>
+            <entry>ωR</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость ведущей полумуфты</entry>
+          </row>
+          <row>
+            <entry>ωH</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость ведомой полумуфты</entry>
+          </row>
+          <row>
+            <entry>δ</entry>
+            <entry>-</entry>
+            <entry>Угловой зазор между зубьями</entry>
+          </row>
+          <row>
+            <entry>R</entry>
+            <entry>-</entry>
+            <entry>Средний радиус зубьев</entry>
+          </row>
+          <row>
+            <entry>KRH</entry>
+            <entry>-</entry>
+            <entry>Коэффициент жесткости кручения</entry>
+          </row>
+          <row>
+            <entry>BR</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения кручения</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Входные порты блока:</b></p>
+    <p>Блок имеет два механических ненаправленных порта вращательного движения (R - ведущая
+      полумуфта, H - ведомая полумуфта), через которые на вход блока поступают угловые скорости, а
+      на выход - моменты портов R и H, а также один механический ненаправленный порт поступательного
+      движения (S - механизм управления), через которые на вход блока поступает скорость МУ, а на
+      выход - сила на МУ.</p>
+    <p> </p>
+    <p><b>Выходные порты блока:</b></p>
+    <p> </p>
+    <p><b>Свойства блока:</b></p>
+    <table id="table_mp1_wcs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>N</entry>
+            <entry>-</entry>
+            <entry>Число зубьев</entry>
+          </row>
+          <row>
+            <entry>Fr</entry>
+            <entry>-</entry>
+            <entry>Угловой зазор между зубьями, град</entry>
+          </row>
+          <row>
+            <entry>R</entry>
+            <entry>-</entry>
+            <entry>Средний радиус зубьев, м</entry>
+          </row>
+          <row>
+            <entry>Krh</entry>
+            <entry>-</entry>
+            <entry>Коэффициент жесткости кручения, н*м/рад</entry>
+          </row>
+          <row>
+            <entry>Br</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения кручения, н*м*с/рад</entry>
+          </row>
+          <row>
+            <entry>H</entry>
+            <entry>-</entry>
+            <entry>Высота зубьев, м</entry>
+          </row>
+          <row>
+            <entry>Stype</entry>
+            <entry>-</entry>
+            <entry>Останов МУ при полном расцеплении</entry>
+          </row>
+          <row>
+            <entry>Zg</entry>
+            <entry>-</entry>
+            <entry>Зазор при полном расцеплении, м</entry>
+          </row>
+          <row>
+            <entry>Krs</entry>
+            <entry>-</entry>
+            <entry>Коэффициент жесткости при упоре, н/м</entry>
+          </row>
+          <row>
+            <entry>Brs</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения при упоре, н*с/м</entry>
+          </row>
+          <row>
+            <entry>Bs</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения МУ, н*с/м</entry>
+          </row>
+          <row>
+            <entry>Ks</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения между зубьями</entry>
+          </row>
+          <row>
+            <entry>Dtype</entry>
+            <entry>-</entry>
+            <entry>Положительное направление МУ (сцепляет/расцепляет)</entry>
+          </row>
+          <row>
+            <entry>Wmax</entry>
+            <entry> </entry>
+            <entry>Максимальная скорость зацепления, рад/с</entry>
+          </row>
+          <row>
+            <entry>Zmin</entry>
+            <entry> </entry>
+            <entry>Минимальное перекрытие зубьев для зацепления, м</entry>
+          </row>
+          <row>
+            <entry>Vth</entry>
+            <entry> </entry>
+            <entry>Пороговая скорость МУ, м/с</entry>
+          </row>
+          <row>
+            <entry>Z0</entry>
+            <entry> </entry>
+            <entry>Начальное положение МУ, м</entry>
+          </row>
+          <row>
+            <entry>Fi0</entry>
+            <entry>-</entry>
+            <entry>Начальный угол между полумуфтами, рад</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_np1_wcs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>F</entry>
+            <entry>-</entry>
+            <entry>Сила трения на МУ, н</entry>
+          </row>
+          <row>
+            <entry>V</entry>
+            <entry>-</entry>
+            <entry>Скорость МУ, м/с</entry>
+          </row>
+          <row>
+            <entry>W</entry>
+            <entry>-</entry>
+            <entry>Относительная угловая скорость, рад/с</entry>
+          </row>
+          <row>
+            <entry>T</entry>
+            <entry>-</entry>
+            <entry>Момент трения между полумуфтами, н*м</entry>
+          </row>
+          <row>
+            <entry>Fi</entry>
+            <entry>-</entry>
+            <entry>Угол между полумуфтами, рад</entry>
+          </row>
+          <row>
+            <entry>Z</entry>
+            <entry>-</entry>
+            <entry>Положение МУ, м</entry>
+          </row>
+          <row>
+            <entry>On</entry>
+            <entry>-</entry>
+            <entry>Признак зацепления полумуфт</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

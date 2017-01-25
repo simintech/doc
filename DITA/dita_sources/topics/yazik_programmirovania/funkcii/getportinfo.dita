@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getportinfo </title>
+<shortdesc>Функция получения информации о порте.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>aport_type = <funcname>getportinfo</funcname>(port_id, aportname, alinetype);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>port_id – ссылка (идентификатор) на порт;</p>
+      <p>aportname – аргумент, типа string, в который будет записано имя порта;</p>
+      <p>alinetype – аргумент, типа integer, в который будет записан номер типа линии; </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getportinfo</codeph> – функция позволяет получить информацию о порте с идентификатором
+          <codeph>port_id</codeph>: имя порта <codeph>aportname</codeph> и тип линии связи
+          <codeph>alinetype</codeph>. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>Функция возвращает тип порта: 0 – вход, 1 – выход, 2 – ненаправленный.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> 
+p_id,sss,ltype:<rword>integer</rword>,
+pname:<rword>string</rword>;
+p_id = <funcname>getblockportid</funcname>(macro2,3);  <comment>//получение идентификатора порта</comment>
+sss = <funcname>getportinfo</funcname>(p_id, pname, ltype); <comment>//получение информации о порте</comment></codeblock></section>
+<p>В результате выполнения данного скрипта, будет получена ссылка на порт с номером 3, блока
+        <codeph>macro2</codeph>. Затем происходит получение информации, используя полученный
+      идентификатор порта – переменная <codeph>ltype</codeph> получит значение номера типа линии
+      связи, а строковая переменная <codeph>pname</codeph> – имя порта. </p>  
+  </body>
+</topic>

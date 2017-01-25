@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getgraphicxscales</title>
+<shortdesc>Функция получения значения свойств графика «Минимум шкалы по оси X» и «Максимум шкалы по
+    оси X».</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>val = <funcname>getgraphicxscales</funcname>(gid);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>gid – идентификатор объекта типа «График». </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getgraphicxscales(gid)</codeph> – функция получения значения свойств «Минимум шкалы по
+        оси X» и «Максимум шкалы по оси X» объекта типа «График» по идентификатору объекта
+          <codeph>gid</codeph>. Идентификатор объекта может быть получен функцией
+          <codeph>getgraphicid(gr_name)</codeph> и имеет тип указателя на объект. Тип возвращаемого
+        значения – комплексное число, где действительная часть соответствует минимальному значению
+        шкалы, мнимая – максимальному. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>val – значение минимума и максимума шкалы графика по оси X. Тип complex. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><comment>//получим идентификатор график  </comment>
+gid = <funcname>getgraphicid</funcname>(plot);       
+<comment>//получим мин. и макс. шкалы по оси X</comment>
+val = <funcname>getgraphicxscales</funcname>(gid);        </codeblock></section>
+<p>В результате выполнения данного примера происходит получение идентификатора графика и получение
+      значений минимума и максимума шкалы графика по оси X.</p>  
+  </body>
+</topic>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>slide</title>
+<shortdesc>Функция вычисления координат точки, принадлежащей прямой и удаленной от заданной точки на заданное расстояние.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>S = <funcname>slide</funcname>(P1, P2, Ps, Pe, l);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>P1 – координаты первой точки, определяющей прямую. Тип point,</p>
+      <p>P2 – координаты второй точки, определяющей прямую. Тип point,</p>
+      <p>Ps – координаты точки, от которой удалена вычисляемая точка. Тип point,</p>
+      <p>Pe – координаты точки, определяющей положение вычисляемой точки. Тип
+        point,</p>
+      <p>l – расстояние до вычисляемой точки. Тип point,</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>slide(P1, P2, Ps, Pe, l)</codeph> – функция вычисления координат точки, принадлежащей
+        прямой, заданной точками P1, P2 и удаленной от заданной точки Ps на заданное расстояние l.
+        Точка Pe определяет расположение вычисляемой точки. Входные значения могут задаваться как
+        заранее определенные переменные или задаваться выражением (x, y), где x и y координаты
+        точки.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>S – точка с вычисленными координатами. Тип point.</p>
+    </section>  
+<section><title>Пример1:</title>
+<codeblock><kword>const</kword> 
+p1 = (1,1),
+p2 = (1,6),
+ps = (2,1),
+pe = (2,6),
+l = 5;
+s = <funcname>slide</funcname>(p1, p2, ps, pe, l);</codeblock></section>
+<p>В результате переменной s будет присвоено значение  (1,5.8989795)</p>  
+<section><title>Пример2:</title>
+<codeblock><kword>const</kword> 
+p1 = (1,1),
+p2 = (1,6),
+ps = (2,1),
+pe = (2, -6),
+l = 5;
+s = <funcname>slide</funcname>(p1, p2, ps, pe, l);</codeblock></section>
+<p>В результате переменной s будет присвоено значение  (1,-3.8989795)</p>    
+  </body>
+</topic>

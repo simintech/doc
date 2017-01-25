@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>findstartport</title>
+<shortdesc>Функция получения первичного выходного порта по входному.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>out_p = <funcname>findstartport</funcname>(port_id);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>port_id – ссылка (идентификатор) на входной порт.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>findstartport</codeph> – функция позволяет определить начальный выходной порт по
+        заданному идентификатору конечного входного порта (port_id). Входной и выходной порты должны
+        быть соединены линией связи.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>Функция возвращает число типа integer, являющееся идентификатором выходного порта,
+        соединенного линией связи с указанным входным портом.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>p_in = <funcname>getblockportid</funcname>(macro2,0);  <comment>//получение идентификатора входного порта</comment>
+p_out = <funcname>findstartport</funcname>(p_in); <comment>//получение идентификатора первичного выходного порта</comment></codeblock></section>
+<p>В результате выполнения данного скрипта, переменная <codeph>p_out</codeph> получит значение
+      идентификатора, соответствующего конечному порту, с которым соединен выходной порт
+        <codeph>p_id</codeph> с помощью линии связи. </p>  
+  </body>
+</topic>

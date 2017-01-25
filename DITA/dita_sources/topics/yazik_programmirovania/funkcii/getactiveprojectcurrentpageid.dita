@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getactiveprojectcurrentpageid </title>
+<shortdesc>Функция получения идентификатора текущей страницы активного проекта. </shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>page_id = <funcname>getactiveprojectcurrentpageid</funcname>;</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>нет</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getactiveprojectcurrentpageid</codeph> – функция получения идентификатора текущей
+        страницы активного проекта. В отличие от функции <codeph>getcurrentpageid</codeph>, функция
+        позволяет получить идентификатор текущей страницы проекта, отличного от того, в рамках
+        которого выполняется функция. При этом оба проекта (активный и тот, в котором выполняется
+        функция) должны быть открыты в рамках одного пакета. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>page_id – функция возвращает целое число, являющееся идентификатором текущей страницы
+        активного проекта.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>p_id = <funcname>getactiveprojectcurrentpageid</funcname>; <comment>//получение идентификатора текущей страницы текущего проекта</comment>
+obj_c = <funcname>getobjcount</funcname>(p_id); <comment>//получение количества объектов на странице</comment></codeblock></section>
+<p>В результате выполнения данного скрипта происходит получение идентификатора текущей страницы
+      активного проекта и подсчет объектов на ней. При этом скрипт может находиться в графической
+      форме, принадлежащей другому проекту, находящемуся в том же пакете проектов. </p>  
+  </body>
+</topic>

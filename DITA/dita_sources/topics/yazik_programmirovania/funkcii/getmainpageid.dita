@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getmainpageid</title>
+<shortdesc>Функция получения ссылки контейнера главной страницы проекта.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>obj_id = <funcname>getobj</funcname>;</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>нет</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getmainpageid</codeph> – функция получения идентификатора (ссылки) на главную страницу
+        проекта (находящуюся на самом высоком уровне). Идентификатор имеет тип указателя на
+        объект.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>obj_id – идентификатор главной страницы проекта.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>contid=<funcname>getmainpageid</funcname>;
+<kword>for</kword>(i=1,<funcname>getobjcount</funcname>(contid)) <kword>begin</kword>
+  <kword>var</kword> id: <rword>integer</rword>;
+  <comment>//Получаем идентификатор</comment>
+  id = <funcname>getobj</funcname>(contid,i);
+  <comment>//Выводим сообщение</comment> 
+  <funcname>seterrorstr</funcname>(<funcname>getobjname</funcname>(id) + ": " + <funcname>getobjclassname</funcname>(id),0);
+<kword>end</kword>;
+</codeblock></section>
+<p>описание примера</p>  
+  </body>
+</topic>

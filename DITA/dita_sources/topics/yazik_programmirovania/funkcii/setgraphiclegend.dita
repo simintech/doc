@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setgraphiclegend</title>
+<shortdesc>Функция установки свойства «Показывать легенду» графика.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setgraphiclegend</funcname>(gid, fl);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>gid – идентификатор объекта типа «График»,</p>
+      <p>fl – флага наличия легенды графика.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setgraphiclegend(gid, fl)</codeph> – функция установки свойства «Показывать легенду»
+        объекта типа «График» по идентификатору объекта <codeph>gid</codeph>. Аргумент
+          <codeph>fl</codeph> принимает значения 1 – показывать легенду или 0 – не показывать
+        легенду. Идентификатор объекта может быть получен функцией
+          <codeph>getgraphicid(gr_name)</codeph> и имеет тип указателя на объект.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><comment>//получим идентификатор график</comment>
+gid = <funcname>getgraphicid</funcname>(plot);     
+<comment>//установим флаг наличия легенды</comment>
+<funcname>setgraphiclegend</funcname>(gid, 1);       </codeblock></section>
+<p>В результате выполнения данного примера происходит получение идентификатора графика и установка
+      флага наличия легенды на графике. </p>  
+  </body>
+</topic>

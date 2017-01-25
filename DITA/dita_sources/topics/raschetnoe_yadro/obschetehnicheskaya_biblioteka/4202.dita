@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика – свободный конец вращательного движения </title>
+  <body>
+    <p> </p>
+    <table id="table_qsl_jrr_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4202/image001.png" height="36" width="35"
+                id="image_rsl_jrr_qy"/></entry>
+            <entry>Механика – свободный конец вращательного движения</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4202/image002.png" height="85" width="74"
+                id="image_ssl_jrr_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Математическая модель блока описывается уравнением</p>
+    <p>T=0, где</p>
+    <p>T-момент</p>
+    <p><b>Выходные порты блока:</b></p>
+    <p>Блок имеет один механический ненаправленный порт вращательного движения, через который на
+      вход блока поступает угловая скорость, а на выход – нулевой момент.</p>
+    <p><b>Свойства блока – отсутствуют.</b></p>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_tsl_jrr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>ω</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость, рад/с</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Задержка по включению и выключению</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/3029.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/3029s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован | Си
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Реализует задержку (выжидание подтверждения) входного сигнала на заданное время при любом
+      изменении входного логического сигнала:<image placement="break" href="images/3029_1.png"
+        align="center" id="image_o1z_rmn_4y"/>где <i>y</i>(<i>t</i>) – выходной сигнал блока,
+        <i>x</i>(<i>t</i>) – входной сигнал, T<sub>1</sub> , T<sub>2</sub> – постоянные времени
+      подтверждения (по включению и по выключению, соответственно). <b>Важно</b>: выход блока может
+      принимать значения либо 0, либо 1. </p>
+    <section>
+      <title>Входы</title>
+      <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>B0</uicontrol> - вход блока.</li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>B01</uicontrol> - выход блока.</li>
+        </ul>
+      </p>
+    </section>
+    <section><title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Времена подтверждения по включению, с</uicontrol> – задержка включения
+              T<sub>1</sub>.</li>
+          <li><uicontrol>Времена подтверждения по выключению, с</uicontrol> – задержка выключения
+              T<sub>2</sub>.</li>
+          <li><uicontrol>Способ задания времени подтверждения</uicontrol> – если указан способ
+            задания «Вход», то время задержки берётся со второго дополнительного входа.</li>
+        </ul>
+      </p></section>
+    <section><title>Параметры</title>
+      <p>
+        <ul id="ul_t3c_l3t_2y">
+          <li><uicontrol>Время до остановки таймера на включение</uicontrol> - текущие значение
+            обратного отсчета таймера задержки включения.</li>
+          <li><uicontrol>Время до остановки таймера на выключение</uicontrol> - текущие значение
+            обратного отсчета таймера задержки выключения.</li>
+        </ul>
+      </p></section>
+    
+  </body>
+</topic>

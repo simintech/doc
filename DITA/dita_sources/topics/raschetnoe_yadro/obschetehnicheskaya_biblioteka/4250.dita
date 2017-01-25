@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика – Циклоидальный редуктор </title>
+  <body>
+    <table id="table_xcp_hfs_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4250/image001.png" height="32" width="32"
+                id="image_ycp_hfs_qy"/></entry>
+            <entry>Механика – Циклоидальный редуктор</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4250/image002.png" height="77" width="128"
+                id="image_zcp_hfs_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>В блоке реализована модель циклоидального редуктора (см. рисунок 1), характеризуемого
+      передаточным числом</p>
+    <p> </p>
+    <p><image href="images_old/4250/image003.png" height="46" width="140" id="image_adp_hfs_qy"/></p>
+    <p> </p>
+    <table id="table_bdp_hfs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>g</entry>
+            <entry>-</entry>
+            <entry>передаточное число</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4250/image004.png" height="22" width="22"
+                id="image_cdp_hfs_qy"/></entry>
+            <entry>-</entry>
+            <entry>число зубьев обоймы</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4250/image005.png" height="22" width="22"
+                id="image_ddp_hfs_qy"/></entry>
+            <entry>-</entry>
+            <entry>число зубьев сателлита</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p><image href="images_old/4250/image006.png" height="190" width="400" id="image_edp_hfs_qy"/></p>
+    <p><image href="images_old/4250/image007.png" height="195" width="381" id="image_fdp_hfs_qy"/></p>
+    <p>Рисунок 1</p>
+    <p> Модель редуктора накладывает следующее кинематическое ограничение:</p>
+    <p><image href="images_old/4250/image008.png" height="22" width="128" id="image_gdp_hfs_qy"/></p>
+    <p> Передача механической энергии описывается уравнениями:</p>
+    <p><image href="images_old/4250/image009.png" height="75" width="343" id="image_hdp_hfs_qy"/></p>
+    <p><image href="images_old/4250/image010.png" height="22" width="118" id="image_idp_hfs_qy"/>,
+      где</p>
+    <p> </p>
+    <table id="table_jdp_hfs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>WB</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость ведущего вала</entry>
+          </row>
+          <row>
+            <entry>WF</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость ведомого вала</entry>
+          </row>
+          <row>
+            <entry>TB</entry>
+            <entry>-</entry>
+            <entry>Момент на ведущем валу</entry>
+          </row>
+          <row>
+            <entry>TF</entry>
+            <entry>-</entry>
+            <entry>Момент на ведомом валу</entry>
+          </row>
+          <row>
+            <entry>Qth</entry>
+            <entry>-</entry>
+            <entry>Порог мощности</entry>
+          </row>
+          <row>
+            <entry>μ</entry>
+            <entry>-</entry>
+            <entry>КПД редуктора</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Может быть задана явная или неявная схема решения уравнений модели. </p>
+    <p>В случае явной схемы считаются известными угловая скорость ведущего вала и момент на ведомом
+      вале. Для получения значений угловой скорости ведомого вала и момента на ведущем валу не
+      требуется решение нелинейного уравнения. </p>
+    <p>В случае неявной схемы считаются известными угловая скорость ведущего и ведомого вала. Для
+      получения значений момента на ведущем и ведомом валу требуется решение нелинейного
+      уравнения.</p>
+    <p>КПД может задаваться следующим образом в зависимости от параметра FrType (модель трения):</p>
+    <p>- постоянный КПД;</p>
+    <p>- КПД зависит от температуры.</p>
+    <p>В первом случае КПД задается в виде константы. Во втором случае КПД задается как табличная
+      функция, аргументом которой является температура (параметр Temp в свойствах блока). В обоих
+      случаях различают значения КПД при передаче момента от ведущего вала к ведомому, и
+      наоборот.</p>
+    <p> </p>
+    <p>
+      <b>Входные порты блока:</b></p>
+    <p>Если задана явная схема модели, то блок имеет один механический ненаправленный порт
+      вращательного движения B (ведущий вал). В противном случае добавляется еще один механический
+      ненаправленный порт вращательного движения F (ведомый вал).</p>
+    <p> </p>
+    <p><b>Выходные порты блока:</b></p>
+    <p>Если задана явная схема модели, то блок имеет один механический ненаправленный порт
+      вращательного движения F (ведомый вал). В любом случае блок имеет один математический порт, на
+      который поступает значение потерь мощности.</p>
+    <p> </p>
+    <p><b>Свойства блока:</b></p>
+    <table id="table_kdp_hfs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Mod_Type</entry>
+            <entry>-</entry>
+            <entry>Тип модели</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4250/image004.png" height="22" width="22"
+                id="image_ldp_hfs_qy"/></entry>
+            <entry>-</entry>
+            <entry>число зубьев обоймы</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4250/image005.png" height="22" width="22"
+                id="image_mdp_hfs_qy"/></entry>
+            <entry>-</entry>
+            <entry>число зубьев сателлита</entry>
+          </row>
+          <row>
+            <entry>FrType</entry>
+            <entry>-</entry>
+            <entry>Модель трения</entry>
+          </row>
+          <row>
+            <entry>Ebf</entry>
+            <entry>-</entry>
+            <entry>КПД передачи энергии от ведущего вала к ведомому</entry>
+          </row>
+          <row>
+            <entry>Efb</entry>
+            <entry>-</entry>
+            <entry>КПД передачи энергии от ведомого вала к ведущему</entry>
+          </row>
+          <row>
+            <entry>Temp</entry>
+            <entry>-</entry>
+            <entry>Температура</entry>
+          </row>
+          <row>
+            <entry>xE</entry>
+            <entry>-</entry>
+            <entry>Массив температур, С (аргумент)</entry>
+          </row>
+          <row>
+            <entry>yEb</entry>
+            <entry>-</entry>
+            <entry>Массив КПД ведущий-ведомый</entry>
+          </row>
+          <row>
+            <entry>yEf</entry>
+            <entry>-</entry>
+            <entry>Массив КПД ведомый-ведущий</entry>
+          </row>
+          <row>
+            <entry>Qth</entry>
+            <entry>-</entry>
+            <entry>Порог мощности, Вт</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_ndp_hfs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4250/image011.png" height="22" width="24"
+                id="image_odp_hfs_qy"/></entry>
+            <entry>-</entry>
+            <entry>угловая скорость ведущего колеса, рад/с</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4250/image012.png" height="22" width="23"
+                id="image_pdp_hfs_qy"/></entry>
+            <entry>-</entry>
+            <entry>угловая скорость ведомого колеса, рад/с</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4250/image013.png" height="22" width="19"
+                id="image_qdp_hfs_qy"/></entry>
+            <entry>-</entry>
+            <entry>момент в зацеплении на ведущем колесе, <image href="images_old/4250/image014.png"
+                height="22" width="36" id="image_rdp_hfs_qy"/></entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4250/image015.png" height="22" width="19"
+                id="image_sdp_hfs_qy"/></entry>
+            <entry>-</entry>
+            <entry>момент в зацеплении на ведомом колесе, <image href="images_old/4250/image014.png"
+                height="22" width="36" id="image_tdp_hfs_qy"/></entry>
+          </row>
+          <row>
+            <entry>Q</entry>
+            <entry>-</entry>
+            <entry>потери мощности, Вт</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Парабола</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/0004.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/0004s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> Блок формирует значение выходного сигнала, вычисленное по формуле: <image placement="break"
+        href="images/0004_1.png" align="center" id="image_csv_1k1_fy"/>где: <i>a</i><sub>0</sub>,
+        <i>a</i><sub>1</sub>, <i>a</i><sub>2</sub> – коэффициенты, <i>y</i>(<i>t</i>) – выходной
+      сигнал, скаляр или вектор, <i>t</i> – текущее модельное время в секундах. </p>
+    <section>
+      <title>Входы</title>
+      <p>нет</p>
+    </section>
+    <section>
+      <title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>output</uicontrol> - порт для выходного значения.</li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <title>Свойства:</title>
+      <p><ul id="ul_gmt_j3t_2y">
+          <li>Свободный член – коэффициент <i>a</i><sub>0</sub>.</li>
+          <li>Коэффициент при t – коэффициент <i>a</i><sub>1</sub>.</li>
+          <li>Коэффициент при t<sup>2</sup> – коэффициент <i>a</i><sub>2</sub>.</li>
+        </ul>Свойства могут быть векторами
+          <i>a</i><sub>0</sub>&#xA0;=&#xA0;[<i>a</i><sub>01</sub>,<i>a</i><sub>02</sub>,...<i>a</i><sub>0n</sub>],
+          <i>a</i><sub>1</sub>&#xA0;=&#xA0;[<i>a</i><sub>11</sub>,<i>a</i><sub>12</sub>,...<i>a</i><sub>1n</sub>],
+        и
+          <i>a</i><sub>2</sub>&#xA0;=&#xA0;[<i>a</i><sub>21</sub>,<i>a</i><sub>22</sub>,...<i>a</i><sub>2n</sub>],
+        размерности которых должны быть одинаковы, в этом случае на выходе будет также вектор:
+          <i>y</i><sub>i</sub>(<i>t</i>)&#xA0;=<i>&#xA0;a</i><sub>01</sub>+<i>a</i><sub>1i</sub>·<i>t</i>+<i>a</i><sub>2i</sub>·<i>t</i><sup>2</sup>,
+        i&#xA0;=&#xA0;1..n.</p>
+    </section>
+    <section>
+      <title>Параметры</title>
+      <p>нет </p>
+    </section>
+    <section>
+      <note>
+        <ol id="ol_cp1_2m1_fy">
+          <li>По умолчанию блок формирует скалярный выходной сигнал.</li>
+          <li>Именованные свойства могут быть заданы как локальные переменные модели (субмодели) в
+            скрипте на языке программирования, как глобальные сигналы проекта при помощи пункта
+            главного меню <cmdname>Сервис → Сигналы</cmdname>, или как внешние сигналы проекта при
+            помощи подключаемой базы сигналов. </li>
+        </ol>
+      </note>
+    </section>
+  </body>
+</topic>

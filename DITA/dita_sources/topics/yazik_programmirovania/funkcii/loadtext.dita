@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>loadtext</title>
+<shortdesc>Функция чтения текста в строку из текстового файла. </shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>s = <funcname>loadtext</funcname>(f_id);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>f_id – идентификатор файла. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>loadtext(f_id)</codeph> – функция чтения текста из файла с идентификатором
+          <codeph>f_id</codeph> в строку. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>s – строка с загруженным из файла текстом.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword>
+s1:<kword>string</kword> = "string1" + <funcname>chr</funcname>(10) + "string2",
+s2:<kword>string</kword> = "string3";
+<comment>//создадим новый файл </comment>
+f_id = <funcname>createfile</funcname>("file1.dat", -1)
+<comment>//запишем в него строку</comment>
+<funcname>writetext</funcname>(f_id, s1, s2);
+s3 = <funcname>loadtext</funcname>(f_id);    
+<comment>//закроем файл          </comment>
+<funcname>freeobject</funcname>(f_id);</codeblock></section>
+<p>В процессе выполнения при помощи функции <codeph>createfile</codeph> будет создан новый файл с
+      идентификатором <codeph>f_id</codeph> (<filepath>file1.dat</filepath>). В файл при помощи
+      функции <codeph>writeln</codeph> будет записаны строки <codeph>s1</codeph> и
+        <codeph>s2</codeph>.</p>
+    <p>Файл <filepath>file1.dat</filepath> будет содержать текст:</p>
+    <p>string1</p>
+    <p>string2</p>
+    <p>string3</p>
+    <p>При помощи функции <codeph>loadtext</codeph> в строку <codeph>s3</codeph> будет загружен
+      текст из файла с идентификатором <codeph>f_id</codeph>. Строка <codeph>s3</codeph> будет
+      содержать текст “string1\nstring2string3”, где \n – разделитель «перевод строки». Перед
+      завершением примера файл закрывается при помощи функции <codeph>freeobject</codeph>. </p>  
+  </body>
+</topic>

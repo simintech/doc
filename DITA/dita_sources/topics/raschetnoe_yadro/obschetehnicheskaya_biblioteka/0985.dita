@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Язык программирования</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/0985.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/0985s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован | Си
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> Блок Язык программирования предназначен для создания блоков, выполняющих сложные операции,
+      включая операции над матрицами, векторами, комплексными числами. Диалоговое окно этого блока —
+      окно текстового редактора алгоритмов, в котором Пользователь записывает математическую модель
+      на встроенном языке программирования. Блок позволяет реализовать произвольный алгоритм,
+      написанный на встроенном языке программирования комплекса. При генерации кода для блока может
+      быть задан шаблон генерации произвольного кода на языке Си. Подробнее о встроенном языке
+      программирования смотрите в соответствующем разделе справки. </p>
+    <section><title>Входы</title>
+    <p>Блок имеет произвольное число входов, устанавливаемое в секции <xref
+          href="../../yazik_programmirovania/funkcii/input.dita" format="dita">input</xref> внутри
+        блока.</p></section>
+    <section><title>Выходы</title>
+      <p>Блок имеен произвольное число выходов, устанавливаемое в секции <xref
+          href="../../yazik_programmirovania/funkcii/output.dita" format="dita">output</xref> внутри
+        блока.</p></section>
+    <section><title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Тип сортировки</uicontrol> – флаг, определяющий порядок расчёта блока в
+            общей схеме;</li>
+          <li><uicontrol>Заголовок модуля</uicontrol> – заголовок текста при генерации кода, здесь
+            декларируются специальные комментарии;</li>
+          <li><uicontrol>Секция декларации переменных</uicontrol> – текст, вставляемый в начало
+            программы при генерации кода;</li>
+          <li><uicontrol>Основная секция кода</uicontrol> – основной текст программы при генерации
+            кода для блока;</li>
+          <li><uicontrol>Секция запоминания состояний</uicontrol> – текст, вставляемый в конец
+            программы при генерации кода, здесь производиться вычисление переменных состояния;</li>
+          <li><uicontrol>Декларации переменных</uicontrol> – текст, вставляемый в select-файл для
+            описания переменных состояния блока;</li>
+          <li><uicontrol>Значения переменных по умолчанию</uicontrol> – тест для установки начальных
+            значений переменных состояния блока. </li>
+        </ul>
+      </p></section>
+    <section><title>Параметры</title>
+      <p>
+        <ul id="ul_t3c_l3t_2y">
+          <li><uicontrol>Динамические переменные</uicontrol> - внутренние переменные состояния
+            блока;</li>
+          <li><uicontrol>Производные</uicontrol> - внутренние переменные состояния блока.</li>
+        </ul>
+      </p></section>
+    
+  </body>
+</topic>

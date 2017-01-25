@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>besseli</title>
+<shortdesc>Модифицированная функция Бесселя первого рода порядка больше чем 2.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>y = <funcname>besseli</funcname>(v, x);</codeblock>
+    </section>
+<section><title>Аргументы:</title><p>v – порядок функции,</p>
+<p>x – аргумент функции.</p></section>
+<section><title>Описание:</title><p>Линейное обыкновенное дифференциальное уравнение второго порядка
+        вида: <image placement="break" href="images/besseli_1.png" id="image_itx_fgh_wx"
+          align="center"/>называется уравнением Бесселя. Число <i>v</i> называется порядком
+        уравнения Бесселя. Модифицированное уравнение Бесселя, которое получается из регулярного
+        уравнения Бесселя заменой x на –ix, имеет вид: <image placement="break"
+          href="images/besseli_2.png" id="image_nq1_pgh_wx" align="center"/> Решение данного
+        уравнения выражается через так называемые модифицированые функции Бесселя первого и второго
+        рода:</p><image placement="break" href="images/besseli_3.png" id="image_i4b_chh_wx"
+        align="center"/>где C<sub>1</sub> и C<sub>2</sub> − произвольные постоянные,
+        I<sub><i>v</i></sub>(x) и K<sub><i>v</i></sub>(x) обозначают модифицированные функции
+      Бесселя, соответственно, первого и второго рода.<p>Функция <codeph>besseli</codeph> вычисляет
+        модифицированную функцию Бесселя первого рода I<sub><i>v</i></sub>(x) порядка <i>v</i> от
+        аргумента x.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>y – значение модифицированной функции Бесселя первого рода I<sub><i>v</i></sub>(x) порядка
+          <i>v</i> от аргумента x.</p>
+    </section>  
+  </body>
+</topic>

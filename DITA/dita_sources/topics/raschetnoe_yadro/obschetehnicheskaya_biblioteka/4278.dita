@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика - Двухсторонний пружинный фиксатор поступательного движения </title>
+  <body>
+    <table id="table_zxn_jbs_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4278/image001.jpg" height="32" width="32"
+                id="image_ayn_jbs_qy"/></entry>
+            <entry>Механика - Двухсторонний пружинный фиксатор поступательного движения</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4278/image002.jpg" height="55" width="120"
+                id="image_byn_jbs_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>В блоке реализована модель относительного движения двух тел поступательного движения, между
+      которыми расположен пружинный фиксатор той или иной физической природы (механический,
+      магнитный, электрический и т.д.).</p>
+    <p>Тормозная сила в фиксаторе задается двумя способами:</p>
+    <ul id="ul_cyn_jbs_qy">
+      <li>· Аналитически</li>
+      <li>· Таблично</li>
+    </ul>
+    <p>В первом случае задаются:</p>
+    <table id="table_dyn_jbs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4278/image003.gif" height="22" width="38"
+                id="image_eyn_jbs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Максимальное значение тормозной силы</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4278/image004.gif" height="22" width="11"
+                id="image_fyn_jbs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Ширина зоны торможения</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Тормозная сила вычисляется аналитически. Вид графика тормозной силы представлен на
+      рисунке:</p>
+    <p><image href="images_old/4278/image005.jpg" height="356" width="413" id="image_gyn_jbs_qy"/></p>
+    <p>Во втором случае тормозная сила задается как табличная функция относительного перемещения.
+      При этом рекомендуется соблюдать зеркальную симметрию, т.е. <image
+        href="images_old/4278/image006.gif" height="22" width="125" id="image_hyn_jbs_qy"/>, чтобы
+      предотвратить диссипацию энергии.</p>
+    <p>В модели блока также учитывается трение. Уравнения модели имеют следующий вид:</p>
+    <p><image href="images_old/4278/image007.gif" height="22" width="138" id="image_iyn_jbs_qy"/></p>
+    <p><image href="images_old/4278/image008.gif" height="43" width="90" id="image_jyn_jbs_qy"/></p>
+    <p> </p>
+    <table id="table_kyn_jbs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>B</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения</entry>
+          </row>
+          <row>
+            <entry>V</entry>
+            <entry>-</entry>
+            <entry>Относительная скорость</entry>
+          </row>
+          <row>
+            <entry>FC</entry>
+            <entry>-</entry>
+            <entry>Суммарный тормозная сила</entry>
+          </row>
+          <row>
+            <entry>F</entry>
+            <entry>-</entry>
+            <entry>Тормозная сила</entry>
+          </row>
+          <row>
+            <entry>S</entry>
+            <entry>-</entry>
+            <entry>Положение</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Входные порты блока:</b></p>
+    <p>Блок имеет два механических порта (R и C) поступательного движения.</p>
+    <p> </p>
+    <p><b>Выходные порты блока – отсутствуют.</b></p>
+    <p> </p>
+    <p><b>Свойства блока:</b></p>
+    <table id="table_lyn_jbs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Mode</entry>
+            <entry>-</entry>
+            <entry>Способ задания тормозной силы</entry>
+          </row>
+          <row>
+            <entry>Fmax</entry>
+            <entry>-</entry>
+            <entry>Максимальная тормозная сила,<image href="images_old/4278/image009.gif" height="22"
+                width="15" id="image_myn_jbs_qy"/></entry>
+          </row>
+          <row>
+            <entry>D</entry>
+            <entry>-</entry>
+            <entry>Ширина зоны торможения, м</entry>
+          </row>
+          <row>
+            <entry>Fx</entry>
+            <entry>-</entry>
+            <entry>Массив координат зоны торможения, м</entry>
+          </row>
+          <row>
+            <entry>Ty</entry>
+            <entry>-</entry>
+            <entry>Массив тормозной силы, <image href="images_old/4278/image010.gif" height="22"
+                width="11" id="image_nyn_jbs_qy"/></entry>
+          </row>
+          <row>
+            <entry>B</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения ,<image href="images_old/4278/image011.gif" height="29" width="17"
+                id="image_oyn_jbs_qy"/></entry>
+          </row>
+          <row>
+            <entry>X0</entry>
+            <entry>-</entry>
+            <entry>Начальное положение, м</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_pyn_jbs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry><i>V</i></entry>
+            <entry>-</entry>
+            <entry>Относительная скорость, м/с</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4278/image012.gif" height="22" width="12"
+                id="image_qyn_jbs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Тормозная сила, <image href="images_old/4278/image010.gif" height="22" width="11"
+                id="image_ryn_jbs_qy"/></entry>
+          </row>
+          <row>
+            <entry>S</entry>
+            <entry>-</entry>
+            <entry>Положение, м</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

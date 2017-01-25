@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setfontprop</title>
+<shortdesc>Функция установки значения цвета или размера шрифта для объекта на схеме.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setfontprop</funcname>(name, par, val);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>name – имя объекта,</p>
+      <p>par – строка, определяющая название свойства объекта, “color” или “size”.</p>
+      <p>val – значение свойства объекта.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setfontprop(name, par, val)</codeph> – функция установки значения цвета или размера
+        шрифта для объекта с именем <codeph>name</codeph> на схеме. При установке значения цвета
+        шрифта аргумент <codeph>par</codeph> задается строкой “color”, при установке значения
+        размера шрифта аргумент <codeph>par</codeph> задается строкой “size”.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> namec = "color"; 
+<kword>var</kword> names = "size";
+<kword>var</kword> c:<rword>integer</rword>;
+c = <funcname>rgbtocolor</funcname>(0, 255, 0);
+<funcname>setfontprop</funcname>(TextLabel1, namec, с);
+<funcname>setfontprop</funcname>(TextLabel1, names, 12);</codeblock></section>
+<p>Происходит установка зеленого цвета и размера 12 шрифта для объекта <codeph>TextLabel1</codeph>. </p>  
+  </body>
+</topic>

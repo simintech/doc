@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>uppercase</title>
+<shortdesc>Функция перевода символов строки в верхний регистр.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>s = <funcname>uppercase</funcname>(str);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>str – строка.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>uppercase(str)</codeph> – функция переводит все символы строки в верхний регистр.
+        Работает только с латинскими символами.</p></section>
+<section>
+      <title>Результат:</title>
+      <p><i>s</i>– строка, все символы которой в верхнем регистре.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword>
+str:<rword>string</rword> = "String1";
+s = <funcname>uppercase</funcname>(str);    </codeblock></section>
+<p>В результате переменная <codeph>s</codeph> будет содержать строку “STRING1”. </p>  
+  </body>
+</topic>

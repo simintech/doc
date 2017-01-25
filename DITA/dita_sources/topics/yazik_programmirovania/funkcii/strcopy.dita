@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>strcopy</title>
+<shortdesc>Функция копирования части строки.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>sub_str = <funcname>strcopy</funcname>(str, indx, count);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>str – начальная строка,</p>
+      <p>indx – номер символа в строке, начиная с которого копируется часть строки,</p>
+      <p>count – количество копируемых символов.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>strcopy( str, indx, count)</codeph> – функция копирования части строки размером
+          <codeph>count</codeph> символов из строки <codeph>str</codeph>, начиная с номера символа
+          <codeph>indx</codeph>. Нумерация символов в строке начинается с единицы. Скопированная
+        часть строки возвращается функцией в строку <codeph>sub_str</codeph>. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>sub_str – скопированная строка. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword>
+str:<rword>string</rword> = "string1";
+sub_str = <funcname>strcopy</funcname>(str, 3, 4);</codeblock></section>
+<p>В результате переменной <codeph>sub_str</codeph> будет содержать строку "ring".</p>  
+  </body>
+</topic>

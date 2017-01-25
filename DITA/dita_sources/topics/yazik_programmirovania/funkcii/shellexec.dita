@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>shellexec </title>
+<shortdesc>Функция выполнения произвольной команды оболочки OC Windows.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>shellexec</funcname>(op, file, param, path);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>op – строка с выполняемой командой,</p>
+      <p>prt_file – строка с именем файла,</p>
+      <p>par – параметры выполняемой команды,</p>
+      <p>path – директория, где расположен файл. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>shellexec</codeph> – функция выполняет произвольную команду оболочки ОС Windows.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><funcname>shellexec</funcname>("open", "help.htm", "", "");</codeblock></section>
+<p>В примере производится открытие файла <filepath>help.htm</filepath> из текущего каталога. </p>  
+  </body>
+</topic>

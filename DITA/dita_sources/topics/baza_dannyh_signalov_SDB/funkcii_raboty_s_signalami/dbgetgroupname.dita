@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>dbgetgroupname </title>
+<shortdesc>Чтение имени группы в категории.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>gn = <funcname>dbgetgroupname</funcname>(cat, nmb);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>cat – имя категории;</p>
+      <p>nmb – номер группы в категории. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>dbgetgroupname</codeph> – функция позволяет получить имя группы, с номером
+          <codeph>nmb</codeph>, которая находится внутри категории <codeph>cat</codeph> подключенной
+        базы сигналов.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>gn - функция возвращает строковое значение, соответствующее имени указанной группы. В
+        случае отсутствия указанной группы или категории, возвращается пустое строковое значение
+        "".</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>gn = <funcname>dbgetgroupname</funcname>("Датчики", 3);</codeblock></section>
+<p>В результате выполнения данного скрипта, переменная gn получит текстовое значение,
+      соответствующее имени группы с номером 3 в категории «Датчики». </p>  
+  </body>
+</topic>

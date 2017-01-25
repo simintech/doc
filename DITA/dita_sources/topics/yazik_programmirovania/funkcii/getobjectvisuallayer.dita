@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getobjectvisuallayer </title>
+<shortdesc>Функция получения флага наличия визуального слоя для объекта в графическом контейнере по
+    его идентификатору.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>flag = <funcname>getobjectvisuallayer</funcname>(num, obj_id);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>num – номер визуального слоя объекта,</p>
+      <p>obj_id – идентификатор объекта. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getobjectvisuallayer</codeph> – функция получения флага наличия визуального слоя c
+        номером <codeph>num</codeph> для объекта в графическом контейнере по его идентификатору
+          <codeph>obj_id</codeph>. Идентификатор объекта может быть получен функцией
+          <codeph>getobj</codeph> и имеет тип указателя на объект. Номер слоя задается в диапазоне
+        от 1 до 16. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>flag – флага наличия визуального слоя для объекта. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock> flag = <funcname>getobjectvisuallayer</funcname>(1, Line1);</codeblock></section>  
+  </body>
+</topic>

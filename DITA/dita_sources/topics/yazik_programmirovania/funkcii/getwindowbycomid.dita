@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getwindowbycomid </title>
+<shortdesc>Функция получения идентификатора окна проекта по уникальному
+    COM-идентификатору.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>wnd_id = <funcname>getwindowbycomid</funcname>(com_id);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>com_id – COM–идентификатор окна. </p>
+    </section>
+<section><title>Описание:</title>
+<p><funcname>getwindowbycomid</funcname> – функция получения идентификатора окна проекта по его
+        уникальному COM-идентификатору. Если окно есть – результат не нулевой. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>wnd_id – идентификатор окна проекта. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>wnd_id = <funcname>getwindowbycomid</funcname>(com_id);</codeblock></section>  
+  </body>
+</topic>

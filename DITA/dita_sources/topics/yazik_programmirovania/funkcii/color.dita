@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>color</title>
+<shortdesc>Функция линейной интерполяция цвета.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>c = <funcname>color</funcname>(x, min_x, max_x, min_c, max_c);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>x – значение аргумента,</p>
+      <p>min_x – минимальное значение аргумента,</p>
+      <p>max_x – максимальное значение аргумента,</p>
+      <p>min_c – минимальное значение цвета, тип color,</p>
+      <p>max_c – максимальное значение цвета тип color.</p>
+    </section>
+<section>
+      <title>Описание:</title>
+      <p><codeph>color(x, min_x, max_x, min_c, max_c)</codeph> – функция вычисления линейной
+        интерполяция цвета, где аргумент заключён в интервале от min_x до max_x, а цвет варьируется
+        в интервале от min_c до max_c.</p>
+    </section>
+<section>
+      <title>Результат:</title>
+      <p>с – цвет, полученный в результате интерполяции.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> startcolor:<rword>color</rword> =  1;
+<kword>var</kword> endcolor:<rword>color</rword> = 255;
+<kword>var</kword> c: <rword>integer</rword>;
+c = <funcname>color</funcname>(0.5,0,1,startcolor,endcolor);</codeblock></section>
+<p>В результате переменной c будет присвоено значение 128.</p>  
+  </body>
+</topic>

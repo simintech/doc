@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>doneobject </title>
+<shortdesc>Функция деинициализации объекта с определенным именем.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>doneobject</funcname>(obj_name);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>obj_name – имя объекта.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>doneobject</codeph> – функция принудительно деинициализирует объект по его имени
+          <codeph>obj_name</codeph>.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><funcname>doneobject</funcname>(PolyLine1);</codeblock></section>  
+  </body>
+</topic>

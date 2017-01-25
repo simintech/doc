@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Функции</title>
+  <body>
+    <p>В настоящем подразделе описаны блоки библиотеки «Функции». К данной библиотеке отнесены
+      типовые блоки, реализующие функциональные преобразования входных сигналов. </p>
+  </body>
+</topic>

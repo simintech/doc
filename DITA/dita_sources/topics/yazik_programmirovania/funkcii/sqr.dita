@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>sqr</title>
+<shortdesc>Функция получения комплексного квадратного корня вещественного числа.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>y = <funcname>sqr</funcname>(x);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>x – входное значение. Имеет тип "целое число".</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>sqr(x)</codeph> – функция получения комплексно квадратного корня вещественного числа
+        x.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>y – полученное значение. Имеет тип «комплексное число».</p>
+    </section>  
+<section><title>Пример:</title><codeblock>y = <funcname>sqr</funcname>(16);</codeblock></section>
+<p>В результате переменной y будет присвоено значение 4+0i.</p>   
+  </body>
+</topic>

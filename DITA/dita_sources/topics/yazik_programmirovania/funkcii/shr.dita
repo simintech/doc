@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>shr</title>
+  <shortdesc>Оператор побитового сдвига вправо.</shortdesc>
+<body>
+<section><title>Синтаксис:</title><codeblock>c = a <funcname>shr</funcname> b;</codeblock></section>
+<section><title>Аргументы:</title><p>a – операнд побитового сдвига вправо,</p>
+<p>b – количество сдвигов.</p></section>
+<section><title>Описание:</title><p><codeph>shr</codeph> – оператор побитового сдвига вправо. Все единичные биты операнда сдвигаются на заданное количество битов вправо, 31-й бит определяет знак числа.</p></section>
+<section><title>Результат:</title><p>c – результат операции.</p></section>  
+<section><title>Пример:</title><codeblock>a = 8;<comment>//1000</comment>
+b = 3;
+c = a <funcname>shr</funcname> b;<comment>//0001</comment></codeblock></section>
+<p>В результате переменной z будет присвоено значение 1.</p>   
+  </body>
+</topic>

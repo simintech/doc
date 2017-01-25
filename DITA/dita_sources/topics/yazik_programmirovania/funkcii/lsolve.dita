@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+
+<topic id="topic_v4b_tyc_rf">
+  <title>lsolve</title>
+  <shortdesc>Функция решения системы линейных алгебраических уравнений (СЛАУ).</shortdesc>
+<body>
+  <section><title>Синтаксис:</title><codeblock>Z = <funcname>lsolve</funcname>(X,Y);</codeblock></section>
+ <section><title>Аргументы:</title><p>X – входной массив элементов [[a<sub>11</sub>,
+          ..,a<sub>1n</sub>],…,[ a<sub>m1</sub>, ..,a<sub>mn</sub>]] , определяющий матрицу системы
+        линейных алгебраических уравнений А,</p> Y – входной массив элементов [b<sub>11</sub>,
+        ..,b<sub>1m</sub>], определяющий вектор B системы линейных алгебраических уравнений А.
+        <image placement="break" href="images/lsolve_1.png" id="image_ncp_njg_tx"
+        class="- topic/image " align="center"/>
+    </section>
+
+  <section><title>Описание:</title>
+<p><codeph>lsolve(X,Y)</codeph> – функция решения системы линейных алгебраических уравнений (СЛАУ).</p>
+<p>Входные массивы X, Y могут задаваться:</p>
+<ul><li>как переменные типа массив, определенные ранее:</li></ul>
+<p><codeph>Z = lsolve(X, Y)</codeph>;</p>
+<ul><li>как переменные типа массив, состоящие из переменных double, определенных ранее:</li></ul>
+<p><codeph>Z = lsolve([[x<sub>11</sub>,x<sub>12</sub>,x<sub>13</sub>,x<sub>14</sub>],[x<sub>21</sub>,x<sub>22</sub>,x<sub>23</sub>,x<sub>24</sub>], [x<sub>31</sub>,x<sub>32</sub>,x<sub>33</sub>,x<sub>34</sub>], [x<sub>41</sub>,x<sub>42</sub>,x<sub>43</sub>,x<sub>44</sub>]],[y<sub>1</sub>,y<sub>2</sub>,y<sub>3</sub>,y<sub>4</sub>])</codeph>;</p>
+<p><codeph>Z = lsolve(([[x<sub>11</sub>,x<sub>12</sub>,x<sub>13</sub>,x<sub>14</sub>],[x<sub>21</sub>,x<sub>22</sub>,x<sub>23</sub>,x<sub>24</sub>], [x<sub>31</sub>,x<sub>32</sub>,x<sub>33</sub>,x<sub>34</sub>], [x<sub>41</sub>,x<sub>42</sub>,x<sub>43</sub>,x<sub>44</sub>]],Y)</codeph>;</p>
+<p><codeph>Z = lsolve(X,[y<sub>1</sub>,y<sub>2</sub>,y<sub>3</sub>,y<sub>4</sub>])</codeph>;</p>
+<ul><li>как постоянные массивы:</li></ul>
+<p><codeph>Z = lsolve([[1, 2],[2, -3]],Y)</codeph>;</p>
+<p><codeph>Z = lsolve(X,[3, -1])</codeph>;</p>
+<p><codeph>Z = lsolve([[1, 2],[2, -3]], [3,-1])</codeph>;</p></section>
+<section><title>Результат:</title><p>Z – выходной массив элементов [x1, ..,xn], определяющий вектор решений системы линейных алгебраических уравнений А.</p></section>  
+<section><title>Пример:</title><codeblock><comment>//массивы элементов матрицы</comment>
+<kword>const</kword> X = [[1, 2], [2, -3]];
+Y = <funcname>lsolve</funcname>(X, [3, -1]);</codeblock></section>
+<p>В результате элементам массива Y будут присвоены значения [1, 1], являющиеся решениями системы уравнений:</p>  
+<p>x<sub>1</sub>+2·x<sub>2</sub>=3</p>
+<p>2·x<sub>1</sub>-3·x<sub>2</sub>=-1 </p> 
+</body>
+</topic>

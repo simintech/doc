@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика - Ременная передача </title>
+  <body>
+    <table id="table_a2m_n2s_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4257/image001.jpg" height="32" width="32"
+                id="image_b2m_n2s_qy"/></entry>
+            <entry>Механика - Ременная передача</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4257/image002.jpg" height="63" width="120"
+                id="image_c2m_n2s_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>В блоке реализована модель ременной передачи, в состав которой входя два шкива (А и B),
+      связанных плоским или клиновидным ремнем. Возможно задание двух типов обхвата шкивов ремнем:
+      открытый и перекрещенный (см. рисунок). Для открытого обхвата угол обхвата шкивов вычисляется
+      следующим образом:</p>
+    <p><image href="images_old/4257/image003.gif" height="42" width="230" id="image_d2m_n2s_qy"/></p>
+    <p><image href="images_old/4257/image004.gif" height="42" width="231" id="image_e2m_n2s_qy"/></p>
+    <p>Для перекрещенного типа обхвата зависимость для угла обхвата имеет следующий вид:</p>
+    <p><image href="images_old/4257/image005.gif" height="42" width="274" id="image_f2m_n2s_qy"/></p>
+    <p><image href="images_old/4257/image006.jpg" height="159" width="240" id="image_g2m_n2s_qy"/></p>
+    <p><image href="images_old/4257/image007.jpg" height="126" width="249" id="image_h2m_n2s_qy"/></p>
+    <p>Рисунок 1</p>
+    <p>Блок является субмоделью, внутренняя структурная схема которой представлена на рисунке 2.</p>
+    <p><image href="images_old/4257/image008.jpg" height="310" width="527" id="image_i2m_n2s_qy"/></p>
+    <p>Рисунок 2</p>
+    <p> </p>
+    <p><b>Входные порты блока - отсутствуют</b></p>
+    <p> </p>
+    <p><b>Выходные порты блока:</b></p>
+    <p>Блок имеет два механических ненаправленный порта вращательного движения (A и B),
+      соответствующие шкивам A и B. </p>
+    <p> </p>
+    <p><b>Свойства блока:</b></p>
+    <table id="table_j2m_n2s_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry namest="col1" nameend="col3">РЕМЕНЬ</entry>
+          </row>
+          <row>
+            <entry>DType</entry>
+            <entry>-</entry>
+            <entry>Тип обхвата шкивов (открытый/перекрещенный)</entry>
+          </row>
+          <row>
+            <entry>BType</entry>
+            <entry>-</entry>
+            <entry>Тип ремня (плоский/клиновидный)</entry>
+          </row>
+          <row>
+            <entry>N</entry>
+            <entry>-</entry>
+            <entry>Число ремней</entry>
+          </row>
+          <row>
+            <entry>Fi</entry>
+            <entry>-</entry>
+            <entry>Угол клина ремня, град</entry>
+          </row>
+          <row>
+            <entry>Sab</entry>
+            <entry>-</entry>
+            <entry>Расстояние между шкивами, м</entry>
+          </row>
+          <row>
+            <entry>M</entry>
+            <entry>-</entry>
+            <entry>Масса ремня на единицу длины, кг/м</entry>
+          </row>
+          <row>
+            <entry>K</entry>
+            <entry>-</entry>
+            <entry>Жесткость ремня, н/м</entry>
+          </row>
+          <row>
+            <entry>B</entry>
+            <entry>-</entry>
+            <entry>Коэффициент демпфирования, н*с/м</entry>
+          </row>
+          <row>
+            <entry>X0</entry>
+            <entry>-</entry>
+            <entry>Начальное натяжение, н</entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col3">ШКИВ А</entry>
+          </row>
+          <row>
+            <entry>Ra</entry>
+            <entry>-</entry>
+            <entry>Радиус шкива, м</entry>
+          </row>
+          <row>
+            <entry>Ja</entry>
+            <entry>-</entry>
+            <entry>Момент инерции, кг*м</entry>
+          </row>
+          <row>
+            <entry>Ba</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения подшипников, н*м*с/рад</entry>
+          </row>
+          <row>
+            <entry>Wa0</entry>
+            <entry>-</entry>
+            <entry>Начальная угловая скорость, рад/с</entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col3">ШКИВ А</entry>
+          </row>
+          <row>
+            <entry>Rb</entry>
+            <entry>-</entry>
+            <entry>Радиус шкива, м</entry>
+          </row>
+          <row>
+            <entry>Jb</entry>
+            <entry>-</entry>
+            <entry>Момент инерции, кг*м</entry>
+          </row>
+          <row>
+            <entry>Bb</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения подшипников, н*м*с/рад</entry>
+          </row>
+          <row>
+            <entry>Wb0</entry>
+            <entry>-</entry>
+            <entry>Начальная угловая скорость, рад/с</entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col3">ПАРАМЕТРЫ КОНТАКТА</entry>
+          </row>
+          <row>
+            <entry>Vth</entry>
+            <entry>-</entry>
+            <entry>Порог скорости, м/с</entry>
+          </row>
+          <row>
+            <entry>Mu</entry>
+            <entry>-</entry>
+            <entry>Коэффициент контактного трения</entry>
+          </row>
+          <row>
+            <entry>Tmax</entry>
+            <entry>-</entry>
+            <entry>Максимальное натяжение, н</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_k2m_n2s_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Тa</entry>
+            <entry>-</entry>
+            <entry>Момент шкив А, н*м</entry>
+          </row>
+          <row>
+            <entry>Wa</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость шкив А, рад/с</entry>
+          </row>
+          <row>
+            <entry>Тb</entry>
+            <entry>-</entry>
+            <entry>Момент шкив B н*м</entry>
+          </row>
+          <row>
+            <entry>Wb</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость шкив B, рад/с</entry>
+          </row>
+          <row>
+            <entry>Fb</entry>
+            <entry>-</entry>
+            <entry>Натяжение ремня, н</entry>
+          </row>
+          <row>
+            <entry>Vb</entry>
+            <entry>-</entry>
+            <entry>Cкорость ремня, м/с</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

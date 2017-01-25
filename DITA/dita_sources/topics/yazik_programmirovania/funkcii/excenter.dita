@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>excenter</title>
+<shortdesc>Функция вычисления расстояния от точки до прямой.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>s = <funcname>excenter</funcname>(P1, P2, P3);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>P1 – координаты первой точки, задающей прямую. Тип point,</p>
+      <p>P2 – координаты второй точки, задающей прямую. Тип point,</p>
+      <p>P3 – координаты точки. Тип point.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>excenter(P1, P2, P3)</codeph> – функция вычисления расстояния от точки P3 до прямой,
+        заданной точками P1, P2. Входные значения могут задаваться как заранее определенные
+        переменные или задаваться выражением (x, y), где x и y координаты точки.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>s – вычисленное расстояние.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>const</kword> p1 = (1,3),
+p2 = (4,6),
+p3 = (7,2);
+s = <funcname>excenter</funcname>(p1, p2, p3);</codeblock></section>
+<p>В результате переменной s будет присвоено значение 4.2.</p>  
+  </body>
+</topic>

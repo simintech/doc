@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setsystemvar </title>
+<shortdesc>Функция установки значения системной переменной с определенным именем.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setsystemvar</funcname>(name_str, var_str);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>name_str – строка, содержащая имя системной переменной,</p>
+      <p>var_str – строка, содержащая значение системной переменной. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setsystemvar</codeph> – функция установки системной переменной <codeph>name_str</codeph>
+        значения, определяемого строкой <codeph>var_str</codeph>. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><funcname>setsystemvar</funcname>("a","1000");</codeblock></section>
+<p>В результате выполнения данного скрипта системной переменной a будет присвоено значение «1000». </p>  
+  </body>
+</topic>

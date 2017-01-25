@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>dayof</title>
+<shortdesc>Функция извлечения значения дня из значения даты и времени в системном
+    формате.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>dd = <funcname>dayof</funcname>(date);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>date – дата и время в системном формате. Тип double.</p>
+    </section>
+<section><title>Описание:</title><codeph>dayof(date)</codeph> – функция извлечения значения дня из
+      значения даты и времени в системном формате. </section>
+<section>
+      <title>Результат:</title>
+      <p>dd – значение дня.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>date = <funcname>now</funcname>; 
+dd = <funcname>dayof</funcname>(date);</codeblock></section>
+<p>В результате выполнения примера переменной <codeph>date</codeph> будет присвоено значение текущей
+      даты и времени типа double, переменная <codeph>dd</codeph> будет содержать значение, равное
+      значению текущего дня. </p>  
+  </body>
+</topic>

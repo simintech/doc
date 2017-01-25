@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>initialization</title>
+<shortdesc>Задание секции инициализации.</shortdesc>
+<body>
+<section><title>Синтаксис:</title>
+<codeblock><kword>initialization</kword>
+&lt;операция 1>;
+....
+&lt;операция n>;
+end; </codeblock></section>
+<section><title>Описание:</title>
+<p>Задание секции инициализации. Операция внутри секции будут выполнены только один раз при запуске вычислений. В пределах блока можно задавать несколько секций инициализации. Операции вне этих секций выполняются на каждом шаге.</p></section>
+<section><title>Пример:</title><codeblock><kword>var</kword>: i, id;
+<kword>initialization</kword>//начальная инициализация       
+i=1;
+  <kword>while</kword> i&lt;=  <funcname>getobjcount</funcname> <kword>do</kword>  <kword>begin</kword> //для всех объектов на схеме
+id = <funcname>getobj</funcname>(i); <comment>//получаем идентификатор объекта</comment>
+//получаем значение свойства <kword>tag</kword> объекта
+if <funcname>getprop</funcname>(id, "tag") = 1 <kword>then</kword> <kword>begin</kword>     
+<comment>//изменим значения свойств</comment>
+<funcname>setprop</funcname>(id,"tbl_name",submodel.tbl_name);
+<funcname>setprop</funcname>(id,"ob_name",submodel.ob_name);
+<kword>end</kword>;
+i = i + 1;   
+<kword>end</kword>;                 
+<kword>end</kword>;</codeblock>
+   </section>
+    <p>В результате выполнения данного скрипта всем блокам субмодели, свойство tag которых 
+      выставлено пользователем в 1, будут присвоены значения свойств «tbl_name» и «ob_name», 
+      взятые из аналогичных свойств субмодели (т.е. из блока более высокого уровня, чем уровень вложенности данных блоков).</p>
+  </body>
+</topic>

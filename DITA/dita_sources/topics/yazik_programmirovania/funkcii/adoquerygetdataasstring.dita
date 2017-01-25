@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>adoquerygetdataasstring </title>
+<shortdesc>Функция позволяет получить данные из запроса в строковом виде по номеру
+    столбца.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>data = <funcname>adoquerygetdataasstring</funcname>(&lt;id объекта доступа к БД>, &lt;номер столбца начиная с 0>);</codeblock>
+    </section>  
+  </body>
+</topic>

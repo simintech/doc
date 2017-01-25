@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>sign</title>
+  <shortdesc>Функция определяет знак числа.</shortdesc>
+  <body>
+<section><title>Синтаксис:</title><codeblock>s1 = <funcname>sign</funcname>(x);</codeblock></section>
+<section><title>Аргументы:</title><p>x – входное значение, число.</p></section>  
+<section><title>Описание:</title><p><codeph>sign(x)</codeph> –функция определяет знак числа.</p></section>
+<section><title>Результат:</title><p>s1 = +1 – знак положительного числа, тип boolean;</p>
+<p>s1 = -1 – знак отрицательного числа, тип boolean.</p></section>     
+<section><title>Пример:</title><codeblock><kword>var</kword> s:<rword>double</rword>, i1:<rword>integer</rword>;
+<kword>Initialization</kword>;
+s=36.6;
+i1=<funcname>sign</funcname>(s);
+<kword>end</kword>;</codeblock></section>
+<p>В результате переменной i1 будет присвоено значение +1.</p>    
+  </body>
+</topic>

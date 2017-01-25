@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setitem</title>
+<shortdesc>Функция замены строки в тексте с разделителями по номеру.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>str_tm = <funcname>setitem</funcname>(str_t, indx, str);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>str_t – строка, содержащая текст с разделителями «конец строки»,</p>
+      <p>indx – номер заменяемой строки в строке с текстом,</p>
+      <p>str – строка, на которую происходит замена.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setitem(str_t, indx, str)</codeph> – функция замены строки (фрагмента текста) с номером
+          <codeph>indx</codeph> в строке, содержащей текст, разделенный разделителями «конец строки»
+        или «перевод каретки». Замена происходит на строку <codeph>str</codeph>. Нумерация
+        фрагментов в тексте начинается с единицы.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>str_tm – возвращаемая строка.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword>       
+str_t:<rword>string</rword> = "string1" + <funcname>chr</funcname>(13) + "string2",
+str:<rword>string</rword> = "string3";
+<comment>//заменим в тексте строку с номером 2</comment>
+str_tm = <funcname>setitem</funcname>(str_t, 2, str);     </codeblock></section>
+<p>В результате переменная <codeph>str_tm</codeph> будет содержать строку ”string1\rstring3”, где \r
+      – разделитель «перевод каретки». </p>  
+  </body>
+</topic>

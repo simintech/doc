@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>findendport</title>
+<shortdesc>Функция получения конечного входного порта по выходному.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>in_p = <funcname>findendport</funcname>(port_id);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>port_id – ссылка (идентификатор) на выходной порт.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>findendport</codeph> – позволяет определить конечный входного порта по заданному
+        идентификатору начального выходного порта (port_id). Входной и выходной порты должны быть
+        соединены линией связи.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>Функция возвращает число типа integer, являющееся идентификатором входного порта,
+        соединенного линией связи с указанным выходной порт. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>p_out = <funcname>getblockportid</funcname>(macro2,2);  <comment>//получение идентификатора выходного порта</comment>
+p_in = <funcname>findendport</funcname>(p_out); <comment>//получение идентификатора конечного входного порта</comment></codeblock></section>
+<p>В результате выполнения данного скрипта, переменная <codeph>p_in</codeph> получит значение
+      идентификатора, соответствующего конечному входному порту, с которым соединен начальный
+      выходной порт <codeph>p_out</codeph> с помощью линии связи. </p>  
+  </body>
+</topic>

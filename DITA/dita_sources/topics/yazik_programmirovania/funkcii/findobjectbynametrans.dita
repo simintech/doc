@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>findobjectbynametrans </title>
+<shortdesc>Функция поиска объекта по заданному имени c транслитерацией.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>obj_id = <funcname>findobjectbynametrans</funcname>(name);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>name – строка с именем объекта. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>findobjectbynametrans</codeph> – функция выполняет поиск объекта по заданному имени
+          <codeph>name</codeph> с транслитерацией в проекте.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>obj_id – идентификатор объекта. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> id: <rword>integer</rword>;
+<kword>initialization</kword>
+<comment>//Установка идентификатора мигания</comment>
+id = <funcname>findobjectbynametrans</funcname>("FillRect");
+stick = <funcname>tickcount</funcname>; 
+<kword>end</kword>;
+<comment>//Мигание в течение заданного времени</comment>
+<kword>if</kword> id &lt;> 0 <kword>then begin</kword>
+<funcname>setvisible</funcname>(id,<funcname>flash</funcname>(1000)); 
+<kword>if</kword> <funcname>tickcount</funcname> – stick > 5000 <kword>then begin</kword>
+<funcname>setvisible</funcname>(id, 1); 
+id = 0;    
+<kword>end</kword>;  
+<kword>end</kword>;</codeblock></section>
+<p>В примере происходит поиск объекта и установка его мигания. </p>  
+  </body>
+</topic>

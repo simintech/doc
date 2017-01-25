@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика - Однонаправленная муфта  </title>
+  <body>
+    <table id="table_vl3_lcs_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4270/image001.jpg" height="32" width="32"
+                id="image_wl3_lcs_qy"/></entry>
+            <entry>Механика - Однонаправленная муфта</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4270/image002.jpg" height="63" width="120"
+                id="image_xl3_lcs_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>В блоке реализована модель однонаправленной муфты. В состав модели входят ведущая полумуфта B
+      и ведомая полумуфта A. Схематически возможная конструкция муфты приведена на рисунке 1, однако
+      в блоке реализована идеальная модель муфты.</p>
+    <p><image href="images_old/4270/image003.jpg" height="346" width="407" id="image_yl3_lcs_qy"/></p>
+    <p>Рисунок 1</p>
+    <p>Уравнения модели имеют следующий вид:</p>
+    <p><image href="images_old/4270/image004.gif" height="22" width="109" id="image_zl3_lcs_qy"/>
+    </p>
+    <p><image href="images_old/4270/image005.gif" height="22" width="200" id="image_am3_lcs_qy"/></p>
+    <p><image href="images_old/4270/image006.gif" height="22" width="78" id="image_bm3_lcs_qy"/></p>
+    <p><image href="images_old/4270/image007.gif" height="22" width="278" id="image_cm3_lcs_qy"/></p>
+    <p><image href="images_old/4270/image008.gif" height="22" width="292" id="image_dm3_lcs_qy"/>,
+      где</p>
+    <table id="table_em3_lcs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>TR</entry>
+            <entry>-</entry>
+            <entry>Внутренний момент на порт R</entry>
+          </row>
+          <row>
+            <entry>TH</entry>
+            <entry>-</entry>
+            <entry>Внутренний момент на порт H</entry>
+          </row>
+          <row>
+            <entry>WR</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость порт R</entry>
+          </row>
+          <row>
+            <entry>WH</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость порт H</entry>
+          </row>
+          <row>
+            <entry>W</entry>
+            <entry>-</entry>
+            <entry>Относительная угловая скорость</entry>
+          </row>
+          <row>
+            <entry>B</entry>
+            <entry>-</entry>
+            <entry>Коэффициент вязкого трения</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Входные порты блока:</b></p>
+    <p>Блок имеет два механических ненаправленных порта вращательного движения, через которые на
+      вход блока поступают моменты от присоединенных блоков, а на выход - скорости портов H и R. </p>
+    <p> </p>
+    <p><b>Выходные порты блока - отсутствуют</b></p>
+    <p> </p>
+    <p><b>Свойства блока:</b></p>
+    <table id="table_fm3_lcs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>B</entry>
+            <entry>-</entry>
+            <entry>Коэффициент демпфирования, н*м*c/рад</entry>
+          </row>
+          <row>
+            <entry>Dir</entry>
+            <entry>-</entry>
+            <entry>Направление передачи момента (от порта H к R/ от порта R к H)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_gm3_lcs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>W</entry>
+            <entry>-</entry>
+            <entry>Относительная угловая скорость, рад/с</entry>
+          </row>
+          <row>
+            <entry>T</entry>
+            <entry>-</entry>
+            <entry>Момент, н*м</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p> </p>
+  </body>
+</topic>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>startsecondproject </title>
+<shortdesc>Функция запуска вторичного проекта из текущего.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>startsecondproject</funcname>(prt_file, start_fl, bd_fl);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>prt_file – строка с именем файла, содержащего проект,</p>
+      <p>start_fl – флаг запуска проекта,</p>
+      <p>bd_fl – флаг объединения баз данных.</p>
+    </section>
+<section><title>Описание:</title>
+<p>startsecondproject(prt_file, start_fl, bd_fl) – функция загружает и открывает вторичный проект,
+        находящийся в файле prt_file, из текущего проекта. Если флаг start_fl установлен равным 1,
+        то в случае, если проект уже открыт, активизируется его окно. Если флаг bd_fl установлен
+        равным 1, то происходит объединение базы сигналов запускаемого проекта с базой сигналов
+        текущего.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><funcname>startsecondproject</funcname>("имя файла проекта.prt", 1, 1);</codeblock></section>  
+  </body>
+</topic>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getgraphicyscales </title>
+<shortdesc>Функция получения значения свойств графика «Минимум шкалы по оси Y» и «Максимум шкалы по
+    оси Y». </shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>val = <funcname>getgraphicyscales</funcname>(gid, num);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>gid – идентификатор объекта типа «График»,</p>
+      <p>num – номер шкалы объекта типа «График». </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getgraphicyscales(gid, num) </codeph>– функция получения значения свойств «Минимум шкалы
+        по оси Y» и «Максимум шкалы по оси Y» объекта типа «График» по идентификатору объекта
+          <codeph>gid</codeph> и номеру шкалы num. Идентификатор объекта может быть получен функцией
+          <codeph>getgraphicid(gr_name)</codeph> и имеет тип указателя на объект. Номер шкалы
+        соответствует номеру графика (начиная с 0) при многошкальном режиме отображения. Если
+        используется одна шкала, то номер шкалы можно указывать произвольно. Тип возвращаемого
+        значения – комплексное число, где действительная часть соответствует минимальному значению
+        шкалы, мнимая – максимальному.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>val – значение минимума и максимума шкалы графика по оси Y. Тип complex.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><comment>//получим идентификатор график</comment>
+gid = <funcname>getgraphicid</funcname>(plot);     
+<comment>//получим мин. и макс. шкалы по оси Y</comment>
+val = <funcname>getgraphicyscales</funcname>(gid, 1);        </codeblock></section>
+<p>В результате выполнения данного примера происходит получение идентификатора графика и получение
+      значений минимума и максимума первой шкалы графика по оси Y. </p>  
+  </body>
+</topic>

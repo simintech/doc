@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Векторный усилитель</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/3006.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/3006s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Весторизован | Си
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> Блок реализует функцию умножения (усиления) мгновенных значений элементов входного
+      векторного сигнала на соответствующие элементы заданного векторного коэффициента
+        усиления:<image placement="break" href="images/3006_1.png" align="center"
+        id="image_l3k_qwq_gy"/> где <i>y</i><sub>i</sub>(<i>t</i>) – i-ый элемент выходного
+      векторного сигнала блока <i>y</i>(<i>t</i>); <i>u</i><sub>i</sub>(<i>t</i>) – i-ый элемент
+      входного сигнала <i>u</i><sub>i</sub>(<i>t</i>), n≥1 – размерность входа и выхода,
+        <i>k</i><sub>i</sub> – i-ый элемент вектора коэффициентов усиления <i>k</i>. Размерность
+      выхода равна размерности входа и вектора коэффициентов усиления. </p>
+    <section><title>Входы</title>
+    <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>input</uicontrol> - порт для входного вектора.</li>
+        </ul>
+      </p></section>
+    <section><title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>output</uicontrol> - порт для результирующего вектора.</li>
+        </ul>
+      </p></section>
+    <section><title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Вектор коэффициентов усиления</uicontrol> - вектор коэффициентов усиления
+              k&#xA0;=&#xA0;[<i>k</i><sub>1</sub>, <i>k</i><sub>2</sub>, …,
+            <i>k</i><sub>n</sub>].</li>
+        </ul>
+      </p></section>
+    <section><title>Параметры</title>
+      <p>нет </p></section>
+    <note>
+      <ol id="ol_bt1_kxq_gy">
+        <li>Размерность выходного сигнала равна размерности входного сигнала и размерности вектора
+          коэффициентов усиления.</li>
+        <li>Именованные свойства могут быть заданы как локальные переменные модели (субмодели) в
+          скрипте на языке программирования, как глобальные сигналы проекта при помощи пункта
+          главного меню <cmdname>Сервис → Сигналы</cmdname>, или как внешние сигналы проекта при
+          помощи подключаемой базы сигналов.</li>
+      </ol>
+    </note>
+    
+  </body>
+</topic>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>tickcount </title>
+<shortdesc>Функция определения времени, прошедшего с момента запуска операционной
+    системы.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>time = <funcname>tickcount</funcname>;</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>нет</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>tickcount</codeph> – функция определения времени, прошедшего с момента запуска
+        операционной системы в миллисекундах. Может использоваться для подсчёта реальных временных
+        интервалов.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>time – время в миллисекундах.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> id: <rword>integer</rword>;      
+<kword>initialization</kword>        
+  <comment>//Установка идентификатора объекта для мигания</comment>
+  id = <funcname>findobjectbynametrans</funcname>("FillRect");       
+  stick = <funcname>tickcount</funcname>;                            
+<kword>end</kword>;                                            
+  <comment>//Мигание в течение заданного времени         </comment>
+<kword>if</kword> id &lt;> 0 <kword>then begin</kword>                           
+  <funcname>setvisible</funcname>(id, <funcname>flash</funcname>(1000));                  
+  <kword>if</kword> (<funcname>tickcount</funcname> – stick) > 5000 <kword>then begin</kword>      
+    <funcname>setvisible</funcname>(id,1);                           
+    id = 0;                                     
+  <kword>end</kword>;                                          
+<kword>end</kword>;                                            </codeblock></section>
+<p>В примере происходит установка мигания объекта с именем <codeph>FillRect</codeph> раз в секунду в
+      течении 5с.</p>  
+  </body>
+</topic>

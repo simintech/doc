@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>settransparentcolor</title>
+<shortdesc>Функция установки прозрачного цвета окна.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>settransparentcolor</funcname>(color);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>color – код цвета, аргумент типа integer.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>settransparentcolor(color)</codeph> – функция позволяет делать прозрачным необходимый
+        цвет внутри графического контейнера. Значение аргумента <codeph>color</codeph> может быть
+        получено с помощью функции <codeph>rgbtocolor</codeph>, используя код цвета в формате RGB.
+        Для удаления прозрачности цвета можно воспользоваться функцией
+          <codeph>restoreframeelements</codeph>, запомнив предварительно состояние окна функцией
+          <codeph>storeframeelements</codeph>.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>Функция возвращает значение 1 если прозрачный цвет был успешно установлен.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><funcname>settransparentcolor</funcname>(<funcname>rgbtocolor</funcname>(0,0,255));</codeblock></section>
+<p>В результате выполнения примера, внутри графического контейнера (например, в окне проекта) цвет,
+      соответствующий заданному RBG-коду будет прозрачным. </p>  
+  </body>
+</topic>

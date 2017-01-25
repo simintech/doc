@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>root</title>
+  <shortdesc>Функция вычисления корня произвольной степени вещественного или комплексного числа.</shortdesc>
+  <body>
+<section><title>Синтаксис:</title><codeblock>z = <funcname>root</funcname>(y, x);</codeblock></section>
+<section><title>Аргументы:</title><p>x – входное значение,</p>
+<p>y – степень корня.</p></section>    
+<section><title>Описание:</title>
+<p><codeph>root(x)</codeph> – функция вычисления корня произвольной степени вещественного или комплексного числа.
+Для вещественных чисел при чётных степенях входное значение должно быть положительным. Степень должна быть целым числом.
+Комплексное число задается выражением a+bi, где a и b вещественные и комплексные части числа соответственно.</p></section>
+<section><title>Результат:</title><p>z – корень входного значения x степени y.</p></section>    
+<section><title>Пример1:</title><p>Корень произвольной степени вещественного числа</p><codeblock><kword>const</kword> y = 3;
+<kword>const</kword> x = 5;
+z =<funcname>root</funcname>(y, x);</codeblock></section>
+<p>В результате переменной z будет присвоено значение 1.7099759.</p>   
+<section><title>Пример2:</title>
+<p>Корень произвольной степени комплексного числа</p><codeblock><kword>const</kword> y = 3;
+<kword>const</kword> x = 3+4i;
+z =<funcname>root</funcname>(y, x);</codeblock></section>
+<p>В результате переменной z будет присвоено значение 1.6289371+0.5201745i.</p>
+  </body>
+</topic>

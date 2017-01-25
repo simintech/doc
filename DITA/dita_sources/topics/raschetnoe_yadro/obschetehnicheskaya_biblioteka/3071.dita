@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Коэффициенты линейного уравнения</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/3071.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/3071s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок используется совместно с блоками <xref href="3070.dita" format="dita">Номер линейного
+        уравнения</xref> и <xref href="3072.dita" format="dita">Результаты СЛАУ</xref>. Блок задаёт
+      коэффициенты (матрица А системы) и значения правых частей (вектор В) для указанных на первом
+      входе уравнений (номеров уравнений). </p>
+    <section><title>Входы</title>
+    <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>rows</uicontrol> - вектор номеров строк (номеров уравнений) системы
+            линейных уравнений с именем <codeph>&lt;solvername></codeph>, которые формируются при
+            помощи блоков <xref href="3070.dita" format="dita">Номер линейного уравнения</xref>. </li>
+          <li><uicontrol>cols</uicontrol> - вектор номеров столбцов, формирующийся по следующему
+            правилу:
+            <codeblock>[&lt;№ столбца 1 строки 1> . . . &lt;№ столбца 1 строки N>,
+ &lt;№ столбца 2 строки 1> . . . &lt;№ столбца 2 строки N>,
+ &lt;№ столбца M строки 1> . . . &lt;№ столбца M строки N>]</codeblock>где:
+            N – количество уравнений, определяемое размерностью вектора номеров строк на первом
+            входе блока; M – количество заполненных столбцов для каждой из строк, задаваемых
+            вектором номеров строк на первом входе блока. </li>
+          <li><uicontrol>Ai</uicontrol> - вектор коэффициентов СЛАУ, задаваемых по следующему
+            правилу:<codeblock>[&lt;Коэф-т столбца 1 строки 1> . . . &lt;Коэф-т столбца 1 строки N>,
+ &lt;Коэф-т столбца 2 строки 1> . . . &lt;Коэф-т столбца 2 строки N>,
+ &lt;Коэф-т столбца M строки 1> . . . &lt;Коэф-т столбца M строки N>]</codeblock></li>
+          <li><uicontrol>B</uicontrol> - вектор правых частей СЛАУ, для строк, задаваемых вектором
+            номеров строк на первом входе блока.</li>
+        </ul>
+      </p></section>
+    <section><title>Выходы</title>
+      <p>нет</p></section>
+    <section><title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Имя решателя СЛАУ</uicontrol> - имя решателя (строка), который обрабатывает
+            (решает) СЛАУ. Должно быть одинаковым для всех блоков «Номер линейного уравнения»,
+            «Коэффициенты линейного уравнения» и «Результаты СЛАУ», принадлежащих одной
+            системе.</li>
+        </ul>
+      </p></section>
+    <section><title>Параметры</title>
+      <p>нет</p></section>
+    
+  </body>
+</topic>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>now</title>
+<shortdesc>Функция получения текущего значения даты и времени в системном формате.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>date = <funcname>now</funcname>;</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>нет</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>now</codeph> – функция получения текущего значения даты и времени в системном формате. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>date – дата и время в системном формате. Тип double. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>date = <funcname>now</funcname>;
+str = <funcname>datetimetostr</funcname>(date);</codeblock></section>
+<p>В результате выполнения примера переменной <codeph>date</codeph> будет присвоено значение текущей
+      даты и времени типа double, переменная <codeph>str</codeph> будет содержать строку с текущем
+      временем в формате, определенном системными установками. </p>  
+  </body>
+</topic>

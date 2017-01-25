@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика – Электромеханический преобразователь поступательного движения </title>
+  <body>
+    <table id="table_q3r_kyr_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4239/image001.png" height="32" width="32"
+                id="image_r3r_kyr_qy"/></entry>
+            <entry>Механика – Электромеханический преобразователь поступательного движения</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4239/image002.png" height="151" width="214"
+                id="image_s3r_kyr_qy"/>
+            </entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> В блоке реализована модель электромеханического преобразователя поступательного движения,
+      описываемая следующими уравнениями:</p>
+    <p><image href="images_old/4239/image003.png" height="22" width="71" id="image_t3r_kyr_qy"/></p>
+    <p><image href="images_old/4239/image004.png" height="22" width="74" id="image_u3r_kyr_qy"/>, где</p>
+    <table id="table_v3r_kyr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>F</entry>
+            <entry>-</entry>
+            <entry><image href="images_old/4239/image005.png" height="22" width="39"
+                id="image_w3r_kyr_qy"/></entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4239/image006.png" height="22" width="11"
+                id="image_x3r_kyr_qy"/></entry>
+            <entry>-</entry>
+            <entry>скорость</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4239/image007.png" height="22" width="8" id="image_y3r_kyr_qy"
+              /></entry>
+            <entry>-</entry>
+            <entry>ток</entry>
+          </row>
+          <row>
+            <entry>V</entry>
+            <entry>-</entry>
+            <entry>напряжение</entry>
+          </row>
+          <row>
+            <entry>K</entry>
+            <entry>-</entry>
+            <entry>коэффициент усиления</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p><b>Входные порты блока:</b></p>
+    <p> Блок имеет два механических порта (C и R) поступательного движения и один электрический
+      входной порт (+).</p>
+    <p>
+      <b>Выходные порты блока:</b></p>
+    <p> Блок имеет один электрический выходной порт (-).</p>
+    <p>
+      <b>Свойства блока:</b></p>
+    <table id="table_z3r_kyr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>K</entry>
+            <entry>-</entry>
+            <entry>коэффициент усиления, <image href="images_old/4239/image008.png" height="34"
+                width="21" id="image_ajr_kyr_qy"/></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_bjr_kyr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>I</entry>
+            <entry>-</entry>
+            <entry>ток, A</entry>
+          </row>
+          <row>
+            <entry>V</entry>
+            <entry>-</entry>
+            <entry>напряжение, B</entry>
+          </row>
+          <row>
+            <entry>F</entry>
+            <entry>-</entry>
+            <entry>сила, <image href="images_old/4239/image009.png" height="22" width="11"
+                id="image_cjr_kyr_qy"/></entry>
+          </row>
+          <row>
+            <entry>v</entry>
+            <entry>-</entry>
+            <entry>скорость, <image href="images_old/4239/image010.png" height="29" width="9"
+                id="image_djr_kyr_qy"/></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>

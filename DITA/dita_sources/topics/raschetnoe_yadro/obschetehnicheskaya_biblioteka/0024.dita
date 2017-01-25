@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Сумматор</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/0024.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/0024s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован | Си
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок векторизован, реализует операцию алгебраического поэлементного суммирования входных
+      сигналов с учетом весовых коэффициентов:<image placement="break" href="images/0024_1.png"
+        align="center" id="image_zts_n1l_gy"/> где <i>y</i>(<i>t</i>) – выходной сигнал блока;
+        <i>u</i><sub>1</sub>(t), <i>u</i><sub>2</sub>(t), …, <i>u</i><sub>n</sub>(t) – входные
+      сигналы; <i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, <i>a</i><sub>3</sub>, …,
+        <i>a</i><sub>n</sub> – весовые коэффициенты для каждого входного сигнала блока. </p>
+    <section><title>Входы</title>
+    <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>слагаемое_n</uicontrol> - входной порт для одного из складываемых сигналов.
+            Количество входных портов равно числу (n) элементов вектора весовых множителей в
+            свойствах блока.</li>
+        </ul>
+      </p></section>
+    <section><title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>sum</uicontrol> - выходной порт для результата суммирования.</li>
+        </ul>
+      </p></section>
+    <section><title>Свойства:</title><p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Весовые множители для каждого из входов</uicontrol> – вектор действительных
+            чисел, на которые умножаются значения входных сигналов блока. Число входных портов блока
+            равно размерности этого массива. </li>
+        </ul>
+      </p>Входные сигналы могут быть векторами <i>u</i><sub>1</sub>=[<i>u</i><sub>1 1</sub>,
+        <i>u</i><sub>1 2</sub>, …, <i>u</i><sub>1 m</sub>], <i>u</i><sub>2</sub>=[<i>u</i><sub>2
+        1</sub>, <i>u</i><sub>2 2</sub>, …, <i>u</i><sub>2 m</sub>] …
+        <i>u</i><sub>n</sub>=[<i>u</i><sub>n 1</sub>, <i>u</i><sub>n 2</sub>, …, <i>u</i><sub>n
+        m</sub>], размерности которых должны быть одинаковы, в этом случае на выходе будет также
+        вектор:<image placement="break" href="images/0024_2.png" align="center"
+        id="image_yx1_wcl_gy"/> где <i>y</i><sub>i</sub>(<i>t</i>) – i-ый элемент выходного
+      векторного сигнала блока; <i>u</i><sub>1 i</sub>(<i>t</i>), <i>u</i><sub>2 i</sub>(<i>t</i>) –
+      i-ый элемент первого, второго и т.д. входного сигнала. </section>
+    <section><title>Параметры</title>
+      <p>нет</p></section>
+    <note>По умолчанию блок формирует выходной сигнал, равный сумме двух входных сигналов (весовых
+      коэффициентов два, и оба равны 1). Именованные свойства могут быть заданы как локальные
+      переменные модели (субмодели) в скрипте на языке программирования, как глобальные сигналы
+      проекта при помощи пункта главного меню Сервис → Сигналы, или как внешние сигналы проекта при
+      помощи подключаемой базы сигналов. </note>
+    
+  </body>
+</topic>

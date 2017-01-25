@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>closeengine </title>
+<shortdesc>Функция закрытия окна объекта с определенным именем в менеджере данных.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>closeengine</funcname>(en_name);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>en_name – имя объекта в менеджере данных.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>closeengine(en_name)</codeph> – функция осуществляет закрытие окна объекта – устройства
+        отображения или ввода информации (графики, регистраторы, панели управления и т.п.) с именем
+          <codeph>en_name</codeph>, находящегося в менеджере данных. Имя объекта обрамляется
+        кавычками.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><funcname>closeengine</funcname> ("График 1");</codeblock></section>  
+  </body>
+</topic>

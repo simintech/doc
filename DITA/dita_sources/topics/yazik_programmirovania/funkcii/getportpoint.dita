@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getportpoint</title>
+<shortdesc>Функция получения координат точки порта в графическом контейнере.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>p = <funcname>getportpoint</funcname>(port_id);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>port_id – ссылка (идентификатор) на порт.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getportpoint</codeph> – позволяет определить координаты порта с идентификатором
+          <codeph>port_id</codeph> в системе координат графического контейнера. Идентификатор порта
+        может быть получен с помощью функции <codeph>getblockportid</codeph>.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>Функция возвращает число типа point, содержащее координаты указанного порта в графическом
+        контейнере.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> obj_id:<rword>integer</rword>, port_id:<rword>integer</rword>, coord:<rword>point</rword>;
+obj_id = <funcname>findobjectbyname</funcname>("ModelTime_source"); <comment>//получаем id блока</comment>
+port_id = <funcname>getblockportid</funcname>(obj_id, 0); <comment>//получаем id нулевого порта блока</comment>
+coord = <funcname>getportpoint</funcname>(port_id); <comment>//получаем координату порта</comment></codeblock></section>
+<p>В результате выполнения данного скрипта, переменной <codeph>coord</codeph> будет присвоено
+      значение типа point, содержащее координаты нулевого порта блока с именем
+        <codeph>ModelTime_source</codeph>. </p>  
+  </body>
+</topic>

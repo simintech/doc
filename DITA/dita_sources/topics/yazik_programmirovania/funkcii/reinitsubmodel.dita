@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>reinitsubmodel</title>
+<shortdesc>Функция переинициализации и компиляции скриптов определенной субмодели.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>reinitsubmodel</funcname>(obj_id);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>obj_id – идентификатор субмодели.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>reinitsubmodel(obj_id)</codeph> – функция производит компиляцию скриптов и
+        переинициализацию для выбранной субмодели с идентификатором <codeph>obj_id</codeph>.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><funcname>reinitsubmodel</funcname>(parentobject);</codeblock></section>  
+  </body>
+</topic>

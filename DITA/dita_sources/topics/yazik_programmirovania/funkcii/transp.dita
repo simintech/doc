@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>transp</title>
+<shortdesc>Функция транспонирования матрицы или вектора.</shortdesc>
+<body>
+<section><title>Синтаксис:</title><codeblock>C = <funcname>transp</funcname>(M);</codeblock></section>
+<section><title>Аргументы:</title><p>M – массив элементов входной матрицы или вектора.</p></section>
+<section><title>Описание:</title>
+<p><codeph>transp(M)</codeph> – функция производит транспонирование входной матрицы или вектора M.</p> 
+<p>Входная матрица или вектор М может задаваться:</p>
+<p><ul><li>как переменная типа матрица или вектор, определенная ранее:</li></ul></p>
+<p><codeph>C = transp(M)</codeph>;</p>
+<p><ul><li>как матрица или вектор, состоящие из переменных, определенных ранее:</li></ul></p>
+<p><codeph>C = transp([[x<sub>1</sub>,x<sub>2</sub>],[x<sub>3</sub>,x<sub>4</sub>],[x<sub>5</sub>,x<sub>6</sub>]]</codeph>;</p>
+<p><codeph>C = transp([x<sub>1</sub>,x<sub>2</sub>,x<sub>3</sub>,x<sub>4</sub>,x<sub>5</sub>,x<sub>6</sub>])</codeph>;</p>
+<p><ul><li>как постоянная матрица или массив:</li></ul></p>
+<p><codeph>C = transp([[1,2],[3,4],[5,6]])</codeph>;</p>
+<p><codeph>C = transp([1,2,3,4,5,6])</codeph>;</p></section>
+ <section><title>Результат:</title><p>С – транспонированная матрица для входной матрицы или вектора.</p></section>  
+<section><title>Пример1:</title>
+<p>Транспонирование матрицы:</p>  
+<codeblock><comment>//массивы элементов матрицы</comment>
+<kword>const</kword> M = [[1, 0], [-2, 3]];
+C = <funcname>transp</funcname>(M);</codeblock></section>
+<p>В результате переменной C будут присвоены значения массива [[1, -2], [0, 3]], определяющие транспонированную матрицу для матрицы M .</p>   
+<section><title>Пример2:</title>
+<p>Транспонирование вектора:</p>  
+<codeblock>
+<comment>//массивы элементов вектора</comment>
+<kword>const</kword> M = [1, 0, -2, 3];
+C = <funcname>transp</funcname>(M);</codeblock></section>
+<p>В результате переменной C будут присвоены значения матрицы [[1], [0], [-2], [3]], определяющие транспонированную матрицу для вектора M.</p> 
+</body>
+</topic>

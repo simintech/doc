@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Цифровой биквадратный фильтр </title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/3608.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/3608s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок «Цифровой биквадратный фильтр» представляет собой рекурсивный линейный фильтр второго
+      порядка, содержащий два полюса и два нуля. Осуществляет фильтрацию цифрового сигнала за счет
+      последовательного применения звеньев второго порядка. Позволяет реализовывать произвольные
+      фильтры путем задания вручную коэффициентов передаточной функции для каждой секции фильтра.
+      Каждое звено второго порядка рассчитывается по алгоритму с использованием нормализованной
+      канонической формы:<image placement="break" href="images/3608_1.png" align="center"
+        id="image_hr3_msb_py"/>Разностные уравнения для нормализованной канонической формы:<image
+        placement="break" href="images/3608_01.png" align="center" id="image_iph_bvb_py"/>Матрица
+      размерности [<i>N×</i>6] – есть матрица секций второго порядка (SOS матрица), где <i>N</i> –
+      количество секций второго порядка в каждом фильтре. Матрица SOS - представление цифрового
+      фильтра секций второго порядка с передаточной функцией <i>H</i>(<i>z</i>):<image
+        placement="break" href="images/3608_02.png" align="center" id="image_mqs_cwb_py"/>Каждая
+      строка SOS матрицы содержит коэффициенты числителя и знаменателя (<i>b<sub>ik</sub></i> and
+          <i>a<sub>ik</sub></i>) соответствующей секции фильтра: <image placement="break"
+        href="images/3608_03.png" align="center" id="image_tq4_dxb_py"/>Каждый из элементов вектора
+      размерности <i>M</i>, где <i>М</i> – количество входных сигналов (линий) содержит информацию о
+      количестве секций второго порядка каждой из SOS матриц для каждой из линий. </p>
+    <section><title>Входы</title>
+    <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>DataInput</uicontrol> – входной сигнал;</li>
+          <li><uicontrol>Sync</uicontrol> – вход для синхроимпульсов;</li>
+          <li><uicontrol>Reset</uicontrol> – вход для сигнала сброса.</li>
+        </ul>
+      </p></section>
+    <section><title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>DataOut</uicontrol> – выходной отфильтрованный сигнал.</li>
+        </ul>
+      </p></section>
+    <section><title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Секции второго порядка</uicontrol> – массивы коэффициентов передаточных
+            функций для всех секций второго порядка. </li>
+        </ul>
+      </p></section>
+    <section><title>Параметры</title>
+      <p>нет</p></section>
+    <note>На входной порт <uicontrol>Sync</uicontrol> должны подаваться прямоугольные синхроимпульсы
+      единичной амплитуды. Срабатывание блока происходит по переднему фронту синхроимпульса. При
+      каждом срабатывании блока на выходе формируется сигнал, прошедший через процедуру фильтрации.
+      Фильтрация организована по рекурсивной процедуре. </note>
+    <section>
+      <title>Пример</title>
+      <p>Рассмотрим пример использования блока цифровой биквадратной фильтрации, расположенный по
+        адресу <filepath>%PROGRAMM_DIR%\Demo\Automatic\Обработка сигналов\Цифровой биквадратный
+          фильтр.prt</filepath>: <image placement="break" href="images/3608_2.png" align="center"
+          id="image_jy1_ryb_py"/>Здесь блок цифрового биквадратного фильтра используется в некоторой
+        схеме обработки сигнала. Исходный сигнал представляет собой сумму двух синусоид частотой 1Гц
+        и 4Гц, которая подается на основной вход блока. Блок работает на частоте 10Гц, формируемой с
+        помощью синхроимпульсов соответствующей частоты, подаваемых на вход Sync. В качестве свойств
+        блока, задана SOS-матрица, состоящая из коэффициентов числителя и знаменателя секций
+        фильтров. Блок осуществляет фильтрацию входного сигнала в соответствие с заданной матрицей
+        коэффициентов передаточной функции: <image placement="break" href="images/3608_3.png"
+          align="center" id="image_urx_ryb_py"/></p>
+    </section>
+    
+  </body>
+</topic>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Ключ-4(t)</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/0086.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/0086s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок реализует функцию управляемого ключа по алгоритму:<image placement="break"
+        href="images/0086_1.png" align="center" id="image_dyv_4np_ky"/> где <i>x</i>(<i>t</i>) –
+      вектор входных сигналов; <i>y</i>(<i>t</i>) – вектор выходных сигналов; <i>T</i><sub>0</sub> –
+      вектор времен «замыкания» соответствующих входов и выходов; <i>y</i><sub>0</sub> – вектор
+      выходных сигналов блока при временах, меньших <i>T</i><sub>0</sub>. </p>
+    <section>
+      <title>Входы</title>
+      <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>input</uicontrol> - вход блока, <i>x</i>.</li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>output</uicontrol> - выход блока, <i>y</i>.</li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Уставка по времени</uicontrol> – вектор <i>T</i><sub>0</sub>.</li>
+          <li><uicontrol>Подпороговое значение на выходе</uicontrol> – вектор <i>y</i><sub>0</sub>.
+          </li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <title>Параметры</title>
+      <p>
+        <ul id="ul_t3c_l3t_2y">
+          <li><uicontrol>Уровень</uicontrol> - текущее положение ключа.</li>
+        </ul>
+      </p>
+      <note>
+        <ol id="ol_fzw_5hp_ky">
+          <li>По умолчанию блок формирует скалярный выходной сигнал.</li>
+          <li>Именованные свойства могут быть заданы как локальные переменные модели (субмодели) в
+            скрипте на языке программирования, как глобальные сигналы проекта при помощи пункта
+            главного меню <cmdname>Сервис → Сигналы</cmdname>, или как внешние сигналы проекта при
+            помощи подключаемой базы сигналов. </li>
+        </ol>
+      </note>
+    </section>
+  </body>
+</topic>

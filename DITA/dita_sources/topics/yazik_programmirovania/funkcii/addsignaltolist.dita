@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>addsignaltolist</title>
+<shortdesc>Функция добавления сигнала в список сигналов проекта.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>addsignaltolist</funcname>(type, reg, name, descr, val, init);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>type – тип данных сигнала,</p>
+      <p>reg – режим сигнала,</p>
+      <p>name – строка, содержащая имя сигнала,</p>
+      <p>descr – строка, содержащая название сигнала,</p>
+      <p>val – строка, содержащая начальное значение сигнала,</p>
+      <p>init – способ инициализации сигнала.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>addsignaltolist(type, reg, name, descr, val, init)</codeph> – функция добавляет сигнал с
+        режимом <codeph>reg</codeph>, именем <codeph>name</codeph>, названием (описанием)
+          <codeph>descr</codeph> и начальным значением <codeph>val</codeph> в список сигналов
+        проекта. Параметр <codeph>init</codeph> является опциональным, может принимать значения: </p>
+      <p>0 – переменная,</p>
+      <p>1 – константа,</p>
+      <p>2 – без предварительного вычисления.</p>
+      <p>Тип данных сигнала <codeph>type</codeph> может принимать значения:</p>
+      <p>0 – вещественное,</p>
+      <p>1 – целое,</p>
+      <p>2 – двоичное,</p>
+      <p>3 – цвет,</p>
+      <p>4 – строка,</p>
+      <p>5 – массив вещественных чисел,</p>
+      <p>12 – массив целых,</p>
+      <p>13 – матрица вещественных чисел,</p>
+      <p>21 – комплексное число,</p>
+      <p>22 – комплексный массив,</p>
+      <p>23 – комплексная матрица.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>beforecompile</kword>
+  <kword>if not</kword> <funcname>signalexist</funcname>("gant_s") <kword>then</kword> <funcname>addsignaltolist</funcname>(13,0,"gant_s","gant_s","[[0]]",2);
+  <kword>if not</kword> <funcname>signalexist</funcname>("gant_tend") <kword>then</kword> <funcname>addsignaltolist</funcname>(13,0,"gant_tend","gant_tend","[[0]]",2);
+  <kword>if not</kword> <funcname>signalexist</funcname>("gant_t0") <kword>then</kword> <funcname>addsignaltolist</funcname>(13,0,"gant_t0","gant_t0","[[0]]",2);
+<kword>end</kword>;
+gant_s = [1,2,3];</codeblock></section>
+<p>В примере производится динамическое добавление новых сигналов в список сигналов проекта с
+      дальнейшим использованием созданных сигналов в том же скрипте.</p>  
+  </body>
+</topic>

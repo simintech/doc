@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getownercontainer </title>
+<shortdesc>Функция получения идентификатора контейнера-владельца заданного объекта.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>own_id = <funcname>getownercontainer</funcname>(obj_id);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>obj_id – идентификатор объекта, для которого нужно узнать владельца. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getownercontainer</codeph> – функция позволяет получить идентификатор контейнера, в
+        состав которого входит объект с идентификатором <codeph>obj_id</codeph>. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>own_id – идентификатор графического изображения объекта, представляемый в виде int. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> obj_id:<rword>integer</rword>, id:<rword>integer</rword>;
+obj_id = <funcname>findobjectbyname</funcname>("Macro5"); <comment>//получение идентификатора объекта по имени</comment>
+id = <funcname>getownercontainer</funcname>(obj_id); <comment>//получение идентификатора контейнера-вадельца</comment></codeblock></section>
+<p>В результате выполнения данного скрипта переменная <codeph>id</codeph> получит значение
+      идентификатора контейнера-владельца для блока с именем <codeph>Macro5</codeph>. </p>  
+  </body>
+</topic>

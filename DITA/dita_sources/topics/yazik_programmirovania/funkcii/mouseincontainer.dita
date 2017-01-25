@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>moiseincontainer </title>
+<shortdesc>Функция получения флага нахождения курсора мыши в переделах графического
+    контейнера.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>fl = <funcname>mouseincontainer</funcname>;</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>нет</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>mouseincontainer</codeph> – функция получения флага нахождения курсора мыши в переделах
+        графического контейнера (группы или блока). Возвращает True, если курсор находится в
+        пределах данного графического контейнера.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>fl – флаг нахождения курсора мыши в переделах графического контейнера.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><comment>//получим флаг нахождения курсора мыши в переделах графического контейнера</comment>
+fl = <funcname>mouseincontainer</funcname>;</codeblock></section>  
+  </body>
+</topic>

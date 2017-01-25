@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика - Ленточный тормоз  </title>
+  <body>
+    <table id="table_fd1_ccs_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4273/image001.jpg" height="32" width="32"
+                id="image_gd1_ccs_qy"/></entry>
+            <entry>Механика - Ленточный тормоз</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4273/image002.jpg" height="74" width="132"
+                id="image_hd1_ccs_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>В блоке реализована модель торможения барабана с помощью силы, приложенной к ленте,
+      охватывающей барабан. В результате на барабане возникает момент торможения, описываемый
+      следующим уравнением:</p>
+    <p><image href="images_old/4273/image003.gif" height="22" width="204" id="image_id1_ccs_qy"/>,
+      где</p>
+    <p> </p>
+    <table id="table_jd1_ccs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>T</entry>
+            <entry>-</entry>
+            <entry>Момент торможения</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4273/image004.gif" height="22" width="28"
+                id="image_kd1_ccs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Тангенциальная сила</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4273/image005.gif" height="22" width="18"
+                id="image_ld1_ccs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Внешняя сила торможения</entry>
+          </row>
+          <row>
+            <entry>r</entry>
+            <entry>-</entry>
+            <entry>Радиус барабана</entry>
+          </row>
+          <row>
+            <entry>B</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения в подшипниках</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4273/image006.gif" height="22" width="14"
+                id="image_md1_ccs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Угловая скорость вращения барабана</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Силы <image href="images_old/4273/image004.gif" height="22" width="28" id="image_nd1_ccs_qy"/> и
+        <image href="images_old/4273/image005.gif" height="22" width="18" id="image_od1_ccs_qy"/>
+      описываются следующим отношением:</p>
+    <p><image href="images_old/4273/image007.gif" height="22" width="149" id="image_pd1_ccs_qy"/></p>
+    <p> </p>
+    <table id="table_qd1_ccs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4273/image008.gif" height="22" width="11"
+                id="image_rd1_ccs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения контакта</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4273/image009.gif" height="22" width="13"
+                id="image_sd1_ccs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Угол охвата барабана лентой</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Схема действия сил и моментов показана на рисунке</p>
+    <p><image href="images_old/4273/image010.jpg" height="306" width="299" id="image_td1_ccs_qy"/></p>
+    <p>Для исключения численной неустойчивости вычисления силы трения при <image
+        href="images_old/4273/image011.gif" height="22" width="50" id="image_ud1_ccs_qy"/> сила <image
+        href="images_old/4273/image005.gif" height="22" width="18" id="image_vd1_ccs_qy"/>
+      аппроксимируется следующим выражением:</p>
+    <p><image href="images_old/4273/image012.gif" height="46" width="215" id="image_wd1_ccs_qy"/></p>
+    <p> </p>
+    <table id="table_xd1_ccs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4273/image013.gif" height="22" width="24"
+                id="image_yd1_ccs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Внешняя сила торможения</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4273/image014.gif" height="22" width="29"
+                id="image_zd1_ccs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Пороговое значение угловой скорости</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> Итоговое уравнение для момента торможения имеет вид:</p>
+    <p><image href="images_old/4273/image015.gif" height="46" width="348" id="image_a21_ccs_qy"/></p>
+    <p><b>Входные порты блока:</b></p>
+    <p>Блок имеет один математический входной порт F, через который в модель блока передается
+      значение внешней силы торможения, а также один механический порт вращательного движения.</p>
+    <p> </p>
+    <p><b>Выходные порты блока – отсутствуют.</b></p>
+    <p> </p>
+    <p><b>Свойства блока:</b></p>
+    <table id="table_b21_ccs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4273/image016.gif" height="22" width="12"
+                id="image_c21_ccs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Радиус барабана, м</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4273/image017.gif" height="22" width="18"
+                id="image_d21_ccs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Угол охвата, рад</entry>
+          </row>
+          <row>
+            <entry>B</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения подшипников,<image href="images_old/4273/image018.gif" height="32"
+                width="29" id="image_e21_ccs_qy"/></entry>
+          </row>
+          <row>
+            <entry>Mu</entry>
+            <entry>-</entry>
+            <entry>Коэффициент контактного трения</entry>
+          </row>
+          <row>
+            <entry>Wth</entry>
+            <entry>-</entry>
+            <entry>Пороговое значение угловой скорости <image href="images_old/4273/image019.gif"
+                height="29" width="21" id="image_f21_ccs_qy"/></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_g21_ccs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4273/image020.gif" height="22" width="18"
+                id="image_h21_ccs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Угловая скорость, рад/с</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4273/image021.gif" height="22" width="12"
+                id="image_i21_ccs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Сила торможения, н</entry>
+          </row>
+          <row>
+            <entry>T</entry>
+            <entry>-</entry>
+            <entry>Момент, <image href="images_old/4273/image022.gif" height="22" width="36"
+                id="image_j21_ccs_qy"/></entry>
+          </row>
+          <row>
+            <entry>Q</entry>
+            <entry>-</entry>
+            <entry>Мощность торможения, Вт</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

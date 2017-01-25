@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>norm1</title>
+<shortdesc>Функция вычисления первой нормы вещественной матрицы.</shortdesc>
+<body>
+<section><title>Синтаксис:</title><codeblock>x = <funcname>norm1</funcname>(M);</codeblock></section>
+<section><title>Аргументы:</title><p>M – входная матрица.</p></section>
+<section><title>Описание:</title>
+<p><codeph>norm1(M)</codeph> – функция возвращает первую норму вещественной матрицы.</p> 
+<p>Суммируются все элементы в столбцах матрицы M, взятые по модулю, и максимальная из полученных сумм объявляется нормой (первая норма).</p>
+<p>Входная матрица М может задаваться:</p>
+<p><ul><li>как переменная типа матрица, определенная ранее:</li></ul></p>
+<p><codeph>x = norm1(M)</codeph>;</p>
+<p><ul><li>как матрица, состоящая из переменных, определенных ранее:</li></ul></p>
+<p><codeph>x = norm1([[x<sub>1</sub>,x<sub>2</sub>],[x<sub>3</sub>,x<sub>4</sub>],[x<sub>5</sub>,x<sub>6</sub>]])</codeph>;</p>
+<p><ul><li>как постоянная матрица:</li></ul></p>
+<p><codeph>x = norm1([[1,2],[3,4],[5,6]])</codeph>;</p></section>
+<section><title>Результат:</title><p>х – значение первой нормы матрицы M.</p></section>  
+<section><title>Пример:</title><codeblock>
+<kword>const</kword> M = [    
+[1, -3, 2],    
+[4, 5, -1],    
+[3, 8, -6]    
+];
+x = <funcname>norm1</funcname>(M); <comment>//16</comment></codeblock></section>
+<p>В результате переменной x будет присвоено значение первой нормы матрицы М, равное 16.</p>   
+  </body>
+</topic>

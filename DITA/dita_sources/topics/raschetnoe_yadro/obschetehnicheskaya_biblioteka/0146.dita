@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Решение СЛАУ</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/0146.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/0146s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> Блок реализует процедуру решения системы линейных алгебраических уравнений (СЛАУ)
+        вида:<image placement="break" href="images/0146_1.png" align="center" id="image_o3j_mxx_gy"
+      />где <i>A</i> – матрица коэффициентов; <i>x</i>(<i>t</i>) – вектор решений;
+      <i>u</i>(<i>t</i>) – вектор правых частей. Блок имеет два векторизованных входных порта: 1-ый
+      входной порт – для ввода матрицы, представляемой в виде вектора коэффициентов при распаковке
+      матрицы по строкам. 2-ой входной порт – для ввода вектора(вектора правых частей). Блок имеет
+      один векторный выходной порт, предназначенный для вывода вектора(вектора решений). Размерность
+      векторного сигнала на 1-ом входном порте должна быть равна, где– количество уравнений в
+      системе, а размерности сигналов на 2-ом входном порте и на выходном порте – одинаковы и равны. </p>
+    <section>
+      <title>Входы</title>
+      <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>матрица коэффициентов</uicontrol> - порт для ввода матрицы, представляемой
+            в виде вектора коэффициентов при распаковке матрицы по строкам. Размерность векторного
+            сигнала на 1-ом входном порте должна быть равна <i>n</i>&#215;<i>n</i>, где <i>n</i> –
+            количество уравнений в системе;</li>
+          <li><uicontrol>правые части</uicontrol> - порт для ввода вектора правых частей системы.
+            Размерность вектора равна <i>n</i>.</li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>output</uicontrol> - порт вывода вектора решений. Размерность вектора равна
+              <i>n</i>.</li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <title>Свойства:</title>
+      <p>нет</p>
+    </section>
+    <section>
+      <title>Параметры</title>
+      <p>нет</p>
+    </section>
+    <section>
+      <title>Пример</title>
+      <p>Требуется решить следующую систему уравнений: <image placement="break"
+          href="images/0146_2.png" align="center" id="image_b5y_yyx_gy"/>которая имеет очевидное
+        решение <i>x</i>=1, <i>y</i>=2. На рисунке ниже представлена структурная схема решения
+        данной задачи. Типовые блоки <xref href="0105.dita" format="dita">Размножитель</xref>
+        использованы для формирования входных векторных сигналов:<image placement="break"
+          href="images/0146_3.png" align="center" id="image_bng_nzx_gy"/></p>
+    </section>
+    <note>блок выполняет процедуру решения системы линейных алгебраических уравнений после каждого
+      успешного шага интегрирования.</note>
+  </body>
+</topic>

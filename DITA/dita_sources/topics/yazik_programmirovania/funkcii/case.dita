@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>case</title>
+  <shortdesc>Функция выбора аргумента по номеру.</shortdesc>
+  <body>
+<section><title>Синтаксис:</title><codeblock>y = <funcname>case</funcname>(i, x0, x1, …, xn);</codeblock></section>
+<section><title>Аргументы:</title><p>i – номер выбираемого аргумента, имеет тип <codeph>integer</codeph>,</p>
+<p>x0, x2, …, xn  – входные аргументы.</p></section>
+<section><title>Описание:</title>
+<p><codeph>case(i, x0, x2, …, xn)</codeph> – функция выбора одного из входных аргументов x0, x2, …, xn по номеру, определяемому аргументом i. Нумерация аргументов начинается с нуля.</p>
+</section>
+<section><title>Результат:</title>
+<p>y – переменная, содержащая выбранный входной аргумент.</p></section>
+<section><title>Пример:</title><codeblock><kword>var</kword>
+i:<rword>integer</rword>;
+<kword>for</kword>(i = 0, 4, 1) <kword>begin</kword>
+y = <funcname>case</funcname>(i, 10, 20, 30, 40, 50);
+<comment>// здесь y принимает значения от 10 до 50</comment>
+<comment>// …</comment>  
+<kword>end</kword>;</codeblock></section>
+<p>В результате переменной y будет присвоено последовательно значения от 10 до 50.</p>   
+</body>
+</topic>

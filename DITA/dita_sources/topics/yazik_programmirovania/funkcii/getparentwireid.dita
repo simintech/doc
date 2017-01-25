@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getparentwireid </title>
+<shortdesc>Функция получения идентификатора родительской линии связи. </shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>wire_id = <funcname>getparentwireid</funcname>(cw_id);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>cw_id – идентификатор, ответвляющейся линии связи. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getparentwireid</codeph> – функция получения идентификатора родительской линии связи, к
+        которой подключена линия связи, с заданным идентификатором . Функция используется в анализа
+        топологической структуры схемы. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>wire_id – функция возвращает целое число, являющееся идентификатором линии связи,
+        являющейся родительской по отношению к указанной. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>p_id = <funcname>getblockportid</funcname>(mul_oper3,2);  <comment>//получение идентификатора порта</comment>
+w_id = <funcname>getportwireid</funcname>(p_id); <comment>//получение идентификатора линии связи, подключенной к порту</comment>
+pw_id = <funcname>getparentwireid</funcname>(w_id); <comment>//получение идентификатора родительской линии связи</comment></codeblock></section>
+<p>В результате выполнения данного скрипта переменная <codeph>pw_id</codeph> получит значение
+      идентификатора линии связи, являющейся родительской по отношении к линии связи, подключенной к
+      порту с номером 2 блока с именем <codeph>mul_oper3</codeph>. </p>  
+  </body>
+</topic>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setpropevalstring </title>
+<shortdesc>Функция установки интерпретированного текста, содержащего свойство с определенным именем
+    для объекта на схеме.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>flag = <funcname>setpropevalstring</funcname>(id,"ob_name", str);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>id – идентификаторили имя объекта (блока на схеме или другого графического объекта),</p>
+      <p>"ob_name" – строка, содержащая имя свойства объекта (обрамляется кавычками, т.к. тип данных
+        должен быть строковый),</p>
+      <p>str – строка, содержащая значение интерпретированной формулы свойства объекта.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setpropevalstring</codeph> – функция установки интерпретированного текста (формулы)
+          <codeph>str</codeph>, содержащего значение свойства по имени <codeph>ob_name</codeph> для
+        объекта <codeph>id</codeph>. В качестве значения <codeph>id</codeph> может быть строковое
+        имя объекта либо идентификатор, полученный функцией <codeph>getobj</codeph> и имеющий тип
+        указателя на объект.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>flag – флаг результата выполнения операции, тип boolean.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>id = <funcname>getobj</funcname>(1); <comment>//получим идентификатор первого объекта</comment>
+<funcname>setpropvalstring</funcname>(id, "constant", "sqrt(2)"); <comment>//обратимся по идентификатору и установим свойству "constant" значение интерпретируемого текст</comment>
+<funcname>setpropvalstring</funcname>(block_1, "constant", “sin(Pi/2)”); <comment>//обратимся по имени и установим свойству "constant" значение интерпретируемого текст</comment></codeblock></section>  
+  </body>
+</topic>

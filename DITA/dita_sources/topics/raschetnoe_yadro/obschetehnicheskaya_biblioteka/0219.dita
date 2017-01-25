@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Фактор сплющиваемости</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/0219.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/0219s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок реализует вычисление фактора сплющиваемости (четвертого момента) входного сигнала.
+      Фактор сплющиваемости подсчитывается по следующей формуле:<image placement="break"
+        href="images/0219_1.png" align="center" id="image_njw_wz5_4y"/>где <i>N</i> – объем выборки
+      (количество значений), <i>x<sub>i</sub></i> – значения <i>i</i>-го элемента выборки, <i>M</i>
+      – математическое ожидание случайной величины. Фактор сплющиваемости характеризует отклонение
+      формы кривой плотности вероятности от нормального закона распределения. Для нормального закона
+      эта величина равна 0. </p>
+    <section>
+      <title>Входы</title>
+      <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>input</uicontrol> – порт для входного сигнала блока. Входной сигнал может
+            быть векторным. </li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>output</uicontrol> – выходной порт блока. Размерность выходного сигнала
+            всегда равна размерности входного сигнала. </li>
+        </ul>
+      </p>
+    </section>
+    <section><title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Размер серии</uicontrol> – значение этого свойства определяет размер серии
+            в выборке.</li>
+          <li><uicontrol>Способ вывода данных:</uicontrol> По всей выборке - фактор сплющиваемости
+            уточняется сразу же после получения очередного нового значения сигнала на входе в блок,
+            По сериям - то фактор сплющиваемости вычисляется по отдельным сериям. Скользящее -
+            фактор сплющиваемости вычисляется по сериям, причем на каждом шаге учитываются последние
+              <i>N</i> точек, где <i>N</i> – размер серии.</li>
+          <li><uicontrol>Период квантования, c</uicontrol>– значение этого свойства определяет
+            длительность временного интервала между двумя последовательными считываниями значений
+            сигнала на входе блока. Если это свойство равно 0 (нулю), то считывание производится с
+            периодом, равным шагу интегрирования.</li>
+          <li><uicontrol>Удаление линейного тренда (Да или Нет)</uicontrol> – если это свойство
+            имеет значение Да, то из массива накопленных значений входного сигнала предварительно
+            вычитается линейный тренд. </li>
+        </ul>
+      </p></section>
+    <section><title>Параметры</title>
+      <p>нет</p></section>
+    
+  </body>
+</topic>

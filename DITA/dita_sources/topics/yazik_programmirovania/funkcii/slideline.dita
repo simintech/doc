@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>slideline</title>
+<shortdesc>Функция привязки линейного объекта к заданной свободной точке и линии на
+    схеме.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>slideline</funcname>(P1, P2, Ps, name);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>P1 – координаты первой точки линии для привязки. Тип point,</p>
+      <p>P2 – координаты второй точки линии для привязки. Тип point,</p>
+      <p>Ps – координаты свободной точки для привязки. Тип point,</p>
+      <p>name – имя объекта.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>slideline(P1, P2, Ps, name)</codeph> – функция привязки линейного объекта с именем
+          <codeph>name</codeph> к точке на схеме <codeph>Ps</codeph> и линии, заданной точками
+          <codeph>P1</codeph> и <codeph>P2</codeph>. Начальная точка объекта с именем
+          <codeph>name</codeph> привязывается к свободной точке <codeph>Ps</codeph>, конечная точка
+        привязывается к линии, заданной точками <codeph>P1</codeph> и <codeph>P2</codeph> Входные
+        значения <codeph>P1</codeph>, <codeph>P2</codeph>, <codeph>Ps</codeph> могут задаваться как
+        заранее определенные переменные или задаваться выражением (x, y), где x и y координаты
+        точки.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>const</kword> p1 = (1,3),p2 = (4,6);
+<funcname>slideline</funcname>(p1, p2, (200,500), Line1);</codeblock></section>
+<p>В результате выполнения данного примера линия с именем <codeph>Line1</codeph> будет привязана на
+      схеме начальной точкой к точке (200,500), конечной точкой линии, заданной точками
+        <codeph>p1</codeph> и <codeph>p2</codeph> . </p>  
+  </body>
+</topic>

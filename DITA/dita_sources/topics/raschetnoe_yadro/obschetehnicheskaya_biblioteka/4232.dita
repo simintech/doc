@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика – Идеальный источник скорости поступательного движения </title>
+  <body>
+    <table id="table_ryx_pxr_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4232/image001.png" height="32" width="32"
+                id="image_syx_pxr_qy"/></entry>
+            <entry>Механика – Идеальный источник скорости поступательного движения</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4232/image002.png" height="79" width="120"
+                id="image_tyx_pxr_qy"/>
+            </entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> В блоке реализована модель идеального источника скорости между портами R и C. Источник
+      идеален в том смысле, что предполагается, что его мощности всегда достаточно, чтобы развить
+      требуемую скорость.</p>
+    <p> Уравнения модели блока имеют следующий вид:</p>
+    <p><image href="images_old/4232/image003.png" height="22" width="104" id="image_uyx_pxr_qy"/> ,
+      где</p>
+    <table id="table_vyx_pxr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4232/image004.png" height="22" width="18"
+                id="image_wyx_pxr_qy"/></entry>
+            <entry>-</entry>
+            <entry>угловая скорость на входе C,<image href="images_old/4232/image005.png" height="29"
+                width="13" id="image_xyx_pxr_qy"/></entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4232/image006.png" height="22" width="20"
+                id="image_yyx_pxr_qy"/></entry>
+            <entry>-</entry>
+            <entry>угловая скорость на входе R,<image href="images_old/4232/image005.png" height="29"
+                width="13" id="image_zyx_pxr_qy"/></entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4232/image007.png" height="22" width="18"
+                id="image_azx_pxr_qy"/></entry>
+            <entry>-</entry>
+            <entry>заданная угловая скорость через порт S,<image href="images_old/4232/image005.png"
+                height="29" width="13" id="image_bzx_pxr_qy"/></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Входные порты блока:</b></p>
+    <p> Если выбрана неявная схема, то блок имеет два механических порта (R и C) поступательного
+      движения. В любом случае блок имеет один математический порт S, через который на вход модели
+      поступает заданное приращение скорости.</p>
+    <p> </p>
+    <p>
+      <b>Выходные порты блока:</b></p>
+    <p> Если выбрана явная схема, то блок имеет один механический порт (R) поступательного движения.
+      В любом случае блок имеет один математический порт F, на который поступает значение силы
+      F.</p>
+    <p> </p>
+    <p>
+      <b>Свойства блока:</b></p>
+    <table id="table_czx_pxr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>ModType</entry>
+            <entry>-</entry>
+            <entry>Тип модели (неявная/явная)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>
+      <b>Параметры блока:</b></p>
+    <table id="table_dzx_pxr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>F</entry>
+            <entry>-</entry>
+            <entry>Сила, н</entry>
+          </row>
+          <row>
+            <entry>V</entry>
+            <entry>-</entry>
+            <entry>Относительная скорость, м/с</entry>
+          </row>
+          <row>
+            <entry>Q</entry>
+            <entry>-</entry>
+            <entry>Мощность, Вт</entry>
+          </row>
+          <row>
+            <entry>VC</entry>
+            <entry>-</entry>
+            <entry>Скорость порт С, м/с</entry>
+          </row>
+          <row>
+            <entry>VR</entry>
+            <entry>-</entry>
+            <entry>Скорость порт R, м/с</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

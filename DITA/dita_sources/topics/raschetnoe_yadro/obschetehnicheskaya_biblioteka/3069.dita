@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Внешний размыкающий контакт реле</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/3069.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/3069s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован | Си
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок представляет собой субмодель. Для того чтобы посмотреть структуру алгоритма – нажмите
+      правой кнопкой <cmdname>Действия → Войти в субмодель</cmdname>. Реализует операцию логического
+      И-НЕ для входа блока и значения, указанного в параметрах блока (аналог управляющей обмотки
+      реле для блока <xref href="3042.dita" format="dita">Размыкающий контакт реле</xref>). Таким
+      образом, имя контакта указывается непосредственно внутри субмодели. </p>
+    <section><title>Входы</title>
+    <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>Вход</uicontrol> - вход контакта реле.</li>
+        </ul>
+      </p></section>
+    <section><title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>Выход</uicontrol> - выход контакта реле.</li>
+        </ul>
+      </p></section>
+    <section><title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Имя переменной</uicontrol> - имя переменной, для которой (и для входа
+            блока) выполняется операция И-НЕ.</li>
+          <li><uicontrol>Начальное состояние (0 или 1)</uicontrol> - начальное состояние выхода
+            блока. </li>
+        </ul>
+      </p></section>
+    <section><title>Параметры</title>
+      <p>
+        <ul id="ul_t3c_l3t_2y">
+          <li><uicontrol>Состояние реле</uicontrol> - отображение текущего состояния реле.</li>
+        </ul>
+      </p></section>
+    
+  </body>
+</topic>

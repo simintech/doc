@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setwindowcaption</title>
+<shortdesc>Функция установки заголовка окна редактора.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setwindowcaption</funcname>(name_str);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>name_str – строка с заголовком окна.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setwindowcaption(name_str)</codeph> – функция установки заголовка окна редактора. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><funcname>setwindowcaption</funcname>("Окно редактора");</codeblock></section>  
+  </body>
+</topic>

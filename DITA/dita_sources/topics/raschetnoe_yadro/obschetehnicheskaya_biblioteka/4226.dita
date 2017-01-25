@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика – Переменная масса </title>
+  <body>
+    <table id="table_oxy_2wr_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4226/image001.png" height="32" width="32"
+                id="image_pxy_2wr_qy"/></entry>
+            <entry>Механика – Переменная масса</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4226/image002.png" height="83" width="108"
+                id="image_qxy_2wr_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> В модели блока реализовано решение уравнения движения тела с переменной массой:</p>
+    <p><image href="images_old/4226/image003.png" height="43" width="90" id="image_rxy_2wr_qy"/></p>
+    <p><image href="images_old/4226/image004.png" height="43" width="75" id="image_sxy_2wr_qy"/></p>
+    <p><image href="images_old/4226/image005.png" height="22" width="159" id="image_txy_2wr_qy"/>,
+      где</p>
+    <table id="table_uxy_2wr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>M</entry>
+            <entry>-</entry>
+            <entry>момент инерции, <image href="images_old/4226/image006.png" height="22" width="18"
+                id="image_vxy_2wr_qy"/></entry>
+          </row>
+          <row>
+            <entry>F</entry>
+            <entry>-</entry>
+            <entry>сила, <image href="images_old/4226/image007.png" height="22" width="11"
+                id="image_wxy_2wr_qy"/></entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4226/image008.png" height="22" width="11"
+                id="image_xxy_2wr_qy"/></entry>
+            <entry>-</entry>
+            <entry>скорость, <image href="images_old/4226/image009.png" height="29" width="9"
+                id="image_yxy_2wr_qy"/></entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4226/image010.png" height="22" width="42"
+                id="image_zxy_2wr_qy"/></entry>
+            <entry>-</entry>
+            <entry>минимально возможная масса, <image href="images_old/4226/image006.png" height="22"
+                width="18" id="image_ayy_2wr_qy"/>;</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Входные порты блока:</b></p>
+    <p> Блок имеет один математический входной порт, через который в модель поступает значение
+      массы.</p>
+    <p> </p>
+    <p>
+      <b>Выходные порты блока:</b></p>
+    <p> Блок имеет один механический ненаправленный порт поступательного движения, через который на
+      вход блока поступают силы от присоединенных блоков, а на выход – скорость и суммарная
+      сила.</p>
+    <p> </p>
+    <p>
+      <b>Свойства блока:</b></p>
+    <table id="table_byy_2wr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Mmin</entry>
+            <entry>-</entry>
+            <entry>минимально возможная масса, <image href="images_old/4226/image006.png" height="22"
+                width="18" id="image_cyy_2wr_qy"/></entry>
+          </row>
+          <row>
+            <entry>M0</entry>
+            <entry>-</entry>
+            <entry>начальное значение массы, кг</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_dyy_2wr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>F</entry>
+            <entry>-</entry>
+            <entry>сила, <image href="images_old/4226/image007.png" height="22" width="11"
+                id="image_eyy_2wr_qy"/></entry>
+          </row>
+          <row>
+            <entry>Q</entry>
+            <entry>-</entry>
+            <entry>мощность, Вт</entry>
+          </row>
+          <row>
+            <entry>V</entry>
+            <entry>-</entry>
+            <entry>скорость, <image href="images_old/4226/image009.png" height="29" width="9"
+                id="image_fyy_2wr_qy"/></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

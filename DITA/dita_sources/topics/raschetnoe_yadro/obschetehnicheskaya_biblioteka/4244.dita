@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика – Планетарная передача “Обод -Планета”  </title>
+  <body>
+    <table id="table_ct4_dgs_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4244/image001.png" height="32" width="32"
+                id="image_dt4_dgs_qy"/></entry>
+            <entry>Механика – Планетарная передача “Обод -Планета”</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4244/image002.png" height="55" width="147"
+                id="image_et4_dgs_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>В блоке реализована модель планетарного механизма с двумя степенями свободы, включающего в
+      себя водило, сателлиты и коронную шестерню (обод).</p>
+    <p>Сателлиты жестко соединены с водилом и одновременно вращаются вокруг собственных осей.
+      Сателлиты имеют внешние зубья, а коронная шестерня - внутренние.</p>
+    <p>Схематически планетарная передача представлена на рисунке:</p>
+    <p><image href="images_old/4244/image003.jpg" height="184" width="182" id="image_ft4_dgs_qy"/></p>
+    <p>Уравнения модели имеют следующий вид:</p>
+    <p><image href="images_old/4244/image004.png" height="46" width="76" id="image_gt4_dgs_qy"/></p>
+    <p><image href="images_old/4244/image005.png" height="22" width="281" id="image_ht4_dgs_qy"/></p>
+    <p><image href="images_old/4244/image006.png" height="75" width="356" id="image_it4_dgs_qy"/></p>
+    <p><image href="images_old/4244/image007.png" height="22" width="169" id="image_jt4_dgs_qy"/></p>
+    <p><image href="images_old/4244/image008.png" height="22" width="183" id="image_kt4_dgs_qy"/></p>
+    <p><image href="images_old/4244/image009.png" height="26" width="97" id="image_lt4_dgs_qy"/>, где</p>
+    <table id="table_mt4_dgs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4244/image010.png" height="22" width="84"
+                id="image_nt4_dgs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Угловые скорости шестерни, сателлитов и водила, соответственно</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4244/image011.png" height="22" width="70"
+                id="image_ot4_dgs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Моменты на шестерне, сателлите и водиле, соответственно</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4244/image012.png" height="22" width="29"
+                id="image_pt4_dgs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Передаточное отношение <image href="images_old/4244/image013.png" height="22"
+                width="53" id="image_qt4_dgs_qy"/></entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4244/image014.png" height="26" width="24"
+                id="image_rt4_dgs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Момент трения подшипников водила</entry>
+          </row>
+          <row>
+            <entry><i>B</i></entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения подшипников водила</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4244/image015.png" height="22" width="11"
+                id="image_st4_dgs_qy"/></entry>
+            <entry>-</entry>
+            <entry>КПД пары сателлит-шестерня</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4244/image016.png" height="22" width="27"
+                id="image_tt4_dgs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Пороговое значение мощности</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Входные порты блока:</b></p>
+    <p>Блок имеет три механических порта (C-водило, P-сателлит, R-коронная шестерня) вращательного
+      движения.</p>
+    <p><b>Выходные порты блока:</b></p>
+    <p>Блок имеет один математический порт, на который поступает значение потерь мощности.</p>
+    <p> </p>
+    <p><b>Свойства блока:</b></p>
+    <table id="table_ut4_dgs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>G</entry>
+            <entry>-</entry>
+            <entry>Коэффициент передачи <image href="images_old/4244/image013.png" height="22" width="53"
+                id="image_vt4_dgs_qy"/></entry>
+          </row>
+          <row>
+            <entry>Kpd</entry>
+            <entry>-</entry>
+            <entry>КПД пары сателлит-коронная шестерня</entry>
+          </row>
+          <row>
+            <entry>Qth</entry>
+            <entry>-</entry>
+            <entry>Пороговое значение мощности, Вт</entry>
+          </row>
+          <row>
+            <entry>B</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения подшипников водила, <image href="images_old/4244/image017.png"
+                height="32" width="29" id="image_wt4_dgs_qy"/></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_xt4_dgs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Wc</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость водила, рад/с</entry>
+          </row>
+          <row>
+            <entry>Tc</entry>
+            <entry>-</entry>
+            <entry>Момент на водиле, <image href="images_old/4244/image018.png" height="22" width="36"
+                id="image_yt4_dgs_qy"/></entry>
+          </row>
+          <row>
+            <entry>Wr</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость шестерни, рад/с</entry>
+          </row>
+          <row>
+            <entry>Tr</entry>
+            <entry>-</entry>
+            <entry>Момент на коронной шестерне, <image href="images_old/4244/image018.png" height="22"
+                width="36" id="image_zt4_dgs_qy"/></entry>
+          </row>
+          <row>
+            <entry>Wp</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость сателлита, рад/с</entry>
+          </row>
+          <row>
+            <entry>Tp</entry>
+            <entry>-</entry>
+            <entry>Момент сателлита, <image href="images_old/4244/image018.png" height="22" width="36"
+                id="image_a54_dgs_qy"/></entry>
+          </row>
+          <row>
+            <entry>Q</entry>
+            <entry>-</entry>
+            <entry>Потери мощности, Вт</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

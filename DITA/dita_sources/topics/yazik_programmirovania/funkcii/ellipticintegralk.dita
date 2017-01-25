@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>ellipticintegralk</title>
+<shortdesc>Функция вычисления полного эллиптического интеграла первого рода.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>y = <funcname>ellipticintegralk</funcname>(m);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>m – аргумент, модуль эллиптического интеграла.</p>
+    </section>
+<section><title>Описание:</title>
+<p>Функция K полного эллиптического интеграла первого рода является частным случаем неполного
+        эллиптического интеграла первого рода при амплитуде π/2. Таким образом функция зависит
+        только от аргумента m и имеет вид: </p>
+      <image placement="break" href="images/ellipticintegralk_1.png" align="center"
+        id="image_obf_5nm_cy"/>
+      <p>В точке m=1 функция сингулярна, что снижает точность вычисления в ее малых окрестностях.
+        Для получения повышенной точности в окрестностях сингулярности можно воспользоваться
+        функцией <codeph>ellipticintegralkhp</codeph> которая вычисляет не K(m), а K(1-m), что
+        позволяет переместить сингулярность из точки m=1 в точку m=0.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>y – значение полного эллиптического интеграла первого рода аргумента m.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> y; 
+y=<funcname>ellipticintegralk</funcname>(0.5);</codeblock></section>
+<p>В результате выполнения скрипта переменная y получит значение полного эллиптического интеграла
+      первого рода от аргумента 0.5.</p>  
+  </body>
+</topic>

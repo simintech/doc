@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>exit</title>
+<shortdesc>Выход из текущего программного блока.</shortdesc>
+<body>
+<section><title>Синтаксис:</title>
+<codeblock><kword>exit</kword>;</codeblock>
+      </section>
+<section><title>Описание:</title>
+<p>Выход из текущего программного блока (процедуры или страницы кода). Если <codeph>exit</codeph>  внутри функции, то происходит выход из функции. Если exit внутри субмодели, то завершается выполнение скрипта на данном шаге субмодели.</p></section>
+<section><title>Пример:</title><codeblock>Label1: i=i+1;
+<kword>if</kword> i&lt;10 <kword>then</kword> <kword>goto</kword> Label1; 
+<kword>if</kword> i>10 <kword>then</kword> <kword>exit</kword>;</codeblock></section>
+  </body>
+</topic>

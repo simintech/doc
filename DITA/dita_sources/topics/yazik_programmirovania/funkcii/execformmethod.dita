@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>еxecformmethod</title>
+<shortdesc>Функция выполнения заданного метода окна проекта.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>fm = <funcname>execformmethod</funcname>(name);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>name – строка с названием метода.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>execformmethod(name)</codeph> – функция позволяет выполнить пункт меню окна проекта с
+        внутренним названием <codeph>name</codeph>. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>fm – функция возвращает переменную типа boolean, имеющую значение 1, если выполнение метода
+        завершилось успехом и 0 в противном случае.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>initialization</kword>
+ <funcname>execformmethod</funcname>("MenuViewScrollsClick"); <comment>// изменение видимости полос прокрутки</comment>
+ <funcname>execformmethod</funcname>("MenuViewStatusBarClick"); <comment>//изменение видимости статус-бара</comment>
+ <funcname>execformmethod</funcname>("MMShowingMsgListClick"); <comment>//изменение видимости окна сообщений</comment>
+ <funcname>execformmethod</funcname>("mmTabBarClick"); <comment>//изменение видимости закладок окна</comment>
+ <funcname>execformmethod</funcname>("MMShowBorderClick"); <comment>//изменение видимости закладок окна</comment>
+end;
+
+<kword>finalization</kword>  
+  <funcname>execformmethod</funcname>("MenuViewScrollsClick");
+  <funcname>execformmethod</funcname>("MenuViewStatusBarClick");
+  <funcname>execformmethod</funcname>("MMShowingMsgListClick");
+  <funcname>execformmethod</funcname>("mmTabBarClick");
+  <funcname>execformmethod</funcname>("MMShowBorderClick");  
+<kword>end</kword>;</codeblock></section>
+<p>При запуске данного примера на расчет будет происходить изменение видимости заданных элементов
+      окна проекта. При остановке расчета видимость границ будет восстановлена.</p>
+    <p>
+      <note>Полный перечень всех методов окна проекта достаточно обширен и имя конкретного можно
+        получить по запросу в службу поддержки.</note>
+    </p>  
+  </body>
+</topic>

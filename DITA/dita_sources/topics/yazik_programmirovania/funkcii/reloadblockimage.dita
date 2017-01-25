@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>reloadblockimage</title>
+<shortdesc>Функция загрузки изображения объекта типа «группа» или «блок» из определенного
+    файла.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>reloadblockimage</funcname>(obj_name, gcn_file);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>obj_name – имя объекта,</p>
+      <p>prt_file – строка с именем файла, содержащего проект. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>reloadblockimage(obj_name, gcn_file)</codeph> – функция загружает изображение объекта
+        типа "группа" или "блок" с именем <codeph>obj_name</codeph> из указанного файла с именем
+          <codeph>gcn_file</codeph> (файлы графических контейнеров с расширением .gcn). В случае
+        использования данной функции внутри скрипта свойства блока, в качестве имени своего блока
+        надо использовать ключевое слово <codeph>self</codeph>
+      </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><funcname>reloadblockimage</funcname>(block1,"image1.gcn");</codeblock></section>  
+  </body>
+</topic>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>pos</title>
+<shortdesc>Функция поиска части строки в строке.</shortdesc>
+<body>
+<section><title>Синтаксис:</title>
+        <codeblock>indx = <funcname>pos</funcname>(sub_str, str);</codeblock>
+      </section>
+<section>
+      <title>Аргументы:</title>
+      <p>str – начальная строка,</p>
+      <p>sub_str – часть строки, поиск которой осуществляется. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>pos(sub_str, str)</codeph> – функция поиска части строки <codeph>sub_str</codeph>, в
+        строке <codeph>str</codeph>. Если часть строки найдена, возвращается номер символа в строке,
+        начиная с которого расположена часть строки. Нумерация символов в строке начинается с
+        единицы. Если возвращаемое значение меньше 1, то подстрока не найдена. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>indx – номер символа в строке, начиная с которого найдена часть строки.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword>   
+str:<rword>string</rword> = "string1",
+sub_str1:<rword>string</rword> = "ring",
+sub_str2:<rword>string</rword> = "abc"; 
+n1 = <funcname>pos</funcname>(sub_str1, str);<comment>//n1 = 3</comment>
+n2 = <funcname>pos</funcname>(sub_str2, str);<comment>//n2 = 0</comment></codeblock></section>
+<p>В результате переменной <codeph>n1</codeph> будет присвоено значение 3, переменной
+        <codeph>n2</codeph> будет присвоено значение 0. </p>  
+  </body>
+</topic>

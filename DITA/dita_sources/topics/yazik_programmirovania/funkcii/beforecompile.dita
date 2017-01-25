@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>beforecompile</title>
+  <shortdesc>Задание секций выполнения в процессе компиляции.</shortdesc>
+  <body>
+<section><title>Синтаксис:</title><codeblock><kword>beforecompile</kword>
+&lt;операция 1>;
+....
+&lt;операция n>;
+<kword>end</kword>; </codeblock></section>
+ <section><title>Описание:</title>
+<p>Задание секции выполнения операций в процессе компиляции текста скрипта. Операции внутри секции будут исполнены сразу, как только заканчивается данная секция. Данная секция может использоваться, например, для динамического ввода нужных сигналов, которые используются далее.</p>
+</section>
+<section><title>Пример1:</title>
+<codeblock><kword>beforecompile </kword> //секция выполнения в процессе компиляции
+<kword>if</kword> <kword>not</kword> <funcname>signalexist</funcname>("gant_s") <kword>then</kword>       
+<funcname>addsignaltolist</funcname>(13,0,"gant_s","gant_s","[[0]]",2);
+<kword>if</kword> <kword>not</kword> <funcname>signalexist</funcname>("gant_tend") <kword>then</kword>  
+<funcname>addsignaltolist</funcname>(13,0,"gant_tend","gant_tend","[[0]]",2) ;
+<kword>if</kword> <kword>not</kword> <funcname>signalexist</funcname>("gant_t0") <kword>then</kword>
+<funcname>addsignaltolist</funcname>(13,0,"gant_t0","gant_t0","[[0]]",2);
+<kword>end</kword>;
+gant_s = [1,2,3];</codeblock></section>
+<p>В примере происходит динамическое добавление новых сигналов в список сигналов проекта с дальнейшим использованием созданных сигналов в том же скрипте.</p>   
+<section><title>Пример2:</title><codeblock><kword>beforecompile</kword>     
+<comment>//Эта секция выполняется ДО компиляции остального скрипт</comment>
+<kword>if</kword> <funcname>signalexist</funcname>(Name1+"_L1_SET") <kword>then</kword> <funcname>eval</funcname>("define ISST1") <kword>else</kword> <funcname>eval</funcname>("undefine ISST1");
+<kword>if</kword> <funcname>signalexist</funcname>(Name1+"_H1_SET") <kword>then</kword> <funcname>eval</funcname>("define ISST4") <kword>else</kword> <funcname>eval</funcname>("undefine ISST4");
+<comment>//определяем флаги наличия уставок</comment>
+<comment>//если какой-то уставки нет, то выключаем флаг !!! иначе - </comment> 
+<comment>//включаем</comment>
+if <funcname>signalexist</funcname>("AS_"+Name1+"_L1_ON") <kword>then</kword> <funcname>eval</funcname>("define LAS11") <kword>else</kword> <funcname>eval</funcname>("undefine LAS11");
+if <funcname>signalexist</funcname>("AS_"+Name1+"_H1_ON") <kword>then</kword> <funcname>eval</funcname>("define HAS11") <kword>else</kword> <funcname>eval</funcname>("undefine HAS11");
+if <funcname>signalexist</funcname>("PS_"+Name1+"_L1_ON") <kword>then</kword> <funcname>eval</funcname>("define LPS11") <kword>else</kword> <funcname>eval</funcname>("undefine LPS11");
+if <funcname>signalexist</funcname>("PS_"+Name1+"_H1_ON") <kword>then</kword> <funcname>eval</funcname>("define HPS11") <kword>else</kword> <funcname>eval</funcname>("undefine HPS11");
+<comment>//теперь, если флаг есть - то уставка есть, иначе - не делаем</comment> 
+<comment>// ничего с этой уставкой</comment>
+<kword>end</kword>;</codeblock></section>
+<p>В примере определена секция скрипта, выполняемая до компиляции основного скрипта. В секции определяется наличия уставок для сигналов,  если какой-то уставки нет, то выключаем флаг наличия уставки, иначе - включаем</p>
+  </body>
+</topic>

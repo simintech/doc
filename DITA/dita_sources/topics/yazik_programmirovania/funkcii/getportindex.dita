@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getportindex</title>
+<shortdesc>Функция получения индекса порта в блоке.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>p_ind = <funcname>getportindex</funcname>(port_id);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>port_id – ссылка (идентификатор) на входной порт.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getportindex</codeph> – функция позволяет получить индекс порта с идентификатором
+          <codeph>port_id</codeph>. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>Функция возвращает число типа integer, равное индексу порта с указанным
+        идентификатором.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>p_id = <funcname>getblockportid</funcname>(macro2,2);  <comment>//получение идентификатора порта</comment>
+p_ind = <funcname>getportindex</funcname>(p_id); <comment>//получение индекса порта</comment></codeblock></section>
+<p>В результате выполнения данного скрипта, переменная <codeph>p_ind</codeph> получит значение 2,
+      которое было использовано для получения идентификатора порта с помощью функции
+        <codeph>getblockportid</codeph>. </p>  
+  </body>
+</topic>

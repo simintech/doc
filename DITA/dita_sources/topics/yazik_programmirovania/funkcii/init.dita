@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>init</title>
+  <shortdesc>Декларация динамических переменных.</shortdesc>
+  <body>
+    <section><title>Синтаксис:</title>
+    <codeblock><kword>init</kword> &lt;имя переменной 1>{:&lt;тип переменной 1>}{=&lt;инициирующее выражение 1>}{,&lt;имя переменной 2>{:&lt;тип переменной 2>}{=&lt;инициирующее выражение 2>}};</codeblock></section>
+    <section><title>Описание:</title>
+      <p>Декларация динамических переменных (формат аналогичен <codeph>var</codeph>). По декларации
+        <codeph>init</codeph> x; 
+        будут созданы две переменные одинакового типа: переменная состояния x и её 
+        производная x’. Если x  – массив переменных состояния, то x'[i] – производная
+        переменной x[i] этого массива. Переменные состояния позволяют задавать дифференциальные 
+        уравнения в форме Коши, т.е. в виде x'=f(x).</p>
+    </section>
+    <section><title>Пример:</title>
+      <codeblock>
+<kword>local</kword>
+<comment>{ввод начальных условий}</comment>
+<kword>output</kword> y1[2], y2[2];
+<kword>init</kword> x1=5,x2=5,x3=5,x4=5.1,x5=5,x6=5;
+<comment>{Ввод коэффтициентов и дифференциальных уравнений}</comment>
+a=10; b=28; c=2.6666666;
+x1'=a*(-x1+x2); <comment>{ Моделирование при нач. усл. в точке M1}</comment>
+x2'=b*x1-x2-x1*x3;     <comment>{         - // -                 }</comment>                                          
+x3'=-c*x3+x1*x2;       <comment>{         - // -                 }</comment>
+x4'=a*(-x4+x5); <comment>{ Моделирование при нач. усл. в точке M2}</comment>
+x5'=b*x4-x5-x4*x6;     <comment>{         - // -                 }</comment>
+x6'=-c*x6+x4*x5;       <comment>{         - // -                 }</comment>
+<comment>{         ОПИСАНИЕ ВЫХОДОВ ИЗ БЛОКА             }</comment>        
+y1[1]=x1;  y1[2]=x4;
+y2[1]=x3;  y2[2]=x6;
+<kword>end</kword>;</codeblock>
+    </section>
+    <p>Демонстрационный пример.</p>
+    <p>Задано: Исследовать нестационарную систему, описываемую уравнениями 
+      Лоренца и соответствующую классическому сильному странному аттрактору.</p>
+<p>Система уравнений</p>
+    
+<p><image placement="break" href="images/init_1.png" align="center" id="image_bwp_t2h_tx"/>где
+      a=10.0; b=28.0; c=2,666(6);</p>
+    
+    <p>Начальные условия:  M1(0)=[5 5 5] и M2(0)=[5.1 5 5]</p>   
+  </body>
+</topic>

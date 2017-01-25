@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>sethintautohide </title>
+<shortdesc>Функция установки флага автоматического скрытия всплывающих подсказок в окне
+    редактора.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>sethintautohide</funcname>(flag);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>flag – флаг автоматического скрытия всплывающих подсказок в окне редактора. Тип boolean. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>sethintautohide(flag)</codeph> – функция устанавливает флаг <codeph>flag</codeph>
+        (1-установить флаг, 0- сбросить флаг) автоматического скрытия всплывающих подсказок в окне
+        редактора.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><funcname>sethintautohide</funcname>(1);</codeblock></section>  
+  </body>
+</topic>

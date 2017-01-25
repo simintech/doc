@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>complex</title>
+<shortdesc>Функция получения комплексного числа.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>y = <funcname>complex</funcname>(a, b);</codeblock>
+    </section>
+<section><title>Аргументы:</title><p>a – вещественная часть комплексного числа,</p>
+<p>b – мнимая часть комплексного числа.</p></section>
+<section><title>Описание:</title>
+<p><codeph>complex(x)</codeph> – функция получения комплексного числа x из его вещественной части a и мнимой части b.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>y – полученное комплексное число. Имеет тип «комплексное число»</p>
+    </section>  
+<section>
+      <title>Пример:</title>
+      <codeblock>y = <funcname>complex</funcname>(3,4);</codeblock>
+    </section>
+<p>В результате переменной y будет присвоено значение 3+4i.</p>   
+  </body>
+</topic>

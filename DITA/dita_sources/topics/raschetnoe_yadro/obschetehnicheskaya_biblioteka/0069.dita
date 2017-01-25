@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Линейное с насыщением</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/0069.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/0069s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован | Си
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок реализует алгоритм линейного звена с насыщением:<image placement="break"
+        href="images/0069_1.png" align="center" id="image_n1s_kc2_jy"/><image placement="break"
+        href="images/0069_2.png" align="center" id="image_rsd_vc2_jy"/>где <i>x</i>(<i>t</i>) –
+      вектор входных сигналов, <i>y</i>(<i>t</i>) – вектор выходных сигналов, <i>k</i> =
+        (<i>y</i><sub>2</sub>-<i>y</i><sub>1</sub>)/(<i>b</i>-<i>a</i>).</p>
+    <section><title>Входы</title>
+    <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>input</uicontrol> - порт входного сигнала.</li>
+        </ul>
+      </p></section>
+    <section><title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>output</uicontrol> - порт выходного, преобразованного сигнала.</li>
+        </ul>
+      </p></section>
+    <section><title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Нижняя граница аргумента</uicontrol> – параметр <i>a</i>.</li>
+          <li><uicontrol>Верхняя граница аргумента</uicontrol> – параметр <i>b</i>.</li>
+          <li><uicontrol>Нижнее значение функции</uicontrol> – параметр <i>y</i><sub>1</sub>.</li>
+          <li><uicontrol>Верхнее значение функции</uicontrol> – параметр <i>y</i><sub>2</sub>. </li>
+        </ul>
+      </p></section>
+    <section><title>Параметры</title>
+      <p>нет</p></section>
+    <note>для реализации векторной обработки преобразуемые сигналы должны быть «сжаты» в векторный
+      входной сигнал посредством типового блока <xref href="0019.dita" format="dita"
+        >Мультиплексор</xref>.</note>
+    
+  </body>
+</topic>

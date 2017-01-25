@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Передаточная функция общего вида</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/0028.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/0028s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок реализует математическую модель звена, динамика которого (для каждого скалярного
+      сигнала) описывается линейным обыкновенным дифференциальным уравнением (ОДУ) вида:<image
+        placement="break" href="images/0028_1.png" align="center" id="image_fxr_ghx_3y"/>где <image
+        placement="break" href="images/0028_2.png" align="center" id="image_qs4_xhx_3y"
+          /><i>a<sub>i</sub></i>, <i>b<sub>j</sub></i> – коэффициенты (<i>i</i>=0...<i>n</i>,
+        <i>j</i>=0...<i>m</i>, <i>n</i>≥<i>m</i>); <i>x</i>(<i>t</i>) – входной сигнал в блок (может
+      быть векторным, тогда и вектора коэффициентов и выход блока тоже будут векторными той же
+      размерности), <i>y</i>(<i>t</i>) – выходной сигнал из блока. При нулевых начальных условиях
+      динамика блока может быть представлена следующей передаточной функцией:<image
+        placement="break" href="images/0028_3.png" align="center" id="image_s4c_z3x_3y"/>Размерности
+      сигналов входа, выхода и векторов коэффициентов должны совпадать. </p>
+    <section>
+      <title>Входы</title>
+      <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>input</uicontrol> - входной сигнал.</li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>output</uicontrol> - выходной преобразованный сигнал.</li>
+        </ul>
+      </p>
+    </section>
+    <section><title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Коэффициенты числителя</uicontrol> – вектор <i>b<sub>j</sub></i>,
+            размерностью [m].</li>
+          <li><uicontrol>Коэффициенты знаменателя</uicontrol> – вектор <i>a<sub>i</sub></i>,
+            размерностью [n].</li>
+          <li><uicontrol>Начальные условия</uicontrol> – вектор начальных значений
+              <i>y<sub>i</sub></i>(0) выходной величины блока. </li>
+        </ul>
+      </p></section>
+    <section><title>Параметры</title>
+      <p>
+        <ul id="ul_t3c_l3t_2y">
+          <li><uicontrol>Динамические переменные</uicontrol> - внутренние переменные состояния
+            блока;</li>
+          <li><uicontrol>Производные</uicontrol> - внутренние переменные состояния блока.</li>
+        </ul>
+      </p></section>
+    <note>по умолчанию блок реализует обработку скалярного входного сигнала.</note>
+    
+  </body>
+</topic>

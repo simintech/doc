@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Усилитель</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/0040.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/0040s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован | Си
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> Блок производит умножение (усиление) входной величины на заданный коэффициент усиления
+        <i>k</i> (в случае скалярного сигнала на входе):<image placement="break"
+        href="images/0040_1.png" align="center" id="image_mfc_y5q_gy"/> или поэлементное умножение
+      входного векторного сигнала на заданный коэффициент усиления <i>k</i>:<image placement="break"
+        href="images/0040_2.png" align="center" id="image_qvv_dvq_gy"/> где
+        <i>u</i><sub>i</sub>(<i>t</i>) – i-ый элемент входного векторного сигнала
+      <i>u</i>(<i>t</i>), <i>y</i><sub>i</sub>(<i>t</i>) – элемент выходного векторного сигнала
+        <i>y</i>(<i>t</i>), <i>n</i> – размерность входа и выхода.</p>
+    <section><title>Входы</title>
+    <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>input</uicontrol> - порт входного значения.</li>
+        </ul>
+      </p></section>
+    <section><title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>output</uicontrol> - порт выходного значения.</li>
+        </ul>
+      </p></section>
+    <section><title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Коэффициент усиления</uicontrol> – действительное число <i>k</i>, скалярный
+            множитель для входной величины. </li>
+        </ul>
+      </p></section>
+    <section><title>Параметры</title>
+      <p>нет </p></section>
+    <note>
+      <ol id="ol_lt3_pvq_gy">
+        <li>Размерность выходного сигнала равна размерности входного сигнала.</li>
+        <li>Именованное свойство может быть задано как локальная переменная модели (субмодели) в
+          скрипте на языке программирования, как глобальный сигнал проекта при помощи пункта
+          главного меню <cmdname>Сервис → Сигналы</cmdname>, или как внешний сигнал проекта при
+          помощи подключаемой базы сигналов. </li>
+      </ol>
+    </note>
+    
+  </body>
+</topic>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>ch</title>
+<shortdesc>Функция вычисления гиперболического косинуса вещественного или комплексного числа.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>y = <funcname>ch</funcname>(x);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>x – входное значение.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>ch(x)</codeph> – функция вычисления гиперболического косинуса вещественного или комплексного числа.</p>
+      <image placement="break" href="images/ch_1.png" align="center" id="image_vjb_2sx_5x"/>
+
+<p>Входное значение может быть как вещественным, так и комплексным числом. 
+  Входное значение может задаваться как заранее определенная переменная или как постоянное число. 
+  Комплексное число задается выражением a+bi, где a и b вещественные и мнимые части числа соответственно.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>y – гиперболический косинус входного значения x.</p>
+    </section>  
+<section><title>Пример1:</title>
+<p>Гиперболический косинус вещественного числа</p>  
+<codeblock><kword>const</kword> x = 5;
+y = <funcname>ch</funcname>(x);</codeblock></section>
+<p>В результате переменной y будет присвоено значение 74.209949.</p>
+<section><title>Пример2:</title>
+<p>Гиперболический косинус комплексного числа</p>  
+<codeblock>y = <funcname>ch</funcname>(3+4i);</codeblock></section>
+<p>В результате переменной y будет присвоено значение -6.580663-7.5815527i.</p>  
+  </body>
+</topic>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>Переменные</title>
+  <body>
+<p>Переменная – сигнал, именованная ячейка памяти, в которую можно записать или из которой можно прочитать значение. Переменные могут быть созданы при помощиключевых слов var, const, init, output, input или автоматически, в соответствии с выражением, которое присваивается переменной, а также получены из Глобальных Параметров субмодели. Переменные могут иметь один из перечисленных ниже стандартных типов.</p>
+<p><codeph>integer</codeph>                 Целое значащее 32-битное число</p>
+<p><codeph>doubl</codeph>                   Действительное 64-битное число</p>
+<p><codeph>complex</codeph>                 Комплексное 128-битное число. Имеет формат вывода a±bi, где a –
+                                                действительная часть, b – комплексная часть. Можно задать комплексное число также в виде (a,b) </p>
+<p><codeph>intarray</codeph>                Массив (вектор-строка) целых чисел </p>
+<p><codeph>array</codeph>                   Массив (вектор-строка) действительных чисел </p>
+<p><codeph>carray</codeph>                  Массив (вектор-строка) комплексных чисел </p>
+<p><codeph>matrix</codeph>                  Матрица действительных чисел </p>
+<p><codeph>cmatrix</codeph>                 Матрица комплексных чисел </p>
+<p><codeph>boolean</codeph>                 Двоичное 1-битное значение, может иметь значение 0 или 1</p>
+    
+<p><codeph>color</codeph>                   Цвет – эквивалентен типу integer</p>
+<p><codeph>point</codeph>                   Геометрическая точка – эквивалентна комплексному
+                                                числу, имеет формат вывода (a,b), где a – абсцисса, b –ордината</p>
+<p><codeph>string</codeph>                  Строка символов</p>
+<note> Далее под вектором понимается массив (вектор-строка) чисел, а вектор-столбец – это матрица, состоящая из нескольких строк и одного столбца.</note>
+<p>Кроме стандартных типов переменных могут быть переменные сложного типа – записи.</p>
+<p>Запись декларируется при указании типа данных переменной в соответствии со следующим форматом:</p>
+<p>"имя поля" 1>{:"тип поля 1"}{="начальное значение поля 1"}{…} </p>
+<section><title>Пример:</title><codeblock><kword>var</kword> newrec :(x = 0.0, y = 0.0); </codeblock></section>
+<note> Поля внутри декларации сложного типа определяются аналогично ключевому слову <kword>var</kword>.</note>
+<p>Доступ к полю сложной переменной производится при помощи оператора « -> » в соответствии со следующим форматом: </p>
+<section><title>Пример:</title><codeblock>А = newrec→x; </codeblock></section>
+<p>В блоке "Язык программирования" доступны следующие системные переменные:</p> 
+<table id="table_a1p_vmy_nw">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1" colsep="1" rowsep="1"/>
+        <colspec colnum="2" colname="col2" colsep="1" rowsep="1"/>
+        <colspec colnum="3" colname="col3" colsep="1" rowsep="1"/>
+        <tbody>
+          <row>
+            <entry>Переменная </entry>
+            <entry>Тип данных</entry>
+            <entry>Назначение</entry>
+          </row>
+          <row>
+            <entry><codeph>time</codeph></entry>
+            <entry>Вещественное (double)</entry>
+            <entry>Модельное время</entry>
+          </row>
+          <row>
+            <entry><codeph>stepsize</codeph></entry>
+            <entry>Вещественное (double)</entry>
+            <entry>Шаг интегрирования</entry>
+          </row>
+          <row>
+            <entry><codeph>goodstep</codeph></entry>
+            <entry>Двоичное (Boolean)</entry>
+            <entry>Флаг «хорошего» шага</entry>
+          </row>
+          <row>
+            <entry><codeph>getderi</codeph></entry>
+            <entry>Двоичное (Boolean)</entry>
+            <entry>Флаг вычисления значений производных</entry>
+          </row>
+          <row>
+            <entry><codeph>setstepflag</codeph></entry>
+            <entry>Двоичное (Boolean)</entry>
+            <entry>Флаг принудительного присвоения шага</entry>
+          </row>
+          <row>
+            <entry><codeph>newstepvalue</codeph></entry>
+            <entry>Вещественное (double)</entry>
+            <entry>Принудительное значение шага при setstepflag = 1</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+<p>Переменная <codeph>goodstep</codeph> принимает значение 1, если вычисления производятся в конечной точке шага интегрирования, и при этом удовлетворяется условие заданной точности; во всех других случаях переменная <codeph>goodstep</codeph> принимает значение 0. Переменная <codeph>getderi</codeph> принимает значение 1 при вычислении матрицы Якоби посредством численного  дифференцирования; во всех других случаях переменная <codeph>goodstep</codeph> принимает значение 0.</p>
+    <table>
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1" colsep="1" rowsep="1"/>
+        <colspec colnum="2" colname="col2" colsep="1" rowsep="1"/>
+        <tbody>
+          <row>
+            <entry>Имя </entry>
+            <entry>Назначение и пример</entry>
+          </row>
+          <row>
+            <entry><codeph>GROUPCOLOR</codeph></entry>
+            <entry>Цвет фона группы</entry>
+          </row>
+          <row>
+            <entry><codeph>GLOBALCOLOR</codeph></entry>
+            <entry>Цвет фона главного окна</entry>
+          </row>
+          <row>
+            <entry><codeph>PAINTSTEP</codeph></entry>
+            <entry>Флаг, выставляемый при перерисовке изображения окна.</entry>
+          </row>
+          <row>
+            <entry><codeph>CONTAINER_NAME</codeph></entry>
+            <entry>Имя графического контейнера, в котором написан скрипт.</entry>
+          </row>
+          <row>
+            <entry><codeph>SCALEX</codeph></entry>
+            <entry>К-т масштабирования контейнера по оси X</entry>
+          </row>
+          <row>
+            <entry><codeph>SCALEY</codeph></entry>
+            <entry>К-т масштабирования контейнера по оси Y</entry>
+          </row>
+          <row>
+            <entry><codeph>KLINE</codeph></entry>
+            <entry>К-т масштабирования линий внутри контейнера</entry>
+          </row>
+          <row>
+            <entry><codeph>SNAPSTEP</codeph></entry>
+            <entry>Шаг привязки объектов к сетке</entry>
+          </row>
+          <row>
+            <entry><codeph>CHANGE</codeph></entry>
+            <entry>Флаг принудительной перерисовки графического контейнера.</entry>
+          </row>
+          <row>
+            <entry><codeph>PARENTOBJECT</codeph></entry>
+            <entry>Ссылка на объект-владелец контейнера (для того чтобы изнутри контейнера
+              осуществлять операции с объектом)</entry>
+          </row>
+          <row>
+            <entry><codeph>REG_MODAL_FLAG</codeph></entry>
+            <entry>Флаг, указывающий, что эту форму надо открывать модально в режиме управления по
+              ссылке. Используется для создания панелей управления, работающих в модальном режиме –
+              для этого в их секции инициализации надо установить REG_MODAL_FLAG = 1.</entry>
+          </row>
+          <row>
+            <entry><codeph>old_project_name</codeph></entry>
+            <entry>Имя предыдущего файла, загруженного в окно</entry>
+          </row>
+          <row>
+            <entry><codeph>last_active_screen_id</codeph></entry>
+            <entry>screen_id последнего активного окна</entry>
+          </row>
+          <row>
+            <entry><codeph>screen_id</codeph></entry>
+            <entry>Идентификатор окна редактора – произвольная строка, присваиваемая в
+              скрипте</entry>
+          </row>
+          <row>
+            <entry><codeph>last_active_project_id</codeph></entry>
+            <entry>Ссылка окна последнего активного проекта</entry>
+          </row>
+          <row>
+            <entry><codeph>SYSTEM_DB_ROOT</codeph></entry>
+            <entry>Путь хранения разлычных файлов данных, установленный для графической
+              оболочки.</entry>
+          </row>
+          <row>
+            <entry><codeph>DYNAMIC_PROPERTY_ITEMS</codeph></entry>
+            <entry>Переменная для указания через скрипт подсказки выбора (для скриптов внутри
+              свойств блока)</entry>
+          </row>
+          <row>
+            <entry><codeph>last_active_hwnd</codeph></entry>
+            <entry>Указатель на последнее активное окно (хэндл)</entry>
+          </row>
+          <row>
+            <entry><codeph>restartstep</codeph></entry>
+            <entry>Шаг сохранения рестартов</entry>
+          </row>
+          <row>
+            <entry><codeph>time</codeph></entry>
+            <entry>Модельное время</entry>
+          </row>
+          <row>
+            <entry><codeph>submodel</codeph></entry>
+            <entry>Указатель на блок-родитель субмодели</entry>
+          </row>
+          <row>
+            <entry><codeph>prjinited</codeph></entry>
+            <entry>Флаг, выставляемый в единицу после завершения инициализации проекта. Пока
+              инициализация не завершена, флаг имеет значение ноль. </entry>
+          </row>
+          <row>
+            <entry><codeph>prjinitializing</codeph>
+            </entry>
+            <entry>Флаг, выставляемый в единицу в процессе инициализации модели на расчет. Когда
+              инициализация завершена, флаг сбрасывается в ноль. </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    
+    <p>Переменные могут задаваться при помощи ключевых слов <codeph>var</codeph>, <codeph>const</codeph>, 
+      <codeph>input</codeph>, <codeph>output</codeph>, <codeph>init</codeph>.</p>
+    
+  </body>
+</topic>

@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика – Несбалансированная нагрузка </title>
+  <body>
+    <table id="table_k51_qtr_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4212/image001.png" height="33" width="32"
+                id="image_l51_qtr_qy"/></entry>
+            <entry>Механика – Несбалансированная нагрузка</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4212/image002.png" height="99" width="262"
+                id="image_m51_qtr_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>В блоке реализована модель вращательного движения тела с несбалансированным моментом инерции,
+      зависящим от угла вращения.</p>
+    <p>Возможны три способа задания момента инерции:</p>
+    <ul id="ul_n51_qtr_qy">
+      <li>· круговое движение;</li>
+      <li>· эллиптическое движение;</li>
+      <li>· таблично заданный момент инерции.</li>
+    </ul>
+    <p>Уравнения модели блока имеют следующий вид:</p>
+    <p><image href="images_old/4212/image003.png" height="43" width="176" id="image_o51_qtr_qy"/></p>
+    <table id="table_p51_qtr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>T</entry>
+            <entry>-</entry>
+            <entry>момент</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4212/image004.png" height="22" width="14"
+                id="image_q51_qtr_qy"/></entry>
+            <entry>-</entry>
+            <entry>относительная угловая скорость</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4212/image005.png" height="22" width="13"
+                id="image_r51_qtr_qy"/></entry>
+            <entry>-</entry>
+            <entry>угол поворота</entry>
+          </row>
+          <row>
+            <entry>J</entry>
+            <entry>-</entry>
+            <entry>момент инерции</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p> Для кругового и эллиптического движения тела вокруг собственной оси момент инерции
+      относительно главной оси вычисляется по формуле:</p>
+    <p><image href="images_old/4212/image006.png" height="22" width="173" id="image_s51_qtr_qy"/>,
+      где</p>
+    <table id="table_t51_qtr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>J</entry>
+            <entry>-</entry>
+            <entry>момент инерции относительно главной оси</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4212/image007.png" height="22" width="19"
+                id="image_u51_qtr_qy"/></entry>
+            <entry>-</entry>
+            <entry>момент инерции относительно собственной оси</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4212/image008.png" height="22" width="16"
+                id="image_v51_qtr_qy"/></entry>
+            <entry>-</entry>
+            <entry>масса тела</entry>
+          </row>
+          <row>
+            <entry>r</entry>
+            <entry>-</entry>
+            <entry>расстояние от тела до главной оси</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p> Для кругового движения r рассчитывается по формуле:</p>
+    <p><image href="images_old/4212/image009.png" height="27" width="330" id="image_w51_qtr_qy"/> ,
+      где</p>
+    <p> </p>
+    <table id="table_x51_qtr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4212/image010.png" height="22" width="16"
+                id="image_y51_qtr_qy"/></entry>
+            <entry>-</entry>
+            <entry>расстояние между основной и собственной осью</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4212/image011.png" height="22" width="16"
+                id="image_z51_qtr_qy"/></entry>
+            <entry>-</entry>
+            <entry>радиус вращения тела вокруг собственной оси</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Схема кругового движения представлена на рисунке 1.</p>
+    <p><image href="images_old/4212/image012.png" height="168" width="325" id="image_av1_qtr_qy"/></p>
+    <p>Рисунок 1</p>
+    <p> Для эллиптического движения расстояние до главной оси рассчитывается по следующей
+      формуле:</p>
+    <p><image href="images_old/4212/image013.png" height="27" width="329" id="image_bv1_qtr_qy"/>,
+      где</p>
+    <table id="table_cv1_qtr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4212/image014.png" height="22" width="18"
+                id="image_dv1_qtr_qy"/></entry>
+            <entry>-</entry>
+            <entry>– радиус эллиптического движения на линии, параллельной расстоянию между
+              осями</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4212/image015.png" height="22" width="13"
+                id="image_ev1_qtr_qy"/></entry>
+            <entry>-</entry>
+            <entry>радиус эллиптического движения на линии, перпендикулярной расстоянию между
+              осями</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Схема эллиптического движения приведена на рисунке 2.</p>
+    <p><image href="images_old/4212/image016.png" height="173" width="307" id="image_fv1_qtr_qy"/></p>
+    <p>Рисунок 2</p>
+    <p> </p>
+    <p>
+      <b>Входные порты блока – отсутствуют</b><b>.</b></p>
+    <p> </p>
+    <p>
+      <b>Выходные порты блока.</b></p>
+    <p>Блок имеет один механический порт вращательного движения.</p>
+    <p> </p>
+    <p><b> Свойства блока:</b></p>
+    <table id="table_gv1_qtr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>what</entry>
+            <entry>-</entry>
+            <entry>Способ задания момента инерции</entry>
+          </row>
+          <row>
+            <entry>W0</entry>
+            <entry>-</entry>
+            <entry>начальная скорость, рад/с</entry>
+          </row>
+          <row>
+            <entry>F0</entry>
+            <entry>-</entry>
+            <entry>начальный угол, рад</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> Для вращательного движения задаются:</p>
+    <table id="table_hv1_qtr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>J0</entry>
+            <entry>-</entry>
+            <entry>момент инерции относительно собственной оси,<image href="images_old/4212/image017.png"
+                height="22" width="52" id="image_iv1_qtr_qy"/></entry>
+          </row>
+          <row>
+            <entry>M</entry>
+            <entry>-</entry>
+            <entry>масса, кг</entry>
+          </row>
+          <row>
+            <entry>Ra</entry>
+            <entry>-</entry>
+            <entry>расстояние между осями вращения, м</entry>
+          </row>
+          <row>
+            <entry>Rc</entry>
+            <entry>-</entry>
+            <entry>радиус вращения, м</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> Для эллиптического движения задаются:</p>
+    <table id="table_jv1_qtr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>J0</entry>
+            <entry>-</entry>
+            <entry>момент инерции относительно собственной оси,<image href="images_old/4212/image017.png"
+                height="22" width="52" id="image_kv1_qtr_qy"/></entry>
+          </row>
+          <row>
+            <entry>M</entry>
+            <entry>-</entry>
+            <entry>масса, кг</entry>
+          </row>
+          <row>
+            <entry>Ra</entry>
+            <entry>-</entry>
+            <entry>расстояние между осями вращения, м</entry>
+          </row>
+          <row>
+            <entry>R1</entry>
+            <entry>-</entry>
+            <entry>радиус вращения параллельный расстоянию между осями, м</entry>
+          </row>
+          <row>
+            <entry>R2</entry>
+            <entry>-</entry>
+            <entry>радиус вращения перпендикулярный расстоянию между осями, м</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Для таблично заданной функции:</p>
+    <table id="table_lv1_qtr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Fx</entry>
+            <entry>-</entry>
+            <entry>массив угла поворота, рад<image href="images_old/4212/image018.png" height="22"
+                width="123" id="image_mv1_qtr_qy"/></entry>
+          </row>
+          <row>
+            <entry>Jy</entry>
+            <entry>-</entry>
+            <entry>массив момента инерции; <image href="images_old/4212/image019.png" height="22"
+                width="62" id="image_nv1_qtr_qy"/></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_ov1_qtr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Т</entry>
+            <entry>-</entry>
+            <entry>Суммарный момент, н*м</entry>
+          </row>
+          <row>
+            <entry>ω</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость, рад/с</entry>
+          </row>
+          <row>
+            <entry>Fi</entry>
+            <entry>-</entry>
+            <entry>Угол, рад</entry>
+          </row>
+          <row>
+            <entry>Q</entry>
+            <entry>-</entry>
+            <entry>Мощность, Вт</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p> </p>
+  </body>
+</topic>

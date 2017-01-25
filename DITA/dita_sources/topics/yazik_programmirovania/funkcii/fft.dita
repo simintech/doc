@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>fft </title>
+<shortdesc>Функция вычисления прямого дискретного преобразования Фурье.</shortdesc>
+<body>
+    <section>
+      <title>Синтаксис:</title>
+      <codeblock>Y = <funcname>fft</funcname>(X);</codeblock>
+    </section>
+    <section>
+      <title>Аргументы:</title>
+      <p>X – входной массив, содержащий элементы вектора.</p>
+    </section>
+    <section><title>Описание:</title><codeph>fft</codeph> – функция вычисления дискретного
+      преобразования Фурье вектора <codeph>X</codeph>, вычисленного по алгоритму быстрого
+      преобразования Фурье. <image placement="break" href="images/fft_1.png" align="center"
+        id="image_gpt_kph_dy"/> где: <image href="images/fft_2.png" placement="inline"
+        class="- topic/image " id="image_nq3_4ph_dy"/>, <i>N</i> - размерность вектора. Размер
+      вектора X должен быть степенью числа 2. Входной вектор может быть как массивом вещественных,
+      так и массивом комплексных чисел. Комплексное число задается выражением a+bi, где a и b
+      вещественные и мнимые части числа соответственно. Входной массив X может задаваться: <p>
+        <ul id="ul_bsv_mrh_dy">
+          <li>как переменные типа массив, определенные ранее:<p><codeph>Y =
+            fft(X);</codeph></p></li>
+          <li>как массивы, состоящие из переменных, определенных ранее:<p><codeph>Y =
+                fft([x1,x2,x3,x4]);</codeph></p></li>
+          <li>как постоянные массивы:<p><codeph>Y = fft([1, 6, 4, 2]);</codeph></p></li>
+        </ul>
+      </p></section>
+    
+    <section>
+      <title>Результат:</title>
+      <p>Y – вектор значений дискретного преобразования Фурье вектора X.</p>
+    </section>
+    <section>
+      <title>Пример:</title>
+      <codeblock><kword>var</kword> Fs = 1000,<comment>// Частота   </comment>
+Tt = 1/Fs,<comment>//Время</comment>
+L = 1024; <comment>//Размер буфера</comment>
+<kword>var</kword> t:array = 1024#0; <comment>//Вектор значения времени</comment>
+<kword>var</kword> f:array = 1024#0; <comment>//Вектор значения частоты</comment>
+<kword>var</kword> xn:array =1024#0;
+<kword>for</kword>(i=0, L-1) t[i+1] = i*Tt; <comment>//заполним вектор времени</comment>
+<kword>for</kword>(i=0, L-1) f[i+1] = i; <comment>//заполним вектор частоты</comment>
+<comment>//Сумма синусоид 50 Гц и 120 Гц</comment>
+x = 0.7*<funcname>sin</funcname>(2*pi*50*t) + <funcname>sin</funcname>(2*pi*120*t); 
+<comment>//Добавим к сигналу случайный шум</comment>
+<kword>for</kword> (i=0, L-1) xn[i+1]=x[i+1]+2*<funcname>randg</funcname>(0,1);
+<comment>//дискретное преобразование Фурье</comment>
+y = <funcname>fft</funcname>(xn);
+y1 = <funcname>abs</funcname>(y);</codeblock>
+    </section>
+    <image placement="break" href="images/fft_3.png" align="center" id="image_tcc_gsh_dy"/>
+    <image placement="break" href="images/fft_4.png" align="center" id="image_xbt_gsh_dy"/>
+    <p>По виду сигнала сложно определить частотные составляющие сигнала. При помощи быстрого
+      преобразования Фурье выделяются частотные составляющие спектра сигнала (50 Гц и 120 Гц). </p>
+  </body>
+</topic>

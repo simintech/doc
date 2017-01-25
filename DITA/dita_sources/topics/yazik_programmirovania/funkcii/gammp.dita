@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>gammp</title>
+  <shortdesc>Неполная Гамма-функция.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>y = <funcname>gammp</funcname>(a, x);</codeblock>
+    </section>
+<section><title>Аргументы:</title>
+<p>a – аргумент функции,</p>
+<p>x – аргумент функции.</p></section>
+<section><title>Описание:</title>
+<p>Неполная Гамма функция P(a,x) задается соотношением:</p></section>
+    <image placement="break" href="images/gammap_1.png" align="center" id="image_yzb_4b3_wx"/>
+  <p>где Г(<i>a</i>) - полная Гамма-функция, или</p>
+    <image placement="break" href="images/gammap_2.png" align="center" id="image_hkg_hc3_wx"/>
+  <p>Функция <codeph>gammp</codeph> вычисляет неполную Гамма-функцию от аргументов a и x.
+      Аргументами могут быть матрицы и вектора, их размерности должны совпадать. </p>
+<section>
+      <title>Результат:</title>
+      <p>y – значение неполной Гамма-функции от аргументов a и x<i>.</i></p>
+    </section>  
+  </body>
+</topic>

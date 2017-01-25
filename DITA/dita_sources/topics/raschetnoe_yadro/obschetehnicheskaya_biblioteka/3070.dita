@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Номер линейного уравнения</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/3070.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/3070s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок используется совместно с блоками <xref href="3071.dita" format="dita">Коэффициенты
+        линейного уравнения</xref> и <xref href="3072.dita" format="dita">Результаты СЛАУ</xref>.
+      Блок представляет собой счётчик количества уравнений в системе с заданным именем. Данный блок
+      возвращает на выходе вектор уникальных номеров строк (уравнений) СЛАУ. При инициализации схемы
+      инициализируется общий для схемы объект-решатель СЛАУ с уникальным именем
+        <codeph>&lt;solvername></codeph>, который содержит счётчик количества уравнений. При этом
+      возможно как совмещение данной системы с основным якобианом, используемым для неявных методов
+      интегрирования, так и существование отдельной системы линейных уравнений. Данный блок при
+      инициализации схемы прибавляет к этому счётчику количество уравнений
+        <codeph>&lt;equcount></codeph>, заданное в свойствах блока и на выходе формирует вектор
+      номеров уравнений размерностью <codeph>&lt;equcount></codeph>. При расчёте выходы данного
+      блока не меняются. </p>
+    <section><title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Имя решателя СЛАУ</uicontrol> — имя решателя (строка
+              <codeph>&lt;solvername></codeph>), который обрабатывает (решает) СЛАУ. Должно быть
+            одинаковым для всех блоков «Номер линейного уравнения», «Коэффициенты линейного
+            уравнения» и «Результаты СЛАУ», принадлежащих одной системе.</li>
+          <li><uicontrol>Количество уравнений</uicontrol> — натуральное число
+              <codeph>&lt;equcount></codeph>, обозначающее количество добавляемых этим блоком
+            уравнений в систему <codeph>&lt;solvername></codeph>. </li>
+        </ul>
+      </p></section>
+    <section><title>Параметры</title>
+      <p>нет</p></section>
+    
+  </body>
+</topic>

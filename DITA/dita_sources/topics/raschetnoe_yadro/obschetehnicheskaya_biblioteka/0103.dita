@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Коммутатор входных сигналов</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/0103.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/0103s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Си |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок представляет собой коммутатор, подключающий к выходу один из аналоговых входных сигналов
+      (X1 или X2). Управление коммутацией происходит с помощью двух дискретных входов (X3 и X4).
+      Логика работы блока для двух входных сигналов, представлена в таблице.</p>
+    <p>
+      <table frame="all" rowsep="1" colsep="1" id="table_ayk_s3w_ky">
+        <tgroup cols="3">
+          <colspec align="center" colname="c1" colnum="1" colwidth="1*"/>
+          <colspec align="center" colname="c2" colnum="2" colwidth="1*"/>
+          <colspec align="center" colname="c3" colnum="3" colwidth="1*"/>
+          <thead>
+            <row>
+              <entry>X3</entry>
+              <entry>X4</entry>
+              <entry>Y</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>0</entry>
+              <entry>0</entry>
+              <entry>0</entry>
+            </row>
+            <row>
+              <entry>0</entry>
+              <entry>1</entry>
+              <entry>X2</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>0</entry>
+              <entry>X1</entry>
+            </row>
+            <row>
+              <entry>1</entry>
+              <entry>1</entry>
+              <entry>X1</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </p>
+    <section><title>Входы/Выходы</title>
+    <p>Количество входных аналоговых сигналов может быть настроено в параметрах блока. При этом
+        общее число входных портов будет в 2 раза больше, так как присутствует столько же
+        управляющих коммутацией сигналов.</p></section>
+    <section><title>Свойства:</title>
+      <p>нет</p></section>
+    <section><title>Параметры</title>
+      <p>нет</p></section>
+    
+  </body>
+</topic>

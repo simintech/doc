@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getitemscount</title>
+<shortdesc>Функция определения количества строк в тексте с разделителями.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>n = <funcname>getitemscount</funcname>(str_t);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>str_t – строка, содержащая текст с разделителями «конец строки».</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getitemscount(str_t)</codeph> – функция возвращает количество фрагментов текста в строке,
+        содержащей текст, разделенный разделителями «конец строки» или «перевод каретки». </p></section>
+<section>
+      <title>Результат:</title>
+      <p>n – количество строк.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword>
+s_01:<rword>string</rword> = "string1" + <funcname>chr</funcname>(13) + "string2";
+<comment>//определим количество строк в тексте         </comment>
+n = <funcname>getitemscount</funcname>(s_01);                    </codeblock></section>
+<p>В результате переменной <codeph>n</codeph> будет присвоено значение 2. </p>  
+  </body>
+</topic>

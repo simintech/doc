@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика – Идеальный датчик силы </title>
+  <body>
+    <table id="table_vmf_hwr_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4227/image001.png" height="33" width="32"
+                id="image_wmf_hwr_qy"/></entry>
+            <entry>Механика – Идеальный датчик силы</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4227/image002.png" height="97" width="118"
+                id="image_xmf_hwr_qy"/>
+            </entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>В блоке реализована модель идеального датчика силы (без учета демпфирования, запаздывания,
+      энергозатрат и т.д.).</p>
+    <p>Уравнение модели имеет следующий вид:</p>
+    <p><image href="images_old/4227/image003.png" height="22" width="104" id="image_ymf_hwr_qy"/>,
+      где</p>
+    <table id="table_zmf_hwr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4227/image004.png" height="22" width="19"
+                id="image_anf_hwr_qy"/></entry>
+            <entry>-</entry>
+            <entry>измеренная сила</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4227/image005.png" height="22" width="19"
+                id="image_bnf_hwr_qy"/></entry>
+            <entry>-</entry>
+            <entry>сила на входе C</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4227/image006.png" height="22" width="19"
+                id="image_cnf_hwr_qy"/></entry>
+            <entry>-</entry>
+            <entry>сила на входе R</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p><b>Входные порты блока:</b></p>
+    <p> Блок имеет два механических порта (C и R) поступательного движения.</p>
+    <p>
+      <b>Выходные порты блока:</b></p>
+    <p> Блок имеет один выходной математический порт T, на который поступает значение измеренной
+      силы.</p>
+    <p>
+      <b>Свойства блока – отсутствуют.</b></p>
+    <p><b> Параметры блока:</b></p>
+    <table id="table_dnf_hwr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>F</entry>
+            <entry>-</entry>
+            <entry>сила, <image href="images_old/4227/image007.png" height="22" width="11"
+                id="image_enf_hwr_qy"/></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p> </p>
+  </body>
+</topic>

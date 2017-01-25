@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Точка (Point) </title>
+  <body>
+    <p>
+      <image placement="break" href="Point_images/image001.png" align="center" id="image_ysf_jy1_ry"
+      />
+    </p>
+    <p>
+      <image placement="break" href="Point_images/image002.png" align="center" id="image_dl4_jy1_ry"
+      />
+    </p>
+    <p><b><i>Вставка</i></b></p>
+    <p>1. Кликнуть в панели примитивов по кнопке <image href="Point_images/image003.png" height="31"
+        width="31" id="image_ffg_gy1_ry"/>.</p>
+    <p>2. Кликнуть в поле окна проекта или графического редактора.</p>
+    <p><b><i>Редактирование</i></b></p>
+    <p>1. Выделить точку, кликнув на его изображении.</p>
+    <p>2. Для перемещения точки навести на неё указатель мыши – изображение указателя изменится на
+      изображение указывающей руки, нажать ЛКМ и удерживая её переместить отрезок на новое
+      место.</p>
+    <p><b><i>Свойства</i></b></p>
+    <p><image href="Point_images/image004.png" height="605" width="621" id="image_gfg_gy1_ry"/></p>
+    <table id="table_hfg_gy1_ry">
+      <tgroup cols="5">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <colspec colnum="4" colname="col4"/>
+        <colspec colnum="5" colname="col5"/>
+        <tbody>
+          <row>
+            <entry><b>Название</b></entry>
+            <entry><b>Имя</b></entry>
+            <entry><b>Значение по умолчанию</b></entry>
+            <entry>
+              <p><b>Допустимые значения</b></p>
+              <p><b>{в скрипте} в окне свойств</b></p>
+            </entry>
+            <entry><b>Справка</b></entry>
+          </row>
+          <row>
+            <entry><b>Имя объекта</b></entry>
+            <entry>Name</entry>
+            <entry>Point&lt;N></entry>
+            <entry>Непрерывная Последовательность цифр и латинских букв</entry>
+            <entry>
+              <p>Данное имя используется для обращения к свойствам объекта, например, в скрипте:</p>
+              <p>Point7.Visible.</p>
+            </entry>
+          </row>
+          <row>
+            <entry><b>Тип элемента</b></entry>
+            <entry>ClassName</entry>
+            <entry>Point</entry>
+            <entry>Последовательность цифр, латинских и русских букв. </entry>
+            <entry>Тип объекта, определяющий его внешний вид объекта, набор свойств и математическую
+              модель, которая будет применяться при моделировании.</entry>
+          </row>
+          <row>
+            <entry><b>Подсказка</b></entry>
+            <entry>Hint</entry>
+            <entry><i>&lt;нет></i></entry>
+            <entry>Любой текст в т.ч. и многострочный.</entry>
+            <entry>Текст подсказки, всплывающей при наведении курсора мыши на объект.</entry>
+          </row>
+          <row>
+            <entry><b>Отображать подсказку при редактировании</b></entry>
+            <entry>ShowHintOnEdit</entry>
+            <entry>Нет</entry>
+            <entry>
+              <p>{0} Нет</p>
+              <p>{1} Да</p>
+            </entry>
+            <entry>Включает и отключает отображение всплывающей подсказки в режиме
+              редактирования.</entry>
+          </row>
+          <row>
+            <entry><b>Видимость при выполнении</b></entry>
+            <entry>Visible</entry>
+            <entry>Нет</entry>
+            <entry>
+              <p>{0} Нет</p>
+              <p>{1} Да</p>
+            </entry>
+            <entry>Включает и отключает отображение объекта в режиме «Индикация» при запуске
+              расчёта.</entry>
+          </row>
+          <row>
+            <entry><b>Цвет</b></entry>
+            <entry>Color</entry>
+            <entry><i>&lt;черный></i></entry>
+            <entry>Цвет выбирается из стандартной системной палитры.</entry>
+            <entry>Цвет отображаемой точки. </entry>
+          </row>
+          <row>
+            <entry><b>Координаты точек</b></entry>
+            <entry>Points</entry>
+            <entry>[(X , Y)]</entry>
+            <entry>
+              <p>Значения float, интерпретируемые выражения:</p>
+              <p>[(56.7 , coord3*k4)]</p>
+            </entry>
+            <entry>Координаты X и Y отображаемой точки в координатном пространстве окна.</entry>
+          </row>
+          <row>
+            <entry><b>Ссылка</b></entry>
+            <entry>Instance</entry>
+            <entry><i>&lt;нет></i></entry>
+            <entry>Значения, задаваемые в окне «Выбор ссылки».</entry>
+            <entry>Вызов окна «Выбор ссылки». Объект используется в качестве чувствительной области
+              для различных действий: переключения между страницами проекта, управления другими
+              блоками, открытия файлов и пр. </entry>
+          </row>
+          <row>
+            <entry><b>Ссылка при редактировании</b></entry>
+            <entry>EditInstance</entry>
+            <entry>Нет</entry>
+            <entry>
+              <p>{0} Нет</p>
+              <p>{1} Да</p>
+            </entry>
+            <entry>Обработка объектом вызова ссылки в режиме редактирования.</entry>
+          </row>
+          <row>
+            <entry><b>Действие для вывода ссылки</b></entry>
+            <entry>InstanceMode</entry>
+            <entry>Двойной щелчок</entry>
+            <entry>
+              <p>{0} Двойной щелчок</p>
+              <p>{1} Щелчок левой кнопкой</p>
+              <p>{2} Щелчок правой кнопкой</p>
+            </entry>
+            <entry>Выбор варианта активации ссылки.</entry>
+          </row>
+          <row>
+            <entry><b>Ярлык</b></entry>
+            <entry>Tag</entry>
+            <entry>0</entry>
+            <entry>Любое целое число или интерпретируемое выражение</entry>
+            <entry>Метка в виде произвольного числа. Позволяет обращаться ко всем объектам с
+              одинаковым ярлыком при написании скриптов. Например, когда в процессе счета требуется
+              скрыть или показать группу объектов.</entry>
+          </row>
+          <row>
+            <entry><b>Шаблон автозаполнения</b></entry>
+            <entry>Template</entry>
+            <entry><i>&lt;нет></i></entry>
+            <entry>Подробнее о шаблонах автозаполнения.</entry>
+            <entry>Заданный в специальном формате текст, позволяющий автоматически создавать связи и
+              присваивать имена сигналам объекта.</entry>
+          </row>
+          <row>
+            <entry><b>Номер решателя</b></entry>
+            <entry>Layer</entry>
+            <entry>0</entry>
+            <entry>Любое целое число или интерпретируемое выражение</entry>
+            <entry>Число, задающее номер расчетного ядра, которое производит расчет математической
+              модели объекта. Применяется при использовании нескольких расчетных программ. </entry>
+          </row>
+          <row>
+            <entry><b>Скрипт инициализации объекта</b></entry>
+            <entry>OnInitScript</entry>
+            <entry><i>&lt;нет></i></entry>
+            <entry>Текст скрипта</entry>
+            <entry>Текст скрипта, исполняемого непосредственно перед запуском расчёта.</entry>
+          </row>
+          <row>
+            <entry><b>Скрипт исполнения объекта</b></entry>
+            <entry>OnRunScript</entry>
+            <entry><i>&lt;нет></i></entry>
+            <entry>Текст скрипта</entry>
+            <entry>Текст скрипта, исполняемого при выполнении расчёта.</entry>
+          </row>
+          <row>
+            <entry><b>Главная точка</b></entry>
+            <entry>Center</entry>
+            <entry>(X , Y)</entry>
+            <entry>
+              <p>Значения float, интерпретируемые выражения:</p>
+              <p>[(56.7 , coord3*k4)]</p>
+            </entry>
+            <entry>Координаты центра вращения объекта. По умолчанию, назначаются координаты
+              геометрического центра объекта.</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>sqrt</title>
+  <shortdesc>Функция вычисления корня квадратного вещественного или комплексного числа.</shortdesc>
+  <body>
+<section><title>Синтаксис:</title><codeblock>y = <funcname>sqrt</funcname>(x);</codeblock></section>
+<section><title>Аргументы:</title><p>x – входное значение.</p></section>   
+<section><title>Описание:</title>
+<p><codeph>sqrt(x)</codeph> – функция вычисления корня квадратного вещественного или комплексного числа. Входное значение должно быть положительным числом.
+Входное значение может задаваться как заранее определенная переменная или как постоянное число.
+Входное значение может быть как вещественным, так и комплексным числом.
+Если входное значение – вещественное число, то возвращаемое значение тоже вещественное число.
+Комплексное число задается выражением a+bi, где a и b вещественные и комплексные части числа соответственно.</p></section>
+<section><title>Результат:</title><p>y – корень квадратный от входного значения x.</p></section>    
+<section><title>Пример1:</title><p>Корень квадратный вещественного числа</p><codeblock><kword>const</kword> x = 5;
+y = <funcname>sqrt</funcname>(x);</codeblock></section>
+<p>В результате переменной y будет присвоено значение 2.236068.</p>    
+<section><title>Пример2:</title><p>Корень квадратный комплексного числа</p><codeblock>y = <funcname>sqrt</funcname>(3+4i);</codeblock></section>
+<p>В результате переменной y будет присвоено значение 2+1i.</p>
+  </body>
+</topic>

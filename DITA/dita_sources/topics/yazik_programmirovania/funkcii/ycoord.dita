@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>ycoord</title>
+<shortdesc>Функция получения координаты точки по оси ординат.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>y = <funcname>ycoord</funcname>(P);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>P – координаты точки, переменная типа <rword>point</rword>.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>ycoord(P)</codeph> – функция получения координаты по оси ординат (координата y) точки P.
+        Входные значения могут задаваться как заранее определенные переменные или задаваться
+        выражением (x, y), где x и y координаты точки</p></section>
+<section>
+      <title>Результат:</title>
+      <p>y – координата по оси ординат точки.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>const</kword> p = (1,3);
+y = <funcname>ycoord</funcname>(p);</codeblock></section>
+<p>В результате переменной y будет присвоено значение  3.</p>  
+  </body>
+</topic>

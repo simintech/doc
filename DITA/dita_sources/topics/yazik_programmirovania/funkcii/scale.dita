@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>scale </title>
+<shortdesc>Функция масштабирования объектов относительно определенной точки с определенным
+    коэффициентом.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>scale</funcname>(P,s,name1, name2,…, namen);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>P – координаты типа point, задающие точку центра для масштабирования объектов,</p>
+      <p>s – коэффициент масштабирования объектов,</p>
+      <p>name1, name2,…, namen – имена объектов.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>scale(P, s, name1, name2,…, namen)</codeph> – функция масштабирования объектов на схеме с
+        именами <codeph>name1</codeph>, <codeph>name2</codeph>,…, <codeph>namen</codeph>
+        относительно центра, заданного координатами <codeph>P</codeph> с коэффициентом
+          <codeph>s</codeph>. Входное значение <codeph>P</codeph> может задаваться как заранее
+        определенная переменная или задаваться выражением (x, y), где x и y координаты точки.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> oldfl: <rword>boolean</rword>;
+<kword>var</kword> p:<rword>point</rword> = (10,0);
+<kword>if</kword> <rword>paintstep</rword> <kword>then begin</kword>
+ fl = <funcname>flash</funcname>(500);
+<kword>if</kword> fl&lt;>oldfl <kword>then begin</kword>
+ <funcname>scale</funcname>(p,1.5,FillRect, FillCircle);
+<kword>end</kword>;
+oldfl = fl;
+<kword>end</kword>;       </codeblock></section>
+<p>В результате выполнения данного примера объекты с именами <codeph>FillRect</codeph> и
+        <codeph>FillCircle</codeph> будут с периодом 500 мс. последовательно увеличиваться и
+      уменьшаться в 1.5 раза относительно центра, заданного точкой с координатами (10,0), так как
+      результат увеличения сбрасывается на каждом шаге моделирования. </p>  
+  </body>
+</topic>

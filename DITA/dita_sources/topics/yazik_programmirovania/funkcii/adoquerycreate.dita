@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>adoquerycreate </title>
+<shortdesc>Функция создает объект для доступа к БД через ADO.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>db_id = <funcname>adoquerycreate</funcname>;</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>нет</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>adoquerycreate</codeph> – функция возвращает id объекта доступа к БД. Для уничтожения
+        объекта вызовите <codeph>freeobject</codeph>; . </p></section>  
+  </body>
+</topic>

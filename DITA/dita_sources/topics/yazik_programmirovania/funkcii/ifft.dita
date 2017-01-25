@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>ifft </title>
+<shortdesc>Функция вычисления обратного дискретного преобразования Фурье.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>Y = <funcname>ifft</funcname>(X);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>X – входной массив, содержащий элементы вектора. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>ifft</codeph> – функция вычисления обратного дискретного преобразования Фурье вектора
+          <codeph>X</codeph>, вычисленного по алгоритму быстрого преобразования Фурье:<image
+          placement="break" href="images/ifft_1.png" align="center" id="image_icp_dth_dy"/>где:
+          <image href="images/fft_2.png" id="image_fth_gth_dy"/>, <i>N</i> - размерность вектора.
+        Размерность вектора X должна быть степенью числа 2. Входной вектор может быть как массивом
+        вещественных, так и массивом комплексных чисел. Комплексное число задается выражением a+bi,
+        где a и b вещественные и мнимые части числа соответственно. Входной массив X может
+        задаваться: <ul id="ul_brd_mth_dy">
+          <li>как переменные типа массив, определенные ранее: <p><codeph>Y =
+            ifft(X);</codeph></p></li>
+          <li>
+            <p>как массивы, состоящие из переменных, определенных ранее: </p>
+            <p><codeph>Y = ifft([x1,x2,x3,x4]); </codeph></p>
+          </li>
+          <li>
+            <p>как постоянные массивы: </p>
+            <p><codeph>Y = ifft([1, 6, 4, 2]);</codeph></p>
+          </li>
+        </ul></p></section>
+<section>
+      <title>Результат:</title>
+      <p>Y – вектор значений обратного дискретного преобразования Фурье вектора X.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> Fs = 1000,<comment>// Частота   </comment>
+Tt = 1/Fs,<comment>//Время</comment>
+L = 1024;<comment>//Размер буфера</comment>
+<kword>var</kword> t:<rword>array</rword> = 1024#0; <comment>//Вектор значения времени</comment>
+<kword>var</kword> f:<rword>array</rword> = 1024#0; <comment>//Вектор значения частоты</comment>
+<kword>var</kword> xn:<rword>array</rword> =1024#0;
+<kword>for</kword>(i=0, L-1) t[i+1] = i*Tt; <comment>//заполним вектор времени</comment>
+<kword>for</kword>(i=0, L-1) f[i+1] = i; <comment>//заполним вектор частоты</comment>
+<comment>//Сумма синусоид 50 Гц и 120 Гц</comment>
+x = 0.7*<funcname>sin</funcname>(2*pi*50*t) + <funcname>sin</funcname>(2*pi*120*t); 
+<comment>//Добавим к сигналу случайный шум</comment>
+<kword>for</kword> (i=0, L-1) xn[i+1]=x[i+1]+2*<funcname>randg</funcname>(0,1);
+<comment>//дискретное преобразование Фурье</comment>
+y = <funcname>fft</funcname>(xn);
+y1 = <funcname>abs</funcname>(y);
+<comment>//отфильтруем сигнал</comment>
+<comment>// py – спектральная плотность сигнала</comment>
+<comment>// Porog – порог для спектральной плотности</comment>
+py=<funcname>abs</funcname>(y).*<funcname>abs</funcname>(y);
+Porog=4e4;
+pz=1024#(0,0);
+<comment>//удалим сигнал выше порога</comment>
+<kword>for</kword> (i=1,L)
+<kword>if</kword> py[i] &lt; Porog <kword>then</kword> pz[i]=0+0i 
+<kword>else</kword> pz[i]=y[i];
+<comment>//обратное преобразование Фурье (восстановление сигнала)</comment>
+z=<funcname>real</funcname>(<funcname>ifft</funcname>(pz));</codeblock></section>
+    <image placement="break" href="images/ifft_2.png" align="center" id="image_cmb_35h_dy"/>
+    <image placement="break" href="images/ifft_3.png" align="center" id="image_arx_35h_dy"/>
+    <image placement="break" href="images/ifft_4.png" align="center" id="image_qwr_j5h_dy"/>
+    <image placement="break" href="images/ifft_5.png" align="center" id="image_qqj_k5h_dy"/>
+<p>В примере формируется сигнал как сумма синусоид 50 Гц и 120 Гц (График «Сигнал без шума»). К нему
+      добавляется случайный шум. По виду сигнала сложно определить частотные составляющие сигнала
+      (График «Сигнал с шумом»). При помощи быстрого преобразования Фурье выделяются частотные
+      составляющие спектра сигнала (50 Гц и 120 Гц, график «Спектральное распределение сигнала»).
+      После происходит фильтрация спектра сигнала – отбрасывание сигнала ниже порога. При помощи
+      обратного быстрого преобразования Фурье формируется исходный сигнал. </p>  
+  </body>
+</topic>

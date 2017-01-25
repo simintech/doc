@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>incompleteellipticintegrale</title>
+<shortdesc>Функция вычисления неполного эллиптического интеграла второго рода.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>y = <funcname>incompleteellipticintegrale</funcname>(phi, m);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>phi – аргумент, амплитуда;</p>
+      <p>m – аргумент, модуль эллиптического интеграла.</p>
+    </section>
+<section><title>Описание:</title>
+<p>Функция E неполного (нормального) эллиптического интеграла второго рода от аргументов φ и m имеет
+        вид: </p>
+      <image placement="break" href="images/incompleteellipticintegrale_1.png" align="center"
+        id="image_uw3_rpm_cy"/>
+      <p>Важным частным случаем неполного эллиптического интеграла второго рода является полный
+        эллиптический интеграл второго рода, который вычисляется функцией
+          <codeph>ellipticintegrale</codeph>, в котором амплитуда φ=π/2.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>y – значение неполного эллиптического интеграла второго рода аргументов phi и m.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> y; 
+y=<funcname>incompleteellipticintegrale</funcname>(Pi/2,0);</codeblock></section>
+<p>В результате выполнения скрипта переменная y получит значение полного эллиптического интеграла
+      второго рода от аргументов Pi/2 и 0.</p>  
+  </body>
+</topic>

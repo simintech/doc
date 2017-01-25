@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>interpol</title>
+<shortdesc>Функция двумерной линейной, трехмерной линейной, кубической сплайн- интерполяции аргумента x.</shortdesc>
+<body>
+<section><title>Синтаксис:</title><codeblock>y = <funcname>interpol</funcname>(X, Y, х);
+z = <funcname>interpol</funcname>(X, Y, Z, х, y);
+y = <funcname>interpol</funcname>(x, M);</codeblock></section>
+<section><title>Аргументы:</title>
+  <p>Х – входной массив координат точек по оси x для вычисления линейной интерполяции,</p>
+<p>Y – входной массив координат точек по оси y для вычисления линейной интерполяции,</p>
+<p>Z – входной массив координат точек по оси z для вычисления линейной интерполяции,</p>
+<p>x,y – аргументы для интерполяции,</p>
+<p>M – матрица коэффициентов кубической сплайн-интерполяции.</p></section>
+<section>
+      <title>Описание:</title>
+      <p><codeph>interpol(x, M)</codeph> – функция кубической cплайн-интерполяции аргумента x по
+        вычисленной ранее при помощи функции <codeph>cspline</codeph> матрице коэффициентов M.
+        Вычисление производится согласно формуле:</p>
+      <image placement="break" href="images/interpol_1.png" align="center" id="image_vb1_4ch_wx"/>
+      <p><codeph>interpol(X,Y, х)</codeph> – функция двумерной линейной интерполяции аргумента x по
+        заданным координатам точек.</p>
+      <p><codeph>interpol(X,Y,Z, х, y)</codeph> – функция трехмерной линейной интерполяции
+        аргументов x,y по заданным координатам точек. Входные массивы X, Y, Z должны быть одного
+        размера. Входные массивы X, Y, Z могут задаваться:</p>
+      <p>
+        <ul>
+          <li>как переменные типа массив, определенные ранее:</li>
+        </ul>
+      </p>
+      <p><codeph>y = interpol(X, Y, х);</codeph></p>
+      <p>
+        <ul>
+          <li>как переменные типа массив, состоящие из переменных double, определенных ранее:</li>
+        </ul>
+      </p>
+      <p><codeph>y =
+          interpol([x<sub>1</sub>,x<sub>2</sub>,x<sub>3</sub>,x<sub>4</sub>],[y<sub>1</sub>,y<sub>2</sub>,y<sub>3</sub>,y<sub>4</sub>],
+        x);</codeph></p>
+      <p><codeph>y =
+        interpol([x<sub>1</sub>,x<sub>2</sub>,x<sub>3</sub>,x<sub>4</sub>], Y,
+        x);</codeph></p>
+      <p><codeph>y = interpol(X,
+          [y<sub>1</sub>,y<sub>2</sub>,y<sub>3</sub>,y<sub>4</sub>], x);</codeph></p>
+      <p>
+        <ul>
+          <li>как постоянные массивы:</li>
+        </ul>
+      </p>
+      <p><codeph>y = interpol([-1.80, -1.60, -1.40, -1.20],Y, x);</codeph></p>
+      <p><codeph>y = interpol(X, [-1.80, -1.60, -1.40, -1.20], x);</codeph></p>
+      <p><codeph>y = interpol([-1.80, -1.60, -1.40, -1.20],[-1.40, -0.78,-0.53,-0.35],
+        x);</codeph></p>
+    </section>
+<section><title>Результат:</title><p>y – результат интерполяции аргумента x,</p>
+<p>z – результат интерполяции аргументов x, y.</p></section>  
+<section><title>Пример1:</title>
+<p>Кубическая cплайн-интерполяция:</p><codeblock>
+<kword>input</kword> Q; <comment>//вход - аргумент</comment>
+<kword>output</kword> n; <comment>//выход - результат кубической сплайн-интерполяции</comment>
+<comment>//массивы координат для вычисления матрицы</comment>
+<kword>const</kword> Qpts = [-2.00, -1.80, -1.60, -1.40, -1.20, -1.00, -0.80, -0.60, -0.40, -0.20,  0.00,  0.20,  0.40,  0.60,  0.80,  1.00,  1.20,  1.40,  1.60,  1.80,  2.00];
+<kword>const</kword> Hp = [-1.40, -0.78, -0.53, -0.35, -0.17, +0.05, +0.38, +0.80, +0.94, +1.07,  1.15,  1.26,  1.33,  1.40,  1.47,  1.40,  1.45,  1.51,  1.59,  1.69,  1.74];  
+Mn = <funcname>cspline</funcname>(Qpts, Hp);
+n = <funcname>interpol</funcname>(Q,  Mn);</codeblock></section>
+<p>В результате переменной n будет присвоено интерполированное значение напора (по массивам Hp и Qpts) в соответствии со значением расхода Q.</p>  
+<section><title>Пример2:</title>
+<p>Двумерная линейная интерполяция:</p><codeblock>
+<kword>input</kword> Q; <comment>//вход - аргумент</comment>
+<kword>output</kword> n; <comment>//выход - результат линейной интерполяции</comment>
+<comment>//массивы координат</comment>
+<kword>const</kword> Qpts = [-2.00, -1.80, -1.60, -1.40, -1.20, -1.00, -0.80, -0.60, -0.40, -0.20,  0.00,  0.20,  0.40,  0.60,  0.80,  1.00,  1.20,  1.40,  1.60,  1.80,  2.00];
+<kword>const</kword> Hp = [-1.40, -0.78, -0.53, -0.35, -0.17, +0.05, +0.38, +0.80, +0.94, +1.07,  1.15,  1.26,  1.33,  1.40,  1.47,  1.40,  1.45,  1.51,  1.59,  1.69,  1.74];  
+n = <funcname>interpol</funcname>(Qpts, Hp, Q);</codeblock></section>
+<p>В результате переменной n будет присвоено линейно-интерполированное значение напора (по массивам Hp и Qpts) в соответствии со значением расхода Q.</p>   
+  </body>
+</topic>

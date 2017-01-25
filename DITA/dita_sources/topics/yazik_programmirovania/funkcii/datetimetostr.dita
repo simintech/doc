@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>datetimetostr</title>
+<shortdesc>Функция преобразования значения даты и времени в системном формате в строку в
+    соответствии с системными установками.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>str = <funcname>datetimetostr</funcname>(date);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>date – дата и время в системном формате. Тип double.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>datetimetostr(date)</codeph> – функция преобразования значения даты и времени в системном
+        формате из переменной <codeph>date</codeph> типа double в строку. Формат времени в строке
+        определяется системными установками. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>str – строка, содержащая дату и время.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>date = <funcname>now</funcname>;
+str = <funcname>datetimetostr</funcname>(date);</codeblock></section>
+<p>В результате выполнения примера переменной <codeph>date</codeph> будет присвоено значение текущей
+      даты и времени типа double, переменная <codeph>str</codeph> будет содержать строку с текущей
+      датой и временем в формате, определенном системными установками. </p>  
+  </body>
+</topic>

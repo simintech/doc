@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>asc</title>
+<shortdesc>Функция получения ASCII-кода первого символа строки.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>с = <funcname>asc</funcname>(str);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>str – строка.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>asc(str)</codeph> – функция возвращает ASCII-код первого символа строки
+          <codeph>str</codeph>. Если строка пустая, то возвращает 0. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>c – ASCII-код первого символа строки. Целое число.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>var
+s:string = "string1";
+c = asc(s);          </codeblock></section>
+<p>В результате переменной с будет присвоено значение 115 – ASCII-код символа “s”.</p>  
+  </body>
+</topic>

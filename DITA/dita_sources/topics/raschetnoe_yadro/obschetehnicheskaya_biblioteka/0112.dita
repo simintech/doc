@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Точечная кинетика (модель мгновенного скачка)</title>
+  <body>
+    <table id="table_zy4_hb4_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/0112.png" height="32" width="32" id="image_az4_hb4_qy"
+              /></entry>
+            <entry>Точечная кинетика (модель мгновенного скачка)</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry>| скалярный|</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/0112s.png" height="67" width="101" id="image_bz4_hb4_qy"
+              /></entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry/>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2">
+              <p>Блок реализует <i>упрощенную</i> модель кинетики нейтронов, а именно: <i>модель
+                  мгновенного скачка</i>, дифференциальные уравнения которой получены на основании
+                известных уравнений кинетики “точечного” ядерного реактора в односкоростном
+                приближении. </p>
+              <p>Блок имеет один <i>входной</i> и один <i>выходной</i> сигнал. </p>
+              <p>Данный типовой блок соответствует <i>постоянному</i> (во времени) интенсивности
+                внешнего источника нейтронов.</p>
+              <p><i>Входным</i> сигналом в блок является <i>абсолютное изменение</i>
+                  реактивности<image href="images_old/0112_html_m7c65c645.gif" height="24" width="100"
+                  id="image_cz4_hb4_qy"/>. </p>
+              <p><i>Выходным</i> сигналом из блока являются либо <i>безразмерная нейтронная
+                  мощность</i>, либо <i>безразмерное отклонение нейтронной мощности</i>.</p>
+              <p><b>Свойства:</b></p>
+              <ul id="ul_dz4_hb4_qy">
+                <li>
+                  <p>Эффективная доля запаздывающих нейтронов.</p>
+                </li>
+                <li>
+                  <p>Начальная подкритичность (в долях<image href="images_old/0112_html_mc950c04.gif"
+                      height="21" width="39" id="image_ez4_hb4_qy"/>).</p>
+                </li>
+                <li>
+                  <p>Относительные доли групп запаздывающих нейтронов.</p>
+                </li>
+                <li>
+                  <p>Постоянные распада групп запаздывающих нейтронов.</p>
+                </li>
+                <li>
+                  <p>Нормировка (1 – если выход блока <i>нормированная мощность</i>; 0 – если выход
+                    блока <i>нормированные отклонения мощности</i>)</p>
+                </li>
+              </ul>
+              <p><b>Математическая модель</b> данного блока получена на основании известных
+                уравнений кинетики “точечного” ядерного реактора в односкоростном приближении (т.е.
+                процесс деления ядер осуществляется нейтронами одной энергетической группы – либо
+                только тепловыми, либо только быстрыми):</p>
+              <p><image href="images_old/0112_html_m5bcb3819.gif" height="108" width="420"
+                  id="image_fz4_hb4_qy"/></p>
+              <p>где<image href="images_old/0112_html_2bbc9f74.gif" height="21" width="46"
+                  id="image_gz4_hb4_qy"/>– мощность реактора;</p>
+              <p><image href="images_old/0112_html_39b35266.gif" height="21" width="40" id="image_hz4_hb4_qy"
+                />– реактивность;</p>
+              <p><image href="images_old/0112_html_mc950c04.gif" height="21" width="39" id="image_iz4_hb4_qy"
+                />– эффективная доля запаздывающих нейтронов;</p>
+              <p><image href="images_old/0112_html_m1c1132c5.gif" height="21" width="14" id="image_jz4_hb4_qy"
+                />– время жизни мгновенных нейтронов;</p>
+              <p><image href="images_old/0112_html_m50ad0566.gif" height="23" width="47" id="image_kz4_hb4_qy"
+                />– концентрация ядер-предшественников запаздывающих нейтронов i-й группы;</p>
+              <p><image href="images_old/0112_html_6546d155.gif" height="21" width="23" id="image_lz4_hb4_qy"
+                />– постоянная распада ядер-предшественников i-й группы;</p>
+              <p><image href="images_old/0112_html_m6015aecb.gif" height="21" width="21" id="image_mz4_hb4_qy"
+                />– доля запаздывающих нейтронов i-й группы;</p>
+              <p><image href="images_old/0112_html_me79025f.gif" height="21" width="41" id="image_nz4_hb4_qy"
+                />– интенсивность внешнего источника нейтронов.</p>
+              <p>Уравнения кинетики нейтронов после преобразований исходной системы уравнений
+                принимают вид:</p>
+              <p><image href="images_old/0112_html_m493e7f5e.gif" height="137" width="243"
+                  id="image_oz4_hb4_qy"/></p>
+              <p>где<image href="images_old/0112_html_m61fe8988.gif" height="23" width="42"
+                  id="image_pz4_hb4_qy"/>– нормированное отклонение концентрации
+                ядер-предшественников запаздывающих нейтронов i-й группы;</p>
+              <p><image href="images_old/0112_html_6db5e3a.gif" height="22" width="26" id="image_qz4_hb4_qy"/>–
+                абсолютная (по модулю) подкритичность ядерного реактора в долях<image
+                  href="images_old/0112_html_4502fe97.gif" height="21" width="39" id="image_rz4_hb4_qy"/>;</p>
+              <p><image href="images_old/0112_html_m61fe8988.gif" height="23" width="42" id="image_sz4_hb4_qy"
+                />– относительное изменение реактивности в долях<image href="images_old/0112_html_4502fe97.gif"
+                  height="21" width="39" id="image_tz4_hb4_qy"/>;</p>
+              <p><image href="images_old/0112_html_4c50cc74.gif" height="22" width="26" id="image_uz4_hb4_qy"
+                />– относительная доля запаздывающих нейтронов i-й группы.</p>
+              <p>При<image href="images_old/0112_html_4e7b2f0b.gif" height="21" width="40"
+                  id="image_vz4_hb4_qy"/>реактор находится в стационаре, поэтому<image
+                  href="images_old/0112_html_m67d72829.gif" height="23" width="114" id="image_wz4_hb4_qy"
+                />.</p>
+              <p>Очевидно, что если при<image href="images_old/0112_html_3e29649b.gif" height="21" width="40"
+                  id="image_xz4_hb4_qy"/>нейтронная мощность постоянна, то начальные условия для
+                нормированных концентраций ядер-предшественников запаздывающих нейтронов равны
+                  <b>1.0</b>. </p>
+              <p><b>Примечания:</b></p>
+              <ol id="ol_yz4_hb4_qy">
+                <li>
+                  <p>По умолчанию в первых строках введены параметры, приблизительно соответствующие
+                    данным для реактора РБМК-1000.</p>
+                </li>
+                <li>
+                  <p>По умолчанию<image href="images_old/0112_html_m6015aecb.gif" height="21" width="21"
+                      id="image_zz4_hb4_qy"/>и<image href="images_old/0112_html_6546d155.gif" height="21"
+                      width="23" id="image_a1p_hb4_qy"/>соответствуют данным для “чистого” топлива
+                    U-235, хотя Пользователь может их скорректировать, например, если в процессе
+                    работы реактора нуклидный состав топлива изменился.</p>
+                </li>
+                <li>
+                  <p>Структура диалогового окна этого блока позволяет задать и другое число групп
+                    ядер-предшественников запаздывающих нейтронов и, соответственно,<image
+                      href="images_old/0112_html_m6015aecb.gif" height="21" width="21" id="image_b1p_hb4_qy"
+                      />и<image href="images_old/0112_html_6546d155.gif" height="21" width="23"
+                      id="image_c1p_hb4_qy"/>. Например, если необходимо учесть вклад фотонейтронов,
+                    то число групп может быть увеличено, например, до 8, и наоборот, можно ввести
+                    одногрупповую модель кинетики запаздывающих нейтронов.</p>
+                </li>
+                <li>
+                  <p>Если реактор подкритичен, то считается, что его <i>стационарное</i> состояние
+                      при<image href="images_old/0112_html_3e29649b.gif" height="21" width="40"
+                      id="image_d1p_hb4_qy"/>поддерживалось <i>внешним</i> источником нейтронов.</p>
+                </li>
+              </ol>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>

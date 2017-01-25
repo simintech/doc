@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Залитый Эллипс (FillEllipse) </title>
+  <body>
+    <p><image href="FillEllipse_images/image001.png" id="image_ol3_yz1_ry"/></p>
+    <p><image href="FillEllipse_images/image002.png" id="image_ucp_yz1_ry"/></p>
+    <p><b><i>Вставка</i></b></p>
+    <p>1. Кликнуть в панели примитивов по кнопке <image href="FillEllipse_images/image003.png"
+        height="31" width="31" id="image_dpb_xz1_ry"/>.</p>
+    <p>2. Кликнуть в поле окна проекта или графического редактора в точке центра будущей окружности,
+      т.к. первоначально залитый эллипс вставляется в виде круга с равными размерами большой и малой
+      осей.</p>
+    <p><b><i>Редактирование</i></b></p>
+    <p>1. Выделить эллипс, кликнув на его изображении.</p>
+    <p>2. Для перемещения эллипса навести на него указатель мыши - изображение указателя изменится
+      на изображение указывающей руки, нажать ЛКМ и удерживая её переместить эллипс на новое
+      место.</p>
+    <p>3. Для изменения размера большой или малой оси эллипса (или высоты и ширины прямоугольника,
+      описывающего эллипс) подвести указатель мыши к красному квадратному маркеру в центре одной из
+      сторон прямоугольника, описывающего эллипс – изображение указателя изменится на
+      двунаправленную стрелку, нажать ЛКМ и удерживая её переместить маркер на расстояние,
+      соответствующее новому размеру оси. При этом эллипс будет трансформироваться симметрично
+      относительно центра описывающего его прямоугольника.</p>
+    <p>4. Для поворота эллипса подвести указатель мыши к красному квадратному маркеру в центре
+      правой (если вращение ещё не выполнялось) стороны прямоугольника, описывающего эллипс –
+      изображение указателя изменится на двунаправленную стрелку, нажать ЛКМ и удерживая её
+      переместить маркер вверх или вниз на требуемый угол. При выполнении данной операции сложно
+      добиться сохранения размера оси эллипса, приуроченной к данному маркеру, поэтому если важно
+      сохранить размеры эллипса и выполнить только его поворот, то предпочтительнее задать угол
+      поворота в свойстве «Угол поворота / Angle» данного примитива.</p>
+    <p><b><i>Свойства</i></b></p>
+    <p><image href="FillEllipse_images/image004.png" height="713" width="724" id="image_epb_xz1_ry"
+      /></p>
+    <p> </p>
+    <table id="table_fpb_xz1_ry">
+      <tgroup cols="6">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <colspec colnum="4" colname="col4"/>
+        <colspec colnum="5" colname="col5"/>
+        <colspec colnum="6" colname="col6"/>
+        <tbody>
+          <row>
+            <entry><b>Название</b></entry>
+            <entry><b>Имя</b></entry>
+            <entry><b>Значение по умолчанию</b></entry>
+            <entry namest="col4" nameend="col6">
+              <p><b>Допустимые значения</b></p>
+              <p><b>{в скрипте} в окне свойств</b></p>
+            </entry>
+            <entry><b>Справка</b></entry>
+          </row>
+          <row>
+            <entry><b>Имя объекта </b></entry>
+            <entry>Name</entry>
+            <entry>FillEllipse&lt;N></entry>
+            <entry namest="col4" nameend="col6">Непрерывная последовательность цифр и латинских
+              букв</entry>
+            <entry>
+              <p>Данное имя используется для обращения к свойствам объекта, например, в скрипте:</p>
+              <p>FillEllipse3.Visible.</p>
+            </entry>
+          </row>
+          <row>
+            <entry><b>Тип элемента</b></entry>
+            <entry>ClassName</entry>
+            <entry>FillEllipse</entry>
+            <entry namest="col4" nameend="col6">Значение предопределено</entry>
+            <entry>Тип объекта, определяющий его внешний вид объекта и набор свойств.</entry>
+          </row>
+          <row>
+            <entry><b>Подсказка</b></entry>
+            <entry>Hint</entry>
+            <entry><i>&lt;</i><i>нет</i><i>></i></entry>
+            <entry namest="col4" nameend="col6">Любой текст</entry>
+            <entry>Текст подсказки, всплывающей при наведении курсора мыши на объект.</entry>
+          </row>
+          <row>
+            <entry><b>Отображать подсказку при редактировании</b></entry>
+            <entry>ShowHintOnEdit</entry>
+            <entry>Нет</entry>
+            <entry namest="col4" nameend="col6">
+              <p>{0} Нет</p>
+              <p>{1} Да</p>
+            </entry>
+            <entry>Включает и отключает отображение всплывающей подсказки в режиме
+              редактирования.</entry>
+          </row>
+          <row>
+            <entry><b>Видимость при выполнении</b></entry>
+            <entry>Visible</entry>
+            <entry>Да</entry>
+            <entry namest="col4" nameend="col6">
+              <p>{0} Нет</p>
+              <p>{1} Да</p>
+            </entry>
+            <entry>Включает и отключает отображение объекта в режиме «Индикация» при запуске
+              расчёта.</entry>
+          </row>
+          <row>
+            <entry><b>Цвет</b></entry>
+            <entry>Color</entry>
+            <entry><i>&lt;</i><i>зеленый</i><i>></i></entry>
+            <entry namest="col4" nameend="col6">Цвет выбирается из стандартной системной
+              палитры.</entry>
+            <entry>Цвет заливки объекта. </entry>
+          </row>
+          <row>
+            <entry><b>Координаты точек</b></entry>
+            <entry>Points</entry>
+            <entry>[(X1,Y1),(X2,Y2), (X3,Y3)]</entry>
+            <entry namest="col4" nameend="col6">
+              <p>Значения float, имена сигналов, математические выражения:</p>
+              <p>[(56 , 104), (112 , src1),(coord3*k4 , 40)]</p>
+            </entry>
+            <entry>
+              <p>(X1,Y1) – координаты центра описывающего прямоугольника.</p>
+              <p>(X2,Y2) – координаты маркера на правой стороне описывающего прямоугольника. Данный
+                маркер также используется для поворота объекта. </p>
+              <p>(X3,Y3) – координаты маркера на верхней стороне описывающего прямоугольника.</p>
+              <p><image href="FillEllipse_images/image005.png" height="215" width="354"
+                  id="image_gpb_xz1_ry"/></p>
+            </entry>
+          </row>
+          <row>
+            <entry><b>Ссылка</b></entry>
+            <entry>Instance</entry>
+            <entry><i>&lt;</i><i>нет</i><i>></i></entry>
+            <entry namest="col4" nameend="col6">Значения, задаваемые в окне «Выбор ссылки».</entry>
+            <entry>Вызов окна «Выбор ссылки». Объект используется в качестве чувствительной области
+              для вызова различных действий: переключения между страницами проекта, управления
+              другими блоками, открытия файлов и пр. </entry>
+          </row>
+          <row>
+            <entry><b>Ссылка при редактировании</b></entry>
+            <entry>EditInstance</entry>
+            <entry>Нет</entry>
+            <entry namest="col4" nameend="col6">
+              <p>{0} Нет</p>
+              <p>{1} Да</p>
+            </entry>
+            <entry>Обработка объектом вызова ссылки в режиме редактирования.</entry>
+          </row>
+          <row>
+            <entry><b>Действие для вывода ссылки</b></entry>
+            <entry>InstanceMode</entry>
+            <entry>Двойной щелчок</entry>
+            <entry namest="col4" nameend="col6">
+              <p>{0} Двойной щелчок</p>
+              <p>{1} Щелчок левой кнопкой</p>
+              <p>{2} Щелчок правой кнопкой</p>
+            </entry>
+            <entry>Выбор варианта активации ссылки.</entry>
+          </row>
+          <row>
+            <entry><b>Ярлык</b></entry>
+            <entry>Tag</entry>
+            <entry>0</entry>
+            <entry namest="col4" nameend="col6">Любое целое число или интерпретируемое
+              выражение</entry>
+            <entry>Метка в виде произвольного числа. Позволяет обращаться ко всем объектам с
+              одинаковым ярлыком при написании скриптов. Например, когда в процессе счета требуется
+              скрыть или показать группу объектов.</entry>
+          </row>
+          <row>
+            <entry><b>Шаблон автозаполнения</b></entry>
+            <entry>Template</entry>
+            <entry><i>&lt;</i><i>нет</i><i>></i></entry>
+            <entry namest="col4" nameend="col6">Подробнее о шаблонах автозаполнения.</entry>
+            <entry>Заданный в специальном формате текст, позволяющий автоматически создавать связи и
+              присваивать имена сигналам объекта.</entry>
+          </row>
+          <row>
+            <entry><b>Номер решателя</b></entry>
+            <entry>Layer</entry>
+            <entry>0</entry>
+            <entry namest="col4" nameend="col6">Любое целое число или интерпретируемое
+              выражение</entry>
+            <entry>Число, задающее номер расчетного ядра, которое производит расчет математической
+              модели объекта. Применяется при использовании нескольких расчетных программ. </entry>
+          </row>
+          <row>
+            <entry><b>Скрипт инициализации объекта</b></entry>
+            <entry>OnInitScript</entry>
+            <entry><i>&lt;</i><i>нет</i><i>></i></entry>
+            <entry namest="col4" nameend="col6">Текст скрипта</entry>
+            <entry>Текст скрипта, исполняемого непосредственно перед запуском расчёта.</entry>
+          </row>
+          <row>
+            <entry><b>Скрипт исполнения объекта</b></entry>
+            <entry>OnRunScript</entry>
+            <entry><i>&lt;</i><i>нет</i><i>></i></entry>
+            <entry namest="col4" nameend="col6">Текст скрипта</entry>
+            <entry>Текст скрипта, исполняемого при выполнении расчёта.</entry>
+          </row>
+          <row>
+            <entry><b>Угол поворота</b></entry>
+            <entry>Angle</entry>
+            <entry>0</entry>
+            <entry namest="col4" nameend="col6">Значения float, имена сигналов, математические
+              выражения.</entry>
+            <entry>Угол поворота объекта в радианах при вращении вокруг центра прямоугольника,
+              описывающего эллипс. Угол отсчитывается по часовой стрелке от горизонтальной
+              оси.</entry>
+          </row>
+          <row>
+            <entry><b>Ширина</b></entry>
+            <entry>Width</entry>
+            <entry>120</entry>
+            <entry namest="col4" nameend="col6">Значения float, имена сигналов, математические
+              выражения.</entry>
+            <entry>Ширина описывающего прямоугольника. </entry>
+          </row>
+          <row>
+            <entry><b>Высота</b></entry>
+            <entry>Height</entry>
+            <entry>120</entry>
+            <entry namest="col4" nameend="col6">Значения float, имена сигналов, математические
+              выражения.</entry>
+            <entry>Высота описывающего прямоугольника.</entry>
+          </row>
+          <row>
+            <entry><b>Стиль заливки</b></entry>
+            <entry>BrushStyle</entry>
+            <entry>Сплошная</entry>
+            <entry><image href="FillEllipse_images/image006.png" height="158" width="16"
+                id="image_hpb_xz1_ry"/></entry>
+            <entry namest="col5" nameend="col6">
+              <p>{0} Сплошная</p>
+              <p>{1} Нулевая</p>
+              <p>{2} Горизонтальная</p>
+              <p>{3} Вертикальная</p>
+              <p>{4} Диагональная</p>
+              <p>{5} Обратнодиагональная</p>
+              <p>{6} Клеточка</p>
+              <p>{7} Обратная клеточка</p>
+            </entry>
+            <entry>Выбор из набора доступных вариантов стилей внутренней заливки.</entry>
+          </row>
+          <row>
+            <entry><b>Цвет границы </b></entry>
+            <entry>BorderColor</entry>
+            <entry><i>&lt;</i><i>черный</i><i>></i></entry>
+            <entry namest="col4" nameend="col6">Цвет выбирается из стандартной системной
+              палитры.</entry>
+            <entry>Цвет абриса объекта.</entry>
+          </row>
+          <row>
+            <entry><b>Толщина границы</b></entry>
+            <entry>BorderWidth</entry>
+            <entry>1</entry>
+            <entry namest="col4" nameend="col6">Значения float, имена сигналов, математические
+              выражения.</entry>
+            <entry>Толщина абриса в пикселях.</entry>
+          </row>
+          <row>
+            <entry><b>Стиль границы</b></entry>
+            <entry>PenStyle</entry>
+            <entry>Сплошная</entry>
+            <entry namest="col4" nameend="col5"><image href="FillEllipse_images/image007.png"
+                height="103" width="142" id="image_ipb_xz1_ry"/></entry>
+            <entry>
+              <p>{0} Сплошная</p>
+              <p>{1} Штриховая</p>
+              <p>{2} Пунктирная</p>
+              <p>{3} Штрихпунктирная</p>
+              <p>{4} С двумя точками</p>
+            </entry>
+            <entry>Выбор из набора доступных вариантов стилей абриса.</entry>
+          </row>
+          <row>
+            <entry><b>Стиль градиента</b></entry>
+            <entry>GradientStyle</entry>
+            <entry>Без градиента</entry>
+            <entry namest="col4" nameend="col6">
+              <p>{0} Без градиента</p>
+              <p>{1} Линейный</p>
+              <p>{2} Линейный симметричный</p>
+              <p>{3} Радиальный</p>
+            </entry>
+            <entry>Различные варианты геометрии двухцветной градиентной заливки объекта.</entry>
+          </row>
+          <row>
+            <entry><b>Дополнительный цвет градиента</b></entry>
+            <entry>GradientColor</entry>
+            <entry><i>&lt;зеленый></i></entry>
+            <entry namest="col4" nameend="col6">Цвет выбирается из стандартной системной
+              палитры.</entry>
+            <entry>Второй цвет для градиентной заливки.</entry>
+          </row>
+          <row>
+            <entry><b>Коэффициенты сдвига центра градиента по осям фигуры (0..1)</b></entry>
+            <entry>GradientShift</entry>
+            <entry>(0, 0)</entry>
+            <entry namest="col4" nameend="col6">Значения float, имена сигналов, математические
+              выражения.</entry>
+            <entry>Диапазон значений -1…+1. 0 соответствует центру объекта, -1 и +1 соответствуют
+              положениям на границах объекта.</entry>
+          </row>
+          <row>
+            <entry><b>Угол поворота оси градиента относительно горизонтальной оси фигуры</b></entry>
+            <entry>GradientAngle</entry>
+            <entry>0</entry>
+            <entry namest="col4" nameend="col6">Значения float, имена сигналов, математические
+              выражения.</entry>
+            <entry>Угол поворота направления градиентной заливки в радианах.</entry>
+          </row>
+          <row>
+            <entry><b>Коэффициент прозрачности</b></entry>
+            <entry>Opacity</entry>
+            <entry>1</entry>
+            <entry namest="col4" nameend="col6">Значения float от 0 до 1.</entry>
+            <entry>
+              <p>0 – полностью прозрачный объект.</p>
+              <p>1 – полностью непрозрачный объект.</p>
+            </entry>
+          </row>
+          <row>
+            <entry><b>Использовать объект как геометрическую маску слоя</b></entry>
+            <entry>IsMaskObject</entry>
+            <entry>Нет</entry>
+            <entry namest="col4" nameend="col6">
+              <p>{0} Нет</p>
+              <p>{1} Да</p>
+            </entry>
+            <entry>
+              <p>Включает и отключает режим обрезки изображения по контуру эллипса.</p>
+              <p>При включенном свойстве при запуске расчета будут видны только сам эллипс и та
+                часть изображения над ним, которая попадает внутрь границ эллипса. Все остальные
+                части изображения будут обрезаны.</p>
+              <p>Все объекты, размещенные на заднем фоне относительно эллипса, будут полностью
+                скрыты в независимости от степени попадания их в его границы.</p>
+            </entry>
+          </row>
+          <row>
+            <entry><b>Количество точек</b></entry>
+            <entry>PointCount</entry>
+            <entry>32</entry>
+            <entry namest="col4" nameend="col6">Ноль и натуральные числа</entry>
+            <entry>
+              <p>Количество вершин многоугольника, изображающего эллипс.</p>
+              <p>При значениях равных 0, 1, 2, 3, 4 вырождается соответственно в: отсутствие фигуры,
+                отрезок, треугольник, ромб. При этом описывающий прямоугольник сохраняется.</p>
+            </entry>
+          </row>
+          
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>

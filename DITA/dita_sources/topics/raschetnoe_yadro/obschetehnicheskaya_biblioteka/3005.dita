@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Деление скаляра на вектор</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/3005.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/3005s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторный | Си
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок реализует деление первой скалярной входной величины на каждый из элементов второго
+      входного векторного сигнала:<image placement="break" href="images/3005_1.png" align="center"
+        id="image_stt_xrq_gy"/> где <i>u</i><sub>1</sub>(<i>t</i>) – сигнал на первом входе, скаляр;
+        <i>u</i><sub>2 i</sub>(t) – i-ый элемент входного векторного сигнала на втором входе
+        <i>u</i><sub>2</sub>(<i>t</i>); <i>y</i><sub>i</sub>(<i>t</i>) – элемент выходного
+      векторного сигнала, <i>y</i>(<i>t</i>), <i>n</i> – размерность второго входного сигнала и
+      выходного сигнала блока. Размерность выхода равна размерности первого входа. </p>
+    <p>Обязательное условие: <i>u</i><sub>2 i</sub>(<i>t</i>)≠0.</p>
+    <section><title>Входы</title>
+    <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>число</uicontrol> - порт для входного скаляра (делимого);</li>
+          <li><uicontrol>вектор</uicontrol> - порт для входного вектора (делителя).</li>
+        </ul>
+      </p></section>
+    <section><title>Выходы</title>
+      <p>
+        <ul id="ul_fqg_35q_gy">
+          <li><uicontrol>output</uicontrol> - порт результирующего вектора.</li>
+        </ul>
+      </p></section>
+    <section><title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Максимальное значение при делении числа на 0</uicontrol> - значение выхода
+            блока при делении на 0;</li>
+          <li><uicontrol>Сигнализировать о делении на 0</uicontrol> - выдавать или нет сообщение о
+            том, что в блоке произошло деление на 0. </li>
+        </ul>
+      </p></section>
+    <section><title>Параметры</title>
+      <p>нет </p></section>
+    <note>Размерность выходного сигнала равна размерности второго входного сигнала. Если второй
+      входной сигнал – скалярный, то блок реализует деление первого входного сигнала на второй
+      входной сигнал, в этом случае выход – скалярная величина. </note>
+    
+  </body>
+</topic>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>gamma</title>
+  <shortdesc>Полная Гамма-функция.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>y = <funcname>gamma</funcname>(x);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>x – аргумент функции.</p>
+    </section>
+<section><title>Описание:</title>
+  <p>Полная Гамма функция – функция, расширяющая понятие факториала на поле комплексных чисел.</p></section>
+    <image placement="break" href="images/gamma_1.png" align="center" id="image_wgt_myh_wx"/>
+    <fig id="fig_svf_wyh_wx">
+      <title>График функции</title>
+      <image placement="break" href="images/gamma_2.gif" align="center" id="image_tvf_wyh_wx"/>
+    </fig>
+  <section>
+      <title>Результат:</title>
+      <p>y – значение полной Гамма-функции от аргумента x.</p>
+    </section>  
+  </body>
+</topic>

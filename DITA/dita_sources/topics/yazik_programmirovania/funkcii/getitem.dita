@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getitem</title>
+<shortdesc>Функция получения строки из текста с разделителями по номеру.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>str = <funcname>getitem</funcname>(str_t, indx);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>str_t – строка, содержащая текст с разделителями «конец строки»,</p>
+      <p>indx – номер получаемой строки из строки с текстом. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getitem(str_t, indx)</codeph> – функция получения строки (фрагмента текста) с номером
+          <codeph>indx</codeph> из строки, содержащей текст, разделенный разделителями «конец
+        строки» или «перевод каретки». Нумерация фрагментов в тексте начинается с единицы.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>str – возвращаемая строка.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword>        
+s_01:<rword>string</rword> = "string1" + <funcname>chr</funcname>(13) + "string2";
+<comment>//получим из текста строку с номером 1</comment>
+str = <funcname>getitem</funcname>(s_01, 1);               </codeblock></section>
+<p>В результате переменная <codeph>str</codeph> будет содержать строку ”string1”.</p>  
+  </body>
+</topic>

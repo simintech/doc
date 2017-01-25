@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Выход алгоритма</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/3018.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/3018s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок производит запись значений сигналов (запись данных) в локальный список сигналов проекта
+      или в список сигналов подключенной базы данных. При двойном щелчке по блоку появляется
+      редактор списка записываемых переменных: <image placement="break" href="images/3018_1.png"
+        align="center" id="image_otf_1z3_ky"/>Имя переменной задаётся в поле <uicontrol>Имя
+        сигнала</uicontrol>. Каждому входу блока соответствует свой сигнал.</p>
+    <section><title>Назначение полей таблицы</title>
+      <p><ul id="ul_l4p_sht_2y">
+          <li><uicontrol>№</uicontrol> - задается порядковый номер сигнала (и соответственно входа
+            блока);</li>
+          <li><uicontrol>ID</uicontrol> - идентификатор сигнала (входа);</li>
+          <li><uicontrol>Приёмник</uicontrol> - описание «пункта назначения» сигнала (куда уходит
+            сигнал);</li>
+          <li><uicontrol>Маркировка</uicontrol> - маркировка сигнала (или приёмника сигнала);</li>
+          <li><uicontrol>Команда</uicontrol> - обозначение или имя команды. Используется при
+            создании алгоритмов для формирования команд на блоки управления задвижками, двигателями
+            и т.п.</li>
+          <li><uicontrol>Имя сигнала</uicontrol> - имя переменной, записываемой в базу данных. </li>
+        </ul>В нижней части задается имя алгоритма, под которым в базе данных будут записаны
+        выходные сигналы этого алгоритма. Справа есть опции, которыми можно настроить внешний вид
+        блока на схеме, отображение шапки и расположение портов блока. </p></section>
+    <section><title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Автосброс</uicontrol>.</li>
+          <li><uicontrol>Рассчитывать с задержкой на шаг</uicontrol>.</li>
+          <li><uicontrol>Транслировать в исполнительную систему</uicontrol>.</li>
+          <li><uicontrol>Использовать сам сигнал как значение выхода при отладке</uicontrol>.</li>
+        </ul>
+      </p></section>
+    <section><title>Параметры</title>
+      <p>нет</p></section>
+    
+  </body>
+</topic>

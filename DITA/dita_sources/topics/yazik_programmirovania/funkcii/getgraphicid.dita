@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getgraphicid </title>
+<shortdesc>Функция получения значения идентификатора графика на схеме по имени.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>gid = <funcname>getgraphicid</funcname>(gr_name);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>gr_name – имя объекта типа «График».</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getgraphicid(gr_name)</codeph> – функция получения значения идентификатора объекта типа
+        «График» на схеме по имени <codeph>gr_name</codeph>. Идентификатор имеет тип указателя на
+        объект. Имя свойства не обрамляется кавычками. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>gid – идентификатор объекта (графика). </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>initialization</kword>
+  gid = <funcname>getgraphicid</funcname>(plot);
+<kword>end</kword>;                       
+<kword>var</kword> old_time;              
+<comment>//Переменная status - состояние тренажёра,</comment>
+<comment>// 13 - устанавливается при загрузке IC   </comment>
+<comment>//status находится в общем списке сигналов</comment>
+<kword>if</kword> button.down <kword>or</kword> (<rword>time</rword> &lt; old_time) <kword>or</kword> (status = 13) <kword>then</kword> <funcname>resetgraphic</funcname>(gid);
+old_time = <rword>time</rword>;                                                            </codeblock></section>
+<p>В результате выполнения данного примера происходит получение идентификатора графика и его сброс
+      по нажатию кнопки на схеме или при старте. </p>  
+  </body>
+</topic>

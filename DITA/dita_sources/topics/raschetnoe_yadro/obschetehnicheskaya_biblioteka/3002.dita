@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Выходной контакт</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/3002.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/3002s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Си |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Реализует запись переменной исполнительной системы со входа блока. </p>
+    <section><title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Имя контакта</uicontrol> - имя переменной, в которую блок записывает
+            сигнал.</li>
+          <li><uicontrol>Формат имени переменной</uicontrol> - правило формирования имени
+            считываемой переменной.</li>
+          <li><uicontrol>Декларировать в базе </uicontrol>- флаг, указывающий необходимо ли создать
+            данную переменную в базе сигналов системы. </li>
+          <li><uicontrol>Запрос на имя из базы</uicontrol> - запрос из базы данных для формирования
+            имени считываемой переменной. </li>
+          <li><uicontrol>Функциональный план</uicontrol> - имя файла диаграммы, на который
+            необходимо перейти при двойном щелчке по объекту. </li>
+          <li><uicontrol>Отлаживаемый компонент</uicontrol> - имя компонента, который будет
+            установлен при переходе на другую диаграмму в режиме отладки.</li>
+          <li><uicontrol>Транслировать в s3</uicontrol> - флаг, указывающий надо ли передавать
+            переменную с диаграммы в исполнительную систему в режиме удалённой отладки.  </li>
+        </ul>
+      </p></section>
+    <section><title>Параметры</title>
+      <p>нет</p></section>
+    <note>блок может быть использован для генерации кода на языке C для внешней целевой
+      системы.</note>
+    
+  </body>
+</topic>

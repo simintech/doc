@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>refreshcontainerwindow </title>
+<shortdesc>Функция обновления изображения в заданном контейнере. </shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>refreshcontainerwindow</funcname>(cont_id);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>cont_id – идентификатор графического контейнера, изображение в котором нужно обновить. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>refreshcontainerwindow</codeph> – функция обновления изображения внутри графического
+        контейнера с идентификатором <codeph>cont_id</codeph>. Функция используется в динамической
+        работе с топологией схемы.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>initialization</kword>
+cond_id = <kword>getcurrentcontainer</kword>; <comment>//получение идентификатора текущего графического контейнера</comment>
+<kword>refreshcontainerwindow</kword>(cont_id);  <comment>//обновить изображение в контейнере</comment>
+<kword>end</kword>;</codeblock></section>
+<p>В результате выполнения данного скрипта, на этапе инициализации происходит обновление изображения
+      текущего графического контейнера. Предшествовать этой операции могут другие операции, например
+      с топологией схемы, требующие последующего обновления изображения. </p>  
+  </body>
+</topic>

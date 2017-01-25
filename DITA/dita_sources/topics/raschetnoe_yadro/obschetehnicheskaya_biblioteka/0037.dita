@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Переменные состояния</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/0037.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/0037s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векториован
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок реализует описание многомерной линейной динамической системы в матричной форме:<image
+        placement="break" href="images/0037_1.png" align="center" id="image_tg2_cvw_3y"/>где
+        <i>A</i>, <i>B</i>, <i>C</i>, <i>D</i> – матрицы: системы, входа, выхода и обхода,
+      соответственно; <i>x</i>(<i>t</i>)– вектор переменных состояния (размерностью
+          [<i>N<sub>x</sub></i>]); <i>u</i>(<i>t</i>) – вектор входа (размерностью
+        [<i>N<sub>u</sub></i>]); <i>y</i>(<i>t</i>) – вектор выхода, (размерностью
+        [<i>N<sub>y</sub></i>]).</p>
+    <p>Размерность матрицы <i>A</i> - [<i>N<sub>x</sub></i>×<i>N<sub>x</sub></i>];</p>
+    <p>Размерность матрицы <i>B</i> - [<i>N<sub>u</sub></i>×<i>N<sub>x</sub></i>];</p>
+    <p>Размерность матрицы <i>C</i> - [<i>N<sub>x</sub></i>×<i>N<sub>y</sub></i>];</p>
+    <p>Размерность матрицы <i>D</i> - [<i>N<sub>u</sub></i>×<i>N<sub>y</sub></i>].</p>
+    <p>1-е число в квадратных скобках – количество столбцов, 2-е число – количество строк.
+      Обязательное условие: <i>N<sub>x</sub></i>≥<i>N<sub>y</sub></i>. Вход и выход блока –
+      векторные сигналы (размерностью <i>N<sub>u</sub></i> и <i>N<sub>y</sub></i>, соответственно). </p>
+    <section><title>Входы</title>
+    <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>input</uicontrol> - входной сигнал.</li>
+        </ul>
+      </p></section>
+    <section><title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>output</uicontrol> - выходной преобразованный сигнал.</li>
+        </ul>
+      </p></section>
+    <section><title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Число переменных состояния</uicontrol> – <i>N<sub>x</sub></i>;</li>
+          <li><uicontrol>Число входных воздействий</uicontrol> – <i>N<sub>u</sub></i>;</li>
+          <li><uicontrol>Число выходов</uicontrol> – <i>N<sub>y</sub></i>;</li>
+          <li><b>Матрица A(Nx*Nx)</b>;</li>
+          <li><b>Матрица B(Nu*Nx)</b>;</li>
+          <li><b>Матрица C(Nx*Ny)</b>;</li>
+          <li><b>Матрица D(Nu*Ny)</b>; </li>
+          <li><b>Начальные условия (Nx)</b> – вектор начальных условий, размерностью
+                <i>N<sub>x</sub></i>. </li>
+        </ul>
+      </p></section>
+    <section><title>Параметры</title>
+      <p>
+        <ul id="ul_t3c_l3t_2y">
+          <li><uicontrol>Динамические переменные</uicontrol> - внутренние переменные состояния
+            блока;</li>
+          <li><uicontrol>Производные</uicontrol> - внутренние переменные состояния блока.</li>
+        </ul>
+      </p></section>
+    
+  </body>
+</topic>

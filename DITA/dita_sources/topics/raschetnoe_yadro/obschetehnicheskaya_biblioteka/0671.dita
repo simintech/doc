@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Редуктор упрощенный</title>
+  <body>
+    <table id="table_qmn_mp4_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/0671.png" height="33" width="38" id="image_rmn_mp4_qy"
+              /></entry>
+            <entry>Редуктор упрощенный</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry/>
+          </row>
+          <row>
+            <entry><image href="images_old/0671s.png" height="50" width="88" id="image_smn_mp4_qy"
+              /></entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry/>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2">
+              <p>Блок реализует математическую модель редуктора без учёта инерционности
+                  <i>промежуточных</i> ступеней механической передачи и явления трения в
+                  <i>упругих</i> элементах.</p>
+              <p><b>Уравнения динамики блока</b> (два дифференциальных уравнения и одно
+                алгебраическое):</p>
+              <p><image href="images_old/0671_html_m6dc06303.gif" height="162" width="291"
+                  id="image_tmn_mp4_qy"/>(1)</p>
+              <p>где:</p>
+              <p><image href="images_old/0671_html_m1be91659.gif" height="21" width="14" id="image_umn_mp4_qy"
+                />– передаточное число редуктора;</p>
+              <p><image href="images_old/0671_html_m2a09b818.gif" height="21" width="20" id="image_vmn_mp4_qy"
+                />– момент инерции нагрузки, кг·м2;</p>
+              <p><image href="images_old/0671_html_48ba42ae.gif" height="21" width="18" id="image_wmn_mp4_qy"
+                />– коэффициент трения, приведённый к валу нагрузки, Н·м·с;</p>
+              <p><image href="images_old/0671_html_m4fa6c6fe.gif" height="23" width="46" id="image_xmn_mp4_qy"
+                />– угол поворота вала нагрузки (выходного вала), рад;</p>
+              <p><image href="images_old/0671_html_m20073518.gif" height="23" width="49" id="image_ymn_mp4_qy"
+                />– угловая скорость вала нагрузки, рад/с;</p>
+              <p><image href="images_old/0671_html_5c846267.gif" height="23" width="51" id="image_zmn_mp4_qy"
+                />– угол поворота вала двигателя (входного вала), рад;</p>
+              <p><image href="images_old/0671_html_303452e9.gif" height="21" width="49" id="image_ann_mp4_qy"
+                />– момент, развиваемый в упругом элементе, приведённый к валу нагрузки, Н·м;</p>
+              <p><image href="images_old/0671_html_1d27e39e.gif" height="23" width="55" id="image_bnn_mp4_qy"
+                />– обозначение нелинейности типа "зона нечувствительности" с параметрами "a" и
+                "c":</p>
+              <p><image href="images_old/0671_html_m7b1095aa.gif" height="72" width="304" id="image_cnn_mp4_qy"
+                />(2)</p>
+              <p>где a – половина величины люфта, рад;</p>
+              <p>с – коэффициент жёсткости упругого элемента, Н·м/рад.</p>
+              <p>Блок имеет 1 входной и 3 выходных сигнала.</p>
+              <p><b>Входной сигнал:</b></p>
+              <ol id="ol_dnn_mp4_qy">
+                <li>
+                  <p><image href="images_old/0671_html_5c846267.gif" height="23" width="51"
+                      id="image_enn_mp4_qy"/>– угол поворота входного вала (вала двигателя),
+                    рад.</p>
+                </li>
+              </ol>
+              <p><b>Выходные сигналы:</b></p>
+              <ol id="ol_fnn_mp4_qy">
+                <li>
+                  <p><image href="images_old/0671_html_m4fa6c6fe.gif" height="23" width="46"
+                      id="image_gnn_mp4_qy"/>– угол поворота вала нагрузки (выходного вала),
+                    рад.</p>
+                </li>
+                <li>
+                  <p><image href="images_old/0671_html_m20073518.gif" height="23" width="49"
+                      id="image_hnn_mp4_qy"/>– угловая скорость вала нагрузки, рад/с.</p>
+                </li>
+                <li>
+                  <p><image href="images_old/0671_html_303452e9.gif" height="21" width="49"
+                      id="image_inn_mp4_qy"/>– момент, развиваемый в упругом элементе, приведённый к
+                    валу нагрузки, Н·м.</p>
+                </li>
+              </ol>
+              <p><b>Свойства</b>: </p>
+              <ul id="ul_jnn_mp4_qy">
+                <li>
+                  <p>Коэффициент передачи редуктора i;</p>
+                </li>
+                <li>
+                  <p>Момент инерции нагрузки J, кг·м2;</p>
+                </li>
+                <li>
+                  <p>Половина величины люфта, приведённого к валу нагрузки a, рад;</p>
+                </li>
+                <li>
+                  <p>Коэффициент жёсткости с, Н·м/рад;</p>
+                </li>
+                <li>
+                  <p>Коэффициент трения, приведённый к валу нагрузки, Н·м·с;</p>
+                </li>
+                <li>
+                  <p>Начальный угол поворота вала нагрузки (выходного вала)<image
+                      href="images_old/0671_html_m19e713c1.gif" height="23" width="49" id="image_knn_mp4_qy"/>,
+                    рад;</p>
+                </li>
+                <li>
+                  <p>Начальная угловая скорость вала нагрузки<image href="images_old/0671_html_m36b5b21d.gif"
+                      height="23" width="52" id="image_lnn_mp4_qy"/>, рад/с;</p>
+                </li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>

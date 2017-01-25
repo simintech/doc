@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Импульс с пролонгированием</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/3036.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/3036s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован | Си
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Формирует импульс не менее заданной длительности при изменении входа от нуля до единицы. При
+      этом импульс продляется вновь на заданную длительность, если происходит очередное изменение
+      входа от 0 до 1 в процессе формирования предыдущего импульса. Алгоритм работы блока: если
+      входной сигнал изменился с нулевого значения на единичное (или на ненулевое), то блок
+      формирует на выходе логическую единицу в течение заданного времени. При этом, в течение всего
+      импульса (пока на выходе блока 1), блок также учитывает изменения входного сигнала и при
+      очередном изменении от 0 до 1 импульс формируется заново («подхватывается»), а длительность
+      импульса считается от момент последнего изменения входа от 0 до 1. </p>
+    <section>
+      <title>Входы</title>
+      <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>B01</uicontrol> - вход блока.</li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>B0</uicontrol> - импульсный выход блока.</li>
+        </ul>
+      </p>
+    </section>
+    <section><title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Длительность импульса</uicontrol> - время, в течение которого блок
+            формирует логическую единицу на выходе.</li>
+          <li><uicontrol>Длительность задается через</uicontrol> – способ задания длительности
+            импульса: через доволнительный вход или через параметр блока «Длительность импульса». </li>
+        </ul>
+      </p></section>
+    <section>
+      <title>Параметры</title>
+      <p>
+        <ul id="ul_t3c_l3t_2y">
+          <li><uicontrol>Длительность</uicontrol> - длительность импульса.</li>
+          <li><uicontrol>Время до остановки таймера</uicontrol> - время до остановки таймера
+            импульса.</li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <title>Пример работы блока</title>
+      <p>Рассмотрим три блока с длительностью импульсов не более 1, 4 и 10 секунд. При этом на вход
+        в блоки будем подавать один и тот же сигнал типа «меандр» с полным периодом 7 секунд
+        (длительность первого полупериода 2 с, второго 5 с). Время расчета — 30 с:<image
+          placement="break" href="images/3035_1.png" align="center" id="image_uct_g5n_4y"
+        />Рассмотрим графики получаемых импульсов на выходе из блоков (розовый график — входной
+        сигнал типа «меандр», черный график — импульс):<image placement="break"
+          href="images/3035_2.png" align="center" id="image_jd5_h5n_4y"/><image placement="break"
+          href="images/3035_3.png" align="center" id="image_mrc_j5n_4y"/><image placement="break"
+          href="images/3035_4.png" align="center" id="image_oht_j5n_4y"/>Как видно из графиков, блок
+        генерирует импульсы не более заданной длительности и только до тех пор, пока входной сигнал
+        изменялся от 0 до 1 и остается равным 1. Два последних графика совпадают, хотя заданная
+        длительность импульса в блоках разная.</p>
+    </section>
+    
+  </body>
+</topic>

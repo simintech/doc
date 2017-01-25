@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getportwires</title>
+<shortdesc>Функция получения списка линий связи, отходящих от порта.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>w_ids = <funcname>getportwires</funcname>(port_id);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>port_id – ссылка (идентификатор) порта.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getportwires</codeph> – позволяет определить список линий связи, соединенных с портом,
+        имеющих идентификатор <codeph>port_id</codeph>. Входной и выходной порты должны быть
+        соединены линией связи.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>Функция возвращает целочисленный массив, состоящий из идентификаторов линий связи,
+        соединенных с указанном портом.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>p_id = <funcname>getblockportid</funcname>(macro2,2);  <comment>//получение идентификатора выходного порта</comment>
+w_ids = <funcname>getportwires</funcname>(p_id); <comment>//получение массива идентификаторов линий связи, подключенных к порту</comment></codeblock></section>
+<p>В результате выполнения данного скрипта, переменная <codeph>w_ids</codeph> получит значение
+      массива, состоящего из идентификаторов, соответствующих линиям связи, соединенным к указанному
+      порту <codeph>p_id</codeph>. </p>  
+  </body>
+</topic>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>dot </title>
+<shortdesc>Функция вычисления скалярного произведения векторов.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>mul = <funcname>dot</funcname>(v1,v2);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>v1 – первый вектор скалярного произведения;</p>
+      <p>v2 – второй вектор скалярного произведения. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>dot</codeph> – функция вычисления скалярного произведения двух векторов. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>mul - функция возвращает число, равное скалярному произведению двух векторов.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><comment>//Скалярное произведение вещественных векторов</comment>
+v1 = [2,2];
+v2 = [6,8];
+zz1 = <funcname>dot</funcname>(v1,v2);
+<comment>//Скалярное произведение комплексных векторов</comment>
+vc1 = [1+2i,3+4i];
+vc2 = [5+6i,7+8i];
+zz2 = <funcname>dot</funcname>(vc1,vc2);</codeblock></section>
+<p>В результате переменным будут присвоены следующие значения: zz1=28; zz2=-18+68i </p>  
+  </body>
+</topic>

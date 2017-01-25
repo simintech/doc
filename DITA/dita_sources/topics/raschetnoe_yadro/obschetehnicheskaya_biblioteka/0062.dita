@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Оператор НЕ</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/0062.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/0062s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован | Си
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок реализует операцию логического НЕ:<image placement="break" href="images/0062_1.png"
+        align="center" id="image_bwr_vwf_4y"/>где <i>y</i>(<i>t</i>) – выходной сигнал блока,
+        <i>x</i>(<i>t</i>) – входной сигнал. </p>
+    <section><title>Входы</title>
+    <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>U</uicontrol> - порт входного сигнала.</li>
+        </ul>
+      </p></section>
+    <section><title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>Y</uicontrol> - порт выходного сигнала.</li>
+        </ul>
+      </p></section>
+    <section><title>Свойства:</title>
+      <p>нет</p></section>
+    <section><title>Параметры</title>
+      <p>нет</p></section>
+    <note>
+      <ol id="ol_exq_fxf_4y">
+        <li>Если входным сигналом будет не логический (0 или 1), а целочисленный сигнал, все
+          ненулевые сигналы рассматриваются блоком как равные единице (Истина, или True). На выходе
+          блока может быть только 0 или 1.</li>
+        <li>В среде SimInTech логическая единица (Истина или True) равна 1, логический ноль (Ложь
+          или False) равен 0. </li>
+      </ol>
+    </note>
+    
+  </body>
+</topic>

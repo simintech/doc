@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>dbgetgroupcount </title>
+<shortdesc>Чтение количества групп в категории.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>gc = <funcname>dbgetgroupcount</funcname>(cat);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>cat – имя категории. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>dbgetgroupcount</codeph> – функция позволяет определить количество групп внутри группы
+          <codeph>group</codeph> подключенной базы сигналов. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>gc – функция возвращает целочисленное значение, соответствующее количеству групп сигналов в
+        указанной категории. Если в категории нет групп категория не существует, то функция
+        возвращает 0.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>gc = <funcname>dbgetgroupcount</funcname>("Датчики");</codeblock></section>
+<p>В результате выполнения данного скрипта, переменная <codeph>gc</codeph> получит значение,
+      соответствующее числу групп сигналов в категории «Датчики». </p>  
+  </body>
+</topic>

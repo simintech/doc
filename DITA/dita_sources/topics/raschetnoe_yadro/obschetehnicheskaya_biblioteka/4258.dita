@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика - Шкив ременной передачи </title>
+  <body>
+    <table id="table_cvw_k2s_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4258/image001.jpg" height="32" width="32"
+                id="image_dvw_k2s_qy"/></entry>
+            <entry>Механика - Шкив ременной передачи</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4258/image002.jpg" height="63" width="120"
+                id="image_evw_k2s_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>В блоке реализована модель взаимодействия шкива и ремня (плоского или клиновидного). Схема
+      приведена на рисунке.</p>
+    <p><image href="images_old/4258/image003.jpg" height="157" width="368" id="image_fvw_k2s_qy"/></p>
+    <p>Уравнения модели имеют следующий вид:</p>
+    <p><image href="images_old/4258/image004.gif" height="22" width="140" id="image_gvw_k2s_qy"/></p>
+    <p><image href="images_old/4258/image005.gif" height="22" width="76" id="image_hvw_k2s_qy"/></p>
+    <p><image href="images_old/4258/image006.gif" height="22" width="85" id="image_ivw_k2s_qy"/></p>
+    <p><image href="images_old/4258/image007.gif" height="25" width="247" id="image_jvw_k2s_qy"/></p>
+    <p><image href="images_old/4258/image008.gif" height="46" width="186" id="image_kvw_k2s_qy"/></p>
+    <p><image href="images_old/4258/image009.gif" height="22" width="207" id="image_lvw_k2s_qy"/>,
+      где</p>
+    <p> </p>
+    <table id="table_mvw_k2s_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Vrel</entry>
+            <entry>-</entry>
+            <entry>Скорость скольжения</entry>
+          </row>
+          <row>
+            <entry>VA</entry>
+            <entry>-</entry>
+            <entry>Скорость ремня порт А</entry>
+          </row>
+          <row>
+            <entry>VB</entry>
+            <entry>-</entry>
+            <entry>Скорость ремня порт B</entry>
+          </row>
+          <row>
+            <entry>ws</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость шкива</entry>
+          </row>
+          <row>
+            <entry>Fc</entry>
+            <entry>-</entry>
+            <entry>Центробежная сила ремня</entry>
+          </row>
+          <row>
+            <entry>FA</entry>
+            <entry>-</entry>
+            <entry>Сила на ремень порт А</entry>
+          </row>
+          <row>
+            <entry>FB</entry>
+            <entry>-</entry>
+            <entry>Сила на ремень порт B</entry>
+          </row>
+          <row>
+            <entry>Ffr</entry>
+            <entry>-</entry>
+            <entry>Сила трения между шкивом и ремнем</entry>
+          </row>
+          <row>
+            <entry>Ts</entry>
+            <entry>-</entry>
+            <entry>Момент на шкив</entry>
+          </row>
+          <row>
+            <entry>R</entry>
+            <entry>-</entry>
+            <entry>Радиус шкива</entry>
+          </row>
+          <row>
+            <entry>B</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения подшипников</entry>
+          </row>
+          <row>
+            <entry>f</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения между ремнем и шкивом</entry>
+          </row>
+          <row>
+            <entry>Vth</entry>
+            <entry>-</entry>
+            <entry>Порог скорости</entry>
+          </row>
+          <row>
+            <entry>ρ</entry>
+            <entry>-</entry>
+            <entry>Масса ремня на единицу длины</entry>
+          </row>
+          <row>
+            <entry>θ</entry>
+            <entry>-</entry>
+            <entry>Угол обхвата</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Для клиновидного ремня коэффициент трения вычисляется следующим образом:</p>
+    <p><image href="images_old/4258/image010.gif" height="45" width="127" id="image_nvw_k2s_qy"/> где</p>
+    <table id="table_ovw_k2s_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Fi</entry>
+            <entry>-</entry>
+            <entry>Угол клина ремня</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Входные порты блока</b></p>
+    <p>Блок имеет один механический ненаправленный порт поступательного движения (А), через который
+      на вход блока поступает значение скорости, а на выход - сила. </p>
+    <p> </p>
+    <p><b>Выходные порты блока:</b></p>
+    <p>Блок имеет один механический ненаправленный порт вращательного движения (S), через который на
+      вход блока поступают моменты от присоединенных блоков, а на выход - скорость вращения, а также
+      один механический ненаправленный порт поступательного движения (B), через который на вход
+      блока поступают силы от присоединенных блоков, а на выход - скорость.</p>
+    <p> </p>
+    <p><b>Свойства блока:</b></p>
+    <table id="table_pvw_k2s_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>BType</entry>
+            <entry>-</entry>
+            <entry>Тип ремня (плоский или клиновидный)</entry>
+          </row>
+          <row>
+            <entry>N</entry>
+            <entry>-</entry>
+            <entry>Число ремней</entry>
+          </row>
+          <row>
+            <entry>Fi</entry>
+            <entry>-</entry>
+            <entry>Угол клина ремня, град</entry>
+          </row>
+          <row>
+            <entry>M</entry>
+            <entry>-</entry>
+            <entry>Масса ремня на единицу длины, кг/м</entry>
+          </row>
+          <row>
+            <entry>Dir</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость и скорость порта А (одного или разных знаков)</entry>
+          </row>
+          <row>
+            <entry>Teta</entry>
+            <entry>-</entry>
+            <entry>Угол обхвата, град</entry>
+          </row>
+          <row>
+            <entry>R</entry>
+            <entry>-</entry>
+            <entry>Радиус шкива, м</entry>
+          </row>
+          <row>
+            <entry>J</entry>
+            <entry>-</entry>
+            <entry>Момент инерции, кг*м</entry>
+          </row>
+          <row>
+            <entry>B</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения подшипников, н*м*с/рад</entry>
+          </row>
+          <row>
+            <entry>W0</entry>
+            <entry>-</entry>
+            <entry>Начальная угловая скорость, рад/с</entry>
+          </row>
+          <row>
+            <entry>Vth</entry>
+            <entry>-</entry>
+            <entry>Порог скорости, м/с</entry>
+          </row>
+          <row>
+            <entry>Mu</entry>
+            <entry>-</entry>
+            <entry>Коэффициент контактного трения</entry>
+          </row>
+          <row>
+            <entry>Tmax</entry>
+            <entry>-</entry>
+            <entry>Максимальное натяжение, н</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_qvw_k2s_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Fa</entry>
+            <entry>-</entry>
+            <entry>Сила порт А, н</entry>
+          </row>
+          <row>
+            <entry>Va</entry>
+            <entry>-</entry>
+            <entry>Скорость порт А, м/с</entry>
+          </row>
+          <row>
+            <entry>Fb</entry>
+            <entry>-</entry>
+            <entry>Сила порт B, н</entry>
+          </row>
+          <row>
+            <entry>Vb</entry>
+            <entry>-</entry>
+            <entry>Скорость порт B, м/с</entry>
+          </row>
+          <row>
+            <entry>W</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость, рад/с</entry>
+          </row>
+          <row>
+            <entry>T</entry>
+            <entry>-</entry>
+            <entry>Момент, н*м</entry>
+          </row>
+          <row>
+            <entry>Vr</entry>
+            <entry>-</entry>
+            <entry>Скорость скольжения, м/с</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

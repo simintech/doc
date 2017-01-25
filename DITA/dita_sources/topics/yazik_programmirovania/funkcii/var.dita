@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>var</title>
+  <shortdesc>Декларация новых переменных.</shortdesc>
+  <body>
+    <section><title>Синтаксис:</title><codeblock><kword>var</kword> &lt;имя переменной 1>{:&lt;тип переменной 1>}{=&lt;инициирующее выражение 1>}{,&lt;имя переменной 2>{:&lt;тип переменной 2>}{=&lt;инициирующее выражение 2>}};</codeblock></section>
+    <section><title>Описание:</title>
+    <p>Декларация новых переменных. Разделитель деклараций – запятая. Тип переменных по умолчанию –
+      действительное число. Начальное значение переменной по умолчанию 0. Если перед именем
+      переменной указано слово <codeph>init</codeph> (или <codeph>dynamic</codeph>), то такая переменная будет считаться
+      динамической (см. описание ключевого слова <codeph>init</codeph>). Для декларации действительных
+      массивов и матриц можно пользоваться конструкцией:</p>
+    <p><codeph>X[n]</codeph> – массив размерностью n.</p>
+    <p><codeph>M[n,m]</codeph> – матрица размерностью n на m.</p></section>
+    <section><title>Пример:</title>
+      <codeblock><kword>var</kword> d:<rword>double</rword>=0.5, 
+i:<rword>integer</rword>, 
+M[2,3], 
+k=[1,5], 
+<kword>init</kword> x=10;</codeblock>
+    <p>В данном примере ключевое слово <codeph>double</codeph> может быть опущено, поскольку по умолчанию любому
+      числу либо массиву присваивается вещественный тип.</p></section>
+  </body>
+</topic>

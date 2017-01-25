@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>maximizeform</title>
+<shortdesc>Функция позволяет развернуть окно проект на весь экран.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>maximizeform</funcname></codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>нет</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>maximizeform</codeph> – функция позволяет развернуть окно текущего проекта на весь экран.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>initialization</kword>
+     <funcname>maximizeform</funcname>;
+<kword>end</kword>;
+ 
+<kword>finalization</kword>
+     <funcname>normalizeform</funcname>;
+<kword>end</kword>;               </codeblock></section>
+<p>Данный скрипт разворачивает окно проекта на весь экран в момент запуска расчета и восстанавливает
+      его в прежнем виде, когда расчет остановлен. </p>  
+  </body>
+</topic>

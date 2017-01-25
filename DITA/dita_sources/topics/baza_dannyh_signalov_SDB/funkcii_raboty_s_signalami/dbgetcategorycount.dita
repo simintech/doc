@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>dbgetcategorycount </title>
+<shortdesc>Чтение количества категории в базе.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>сc = <funcname>dbgetcategorycount</funcname>;</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>нет</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>dbgetcategorycount</codeph> – функция позволяет определить количество категорий в базе
+        сигналов. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>сc – функция возвращает целочисленное значение, соответствующее количеству категории в
+        подключенной базе сигналов. Если в базе нет категорий, то функция возвращает 0. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>сc = <funcname>dbgetcategorycount</funcname>;</codeblock></section>
+<p>В результате выполнения данного скрипта, переменная <codeph>cc</codeph> получит значение,
+      соответствующее числу категорий в текущей базе сигналов. </p>  
+  </body>
+</topic>

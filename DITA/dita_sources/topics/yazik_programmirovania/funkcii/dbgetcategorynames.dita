@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>dbgetcategorynames </title>
+<shortdesc>Чтение имен категорий в базе.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>сns = <funcname>dbgetcategorynames</funcname>;</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>нет</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>dbgetcategorynames</codeph> – функция позволяет получить список имен категорий в
+        подключенной базе сигналов. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>сns - функция возвращает текстовое значение, соответствующее списку имен категорий в
+        текущей базе сигналов. При этом имена сигналов отделяются друг от друга символами CR+LF.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>cns = <funcname>dbgetcategorynames</funcname>;</codeblock></section>
+<p>В результате выполнения данного скрипта, переменная cns получит текстовое значение, содержащее
+      построковый список имен категорий в текущей базе сигналов. </p>  
+  </body>
+</topic>

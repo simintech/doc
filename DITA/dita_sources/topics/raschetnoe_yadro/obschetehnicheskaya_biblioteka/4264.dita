@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика - Торсионный амортизатор </title>
+  <body>
+    <table id="table_v1n_kds_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4264/image001.jpg" height="32" width="32"
+                id="image_w1n_kds_qy"/></entry>
+            <entry>Механика - Торсионный амортизатор</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4264/image002.jpg" height="63" width="120"
+                id="image_x1n_kds_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>В блоке реализована модель пружинно-демпферной системы вращательного движения, в состав
+      которой входит пружина, демпфер, ограничитель, а также учитывается кулоновская сила трения
+      (см. рисунок).</p>
+    <p><image href="images_old/4264/image003.jpg" height="108" width="313" id="image_y1n_kds_qy"/></p>
+    <p>Уравнения модели имеют следующий вид:</p>
+    <p><image href="images_old/4264/image004.gif" height="24" width="184" id="image_z1n_kds_qy"/></p>
+    <p><image href="images_old/4264/image005.gif" height="24" width="107" id="image_abn_kds_qy"/>
+    </p>
+    <p><image href="images_old/4264/image006.gif" height="22" width="94" id="image_bbn_kds_qy"/>
+    </p>
+    <p><image href="images_old/4264/image007.gif" height="46" width="194" id="image_cbn_kds_qy"/></p>
+    <p><image href="images_old/4264/image008.gif" height="72" width="354" id="image_dbn_kds_qy"/>
+    </p>
+    <p><image href="images_old/4264/image009.gif" height="32" width="215" id="image_ebn_kds_qy"/>,</p>
+    <p><image href="images_old/4264/image010.gif" height="43" width="220" id="image_fbn_kds_qy"/></p>
+    <p><image href="images_old/4264/image011.gif" height="43" width="408" id="image_gbn_kds_qy"/></p>
+    <p> </p>
+    <table id="table_hbn_kds_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>T</entry>
+            <entry>-</entry>
+            <entry>Внутренний момент трения</entry>
+          </row>
+          <row>
+            <entry>Tspr</entry>
+            <entry>-</entry>
+            <entry>Момент пружины</entry>
+          </row>
+          <row>
+            <entry>Td</entry>
+            <entry>-</entry>
+            <entry>Момент демпфирования</entry>
+          </row>
+          <row>
+            <entry>Tc</entry>
+            <entry>-</entry>
+            <entry>Кулоновский момент</entry>
+          </row>
+          <row>
+            <entry>THS</entry>
+            <entry>-</entry>
+            <entry>Момент упора</entry>
+          </row>
+          <row>
+            <entry>K</entry>
+            <entry>-</entry>
+            <entry>Коэффициент жесткости пружины</entry>
+          </row>
+          <row>
+            <entry>B</entry>
+            <entry>-</entry>
+            <entry>Коэффициент демпфирования</entry>
+          </row>
+          <row>
+            <entry>Tk</entry>
+            <entry>-</entry>
+            <entry>Прижимной момент</entry>
+          </row>
+          <row>
+            <entry>Mu</entry>
+            <entry>-</entry>
+            <entry>Кинематический коэффициент контактного трения</entry>
+          </row>
+          <row>
+            <entry>Ks</entry>
+            <entry>-</entry>
+            <entry>Отношение статического коэффициента к кинематическому</entry>
+          </row>
+          <row>
+            <entry>Wth</entry>
+            <entry>-</entry>
+            <entry>Порог скорости</entry>
+          </row>
+          <row>
+            <entry>Lb</entry>
+            <entry>-</entry>
+            <entry>Нижний упор</entry>
+          </row>
+          <row>
+            <entry>Ub</entry>
+            <entry>-</entry>
+            <entry>Верхний упор</entry>
+          </row>
+          <row>
+            <entry>Khs</entry>
+            <entry>-</entry>
+            <entry>Коэффициент жесткости упора</entry>
+          </row>
+          <row>
+            <entry>Bhs</entry>
+            <entry>-</entry>
+            <entry>Коэффициент демпфирования упора</entry>
+          </row>
+          <row>
+            <entry>Jr</entry>
+            <entry>-</entry>
+            <entry>Момент инерции порта R</entry>
+          </row>
+          <row>
+            <entry>Jc</entry>
+            <entry>-</entry>
+            <entry>Момент инерции порта C</entry>
+          </row>
+          <row>
+            <entry>Wr</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость порта R</entry>
+          </row>
+          <row>
+            <entry>Wc</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость порта С</entry>
+          </row>
+          <row>
+            <entry>Tr</entry>
+            <entry>-</entry>
+            <entry>Суммарный внешний момент на порт R</entry>
+          </row>
+          <row>
+            <entry>Tc</entry>
+            <entry>-</entry>
+            <entry>Суммарный внешний момент на порт С</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Входные порты блока - отсутствуют</b></p>
+    <p> </p>
+    <p><b>Выходные порты блока:</b></p>
+    <p>Блок имеет два механических ненаправленных порта вращательного движения, через которые на
+      вход блока поступают моменты от присоединенных блоков, а на выход - угловые скорости портов R
+      и C. </p>
+    <p> </p>
+    <p><b>Свойства блока:</b></p>
+    <table id="table_ibn_kds_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>K</entry>
+            <entry>-</entry>
+            <entry>Коэффициент жесткости пружины, н*м/рад</entry>
+          </row>
+          <row>
+            <entry>B</entry>
+            <entry>-</entry>
+            <entry>Коэффициент демпфирования, н*м*с/рад</entry>
+          </row>
+          <row>
+            <entry>Tk</entry>
+            <entry>-</entry>
+            <entry>Прижимной момент, н*м</entry>
+          </row>
+          <row>
+            <entry>Mu</entry>
+            <entry>-</entry>
+            <entry>Кинематический коэффициент контактного трения</entry>
+          </row>
+          <row>
+            <entry>Ks</entry>
+            <entry>-</entry>
+            <entry>Отношение статического коэффициента к кинематическому</entry>
+          </row>
+          <row>
+            <entry>Wth</entry>
+            <entry>-</entry>
+            <entry>Порог скорости, рад/с</entry>
+          </row>
+          <row>
+            <entry>Lb</entry>
+            <entry>-</entry>
+            <entry>Нижний упор, рад</entry>
+          </row>
+          <row>
+            <entry>Ub</entry>
+            <entry>-</entry>
+            <entry>Верхний упор, рад</entry>
+          </row>
+          <row>
+            <entry>Khs</entry>
+            <entry>-</entry>
+            <entry>Коэффициент жесткости упора, н*м/рад</entry>
+          </row>
+          <row>
+            <entry>Bhs</entry>
+            <entry>-</entry>
+            <entry>Коэффициент демпфирования упора, н*м*с/рад</entry>
+          </row>
+          <row>
+            <entry>Jr</entry>
+            <entry>-</entry>
+            <entry>Момент инерции порта R, кг*м</entry>
+          </row>
+          <row>
+            <entry>Wr0</entry>
+            <entry>-</entry>
+            <entry>Начальная угловая скорость порта R, рад/с</entry>
+          </row>
+          <row>
+            <entry>Jc</entry>
+            <entry>-</entry>
+            <entry>Момент инерции порта C, кг*м</entry>
+          </row>
+          <row>
+            <entry>Wc0</entry>
+            <entry>-</entry>
+            <entry>Начальная угловая скорость порта C, рад/с</entry>
+          </row>
+          <row>
+            <entry>Fi0</entry>
+            <entry>-</entry>
+            <entry>Начальная деформация, рад</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_jbn_kds_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>T</entry>
+            <entry>-</entry>
+            <entry>Момент трения, н*м</entry>
+          </row>
+          <row>
+            <entry>W</entry>
+            <entry>-</entry>
+            <entry>Относительная угловая скорость, рад/с</entry>
+          </row>
+          <row>
+            <entry>Q</entry>
+            <entry>-</entry>
+            <entry>Мощность на трение, Вт</entry>
+          </row>
+          <row>
+            <entry>Fi</entry>
+            <entry>-</entry>
+            <entry>Деформация, рад</entry>
+          </row>
+          <row>
+            <entry>IsLock</entry>
+            <entry>-</entry>
+            <entry>Признак сцепления</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p> </p>
+  </body>
+</topic>

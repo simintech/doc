@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>adoquerysetconnection </title>
+<shortdesc>Функция позволяет установить строку подключения к БД.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>adoquerysetconnection</funcname>(&lt;id объекта доступа к БД>, "строка подключения к БД");</codeblock>
+    </section>  
+  </body>
+</topic>

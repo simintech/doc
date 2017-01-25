@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getportwireid </title>
+<shortdesc>Функция получения идентификатора линии связи, соединенной с портом.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>w_id = <funcname>getportwireid</funcname>(port_id);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>port_id – ссылка (идентификатор) на порт.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getportwireid</codeph> – позволяет определить идентификатор линии связи, соединенной с
+        портом, имеющим идентификатор <codeph>port_id</codeph>. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>Функция возвращает число типа integer, являющееся идентификатором линии связи, соединенной
+        с указанным портом.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>p_id = <funcname>getblockportid</funcname>(macro2,2);  <comment>//получение идентификатора порта</comment>
+w_id = <funcname>getportwireid</funcname>(p_id); <comment>//получение идентификатора линии связи, подключенной к порту</comment></codeblock></section>
+<p>В результате выполнения данного скрипта, переменная <codeph>w_id</codeph> получит значение
+      идентификатора, соответствующего линии связи, подключенной к порту. </p>  
+  </body>
+</topic>

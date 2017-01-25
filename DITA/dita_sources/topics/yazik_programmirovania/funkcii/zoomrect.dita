@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>zoomrect </title>
+<shortdesc>Функция увеличения заданной области изображения.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>zoomrect</funcname>(left, top, right, bottom);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>left – координата левой границы области,</p>
+      <p>top – координата верхней границы области,</p>
+      <p>right – координата правой границы области,</p>
+      <p>bottom – координата нижней границы области.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>zoomrect(left, top, right,…, bottom)</codeph> – функция увеличения фрагмента изображения
+        на схеме, заданного прямоугольной областью, ограниченной границами <codeph>left</codeph>,
+          <codeph>top</codeph>, <codeph>right</codeph>, <codeph>bottom</codeph>. При увеличение
+        может происходить подгонка фрагмента изображения под заданную область, т.к заданная
+        прямоугольная область не всегда пропорционально соответствует ширине и высоте фрагмента
+        изображения.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><funcname>zoomrect</funcname>(0, 0, 100, -100);</codeblock></section>  
+  </body>
+</topic>

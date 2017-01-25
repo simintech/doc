@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Умножение матрицы на вектор</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/0147.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/0147s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> Блок реализует процедуру умножения квадратной матрицы на вектор соответствующей
+        размерности:<image placement="break" href="images/0147_1.png" align="center"
+        id="image_yrg_g1y_gy"/> где <i>A</i> – матрица коэффициентов; <i>x</i>(<i>t</i>) – вектор
+      решений; <i>u</i>(<i>t</i>) – вектор правых частей, <i>y</i>(<i>t</i>) – вектор на выходе
+      блока.</p>
+    <section>
+      <title>Входы</title>
+      <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>matrix</uicontrol> - порт для ввода матрицы <i>A</i>, представляемой в виде
+            вектора коэффициентов при распаковке матрицы по строкам. Размерность векторного сигнала
+            на 1-ом входном порте должна быть равна <i>n</i>&#215;<i>n</i>, где <i>n</i> –
+            размерность матрицы;</li>
+          <li><uicontrol>vector</uicontrol> - порт для ввода вектора <i>u</i>(<i>t</i>). Размерность
+            вектора равна <i>n</i>.</li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>output</uicontrol> - порт для вывода вектора <i>y</i>(<i>t</i>).
+            Размерность вектора равна <i>n</i>.</li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <title>Свойства:</title>
+      <p>нет</p>
+    </section>
+    <section>
+      <title>Параметры</title>
+      <p>нет</p>
+    </section>
+    <section>
+      <title>Пример</title>
+      <p>Требуется умножить матрицу <i>A</i> на вектор <i>u</i>, если: <image placement="break"
+          href="images/0147_2.png" align="center" id="image_osm_jby_gy"/>а результат умножения
+        очевиден: вектор-столбец, элементы которого равны 19 и 38. На рисунке ниже представлена
+        структурная схема решения данной задачи. Типовые блоки <xref href="0105.dita" format="dita"
+          >Размножитель</xref> использованы для формирования входных векторных сигналов: <image
+          placement="break" href="images/0147_3.png" align="center" id="image_n5z_nby_gy"/></p>
+    </section>
+    <note>блок выполняет процедуру умножения квадратной матрицы на вектор после каждого успешного
+      шага интегрирования.</note>
+  </body>
+</topic>

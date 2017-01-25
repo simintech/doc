@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>inputbox </title>
+<shortdesc>Функция вывода диалога ввода текстового значения.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>s =<funcname> inputbox</funcname>(name, tip, val);
+<funcname>inputbox</funcname>(name, tip, strvar);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>name – заголовок окна, типа string;</p>
+      <p>tip – всплывающая подсказка, типа string;</p>
+      <p>val – значение по умолчанию, типа string;</p>
+      <p>strvar – переменная типа string. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>inputbox</codeph>
+        <codeph>(name, tip, val)</codeph>, <codeph>inputbox (name, tip, strvar)</codeph> – функция
+        выполняет отображение стандартного диалога ввода текстового значения. При этом заголовок
+        имеет имя <codeph>name</codeph>, всплывающую подсказку <codeph>tip</codeph> и текстовое
+        значение по умолчанию – <codeph>val (strvar)</codeph>. Если третий аргумент функции задан в
+        виде строковой константы <codeph>val</codeph>, то функция вернет введенное значение наружу.
+        В случае, если третий аргумент задан, как строковая переменная <codeph>strvar</codeph>, то
+        запись введенного значения произойдет в него. Функция во время расчета работает асинхронно,
+        т.е. возврат из нее выполнятся сразу.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>Функция возвращает переменную типа string, содержащую введенное текстовое значение. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> s=0, fre="1.0";
+s = <funcname>inputbox</funcname>("Ввод амплитуды", "Введите число", "1.0"); <comment>// вывод окна для ввода текстового значения. Введенное значение будет сохранено в переменной s</comment>
+<funcname>inputbox</funcname>("Ввод частоты", "Введите число", fre); <comment>//вывод окна для ввода текстового значения. Введенное значение будет сохранено в переменной fre</comment></codeblock></section>
+<p>описание примера</p>  
+  </body>
+</topic>

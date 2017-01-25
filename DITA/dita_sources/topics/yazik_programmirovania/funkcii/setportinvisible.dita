@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setportinvisible </title>
+<shortdesc>Функция позволяет управлять видимостью порта.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setportinvisible</funcname>(port_id, invis);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>port_id – идентификатор порта;</p>
+      <p>invis – флаг невидимости порта, 1 – невидимость вкл, 0 – невидимость выкл. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setportinvisible</codeph> – функция позволяет управлять флагом невидимости для порта с
+        идентификатором <codeph>port_id</codeph>. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>Функция возвращает логическую 1, если установка флага невидимости порта прошла успешно и 0,
+        если установить флаг невидимости порта не удалось. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>portid  = <funcname>getblockportid</funcname>(SteadyNoise_source6, 0);
+<funcname>setportinvisible</funcname>(portid, 1);</codeblock></section>
+<p>В результате выполнения данного скрипта, порт с порядковым номером 0 в блоке с именем
+        <codeph>SteadyNoise_source6</codeph> будет сделан невидимым. </p>  
+  </body>
+</topic>

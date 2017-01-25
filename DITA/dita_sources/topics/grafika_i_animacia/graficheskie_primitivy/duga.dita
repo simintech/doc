@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Дуга (Arc) </title>
+  <body>
+    <p>
+      <image placement="break" href="Arc_images/image001.png" align="center" id="image_bfb_bm1_ry"/>
+    </p>
+    <p>
+      <image placement="break" href="Arc_images/image002.png" align="center" id="image_vgj_bm1_ry"/>
+    </p>
+    <p><b><i>Вставка</i></b></p>
+    <p>1. Кликнуть в панели примитивов по кнопке <i>Вставка</i></p>
+    <p>1. Кликнуть в панели примитивов по кнопке .</p>
+    <p>2. Кликнуть в поле окна проекта или графического редактора в месте начала дуги.</p>
+    <p>3. Повторно кликнуть в поле окна проекта или графического редактора для задания точки на
+      дуге. </p>
+    <p>4. Для завершения кликнуть в третий раз в поле окна проекта или графического редактора в
+      месте окончания дуги.</p>
+    <p><b><i>Редактирование</i></b></p>
+    <p>1. Выделить дугу, кликнув на её изображени.</p>
+    <p>2. Для перемещения дуги навести указатель мыши на дугу - изображение указателя изменится на
+      изображение указывающей руки, нажать ЛКМ и удерживая её переместить дугу на новое место.</p>
+    <p>3. Для изменения положения одной из вершин дуги, либо точки на дуге подвести указатель мыши к
+      нужной точке - изображение указателя изменится на перекрестье, нажать ЛКМ и удерживая её
+      переместить точку на новое место. При этом дуга будет автоматически перестроена с новым
+      радиусом, положением и длиной дуги, чтобы дуга по-прежнему проходила через все три точки.</p>
+    <p><b><i>Свойства</i></b></p>
+    <p><image href="Arc_images/image004.png" height="654" width="621" id="image_by2_xl1_ry"/></p>
+    <table id="table_cy2_xl1_ry">
+      <tgroup cols="6">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <colspec colnum="4" colname="col4"/>
+        <colspec colnum="5" colname="col5"/>
+        <colspec colnum="6" colname="col6"/>
+        <tbody>
+          <row>
+            <entry><b>Название</b></entry>
+            <entry><b>Имя</b></entry>
+            <entry><b>Значение по умолчанию</b></entry>
+            <entry namest="col4" nameend="col5">
+              <p><b>Допустимые значения</b></p>
+              <p><b>{в скрипте} в окне свойств</b></p>
+            </entry>
+            <entry><b>Справка</b></entry>
+          </row>
+          <row>
+            <entry><b>Имя объекта </b></entry>
+            <entry>Name</entry>
+            <entry>Arc&lt;N></entry>
+            <entry namest="col4" nameend="col5">Непрерывная последовательность цифр и латинских
+              букв</entry>
+            <entry>
+              <p>Данное имя используется для обращения к свойтсвам объекта, например, в скрипте:</p>
+              <p>Point.Visible.</p>
+            </entry>
+          </row>
+          <row>
+            <entry><b>Тип элемента</b></entry>
+            <entry>ClassName</entry>
+            <entry>Arc</entry>
+            <entry namest="col4" nameend="col5">Значение предопределено</entry>
+            <entry>Тип объекта, определяющий его внешний вид объекта и набор свойств.</entry>
+          </row>
+          <row>
+            <entry><b>Подсказка</b></entry>
+            <entry>Hint</entry>
+            <entry><i>&lt;</i><i>нет</i><i>></i></entry>
+            <entry namest="col4" nameend="col5">Любой текст</entry>
+            <entry>Текст подсказки, всплывающей при наведении курсора мыши на объект.</entry>
+          </row>
+          <row>
+            <entry><b>Отображать подсказку при редактировании</b></entry>
+            <entry>ShowHintOnEdit</entry>
+            <entry>Нет</entry>
+            <entry namest="col4" nameend="col5">
+              <p>{0} Нет</p>
+              <p>{1} Да</p>
+            </entry>
+            <entry>Включает и отключает отображение всплывающей подсказки в режиме
+              редактирования.</entry>
+          </row>
+          <row>
+            <entry><b>Видимость при выполнении</b></entry>
+            <entry>Visible</entry>
+            <entry>Да</entry>
+            <entry namest="col4" nameend="col5">
+              <p>{0} Нет</p>
+              <p>{1} Да</p>
+            </entry>
+            <entry>Включает и отключает отображение объекта в режиме «Индикация» при запуске
+              расчёта.</entry>
+          </row>
+          <row>
+            <entry><b>Цвет</b></entry>
+            <entry>Color</entry>
+            <entry><i>&lt;</i><i>черный</i><i>></i></entry>
+            <entry namest="col4" nameend="col5">Цвет выбирается из стандартной системной
+              палитры.</entry>
+            <entry>Цвет отображаемой точки. </entry>
+          </row>
+          <row>
+            <entry><b>Координаты точек</b></entry>
+            <entry>Points</entry>
+            <entry>[(X1,Y1),(X2,Y2),(X3,Y3)]</entry>
+            <entry namest="col4" nameend="col5">Значения float, имена сигналов, математические
+              выражения.</entry>
+            <entry>Координаты X и Y всех вершин отображаемой дуги в координатном пространстве
+              окна.</entry>
+          </row>
+          <row>
+            <entry><b>Ссылка</b></entry>
+            <entry>Instance</entry>
+            <entry><i>&lt;</i><i>нет</i><i>></i></entry>
+            <entry namest="col4" nameend="col5">Значения, задаваемые в окне «Выбор ссылки».</entry>
+            <entry>Вызов окна «Выбор ссылки». Объект используется в качестве чувствительной области
+              для вызова различных действий: переключения между страницами проекта, управления
+              другими блоками, открытия файлов и пр. </entry>
+          </row>
+          <row>
+            <entry><b>Ссылка при редактировании</b></entry>
+            <entry>EditInstance</entry>
+            <entry>Нет</entry>
+            <entry namest="col4" nameend="col5">
+              <p>{0} Нет</p>
+              <p>{1} Да</p>
+            </entry>
+            <entry>Обработка объектом вызова ссылки в режиме редактирования.</entry>
+          </row>
+          <row>
+            <entry><b>Действие для вывода ссылки</b></entry>
+            <entry>InstanceMode</entry>
+            <entry>Двойной щелчок</entry>
+            <entry namest="col4" nameend="col5">
+              <p>{0} Двойной щелчок</p>
+              <p>{1} Щелчок левой кнопкой</p>
+              <p>{2} Щелчок правой кнопкой</p>
+            </entry>
+            <entry>Выбор варианта активации ссылки.</entry>
+          </row>
+          <row>
+            <entry><b>Ярлык</b></entry>
+            <entry>Tag</entry>
+            <entry>0</entry>
+            <entry namest="col4" nameend="col5">Любое целое число или интерпретируемое
+              выражение</entry>
+            <entry>Метка в виде произвольного числа. Позволяет обращаться ко всем объектам с
+              одинаковым ярлыком при написании скриптов. Например, когда в процессе счета требуется
+              скрыть или показать группу объектов.</entry>
+          </row>
+          <row>
+            <entry><b>Шаблон автозаполнения</b></entry>
+            <entry>Template</entry>
+            <entry><i>&lt;</i><i>нет</i><i>></i></entry>
+            <entry namest="col4" nameend="col5">Подробнее о шаблонах автозаполнения.</entry>
+            <entry>Заданный в специальном формате текст, позволяющий автоматически создавать связи и
+              присваивать имена сигналам объекта.</entry>
+          </row>
+          <row>
+            <entry><b>Номер решателя</b></entry>
+            <entry>Layer</entry>
+            <entry>0</entry>
+            <entry namest="col4" nameend="col5">Любое целое число или интерпретируемое
+              выражение</entry>
+            <entry>Число, задающее номер расчетного ядра, которое производит расчет математической
+              модели объекта. Применяется при использовании нескольких расчетных программ. </entry>
+          </row>
+          <row>
+            <entry><b>Скрипт инициализации объекта</b></entry>
+            <entry>OnInitScript</entry>
+            <entry><i>&lt;</i><i>нет</i><i>></i></entry>
+            <entry namest="col4" nameend="col5">Текст скрипта</entry>
+            <entry>Текст скрипта, исполняемого непосредственно перед запуском расчёта.</entry>
+          </row>
+          <row>
+            <entry><b>Скрипт исполнения объекта</b></entry>
+            <entry>OnRunScript</entry>
+            <entry><i>&lt;</i><i>нет</i><i>></i></entry>
+            <entry namest="col4" nameend="col5">Текст скрипта</entry>
+            <entry>Текст скрипта, исполняемого при выполнении расчёта.</entry>
+          </row>
+          <row>
+            <entry><b>Толщина линии</b></entry>
+            <entry>Width</entry>
+            <entry>1</entry>
+            <entry namest="col4" nameend="col5">Значения float, имена сигналов, математические
+              выражения.</entry>
+            <entry>Толщина линии изображаемой дуги в пикселях.</entry>
+          </row>
+          <row>
+            <entry><b>Стиль линии</b></entry>
+            <entry>PenStyle</entry>
+            <entry>Сплошная</entry>
+            <entry><image href="Arc_images/image005.png" height="103" width="142" id="image_dy2_xl1_ry"/></entry>
+            <entry>
+              <p>{0} Сплошная</p>
+              <p>{1} Штриховая</p>
+              <p>{2} Пунктирная</p>
+              <p>{3} Штрихпунктирная</p>
+              <p>{4} С двумя точками</p>
+            </entry>
+            <entry>Выбор из набора доступных вариантов стилей линии.</entry>
+          </row>
+          <row>
+            <entry><b>Толщина границы</b></entry>
+            <entry>BorderWidth</entry>
+            <entry>0</entry>
+            <entry namest="col4" nameend="col5">Значения float, имена сигналов, математические
+              выражения.</entry>
+            <entry>Толщина абриса изображаемой линии дуги в пикселях.</entry>
+          </row>
+          <row>
+            <entry><b>Цвет границы</b></entry>
+            <entry>BorderColor</entry>
+            <entry><i>&lt;</i><i>нет</i><i>></i></entry>
+            <entry namest="col4" nameend="col5">Цвет выбирается из стандартной системной
+              палитры.</entry>
+            <entry>Цвет абриса.</entry>
+          </row>
+          <row>
+            <entry><b>Коэффициент прозрачности</b></entry>
+            <entry>Opacity</entry>
+            <entry>1</entry>
+            <entry namest="col4" nameend="col5">Значения float от 0 до 1.</entry>
+            <entry>
+              <p>0 – полностью прозрачный объект.</p>
+              <p>1 – полностью непрозрачный объект.</p>
+            </entry>
+          </row>
+          
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>dbgetsignalcaptions </title>
+<shortdesc>Чтение названий сигналов в группе категории.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>scs = <funcname>dbgetsignalcaptions</funcname>(cat, group);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>cat – имя категории;</p>
+      <p>group – имя группы сигналов внутри категории cat, в которой находится сигнал. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>dbgetsignalcaption</codeph> – функция позволяет получить список названий сигналов,
+        которые находятся внутри группы <codeph>group</codeph> категории <codeph>cat</codeph>
+        подключенной базы сигналов. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>scs - функция возвращает текстовое значение, соответствующее списку названий сигналов
+        внутри группы. При этом имена сигналов отделяются друг от друга символами CR+LF. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>sсs = <funcname>dbgetsignalcaptions</funcname>("Датчики", "D1");</codeblock></section>
+<p>В результате выполнения данного скрипта, переменная scs получит текстовое значение, содержащее
+      построковый список названий сигналов в группе <codeph>D1</codeph> категории
+        <codeph>Датчики</codeph>. </p>  
+  </body>
+</topic>

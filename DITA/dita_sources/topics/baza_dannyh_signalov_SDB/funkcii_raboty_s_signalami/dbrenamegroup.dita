@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>dbrenamegroup </title>
+<shortdesc>Функция переименования группы сигналов в базе.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>dbrenamegroup</funcname>(cat, groupname_old, groupname_new);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>cat – переменная, типа string, содержащая имя категории, в которой содержится нужная
+        группа;</p>
+      <p>groupname_old – переменная типа string, содержащая имя группы сигналов, которую нужно
+        переименовать;</p>
+      <p>groupname_new – переменная типа string, содержащая новое имя для группы сигналов с текущим
+        именем groupname_old. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>dbrenamegroup</codeph> – функция переименования группы сигналов с именем
+          <codeph>groupname_old</codeph> в <codeph>groupname_new</codeph>, внутри категории
+          <codeph>cat</codeph>.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>Функция возвращает число типа boolean: 1 – группа успешно переименована, 0 – переименование
+        невозможно. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> cn, gn, nn:<rword>string</rword>;
+cn = "категория1";
+gn = "группа1";
+nn = "группа2";
+<funcname>dbrenamegroup</funcname>(cn, gn, nn);</codeblock></section>
+<p>В результате выполнения данного скрипта, в подключенной к проекту базе сигналов, в категории
+      «категория1» будет найдена группа с именем «группа1» и переименована в «группа2». </p>  
+  </body>
+</topic>

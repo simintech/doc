@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>gettoken</title>
+<shortdesc>Функция получения части строки, начиная с символа с определенным номером. </shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>s = <funcname>gettoken</funcname>(str, n);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>str – начальная строка,</p>
+      <p>n – номер символа, начиная с которого получается часть строки. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getoken(str, n)</codeph> – функция получения части строки <codeph>str</codeph>, начиная с
+        символа с номером <codeph>n</codeph>. Нумерация символов в строке начинается с единицы. При
+        этом аргумент <codeph>n</codeph> меняет своё значение на позицию в строке для следующей
+        лексемы (слова). Пробелы и переносы игнорируются. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>s – возвращаемая часть строки. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> 
+str:<rword>string</rword> = "string1 string2",
+n:<rword>integer</rword> = 3;
+<comment>//получим часть строки, начиная с 3-го символа</comment>
+s = <funcname>gettoken</funcname>(str, n);                         </codeblock></section>
+<p>В результате переменная <codeph>s</codeph> будет содержать строку “ring1”, переменной
+        <codeph>n</codeph> будет присвоено значение 9.</p>  
+  </body>
+</topic>

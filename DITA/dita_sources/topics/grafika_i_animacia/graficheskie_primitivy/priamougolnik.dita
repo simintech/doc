@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Прямоугольник (Rectangle) </title>
+  <body>
+    <p>
+      <image placement="break" href="Rectangle_images/image001.png" align="center"
+        id="image_ens_kr1_ry"/>
+    </p>
+    <p>
+      <image placement="break" href="Rectangle_images/image002.png" align="center"
+        id="image_hlc_lr1_ry"/>
+    </p>
+    <p><b><i>Вставка</i></b></p>
+    <p>1. Кликнуть в панели примитивов по кнопке <image href="Rectangle_images/image003.png"
+        height="31" width="31" id="image_yhn_hr1_ry"/>.</p>
+    <p>2. Кликнуть в поле окна проекта или графического редактора для добавления нового экземпляра в
+      указанном месте. В окно будет добавлен квадрат без заливки.</p>
+    <p><b><i>Редактирование</i></b></p>
+    <p>1. Выделить прямоугольник, кликнув по его изображению.</p>
+    <p>2. Для перемещения прямоугольника навести указатель мыши на поле прямоугольника - изображение
+      указателя изменится на изображение указывающей руки, нажать ЛКМ и удерживая её переместить
+      прямоугольник на новое место.</p>
+    <p>3. Для одновременного изменения ширины и высоты прямоугольника подвести указатель мыши к
+      одной из вершин прямоугольника - изображение указателя изменится на изображение двусторонней
+      стрелки, нажать ЛКМ и удерживая её переместить вершину на новое место.</p>
+    <p>4. Для изменения высоты прямоугольника подвести указатель мыши к маркеру в центре верхней
+      стороны прямоугольника - изображение указателя изменится на изображение указывающей руки,
+      нажать ЛКМ и удерживая её переместить курсор мыши вверх или вниз. Верхняя и нижняя стороны
+      прямоугольника будут раздвигаться и сдвигаться симметрично относительно центра прямоугольника. </p>
+    <p>5. Для изменения ширины и для вращения прямоугольника подвести указатель мыши к маркеру в
+      центре правой стороны прямоугольника - изображение указателя изменится на изображение
+      указывающей руки, нажать ЛКМ и удерживая её: а) переместить курсор мыши влево или вправо для
+      изменения ширины прямоугольника; б)переместить курсор мыши вверх или вниз для вращения
+      прямоугольника. Левая и правая стороны прямоугольника будут раздвигаться и сдвигаться
+      симметрично относительно центра прямоугольника. Вращение также будет осуществляться
+      относительно центра прямоугольника.</p>
+    <p><b><i>Свойства</i></b></p>
+    <p><image href="Rectangle_images/image004.png" height="654" width="621" id="image_zhn_hr1_ry"/>
+    </p>
+    <table id="table_a3n_hr1_ry">
+      <tgroup cols="6">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <colspec colnum="4" colname="col4"/>
+        <colspec colnum="5" colname="col5"/>
+        <colspec colnum="6" colname="col6"/>
+        <tbody>
+          <row>
+            <entry><b>Название</b></entry>
+            <entry><b>Имя</b></entry>
+            <entry><b>Значение по умолчанию</b></entry>
+            <entry namest="col4" nameend="col5">
+              <p><b>Допустимые значения</b></p>
+              <p><b>{в скрипте} в окне свойств</b></p>
+            </entry>
+            <entry><b>Справка</b></entry>
+          </row>
+          <row>
+            <entry><b>Имя объекта</b></entry>
+            <entry>Name</entry>
+            <entry>Rectangle&lt;N></entry>
+            <entry namest="col4" nameend="col5">Непрерывная последовательность цифр и латинских
+              букв</entry>
+            <entry>
+              <p>Данное имя используется для обращения к свойствам объекта, например, в скрипте:</p>
+              <p>Point.Visible.</p>
+            </entry>
+          </row>
+          <row>
+            <entry><b>Тип элемента</b></entry>
+            <entry>ClassName</entry>
+            <entry>Rectangle</entry>
+            <entry namest="col4" nameend="col5">Значение предопределено</entry>
+            <entry>Тип объекта, определяющий его внешний вид объекта и набор свойств.</entry>
+          </row>
+          <row>
+            <entry><b>Подсказка</b></entry>
+            <entry>Hint</entry>
+            <entry><i>&lt;</i><i>нет</i><i>></i></entry>
+            <entry namest="col4" nameend="col5">Любой текст</entry>
+            <entry>Текст подсказки, всплывающей при наведении курсора мыши на объект.</entry>
+          </row>
+          <row>
+            <entry><b>Отображать подсказку при редактировании</b></entry>
+            <entry>ShowHintOnEdit</entry>
+            <entry>Нет</entry>
+            <entry namest="col4" nameend="col5">
+              <p>{0} Нет</p>
+              <p>{1} Да</p>
+            </entry>
+            <entry>Включает и отключает отображение всплывающей подсказки в режиме
+              редактирования.</entry>
+          </row>
+          <row>
+            <entry><b>Видимость при выполнении</b></entry>
+            <entry>Visible</entry>
+            <entry>Да</entry>
+            <entry namest="col4" nameend="col5">
+              <p>{0} Нет</p>
+              <p>{1} Да</p>
+            </entry>
+            <entry>Включает и отключает отображение объекта в режиме «Индикация» при запуске
+              расчёта.</entry>
+          </row>
+          <row>
+            <entry><b>Цвет</b></entry>
+            <entry>Color</entry>
+            <entry><i>&lt;</i><i>черный</i><i>></i></entry>
+            <entry namest="col4" nameend="col5">Цвет выбирается из стандартной системной
+              палитры.</entry>
+            <entry>Цвет отображаемой точки. </entry>
+          </row>
+          <row>
+            <entry><b>Координаты точек</b></entry>
+            <entry>Points</entry>
+            <entry>[(X1,Y1),(X2,Y2), (X3,Y3)]</entry>
+            <entry namest="col4" nameend="col5">
+              <p>Значения float, имена сигналов, математические выражения:</p>
+              <p>[(56 , 104), (112 , src1),(coord3*k4 , 40)]</p>
+            </entry>
+            <entry>
+              <p>(X1,Y1) – координаты центра прямоугольника.</p>
+              <p>(X2,Y2) – координаты маркера на правой стороне прямоугольника.</p>
+              <p>(X3,Y3) – координаты маркера на верхней стороне прямоугольника.</p>
+              <p><image href="Rectangle_images/image005.png" height="215" width="354"
+                  id="image_b3n_hr1_ry"/></p>
+            </entry>
+          </row>
+          <row>
+            <entry><b>Ссылка</b></entry>
+            <entry>Instance</entry>
+            <entry><i>&lt;</i><i>нет</i><i>></i></entry>
+            <entry namest="col4" nameend="col5">Значения, задаваемые в окне «Выбор ссылки».</entry>
+            <entry>Вызов окна «Выбор ссылки». Объект используется в качестве чувствительной области
+              для вызова различных действий: переключения между страницами проекта, управления
+              другими блоками, открытия файлов и пр. </entry>
+          </row>
+          <row>
+            <entry><b>Ссылка при редактировании</b></entry>
+            <entry>EditInstance</entry>
+            <entry>Нет</entry>
+            <entry namest="col4" nameend="col5">
+              <p>{0} Нет</p>
+              <p>{1} Да</p>
+            </entry>
+            <entry>Обработка объектом вызова ссылки в режиме редактирования.</entry>
+          </row>
+          <row>
+            <entry><b>Действие для вывода ссылки</b></entry>
+            <entry>InstanceMode</entry>
+            <entry>Двойной щелчок</entry>
+            <entry namest="col4" nameend="col5">
+              <p>{0} Двойной щелчок</p>
+              <p>{1} Щелчок левой кнопкой</p>
+              <p>{2} Щелчок правой кнопкой</p>
+            </entry>
+            <entry>Выбор варианта активации ссылки.</entry>
+          </row>
+          <row>
+            <entry><b>Ярлык</b></entry>
+            <entry>Tag</entry>
+            <entry>0</entry>
+            <entry namest="col4" nameend="col5">Любое целое число или интерпретируемое
+              выражение</entry>
+            <entry>Метка в виде произвольного числа. Позволяет обращаться ко всем объектам с
+              одинаковым ярлыком при написании скриптов. Например, когда в процессе счета требуется
+              скрыть или показать группу объектов.</entry>
+          </row>
+          <row>
+            <entry><b>Шаблон автозаполнения</b></entry>
+            <entry>Template</entry>
+            <entry><i>&lt;</i><i>нет</i><i>></i></entry>
+            <entry namest="col4" nameend="col5">Подробнее о шаблонах автозаполнения.</entry>
+            <entry>Заданный в специальном формате текст, позволяющий автоматически создавать связи и
+              присваивать имена сигналам объекта.</entry>
+          </row>
+          <row>
+            <entry><b>Номер решателя</b></entry>
+            <entry>Layer</entry>
+            <entry>0</entry>
+            <entry namest="col4" nameend="col5">Любое целое число или интерпретируемое
+              выражение</entry>
+            <entry>Число, задающее номер расчетного ядра, которое производит расчет математической
+              модели объекта. Применяется при использовании нескольких расчетных программ. </entry>
+          </row>
+          <row>
+            <entry><b>Скрипт инициализации объекта</b></entry>
+            <entry>OnInitScript</entry>
+            <entry><i>&lt;</i><i>нет</i><i>></i></entry>
+            <entry namest="col4" nameend="col5">Текст скрипта</entry>
+            <entry>Текст скрипта, исполняемого непосредственно перед запуском расчёта.</entry>
+          </row>
+          <row>
+            <entry><b>Скрипт исполнения объекта</b></entry>
+            <entry>OnRunScript</entry>
+            <entry><i>&lt;</i><i>нет</i><i>></i></entry>
+            <entry namest="col4" nameend="col5">Текст скрипта</entry>
+            <entry>Текст скрипта, исполняемого при выполнении расчёта.</entry>
+          </row>
+          <row>
+            <entry><b>Угол поворота</b></entry>
+            <entry>Angle</entry>
+            <entry>0</entry>
+            <entry namest="col4" nameend="col5">Значения float, имена сигналов, математические
+              выражения.</entry>
+            <entry>Угол поворота прямоугольника в радианах при вращении вокруг центра.</entry>
+          </row>
+          <row>
+            <entry><b>Ширина</b></entry>
+            <entry>Width</entry>
+            <entry>120</entry>
+            <entry namest="col4" nameend="col5">Значения float, имена сигналов, математические
+              выражения.</entry>
+            <entry>Ширина прямоугольника. </entry>
+          </row>
+          <row>
+            <entry><b>Высота</b></entry>
+            <entry>Height</entry>
+            <entry>120</entry>
+            <entry namest="col4" nameend="col5">Значения float, имена сигналов, математические
+              выражения.</entry>
+            <entry>Высота прямоугольника.</entry>
+          </row>
+          <row>
+            <entry><b>Толщина линии</b></entry>
+            <entry>LineWidth</entry>
+            <entry>1</entry>
+            <entry namest="col4" nameend="col5">Значения float, имена сигналов, математические
+              выражения.</entry>
+            <entry>Толщина линии, очерчевающей прямоугольник, в пикселях.</entry>
+          </row>
+          <row>
+            <entry><b>Стиль линии</b></entry>
+            <entry>PenStyle</entry>
+            <entry>Сплошная</entry>
+            <entry><image href="Rectangle_images/image006.png" height="103" width="142"
+                id="image_c3n_hr1_ry"/></entry>
+            <entry>
+              <p>{0} Сплошная</p>
+              <p>{1} Штриховая</p>
+              <p>{2} Пунктирная</p>
+              <p>{3} Штрихпунктирная</p>
+              <p>{4} С двумя точками</p>
+            </entry>
+            <entry>
+              <p>Выбор из набора доступных вариантов стилей линии. </p>
+              <p>Все стили кроме сплошного имеют фактическую толщину линии, равную 1 и дают прибавку
+                к толщине границы, если она отлична от нуля. </p>
+            </entry>
+          </row>
+          <row>
+            <entry><b>Толщина границы</b></entry>
+            <entry>BorderWidth</entry>
+            <entry>0</entry>
+            <entry namest="col4" nameend="col5">Значения float</entry>
+            <entry>Толщина абриса в пикселях.</entry>
+          </row>
+          <row>
+            <entry><b>Цвет границы </b></entry>
+            <entry>BorderColor</entry>
+            <entry><i>&lt;</i><i>нет</i><i>></i></entry>
+            <entry namest="col4" nameend="col5">Цвет выбирается из стандартной системной
+              палитры.</entry>
+            <entry>Цвет абриса.</entry>
+          </row>
+          <row>
+            <entry><b>Коэффициент прозрачности</b></entry>
+            <entry>Opacity</entry>
+            <entry>1</entry>
+            <entry namest="col4" nameend="col5">Значения float от 0 до 1.</entry>
+            <entry>
+              <p>0 – полностью прозрачный объект.</p>
+              <p>1 – полностью непрозрачный объект.</p>
+            </entry>
+          </row>
+          
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Примечание. В графической системе SIT толщина линий и толшина границы по умолчанию не
+      масштабируются, т.е. сохраняются одинаковыми при разных масштабах изображения. Эту особенность
+      нужно учитывать при разработке видеокадров, допускающих масштабирование изображения.</p>
+    <p>Вид линии, очерчивающей собственно прямоугольник и отображаемой по умолчанию, настраивается
+      через свойства «Толщина линии» и «Стиль линии». Свойства «Толщина границы» и «Цвет границы»
+      применяются к абрису данной линии. Ниже приведены примеры, иллюстрирующие свойства линии
+      прямоугольника и его границы.</p>
+    <table id="table_d3n_hr1_ry">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><b>Внешний вид примитива</b></entry>
+            <entry><b>Свойства линии и границы примитива «Прямоугольник»</b></entry>
+          </row>
+          <row>
+            <entry>
+              <image placement="break" href="Rectangle_images/image007.png" align="center"
+                id="image_zml_mr1_ry"/>
+            </entry>
+            <entry>
+              <p>Толщина линии <b><i>5</i></b></p>
+              <p>Стиль линии <b><i>Сплошная</i></b></p>
+              <p>Толщина границы <b><i>0</i></b></p>
+              <p>Цвет границы <b><i>белый</i></b></p>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <image placement="break" href="Rectangle_images/image008.png" align="center"
+                id="image_p2t_mr1_ry"/>
+            </entry>
+            <entry>
+              <p>Толщина линии <b><i>5</i></b></p>
+              <p>Стиль линии <b><i>Сплошная</i></b></p>
+              <p>Толщина границы <b><i>10</i></b></p>
+              <p>Цвет границы <image href="Rectangle_images/image009.png" height="15" width="45"
+                  id="image_e3n_hr1_ry"/></p>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <image placement="break" href="Rectangle_images/image010.png" align="center"
+                id="image_qyd_nr1_ry"/>
+            </entry>
+            <entry>
+              <p>Толщина линии <b><i>5</i></b></p>
+              <p>Стиль линии <b><i>Штрихпунктирная</i></b></p>
+              <p>Толщина границы <b><i>10</i></b></p>
+              <p>Цвет границы <image href="Rectangle_images/image009.png" height="15" width="45"
+                  id="image_f3n_hr1_ry"/></p>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Для включения масштабирования толщины линий нужно:</p>
+    <ul id="ul_g3n_hr1_ry">
+      <li>1) В меню основного окна выбрать пункт «Файл>Параметры…». Откроется одноимённое окно.</li>
+      <li>2) Во вкладке «Вид», в поле «Настройки редактора схем» выбрать пункт «Масштабировать
+        толщину линий». </li>
+    </ul>
+  </body>
+</topic>

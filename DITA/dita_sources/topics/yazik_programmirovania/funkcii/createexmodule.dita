@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>createexmodule </title>
+<shortdesc>Функция получения доступа к удаленной исполнительной системе.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>obj_context = <funcname>createextmodule</funcname>("имя_DLL@имя_объекта");</codeblock>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>createexmodule</codeph> - функция создает внешний объект из DLL из скрипта;</p></section>
+<section>
+      <title>Результат:</title>
+      <p>В случае ошибки функция возвращает 0.</p>
+    </section>  
+<section><title>Пример 1:</title>
+<codeblock><comment>//Эта метка нужна для того, чтобы сориентировать элементы на схеме в каком режиме им работать - локальном или удалённом</comment>
+<kword>define</kword> remote_mode
+
+<kword>initialization</kword>
+<comment>//Параметры соединения для каждого из приборов</comment>
+src1_host = "192.168.1.50:22375;connecttimeout=4000 timeout=1000";
+src2_host = "192.168.1.51:22375;connecttimeout=4000 timeout=1000";
+load_name = "datarcv#default.conf";
+debugger_unit_name = "$(Root)\avrordbg.dll@debugger";
+
+<comment>//Создаём объекты для подключения кадра к приборам</comment>
+source1 = <funcname>createextmodule</funcname>(debugger_unit_name); 
+source2 = <funcname>createextmodule</funcname>(debugger_unit_name); 
+
+<kword>var</kword> connected1: <rword>boolean</rword>, connected2: <rword>boolean</rword>, fhash: <rword>integer</rword>;
+connected1 = 0;
+connected2 = 0;
+<kword>end</kword>;
+
+
+<comment>//Функция обработки соединения 1</comment>
+<kword>procedure</kword> DoProcessConnection1
+<kword>if</kword> (<kword>not</kword> connected1) <kword>then begin </kword>
+<kword>if</kword> (<funcname>dbginitialize</funcname>(source1,src1_host,load_name,fhash) = 0) <kword>then begin</kword>
+<kword>if</kword> <funcname>dbgstart</funcname>(source1) = 0 <kword>then</kword> connected1 = 1; 
+<kword>end</kword> 
+<kword>else</kword> 
+connected1 = 0;
+<kword>end</kword>
+<kword>else begin</kword>
+<kword>if</kword> <funcname>dbgexchange</funcname>(source1) &lt;> 0 <kword>then</kword> connected1 = 0;
+<kword>end</kword>;
+<kword>end</kword>; 
+
+<comment>//Функция обработки соединения 2</comment>
+<kword>procedure</kword> DoProcessConnection2
+<kword>if</kword> (<kword>not</kword> connected2) <kword>then begin </kword>
+<kword>if</kword> (<funcname>dbginitialize</funcname>(source2,src2_host,load_name,fhash) = 0) <kword>then begin</kword>
+<kword>if</kword> <funcname>dbgstart</funcname>(source2) = 0 <kword>then</kword> connected2 = 1; 
+<kword>end</kword> 
+<kword>else</kword> 
+connected2 = 0;
+<kword>end</kword>
+<kword>else begin</kword>
+<kword>if</kword> <funcname>dbgexchange</funcname>(source2) &lt;> 0 <kword>then</kword> connected2 = 0;
+<kword>end</kword>;
+<kword>end</kword>;
+
+<comment>//Установка соединения</comment>
+<kword>if not</kword> <rword>paintstep</rword> <kword>then begin</kword>
+
+<comment>//Асинхронная обработка соединений в отдельных потоках</comment>
+<kword>asyncprocess</kword>
+<comment>//Подключение канала 1 </comment>
+DoProcessConnection1; 
+<comment>//Подключение канала 2</comment>
+DoProcessConnection2;
+<kword>end</kword>; 
+
+<kword>end</kword>;
+
+<kword>finalization</kword>
+<comment>//Уничтожение соединения</comment>
+<funcname>freeobject</funcname>(source1);
+<funcname>freeobject</funcname>(source2);
+source1 = 0;
+source2 = 0;
+<kword>end</kword>;</codeblock></section>
+  
+<p>Пример скрипта, использующего функции доступа к удалённой исполнительной системе </p>
+  <section><title>Пример 2:</title>
+    <codeblock><kword>ifdef</kword> remote_mode
+
+<comment>//Удалённый режим - есть индикация статусов и дублирование</comment>
+<kword>var</kword> data1: <rword>double</rword>, data2: <rword>double</rword>, status1: <rword>integer</rword>, status2: <rword>integer</rword>; 
+<kword>initialization</kword>
+<comment>//Добавляем переменную в канал обмена данными</comment>
+<comment>//через интерфейс прямого доступа к каналу обмена данными</comment>
+<kword>if</kword> (source1 &lt;> 0) <kword>then begin</kword>
+<funcname>dbgaddreadvar</funcname>(source1,data_1,signal_name);
+<funcname>dbgaddreadvar</funcname>(source1,status_1,signal_name+".status");
+<kword>end</kword>; 
+<kword>if</kword> (source2 &lt;> 0) <kword>then begin</kword>
+<funcname>dbgaddreadvar</funcname>(source2,data_2,signal_name);
+<funcname>dbgaddreadvar</funcname>(source2,status_2,signal_name+".status");
+<kword>end</kword>; 
+<kword>end</kword>;
+
+<comment>//Собственно индикация</comment>
+<comment>//Активность канала данных - соединение</comment>
+factive1 = (status_1 = 0) <kword>and</kword> (source1 &lt;> 0) <kword>and</kword> connected1;
+factive2 = (status_2 = 0) <kword>and</kword> (source2 &lt;> 0) <kword>and</kword> connected2;
+<comment>//Выбор значения по каналам</comment>
+<kword>if</kword> factive1 <kword>then</kword> Text1.Text = <funcname>floattostrf</funcname>(data_1,0,4,6)
+<kword>else</kword>
+<kword>if</kword> factive2 <kword>then</kword> Text1.Text = <funcname>floattostrf</funcname>(data_2,0,4,6);
+
+<comment>//Мигаем с частотой 500 мсек если один из каналов сдох</comment>
+<kword>if</kword> (factive1 <kword>and</kword> (<kword>not</kword> factive2)) <kword>or</kword> (factive2 <kword>and</kword> (<kword>not</kword> factive1)) <kword>then</kword>
+ErrorFrame.Visible = <funcname>flash</funcname>(500)
+<kword>else</kword> 
+ErrorFrame.Visible = <kword>not</kword> (factive1 <kword>and</kword> factive2);
+
+<kword>elseif</kword>
+
+<comment>//Локальный режим - просто рисуем указанный сигнал</comment>
+
+<kword>formattext</kword>
+Text1.Text = <funcname>floattostrf</funcname>({signal_name},0,4,6);
+<kword>end</kword>;
+
+ErrorFrame.Visible = 0;
+
+<kword>endif</kword></codeblock>
+      <p>Скрипт внутри отображающих блоков схемы</p></section>  
+  </body>
+</topic>

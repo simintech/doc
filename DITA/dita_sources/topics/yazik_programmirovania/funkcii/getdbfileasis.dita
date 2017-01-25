@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+  <title>getdbfileasis</title>
+  <shortdesc>Функция для чтения типа данных "Файл базы данных" без добавления пути к
+    DataBase.</shortdesc>
+  <body>
+    <section>
+      <title>Синтаксис:</title>
+      <codeblock>s = <funcname>getdbfileasis</funcname>(dbfilename);</codeblock>
+    </section>
+    <section>
+      <title>Аргументы:</title>
+      <p>dbfilename – свойство типа "Файл базы данных".</p>
+    </section>
+    <section>
+      <title>Описание:</title>
+      <p><codeph>getdbfileasis(dbfilename)</codeph> – функция возвращает имя файла базы данных в
+        формате хранения - т.е. возвращает частичный путь к файлу БД без добавления в начало полного
+        пути к папке DataBase. </p>
+    </section>
+  </body>
+</topic>
