@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>HS – Кольцевой зазор </title>
+  <body>
+    <table id="table_qm5_mhs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/2503/image001.png" height="32" width="32"
+                id="image_rm5_mhs_sy"/></entry>
+            <entry><b>HS</b><b>– Кольцевой зазор</b></entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/2503/image002.png" height="77" width="136"
+                id="image_sm5_mhs_sy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок "Кольцевой зазор". Блок реализует модель зазора в коаксиальной трубе. Блок моделирует
+      течение жидкости в кольцевом зазоре между двумя коаксиальными круглыми трубами.</p>
+    <p>По размещению на схеме блок аналогичен блоку «HS - Канал».</p>
+    <p> </p>
+    <p><b>Свойства блока «</b><b>HS</b><b> – Кольцевой зазор»</b></p>
+    <table id="table_tm5_mhs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_um5_mhs_sy">
+                <li>·Тепловая связь внутри</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_vm5_mhs_sy">
+                <li>isHeat1</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_wm5_mhs_sy">
+                <li>·Тепловая связь снаружи</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_xm5_mhs_sy">
+                <li>isHeat2</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ym5_mhs_sy">
+                <li>·Количество участков</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_zm5_mhs_sy">
+                <li>N</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_an5_mhs_sy">
+                <li>·Внутренний диаметр кольцевого зазора, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_bn5_mhs_sy">
+                <li>D1</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_cn5_mhs_sy">
+                <li>·Наружный диаметр кольцевого зазора, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_dn5_mhs_sy">
+                <li>D2</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_en5_mhs_sy">
+                <li>·Длина, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_fn5_mhs_sy">
+                <li>L</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_gn5_mhs_sy">
+                <li>·Изменение высоты, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_hn5_mhs_sy">
+                <li>Dz</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_in5_mhs_sy">
+                <li>·Прямое местное сопротивление</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_jn5_mhs_sy">
+                <li>KsiDir</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_kn5_mhs_sy">
+                <li>·Обратное местное сопротивление</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ln5_mhs_sy">
+                <li>KsiRev</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_mn5_mhs_sy">
+                <li>·Коэффициент интенсификации теплообмена</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_nn5_mhs_sy">
+                <li>kAlfa</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_on5_mhs_sy">
+                <li>·Абсолютная шероховатость, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_pn5_mhs_sy">
+                <li>Sh</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_qn5_mhs_sy">
+                <li>·Объемное энерговыделение, Вт/м³</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_rn5_mhs_sy">
+                <li>qv</li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока «</b><b>HS</b><b> – Кольцевой зазор»</b></p>
+    <table id="table_sn5_mhs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_tn5_mhs_sy">
+                <li>·Давление, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_un5_mhs_sy">
+                <li>_p</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_vn5_mhs_sy">
+                <li>·Энтальпия, кДж/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_wn5_mhs_sy">
+                <li>_h</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_xn5_mhs_sy">
+                <li>·Температура, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_yn5_mhs_sy">
+                <li>_t</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_zn5_mhs_sy">
+                <li>·Удельный объем, м³/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_a45_mhs_sy">
+                <li>_v</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_b45_mhs_sy">
+                <li>·Плотность, кг/м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_c45_mhs_sy">
+                <li>_rho</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_d45_mhs_sy">
+                <li>·Массовый расход, кг/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_e45_mhs_sy">
+                <li>_g</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_f45_mhs_sy">
+                <li>·Объемный расход, м³/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_g45_mhs_sy">
+                <li>_q</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_h45_mhs_sy">
+                <li>·Скорость, м/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_i45_mhs_sy">
+                <li>_w</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_j45_mhs_sy">
+                <li>·Коэффициент распределенного трения</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_k45_mhs_sy">
+                <li>_ksiTr</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_l45_mhs_sy">
+                <li>·Коэффициент местного трения</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_m45_mhs_sy">
+                <li>_ksiM</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_n45_mhs_sy">
+                <li>·Потери на трение, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_o45_mhs_sy">
+                <li>_dPtr</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_p45_mhs_sy">
+                <li>·Нивелирные потери, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_q45_mhs_sy">
+                <li>_dPniv</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_r45_mhs_sy">
+                <li>·Потери на ускорение, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_s45_mhs_sy">
+                <li>_dPcon</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_t45_mhs_sy">
+                <li>·Напор насоса, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_u45_mhs_sy">
+                <li>_dPnas</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_v45_mhs_sy">
+                <li>·Мощность на внутренней стенке, кВт</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_w45_mhs_sy">
+                <li>_qf1</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_x45_mhs_sy">
+                <li>·Мощность на наружной стенке, кВт</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_y45_mhs_sy">
+                <li>_qf2</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_z45_mhs_sy">
+                <li>·Давление на входе, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ap5_mhs_sy">
+                <li>_pin</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_bp5_mhs_sy">
+                <li>·Энтальпия на входе, кДж/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_cp5_mhs_sy">
+                <li>_hin</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_dp5_mhs_sy">
+                <li>·Температура на входе, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ep5_mhs_sy">
+                <li>_tin</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_fp5_mhs_sy">
+                <li>·Расход на входе, кг/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_gp5_mhs_sy">
+                <li>_gin</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_hp5_mhs_sy">
+                <li>·Объемный расход на входе, м³/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ip5_mhs_sy">
+                <li>_qin</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_jp5_mhs_sy">
+                <li>·Скорость на входе, м/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_kp5_mhs_sy">
+                <li>_win</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_lp5_mhs_sy">
+                <li>·Давление на выходе, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_mp5_mhs_sy">
+                <li>_pou</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_np5_mhs_sy">
+                <li>·Энтальпия на выходе, кДж/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_op5_mhs_sy">
+                <li>_hou</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_pp5_mhs_sy">
+                <li>·Температура на выходе, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_qp5_mhs_sy">
+                <li>_tou</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_rp5_mhs_sy">
+                <li>·Расход на выходе, кг/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_sp5_mhs_sy">
+                <li>_gou</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_tp5_mhs_sy">
+                <li>·Объемный расход на выходе, м³/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_up5_mhs_sy">
+                <li>_qou</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_vp5_mhs_sy">
+                <li>·Скорость на выходе, м/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_wp5_mhs_sy">
+                <li>_wou</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_xp5_mhs_sy">
+                <li>·Перепад давления, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_yp5_mhs_sy">
+                <li>_dp</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_zp5_mhs_sy">
+                <li>·Перепад энтальпии, кДж/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_aq5_mhs_sy">
+                <li>_dh</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_bq5_mhs_sy">
+                <li>·Перепад температуры, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_cq5_mhs_sy">
+                <li>_dt</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_dq5_mhs_sy">
+                <li>·Суммарные потери на трение, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_eq5_mhs_sy">
+                <li>_dPtrSum</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_fq5_mhs_sy">
+                <li>·Суммарный нивелирный напор, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_gq5_mhs_sy">
+                <li>_dPnivSum</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_hq5_mhs_sy">
+                <li>·Суммарные потери на ускорение, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_iq5_mhs_sy">
+                <li>_dPconSum</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_jq5_mhs_sy">
+                <li>·Суммарный напор насоса, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_kq5_mhs_sy">
+                <li>_dPnasSum</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_lq5_mhs_sy">
+                <li>·Суммарная мощность через внутреннюю стенку, кВт</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_mq5_mhs_sy">
+                <li>_qfSum1</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_nq5_mhs_sy">
+                <li>·Суммарная мощность через наружную стенку, кВт</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_oq5_mhs_sy">
+                <li>_qfSum2</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_pq5_mhs_sy">
+                <li>·Коэффициент теплоотдачи внутри, Вт/ (м²*К)</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_qq5_mhs_sy">
+                <li>_Alfa1</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_rq5_mhs_sy">
+                <li>·Коэффициент теплоотдачи снаружи, Вт/ (м²*К)</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_sq5_mhs_sy">
+                <li>_Alfa2</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_tq5_mhs_sy">
+                <li>·Удельная энтальпия (массовое паросодержание)</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_uq5_mhs_sy">
+                <li>_X</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_vq5_mhs_sy">
+                <li>·Режим теплообмена</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_wq5_mhs_sy">
+                <li>_alfamode</li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок может быть соединен с другими блоками посредством гидравлических и тепловых связей.</p>
+    <p>При помощи гидравлических связей блок может соединяться со следующими блоками: </p>
+    <ul id="ul_xq5_mhs_sy">
+      <li>· «HS – Кольцевой зазор»;</li>
+      <li>· «HS – Граничный узел»;</li>
+      <li>· «HS – Внутренний узел»;</li>
+      <li>· «HS – Порт входа»;</li>
+      <li>· «HS – Порт выхода»;</li>
+      <li>· «HS – В память»;</li>
+      <li>· «HS – Из памяти».</li>
+      <li>· </li>
+    </ul>
+    <p>При помощи тепловых связей блок может соединяться со следующими блоками:</p>
+    <ul id="ul_yq5_mhs_sy">
+      <li>· «HS – Граничное условие 3-го рода»;</li>
+      <li>· «HS – Заданный тепловой поток на стенке»;</li>
+      <li>· «HS – Стенка с заданной температурой»;</li>
+      <li>· «HS – Тепловое граничное условие»;</li>
+      <li>· «HS – Цилиндрическая толстая стенка»;</li>
+      <li>· «HS – Цилиндрическая толстая стенка с излучением»;</li>
+      <li>· «HS – Двухслойная цилиндрическая толстая стенка»;</li>
+      <li>· «HS – ТВЭЛ Тип 1»;</li>
+      <li>· «HS – Плоская толстая стенка»;</li>
+      <li>· «HS – Тонкая стенка Тип 1»;</li>
+      <li>· «HS – Тонкая стенка Тип 2».</li>
+    </ul>
+  </body>
+</topic>

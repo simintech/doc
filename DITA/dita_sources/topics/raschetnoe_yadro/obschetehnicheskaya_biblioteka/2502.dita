@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>HS – Труба </title>
+  <body>
+    <table id="table_kd1_3hs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/2502/image001.png" height="32" width="32"
+                id="image_ld1_3hs_sy"/></entry>
+            <entry><b>HS</b><b>– Труба</b></entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/2502/image002.png" height="68" width="124"
+                id="image_md1_3hs_sy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок "Труба". Реализует модель трубопровода, обладающего стенкой. Блок является одним из
+      базовых для построения нодализационных схем теплогидравлических моделей. Блок моделирует
+      течение жидкости в круглой трубе с учётом теплообмена между теплоносителем и моделью тонкой
+      стенки.</p>
+    <p>В отличие от канала, труба не может подключаться к блокам тепловых структур, поскольку в
+      своём составе содержит модель тонкой стенки.</p>
+    <p> </p>
+    <p><b>Свойства блока</b><b>«</b><b>HS - </b><b>Труба»</b></p>
+    <table id="table_nd1_3hs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_od1_3hs_sy">
+                <li>·Количество тепловых связей</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_pd1_3hs_sy">
+                <li>Nheatport</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_qd1_3hs_sy">
+                <li>·Количество расчетных элементов</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_rd1_3hs_sy">
+                <li>N</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_sd1_3hs_sy">
+                <li>·Наружный диаметр трубы, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_td1_3hs_sy">
+                <li>D</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ud1_3hs_sy">
+                <li>·Толщина стенки трубы, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_vd1_3hs_sy">
+                <li>s</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_wd1_3hs_sy">
+                <li>·Длины элементов разбиения, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_xd1_3hs_sy">
+                <li>L</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_yd1_3hs_sy">
+                <li>·Приращение высоты, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_zd1_3hs_sy">
+                <li>Dz</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_a21_3hs_sy">
+                <li>·Материал стенки</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_b21_3hs_sy">
+                <li>Material</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_c21_3hs_sy">
+                <li>·Модуль упругости первого рода материала стенки, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_d21_3hs_sy">
+                <li>E</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_e21_3hs_sy">
+                <li>·Коэффициент Пуассона материала стенки</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_f21_3hs_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_g21_3hs_sy">
+                <li>·Прямое местное сопротивление</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_h21_3hs_sy">
+                <li>KsiDir </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_i21_3hs_sy">
+                <li>·Обратное местное сопротивление</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_j21_3hs_sy">
+                <li>KsiInv </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_k21_3hs_sy">
+                <li>·Абсолютная шероховатость, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_l21_3hs_sy">
+                <li>Sh </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_m21_3hs_sy">
+                <li>·Коэффициент интенсификации теплообмена</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_n21_3hs_sy">
+                <li>kAlfa </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_o21_3hs_sy">
+                <li>·Объемное энерговыделение, Вт/м³</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_p21_3hs_sy">
+                <li>qv </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_q21_3hs_sy">
+                <li>·Начальное давление, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_r21_3hs_sy">
+                <li>P0</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_s21_3hs_sy">
+                <li>·Начальная энтальпия, Дж/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_t21_3hs_sy">
+                <li>H0</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_u21_3hs_sy">
+                <li>·Начальный расход, кг/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_v21_3hs_sy">
+                <li>G0</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_w21_3hs_sy">
+                <li>·Начальная температура стенки, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_x21_3hs_sy">
+                <li>Twall_0</li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока</b><b>«</b><b>HS - </b><b>Труба»</b></p>
+    <table id="table_y21_3hs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_z21_3hs_sy">
+                <li>·Давление, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_af1_3hs_sy">
+                <li>_p</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_bf1_3hs_sy">
+                <li>·Энтальпия, Дж/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_cf1_3hs_sy">
+                <li>_h</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_df1_3hs_sy">
+                <li>·Температура, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ef1_3hs_sy">
+                <li>_t</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ff1_3hs_sy">
+                <li>·Температура стенки трубы, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_gf1_3hs_sy">
+                <li>_twall</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_hf1_3hs_sy">
+                <li>·Удельный объем, м³/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_if1_3hs_sy">
+                <li>_v</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_jf1_3hs_sy">
+                <li>·Плотность, кг/м³</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_kf1_3hs_sy">
+                <li>_rho</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_lf1_3hs_sy">
+                <li>·Массовый расход, кг/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_mf1_3hs_sy">
+                <li>_g</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_nf1_3hs_sy">
+                <li>·Объемный расход, м³/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_of1_3hs_sy">
+                <li>_q</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_pf1_3hs_sy">
+                <li>·Скорость, м/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_qf1_3hs_sy">
+                <li>_w</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_rf1_3hs_sy">
+                <li>·Коэффициент распределенного трения</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_sf1_3hs_sy">
+                <li>_ksiTr</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_tf1_3hs_sy">
+                <li>·Коэффициент местного трения</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_uf1_3hs_sy">
+                <li>_ksiM </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_vf1_3hs_sy">
+                <li>·Потери на трение, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_wf1_3hs_sy">
+                <li> _dPtr</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_xf1_3hs_sy">
+                <li>·Нивелирный напор, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_yf1_3hs_sy">
+                <li> _dPniv</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_zf1_3hs_sy">
+                <li>·Потери на ускорение, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ag1_3hs_sy">
+                <li> _dPcon</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_bg1_3hs_sy">
+                <li>·Напор насоса, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_cg1_3hs_sy">
+                <li>_dPnas</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_dg1_3hs_sy">
+                <li>·Мощность на стенке, Вт</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_eg1_3hs_sy">
+                <li>_qf</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_fg1_3hs_sy">
+                <li>·Давление на входе, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_gg1_3hs_sy">
+                <li>_pin</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_hg1_3hs_sy">
+                <li>·Энтальпия на входе, Дж/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ig1_3hs_sy">
+                <li>_hin</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_jg1_3hs_sy">
+                <li>·Температура на входе, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_kg1_3hs_sy">
+                <li>_tin</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_lg1_3hs_sy">
+                <li>·Расход на входе, кг/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_mg1_3hs_sy">
+                <li>_gin</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ng1_3hs_sy">
+                <li>·Объемный расход на входе, м³/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_og1_3hs_sy">
+                <li>_qin</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_pg1_3hs_sy">
+                <li>·Скорость на входе, м/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_qg1_3hs_sy">
+                <li>_win</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_rg1_3hs_sy">
+                <li>·Давление на выходе, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_sg1_3hs_sy">
+                <li>­_pou</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_tg1_3hs_sy">
+                <li>·Энтальпия на выходе, Дж/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ug1_3hs_sy">
+                <li>_hou</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_vg1_3hs_sy">
+                <li>·Температура на выходе, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_wg1_3hs_sy">
+                <li>_tou</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_xg1_3hs_sy">
+                <li>·Расход на выходе, кг/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_yg1_3hs_sy">
+                <li>_gou</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_zg1_3hs_sy">
+                <li>·Объемный расход на выходе, м³/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ah1_3hs_sy">
+                <li>_qou</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_bh1_3hs_sy">
+                <li>·Скорость на выходе, м/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ch1_3hs_sy">
+                <li>_wou</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_dh1_3hs_sy">
+                <li>·Перепад давления, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_eh1_3hs_sy">
+                <li>_dp</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_fh1_3hs_sy">
+                <li>·Перепад энтальпии, Дж/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_gh1_3hs_sy">
+                <li>_dh</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_hh1_3hs_sy">
+                <li>·Перепад температуры, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ih1_3hs_sy">
+                <li>_dt</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_jh1_3hs_sy">
+                <li>·Суммарные потери на трение, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_kh1_3hs_sy">
+                <li>_dPtrSum</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_lh1_3hs_sy">
+                <li>·Суммарный нивелирный напор, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_mh1_3hs_sy">
+                <li>_dPnivSum</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_nh1_3hs_sy">
+                <li>·Суммарные потери на ускорение, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_oh1_3hs_sy">
+                <li>_dPconSum</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ph1_3hs_sy">
+                <li>·Суммарный напор насоса, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_qh1_3hs_sy">
+                <li>_dPnasSum</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_rh1_3hs_sy">
+                <li>·Суммарная мощность через стенку, Вт</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_sh1_3hs_sy">
+                <li>_qfSum</li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок может быть соединен с другими блоками посредством гидравлических и тепловых связей.</p>
+    <p>При помощи гидравлических связей блок может соединяться со следующими блоками:</p>
+    <ul id="ul_th1_3hs_sy">
+      <li>· «HS – Канал»;</li>
+      <li>· «HS – Труба»;</li>
+      <li>· «HS – Граничный узел»;</li>
+      <li>· «HS – Внутренний узел»;</li>
+      <li>· «HS – Узел компенсатора»;</li>
+      <li>· «HS – Эжектор»;</li>
+      <li>· «HS – Ссылка на объект»;</li>
+      <li>· «HS – Порт входа»;</li>
+      <li>· «HS – Порт выхода»;</li>
+      <li>· «HS – В память»;</li>
+      <li>· «HS – Из памяти».</li>
+    </ul>
+    <p>При помощи тепловых связей блок может соединяться со следующими блоками:</p>
+    <ul id="ul_uh1_3hs_sy">
+      <li>· «HS – Граничное условие 3-го рода»;</li>
+      <li>· «HS – Заданный тепловой поток на стенке»;</li>
+      <li>· «HS – Стенка с заданной температурой»;</li>
+      <li>· «HS – Тепловое граничное условие»;</li>
+      <li>· «HS – Цилиндрическая толстая стенка»;</li>
+      <li>· «HS – Цилиндрическая толстая стенка с излучением»;</li>
+      <li>· «HS – Двухслойная цилиндрическая толстая стенка»;</li>
+      <li>· «HS – Плоская толстая стенка»;</li>
+      <li>· «HS – Тонкая стенка Тип 1»;</li>
+      <li>· «HS – Зазор между стенками».</li>
+    </ul>
+    <p> </p>
+    <p>В качестве дополнительных элементов на блок «HS – Канал» могут быть установлены следующие
+      блоки (при этом блок «HS – Канал» будет родительским, а дополнительно установленные блоки –
+      дочерними):</p>
+    <ul id="ul_vh1_3hs_sy">
+      <li>· «HS – Местное сопротивление»;</li>
+      <li>· «HS – Простой насос»;</li>
+      <li>· «HS – Насос»;</li>
+      <li>· «HS – Заданный напор насоса».</li>
+    </ul>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+  </body>
+</topic>

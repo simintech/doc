@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>HS – Электродвигатель </title>
+  <body>
+    <table id="table_fnf_qqs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/2522/image001.png" height="32" width="32"
+                id="image_gnf_qqs_sy"/></entry>
+            <entry><b>HS</b><b>– Электродвигатель</b></entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/2522/image002.png" height="80" width="98"
+                id="image_hnf_qqs_sy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок реализует модель электродвигателя. Блок моделирует воздействие на ротор вращающего
+      момента, развиваемого электродвигателем. </p>
+    <p> </p>
+    <p><b>Свойства блока «HS – Электродвигатель»</b></p>
+    <table id="table_inf_qqs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_jnf_qqs_sy">
+                <li>·Частота питания, Гц</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_knf_qqs_sy">
+                <li>f</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_lnf_qqs_sy">
+                <li>·Моментная характеристика электродвигателя</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_mnf_qqs_sy">
+                <li>FileName</li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока «HS – Электродвигатель»</b></p>
+    <table id="table_nnf_qqs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_onf_qqs_sy">
+                <li>·Мощность на валу, Вт</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_pnf_qqs_sy">
+                <li>_shaft_power</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_qnf_qqs_sy">
+                <li>·Момент, Н*м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_rnf_qqs_sy">
+                <li>_m</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_snf_qqs_sy">
+                <li>·Частота сети, Гц</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_tnf_qqs_sy">
+                <li>_f</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_unf_qqs_sy">
+                <li>·Частота ротора, Гц</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_vnf_qqs_sy">
+                <li>_w_abs</li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок может быть соединен посредством механических связей со следующими блоками:</p>
+    <ul id="ul_wnf_qqs_sy">
+      <li>· «HS – Электродвигатель»;</li>
+      <li>· «HS – Ступень турбины».</li>
+    </ul>
+    <p> </p>
+  </body>
+</topic>

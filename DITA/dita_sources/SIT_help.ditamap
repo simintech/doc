@@ -2589,4 +2589,43 @@
             </topicref>
         </topicref>
     </topicref>
+    <topicref href="topics/teplogidravlicheskiy_kod_HS/teplogidravlicheskiy_kod_HS.dita"
+        navtitle="9 Теплогидравлический код HS" locktitle="yes">
+        <topicref href="topics/teplogidravlicheskiy_kod_HS/elementy_koda/elementy_koda.dita">
+            <topicref href="topics/teplogidravlicheskiy_kod_HS/elementy_koda/uzly/uzly.dita">
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2510.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2509.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2508.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2534.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2524.dita"/>
+            </topicref>
+            <topicref href="topics/teplogidravlicheskiy_kod_HS/elementy_koda/kanaly/kanaly.dita">
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2501.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2502.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2503.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2504.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2537.dita"/>
+            </topicref>
+            <topicref href="topics/teplogidravlicheskiy_kod_HS/elementy_koda/armatura/armatura.dita">
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2551.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2552.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2553.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2554.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2555.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2556.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2557.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2561.dita"/>
+            </topicref>
+            <topicref
+                href="topics/teplogidravlicheskiy_kod_HS/elementy_koda/turbonasosnye_agregaty/turbonasosnye_agregaty.dita">
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2518.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2541.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2542.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2519.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2522.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2543.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2520.dita"/>
+            </topicref>
+        </topicref>
+    </topicref>
 </map>

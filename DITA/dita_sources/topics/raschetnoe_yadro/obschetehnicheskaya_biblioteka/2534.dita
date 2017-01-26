@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>HS – Ссылка на объект </title>
+  <body>
+    <table id="table_qqj_jgs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/2534/image001.png" height="32" width="32"
+                id="image_rqj_jgs_sy"/></entry>
+            <entry><b>HS</b><b>– Ссылка на объект</b></entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/2534/image002.png" height="75" width="75"
+                id="image_sqj_jgs_sy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок не является расчетным, служит для подключения линий связи к узлу (реальному расчетному
+      объекту, типа внутренний узел или граничный узел), находящемуся в другом месте расчетной
+      схемы.</p>
+    <p>Блок может быть использован при организации большого количества подключений к одному
+      расчетному узлу, когда подвести нужное количество линий связи на плоскости не представляется
+      возможным.</p>
+    <p>Полный путь объекта задается относительно верхнего уровня проекта, например:
+      Submodel2.Node_5</p>
+    <p> </p>
+    <p><b>Свойства блока «</b><b>HS</b><b> – Ссылка на объект»</b></p>
+    <table id="table_tqj_jgs_sy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Полный путь объекта</entry>
+            <entry>
+              <ul id="ul_uqj_jgs_sy">
+                <li>objname</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_vqj_jgs_sy">
+                <li>BoundNode_1</li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>
