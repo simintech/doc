@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Фиктивный канал TPP </title>
+  <body>
+    <p><b>Фиктивный канал TPP - </b>канал нулевой длины. Элемент создан для моделирования связи
+      между двумя контрольными объемами, при этом он не содержит массы и энергии, как, например,
+          <i>Канал общего вида</i>, но характеризуется
+      некоторыми реальными геометрическими характеристиками: гидравлическим диаметром, сечением и
+      наклоном. Каждому элементу теплогидравлический расчетныйм код ТПП по умолчанию задает имя,
+      например, FictChannel1, которое может быть изменено пользователем. </p>
+    <p>Примером использования <b>Фиктивного канала TPP </b>может служить описание отверстий между
+      двумя объемами или перфорированной стенки, связь кольцевой и цилиндрической камер и пр. </p>
+    <p><b>Фиктивный канал TPP</b>- <i>ориентированный</i> элемент. Направление течения фаз
+      теплоносителя от входа к выходу считается положительным, в обратном направлении –
+      отрицательным; скорости фаз имеют соответствующие знаки. </p>
+    <p><b>Фиктивный канал TPP</b> – <i>точечный</i> элемент (компонентов не содержит). </p>
+    <ul id="ul_l3g_qyl_sy">
+      <li><b>3.9.1Разрешенные связи элемента</b></li>
+    </ul>
+    <p><b>Фиктивный канал TPP </b>связывается с элементами других типов. Разрешенные формы
+      представления указаны ниже (см. Таблица 4.9.1.18). </p>
+    <p><b>Таблица 4.9.1.18</b> Способы соединения фиктивного канала с другими элементами </p>
+    <table id="table_m3g_qyl_sy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <thead>
+          <row>
+            <entry><b>Компонент связующего элемента</b></entry>
+            <entry><b>Тип связи</b></entry>
+            <entry><b>Связуемый элемент</b></entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry morerows="2">
+              <p>Вход/ выход </p>
+              <p>прямой трубы</p>
+            </entry>
+            <entry morerows="2">
+              <p>соединительная линия </p>
+              <p>(гидравлическая связь)</p>
+            </entry>
+            <entry>Элементы группы <i>Узлы</i></entry>
+          </row>
+          <row>
+            <entry>Элементы группы <i>Каналы</i></entry>
+          </row>
+          <row>
+            <entry>Элементы группы <i>Баки</i></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <ul id="ul_n3g_qyl_sy">
+      <li><b>3.9.2Свойства элемента</b></li>
+    </ul>
+    <p>Характеристики <b>Фиктивного канала TPP </b>и начальные условия для расчета задаются в
+      закладке <i>Свойства</i><i>объекта</i> (см. Таблица 4.8.2.17).</p>
+    <p><b>Таблица 4.9.2.19 </b>Параметры фиктивного канала TPP </p>
+    <table id="table_o3g_qyl_sy">
+      <tgroup cols="4">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <colspec colnum="4" colname="col4"/>
+        <thead>
+          <row>
+            <entry><b>Параметр</b></entry>
+            <entry><b>Имя </b><b>(идентификатор)</b></entry>
+            <entry><b>Тип переменной</b></entry>
+            <entry><b>Интервал возможных значений</b></entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>Гидростатческий напор канала</entry>
+            <entry>ROGH</entry>
+            <entry>R</entry>
+            <entry>? 0</entry>
+          </row>
+          <row>
+            <entry>Гидравлический комплекс трения</entry>
+            <entry>ZROF</entry>
+            <entry>R</entry>
+            <entry>> 0</entry>
+          </row>
+          <row>
+            <entry>Гидравлический комплекс L/F</entry>
+            <entry>SLF</entry>
+            <entry>R</entry>
+            <entry>> 0</entry>
+          </row>
+          <row>
+            <entry>Напор насоса</entry>
+            <entry>Pnas</entry>
+            <entry>R</entry>
+            <entry>? 0</entry>
+          </row>
+          <row>
+            <entry>Энтальпия на выходе из канала</entry>
+            <entry>Hvyh</entry>
+            <entry>R</entry>
+            <entry>> 0</entry>
+          </row>
+          <row>
+            <entry>Концентрация пассивной примеси (бора) на выходе из канала</entry>
+            <entry>Cvyh</entry>
+            <entry>R</entry>
+            <entry>> 0</entry>
+          </row>
+          <row>
+            <entry>Тепловой поток от стенки канала</entry>
+            <entry>Qto</entry>
+            <entry>R</entry>
+            <entry>> 0</entry>
+          </row>
+          <row>
+            <entry>Температура на выходе из канала</entry>
+            <entry>Tvyh</entry>
+            <entry>R</entry>
+            <entry>> 0</entry>
+          </row>
+          <row>
+            <entry>Давление на входе в канал</entry>
+            <entry>Pvh</entry>
+            <entry>R</entry>
+            <entry>> 0</entry>
+          </row>
+          <row>
+            <entry>Давление на выходе из канала</entry>
+            <entry>Pvyh</entry>
+            <entry>R</entry>
+            <entry>> 0</entry>
+          </row>
+          <row>
+            <entry>Энтальпия на входе в канал</entry>
+            <entry>Hvn</entry>
+            <entry>R</entry>
+            <entry>> 0</entry>
+          </row>
+          <row>
+            <entry>Температура на входе в канал</entry>
+            <entry>Tvn</entry>
+            <entry>R</entry>
+            <entry>> 0</entry>
+          </row>
+          <row>
+            <entry>Концентрация бора на входе в канал</entry>
+            <entry>Cvh</entry>
+            <entry>R</entry>
+            <entry>? 0</entry>
+          </row>
+          <row>
+            <entry>Зафиксировать индекс</entry>
+            <entry>is_const_index</entry>
+            <entry>P</entry>
+            <entry>[нет, да]</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>

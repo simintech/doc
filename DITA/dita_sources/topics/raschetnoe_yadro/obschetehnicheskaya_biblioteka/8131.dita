@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Узел компенсатора</title>
+  <body>
+    <p><b>Узел компенсатора - </b><i>точечный</i><i>неориентированный</i> элемент. Модель
+      предназначена для имитации граничных условий в каналах.</p>
+    <p><b>3.31.1Разрешенные связи элемента</b></p>
+    <p><b>Узел компенсатора </b>соединяется с элементами других типов. Разрешенные формы
+      представления указаны ниже (см. Таблица 4.31.1.41). </p>
+    <p><b>Таблица 4.31.1.41</b> Соединение ротора с другими элементами <table id="table2">
+        <tgroup cols="3">
+          <colspec colnum="1" colname="col1"/>
+          <colspec colnum="2" colname="col2"/>
+          <colspec colnum="3" colname="col3"/>
+          <thead>
+            <row>
+              <entry><b>Компонент связующего элемента</b></entry>
+              <entry><b>Тип связи</b></entry>
+              <entry><b>Связуемый элемент</b></entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>Порт узла компенсатора</entry>
+              <entry>
+                <p>соединительная линия </p>
+                <p>(гидравлическая связь)</p>
+              </entry>
+              <entry>Элементы группы <i>Каналы</i></entry>
+            </row>
+            <row>
+              <entry>Расчетная область (тело) узла компенсатора</entry>
+              <entry>встроенная связь </entry>
+              <entry>
+                
+                 Группа <i>Баки</i>:
+                <ul id="ul_uqc_whr_sy">
+                  <li>Компенсатор 2-х объемный;</li>
+                  <li>Компенсатор 3-х объемный.</li>
+                </ul>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></p>
+    <p>Узел компенсатора не имеет собственной соединительной линии. Для коммутации устанавливается
+      непосредственно на единственный порт <i>Компенсатора
+        2-объемного</i> (<i>Компенсатора 3-объемного</i>). </p>
+    <p><b>3.31.2 Свойства элемента</b></p>
+    <p>Характеристики <b>Узла компенсатора</b> и начальные условия для расчета задаются в закладке
+        <i>Свойства</i><i>объекта</i> (см. Таблица 4.31.2.42). </p>
+    <p><b>Таблица 4.31.2.42 </b>Параметры узла компенсатора <table id="table3">
+        <tgroup cols="4">
+          <colspec colnum="1" colname="col1"/>
+          <colspec colnum="2" colname="col2"/>
+          <colspec colnum="3" colname="col3"/>
+          <colspec colnum="4" colname="col4"/>
+          <thead>
+            <row>
+              <entry><b>Параметр</b></entry>
+              <entry><b>Имя </b><b>(идентификатор)</b></entry>
+              <entry><b>Тип переменной</b></entry>
+              <entry><b>Интервал возможных значений</b></entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>Начальное давление</entry>
+              <entry>Start_pres</entry>
+              <entry>R</entry>
+              <entry>> 0</entry>
+            </row>
+            <row>
+              <entry>Начальная энтальпия</entry>
+              <entry>Start_ent</entry>
+              <entry>R</entry>
+              <entry>> 0</entry>
+            </row>
+            <row>
+              <entry>Гидравлический диаметр</entry>
+              <entry>Gidr_D</entry>
+              <entry>R</entry>
+              <entry>> 0</entry>
+            </row>
+            <row>
+              <entry>Толщина стенки</entry>
+              <entry>Sten</entry>
+              <entry>R</entry>
+              <entry>> 0</entry>
+            </row>
+            <row>
+              <entry>Проходное сечение</entry>
+              <entry>Sechen</entry>
+              <entry>R</entry>
+              <entry>> 0</entry>
+            </row>
+            <row>
+              <entry>Длина участка</entry>
+              <entry>Dlina</entry>
+              <entry>R</entry>
+              <entry>> 0</entry>
+            </row>
+            <row>
+              <entry>Поверхность теплообмена</entry>
+              <entry>F</entry>
+              <entry>R</entry>
+              <entry>> 0</entry>
+            </row>
+            <row>
+              <entry>Высотная отметка</entry>
+              <entry>Z</entry>
+              <entry>R</entry>
+              <entry>? 0</entry>
+            </row>
+            <row>
+              <entry>Начальная конц. бора</entry>
+              <entry>Bor</entry>
+              <entry>R</entry>
+              <entry>? 0</entry>
+            </row>
+            <row>
+              <entry>Материал</entry>
+              <entry>Material</entry>
+              <entry>P</entry>
+              <entry>[18ХН9Т, Ст20]</entry>
+            </row>
+            <row>
+              <entry>Координата X</entry>
+              <entry>X</entry>
+              <entry>R</entry>
+              <entry>? 0</entry>
+            </row>
+            <row>
+              <entry>Координата X</entry>
+              <entry>Y</entry>
+              <entry>R</entry>
+              <entry>? 0</entry>
+            </row>
+            <row>
+              <entry>Номер объёма</entry>
+              <entry>VNumber</entry>
+              <entry>P</entry>
+              <entry>[Нижний водяной, верхний водяной, паровой]</entry>
+            </row>
+            <row>
+              <entry>Коэффициент сопротивления</entry>
+              <entry>Soprot</entry>
+              <entry>R</entry>
+              <entry>? 0</entry>
+            </row>
+            <row>
+              <entry>Зафиксировать индекс</entry>
+              <entry>is_const_index</entry>
+              <entry>P</entry>
+              <entry>[Нет, Да]</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></p>
+    <p>Пример применения элемента <i>Узел компенсатора</i> для
+      создания <i>Теплообменника смешивающего типа</i>. </p>
+  </body>
+</topic>

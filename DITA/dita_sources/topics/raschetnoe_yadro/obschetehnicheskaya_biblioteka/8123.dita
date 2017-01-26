@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Насос c электроприводом в сборе</title>
+  <body>
+    <p><b>Насос с электроприводом в сборе </b>представляет собой субмодель, включающую в себя
+          <i>Канал общего вида, Насос с приводом
+          TPP</i><i>, Ротор TPP и Электродвигатель TPP</i>. Элемент предназначен для моделирования (см. Рисунок
+      4.23.64).</p>
+    <p><image href="tpp_images/tpp_html_m12558f5a.png" id="image_kcd_bdr_sy"/></p>
+    <p><b>Рисунок 4.23.64</b> Состав насоса с электроприводом в сборе </p>
+    <p><b>Насос с электроприводом в сборе</b> – <i>ориентированный</i> элемент. Направление
+      протекающих через насос фаз теплоносителя определяется направлением потока в связанном канале. </p>
+    <p><b>Насос с электроприводом в сборе</b> – <i>распределенный</i> элемент. Входящий в состав
+      субмодели <i>Канал общего вида</i> в общем случае может быть
+      разбит на расчетные ячейки. Их количество и размеры определяются в соответствующем разделе
+      редактора свойств объекта. Подробное описание особенностей формирования проточной части канала
+      смотри в соответствующем разделе Руководства пользователя (см. п. 3.6.2.1). </p>
+    <p><b>3.23.1Разрешенные связи элемента</b></p>
+    <p><b>Насос с электроприводом в сборе </b>при помощи соединительных линий (гидравлических
+      связей) связывается с элементами группы <i>Каналы</i>. </p>
+    <p><b>3.23.2Свойства элемента</b></p>
+    <p>Характеристики <b>Насос с электроприводом в сборе </b>и начальные условия для расчета
+      задаются в закладке <i>Свойства</i><i>объекта</i> (см. Таблица 4.23.2.32). </p>
+    <p><b>Таблица 4.23.2.32 </b>Параметры насоса с электроприводом в сборе <table id="table2">
+        <tgroup cols="4">
+          <colspec colnum="1" colname="col1"/>
+          <colspec colnum="2" colname="col2"/>
+          <colspec colnum="3" colname="col3"/>
+          <colspec colnum="4" colname="col4"/>
+          <thead>
+            <row>
+              <entry><b>Параметр</b></entry>
+              <entry><b>Имя </b><b>(идентификатор)</b></entry>
+              <entry><b>Тип переменной</b></entry>
+              <entry><b>Интервал возможных значений</b></entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>Имя таблицы БД</entry>
+              <entry>catname</entry>
+              <entry>T</entry>
+              <entry>БУД</entry>
+            </row>
+            <row>
+              <entry>Имя в БД</entry>
+              <entry>_Name</entry>
+              <entry>T</entry>
+              <entry>любое</entry>
+            </row>
+            <row>
+              <entry>Название на схеме</entry>
+              <entry>_Capt</entry>
+              <entry>T</entry>
+              <entry>любое</entry>
+            </row>
+            <row>
+              <entry>Редакция названия на схеме</entry>
+              <entry>_Capt_Edit</entry>
+              <entry>T</entry>
+              <entry>[Нет, Да]</entry>
+            </row>
+            <row>
+              <entry>Название в две строки</entry>
+              <entry>_NumRows</entry>
+              <entry>P</entry>
+              <entry>[Нет, Да]</entry>
+            </row>
+            <row>
+              <entry>Имя файла с характеристикой насоса</entry>
+              <entry>PmpFileName</entry>
+              <entry>P</entry>
+              <entry>
+                [TF10D001, ГЦНА-1667 (ВВЭР-1500), К-1, К-2. К-3, Компрессор, По умолчанию,ПЭ-580
+                  (1-3 ступени), ПЭ-580 (4-8 ступени), ПЭ-580-185 
+                  (1-3 ступени),
+                <p>ПЭА 1650-80-1, ЦНА60-185, ЭКН_125-140]</p>
+              </entry>
+            </row>
+            <row>
+              <entry>Имя файла с характеристикой двигателя</entry>
+              <entry>EngineFileName</entry>
+              <entry>P</entry>
+              <entry>
+                [По умолчанию, ПЭ-580-150-1, ПЭ-580-150-2, ПЭ-580-150-3, ПЭ-580-2, ПЭ-580-3, ПЭ-580,
+                
+                <p>ПЭА 1650-80-1, ЦНА60-185-1]</p>
+              </entry>
+            </row>
+            <row>
+              <entry>Гидравлический диаметр</entry>
+              <entry>Dg</entry>
+              <entry>R</entry>
+              <entry>>0</entry>
+            </row>
+            <row>
+              <entry>Проходное сечение</entry>
+              <entry>S</entry>
+              <entry>R</entry>
+              <entry>>0</entry>
+            </row>
+            <row>
+              <entry>Номинальная частота вращения, Гц</entry>
+              <entry>nnom</entry>
+              <entry>R</entry>
+              <entry>> 0</entry>
+            </row>
+            <row>
+              <entry>Начальная частота вращения, Гц</entry>
+              <entry>n0</entry>
+              <entry>R</entry>
+              <entry>? 0</entry>
+            </row>
+            <row>
+              <entry>В характеристике используется расход</entry>
+              <entry>FlowType</entry>
+              <entry>P</entry>
+              <entry>[объемный, массовый]</entry>
+            </row>
+            <row>
+              <entry>Момент инерции ротора, н*м</entry>
+              <entry>Jr</entry>
+              <entry>R</entry>
+              <entry>> 0</entry>
+            </row>
+            <row>
+              <entry>Минимальная частота вращения, Гц</entry>
+              <entry>nmin</entry>
+              <entry>R</entry>
+              <entry>? 0</entry>
+            </row>
+            <row>
+              <entry>Включен</entry>
+              <entry>XB01</entry>
+              <entry>P</entry>
+              <entry>[Да, Нет]</entry>
+            </row>
+            <row>
+              <entry>Относительная частота вращения</entry>
+              <entry>w</entry>
+              <entry>R</entry>
+              <entry>? 0</entry>
+            </row>
+            <row>
+              <entry>Напор насоса</entry>
+              <entry>dP</entry>
+              <entry>R</entry>
+              <entry>> 0</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></p>
+    <p><i>Примечание</i> - Серым цветом помечены строки обязательные для заполнения</p>
+    
+  </body>
+</topic>
