@@ -2661,4 +2661,22 @@
             </topicref>
         </topicref>
     </topicref>
+    <topicref href="topics/elektrocheskie_shemy/elektrocheskie_shemy.dita"
+        navtitle="10 - Электрические схемы" locktitle="yes">
+        <topicref href="topics/elektrocheskie_shemy/SPT/SPT.dita">
+            <topicref href="topics/elektrocheskie_shemy/SPT/struktury/struktury.dita">
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3202.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3201.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3203.dita"/>
+            </topicref>
+            <topicref href="topics/elektrocheskie_shemy/SPT/uzly/uzly.dita">
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3235.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3212.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3210.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3211.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3209.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3213.dita"/>
+            </topicref>
+        </topicref>
+    </topicref>
 </map>
