@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>HS – ТВЭЛ тип 1 </title>
+  <body>
+    <table id="table_wpt_mly_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/2531/image001.png" height="32" width="32"
+                id="image_xpt_mly_sy"/></entry>
+            <entry><b>HS</b><b>– ТВЭЛ тип 1</b></entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/2531/image002.png" height="95" width="89"
+                id="image_ypt_mly_sy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Свойства блока «</b><b>HS</b><b> – ТВЭЛ тип 1»</b></p>
+    <table id="table_zpt_mly_sy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_aqt_mly_sy">
+                <li>· Количество элементов по высоте</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_bqt_mly_sy">
+                <li>Nh</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_cqt_mly_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_dqt_mly_sy">
+                <li>· Количество элементов разбиения топлива (колец) по радиусу</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_eqt_mly_sy">
+                <li>Nx</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_fqt_mly_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_gqt_mly_sy">
+                <li>· Радиус отверстия в топливной таблетке м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_hqt_mly_sy">
+                <li>R0</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_iqt_mly_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_jqt_mly_sy">
+                <li>· Радиус топливной таблетки, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_kqt_mly_sy">
+                <li>R_fuel</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_lqt_mly_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_mqt_mly_sy">
+                <li>· Наружный радиус оболочки, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_nqt_mly_sy">
+                <li>R_shell</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_oqt_mly_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_pqt_mly_sy">
+                <li>· Толщина оболочки, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_qqt_mly_sy">
+                <li>delta_shell</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_rqt_mly_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_sqt_mly_sy">
+                <li>· Материал топлива</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_tqt_mly_sy">
+                <li>Material_fuel</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_uqt_mly_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_vqt_mly_sy">
+                <li>· Материал оболочки</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_wqt_mly_sy">
+                <li>Material_shell</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_xqt_mly_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_yqt_mly_sy">
+                <li>· Материал зазора</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_zqt_mly_sy">
+                <li>Material_gap</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_art_mly_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_brt_mly_sy">
+                <li>· Массив длин элементов разбиения, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_crt_mly_sy">
+                <li>deltaH</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_drt_mly_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ert_mly_sy">
+                <li>· Номера элементов</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_frt_mly_sy">
+                <li>link1</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_grt_mly_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_hrt_mly_sy">
+                <li>· Объемное энерговыделение в топливе (по высоте), Вт/м³</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_irt_mly_sy">
+                <li>qv_fuel</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_jrt_mly_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_krt_mly_sy">
+                <li>· Объемное энерговыделение в оболочке (по высоте), Вт/м³</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_lrt_mly_sy">
+                <li>qv_shell</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_mrt_mly_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_nrt_mly_sy">
+                <li>· Термическое сопротивление пленки, м²*К/Вт</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ort_mly_sy">
+                <li>R_film</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_prt_mly_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_qrt_mly_sy">
+                <li>· Количество твэлов в пучке</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_rrt_mly_sy">
+                <li>N_rod</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_srt_mly_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_trt_mly_sy">
+                <li>· Начальная температура топлива, </li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_urt_mly_sy">
+                <li>Tfuel_0</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_vrt_mly_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_wrt_mly_sy">
+                <li>· Начальная температура оболочки, </li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_xrt_mly_sy">
+                <li>Tshell_0</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_yrt_mly_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_zrt_mly_sy">
+                <li>· Задать температуру в начальный момент времени</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ast_mly_sy">
+                <li>SetInitTempFrom</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_bst_mly_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока «</b><b>HS</b><b> – ТВЭЛ тип 1»</b></p>
+    <table id="table_cst_mly_sy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_dst_mly_sy">
+                <li>· Температура топлива в центре, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_est_mly_sy">
+                <li>_Tfuel_center</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_fst_mly_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_gst_mly_sy">
+                <li>· Температура топлива на границе, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_hst_mly_sy">
+                <li>_Tfuel_bound</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ist_mly_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_jst_mly_sy">
+                <li>· Температура оболочки, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_kst_mly_sy">
+                <li>_Tshell</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_lst_mly_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_mst_mly_sy">
+                <li>· Температура в зазоре, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_nst_mly_sy">
+                <li>_Tgap</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ost_mly_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_pst_mly_sy">
+                <li>· Тепловой поток с поверхности твэла, Вт/м²</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_qst_mly_sy">
+                <li>_qf</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_rst_mly_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_sst_mly_sy">
+                <li>· Коэффициент теплопередачи от оболочки к теплоносителю, Вт/(м²*К)</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_tst_mly_sy">
+                <li>_Kcoolant</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ust_mly_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_vst_mly_sy">
+                <li>· Коэффициент теплопередачи от топлива к оболочке, Вт/(м²*К)</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_wst_mly_sy">
+                <li>_Kgap</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_xst_mly_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_yst_mly_sy">
+                <li>· Температура топлива, усредненная по массе, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_zst_mly_sy">
+                <li>_t_fuel_middle_m</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_att_mly_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_btt_mly_sy">
+                <li>· Температура оболочки, усреднённая по массе, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ctt_mly_sy">
+                <li>_t_shell_middle_m</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_dtt_mly_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ett_mly_sy">
+                <li>· Массив температур топлива, °С </li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ftt_mly_sy">
+                <li>_Twall_array</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_gtt_mly_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>
+      <b>Физическая модель, реализованная в блоке «ТВЭЛ тип 1</b></p>
+    <p> </p>
+  </body>
+</topic>

@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>HS – Плоская толстая стенка </title>
+  <body>
+    <table id="table_uxf_wjy_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/2530/image001.png" height="32" width="32"
+                id="image_vxf_wjy_sy"/></entry>
+            <entry><b>HS</b><b>– Плоская толстая стенка</b></entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/2530/image002.png" height="85" width="115"
+                id="image_wxf_wjy_sy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Свойства блока «</b><b>HS</b><b> – Плоская толстая стенка»</b></p>
+    <table id="table_xxf_wjy_sy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_yxf_wjy_sy">
+                <li>· Тепловая связь слева от стенки</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_zxf_wjy_sy">
+                <li>isHeat1</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ayf_wjy_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_byf_wjy_sy">
+                <li>· Тепловая связь справа от стенки</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_cyf_wjy_sy">
+                <li>isHeat2</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_dyf_wjy_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_eyf_wjy_sy">
+                <li>· Количество элементов по высоте</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_fyf_wjy_sy">
+                <li>Nh</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_gyf_wjy_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_hyf_wjy_sy">
+                <li>· Количество элементов по толщине</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_iyf_wjy_sy">
+                <li>Nx</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_jyf_wjy_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_kyf_wjy_sy">
+                <li>· Ширина стенки, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_lyf_wjy_sy">
+                <li>b_wall</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_myf_wjy_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_nyf_wjy_sy">
+                <li>· Толщина стенки, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_oyf_wjy_sy">
+                <li>delta_wall</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_pyf_wjy_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_qyf_wjy_sy">
+                <li>· Материал стенки</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ryf_wjy_sy">
+                <li>Material</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_syf_wjy_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_tyf_wjy_sy">
+                <li>· Длины элементов разбиения, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_uyf_wjy_sy">
+                <li>deltaH</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_vyf_wjy_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_wyf_wjy_sy">
+                <li>· Внутренние связи</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_xyf_wjy_sy">
+                <li>link1</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_yyf_wjy_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_zyf_wjy_sy">
+                <li>· Наружные связи</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_azf_wjy_sy">
+                <li>link2</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_bzf_wjy_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_czf_wjy_sy">
+                <li>· Объемное энерговыделение, Вт/м³</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_dzf_wjy_sy">
+                <li>qv</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ezf_wjy_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_fzf_wjy_sy">
+                <li>· Термическое сопротивление на внутренней поверхности стенки, м²*К/Вт</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_gzf_wjy_sy">
+                <li>R_term1</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_hzf_wjy_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_izf_wjy_sy">
+                <li>· Термическое сопротивление на наружной поверхности стенки, м²*К/Вт</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_jzf_wjy_sy">
+                <li>R_term2</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_kzf_wjy_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_lzf_wjy_sy">
+                <li>· Начальная температура стенки, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_mzf_wjy_sy">
+                <li>Twall_0</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_nzf_wjy_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ozf_wjy_sy">
+                <li>· Задать температуру в начальный момент времени</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_pzf_wjy_sy">
+                <li>SetInitTempFrom</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_qzf_wjy_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока «</b><b>HS</b><b> – Плоская толстая стенка»</b></p>
+    <table id="table_rzf_wjy_sy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_szf_wjy_sy">
+                <li>· Температура на левой границе, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_tzf_wjy_sy">
+                <li>_twall_bound_in</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_uzf_wjy_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_vzf_wjy_sy">
+                <li>· Температура на правой границе, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_wzf_wjy_sy">
+                <li>_twall_bound_out</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_xzf_wjy_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_yzf_wjy_sy">
+                <li>· Массив температур, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_zzf_wjy_sy">
+                <li>_twall_array</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_a1g_wjy_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_b1g_wjy_sy">
+                <li>· Тепловой поток на левой границе, Вт/м²</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_c1g_wjy_sy">
+                <li>_qf_in</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_d1g_wjy_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_e1g_wjy_sy">
+                <li>· Тепловой поток на правой границе, Вт/м²</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_f1g_wjy_sy">
+                <li>_qf_out</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_g1g_wjy_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p><b>Физическая модель, реализованная в блоке «Плоская толстая стенка»</b></p>
+    <p> </p>
+  </body>
+</topic>

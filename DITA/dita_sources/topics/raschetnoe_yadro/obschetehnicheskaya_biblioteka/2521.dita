@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>HS – ТЭН </title>
+  <body>
+    <table id="table_mcm_1jy_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/2521/image001.png" height="32" width="32"
+                id="image_ncm_1jy_sy"/></entry>
+            <entry><b>HS</b><b>– ТЭН</b></entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/2521/image002.png" height="79" width="75"
+                id="image_ocm_1jy_sy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок реализует модель теплообменника. Блок моделирует термоэлектрический нагреватель с
+      заданной мощностью и поверхностью теплообмена, размещённый в сосуде с водой и паром под
+      давлением. </p>
+    <p> </p>
+    <p><b>Свойства блока «HS – ТЭН»</b></p>
+    <table id="table_pcm_1jy_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_qcm_1jy_sy">
+                <li>·Включен</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_rcm_1jy_sy">
+                <li>state</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_scm_1jy_sy">
+                <li>·Мощность ТЭН, Вт</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_tcm_1jy_sy">
+                <li>Q</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ucm_1jy_sy">
+                <li>·Поверхность теплообмена, м²</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_vcm_1jy_sy">
+                <li>F</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_wcm_1jy_sy">
+                <li>·Теплоемкость металла, Дж/(кг*К)</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_xcm_1jy_sy">
+                <li>MCp</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ycm_1jy_sy">
+                <li>·Коэффициент теплоотдачи в жидкости, Вт/(м²*К)</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_zcm_1jy_sy">
+                <li>Alf_f</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_adm_1jy_sy">
+                <li>·Коэффициент теплоотдачи в паре, Вт/(м²*К)</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_bdm_1jy_sy">
+                <li>Alf_v</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_cdm_1jy_sy">
+                <li>·Относительная поверхность как функция уровня в баке F/F0=f(L)</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ddm_1jy_sy">
+                <li>Farr</li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока «HS – ТЭН»</b></p>
+    <table id="table_edm_1jy_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_fdm_1jy_sy">
+                <li>·Усреднённая температура ТЭН, </li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_gdm_1jy_sy">
+                <li>_T</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_hdm_1jy_sy">
+                <li>·Усреднённая температура среды, </li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_idm_1jy_sy">
+                <li>_Tm</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_jdm_1jy_sy">
+                <li>·Усреднённый коэффициент теплопередачи, Вт/(м²*К)</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_kdm_1jy_sy">
+                <li>_Km</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ldm_1jy_sy">
+                <li>·Мощность, отводимая к жидкости, Вт</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_mdm_1jy_sy">
+                <li>_Qf</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ndm_1jy_sy">
+                <li>·Мощность, отводимая к пару, Вт</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_odm_1jy_sy">
+                <li>_Qv</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_pdm_1jy_sy">
+                <li>·Поверхность теплообмена по жидкости, м²</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_qdm_1jy_sy">
+                <li>_Ff</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_rdm_1jy_sy">
+                <li>·Поверхность теплообмена по пару, м²</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_sdm_1jy_sy">
+                <li>_Fv</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_tdm_1jy_sy">
+                <li>·Коэффициент теплопередачи по жидкости, Вт/(м²*К)</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_udm_1jy_sy">
+                <li>_Kf</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_vdm_1jy_sy">
+                <li>·Коэффициент теплопередачи по пару, Вт/(м²*К)</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_wdm_1jy_sy">
+                <li>_Kv</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_xdm_1jy_sy">
+                <li>·Отключить</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ydm_1jy_sy">
+                <li>YB02</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_zdm_1jy_sy">
+                <li>·Включить</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_a2m_1jy_sy">
+                <li>YB01</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_b2m_1jy_sy">
+                <li>·Включен</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_c2m_1jy_sy">
+                <li>XB01</li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок выполняет функцию «дочернего» блока и может быть установлен на следующие «родительские»
+      блоки:</p>
+    <ul id="ul_d2m_1jy_sy">
+      <li>· HS – Канал;</li>
+      <li>· HS – Труба.</li>
+    </ul>
+    <p> </p>
+  </body>
+</topic>

@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>HS – Бак закрытый </title>
+  <body>
+    <table id="table_hgs_j3y_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/2540/image001.png" id="image_ryc_43y_sy"/></entry>
+            <entry><b>HS</b><b>– Бак закрытый</b></entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/2540/image002.png" height="162" width="115"
+                id="image_igs_j3y_sy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок представляет собой модель герметичного (закрытого) бака, заполненного неконденсирующимся
+      и нерастворяющимся в теплоносителе идеальным газом. Газ характеризуется показателем адиабаты
+      (отношение Cp/Cv, примерно равно 1.4 для воздуха) и заполняет весь свободный объём бака над
+      уровнем теплоносителя. Принимается, что температура газа всегда равна температуре
+      теплоносителя.</p>
+    <p>В начальный момент времени задается начальное давление газа и начальный уровень
+      теплоносителя, а в процессе расчета давление газа определяется по уравнению состояния.</p>
+    <p> </p>
+    <p>Математическая модель теплоносителя в баке представляет собой модель типа «камеры смешения»,
+      то есть весь теплоноситель, содержащийся в баке, имеет единые параметры (одно давление и
+      энтальпию, и, следовательно, температуру и плотность). Давление теплоносителя равно
+      расчитываемому давлению газа над уровнем.</p>
+    <p> </p>
+    <p>Подключение закрытого бака к теплогидравлическому контуру происходит аналогично другим бакам,
+      посредством блока «Узел компенсатора» (должен присутствовать хотя бы один), и к которому
+      подключаются блоки-каналы.</p>
+    <p> </p>
+    <p>Закрытый бак может иметь подключение к тепловой структуре (стенке цилиндрической геометрии),
+      для этого необходимо установить свойство isHeatOut в «Да» и на схеме подключить какую-либо из
+      стенок к баку. При этом необходимо соблюдать равенство элементов разбиения стенки и бака по
+      количеству (Nh) и длине (deltaH). Свойства Nh, deltaH, alfa задаются и влияют на расчет только
+      при подключении тепловых структур к баку.</p>
+    <p> </p>
+    <p>Пример подключения закрытого бака к контуру и тепловой структуре:</p>
+    <p> </p>
+    <p><image href="images_old/2540/image003.png" height="197" width="341" id="image_jgs_j3y_sy"/></p>
+    <p> </p>
+    <p>Физический объект, соответствующий блоку: герметичный бак (с закрытой крышкой), со свободным
+      уровнем теплоносителя и заполненный каким-либо инертным газом над уровнем теплоносителя.</p>
+    <p> </p>
+    <p>Свойство «Тип геометрии» задаёт способ вычисления текущего уровня теплоносителя в баке в
+      зависимости от объема теплоносителя и объема бака. Свойство L=f(V) характеризует профиль бака
+      по высоте, для произвольной геометрии. В этом случае свойство «Внутренний диаметр» не
+      используется.</p>
+    <p> </p>
+    <p><b>Свойства блока «HS – Бак со свободным уровнем»</b></p>
+    <table id="table_kgs_j3y_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_lgs_j3y_sy">
+                <li>·Тепловая связь со стенкой снаружи</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_mgs_j3y_sy">
+                <li>isHeatOut</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ngs_j3y_sy">
+                <li>·Давление над поверхностью, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ogs_j3y_sy">
+                <li>P</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_pgs_j3y_sy">
+                <li>·Объем бака, м³</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_qgs_j3y_sy">
+                <li>V</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_rgs_j3y_sy">
+                <li>·Высотная отметка днища, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_sgs_j3y_sy">
+                <li>Z</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_tgs_j3y_sy">
+                <li>·Начальная энтальпия жидкости, Дж/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ugs_j3y_sy">
+                <li>H0</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_vgs_j3y_sy">
+                <li>·Начальный объём жидкости, м³</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_wgs_j3y_sy">
+                <li>V0</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_xgs_j3y_sy">
+                <li>·Тип геометрии бака</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ygs_j3y_sy">
+                <li>Geom</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_zgs_j3y_sy">
+                <li>·Внутренний диаметр, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ahs_j3y_sy">
+                <li>D</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_bhs_j3y_sy">
+                <li>·L=f(V)</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_chs_j3y_sy">
+                <li>Larr</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_dhs_j3y_sy">
+                <li>·Учёт изменения объёма жидкости при разогреве/охлаждении?</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ehs_j3y_sy">
+                <li>is_dV_from_heat</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_fhs_j3y_sy">
+                <li>·Кол-во элементов разбиения бака по высоте</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ghs_j3y_sy">
+                <li>Nh</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_hhs_j3y_sy">
+                <li>·Длины элементов разбиения бака по высоте</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ihs_j3y_sy">
+                <li>deltaH</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_jhs_j3y_sy">
+                <li>·Коэффициент теплоотдачи, Вт/(м²*К)</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_khs_j3y_sy">
+                <li>alfa</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_lhs_j3y_sy">
+                <li>·Показатель адиабаты для газа</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_mhs_j3y_sy">
+                <li>kappa</li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока «HS – Бак со свободным уровнем»</b></p>
+    <table id="table_nhs_j3y_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_ohs_j3y_sy">
+                <li>·Давление, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_phs_j3y_sy">
+                <li>_P</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_qhs_j3y_sy">
+                <li>·Энтальпия, Дж/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_rhs_j3y_sy">
+                <li>_H</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_shs_j3y_sy">
+                <li>·Температура, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ths_j3y_sy">
+                <li>_T</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_uhs_j3y_sy">
+                <li>·Плотность, кг/м³</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_vhs_j3y_sy">
+                <li>_Rho</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_whs_j3y_sy">
+                <li>·Масса жидкости, кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_xhs_j3y_sy">
+                <li>_M</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_yhs_j3y_sy">
+                <li>·Объём жидкости, м³</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_zhs_j3y_sy">
+                <li>_Volume</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_a3s_j3y_sy">
+                <li>·Уровень, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_b3s_j3y_sy">
+                <li>_Level</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_c3s_j3y_sy">
+                <li>·Произв. плотности от времени, кг/(м³*с)</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_d3s_j3y_sy">
+                <li>_dro_dt</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_e3s_j3y_sy">
+                <li>·Коэффициент теплоотдачи, Вт/(м²*К)</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_f3s_j3y_sy">
+                <li>_alfa</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_g3s_j3y_sy">
+                <li>·Сумма входящих расходов, кг/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_h3s_j3y_sy">
+                <li>_sum_g_in</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_i3s_j3y_sy">
+                <li>·Сумма выходящих расходов, кг/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_j3s_j3y_sy">
+                <li>_sum_g_out</li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Соединение блока «HS – Бак со свободным уровнем» с другими блоками библиотеки происходит с
+      помощью блока «HS – Узел компенсатора».</p>
+    <p> </p>
+  </body>
+</topic>

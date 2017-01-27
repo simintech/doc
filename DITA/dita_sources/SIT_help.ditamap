@@ -2590,7 +2590,7 @@
         </topicref>
     </topicref>
     <topicref href="topics/teplogidravlicheskiy_kod_HS/teplogidravlicheskiy_kod_HS.dita"
-        navtitle="9 Теплогидравлический код HS" locktitle="yes">
+        navtitle="9 - Теплогидравлический код HS" locktitle="yes">
         <topicref href="topics/teplogidravlicheskiy_kod_HS/elementy_koda/elementy_koda.dita">
             <topicref href="topics/teplogidravlicheskiy_kod_HS/elementy_koda/uzly/uzly.dita">
                 <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2510.dita"/>
@@ -2625,6 +2625,39 @@
                 <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2522.dita"/>
                 <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2543.dita"/>
                 <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2520.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2544.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2545.dita"/>
+            </topicref>
+            <topicref href="topics/teplogidravlicheskiy_kod_HS/elementy_koda/baki/baki.dita">
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2512.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2540.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2513.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2511.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2521.dita"/>
+            </topicref>
+            <topicref
+                href="topics/teplogidravlicheskiy_kod_HS/elementy_koda/teploobmen/teploobmen.dita">
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2525.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2530.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2527.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2528.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2529.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2533.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2538.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2539.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2523.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2531.dita"/>
+            </topicref>
+            <topicref href="topics/teplogidravlicheskiy_kod_HS/elementy_koda/prochee/prochee.dita">
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2536.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2505.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2506.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2507.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2514.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2515.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2517.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2532.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/2535.dita"/>
             </topicref>
         </topicref>
     </topicref>

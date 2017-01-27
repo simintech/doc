@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>HS – Стенка с заданной температурой </title>
+  <body>
+    <table id="table_nzn_zky_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/2539/image001.png" height="32" width="32"
+                id="image_ozn_zky_sy"/></entry>
+            <entry><b>HS</b><b>– Стенка с заданной температурой</b></entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/2539/image002.png" height="88" width="90"
+                id="image_pzn_zky_sy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок моделирует стенку с заданной (постоянной) температурой.</p>
+    <p>Страница справки в разработке…</p>
+  </body>
+</topic>
