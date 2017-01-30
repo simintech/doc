@@ -2677,6 +2677,72 @@
                 <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3209.dita"/>
                 <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3213.dita"/>
             </topicref>
+            <topicref href="topics/elektrocheskie_shemy/SPT/bazovie_elementy/bazovie_elementy.dita">
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3267.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3266.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3220.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3216.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3217.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3215.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3214.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3222.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3223.dita"/>
+            </topicref>
+            <topicref href="topics/elektrocheskie_shemy/SPT/istochniki/istochniki.dita">
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3231.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3205.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3204.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3206.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3207.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3253.dita"/>
+            </topicref>
+            <topicref href="topics/elektrocheskie_shemy/SPT/transformatory/transformatory.dita">
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3228.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3226.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3227.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3247.dita"/>
+            </topicref>
+            <topicref
+                href="topics/elektrocheskie_shemy/SPT/vraschauschiesia_mashiny/vraschauschiesia_mashiny.dita">
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3232.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3240.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3246.dita"/>
+            </topicref>
+            <topicref
+                href="topics/elektrocheskie_shemy/SPT/izmeritali_i_datchiki/izmeritali_i_datchiki.dita">
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3239.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3237.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3268.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3236.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3261.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3263.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3238.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3233.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3234.dita"/>
+            </topicref>
+            <topicref
+                href="topics/elektrocheskie_shemy/SPT/kommutacionnoe_EO/kommutacionnoe_EO.dita">
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3221.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3269.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3256.dita"/>
+            </topicref>
+            <topicref href="topics/elektrocheskie_shemy/SPT/preobrazovateli/preobrazovateli.dita">
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3229.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3230.dita"/>
+            </topicref>
+            <topicref href="topics/elektrocheskie_shemy/SPT/linii_i_nagruzka/linii_i_nagruzka.dita">
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3252.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3254.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3255.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3278.dita"/>
+            </topicref>
+            <topicref
+                href="topics/elektrocheskie_shemy/SPT/releynye_zaschita_i_avtomatika/releynye_zaschita_i_avtomatika.dita">
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3251.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3250.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3249.dita"/>
+                <topicref href="topics/raschetnoe_yadro/obschetehnicheskaya_biblioteka/3248.dita"/>
+            </topicref>
         </topicref>
     </topicref>
 </map>

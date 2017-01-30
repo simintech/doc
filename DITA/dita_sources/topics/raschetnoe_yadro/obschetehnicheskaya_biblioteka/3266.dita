@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>СПТ – RLC-цепь последовательное соединение </title>
+  <body>
+    <table id="table_ndn_xhv_ty">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/3266/image001.png" height="20" width="34"
+                id="image_odn_xhv_ty"/></entry>
+            <entry>СПТ – RLC-цепь последовательное соединение</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/3266/image002.png" height="31" width="68"
+                id="image_pdn_xhv_ty"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок реализует модель последовательно соединенных активного сопротивления, идеальной
+      индуктивности и ёмкости. Предназначен для использования в «контуре переменного тока».</p>
+    <p> </p>
+    <p>Комплексное сопротивление бока определяется выражением:</p>
+    <p> </p>
+    <p><image href="images_old/3266/image003.png" height="23" width="578" id="image_qdn_xhv_ty"/></p>
+    <p> </p>
+    <p>где <image href="images_old/3266/image004.png" height="22" width="7" id="image_rdn_xhv_ty"/> –
+      мнимая единица; <image href="images_old/3266/image005.png" height="22" width="14"
+        id="image_sdn_xhv_ty"/> – угловая частота, рад; <image href="images_old/3266/image006.png"
+        height="22" width="11" id="image_tdn_xhv_ty"/> – частота цепи переменного тока, Гц; <image
+        href="images_old/3266/image007.png" height="22" width="49" id="image_udn_xhv_ty"/> – заданное в
+      свойствах блока значение активного сопротивления, индуктивности и ёмкости.</p>
+    <p>Блок аналогичен последовательному RLC соединению отдельных элементов, но не имеет
+      промежуточных узлов, что повышает скорость вычислений.</p>
+    <p>Кроме того, не меняя топологию внешней сети можно выбрать следующие варианты внутренней цепи
+      в зависимости от свойства «Вид цепи»: R, L, C, RL, RC, LC, RLC.</p>
+    <p>За положительное направление токов и мощностей принято направление от «Вход цепь +» к «Вход
+      цепь -».</p>
+    <p> </p>
+    <p><b>Блок имеет 2 входных порта:</b></p>
+    <p>1) Вход цепь +;</p>
+    <p>2) Вход цепь –.</p>
+    <p> </p>
+    <p><b>Свойства блока:</b></p>
+    <p>· Вид цепи (R, L, C, RL, RC, LC, RLC);</p>
+    <p>· Сопротивление, Ом;</p>
+    <p>· Индуктивность, Гн;</p>
+    <p>· Ёмкость, Ф.</p>
+    <p> </p>
+    <p><b>Параметры блока:</b></p>
+    <p>· Ток активный, А;</p>
+    <p>· Ток реактивный, А;</p>
+    <p>· Ток полный, А;</p>
+    <p>· Напряжение активное, В;</p>
+    <p>· Напряжение реактивное, В;</p>
+    <p>· Напряжение полное, В;</p>
+    <p>· Мощность активная, Вт;</p>
+    <p>· Мощность реактивная; вар;</p>
+    <p>· Мощность полная, ВА.</p>
+    <p> </p>
+    <p> </p>
+  </body>
+</topic>

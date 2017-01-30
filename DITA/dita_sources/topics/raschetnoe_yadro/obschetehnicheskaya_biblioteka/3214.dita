@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>СПТ – Сопротивление активное </title>
+  <body>
+    <table id="table_lfy_z3v_ty">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/3214/image001.png" height="19" width="36"
+                id="image_mfy_z3v_ty"/></entry>
+            <entry>СПТ – Сопротивление активное</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/3214/image002.png" height="75" width="78"
+                id="image_nfy_z3v_ty"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок реализует модель активного идеального линейного сопротивления. Предназначен для
+      использования в «контуре переменного тока».</p>
+    <p> </p>
+    <p>Комплексное сопротивление активного линейного сопротивления определяется выражением:</p>
+    <p> </p>
+    <p><image href="images_old/3214/image003.png" height="22" width="61" id="image_ofy_z3v_ty"/></p>
+    <p> </p>
+    <p>где <image href="images_old/3214/image004.png" height="22" width="12" id="image_pfy_z3v_ty"/> -
+      заданное в свойствах блока значение сопротивления, Ом.</p>
+    <p> </p>
+    <p>За положительное направление токов и мощностей принято направление от «Вход цепь +» к «Вход
+      цепь -».</p>
+    <p> </p>
+    <p><b>Блок имеет 2 входных порта:</b></p>
+    <p>1) Вход цепь +;</p>
+    <p>2) Вход цепь –.</p>
+    <p> </p>
+    <p><b>Свойства блока</b></p>
+    <p>· Сопротивление, Ом.</p>
+    <p> </p>
+    <p><b>Параметры блока</b></p>
+    <p>· Ток активный, А;</p>
+    <p>· Ток реактивный, А;</p>
+    <p>· Ток полный, А;</p>
+    <p>· Напряжение активное, В;</p>
+    <p>· Напряжение реактивное, В;</p>
+    <p>· Напряжение полное, В;</p>
+    <p>· Мощность активная, Вт.</p>
+    <p> </p>
+  </body>
+</topic>
