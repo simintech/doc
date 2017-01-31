@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>HS – Местное сопротивление по Идельчику </title>
+  <body>
+    <table id="table_jxn_zhs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/2537/image001.png" height="32" width="32"
+                id="image_kxn_zhs_sy"/></entry>
+            <entry><b>HS</b><b>– Местное сопротивление по Идельчику</b></entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/2537/image002.png" height="124" width="126"
+                id="image_lxn_zhs_sy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок реализует автоматизированное вычисление местного гидравлического сопротивления в
+      зависимости от задаваемой геометрии участка (элемента) канала.</p>
+    <p>Реализуется автоматический расчет прямого и обратного местного гидравлического сопротивлений
+      для следующих участков:</p>
+    <ul id="ul_mxn_zhs_sy">
+      <li>· внезапное увеличение проходного сечения канала, в зависимости от отношения сечений и
+        закона распределения скорости потока по сечению.</li>
+      <li>· внезапное уменьшение проходного сечения канала, в зависимости от отношения сечений, типа
+        и параметров входной кромки.</li>
+      <li>· отвод (колено), в зависимости от угла поворота, относительного радиуса закругления и
+        коэффициента относительной шероховатости стенки.</li>
+    </ul>
+    <p>Если моделируемый трубопровод имеет какие-либо из описанных изменений геометрии, то
+      использование данного блока позволит повысить точность задания общего гидравлического
+      сопротивления канала.</p>
+    <ul id="ul_nxn_zhs_sy">
+      <li> </li>
+    </ul>
+    <p><b>Свойства блока:</b></p>
+    <p><i>Номер гидравлической связи – </i>номер расчетного элемента канала, на границе которого
+      устанавливается гидравлическое сопротивление.</p>
+    <p><i>Тип задания сопротивления (в прямом направлении)</i> – выбор способа, которым задается
+      прямое гидравлическое сопротивление. Фактически опция устанавливает также способ задания и
+      обратного сопротивления. <i>Ручной</i> –коэффициент гидравлического сопротивления в прямом и
+      обратном направлении устанавливается вручную. <i>Внезапное увеличение сечения</i> –расчет
+      коэффициентов гидравлического сопротивления происходит автоматически. Причем сопротивление в
+      прямом направлении определяется как сопротивления внезапного расширения, а в обратном – как
+      сопротивление внезапного сужения канала. <i>Внезапное уменьшение сечения </i>– автоматический
+      расчет прямого сопротивления - как при сужении канала, а обратного – как при расширении.
+        <i>Отвод</i> – автоматический расчет коэффициентов прямого и обратного сопротивления
+      трубного отвода.</p>
+    <p><i>Прямое сопротивление</i> – величина заданного либо автоматически-рассчитанного значения
+      гидравлического сопротивления для прямого направления течения теплоносителя.</p>
+    <p><i>Обратное сопротивление</i> – величина заданного либо автоматически-рассчитанного значения
+      гидравлического сопротивления для обратного направления течения теплоносителя.</p>
+    <p><i>Показывать рассчитанные сопротивления – </i>включение и выключение подписи со значениями
+      сопротивлений.</p>
+    <p><i>Распределение скорости по сечению при внезапном его увеличении</i> – выбор закона
+      распределения скоростей по сечению канала, который имеет место в моделируемой системе.
+      Свойство применимо только для режима задания сопротивления «Внезапное увеличение сечения».
+        <i>Равномерное</i> - скорость потока по сечению канала распределена равномерно. <i>По
+        степенному закону</i> – распределение скорости потока по сечению близко к закону степенной
+      функции. <i>Параболическое</i> – распределение скоростей по сечению канала имеет
+      параболическую форму.</p>
+    <p><i>Отношение площадей широкого и узкого сечения</i> – задается число, соответствующее
+      отношению сечений широкой и узкой части, на границе которых считается сопротивление. Свойство
+      применимо только для режима задания сопротивления «Внезапное увеличение сечения».</p>
+    <p><i>Показатель степенного закона – </i>число m, характеризующее степенной закон распределения
+      скоростей по сечению канала. Свойство применимо только для режима задания сопротивления –
+      «Внезапное увеличение сечения» и распределения скорости «По степенному закону».</p>
+    <p><i>Тип кромки на входе</i> – выбор типа входной кромки при внезапном уменьшении сечения
+      канала. <i>Острая – </i>острая кромка (под углом 90°). <i>Закругленная</i> – сглаженная
+      кромка, с радиусом закругления <i>r</i><i>. Срезанная под углом – </i>фаска на кромке срезана
+      под углом <i>alfa</i>. Свойство применимо только для режима, в котором присутствует сужение
+      одного из каналов.</p>
+    <p><i>Отношение площадей узкого и широкого сечения</i> – число, равное отношению площадей
+      поперечного сечения предыдущего участка (широкого) к последующему (узкому). Свойство применимо
+      только для режима, в котором присутствует сужение одного из каналов.</p>
+    <p><i>Отношение радиуса закругления кромки к гидр. диаметру</i> – число, равное отношению
+      радиуса скругления кромки перехода от широкого канала к узкому, к гидравлическому диаметру
+      более узкого канала. Свойство применимо только для типа кромки на входе – «Закругленная».</p>
+    <p><i>Угол среза кромки (0..180)</i> – угол снятия фаски с кромки перехода с большего сечения на
+      меньшее. Может принимать значения от 0 до 180 градусов. Свойство применимо только для типа
+      кромки на входе – «Срезанная под углом».</p>
+    <p><i>Отношение толщины срезанной кромки к гидр. диаметру (0,025..06)</i> – число, равное
+      отношению толщины срезанной кромки к гидравлическому диаметру более узкого канала. Свойство
+      применимо только для типа кромки на входе – «Срезанная под углом».</p>
+    <p><i>Поворот отвода, (0-180) град.</i> – угол поворота участка канала, для которого
+      рассчитывается сопротивление. Свойство применимо только для режима задания сопротивления типа
+      «Отвод».</p>
+    <p><i>Относительный радиус закругления отвода, (≥0.5) – </i>число, равное отношению радиуса
+      закругления осевой линии канала к гидравлическому диаметру канала. Свойство применимо только
+      для режима задания сопротивления типа «Отвод».</p>
+    <p><i>Относительная шероховатость стенок</i> – число, равное отношению эквивалентной
+      равномерно-зернистой шероховатости стенки к гидравлическому диаметру канала. 0 – означает, что
+      стенка гладкая. Свойство применимо только для режима задания сопротивления типа «Отвод».</p>
+    <p>Блок выполняет функцию «дочернего» блока и может быть установлен на следующие «родительские»
+      блоки:</p>
+    <ul id="ul_oxn_zhs_sy">
+      <li>· HS – Канал;</li>
+      <li>· HS – Труба;</li>
+      <li>· HS – Кольцевой зазор.</li>
+    </ul>
+    <p>Порядок использования блока: ключевое свойство – «Тип задания сопротивления (прямого)». В
+      случае если выбрана опция «Ручное», то сопротивления вводятся вручную, как значения свойств
+      «Прямое сопротивление» и «Обратное сопротивление». В случае выбора другого типа задания
+      сопротивления, его значения рассчитываются автоматически, в соответствие со значениями
+      соответствующих свойств, и подставляются в свойства «Прямое сопротивление» и «Обратное
+      сопротивление». Рекомендуется каждый раз после изменения какого-либо свойства, нажимать кнопку
+      «Применить» либо «Ок». Также нужно иметь в виду, что в случае переключения задания
+      сопротивления из автоматического в ручной режим, в качестве значений останутся последние,
+      рассчитанные автоматически.</p>
+    <p> </p>
+    <p><b>Методика автоматического расчета гидравлического сопротивления:</b></p>
+    <ul id="ul_pxn_zhs_sy">
+      <li>1. При внезапном расширении с равномерным распределением скорости по сечению[1]:</li>
+      <li><image href="images_old/2537/image003.png" height="18" width="95" id="image_qxn_zhs_sy"/></li>
+    </ul>
+    <p>n – отношение большего сечения канала к меньшему.</p>
+    <p> </p>
+    <ul id="ul_rxn_zhs_sy">
+      <li>2. При внезапном расширении с распределением скоростей по сечению, близком к закону
+        степенной функции <image href="images_old/2537/image004.png" height="41" width="154"
+          id="image_sxn_zhs_sy"/>[2]:</li>
+      <li><image href="images_old/2537/image005.png" height="42" width="139" id="image_txn_zhs_sy"/></li>
+    </ul>
+    <p><image href="images_old/2537/image006.png" height="37" width="138" id="image_uxn_zhs_sy"/><i>
+        -</i> коэффициент количества движения потока (коэффициент Буссинеска) на выходе из узкого
+      канала в широкий;</p>
+    <p><image href="images_old/2537/image007.png" height="37" width="156" id="image_vxn_zhs_sy"/> -
+      коэффициент кинетической энергии потока (коэффициент Кориолиса) в том же сечении, n –
+      отношение бОльшего сечения канала к меньшему; <i>m</i> – показатель степени в полиноме
+      вида</p>
+    <p><image href="images_old/2537/image004.png" height="41" width="154" id="image_wxn_zhs_sy"/>, где w,
+      wmax – соответственно скорость в данной точке и максимальная скорость по сечению, м/с; R0 –
+      радиус сечения, м; y – расстояние от оси трубы до данной точки, м;</p>
+    <p> </p>
+    <ul id="ul_xxn_zhs_sy">
+      <li>3. При внезапном расширении с параболическим профилем распределения скоростей [3]:</li>
+      <li><image href="images_old/2537/image005.png" height="42" width="139" id="image_yxn_zhs_sy"/></li>
+      <li>M=1.33; N=2; n – отношение бОльшего сечения канала к меньшему</li>
+      <li>4. При внезапном сужении канала с острой кромкой на входе [6]:</li>
+      <li><image href="images_old/2537/image008.png" height="23" width="174" id="image_zxn_zhs_sy"/></li>
+      <li>5. При внезапном сужении канала с закругленной кромкой на входе [6]:</li>
+      <li><image href="images_old/2537/image009.png" height="23" width="165" id="image_ayn_zhs_sy"/></li>
+      <li><image href="images_old/2537/image010.png" height="22" width="307" id="image_byn_zhs_sy"/></li>
+      <li>где <image href="images_old/2537/image011.png" height="22" width="9" id="image_cyn_zhs_sy"/>/Dг
+        - отношение радиуса скругления кромки к гидравлическому диаметру узкой части</li>
+      <li>6. При внезапном сужении канала со срезанной под углом кромкой на входе [6]:</li>
+      <li><image href="images_old/2537/image012.png" height="23" width="168" id="image_dyn_zhs_sy"/></li>
+      <li> Значение <image href="images_old/2537/image013.png" height="22" width="19"
+          id="image_eyn_zhs_sy"/>:</li>
+    </ul>
+    <table id="table_fyn_zhs_sy">
+      <tgroup cols="10">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <colspec colnum="4" colname="col4"/>
+        <colspec colnum="5" colname="col5"/>
+        <colspec colnum="6" colname="col6"/>
+        <colspec colnum="7" colname="col7"/>
+        <colspec colnum="8" colname="col8"/>
+        <colspec colnum="9" colname="col9"/>
+        <colspec colnum="10" colname="col10"/>
+        <tbody>
+          <row>
+            <entry morerows="1">
+              <ul id="ul_gyn_zhs_sy">
+                <li><i>l/D</i>г</li>
+              </ul>
+            </entry>
+            <entry namest="col2" nameend="col10">
+              <ul id="ul_hyn_zhs_sy">
+                <li>α°</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_iyn_zhs_sy">
+                <li>0</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_jyn_zhs_sy">
+                <li>10</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_kyn_zhs_sy">
+                <li>20</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_lyn_zhs_sy">
+                <li>30</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_myn_zhs_sy">
+                <li>40</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_nyn_zhs_sy">
+                <li>60</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_oyn_zhs_sy">
+                <li>100</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_pyn_zhs_sy">
+                <li>140</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_qyn_zhs_sy">
+                <li>180</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ryn_zhs_sy">
+                <li>0,025</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_syn_zhs_sy">
+                <li>0,50</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_tyn_zhs_sy">
+                <li>0,47</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_uyn_zhs_sy">
+                <li>0,45</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_vyn_zhs_sy">
+                <li>0,43</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_wyn_zhs_sy">
+                <li>0,41</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_xyn_zhs_sy">
+                <li>0,40</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_yyn_zhs_sy">
+                <li>0,42</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_zyn_zhs_sy">
+                <li>0,45</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_azn_zhs_sy">
+                <li>0,50</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_bzn_zhs_sy">
+                <li>0,050</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_czn_zhs_sy">
+                <li>0,50</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_dzn_zhs_sy">
+                <li>0,45</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ezn_zhs_sy">
+                <li>0,41</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_fzn_zhs_sy">
+                <li>0,36</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_gzn_zhs_sy">
+                <li>0,33</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_hzn_zhs_sy">
+                <li>0,30</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_izn_zhs_sy">
+                <li>0,35</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_jzn_zhs_sy">
+                <li>0,42</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_kzn_zhs_sy">
+                <li>0,50</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_lzn_zhs_sy">
+                <li>0,075</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_mzn_zhs_sy">
+                <li>0,50</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_nzn_zhs_sy">
+                <li>0,42</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ozn_zhs_sy">
+                <li>0,35</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_pzn_zhs_sy">
+                <li>0,30</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_qzn_zhs_sy">
+                <li>0,26</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_rzn_zhs_sy">
+                <li>0,23</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_szn_zhs_sy">
+                <li>0,30</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_tzn_zhs_sy">
+                <li>0,40</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_uzn_zhs_sy">
+                <li>0,50</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_vzn_zhs_sy">
+                <li>0,10</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_wzn_zhs_sy">
+                <li>0,50</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_xzn_zhs_sy">
+                <li>0,39</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_yzn_zhs_sy">
+                <li>0,32</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_zzn_zhs_sy">
+                <li>0,25</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_a14_zhs_sy">
+                <li>0,22</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_b14_zhs_sy">
+                <li>0,18</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_c14_zhs_sy">
+                <li>0,27</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_d14_zhs_sy">
+                <li>0,38</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_e14_zhs_sy">
+                <li>0,50</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_f14_zhs_sy">
+                <li>0,15</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_g14_zhs_sy">
+                <li>0,50</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_h14_zhs_sy">
+                <li>0,37</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_i14_zhs_sy">
+                <li>0,27</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_j14_zhs_sy">
+                <li>0,20</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_k14_zhs_sy">
+                <li>0,16</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_l14_zhs_sy">
+                <li>0,15</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_m14_zhs_sy">
+                <li>0,25</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_n14_zhs_sy">
+                <li>0,37</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_o14_zhs_sy">
+                <li>0,50</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_p14_zhs_sy">
+                <li>0,60</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_q14_zhs_sy">
+                <li>0,50</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_r14_zhs_sy">
+                <li>0,27</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_s14_zhs_sy">
+                <li>0,18</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_t14_zhs_sy">
+                <li>0,13</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_u14_zhs_sy">
+                <li>0,11</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_v14_zhs_sy">
+                <li>0,12</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_w14_zhs_sy">
+                <li>0,23</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_x14_zhs_sy">
+                <li>0,36</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_y14_zhs_sy">
+                <li>0,50</li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <ul id="ul_z14_zhs_sy">
+      <li> </li>
+      <li> </li>
+      <li> </li>
+      <li>7. В отводе с гладкой стенкой (<image href="images_old/2537/image014.png" height="22"
+          width="46" id="image_ab4_zhs_sy"/>) [4]:</li>
+      <li><image href="images_old/2537/image015.png" height="22" width="80" id="image_bb4_zhs_sy"/></li>
+      <li><image href="images_old/2537/image016.png" height="22" width="564" id="image_cb4_zhs_sy"/><i> -
+        </i>коэффициент, учитывающий влияние угла <image href="images_old/2537/image017.png" height="19"
+          width="15" id="image_db4_zhs_sy"/> изогнутости отвода</li>
+      <li>Если <image href="images_old/2537/image018.png" height="34" width="50" id="image_eb4_zhs_sy"/>,
+        то <image href="images_old/2537/image019.png" height="34" width="101" id="image_fb4_zhs_sy"
+        /></li>
+    </ul>
+    <p>Если <image href="images_old/2537/image020.png" height="34" width="50" id="image_gb4_zhs_sy"/>, то
+        <image href="images_old/2537/image021.png" height="36" width="85" id="image_hb4_zhs_sy"/>
+    </p>
+    <p>– коэффициент, учитывающий влияние относительного радиуса закругления отвода, где</p>
+    <ul id="ul_ib4_zhs_sy">
+      <li><image href="images_old/2537/image022.png" height="22" width="11" id="image_jb4_zhs_sy"/> –
+        угол изогнутости отвода (<image href="images_old/2537/image023.png" height="22" width="101"
+          id="image_kb4_zhs_sy"/>).</li>
+      <li><image href="images_old/2537/image024.png" height="22" width="50" id="image_lb4_zhs_sy"/> –
+        относительное закругление отвода</li>
+      <li>
+        <ul id="ul_mb4_zhs_sy">
+          <li>8. В отводе с шероховатой стенкой (<image href="images_old/2537/image025.png" height="22"
+              width="46" id="image_nb4_zhs_sy"/>) [5]:</li>
+        </ul>
+      </li>
+      <li><image href="images_old/2537/image026.png" height="22" width="72" id="image_ob4_zhs_sy"/><ul
+          id="ul_pb4_zhs_sy">
+          <li><i> Значение </i><image href="images_old/2537/image027.png" height="22" width="19"
+              id="image_qb4_zhs_sy"/><i>:</i></li>
+        </ul></li>
+    </ul>
+    <table id="table_rb4_zhs_sy">
+      <tgroup cols="1">
+        <colspec colnum="1" colname="col1"/>
+        <tbody>
+          <row>
+            <entry>
+              <p>Если <image href="images_old/2537/image028.png" height="24" width="92"
+                  id="image_sb4_zhs_sy"/>, то:</p>
+              <p> Если <image href="images_old/2537/image029.png" height="21" width="39"
+                  id="image_tb4_zhs_sy"/>, то <image href="images_old/2537/image030.png" height="24"
+                  width="41" id="image_ub4_zhs_sy"/>, иначе: </p>
+              <p> Если <image href="images_old/2537/image031.png" height="21" width="65"
+                  id="image_vb4_zhs_sy"/>, то <image href="images_old/2537/image032.png" height="25"
+                  width="121" id="image_wb4_zhs_sy"/>, иначе <image href="images_old/2537/image033.png"
+                  height="24" width="55" id="image_xb4_zhs_sy"/></p>
+              <p>Иначе: </p>
+              <p> Если <image href="images_old/2537/image029.png" height="21" width="39"
+                  id="image_yb4_zhs_sy"/>, то <image href="images_old/2537/image030.png" height="24"
+                  width="41" id="image_zb4_zhs_sy"/>, иначе:</p>
+              <p> Если <image href="images_old/2537/image031.png" height="21" width="65"
+                  id="image_ac4_zhs_sy"/>, то <image href="images_old/2537/image034.png" height="25"
+                  width="92" id="image_bc4_zhs_sy"/>, иначе <image href="images_old/2537/image035.png"
+                  height="24" width="44" id="image_cc4_zhs_sy"/></p>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p><image href="images_old/2537/image036.png" height="35" width="50" id="image_dc4_zhs_sy"/> -
+      относительная шероховатость стенок, где <image href="images_old/2537/image037.png" height="22"
+        width="11" id="image_ec4_zhs_sy"/> - эквивалентная равномерно-зернистая шероховатость. Также
+      в состав сопротивления отвода входит компонент kRe=f(Re), величина которого считается в
+      теплогидравлическом коде.</p>
+    <p>Использованная литература: И.Е. Идельчик. Справочник по гидравлическим сопротивлениям. 3-е
+      издание, переработанное и дополненное. М: Машиностроение, 1992.</p>
+    <p>[1] – Раздел 4-1 стр 146</p>
+    <p>[2] – Раздел 4-1 стр 147. Диаграмма 4-2 стр 159.</p>
+    <p>[3] - Раздел 4-1 стр 147. Диаграмма 4-6 стр 163.</p>
+    <p>[4] – Раздел 6-1 стр 260. Диаграмма 6-1 стр 277.</p>
+    <p>[5] – Диаграмма 6-1 стр 277, Диаграмма 2-2 стр 88</p>
+    <p> </p>
+  </body>
+</topic>

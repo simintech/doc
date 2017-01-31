@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>HS – Лист проекта </title>
+  <body>
+    <table id="table_k5j_nny_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/2517/image001.png" height="32" width="32"
+                id="image_l5j_nny_sy"/></entry>
+            <entry><b>HS</b><b>– Лист проекта</b></entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/2517/image002.png" height="168" width="292"
+                id="image_m5j_nny_sy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок является расширением субмодели, с добавлением некоторых элементов оформления и нужен для
+      использования блоков перехода с листа на лист. Блоки перехода с листа на лист используют
+      механизм блоков «В память» и «Из памяти», и для своей параметризации пользуются свойствами,
+      задаваемыми в блоке «Лист проекта».</p>
+    <p>Страница справки в разработке…</p>
+  </body>
+</topic>

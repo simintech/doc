@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>СПТ – Переходник выход-выход </title>
+  <body>
+    <table id="table_w5w_vvy_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/3212/image001.png" height="22" width="39"
+                id="image_x5w_vvy_sy"/></entry>
+            <entry>СПТ – Переходник выход-выход</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/3212/image002.png" height="76" width="76"
+                id="image_y5w_vvy_sy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок представляет собой модель активного линейного сопротивления. Используется для соединения
+      двух элементов (блоков) схемы, имеющих выходные порты. Предназначен для использования в
+      «контуре переменного тока».</p>
+    <p> </p>
+    <p>Значение активного сопротивления, задаваемого в свойствах блока, подбирается таким, чтобы оно
+      не оказывало существенного влияния на расчетные значения токов <image
+        href="images_old/3212/image003.png" height="24" width="34" id="image_z5w_vvy_sy"/> и напряжений
+        <image href="images_old/3212/image004.png" height="24" width="39" id="image_avw_vvy_sy"/>.
+      Однако, заниженные значения сопротивления могут привести к потере точности расчетов. Таким
+      образом, значение активного сопротивления <image href="images_old/3212/image005.png" height="22"
+        width="12" id="image_bvw_vvy_sy"/> рекомендуется выбирать из диапазона:</p>
+    <p> </p>
+    <p><image href="images_old/3212/image006.png" height="49" width="216" id="image_cvw_vvy_sy"/></p>
+    <p> </p>
+    <p><b>Блок имеет 2 входных порта:</b></p>
+    <p>1) Цепь 1 –;</p>
+    <p>2) Цепь 1 +.</p>
+    <p> </p>
+    <p><b>Свойства блока</b></p>
+    <p>· Сопротивление, Ом;</p>
+  </body>
+</topic>

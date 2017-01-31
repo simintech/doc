@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>HS – Узел компенсатора </title>
+  <body>
+    <table id="table_zgr_v3y_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/2511/image001.png" height="32" width="32"
+                id="image_ahr_v3y_sy"/></entry>
+            <entry><b>HS</b><b>– Узел компенсатора</b></entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/2511/image002.png" height="29" width="28"
+                id="image_bhr_v3y_sy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок представляет собой модель отверстия в баке. </p>
+    <p> </p>
+    <p><b>Свойства блока «HS – Узел компенсатора»</b></p>
+    <table id="table_chr_v3y_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_dhr_v3y_sy">
+                <li>·Начальное давление, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ehr_v3y_sy">
+                <li>P0</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_fhr_v3y_sy">
+                <li>·Начальная энтальпия, Дж/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ghr_v3y_sy">
+                <li>H0</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_hhr_v3y_sy">
+                <li>·Объем узла, м³</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ihr_v3y_sy">
+                <li>V</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_jhr_v3y_sy">
+                <li>·Гидравлический диаметр, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_khr_v3y_sy">
+                <li>Dg</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_lhr_v3y_sy">
+                <li>·Проходное сечение, м²</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_mhr_v3y_sy">
+                <li>S</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_nhr_v3y_sy">
+                <li>·Уровень относительно днища бака, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ohr_v3y_sy">
+                <li>Z</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_phr_v3y_sy">
+                <li>·Теплоноситель</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_qhr_v3y_sy">
+                <li>coolant</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_rhr_v3y_sy">
+                <li>·Суммарная теплоемкость металла, Дж/(кг*К)</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_shr_v3y_sy">
+                <li>MCmet</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_thr_v3y_sy">
+                <li>·Тип патрубка</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_uhr_v3y_sy">
+                <li>JetType</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_vhr_v3y_sy">
+                <li>·Концентрация пассивных примесей</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_whr_v3y_sy">
+                <li>C_passive_tracer_0</li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока «HS – Узел компенсатора»</b></p>
+    <table id="table_xhr_v3y_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_yhr_v3y_sy">
+                <li>·Давление, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_zhr_v3y_sy">
+                <li>_P</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_a3r_v3y_sy">
+                <li>·Энтальпия, Дж/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_b3r_v3y_sy">
+                <li>_H</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_c3r_v3y_sy">
+                <li>·Температура, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_d3r_v3y_sy">
+                <li>_T</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_e3r_v3y_sy">
+                <li>·Плотность, кг/ м³</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_f3r_v3y_sy">
+                <li>_Rho</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_g3r_v3y_sy">
+                <li>·Масса, кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_h3r_v3y_sy">
+                <li>_M</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_i3r_v3y_sy">
+                <li>·Гидростатический напор, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_j3r_v3y_sy">
+                <li>_Rgh</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_k3r_v3y_sy">
+                <li>·Коэффициент теплоотдачи, Вт/(м²*К)</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_l3r_v3y_sy">
+                <li>_alfa</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_m3r_v3y_sy">
+                <li>·Концентрации пассивных примесей, кг/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_n3r_v3y_sy">
+                <li>_c_passive_tracer</li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок может быть соединен посредством гидравлических связей со следующими блоками:</p>
+    <ul id="ul_o3r_v3y_sy">
+      <li>· «HS – Канал»;</li>
+      <li>· «HS - Труба»;</li>
+      <li>· «HS – Кольцевой зазор»;</li>
+      <li>· «HS – Подпитка»;</li>
+      <li>· «HS – Критическое истечение»;</li>
+      <li>· «HS – Порт входа»;</li>
+      <li>· «HS – Порт выхода»;</li>
+      <li>· «HS – В память»;</li>
+      <li>· «HS – Из памяти».</li>
+    </ul>
+    <p>Блок выполняет функцию «дочернего» блока и может быть установлен на следующие «родительские»
+      блоки:</p>
+    <ul id="ul_p3r_v3y_sy">
+      <li>· «HS – Бак со свободным уровнем»;</li>
+      <li>· «HS – Пароводяной компенсатор давления».</li>
+    </ul>
+  </body>
+</topic>

@@ -1,0 +1,1380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>HS – Канал </title>
+  <body>
+    <table id="table_osm_bhs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/2501/image001.png" height="32" width="32"
+                id="image_psm_bhs_sy"/></entry>
+            <entry><b>HS</b><b>– Канал</b></entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/2501/image002.png" height="70" width="122"
+                id="image_qsm_bhs_sy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок реализует модель трубопровода, не имеющего внешней стенки. Концептуально представляет
+      собой набор последовательно-соединенных элементарных гидравлических контрольных объемов
+      (ячеек), расположенных друг за другом, имеющих некоторую длину и в поперечном сечении
+      повторяющих сечение канала. Для обеспечения моделирования, блок должен быть включен в состав
+      схемы, то есть иметь граничные условия, задаваемые блоками граничных условиями, внутренними
+      узлами, трубами либо другими каналами. Принципиальным отличием канала от трубы является
+      отсутствие (по умолчанию) теплообмена с окружающей средой через стенку трубы.</p>
+    <p><image href="images_old/2501/image003.png" height="174" width="450" id="image_rsm_bhs_sy"/></p>
+    <p>Можно сказать, что канал включает в себя только модель внутреннего пространства трубопровода,
+      полностью заполненного теплоносителем (без присоединенной массы металла). А блок типа «Труба»
+      включает в себя математическую модель тонкой стенки трубопровода.</p>
+    <p>Моделировать реальный трубопровод исключительно с помощью канала, можно в тех случаях, когда
+      вклад теплообмена с внешней средой невелик либо им пренебрегают. Для других случаев можно
+      использовать связку канал-стенка (см. ниже). Каждый элементарный объем является камерой
+      идеального смешения, то есть величины параметров, характеризующие состояние рабочего тела в
+      нем, не имеют пространственного распределения внутри объема и характеризуются только одним
+      значением.</p>
+    <p>Данная концепция обеспечивает высокую скорость динамического расчета, однако накладывает
+      некоторые ограничения на область применимости модели: невозможно в явном виде оценивать и
+      моделировать поперечный переток теплоносителя внутри ячейки, а также завихрения и частичный
+      противоток внутри одного сечения.</p>
+    <p>Во время расчета, на каждом такте математического расчета, происходит вычисление параметров
+      внутри каждого объема, а также решаются балансовые уравнения, позволяющие моделировать
+      перетекание рабочего тела из одного элементарного объема в другой. Таким образом определяются
+      параметры гидравлической схемы, характеризующие состояние рабочего тела <b>внутри
+        элементарного объема</b> (давление, температура, концентрация и т.д.), а также ряд
+      параметров, связанных с переносом вещества <b>между двумя соседними элементарными объемами</b>
+      (расход, скорость течения, потери давления и т.д.).</p>
+    <p>Такой способ моделирования позволяет получать распределенные значения параметров рабочего
+      тела в масштабах всего трубопровода (всей гидравлической схемы). Условный канал, разбитый на 3
+      элементарных объема, позволяет контролировать параметры в 3 точках вдоль его длины. Это
+      относится к тем параметрам, которые рассчитываются внутри каждой элементарной ячейки
+      (давление, температура, концентрация и т.д.). Количество же тех параметров, которые относятся
+      к границам объемов (расход, скорость течения, потери давления и т.д.) будет равно количеству
+      этих границ по длине канала. Причем для внешних границ крайних ячеек также происходит расчет.
+      Таким образом, если канал содержит N элементарных объемов, то набор параметров, рассчитываемых
+      для границ ячеек, будет состоять из N+1 элементов. Например, канал из трех ячеек будет иметь
+      массив давлений из трех элементов (давление в каждом элементарном объеме), а массив расходов –
+      из четырех (на каждой границе между ячейками).</p>
+    <p><image href="images_old/2501/image004.png" height="111" width="591" id="image_ssm_bhs_sy"/></p>
+    <p>В общем случае, значения параметров на границах между ячейками, образующими канал,
+      рассчитываются автоматически, исходя из физической модели канала. Однако в значения некоторых
+      из них можно вносить изменения с помощью соответствующих блоков библиотеки HS. Такие блоки
+      устанавливаются на канал и имеют привязку к определенной границе между двумя элементарными
+      ячейками. Технически, работа таких блоков заключается в формировании некоторой заданной
+      добавки к определенному параметру. Например, блоки «НS – Клапан» и «HS – Местное
+      сопротивление» вносят изменение в величину гидравлического сопротивления, рассчитанного на
+      соответствующей границе. А блок «HS - Насос» вносит добавку в перепад давления на заданной
+      границе. Такие принудительные изменения в результатах рассчитанных параметров учитываются
+      решателем и уже на следующем такте расчета физично изменяются и другие параметры модели.</p>
+    <p>Кроме связи друг с другом, гидравлические ячейки, образующие канал, могут осуществлять
+        <b>теплообмен с моделью стенки</b>, при помощи устанавливаемых пользователем тепловых
+      связей:</p>
+    <p><image href="images_old/2501/image005.png" height="243" width="515" id="image_tsm_bhs_sy"/></p>
+    <p>На рисунке приведен пример канала, на одном из участков имеющего теплообмен только с наружной
+      стенкой, а на другом участке – как с наружной, так и с внутренней стенкой (канал типа зазора).
+      Для случая кольцевого зазора в коде HS имеется специальный канал – блок типа «Кольцевой
+      зазор».</p>
+    <p>Таким образом, каналом можно моделировать не только саму проточную часть какого-либо
+      трубопровода, или канала сложной формы, но и трубу, которая осуществляет теплообмен с
+      окружающей средой. В этом случае дополнительно решается уравнение теплопереноса между ячейкой
+      канала и соответствующей ей ячейкой стенки. Следствием этого является то, что сетка разбиения
+      стенки по длине должна обязательно соответствовать сетке разбиения соответствующего ей канала.
+      То есть стенка должна иметь ту же длину и то же количество элементарных участков по длине, что
+      и подключенный к ней канал. Для случаев, когда канал имеет стенки с разными свойствами
+      (например, наличие теплоизоляции на некоторой части трубы), существует возможность
+      «склеивания» каналов. То есть реальный подобный трубопровод моделируется несколькими блоками
+      «HS – Канал», соединенными последовательно и напрямую (как показано выше на рисунке). С точки
+      зрения математического расчета, все соединенные таким образом каналы будут обрабатываться, как
+      один. Однако каждый такой канал может иметь уникальную стенку или не иметь ее вовсе.</p>
+    <p>Блок является одним из базовых для построения расчетных (нодализационных) схем
+      теплогидравлических моделей. При помощи данного блока возможно моделирование достаточно
+      произвольного контура с жидкостью (например, трубопровода, межтрубного пространства
+      теплообменника и т. д.).</p>
+    <p><b>Свойства блока «</b><b>HS</b><b> - Канал»</b></p>
+    <table id="table_usm_bhs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_vsm_bhs_sy">
+                <li>·Количество тепловых связей</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_wsm_bhs_sy">
+                <li>Nheatport</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_xsm_bhs_sy">
+                <li>·Количество расчетных элементов</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ysm_bhs_sy">
+                <li>N</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_zsm_bhs_sy">
+                <li>·Гидравлический диаметр, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_atm_bhs_sy">
+                <li>Dg</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_btm_bhs_sy">
+                <li>·Проходное сечение, м²</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ctm_bhs_sy">
+                <li>S</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_dtm_bhs_sy">
+                <li>·Длины элементов разбиения, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_etm_bhs_sy">
+                <li>L</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ftm_bhs_sy">
+                <li>·Приращение высоты, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_gtm_bhs_sy">
+                <li>Dz</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_htm_bhs_sy">
+                <li>·Прямое местное сопротивление</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_itm_bhs_sy">
+                <li>KsiDir </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_jtm_bhs_sy">
+                <li>·Обратное местное сопротивление</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ktm_bhs_sy">
+                <li>KsiInv </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ltm_bhs_sy">
+                <li>·Абсолютная шероховатость, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_mtm_bhs_sy">
+                <li>Sh </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ntm_bhs_sy">
+                <li>·Коэффициент интенсификации теплообмена</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_otm_bhs_sy">
+                <li>kAlfa </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ptm_bhs_sy">
+                <li>·Объемное энерговыделение, Вт/м³</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_qtm_bhs_sy">
+                <li>qv </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_rtm_bhs_sy">
+                <li>·Тип геометрии</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_stm_bhs_sy">
+                <li>geom_type</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ttm_bhs_sy">
+                <li>·Относительный шаг труб в пучке (>=1)</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_utm_bhs_sy">
+                <li>x_rel</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_vtm_bhs_sy">
+                <li>·Диаметр труб в пучке, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_wtm_bhs_sy">
+                <li>d_rod</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_xtm_bhs_sy">
+                <li>·Количество труб в пучке</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ytm_bhs_sy">
+                <li>N_rod</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ztm_bhs_sy">
+                <li>·Шаг навивки дист. проволоки, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_a5m_bhs_sy">
+                <li>T_wire</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_b5m_bhs_sy">
+                <li>·Диаметр дист. проволоки, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_c5m_bhs_sy">
+                <li>d_wire</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_d5m_bhs_sy">
+                <li>·Начальное давление, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_e5m_bhs_sy">
+                <li>P0</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_f5m_bhs_sy">
+                <li>·Начальная энтальпия, Дж/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_g5m_bhs_sy">
+                <li>H0</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_h5m_bhs_sy">
+                <li>·Начальный расход, кг/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_i5m_bhs_sy">
+                <li>G0</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_j5m_bhs_sy">
+                <li>·Начальная температура стенки, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_k5m_bhs_sy">
+                <li>Twall_0</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_l5m_bhs_sy">
+                <li>·Характеристика жёсткости стенок канала dS/dP, м²/Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_m5m_bhs_sy">
+                <li>dSdP</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_n5m_bhs_sy">
+                <li>·Входная связь для поперечного перетока</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_o5m_bhs_sy">
+                <li>isCrossFlowIn</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_p5m_bhs_sy">
+                <li>·Выходная связь для поперечного перетока</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_q5m_bhs_sy">
+                <li>isCrossFlowOut</li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p> </p>
+    <p><b>Параметры блока «</b><b>HS</b><b>-Канал»</b></p>
+    <table id="table_r5m_bhs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_s5m_bhs_sy">
+                <li>·Давление, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_t5m_bhs_sy">
+                <li>_p</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_u5m_bhs_sy">
+                <li>·Энтальпия, Дж/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_v5m_bhs_sy">
+                <li>_h</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_w5m_bhs_sy">
+                <li>·Температура, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_x5m_bhs_sy">
+                <li>_t</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_y5m_bhs_sy">
+                <li>·Удельный объем, м³/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_z5m_bhs_sy">
+                <li>_v</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_avm_bhs_sy">
+                <li>·Плотность, кг/м³</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_bvm_bhs_sy">
+                <li>_rho</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_cvm_bhs_sy">
+                <li>·Массовый расход, кг/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_dvm_bhs_sy">
+                <li>_g</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_evm_bhs_sy">
+                <li>·Объемный расход, м³/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_fvm_bhs_sy">
+                <li>_q</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_gvm_bhs_sy">
+                <li>·Скорость, м/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_hvm_bhs_sy">
+                <li>_w</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ivm_bhs_sy">
+                <li>·Коэффициент распределенного трения</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_jvm_bhs_sy">
+                <li>_ksiTr</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_kvm_bhs_sy">
+                <li>·Коэффициент местного трения</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_lvm_bhs_sy">
+                <li>_ksiM</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_mvm_bhs_sy">
+                <li>·Потери на трение, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_nvm_bhs_sy">
+                <li>_dPtr</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ovm_bhs_sy">
+                <li>·Нивелирные потери, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_pvm_bhs_sy">
+                <li>_dPniv</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_qvm_bhs_sy">
+                <li>·Потери на ускорение, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_rvm_bhs_sy">
+                <li>_dPcon</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_svm_bhs_sy">
+                <li>·Напор насоса, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_tvm_bhs_sy">
+                <li>_dPnas</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_uvm_bhs_sy">
+                <li>·Мощность на стенке, Вт</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_vvm_bhs_sy">
+                <li>_qf</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_wvm_bhs_sy">
+                <li>·Давление на входе, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_xvm_bhs_sy">
+                <li>_pin</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_yvm_bhs_sy">
+                <li>·Энтальпия на входе, Дж/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_zvm_bhs_sy">
+                <li>_hin</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_awm_bhs_sy">
+                <li>·Температура на входе, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_bwm_bhs_sy">
+                <li>_tin</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_cwm_bhs_sy">
+                <li>·Массовый расход на входе, кг/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_dwm_bhs_sy">
+                <li>_gin</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ewm_bhs_sy">
+                <li>·Объемный расход на входе, м³/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_fwm_bhs_sy">
+                <li>_qin</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_gwm_bhs_sy">
+                <li>·Скорость на входе, м/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_hwm_bhs_sy">
+                <li>_win</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_iwm_bhs_sy">
+                <li>·Давление на выходе, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_jwm_bhs_sy">
+                <li>_pou</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_kwm_bhs_sy">
+                <li>·Энтальпия на выходе, Дж/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_lwm_bhs_sy">
+                <li>_hou</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_mwm_bhs_sy">
+                <li>·Температура на выходе, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_nwm_bhs_sy">
+                <li>_tou</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_owm_bhs_sy">
+                <li>·Массовый расход на выходе, кг/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_pwm_bhs_sy">
+                <li>_gou</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_qwm_bhs_sy">
+                <li>·Объемный расход на выходе, м³/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_rwm_bhs_sy">
+                <li>_qou</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_swm_bhs_sy">
+                <li>·Скорость на выходе, м/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_twm_bhs_sy">
+                <li>_wou</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_uwm_bhs_sy">
+                <li>·Перепад давления, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_vwm_bhs_sy">
+                <li>_dp</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_wwm_bhs_sy">
+                <li>·Перепад энтальпии, Дж/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_xwm_bhs_sy">
+                <li>_dh</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ywm_bhs_sy">
+                <li>·Перепад температуры, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_zwm_bhs_sy">
+                <li>_dt</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_axm_bhs_sy">
+                <li>·Суммарные потери на трение, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_bxm_bhs_sy">
+                <li>_dPtrSum</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_cxm_bhs_sy">
+                <li>·Суммарные потери на трение в ребре, которому принадлежит канал, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_dxm_bhs_sy">
+                <li>_dPtrSumRebro</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_exm_bhs_sy">
+                <li>·Суммарные нивелирные потери, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_fxm_bhs_sy">
+                <li>_dPnivSum</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_gxm_bhs_sy">
+                <li>·Суммарные потери на ускорение, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_hxm_bhs_sy">
+                <li>_dPconSum</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ixm_bhs_sy">
+                <li>·Суммарный напор насоса, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_jxm_bhs_sy">
+                <li>_dPnasSum</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_kxm_bhs_sy">
+                <li>·Суммарная мощность через стенку, Вт</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_lxm_bhs_sy">
+                <li>_qfSum</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_mxm_bhs_sy">
+                <li>·Коэффициент теплоотдачи, Вт/(</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_nxm_bhs_sy">
+                <li>_Alfa</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_oxm_bhs_sy">
+                <li>·Удельная энтальпия (массовое паросодержание)</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_pxm_bhs_sy">
+                <li>_X</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_qxm_bhs_sy">
+                <li>·Режим теплообмена</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_rxm_bhs_sy">
+                <li>_alfamode</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_sxm_bhs_sy">
+                <li>·Температура, усредненная по массе, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_txm_bhs_sy">
+                <li>_t_coolant_middle_m</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_uxm_bhs_sy">
+                <li>·Масса теплоносителя в ячейках</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_vxm_bhs_sy">
+                <li>_m1</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_wxm_bhs_sy">
+                <li>·Масса теплоносителя в ячейках (по ур-нию сохранения массы), кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_xxm_bhs_sy">
+                <li>_m2</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_yxm_bhs_sy">
+                <li>·Масса теплоносителя в ячейках (по ур-нию состояния), кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_zxm_bhs_sy">
+                <li>_lm</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_aym_bhs_sy">
+                <li>·Дисбаланс массы в ячейках, кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_bym_bhs_sy">
+                <li>_h1</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_cym_bhs_sy">
+                <li>·Энтальпия теплоносителя в ячейках (по ур-нию сохранения энергии), Дж</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_dym_bhs_sy">
+                <li>_h2</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_eym_bhs_sy">
+                <li>·Дисбаланс энтальпии в ячейках, Дж</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_fym_bhs_sy">
+                <li>_lh</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_gym_bhs_sy">
+                <li>·Концентрация пассивных примесей, кг/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_hym_bhs_sy">
+                <li>_c_passive_tracer</li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p> </p>
+    <p>Блок может быть соединен с другими блоками посредством гидравлических и тепловых связей.</p>
+    <p>При помощи гидравлических связей блок может соединяться со следующими блоками: </p>
+    <ul id="ul_iym_bhs_sy">
+      <li>· «HS – Канал»;</li>
+      <li>· «HS - Труба»;</li>
+      <li>· «HS – Граничный узел»;</li>
+      <li>· «HS – Внутренний узел»;</li>
+      <li>· «HS – Узел компенсатора»;</li>
+      <li>· «HS – Эжектор»;</li>
+      <li>· «HS - Ссылка на объект»;</li>
+      <li>· «HS – Порт входа»;</li>
+      <li>· «HS – Порт выхода»;</li>
+      <li>· «HS – В память»;</li>
+      <li>· «HS – Из памяти».</li>
+    </ul>
+    <p>При помощи тепловых связей блок может соединяться со следующими блоками:</p>
+    <ul id="ul_jym_bhs_sy">
+      <li>· «HS – Граничное условие 3-го рода»;</li>
+      <li>· «HS – Заданный тепловой поток на стенке»;</li>
+      <li>· «HS – Стенка с заданной температурой»;</li>
+      <li>· «HS – Тепловое граничное условие»;</li>
+      <li>· «HS – Цилиндрическая толстая стенка»;</li>
+      <li>· «HS – Цилиндрическая толстая стенка с излучением»;</li>
+      <li>· «HS – Двухслойная цилиндрическая толстая стенка»;</li>
+      <li>· «HS – Плоская толстая стенка»;</li>
+      <li>· «HS – Тонкая стенка Тип 1»;</li>
+      <li>· «HS – Тонкая стенка Тип 2»;</li>
+      <li>· «HS – Зазор между стенками».</li>
+    </ul>
+    <p>В качестве дополнительных элементов на блок «HS - Канал» могут быть установлены следующие
+      блоки (при этом блок «HS – Канал» будет родительским, а дополнительно установленные блоки –
+      дочерними):</p>
+    <ul id="ul_kym_bhs_sy">
+      <li>· «HS – Местное сопротивление»;</li>
+      <li>· «HS – Простой насос»;</li>
+      <li>· «HS – Насос»;</li>
+      <li>· «HS – Заданный напор насоса»;</li>
+      <li>· «HS – Плунжерный насос»;</li>
+      <li>· «HS – ТЭН».</li>
+    </ul>
+    <p> </p>
+    <p> </p>
+    <p><b>Физическая модель, реализованная в блоке «Канал»</b></p>
+    <p> </p>
+    <p>Канал является одним из базовых объектов теплогидравлического кода. Он представляет собой
+      набор произвольного количества связанных между собой контрольных объёмов (<b>Рисунок 1</b>).
+      Для контрольных объёмов решаются уравнения сохранения массы и энергии жидкости, а для
+      связывающих контрольные объёмы гидравлических связей – уравнения сохранения импульса. </p>
+    <p> </p>
+    <p><image href="images_old/2501/image006.jpg" height="312" width="643" id="image_lym_bhs_sy"/></p>
+    <p><b>Рисунок 1</b> - Канал</p>
+    <p> </p>
+    <p>В теплогидравлическом коде рассматривается смещённая сетка. При этом скалярные характеристики
+      теплоносителя (давление, энтальпия, концентрации пассивных примесей) находятся в центрах
+      контрольных объёмов, а векторные характеристики теплоносителя (скорости, расходы) – на
+      границах контрольных объёмов (в гидравлических связях).</p>
+    <p>Предполагается, что значения скалярных характеристик теплоносителя остаются постоянными в
+      пределах контрольного объёма, и меняются скачком на границе ячеек, а значения векторных
+      характеристик теплоносителя остаются постоянными в пределах левого и правого полуобъёмов,
+      примыкающих к гидравлической связи, и меняются скачком в центрах ячеек. Запишем в общем виде,
+      что значение скалярной величины на границе ячеек зависит от значений в соседних ячейках
+      следующим образом:</p>
+    <table id="table_mym_bhs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/2501/image007.png" height="26" width="242"
+                id="image_nym_bhs_sy"/></entry>
+            <entry>(1)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>где <image href="images_old/2501/image008.png" height="24" width="33" id="image_oym_bhs_sy"/> –
+      значение величины на j-й границе; </p>
+    <p><image href="images_old/2501/image009.png" height="24" width="31" id="image_pym_bhs_sy"/> –
+      значение величины в (j-1)-ой расчётной ячейке (слева от j-й ГС);</p>
+    <p><image href="images_old/2501/image010.png" height="24" width="14" id="image_qym_bhs_sy"/> –
+      значение величины в j-ой расчётной ячейке (справа от j-й ГС);</p>
+    <p><image href="images_old/2501/image011.png" height="24" width="19" id="image_rym_bhs_sy"/> –
+      весовой множитель. </p>
+    <p>В случае реализации схемы аппроксимации конвективных членов «против потока» весовой множитель
+      рассчитывается следующим образом:</p>
+    <table id="table_sym_bhs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/2501/image012.png" height="47" width="170"
+                id="image_tym_bhs_sy"/></entry>
+            <entry>(2)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>но в общем случае это можно делать и по-другому.</p>
+    <p>Приведём основные уравнения сохранения, решаемые в теплогидравлическом коде.</p>
+    <p> </p>
+    <p><b>Уравнение сохранения массы</b></p>
+    <p> </p>
+    <p>Одномерное уравнение сохранения массы для канала с переменным поперечным сечением имеет
+      вид:</p>
+    <table id="table_uym_bhs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/2501/image013.png" height="43" width="206"
+                id="image_vym_bhs_sy"/></entry>
+            <entry>(3)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>где <image href="images_old/2501/image014.png" height="22" width="11" id="image_wym_bhs_sy"/> –
+      плотность жидкости; </p>
+    <p><image href="images_old/2501/image015.png" height="22" width="12" id="image_xym_bhs_sy"/> –
+      скорость жидкости;</p>
+    <p><image href="images_old/2501/image016.png" height="22" width="10" id="image_yym_bhs_sy"/> –
+      площадь проходного сечения канала;</p>
+    <p><image href="images_old/2501/image017.png" height="22" width="9" id="image_zym_bhs_sy"/> –
+      время;</p>
+    <p><image href="images_old/2501/image018.png" height="22" width="11" id="image_azm_bhs_sy"/> –
+      пространственная координата.</p>
+    <p>Заменяя скорость на массовый расход, а производную плотности по времени расписывая через
+      частные производные плотности по давлению и по энтальпии, приходим к следующему виду уравнения
+      (3):</p>
+    <table id="table_bzm_bhs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/2501/image019.png" height="46" width="365"
+                id="image_czm_bhs_sy"/></entry>
+            <entry>(4)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>где <image href="images_old/2501/image020.png" height="22" width="12" id="image_dzm_bhs_sy"/> –
+      давление жидкости; </p>
+    <p><image href="images_old/2501/image021.png" height="22" width="11" id="image_ezm_bhs_sy"/> –
+      удельная энтальпия жидкости;</p>
+    <p><image href="images_old/2501/image022.png" height="22" width="13" id="image_fzm_bhs_sy"/> –
+      массовый расход жидкости;</p>
+    <p><image href="images_old/2501/image023.png" height="37" width="45" id="image_gzm_bhs_sy"/> –
+      частная производная плотности жидкости по давлению при постоянной энтальпии;</p>
+    <p><image href="images_old/2501/image024.png" height="36" width="45" id="image_hzm_bhs_sy"/> –
+      частная производная плотности жидкости по энтальпии при постоянном давлении.</p>
+    <p>В результате интегрирования уравнения (4) по длине контрольного объёма получаем уравнение
+      сохранения массы в следующем виде:</p>
+    <table id="table_izm_bhs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/2501/image025.png" height="46" width="418"
+                id="image_jzm_bhs_sy"/></entry>
+            <entry>(5)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>где <image href="images_old/2501/image015.png" height="22" width="12" id="image_kzm_bhs_sy"/> –
+      объём расчётной ячейки; </p>
+    <p><image href="images_old/2501/image026.png" height="24" width="17" id="image_lzm_bhs_sy"/> –
+      массовый расход жидкости в левой гидравлической связи;</p>
+    <p><image href="images_old/2501/image027.png" height="24" width="34" id="image_mzm_bhs_sy"/> –
+      массовый расход жидкости в правой гидравлической связи;</p>
+    <p><image href="images_old/2501/image028.png" height="33" width="17" id="image_nzm_bhs_sy"/> –
+      приведённая характеристика жёсткости стенок канала – частная производная площади поперечного
+      сечения по давлению жидкости.</p>
+    <p> </p>
+    <p><b>Уравнение сохранения импульса</b></p>
+    <p> </p>
+    <p>Общее уравнение движения жидкой среды в одномерном приближении при учёте в составе массовых
+      сил только силы тяжести имеет вид</p>
+    <table id="table_ozm_bhs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/2501/image029.png" height="43" width="520"
+                id="image_pzm_bhs_sy"/></entry>
+            <entry>(6)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>где <image href="images_old/2501/image030.png" height="22" width="12" id="image_qzm_bhs_sy"/> –
+      ускорение свободного падения; </p>
+    <p><image href="images_old/2501/image031.png" height="22" width="11" id="image_rzm_bhs_sy"/> – угол
+      между осью канала и направлением вектора силы тяжести;</p>
+    <p><image href="images_old/2501/image032.png" height="22" width="14" id="image_szm_bhs_sy"/> –
+      коэффициент трения на стенке канала;</p>
+    <p><image href="images_old/2501/image033.png" height="22" width="45" id="image_tzm_bhs_sy"/> –
+      источник импульса.</p>
+    <p>Интегрируя уравнение (6) в пределах левого и правого полуобъёмов, примыкающих к
+      рассматриваемой гидравлической связи, получим уравнение сохранения импульса в следующем
+      виде:</p>
+    <p> </p>
+    <table id="table_uzm_bhs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry>
+              <p><image href="images_old/2501/image034.png" height="54" width="415" id="image_vzm_bhs_sy"
+                /></p>
+              <p><image href="images_old/2501/image035.png" height="50" width="394" id="image_wzm_bhs_sy"
+                /></p>
+              <p><image href="images_old/2501/image036.png" height="72" width="600" id="image_xzm_bhs_sy"
+                /></p>
+              <p><image href="images_old/2501/image037.png" height="54" width="500" id="image_yzm_bhs_sy"
+                /></p>
+              <p><image href="images_old/2501/image038.png" height="54" width="495" id="image_zzm_bhs_sy"
+                /></p>
+              <p><image href="images_old/2501/image039.png" height="43" width="399" id="image_a1n_bhs_sy"
+                /></p>
+              <p><image href="images_old/2501/image040.png" height="54" width="420" id="image_b1n_bhs_sy"
+                /></p>
+            </entry>
+            <entry>(7)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>где </p>
+    <p><image href="images_old/2501/image041.png" height="49" width="154" id="image_c1n_bhs_sy"/></p>
+    <p> – инерционный коэффициент гидравлической связи; </p>
+    <p><image href="images_old/2501/image042.png" height="22" width="10" id="image_d1n_bhs_sy"/> – длина
+      расчётной ячейки;</p>
+    <p><image href="images_old/2501/image043.png" height="24" width="31" id="image_e1n_bhs_sy"/> –
+      коэффициент, при помощи которого аппроксимируется значение расхода в центре j-й расчётной
+      ячейки;</p>
+    <p><image href="images_old/2501/image044.png" height="24" width="28" id="image_f1n_bhs_sy"/>–
+      коэффициент, при помощи которого аппроксимируется площадь проходного сечения в j-й
+      гидравлической связи.</p>
+    <p> </p>
+    <p> </p>
+    <p><b>Уравнение сохранения энергии</b></p>
+    <p> </p>
+    <p>Исходное дифференциальное уравнение сохранения энергии для элементарного объёма имеет вид</p>
+    <table id="table_g1n_bhs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/2501/image045.png" height="54" width="611"
+                id="image_h1n_bhs_sy"/></entry>
+            <entry>(8)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>где <image href="images_old/2501/image046.png" height="22" width="9" id="image_i1n_bhs_sy"/> –
+      удельная внутренняя энергия </p>
+    <p><image href="images_old/2501/image047.png" height="22" width="13" id="image_j1n_bhs_sy"/> –
+      мощность объёмных источников энерговыделения;</p>
+    <p><image href="images_old/2501/image048.png" height="22" width="12" id="image_k1n_bhs_sy"/> –
+      массовая сила;</p>
+    <p><image href="images_old/2501/image049.png" height="25" width="18" id="image_l1n_bhs_sy"/>– вектор
+      плотности теплового потока, выходящего из рассматриваемого объёма.</p>
+    <p>Переходя от удельной внутренней энергии к удельной энтальпии, подставляя массовые силы,
+      выраженные из уравнения сохранения импульса, переходя от скоростей к массовому расходу,
+      заменяя производную плотности по времени согласно уравнению сохранения массы и представляя
+      тепловой поток в виде продольной и поперечной составляющих, получим уравнение сохранения
+      энергии в следующем виде:</p>
+    <table id="table_m1n_bhs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/2501/image050.png" height="50" width="421"
+                id="image_n1n_bhs_sy"/></entry>
+            <entry>(9)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Интегрируя уравнение (9) по длине контрольного объёма, получаем уравнение сохранения энергии
+      в следующем виде:</p>
+    <table id="table_o1n_bhs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry>
+              <p><image href="images_old/2501/image051.png" height="43" width="89" id="image_p1n_bhs_sy"
+                /></p>
+              <p><image href="images_old/2501/image052.png" height="43" width="515" id="image_q1n_bhs_sy"
+                /></p>
+              <p><image href="images_old/2501/image053.png" height="58" width="463" id="image_r1n_bhs_sy"
+                /></p>
+              <p><image href="images_old/2501/image054.png" height="22" width="155" id="image_s1n_bhs_sy"
+                /></p>
+            </entry>
+            <entry>(10)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>где <image href="images_old/2501/image055.png" height="22" width="22" id="image_t1n_bhs_sy"/> –
+      объёмное энерговыделение; </p>
+    <p><image href="images_old/2501/image056.png" height="22" width="29" id="image_u1n_bhs_sy"/> – осевой
+      тепловой поток;</p>
+    <p><image href="images_old/2501/image057.png" height="22" width="42" id="image_v1n_bhs_sy"/> –
+      тепловой поток на стенке канала.</p>
+    <p> </p>
+    <p><b>Уравнение сохранения массы пассивной примеси</b></p>
+    <p> </p>
+    <p>Исходное дифференциальное уравнение для концентрации пассивной примеси в канале переменного
+      поперечного сечения имеет вид:</p>
+    <table id="table_w1n_bhs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/2501/image058.png" height="43" width="221"
+                id="image_x1n_bhs_sy"/></entry>
+            <entry>(11)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>где <image href="images_old/2501/image059.png" height="22" width="12" id="image_y1n_bhs_sy"/> –
+      концентрация пассивной примеси (масса пассивной примеси на единицу массы жидкости). </p>
+    <p>Раскрывая производные и подставляя вместо производной плотности по времени её выражение из
+      уравнения сохранения массы, а также добавляя отрицательный источник экспоненциального распада
+      пассивной примеси и произвольный объёмный источник, получим уравнение сохранения массы
+      пассивной примеси в следующем виде:</p>
+    <table id="table_z1n_bhs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/2501/image060.png" height="43" width="352"
+                id="image_abn_bhs_sy"/></entry>
+            <entry>(12)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>где <image href="images_old/2501/image061.png" height="22" width="10" id="image_bbn_bhs_sy"/> –
+      постоянная распада примеси; </p>
+    <p><image href="images_old/2501/image062.png" height="22" width="20" id="image_cbn_bhs_sy"/> –
+      объёмный источник примеси.</p>
+    <p>Интегрируя (12) по длине контрольного объёма, получаем следующее уравнение сохранения массы
+      примеси:</p>
+    <table id="table_dbn_bhs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/2501/image063.png" height="43" width="703"
+                id="image_ebn_bhs_sy"/></entry>
+            <entry>(13)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Полученные аналоги уравнений сохранения переписываются через приращения неизвестных величина
+      на текущем слое по времени (при этом производные неизвестных величин по времени заменяются
+      через приращения с использование формулы дифференцирования назад) и решаются итерационным
+      методом Ньютона-Рафсона. При этом используется идея разделения по физическим процессам, в
+      соответствии с которой первоначально определяются поля давлений и расходов в контуре, затем
+      поле энтальпий, и, наконец, поле концентраций пассивных примесей.</p>
+    <p> </p>
+    <p> </p>
+    <p>Свойство «<b>Тип геометрии</b>» является выпадающим списком, с помощью которого пользователь
+      может определить тип геометрии трубы, наиболее подходящий для моделирования. Пользователю
+      доступны следующие типы:</p>
+    <ul id="ul_fbn_bhs_sy">
+      <li>· «Круглая труба»</li>
+      <li>· «Пучок труб с треугольной упаковкой»</li>
+      <li>· «Пучок труб с квадратной упаковкой»</li>
+      <li>· «Пучок труб с треуг. упаковкой с дист. «проволока по оболочке»»</li>
+      <li>· «Пучок труб с треуг. упаковкой с дист. «проволока по проволоке»»</li>
+      <li>· «Пучок труб с квадр. упаковкой с дист. «проволока по оболочке»»</li>
+      <li>· «Пучок труб с квадр. упаковкой с дист. «проволока по проволоке»»</li>
+      <li>· «Периферийный ряд твэлов»</li>
+      <li>· «Плоская щель»</li>
+      <li>· «Поперечное обтекание гориз. пучка труб с шахматной упаковкой»</li>
+    </ul>
+  </body>
+</topic>

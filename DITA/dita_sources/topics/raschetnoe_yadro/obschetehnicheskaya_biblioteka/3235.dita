@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>СПТ – Запись в БД параметров шины </title>
+  <body>
+    <table id="table_ztq_rvy_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/3235/image001.png" height="22" width="32"
+                id="image_a5q_rvy_sy"/></entry>
+            <entry>СПТ – Запись в БД параметров шины</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/3235/image002.png" height="45" width="111"
+                id="image_b5q_rvy_sy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок используется совместно с блоком «СПТ – Шина» и служит для записи параметров шины в базу
+      данных.</p>
+    <p> </p>
+    <p>При использовании этого блока и соответствующей таблицы в базе данных, параметры «шины»
+      записываются в базу данных, для дальнейшего использования, например, в системах автоматики и
+      управления.</p>
+  </body>
+</topic>

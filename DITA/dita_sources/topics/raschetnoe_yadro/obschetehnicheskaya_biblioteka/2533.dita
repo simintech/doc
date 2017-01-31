@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>HS – Зазор между стенками </title>
+  <body>
+    <table id="table_exp_qky_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/2533/image001.png" height="32" width="32"
+                id="image_fxp_qky_sy"/></entry>
+            <entry><b>HS</b><b>– Зазор между стенками</b></entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/2533/image002.png" height="85" width="63"
+                id="image_gxp_qky_sy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок представляет собой модель зазора между двумя стенками (цилиндрической или плоской
+      геометрии).</p>
+    <p> </p>
+    <p><b>Свойства блока «</b><b>HS</b><b> – Зазор между стенками»</b></p>
+    <table id="table_hxp_qky_sy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_ixp_qky_sy">
+                <li>· Количество элементов по длине, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_jxp_qky_sy">
+                <li>Nh</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_kxp_qky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_lxp_qky_sy">
+                <li>· Длины элементов разбиения, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_mxp_qky_sy">
+                <li>deltaH</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_nxp_qky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_oxp_qky_sy">
+                <li>· Материал</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_pxp_qky_sy">
+                <li>Material</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_qxp_qky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_rxp_qky_sy">
+                <li>· Коэффициент теплоотдачи на внутренней поверхности зазора, </li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_sxp_qky_sy">
+                <li>alfa1</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_txp_qky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_uxp_qky_sy">
+                <li>· Коэффициент теплоотдачи на наружной поверхности зазора, </li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_vxp_qky_sy">
+                <li>alfa2</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_wxp_qky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_xxp_qky_sy">
+                <li>· Объемное энерговыделение, Вт/м³</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_yxp_qky_sy">
+                <li>qv</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_zxp_qky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ayp_qky_sy">
+                <li>· Начальная температура в зазоре, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_byp_qky_sy">
+                <li>Tgap_0</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_cyp_qky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока «</b><b>HS</b><b> – Зазор между стенками»</b></p>
+    <table id="table_dyp_qky_sy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_eyp_qky_sy">
+                <li>· Температура в зазоре, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_fyp_qky_sy">
+                <li>_t_gap</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_gyp_qky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_hyp_qky_sy">
+                <li>· Тепловой поток на внутренней границе, Вт/ м²</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_iyp_qky_sy">
+                <li>_qf_in</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_jyp_qky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_kyp_qky_sy">
+                <li>· Тепловой поток на наружной границе, Вт/ м²</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_lyp_qky_sy">
+                <li>_qf_out</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_myp_qky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

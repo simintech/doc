@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>ac - Ёмкость </title>
+  <body>
+    <table id="table_rdc_ldw_ty">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/3404/image001.png" height="29" width="33"
+                id="image_sdc_ldw_ty"/></entry>
+            <entry>ac - Ёмкость</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/3404/image002.png" height="50" width="84"
+                id="image_tdc_ldw_ty"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок реализует модель идеальной линейной ёмкости. Используется в цепях c элементами
+      библиотеки «Электрика».</p>
+    <p> </p>
+    <p>Модель идеальной линейной ёмкости основана на дискретной токовой модели для метода обратного
+      дифференцирования (BDF), структура которой представлена на рисунке 1.</p>
+    <p> </p>
+    <p><image href="images_old/3404/image003.jpg" height="197" width="478" id="image_udc_ldw_ty"/></p>
+    <p>Рисунок 1 – Дискретная токовая модель ёмкости для метода BDF:</p>
+    <p><i>u</i><i>, </i><i>i</i> – мгновенные значения напряжения и тока; <i>j</i> – индекс текущего
+      шага; h – значение текущего шага; <i>m</i> – порядок метода BDF; α – коэффициенты, заранее
+      определяемые для <i>m</i>; <i>G</i>, <i>I</i> – проводимость и ток дискретной модели; С –
+      заданное в свойствах блока значение ёмкости, Ф.</p>
+    <p> </p>
+    <p>Порядок метода интегрирования задается свойством слоя «Автоматика» BDF_order_LC.</p>
+    <p> </p>
+    <p><b>Блок имеет 2 входных порта.</b></p>
+    <p> </p>
+    <p><b>Свойства блока:</b></p>
+    <ul id="ul_vdc_ldw_ty">
+      <li>· Ёмкость, Ф.</li>
+    </ul>
+  </body>
+</topic>

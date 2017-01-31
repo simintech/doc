@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Обратный клапан (типовой)</title>
+  <body>
+    <p><b>Обратный клапан (типовой) - </b><i>точечный</i><i>неориентированный</i> элемент. Модель не
+      имеет внешнего управления и предназначена для имитации работы обратного клапана. </p>
+    <p><b>3.17.1Разрешенные связи элемента</b></p>
+    <p><b>Обратный клапан (типовой) </b>устанавливается на элементы группы <i>Каналы</i>. </p>
+    <p><b>3.17.2Свойства элемента</b></p>
+    <p>Характеристики <b>Обратного клапана (типового) </b>и начальные условия для расчета задаются в
+      закладке <i>Свойства</i><i>объекта</i> (см. Таблица 4.17.2.26). </p>
+    <p><b>Таблица 4.17.2.26 </b>Параметры обратного клапана (типового) <table id="table2">
+        <tgroup cols="4">
+          <colspec colnum="1" colname="col1"/>
+          <colspec colnum="2" colname="col2"/>
+          <colspec colnum="3" colname="col3"/>
+          <colspec colnum="4" colname="col4"/>
+          <thead>
+            <row>
+              <entry><b>Параметр</b></entry>
+              <entry><b>Имя </b><b>(идентификатор)</b></entry>
+              <entry><b>Тип переменной</b></entry>
+              <entry><b>Интервал возможных значений</b></entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>Имя в БД</entry>
+              <entry>_Name</entry>
+              <entry>T</entry>
+              <entry>любое</entry>
+            </row>
+            <row>
+              <entry>Название на схеме </entry>
+              <entry>_Capt</entry>
+              <entry>T</entry>
+              <entry>любое</entry>
+            </row>
+            <row>
+              <entry>Редакция названия на схеме</entry>
+              <entry>Capt_Edit</entry>
+              <entry>P</entry>
+              <entry>[Нет, Да]</entry>
+            </row>
+            <row>
+              <entry>Номер элемента в канале</entry>
+              <entry>ElementNo</entry>
+              <entry>I</entry>
+              <entry>? 1</entry>
+            </row>
+            <row>
+              <entry>Перепад давления, при котором клапан открыт, атм</entry>
+              <entry>dp</entry>
+              <entry>R</entry>
+              <entry>любое</entry>
+            </row>
+            <row>
+              <entry>Перепад давления, при котором клапан закрыт, атм</entry>
+              <entry>dp_close</entry>
+              <entry>R</entry>
+              <entry>любое</entry>
+            </row>
+            <row>
+              <entry>Коэффициент сопротивления открытого клапана</entry>
+              <entry>Ksi_min</entry>
+              <entry>R</entry>
+              <entry>? 0</entry>
+            </row>
+            <row>
+              <entry>Коэффициент сопротивления закрытого клапана</entry>
+              <entry>Ksi_max</entry>
+              <entry>R</entry>
+              <entry>? 0</entry>
+            </row>
+            <row>
+              <entry>Тип характеристики клапана</entry>
+              <entry>ChType</entry>
+              <entry>P</entry>
+              <entry>[линейная]</entry>
+            </row>
+            <row>
+              <entry>Постоянная стабилизации, 1/с</entry>
+              <entry>tau</entry>
+              <entry>R</entry>
+              <entry>? 0</entry>
+            </row>
+            <row>
+              <entry>Диапазон нечувствительности, атм</entry>
+              <entry>delta</entry>
+              <entry>R</entry>
+              <entry>любое</entry>
+            </row>
+            <row>
+              <entry>Начальное состояние</entry>
+              <entry>y0</entry>
+              <entry>P</entry>
+              <entry>[закрыт, открыт]</entry>
+            </row>
+            <row>
+              <entry>Концевой выключатель закрытия, %</entry>
+              <entry>Kmin</entry>
+              <entry>R</entry>
+              <entry>? 0</entry>
+            </row>
+            <row>
+              <entry>Концевой выключатель открытия, %</entry>
+              <entry>Kmax</entry>
+              <entry>R</entry>
+              <entry>? 0</entry>
+            </row>
+            <row>
+              <entry>Название в две строки</entry>
+              <entry>_NumRows</entry>
+              <entry>P</entry>
+              <entry>[Нет, Да]</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></p>
+    <p><i>Примечание</i> - Серым цветом помечены строки обязательные для заполнения</p> 
+  </body>
+</topic>

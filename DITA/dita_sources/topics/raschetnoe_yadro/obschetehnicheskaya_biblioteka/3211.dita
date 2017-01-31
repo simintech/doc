@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>СПТ – Узел - ветвление </title>
+  <body>
+    <table id="table_e1m_dwy_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/3211/image001.jpg" height="25" width="36"
+                id="image_f1m_dwy_sy"/></entry>
+            <entry>СПТ – Узел - ветвление</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/3211/image002.jpg" height="79" width="79"
+                id="image_g1m_dwy_sy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок реализует модель узла электрической цепи. Используется для соединения трех элементов
+      (блоков) схемы, один из которых имеет выходной порт, а два других – входные порты.
+      Предназначен для использования в «контуре переменного тока».</p>
+    <p> </p>
+    <p>Выходной потенциал, рассчитываемый внутри модели, определяется относительно «земли» (точки
+      нулевого потенциала).</p>
+    <p> </p>
+    <p>Блок имеет 1 входной и 2 выходных порта.</p>
+    <p> </p>
+    <p><b>Входной порт:</b></p>
+    <ul id="ul_h1m_dwy_sy">
+      <li>1) Вход цепь.</li>
+    </ul>
+    <p> </p>
+    <p><b>Выходные порты:</b></p>
+    <p>1) Выход цепь 1;</p>
+    <p>2) Выход цепь 2.</p>
+    <p> </p>
+    <p><b>Параметры блока</b></p>
+    <p>· Потенциал выхода активный, В;</p>
+    <p>· Потенциал выхода реактивный, В;</p>
+    <p>· Потенциал выхода полный, В.</p>
+    <p> </p>
+  </body>
+</topic>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>СПТ – Приёмник вектора частот </title>
+  <body>
+    <table id="table_tcs_cvy_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/3203/image001.jpg" height="31" width="37"
+                id="image_ucs_cvy_sy"/></entry>
+            <entry>СПТ – Приёмник вектора частот</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/3203/image002.jpg" height="68" width="84"
+                id="image_vcs_cvy_sy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок используется в моделях элементов раздела «Сети переменного тока», параметры которых
+      зависят от частоты. Позволяет получить из памяти частоту цепи переменного тока, определяемою
+      блоком «Задатчик вектора частот» в пределах данного контура. </p>
+    <p> </p>
+    <p><b>Блок имеет 1 выходной порт:</b></p>
+    <p>1) Частоты гармоник, Гц.</p>
+    <p> </p>
+    <p><b>Параметры блока</b></p>
+    <p>· Выход частота.</p>
+    <p> </p>
+    <p><b>Примечание</b></p>
+    <p>Если блоком «Задатчик вектора частот» задан вектор частот, то на выходе данного блока также
+      будет вектор значений частот.</p>
+  </body>
+</topic>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>HS – Заданный напор насоса </title>
+  <body>
+    <table id="table_vp3_g4s_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/2518/image001.png" height="32" width="32"
+                id="image_wp3_g4s_sy"/></entry>
+            <entry><b>HS</b><b>– Заданный напор насоса</b></entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/2518/image002.png" height="102" width="119"
+                id="image_xp3_g4s_sy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок представляет собой модель насоса, создающего заданный напор. Является дочерним для
+      блоков «HS - Канал» и «HS - Труба».</p>
+    <p>Установка блока на канал или трубу обеспечивает заданную добавку давления к границе
+      указанного в свойствах элемента гидравлического канала/трубы. Величина напора задается в
+      Паскалях и может быть, как положительной, так и отрицательной. Блок обладает элементарными
+      функциями насоса и используется для создания расхода в гидравлическом контуре или для
+      обеспечения необходимого перепада давления.</p>
+    <p> </p>
+    <p><b>Свойства блока «HS – Заданный напор насоса»</b></p>
+    <table id="table_yp3_g4s_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_zp3_g4s_sy">
+                <li>·Номер элемента </li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_aq3_g4s_sy">
+                <li>Element</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_bq3_g4s_sy">
+                <li>·Напор, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_cq3_g4s_sy">
+                <li>H</li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока «HS – Заданный напор насоса»</b></p>
+    <table id="table_dq3_g4s_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_eq3_g4s_sy">
+                <li>·Напор насоса, Па </li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_fq3_g4s_sy">
+                <li>_pnas</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_gq3_g4s_sy">
+                <li>·Объемный расход, м³/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_hq3_g4s_sy">
+                <li>_qnas</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_iq3_g4s_sy">
+                <li>·Массовый расход, кг/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_jq3_g4s_sy">
+                <li>_gnas</li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

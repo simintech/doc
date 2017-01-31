@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>ac - Преобразование координат (dq0 -> abc) </title>
+  <body>
+    <table id="table_bxm_npb_5y">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/3437/image001.jpg" height="35" width="36"
+                id="image_cxm_npb_5y"/></entry>
+            <entry>ac - Преобразование координат (dq0 -> abc)</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/3437/image002.jpg" height="93" width="80"
+                id="image_dxm_npb_5y"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок используется для преобразования сигналов, заданных в системе координат <i>dq</i>0 к
+      фазным координатам<i>abc</i>.</p>
+    <p> </p>
+    <p>Преобразование координат соответствует следующим уравнениям:</p>
+    <p> </p>
+    <p><image href="images_old/3437/image003.gif" height="24" width="251" id="image_exm_npb_5y"/></p>
+    <p><image href="images_old/3437/image004.gif" height="24" width="379" id="image_fxm_npb_5y"/></p>
+    <p><image href="images_old/3437/image005.gif" height="24" width="377" id="image_gxm_npb_5y"/></p>
+    <p> </p>
+    <p>где γ – угол между фазной осью <i>a</i> и осью <i>d</i>; <i>x</i> – соответствующие входные
+      сигналы; <i>y</i> – соответствующие выходные сигналы.</p>
+    <p> </p>
+    <p>Блок имеет 4 входных и 3 выходных порта. </p>
+    <p> </p>
+    <p><b>Входные порты:</b></p>
+    <ul id="ul_hxm_npb_5y">
+      <li>1) d;</li>
+      <li>2) q;</li>
+      <li>3) 0;</li>
+      <li>4) Угол.</li>
+    </ul>
+    <p> </p>
+    <p><b>Выходные порты:</b></p>
+    <ul id="ul_ixm_npb_5y">
+      <li>1) a;</li>
+      <li>2) b;</li>
+      <li>3) c.</li>
+    </ul>
+  </body>
+</topic>

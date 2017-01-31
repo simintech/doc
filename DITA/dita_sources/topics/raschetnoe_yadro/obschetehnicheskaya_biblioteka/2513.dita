@@ -1,0 +1,821 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>HS – Пароводяной компенсатор давления </title>
+  <body>
+    <table id="table_oqw_q3y_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/2513/image001.png" height="32" width="32"
+                id="image_pqw_q3y_sy"/></entry>
+            <entry><b>HS</b><b>– Пароводяной компенсатор давления</b></entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/2513/image002.png" height="163" width="139"
+                id="image_qqw_q3y_sy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок представляет собой модель закрытого объема (герметично закрытого бака).</p>
+    <p> </p>
+    <p><b>Свойства блока «HS – Пароводяной компенсатор давления»</b></p>
+    <table id="table_rqw_q3y_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_sqw_q3y_sy">
+                <li>·Тепловая связь со стенкой снаружи</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_tqw_q3y_sy">
+                <li>isHeatOut</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_uqw_q3y_sy">
+                <li>·Кол-во тепловых портов</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_vqw_q3y_sy">
+                <li>Nheatport</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_wqw_q3y_sy">
+                <li>·Объем бака, м³</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_xqw_q3y_sy">
+                <li>V</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_yqw_q3y_sy">
+                <li>·Высотная отметка днища, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_zqw_q3y_sy">
+                <li>Z</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_arw_q3y_sy">
+                <li>·Тип геометрии</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_brw_q3y_sy">
+                <li>Geom</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_crw_q3y_sy">
+                <li>·Поверхность зеркала F=f(L)</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_drw_q3y_sy">
+                <li>F</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_erw_q3y_sy">
+                <li>·Внутренний диаметр, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_frw_q3y_sy">
+                <li>Din</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_grw_q3y_sy">
+                <li>·Начальное давление, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_hrw_q3y_sy">
+                <li>P0</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_irw_q3y_sy">
+                <li>·Начальный недогрев жидкости до Ts, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_jrw_q3y_sy">
+                <li>Tf_0</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_krw_q3y_sy">
+                <li>·Начальный перегрев пара относительно Ts, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_lrw_q3y_sy">
+                <li>Tv_0</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_mrw_q3y_sy">
+                <li>·Начальная объемная доля для 1-й области</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_nrw_q3y_sy">
+                <li>V1</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_orw_q3y_sy">
+                <li>·Начальное объемное паросодержание в 1-й области</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_prw_q3y_sy">
+                <li>Fi_0</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_qrw_q3y_sy">
+                <li>·Кол-во элементов разбиения по высоте</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_rrw_q3y_sy">
+                <li>Nh</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_srw_q3y_sy">
+                <li>·Длины элементов разбиения, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_trw_q3y_sy">
+                <li>deltaH</li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока «HS – Пароводяной компенсатор давления»</b></p>
+    <table id="table_urw_q3y_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_vrw_q3y_sy">
+                <li>·Давление, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_wrw_q3y_sy">
+                <li>_p</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_xrw_q3y_sy">
+                <li>·Весовой уровень, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_yrw_q3y_sy">
+                <li>_l</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_zrw_q3y_sy">
+                <li>·Физический уровень, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_asw_q3y_sy">
+                <li>_level</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_bsw_q3y_sy">
+                <li>·Объемное паросодержание</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_csw_q3y_sy">
+                <li>_fi</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_dsw_q3y_sy">
+                <li>·Объем 1-й области, м³</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_esw_q3y_sy">
+                <li>_vol1</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_fsw_q3y_sy">
+                <li>·Объем 2-й области, м³</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_gsw_q3y_sy">
+                <li>_vol2</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_hsw_q3y_sy">
+                <li>·Энтальпия жидкости в 1-й области, Дж/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_isw_q3y_sy">
+                <li>_h_f1</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_jsw_q3y_sy">
+                <li>·Температура жидкости в 1-й области, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ksw_q3y_sy">
+                <li>_t_f1</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_lsw_q3y_sy">
+                <li>·Плотность жидкости в 1-й области, кг/м³</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_msw_q3y_sy">
+                <li>_r_f1</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_nsw_q3y_sy">
+                <li>·Масса жидкости в 1-й области, кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_osw_q3y_sy">
+                <li>_m_f1</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_psw_q3y_sy">
+                <li>·Энтальпия пара в 1-й области, Дж/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_qsw_q3y_sy">
+                <li>_h_v1</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_rsw_q3y_sy">
+                <li>·Температура пара в 1-й области</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ssw_q3y_sy">
+                <li>_t_v1</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_tsw_q3y_sy">
+                <li>·Плотность пара в 1-й области, кг/м³</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_usw_q3y_sy">
+                <li>_r_v1</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_vsw_q3y_sy">
+                <li>·Масса пара в 1-й области, кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_wsw_q3y_sy">
+                <li>_m_v1</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_xsw_q3y_sy">
+                <li>·Энтальпия пара во 2-й области, Дж/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ysw_q3y_sy">
+                <li>_h_v2</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_zsw_q3y_sy">
+                <li>·Температура пара во 2-й области, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_atw_q3y_sy">
+                <li>_t_v2</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_btw_q3y_sy">
+                <li>·Плотность пара во 2-й области</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ctw_q3y_sy">
+                <li>_r_v2</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_dtw_q3y_sy">
+                <li>·Масса пара во 2-й области, кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_etw_q3y_sy">
+                <li>_m_v2</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ftw_q3y_sy">
+                <li>·Сумма расходов жидкости чрез патрубки в/из 1-й области, кг/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_gtw_q3y_sy">
+                <li>_sGf1</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_htw_q3y_sy">
+                <li>·Сумма расходов пара через патрубки в/из 1-й области, кг/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_itw_q3y_sy">
+                <li>_sGv1</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_jtw_q3y_sy">
+                <li>·Сумма расходов пара через патрубки в/из 2-й области, кг/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ktw_q3y_sy">
+                <li>_sGv2</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ltw_q3y_sy">
+                <li>·Расход жидкости, поступающей через патрубки в 1-ю область, кг/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_mtw_q3y_sy">
+                <li>_Gf1</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ntw_q3y_sy">
+                <li>·Расход пара, поступающего через патрубки в 1-ю область, кг/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_otw_q3y_sy">
+                <li>_Gv1</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ptw_q3y_sy">
+                <li>·Расход пара, поступающего через патрубки во 2-ю область, кг/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_qtw_q3y_sy">
+                <li>_Gv2</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_rtw_q3y_sy">
+                <li>·Расход жидкости, поступающей через спринклеры, кг/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_stw_q3y_sy">
+                <li>_Gspr</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ttw_q3y_sy">
+                <li>·Расход пара из 1-й области по 2-ю, кг/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_utw_q3y_sy">
+                <li>_G12</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_vtw_q3y_sy">
+                <li>·Расход при конденсации на зеркале, кг/ с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_wtw_q3y_sy">
+                <li>_Gmir</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_xtw_q3y_sy">
+                <li>·Расход конденсации пара на струях впрыска, кг/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ytw_q3y_sy">
+                <li>_Gd</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ztw_q3y_sy">
+                <li>·Расход конденсации пара на стенках компенсатора, кг/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_a5w_q3y_sy">
+                <li>_Gw</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_b5w_q3y_sy">
+                <li>·Расход конденсации пара в объеме пара, кг/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_c5w_q3y_sy">
+                <li>_Gcon</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_d5w_q3y_sy">
+                <li>·Тепловой поток в стенку компенсатора в 1-й области, Вт</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_e5w_q3y_sy">
+                <li>_Ggen</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_f5w_q3y_sy">
+                <li>·Тепловой поток в стенку компенсатора во 2-й области, Вт</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_g5w_q3y_sy">
+                <li>_Gvol</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_h5w_q3y_sy">
+                <li>·Тепловой поток от нагревателей в 1-ю область, Вт</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_i5w_q3y_sy">
+                <li>_Qfwf1</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_j5w_q3y_sy">
+                <li>·Тепловой поток от нагревателей во 2-ю область, Вт</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_k5w_q3y_sy">
+                <li>_Qwv2</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_l5w_q3y_sy">
+                <li>·Тепловой поток от нагревателей в 1-ю область, Вт</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_m5w_q3y_sy">
+                <li>_Qnf1</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_n5w_q3y_sy">
+                <li>·Тепловой поток от нагревателей во 2-ю область, Вт</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_o5w_q3y_sy">
+                <li>_Qnv2</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_p5w_q3y_sy">
+                <li>·Тепловой поток при конденсации на зеркале, Вт</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_q5w_q3y_sy">
+                <li>_Qmir</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_r5w_q3y_sy">
+                <li>·Расходная мощность жидкости, поступающей через патрубки в 1-ю область, Вт</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_s5w_q3y_sy">
+                <li>_Ghf1</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_t5w_q3y_sy">
+                <li>·Расходная мощность пара, поступающего через патрубки в 1-ю область, Вт</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_u5w_q3y_sy">
+                <li>_GHv1</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_v5w_q3y_sy">
+                <li>·Расходная мощность пара, поступающего через патрубки во 2-ю область, Вт</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_w5w_q3y_sy">
+                <li>_GHv2</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_x5w_q3y_sy">
+                <li>·Производная dP/dt, Па/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_y5w_q3y_sy">
+                <li>_dPdt</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_z5w_q3y_sy">
+                <li>·Производная dV1/dt, м³/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_avw_q3y_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_bvw_q3y_sy">
+                <li>·Производная dH_f1/dt, Вт/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_cvw_q3y_sy">
+                <li>_dHf1dt</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_dvw_q3y_sy">
+                <li>·Производная dH_v2/dt, Вт/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_evw_q3y_sy">
+                <li>_dHv2dt</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_fvw_q3y_sy">
+                <li>·Производная dFi/dt, 1/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_gvw_q3y_sy">
+                <li>_dFidt</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_hvw_q3y_sy">
+                <li>·Энтальпия воды на линии насыщения, Дж/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ivw_q3y_sy">
+                <li>_Hfs</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_jvw_q3y_sy">
+                <li>·Энтальпия пара на линии насыщения, Дж/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_kvw_q3y_sy">
+                <li>_Hvs</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_lvw_q3y_sy">
+                <li>·Шаг интегрирования, с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_mvw_q3y_sy">
+                <li>_step</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_nvw_q3y_sy">
+                <li>·Коэффициенты теплоотдачи к стенке, Вт/(м²*К)</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ovw_q3y_sy">
+                <li>_alfa</li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Соединение блока «HS – Бак со свободным уровнем» с другими блоками библиотеки происходит с
+      помощью блока «HS – Узел компенсатора».</p>
+    <p>В качестве дополнительных элементов на блок «HS – Бак со свободным уровнем» могут быть
+      установлены следующие блоки (при этом блок «HS – Бак со свободным уровнем» будет родительским,
+      а дополнительно установленные блоки – дочерними):</p>
+    <ul id="ul_pvw_q3y_sy">
+      <li>· «HS – Узел компенсатора».</li>
+    </ul>
+    <p> </p>
+  </body>
+</topic>

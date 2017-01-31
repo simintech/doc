@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>СПТ – Проводимость активная управляемая </title>
+  <body>
+    <table id="table_wws_r3v_ty">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/3215/image001.png" height="33" width="35"
+                id="image_xws_r3v_ty"/></entry>
+            <entry>СПТ – Проводимость активная управляемая </entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/3215/image002.png" height="79" width="79"
+                id="image_yws_r3v_ty"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок реализует модель управляемой идеальной активной проводимости. Предназначен для
+      использования в «контуре переменного тока».</p>
+    <p> </p>
+    <p>Комплексное сопротивление управляемой активной проводимости определяется выражением:</p>
+    <p> </p>
+    <p><image href="images_old/3215/image003.png" height="42" width="102" id="image_zws_r3v_ty"/></p>
+    <p> </p>
+    <p>где <image href="images_old/3215/image004.png" height="22" width="17" id="image_axs_r3v_ty"/>–
+      значение проводимости, соответствующее значению управляющего сигнала, См.</p>
+    <p> </p>
+    <p>За положительное направление токов и мощностей принято направление от «Вход цепь +» к «Вход
+      цепь -».</p>
+    <p> </p>
+    <p><b>Блок имеет 3 входных порта:</b></p>
+    <p>1) Вход цепь +;</p>
+    <p>2) Вход цепь –;</p>
+    <p>3) Проводимость. </p>
+    <p> </p>
+    <p><b>Параметры блока</b></p>
+    <p>· Ток активный, А;</p>
+    <p>· Ток реактивный, А;</p>
+    <p>· Ток полный, А;</p>
+    <p>· Напряжение активное, В;</p>
+    <p>· Напряжение реактивное, В;</p>
+    <p>· Напряжение полное, В;</p>
+    <p>· Мощность активная, Вт.</p>
+    <p> </p>
+  </body>
+</topic>

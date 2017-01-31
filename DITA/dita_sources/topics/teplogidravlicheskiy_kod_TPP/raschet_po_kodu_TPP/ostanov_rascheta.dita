@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Останов выполнения расчета</title>
+  <body>
+    <p>Для принудительного окончания расчета необходимо выполнить одно из следующих действий: </p>
+    <ul id="ul_mxg_p4r_sy">
+      <li>
+        <p>одновременно нажать клавиши Shift и F9;</p>
+      </li>
+      <li>
+        <p>отключить через главное меню ПК МВТУ: Расчет – Стоп;</p>
+      </li>
+      <li>
+        <p>выбрав в палитре панели инструментов кнопку <image
+            href="../tpp_images/tpp_html_m4bacd423.png" id="image_nxg_p4r_sy"/>.</p>
+      </li>
+    </ul>
+  </body>
+</topic>

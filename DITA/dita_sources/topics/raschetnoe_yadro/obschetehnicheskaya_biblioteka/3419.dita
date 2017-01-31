@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>ac - Источник напряжения 1-фазный </title>
+  <body>
+    <table id="table_kgf_zhb_5y">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/3419/image001.png" height="38" width="35"
+                id="image_lgf_zhb_5y"/></entry>
+            <entry>ac - Источник напряжения 1-фазный</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/3419/image002.png" height="83" width="49"
+                id="image_mgf_zhb_5y"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок реализует модель источника напряжения однофазного переменного тока. Используется в цепях
+      c элементами библиотеки «Электрика».</p>
+    <p> </p>
+    <p>Значение напряжения на источнике описывается уравнением:</p>
+    <p> </p>
+    <p><image href="images_old/3419/image003.png" height="43" width="344" id="image_ngf_zhb_5y"/></p>
+    <p> </p>
+    <p>где <i>Um</i>– значение напряжения, задаваемое в свойствах, В;<i>f</i>– значение частоты,
+      задаваемое в свойствах, Гц; φ– значение фазы, задаваемое в свойствах, гр.; <i>t</i> – текущее
+      время расчета; <image href="images_old/3419/image004.png" height="22" width="30"
+        id="image_ogf_zhb_5y"/> – ток, определяемый при расчете, А; <i>R</i> – значение активного
+      сопротивления, задаваемое в свойствах, Ом; <i>L</i>– значение индуктивности, задаваемое в
+      свойствах, Гн.</p>
+    <p> </p>
+    <p><b>Блок имеет 2 входных порта:</b></p>
+    <p>1) +;</p>
+    <p>2) –.</p>
+    <p> </p>
+    <p><b>Свойства блока:</b></p>
+    <ul id="ul_pgf_zhb_5y">
+      <li>· Амплитуда, В;</li>
+      <li>· Частота, Гц;</li>
+      <li>· Фаза, эл. гр.;</li>
+      <li>· Активное сопротивление, Ом;</li>
+      <li>· Индуктивность, Гн.</li>
+    </ul>
+  </body>
+</topic>

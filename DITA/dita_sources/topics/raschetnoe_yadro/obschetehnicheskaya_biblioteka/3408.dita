@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>ac – Измеритель потенциала </title>
+  <body>
+    <table id="table_xww_x3w_ty">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/3408/image001.jpg" height="36" width="37"
+                id="image_yww_x3w_ty"/></entry>
+            <entry>ac – Измеритель потенциала</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/3408/image002.jpg" height="68" width="85"
+                id="image_zww_x3w_ty"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок используется для измерения мгновенного значения потенциала в узле схемы относительно
+      «земли» (точки нулевого потенциала), в цепи c элементами библиотеки «Электрика».</p>
+    <p> </p>
+    <p>Блок является повторителем выхода «Узла». Не вносит погрешности в расчетную схему.
+      Используется, когда необходимо иметь значение потенциала в виде математического сигнала
+      выходных портов.</p>
+    <p> </p>
+    <p>Блок имеет 1 входной и 2 выходных порта. </p>
+    <p> </p>
+    <p><b>Входные порты:</b></p>
+    <p>1) Вход цепь.</p>
+    <p> </p>
+    <p><b>Выходные порты:</b></p>
+    <p>1) Потенциал;</p>
+    <p>2) Выход цепь.</p>
+    <p> </p>
+    <p><b>Параметры блока:</b></p>
+    <ul id="ul_axw_x3w_ty">
+      <li>· Потенциал, В.</li>
+    </ul>
+  </body>
+</topic>

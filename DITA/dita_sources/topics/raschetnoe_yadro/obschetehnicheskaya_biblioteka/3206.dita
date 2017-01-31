@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>СПТ – Источник тока управляемый </title>
+  <body>
+    <table id="table_sgy_nkv_ty">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/3206/image001.png" height="33" width="32"
+                id="image_tgy_nkv_ty"/></entry>
+            <entry>СПТ – Источник тока управляемый </entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/3206/image002.png" height="78" width="79"
+                id="image_ugy_nkv_ty"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок представляет собой модель источника тока управляемого током. Предназначен для
+      использования в «контуре переменного тока».</p>
+    <p> </p>
+    <p>Значение тока источника тока описывается уравнением:</p>
+    <p> </p>
+    <p><image href="images_old/3206/image003.png" height="46" width="291" id="image_vgy_nkv_ty"/></p>
+    <p> </p>
+    <p>где <image href="images_old/3206/image004.png" height="22" width="21" id="image_wgy_nkv_ty"/> и
+        <image href="images_old/3206/image005.png" height="22" width="24" id="image_xgy_nkv_ty"/> –
+      значения действительной и мнимой части токов, соответствующие значениям управляющих сигналов,
+      А; <image href="images_old/3206/image006.png" height="23" width="36" id="image_ygy_nkv_ty"/> –
+      разность потенциалов, определяемая при расчете, В; <image href="images_old/3206/image007.png"
+        height="22" width="12" id="image_zgy_nkv_ty"/> – заданное в свойствах блока сопротивление,
+      Ом.</p>
+    <p> </p>
+    <p>За положительное направление токов и мощностей принято направление от «Вход цепь +» к «Вход
+      цепь -».</p>
+    <p> </p>
+    <p><b>Блок имеет 4 входных порта:</b></p>
+    <p>1) Вход цепь +;</p>
+    <p>2) <image href="images_old/3206/image004.png" height="22" width="21" id="image_ahy_nkv_ty"/>;</p>
+    <p>3) <image href="images_old/3206/image005.png" height="22" width="24" id="image_bhy_nkv_ty"/>;</p>
+    <p>4) Вход цепь –.</p>
+    <p> </p>
+    <p><b>Свойства блока</b></p>
+    <p>· Номер гармоники частоты;</p>
+    <p>· Сопротивление шунта, Ом.</p>
+    <p> </p>
+    <p><b>Примечания</b></p>
+    <p>1) Данная модель приближается к идеальному источнику тока, если свойству «Сопротивление
+      шунта» задать значительное сопротивление.</p>
+    <p>2) В свойстве «Номер гармоники частоты» указывается номер элемента вектора с нужной частотой,
+      формируемого в блоке «Задатчик вектора частот».</p>
+    <p> </p>
+  </body>
+</topic>
