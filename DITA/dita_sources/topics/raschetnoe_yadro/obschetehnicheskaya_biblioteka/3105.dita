@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Управляемый источник тока</title>
+  <body>
+    <table id="table_czt_stb_5y">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/3105.png" height="32" width="32" id="image_dzt_stb_5y"
+              /></entry>
+            <entry>Управляемый источник тока</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry>| СЛАУ |</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/3105s.png" height="84" width="99" id="image_ezt_stb_5y"
+              /></entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry/>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+   
+              <p>Блок представляет собой модель линейного сопротивления с источником тока.</p>
+              <p>Внутренняя структура данного блока приведена на рисунке 1:</p>
+              <p><image href="images_old/3105_ris_1.png" height="326" width="377" id="image_fzt_stb_5y"
+                /></p>
+              <p>Рисунок 1 – Внутренняя структура блока «Управляемый источник напряжения»</p>
+              <p>Данный блок при помощи блоков для создания ненаправленных соединений передаёт в
+                подключенные к данному элементу внутренние узлы электрической схемы значения
+                проводимостей (KJ), которые вычисляются как 1/Rs, и значения токов (Isrc),
+                задаваемые с входа «Управление». При этом с первого входа значение своего номера
+                узла (NSELF) передаётся как значение соседнего номера узла (NJ) и наоборот. Ток
+                источник подаётся с положительным знаком на вход 2 и с отрицательным на вход 1.</p>
+              <p><b>Свойство</b>:</p>
+              <ul id="ul_gzt_stb_5y">
+                <li>
+                  <p>Сопротивление шунта, Ом – число, задающее значение сопротивления шунта.</p>
+                </li>
+              </ul>
+              <p>Примеры заполнения диалогового окна свойств блока:</p>
+              <table id="table_hzt_stb_5y">
+                <tgroup cols="2">
+                  <colspec colnum="1" colname="col1"/>
+                  <colspec colnum="2" colname="col2"/>
+                  <tbody>
+                    <row>
+                      <entry namest="col1" nameend="col2"><b>Числовое</b> задание свойств:</entry>
+                    </row>
+                    <row>
+                      <entry>Название</entry>
+                      <entry>Значение</entry>
+                    </row>
+                    <row>
+                      <entry>Сопротивление шунта, Ом</entry>
+                      <entry>[1e8]</entry>
+                    </row>
+                    <row>
+                      <entry namest="col1" nameend="col2"><b>Именованное</b> задание
+                        свойств:</entry>
+                    </row>
+                    <row>
+                      <entry>Название</entry>
+                      <entry>Значение</entry>
+                    </row>
+                    <row>
+                      <entry>Сопротивление шунта, Ом</entry>
+                      <entry>[Rsh_1]</entry>
+                    </row>
+                  </tbody>
+                </tgroup>
+              </table>
+              <p><b>Примечани</b><b>я</b>:</p>
+              <ol id="ol_izt_stb_5y">
+                <li>Свойство блока может быть только <i>скалярным</i>.</li>
+                <li>Именованное свойство задается как <i>локальная</i> переменная модели (или
+        субмодели) во вкладке <i>Параметры</i> или как глобальный сигнал проекта при помощи пункта
+        главного меню <i>Графика</i>→<i>Сигналы</i>.</li>
+              </ol>
+        
+  </body>
+</topic>

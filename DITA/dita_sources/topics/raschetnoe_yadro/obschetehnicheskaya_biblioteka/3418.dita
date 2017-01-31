@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>ac - Источник напряжения управляемый </title>
+  <body>
+    <table id="table_qfc_wkb_5y">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/3418/image001.png" height="35" width="36"
+                id="image_rfc_wkb_5y"/></entry>
+            <entry>ac - Источник напряжения управляемый</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/3418/image002.png" height="84" width="64"
+                id="image_sfc_wkb_5y"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок реализует модель источника напряжения, управляемого напряжением. Используется в цепях c
+      элементами библиотеки «Электрика».</p>
+    <p> </p>
+    <p>Значение напряжения на источнике описывается уравнением:</p>
+    <p> </p>
+    <p><image href="images_old/3418/image003.png" height="22" width="138" id="image_tfc_wkb_5y"/></p>
+    <p> </p>
+    <p>где <i>U</i>– значение напряжения, соответствующее значению управляющего сигнала, В; <image
+        href="images_old/3418/image004.png" height="22" width="30" id="image_ufc_wkb_5y"/> – ток,
+      определяемый при расчете, А; <i>R</i> – значение внутреннего сопротивления, задаваемое в
+      свойствах, Ом.</p>
+    <p> </p>
+    <p><b>Блок имеет 3 входных порта:</b></p>
+    <p>1) +;</p>
+    <p>2) –;</p>
+    <p>3) U.</p>
+    <p> </p>
+    <p><b>Свойства блока:</b></p>
+    <ul id="ul_vfc_wkb_5y">
+      <li>· Активное сопротивление, Ом.</li>
+    </ul>
+  </body>
+</topic>

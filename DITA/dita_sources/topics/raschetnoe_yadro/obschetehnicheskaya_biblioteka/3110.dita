@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Ёмкость электрическая идеальная</title>
+  <body>
+    <table id="table_jnr_nyb_5y">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/3110.png" height="32" width="32" id="image_knr_nyb_5y"
+              /></entry>
+            <entry>Ёмкость электрическая идеальная</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry>| СЛАУ |</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/3110s.png" height="80" width="99" id="image_lnr_nyb_5y"
+              /></entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry/>
+          </row>
+          
+
+        </tbody>
+      </tgroup>
+    </table>
+              <p>Блок представляет собой модель нелинейного сопротивления, описываемого следующим
+                дифференциальным уравнением:</p>
+              <p><image href="images_old/3110_html_m26c025d3.gif" height="45" width="115" id="image_mnr_nyb_5y"
+                />,</p>
+              <p>где </p>
+              <p><image href="images_old/3110_html_3e8cbd78.gif" height="21" width="40" id="image_nnr_nyb_5y"
+                />– разность потенциалов, В;</p>
+              <p><image href="images_old/3110_html_8897a21.gif" height="21" width="22" id="image_onr_nyb_5y"/>–
+                ёмкость, Ф;</p>
+              <p><image href="images_old/3110_html_m2ed25e99.gif" height="21" width="36" id="image_pnr_nyb_5y"
+                />– ток, А.</p>
+              <p>Впрямую применять для вычисления токов блок типа «Интегратор» нельзя, так как это
+                приводит к задержке на шаг и несходимости численной схемы, реализованной в данной
+                методике построения электросетевых моделей. Поэтому здесь необходимо применять
+                неявную схему расчёта ёмкостных элементов.</p>
+              <p>Данное дифференциальное уравнение может быть сведено к алгебраическому, путём
+                аппроксимации производной при помощи обратной формулы Эйлера в простейшем
+                случае:</p>
+              <p><image href="images_old/3110_html_2f7fa3f4.gif" height="44" width="182" id="image_qnr_nyb_5y"
+                />,</p>
+              <p>где:</p>
+              <p><image href="images_old/3110_html_94862ac.gif" height="23" width="46" id="image_rnr_nyb_5y"/>–
+                разность потенциалов узлов на шаге n+1, к которым подключен данный элемент;</p>
+              <p><image href="images_old/3110_html_34a0dc2c.gif" height="23" width="31" id="image_snr_nyb_5y"
+                />– разность потенциалов узлов на шаге n, к которым подключен данный элемент;</p>
+              <p><image href="images_old/3110_html_14c6b59e.gif" height="21" width="18" id="image_tnr_nyb_5y"
+                />– шаг интегрирования;</p>
+              <p><image href="images_old/3110_html_a7e9834.gif" height="23" width="42" id="image_unr_nyb_5y"/>–
+                ток через элемент на шаге n+1.</p>
+              <p>Соотвественно этому соотношению ёмкость может быть представлена как линейное
+                сопротивление с проводимостью равной:</p>
+              <p><image href="images_old/3110_html_34b85213.gif" height="44" width="52" id="image_vnr_nyb_5y"
+                />,</p>
+              <p>с источником тока равным:</p>
+              <p><image href="images_old/3110_html_7edc9d1b.gif" height="44" width="105" id="image_wnr_nyb_5y"
+                />.</p>
+              <p><image href="images_old/3110_ris_1.png" height="401" width="567" id="image_xnr_nyb_5y"
+                /></p>
+              <p>Рисунок 1 – Внутренняя структура блока «Ёмкостьэлектрическая идеальная»</p>
+              <p>На рисунке 1 изображена графически представленная в среде разработки ПК «МВТУ-4»
+                схема аппроксимации ёмкости, соотвествующая вышеприведённым соотношениям.</p>
+              <p><b>Свойства</b>:</p>
+              <ul id="ul_ynr_nyb_5y">
+                <li>
+                  <p>Ёмкость, Ф – число, задающее значение ёмкости.</p>
+                </li>
+              </ul>
+              <p>Примеры заполнения диалогового окна свойств блока:</p>
+              <table id="table_znr_nyb_5y">
+                <tgroup cols="2">
+                  <colspec colnum="1" colname="col1"/>
+                  <colspec colnum="2" colname="col2"/>
+                  <tbody>
+                    <row>
+                      <entry namest="col1" nameend="col2"><b>Числовое</b> задание свойства:</entry>
+                    </row>
+                    <row>
+                      <entry>Название</entry>
+                      <entry>Значение</entry>
+                    </row>
+                    <row>
+                      <entry>Ёмкость, Ф</entry>
+                      <entry>1e-4</entry>
+                    </row>
+                    <row>
+                      <entry namest="col1" nameend="col2"><b>Именованное</b> задание
+                        свойств:</entry>
+                    </row>
+                    <row>
+                      <entry>Название</entry>
+                      <entry>Значение</entry>
+                    </row>
+                    <row>
+                      <entry>Ёмкость, Ф</entry>
+                      <entry>с5</entry>
+                    </row>
+                  </tbody>
+                </tgroup>
+              </table>
+              <p><b>Примечани</b><b>я</b>:</p>
+              <ol id="ol_a4r_nyb_5y">
+                <li>Свойство блока должно быть <i>скалярной</i> величиной.</li>
+                <li>Именованные свойства задаются как <i>локальные</i> переменные модели (или
+        субмодели) во вкладке <i>Параметры</i> или как глобальные сигналы проекта при помощи пункта
+        главного меню <i>Графика</i> → <i>Сигналы</i>.</li>
+              </ol>
+  </body>
+</topic>

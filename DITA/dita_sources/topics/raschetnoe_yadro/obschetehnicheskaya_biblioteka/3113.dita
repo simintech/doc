@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Датчик потенциала</title>
+  <body>
+    <table id="table_cmy_3zb_5y">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/3113.png" height="32" width="32" id="image_dmy_3zb_5y"
+              /></entry>
+            <entry>Датчик потенциала</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry>| СЛАУ |</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/3113s.png" height="86" width="101" id="image_emy_3zb_5y"
+              /></entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry/>
+          </row>
+         
+        </tbody>
+      </tgroup>
+    </table>
+              <p>Блок используется только для «снятия показаний» потенциала в данной точке
+                электрической схемы.</p>
+              <p>Структура блока представлена на рисунке 1:</p>
+              <p><image href="images_old/3113_ris_1.png" height="203" width="635" id="image_fmy_3zb_5y"
+                /></p>
+              <p>Рисунок 1 – Структура блока «Датчик потенциала».</p>
+              <p>На выходном порте блока «Потенциал» формируется текущее значение потенциала.</p>
+          
+  </body>
+</topic>

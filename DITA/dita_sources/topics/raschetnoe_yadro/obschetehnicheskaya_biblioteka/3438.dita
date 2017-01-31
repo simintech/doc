@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>ac - ФНЧ 1-порядка </title>
+  <body>
+    <table id="table_cgf_qpb_5y">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/3438/image001.png" height="36" width="36"
+                id="image_dgf_qpb_5y"/></entry>
+            <entry>ac - ФНЧ 1-порядка</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/3438/image002.png" height="79" width="79"
+                id="image_egf_qpb_5y"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок реализует фильтр низкой частоты первого порядка для трех сигналов.</p>
+    <p> </p>
+    <p>Структура фильтра низкой частоты первого порядкадля трех сигналов показана на рисунке 1.</p>
+    <p> </p>
+    <p><image href="images_old/3438/image003.png" height="162" width="304" id="image_fgf_qpb_5y"/></p>
+    <p>Рисунок 1 – Структура устройства ФНЧ 1-порядка для 3 сигналов</p>
+    <p> </p>
+    <p>Блок служит для фильтрации сигналов, например, напряжений (токов), полученных от
+      измерительных устройств, в трехфазных устройствах.</p>
+    <p>ФНЧ 1-порядка основан на блоке «Инерционное звено 1-го порядка», постоянная времени которого
+      определяется по заданной частоте среза <i>F</i>, задаваемой в свойствах:</p>
+    <p> </p>
+    <p><image href="images_old/3438/image004.png" height="42" width="73" id="image_ggf_qpb_5y"/></p>
+    <p> </p>
+    <p>Блок имеет 3 входных и 3 выходных порта.</p>
+    <p> </p>
+    <p><b>Входные порты:</b></p>
+    <p>1) A;</p>
+    <p>2) B;</p>
+    <p>3) C.</p>
+    <p> </p>
+    <p><b>Выходные порты:</b></p>
+    <p>1) a;</p>
+    <p>2) b;</p>
+    <p>3) c.</p>
+    <p> </p>
+    <p><b>Свойства блока:</b></p>
+    <ul id="ul_hgf_qpb_5y">
+      <li>· Частота среза, Гц.</li>
+    </ul>
+  </body>
+</topic>

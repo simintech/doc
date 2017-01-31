@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>ac - Источник напряжения 3-фазный с нейтралью </title>
+  <body>
+    <table id="table_yq2_rkb_5y">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/3421/image001.png" height="33" width="36"
+                id="image_zq2_rkb_5y"/></entry>
+            <entry>ac - Источник напряжения 3-фазный с нейтралью</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/3421/image002.png" height="84" width="60"
+                id="image_ar2_rkb_5y"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок реализует модель источника напряжения трехфазного переменного тока с выводом нейтрали.
+      Используется в цепях c элементами библиотеки «Электрика».</p>
+    <p> </p>
+    <p>Значение напряжения на фазах источника описывается уравнениями (схема соединения –
+      «звезда»):</p>
+    <p> </p>
+    <p><image href="images_old/3421/image003.png" height="43" width="369" id="image_br2_rkb_5y"/></p>
+    <p><image href="images_old/3421/image004.png" height="43" width="432" id="image_cr2_rkb_5y"/></p>
+    <p><image href="images_old/3421/image005.png" height="43" width="430" id="image_dr2_rkb_5y"/></p>
+    <p> </p>
+    <p> </p>
+    <p>где <i>Um</i>– значение напряжения, задаваемое в свойствах, В;<i>f</i>– значение частоты,
+      задаваемое в свойствах, Гц; φ– значение фазы, задаваемое в свойствах, гр.; <i>t</i> – текущее
+      время расчета; <image href="images_old/3421/image006.png" height="22" width="30"
+        id="image_er2_rkb_5y"/> – ток, определяемый при расчете в соответствующей фазе, А; <i>R</i>
+      – значение активного сопротивления, задаваемое в свойствах, Ом; <i>L</i>– значение
+      индуктивности, задаваемое в свойствах, Гн.</p>
+    <p>При включении в нейтраль активного сопротивления значением 1012 Ом блок становится идентичен
+      блоку «ac - Источник напряжения 3-фазный».</p>
+    <p> </p>
+    <p><b>Блок имеет 4 входных порта:</b></p>
+    <p>1) А;</p>
+    <p>2) В;</p>
+    <p>3) С;</p>
+    <p>4) N.</p>
+    <p> </p>
+    <p><b>Свойства блока:</b></p>
+    <ul id="ul_fr2_rkb_5y">
+      <li>· Амплитуда фазного напряжения, В;</li>
+      <li>· Частота, Гц;</li>
+      <li>· Фаза, эл. гр.;</li>
+      <li>· Активное сопротивление, Ом;</li>
+      <li>· Индуктивность, Гн.</li>
+    </ul>
+  </body>
+</topic>
