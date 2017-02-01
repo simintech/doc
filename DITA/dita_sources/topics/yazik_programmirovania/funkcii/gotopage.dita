@@ -7,20 +7,29 @@
 <body>
 <section>
       <title>Синтаксис:</title>
-      <codeblock><funcname>gotopage</funcname>(name);</codeblock>
+      <codeblock><funcname>gotopage</funcname>(name);
+<funcname>gotopage</funcname>(name, sel_flag);</codeblock>
     </section>
 <section>
       <title>Аргументы:</title>
       <p>name – имя страницы в окне схемы. </p>
+      <p>sel_flag – флаг снятия выделения (1 – снять выделение, 0 – не снимать выделение). </p>
     </section>
 <section><title>Описание:</title>
-<p><codeph>gotopage(name)</codeph> – функция осуществляет переход на страницу с заданным именем в
-        схемном окне. Имя страницы задается строкой (обрамляется кавычками).</p></section>
+<p><codeph>gotopage(name)</codeph> – функция осуществляет переход на страницу с именем
+          <codeph>name</codeph> в схемном окне. Имя страницы задается строкой (обрамляется
+        кавычками).</p>
+      <p><codeph>gotopage(name, sel_flag)</codeph> – функция осуществляет переход на страницу с
+        именем <codeph>name</codeph> в схемном окне. При этом выделение объектов на схеме можно
+        снимать или оставлять, в зависимости от значения флага <codeph>sel_flag</codeph>.</p></section>
 <section>
       <title>Результат:</title>
       <p>нет</p>
     </section>  
-<section><title>Пример:</title>
-<codeblock>gotopage("page1");</codeblock></section>  
+<section><title>Пример:</title><codeblock><funcname>setselection</funcname>(<funcname>findobjectbyfullname</funcname>("Macro5.kx1"),1)
+<funcname>gotopage</funcname>("Macro5",0);</codeblock>В
+      результате выполнения скрипта будет осуществлено выделение объекта с именем
+        <codeph>kx1</codeph> на странице <codeph>Macro5</codeph>. После чего будет сделан переход на
+      страницу <codeph>Macro5</codeph> с сохранением выполненного выделения. </section>  
   </body>
 </topic>
