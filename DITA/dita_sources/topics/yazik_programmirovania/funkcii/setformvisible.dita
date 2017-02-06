@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setformvisible </title>
+<shortdesc>Функция установки видимости окна управления </shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setformvisible</funcname>(vis);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>vis – двоичный аргумент, задающий видимость (1) или невидимость (0) окна управления.</p>
+    </section>
+<section><title>Описание:</title><codeph>seformvisible</codeph> – функция позволяет устанавливать
+      видимость окна управления из скрипта данного окна. Используется при формировании динамических
+      пультов управления изменяемой конфигурации.</section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>initialization</kword>
+ <funcname>storeframeelements</funcname> <comment>//запоминание состояния окна</comment>
+ <funcname>hideframeelements</funcname> <comment>//скрытие элементов управления окна</comment>
+<kword>end</kword>;
+
+<kword>if</kword> signal_mode = 1 <kword>then</kword> setformvisible(1) <kword>else</kword> setformfisible(0); <comment>//управление видимостью окна в зависимости от значения сигнала</comment>
+
+<kword>finalization</kword>
+ <funcname>setformvisible</funcname>(1); <comment>//восстановление видимости окна</comment>
+ <funcname>restoreframeelement</funcname>; <comment>//восстановление видимости элементов управления окна</comment>
+<kword>end</kword>;</codeblock></section>
+<p> В ходе выполнения данного скрипта окна управления, в зависимости от значения сигнала
+        <codeph>signal_mode</codeph> будет происходить скрытие или отображение данного окна. При
+      этом при запуске проекта происходит скрытие элементов управления окна. </p>  
+  </body>
+</topic>

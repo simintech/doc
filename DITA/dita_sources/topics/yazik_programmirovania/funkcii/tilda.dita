@@ -6,11 +6,12 @@
 <body>
 <section>
       <title>Синтаксис:</title>
-      <codeblock>~&lt;тип данных>(&lt;имя переменной>);</codeblock>
+      <codeblock><funcname>~</funcname>&lt;тип данных>(&lt;имя переменной>);
+<funcname>~</funcname>(&lt; имя переменной >)</codeblock>
     </section>
 <section><title>Описание:</title>
 <p>Доступ к переменной заданного типа по ссылке.  </p></section>  
-<section><title>Пример:</title>
+<section><title>Пример 1:</title>
 <codeblock><kword>var</kword> i=10,
 arr:<rword>array</rword>;
 ptr = @i; //получение ссылки
@@ -18,8 +19,25 @@ ptr1 = @arr;
 d = ~<rword>double</rword>(ptr); //доступ по ссылке
 w = ~<rword>array</rword>(ptr1);
 ~<rword>double</rword>(ptr) = 1000;</codeblock></section>
-<p>В процессе выполнения примера создается ссылка ptr на переменную i и ссылка ptr1 на массив arr.
-      При помощи функции ~ происходит доступ по ссылке к переменным i и arr. Переменной i по ссылке
-      ptr присваивается значение 1000.</p>  
+<p>В процессе выполнения примера создается ссылка <codeph>ptr</codeph> на переменную
+        <codeph>i</codeph> и ссылка <codeph>ptr1</codeph> на массив <codeph>arr</codeph>. При помощи
+      функции <codeph>~</codeph> происходит доступ по ссылке к переменным <codeph>i</codeph> и
+        <codeph>arr</codeph>. Переменной <codeph>i</codeph> по ссылке <codeph>ptr</codeph>
+      присваивается значение 1000.</p>
+    <section>
+      <title>Пример 2:</title>
+      <codeblock><kword>var</kword> a: <kword>double</kword>;
+a = 10;
+aptr = <funcname>@</funcname>a; <comment>// Получение ссылки на переменную </comment>
+<kword>var</kword> b: <kword>double</kword>;
+<comment>//Получение значения переменной по ссылке с использованием нетипизированного указателя</comment>
+b = <funcname>~</funcname>(aptr);
+b = b + 1;
+<comment>//Присвоение по ссылке с использованием нетипизированного доступа к указателю</comment>
+<funcname>~</funcname>(aptr) = b + 1;</codeblock>
+    </section>
+    <p>В процессе выполнения примера создается ссылка <codeph>aptr</codeph> на переменную a и затем
+      получение ее значения а также присваивание ей нового значения с использованием
+      нетипизированного указателя.</p>  
   </body>
 </topic>

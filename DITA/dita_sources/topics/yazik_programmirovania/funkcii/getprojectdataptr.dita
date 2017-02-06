@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getprojectdataptr </title>
+<shortdesc>Функция получения ссылки на переменную в другом проекте </shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>getprojectdataptr</funcname>(prjid, var_name);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>prjid – идентификатор проекта, ссылку на переменную которого нужно получить;</p>
+      <p>var_name – строковое значение имени переменной, ссылку на которую нужно получить. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getprojectdataptr</codeph> – функция позволяет получить ссылку (указатель) на переменную
+        (сигнал) с именем <codeph>var_name</codeph> в рамках проекта с идентификатором
+          <codeph>prjid</codeph>. Иденфикатор <codeph>prjid</codeph> может быть получен с помощью
+        функции <codeph><xref href="openproject.dita" format="dita">openproject</xref></codeph>.
+        Доступ к переменной по полученной ссылке может быть получен с помощью функции <xref
+          href="tilda.dita" format="dita">~</xref>.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>initialization</kword>
+     prjid = <funcname>openproject</funcname>("Loading_project.prt",0); <comment>//Открываем другой проект</comment>
+     initproject(prjid,1);   <comment>//Запуск проекта </comment>
+     input_ptr = <funcname>getprojectdataptr</funcname>(prjid,"parameter_value"); <comment>//Получим ссылку на сигнал другого проекта, которой потом будем управлять</comment>
+     result_ptr = <funcname>getprojectdataptr</funcname>(prjid,"result_value");   <comment>//Получим ссылку на сигнал другого проекта, который потом будем выводить</comment>
+     <funcname>saveprojectstartpoint</funcname>(prjid);    <comment>//Запомним начальную точку, чтобы делать повторяющийся расчёт</comment>
+<kword>end</kword>;
+
+<kword>if</kword> <kword>goodstep</kword> <kword>then</kword> <kword>begin</kword> <comment>//на каждом «хорошем» шаге запускаем другой проект на расчет до 50 секунд</comment>
+     <funcname>loadprojectstartpoint</funcname>(prjid); <comment>//Восстановим начальную точку для циклического расчёта</comment>
+     <funcname>~</funcname>(input_ptr) = variable_input; <comment>//Присваиваем варьируемую величину</comment>
+     <funcname>runprojectto</funcname>(prjid,50); <comment>//Запуск на расчёт до 50 секунд</comment>
+     <funcname>waitprojectfortime</funcname>(prjid,0);  <comment>//Ждём пока оно досчитается</comment>
+     result_data = <funcname>~</funcname>(result_ptr); <comment>//Считываем результат работы и направляем его в переменную</comment>
+<kword>end</kword>;   
+
+<kword>finalization</kword>
+     <funcname>closeproject</funcname>(prjid,0); <comment>//закрываем другой проект</comment>
+<kword>end</kword>;</codeblock></section>
+<p>При инициализации данного скрипта происходит открытие проекта
+        <codeph>Loading_project.prt</codeph>, получение его идентификатора и инициализация на
+      расчет. Затем на каждом «хорошем» шаге интегрирования выполняется загрузка начального
+      состояния второго проекта, передача в него очередного значения «аргумента», расчет проекта до
+      50 секунд и получение от него результата расчета. При окончании расчета происходит закрытие
+      второго проекта без запроса на сохранение изменений. </p>  
+  </body>
+</topic>

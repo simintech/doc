@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>closeproject </title>
+<shortdesc>Функция закрытия проекта по его идентификатору </shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>closeproject</funcname>(prjid, promt_flag);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>prjid – идентификатор проекта;</p>
+      <p>promt_flag – флаг вывода диалога сохранения файла проекта. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>closeproject</codeph> – функция производит закрытие проекта с идентификатором
+          <codeph>prjid</codeph>. При этом если <codeph>promt_flag</codeph>=1, то при закрытии
+        проекта и наличии изменений в нем, происходит вывод диалогового окна сохранения изменений.
+        Если <codeph>promt_flag</codeph>=0 то проект всегда закрывается без запроса на сохранение.
+        Идентификатор <codeph>prjid</codeph> может быть получен функцией
+          <codeph>openproject</codeph>. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>initialization</kword>
+     prjid = <funcname>openproject</funcname>("Loading_project.prt",0);
+<kword>end</kword>;
+
+<comment>//в этом месте можно вызывать какие-либо действия в другом проекте</comment>
+
+<kword>finalization</kword>
+     <funcname>closeproject</funcname>(prjid,0);
+<kword>end</kword>;</codeblock></section>
+<p>При инициализации данного скрипта происходит открытие проекта
+        <codeph>Loading_project.prt</codeph> и получение его идентификатора. При остановке расчета
+      проект <codeph>Loading_project.prt</codeph> будет закрыт без вывода диалога о сохранении.</p>  
+  </body>
+</topic>

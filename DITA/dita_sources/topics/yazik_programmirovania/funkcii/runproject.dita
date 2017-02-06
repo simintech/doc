@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>runproject </title>
+<shortdesc>Функция запуска проекта на расчет </shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>runproject</funcname>(prjid);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>prjid – идентификатор запускаемого проекта. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>runproject</codeph> – функция запуска на расчет проекта с идентификатором
+          <codeph>prjid</codeph>. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>initialization
+     prjid = openproject("Loading_project.prt",0); //Открываем другой проект
+     initproject(prjid,1);   //инициализация проекта 
+     input_ptr = getprojectdataptr(prjid,"parameter_value"); //Получим ссылку на сигнал другого проекта, которой потом будем управлять
+     result_ptr = getprojectdataptr(prjid,"result_value");   //Получим ссылку на сигнал другого проекта, который потом будем выводить
+     runproject(prjid); //запуск проекта на расчет
+end;
+
+finalization
+     closeproject(prjid,0); //закрываем другой проект
+end;</codeblock></section>
+<p>При инициализации данного скрипта происходит открытие проекта
+        <codeph>Loading_project.prt</codeph>, получение его идентификатора, инициализация и запуск
+      на расчет. При остановке расчета основного проекта, проект
+        <codeph>Loading_project.prt</codeph> будет закрыт. </p>  
+  </body>
+</topic>
