@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика – Простой редуктор с переменным КПД  </title>
+  <body>
+    <table id="table_lrw_kgs_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4242/image001.png" height="32" width="32"
+                id="image_mrw_kgs_qy"/></entry>
+            <entry>Механика – Простой редуктор с переменным КПД</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4242/image002.png" height="55" width="147"
+                id="image_nrw_kgs_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>В блоке реализована модель редуктора, характеризуемого передаточным числом:</p>
+    <p><image href="images_old/4242/image003.png" height="46" width="58" id="image_orw_kgs_qy"/></p>
+    <p>Уравнения модели имеют следующий вид:</p>
+    <p><image href="images_old/4242/image004.png" height="22" width="152" id="image_prw_kgs_qy"/></p>
+    <p><image href="images_old/4242/image005.png" height="22" width="257" id="image_qrw_kgs_qy"/></p>
+    <p><image href="images_old/4242/image006.png" height="22" width="296" id="image_rrw_kgs_qy"/></p>
+    <p><image href="images_old/4242/image007.png" height="75" width="343" id="image_srw_kgs_qy"/></p>
+    <p><image href="images_old/4242/image008.png" height="47" width="222" id="image_trw_kgs_qy"/></p>
+    <p> </p>
+    <table id="table_urw_kgs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>g</entry>
+            <entry>-</entry>
+            <entry>Передаточное число</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4242/image009.png" height="22" width="22"
+                id="image_vrw_kgs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Число зубьев ведомого вала</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4242/image010.png" height="22" width="22"
+                id="image_wrw_kgs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Число зубьев ведущего вала</entry>
+          </row>
+          <row>
+            <entry>WB</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость ведущего вала</entry>
+          </row>
+          <row>
+            <entry>WF</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость ведомого вала</entry>
+          </row>
+          <row>
+            <entry>TB</entry>
+            <entry>-</entry>
+            <entry>Момент на ведущем валу</entry>
+          </row>
+          <row>
+            <entry>TF</entry>
+            <entry>-</entry>
+            <entry>Момент на ведомом валу</entry>
+          </row>
+          <row>
+            <entry>Qth</entry>
+            <entry>-</entry>
+            <entry>Порог мощности</entry>
+          </row>
+          <row>
+            <entry>μ</entry>
+            <entry>-</entry>
+            <entry>КПД редуктора</entry>
+          </row>
+          <row>
+            <entry>BB</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения подшипников ведущего вала</entry>
+          </row>
+          <row>
+            <entry>BF</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения подшипников ведомого вала</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Может быть задана явная или неявная схема решения уравнений модели. </p>
+    <p>В случае явной схемы считаются известными угловая скорость ведущего вала и момент на ведомом
+      вале. Для получения значений угловой скорости ведомого вала и момента на ведущем валу не
+      требуется решение нелинейного уравнения. </p>
+    <p>В случае неявной схемы считаются известными угловая скорость ведущего и ведомого вала. Для
+      получения значений момента на ведущем и ведомом валу требуется решение нелинейного
+      уравнения.</p>
+    <p>КПД снизу ограничен значением Kpd_min.</p>
+    <p><b>Входные порты блока:</b></p>
+    <p>Если задана явная схема модели, то блок имеет один механический ненаправленный порт
+      вращательного движения B (ведущий вал). В противном случае добавляется еще один механический
+      ненаправленный порт вращательного движения F (ведомый вал). В любом случае блок имеет один
+      математический входной порт, через который поступает значение текущего КПД редуктора.</p>
+    <p> </p>
+    <p><b>Выходные порты блока:</b></p>
+    <p>Если задана явная схема модели, то блок имеет один механический ненаправленный порт
+      вращательного движения F (ведомый вал). В любом случае блок имеет один математический порт, на
+      который поступает значение потерь мощности.</p>
+    <p> </p>
+    <p><b>Свойства блока:</b></p>
+    <table id="table_xrw_kgs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Mod_Type</entry>
+            <entry>-</entry>
+            <entry>Тип модели</entry>
+          </row>
+          <row>
+            <entry>G</entry>
+            <entry>-</entry>
+            <entry>Передаточное число Nf/Nb</entry>
+          </row>
+          <row>
+            <entry>Kpd_Min</entry>
+            <entry>-</entry>
+            <entry>Минимальное значение КПД</entry>
+          </row>
+          <row>
+            <entry>Qth</entry>
+            <entry>-</entry>
+            <entry>Порог мощности, Вт</entry>
+          </row>
+          <row>
+            <entry>Dir</entry>
+            <entry>-</entry>
+            <entry>Направление вращения (в одну сторону /в разные стороны)</entry>
+          </row>
+          <row>
+            <entry>Bb</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения подшипников порт B, н*м*с/рад</entry>
+          </row>
+          <row>
+            <entry>Bf</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения подшипников порт F, н*м*с/рад</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_yrw_kgs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>ТB</entry>
+            <entry>-</entry>
+            <entry>Момент на ведущем вале B, н*м</entry>
+          </row>
+          <row>
+            <entry>WB</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость на ведущем валу B, рад/с</entry>
+          </row>
+          <row>
+            <entry>ТF</entry>
+            <entry>-</entry>
+            <entry>Момент на ведомом вале F, н*м</entry>
+          </row>
+          <row>
+            <entry>WF</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость на ведомом валу F, рад/с</entry>
+          </row>
+          <row>
+            <entry>Q</entry>
+            <entry>-</entry>
+            <entry>Потери мощности, Вт</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>ac - Трансформатор идеальный 1-фазный 2-обмоточный </title>
+  <body>
+    <table id="table_ig5_nnb_5y">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/3430/image001.jpg" height="30" width="36"
+                id="image_jg5_nnb_5y"/></entry>
+            <entry>ac - Трансформатор идеальный 1-фазный 2-обмоточный</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/3430/image002.jpg" height="56" width="80"
+                id="image_kg5_nnb_5y"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок реализует модель идеального однофазного двухобмоточного трансформатора. Предназначен для
+      использования в цепях c элементами библиотеки «Электрика».</p>
+    <p> </p>
+    <p>Отношения первичных напряжения <image href="images_old/3430/image003.gif" height="22" width="19"
+        id="image_lg5_nnb_5y"/> и тока <image href="images_old/3430/image004.gif" height="22" width="14"
+        id="image_mg5_nnb_5y"/>, приложенных к трансформатору (порты <i>A</i>, <i>X</i>), ко
+      вторичным <image href="images_old/3430/image005.gif" height="22" width="19" id="image_ng5_nnb_5y"/>
+      и <image href="images_old/3430/image006.gif" height="22" width="14" id="image_og5_nnb_5y"/>, на
+      выходе трансформатора (порты <i>a</i>, <i>x</i>), определяются выражениями:</p>
+    <p> </p>
+    <p><image href="images_old/3430/image007.gif" height="24" width="105" id="image_pg5_nnb_5y"/></p>
+    <p><image href="images_old/3430/image008.gif" height="24" width="99" id="image_qg5_nnb_5y"/></p>
+    <p> </p>
+    <p>где <image href="images_old/3430/image009.gif" height="24" width="25" id="image_rg5_nnb_5y"/> –
+      заданный в свойствах блока коэффициент трансформации.</p>
+    <p>Идеальный трансформатор реализован по схеме замещения с использованием отрицательных
+      проводимостей (рисунок 1).</p>
+    <p> </p>
+    <p><image href="images_old/3430/image010.jpg" height="221" width="372" id="image_sg5_nnb_5y"/></p>
+    <p>Рисунок 1 – Схема замещения идеального 1-фазного 2-обмоточного трансформатора:</p>
+    <p><i>Y</i> – базовая проводимость, определяемая в свойствах блока через соответствующее базовое
+      сопротивление, по умолчанию равное 1 Ом.</p>
+    <p> </p>
+    <p>Для корректной работы схемы, содержащей идеальный трансформатор, с каждой стороны
+      трансформатора должно быть соединение с точкой нулевого потенциала («землей»). Соединение
+      может быть непосредственным или, например, через активное сопротивление значением 1012 Ом, при
+      необходимости развязки первичной и вторичной цепи.</p>
+    <p> </p>
+    <p><b>Блок имеет 4 входных порта:</b></p>
+    <p>1) A;</p>
+    <p>2) X;</p>
+    <p>3) a;</p>
+    <p>4) x.</p>
+    <p> </p>
+    <p><b>Свойства блока:</b></p>
+    <ul id="ul_tg5_nnb_5y">
+      <li>· Коэффициент трансформации;</li>
+      <li>· Базовое сопротивление, Ом.</li>
+    </ul>
+  </body>
+</topic>

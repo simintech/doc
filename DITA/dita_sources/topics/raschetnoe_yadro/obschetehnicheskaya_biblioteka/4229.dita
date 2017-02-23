@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика – Идеальный датчик момента </title>
+  <body>
+    <table id="table_jst_mwr_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4229/image001.png" height="33" width="32"
+                id="image_kst_mwr_qy"/></entry>
+            <entry>Механика – Идеальный датчик момента</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4229/image002.png" height="103" width="125"
+                id="image_lst_mwr_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry>
+              <p> </p>
+              <p> </p>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>В блоке реализована модель идеального датчика момента (без учета демпфирования, запаздывания,
+      энергозатрат и т.д.).</p>
+    <p>Уравнение модели имеет следующий вид:</p>
+    <p><image href="images_old/4229/image003.png" height="22" width="103" id="image_mst_mwr_qy"/>,
+      где</p>
+    <table id="table_nst_mwr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4229/image004.png" height="22" width="19"
+                id="image_ost_mwr_qy"/></entry>
+            <entry>-</entry>
+            <entry>измеренный момент</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4229/image005.png" height="22" width="19"
+                id="image_pst_mwr_qy"/></entry>
+            <entry>-</entry>
+            <entry>момент на входе C</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4229/image006.png" height="22" width="19"
+                id="image_qst_mwr_qy"/></entry>
+            <entry>-</entry>
+            <entry>момент на входе R</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p><b>Входные порты блока:</b></p>
+    <p> Блок имеет два механических порта (C и R) вращательного движения.</p>
+    <p>
+      <b>Выходные порты блока:</b></p>
+    <p> Блок имеет один выходной математический порт T, на который поступает значение измеренного
+      момента.</p>
+    <p>
+      <b>Свойства блока – отсутствуют.</b></p>
+    <p><b> Параметры блока:</b></p>
+    <table id="table_rst_mwr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>T</entry>
+            <entry>-</entry>
+            <entry>момент, <image href="images_old/4229/image007.png" height="22" width="36"
+                id="image_sst_mwr_qy"/></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

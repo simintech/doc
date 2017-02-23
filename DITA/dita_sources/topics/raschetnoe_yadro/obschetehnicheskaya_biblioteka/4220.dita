@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика – ограничение поступательного движения </title>
+  <body>
+    <table id="table_frm_jvr_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4220/image001.png" height="32" width="32"
+                id="image_grm_jvr_qy"/></entry>
+            <entry>Механика – ограничение поступательного движения</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4220/image002.png" height="85" width="104"
+                id="image_hrm_jvr_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> В блоке реализована математическая модель двухстороннего ступора для поступательного
+      движения.</p>
+    <p> Уравнение модели имеет следующий вид:</p>
+    <p>Если S ><image href="images_old/4220/image003.png" height="24" width="28" id="image_irm_jvr_qy"
+      /></p>
+    <p><image href="images_old/4220/image004.png" height="24" width="256" id="image_jrm_jvr_qy"/><i>,
+      </i></p>
+    <p>иначе, если S &lt; <image href="images_old/4220/image005.png" height="24" width="34"
+        id="image_krm_jvr_qy"/> , то</p>
+    <p><image href="images_old/4220/image006.png" height="24" width="271" id="image_lrm_jvr_qy"/>, </p>
+    <p>иначе <image href="images_old/4220/image007.png" height="24" width="12" id="image_mrm_jvr_qy"/> =
+      0, где</p>
+    <p><image href="images_old/4220/image008.png" height="44" width="186" id="image_nrm_jvr_qy"/></p>
+    <table id="table_orm_jvr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4220/image009.png" height="24" width="97"
+                id="image_prm_jvr_qy"/></entry>
+            <entry>-</entry>
+            <entry>относительная скорость</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4220/image007.png" height="24" width="12"
+                id="image_qrm_jvr_qy"/></entry>
+            <entry>-</entry>
+            <entry>сила трения</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4220/image010.png" height="24" width="12"
+                id="image_rrm_jvr_qy"/></entry>
+            <entry>-</entry>
+            <entry>относительная скорость между портами С и R</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4220/image011.png" height="24" width="10"
+                id="image_srm_jvr_qy"/></entry>
+            <entry>-</entry>
+            <entry>перемещение между портами С и R</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Входные порты блока:</b></p>
+    <p>Блок имеет два механических порта поступательного движения – C и R. Постулируется, что момент
+      трения положителен, если <image href="images_old/4220/image012.png" height="24" width="64"
+        id="image_trm_jvr_qy"/>.</p>
+    <p><b>Выходные порты блока – отсутствуют</b></p>
+    <p><b>Свойства блока:</b></p>
+    <table id="table_urm_jvr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4220/image003.png" height="24" width="28"
+                id="image_vrm_jvr_qy"/></entry>
+            <entry>-</entry>
+            <entry>верхний упор, м</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4220/image005.png" height="24" width="34"
+                id="image_wrm_jvr_qy"/></entry>
+            <entry>-</entry>
+            <entry>нижний упор, м</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4220/image013.png" height="24" width="31"
+                id="image_xrm_jvr_qy"/></entry>
+            <entry>-</entry>
+            <entry>контактная жесткость верхнего упора, Н/м</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4220/image014.png" height="24" width="36"
+                id="image_yrm_jvr_qy"/></entry>
+            <entry>-</entry>
+            <entry>контактная жесткость нижнего упора, Н/м</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4220/image015.png" height="24" width="31"
+                id="image_zrm_jvr_qy"/></entry>
+            <entry>-</entry>
+            <entry>коэффициент демпфирования верхнего упора,<image href="images_old/4220/image016.png"
+                height="41" width="29" id="image_asm_jvr_qy"/></entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4220/image017.png" height="24" width="36"
+                id="image_bsm_jvr_qy"/></entry>
+            <entry>-</entry>
+            <entry>коэффициент демпфирования нижнего упора, <image href="images_old/4220/image018.png"
+                height="41" width="25" id="image_csm_jvr_qy"/></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_dsm_jvr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>F</entry>
+            <entry>-</entry>
+            <entry>сила, <image href="images_old/4220/image019.png" height="24" width="14"
+                id="image_esm_jvr_qy"/></entry>
+          </row>
+          <row>
+            <entry>V</entry>
+            <entry>-</entry>
+            <entry>относительная скорость, <image href="images_old/4220/image020.png" height="24"
+                width="30" id="image_fsm_jvr_qy"/></entry>
+          </row>
+          <row>
+            <entry>S</entry>
+            <entry>-</entry>
+            <entry>относительное перемещение, м</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

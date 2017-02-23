@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Вывод изображения с линии связи</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/3017.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/3017s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>|Скалярный|</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок отображает изображение, заданного разрешения, сформированное из массива целых чисел.
+      Каждое число массива кодирует одну точку изображения в формате RGBA, то есть задавая ее цвет и
+      прозрачность. Для формирования массива может использоваться встроенная функция языка
+      программирования <xref href="../../yazik_programmirovania/funkcii/getbgracolor.dita"
+        format="dita">getbgracolor</xref>. </p>
+    <section><title>Входы</title>
+    <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>IMAGE</uicontrol> – входной порт для вектора-изображения;</li>
+          <li><uicontrol>WIDTH</uicontrol> – входной порт для значения ширины отображаемого
+            изображения;</li>
+          <li><uicontrol>HEIGHT</uicontrol> – входной порт для значения высоты отображаемого
+            изображения.</li>
+        </ul>
+      </p></section>
+    <section><title>Выходы</title>
+      <p>нет</p></section>
+    <section><title>Свойства:</title>
+      <p>нет</p></section>
+    <section><title>Параметры</title>
+      <p>
+        <ul id="ul_t3c_l3t_2y">
+          <li><uicontrol>Значения</uicontrol> – входной массив, в виде матрицы размерность
+              <uicontrol>WIDTH</uicontrol>×<uicontrol>HEIGHT</uicontrol>.</li>
+        </ul>
+      </p></section>
+    <note>важно, что входы <uicontrol>WIDTH</uicontrol> и <uicontrol>HEIGHT</uicontrol> не задают
+      фактический размер блока, а устанавливают лишь разрешение отображаемого изображения, которое
+      будет растянуто на площадь, занимаемую блоком на схемном окне.</note>
+    
+  </body>
+</topic>

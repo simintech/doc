@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getbgracolor </title>
+<shortdesc>Функция получения кода цвета в формате RGBA.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>rgba = <funcname>getbgracolor</funcname>(red, green, blue, alfa);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>red – красный компонент формируемого цвета, от 0 до 255;</p>
+      <p>green – зеленый компонент формируемого цвета, от 0 до 255;</p>
+      <p>blue – синий компонент формируемого цвета, от 0 до 255;</p>
+      <p>alfa – компонент прозрачности формируемого цвета, от 0 до 255;</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getbgracolor</codeph> – функция получения кода цвета в формате RGBA по значениям четырех
+        компонент.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>rgba – целое число, соответствующее коду цвета, заданного компонентами red, green, blue и
+        alfa.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> w: <kword>integer</kword> = 512;
+<kword>var</kword> h: <kword>integer</kword> = 256;
+<funcname>setimagepicsize</funcname>(RotatedImage,w,h);
+//Выводим изображение на экран в картинку
+<kword>var</kword> bytes: intarray;
+bytes = (w*h)#(<funcname>getbgracolor</funcname>(<funcname>rand</funcname>*255,<funcname>rand</funcname>*255,<funcname>rand</funcname>*255,255));
+<funcname>setimagepicpixels</funcname>(RotatedImage,0,0,w,h,bytes);</codeblock></section>
+<p>В результате выполнения скрипта, блок с именем <codeph>RotatedImage</codeph>, будет произвольно
+      изменять свою окраску с заданным в параметрах проекта шагом перерисовки, независящим от
+      настроек решателя. </p>  
+  </body>
+</topic>

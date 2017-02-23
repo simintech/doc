@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>ac - Сопротивление </title>
+  <body>
+    <table id="table_rq4_tdw_ty">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/3403/image001.png" height="21" width="36"
+                id="image_sq4_tdw_ty"/></entry>
+            <entry>ac - Сопротивление</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/3403/image002.png" height="37" width="81"
+                id="image_tq4_tdw_ty"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок реализует модель активного линейного сопротивления. Используется в цепях c элементами
+      библиотеки «Электрика».</p>
+    <p> </p>
+    <p><b>Блок имеет 2 входных порта.</b></p>
+    <p> </p>
+    <p><b>Свойства блока:</b></p>
+    <ul id="ul_uq4_tdw_ty">
+      <li>· Сопротивление, Ом.</li>
+    </ul>
+  </body>
+</topic>

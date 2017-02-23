@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Дискретно-косинусное преобразование </title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/3609.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/3609s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок предназначен для применения дискретного косинусного преобразования к последовательностям
+      действительных чисел по следующему правилу:<image placement="break" href="images/3609_01.png"
+        align="center" id="image_nvt_fzb_py"/>где <image placement="break" href="images/3609_02.png"
+        align="center" id="image_wrd_lzb_py"/>где <i>N</i> – количество элементов вектора <i>x</i>;
+        <i>y</i> – результирующий массив; <i>x</i> – массив действительных чисел. При этом
+      используется алгоритм быстрого преобразования. Наибольшая эффективность достигается при
+      использовании серий размера 2<i>N</i>. </p>
+    <section><title>Входы</title>
+    <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>DataInput</uicontrol> – входной сигнал;</li>
+          <li><uicontrol>Sync</uicontrol> – вход для синхроимпульсов.</li>
+        </ul>
+      </p></section>
+    <section><title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>DataOut </uicontrol>– выходной отфильтрованный сигнал.</li>
+        </ul>
+      </p></section>
+    <section><title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Размер серии</uicontrol> – целое число, размерность массива данных,
+            накапливаемых для обработки.</li>
+        </ul>
+      </p></section>
+    <section><title>Параметры</title>
+      <p>нет</p></section>
+    <note>на входной порт <uicontrol>DataInput</uicontrol> подается вектор из действительных чисел.
+      На выходном порте формируется результат прямого дискретного косинусного преобразования, то
+      есть вектор действительных чисел с коэффициентами. Срабатывание блока происходит по переднему
+      фронту синхроимпульсов единичной амплитуды, поступающих на входной порт
+        <uicontrol>Sync</uicontrol>.</note>
+    <section>
+      <title>Пример</title>
+      <p>Рассмотрим пример использования блока дискретно-косинусного преобразования, расположенный
+        по адресу <filepath>%PROGRAMM_DIR%\Demo\Automatic\Обработка сигналов\дискретно косинусное
+          преобразование.prt</filepath>: <image placement="break" href="images/3609_1.png"
+          align="center" id="image_j2x_wzb_py"/>Здесь блок прямого дискретно-косинусного
+        преобразования используется в некоторой схеме обработки сигнала. Исходный сигнал
+        представляет собой сумму двух синусоид (1) частотой 1Гц и 4Гц, которая подается на блок
+        буфера (2), формирующий массив из 128 отсчетов с частотой дискретизации 10Гц, задаваемой
+        синхроимпульсами на входе Sync. Образованный массив подвергается прямому дискретному
+        преобразованию с помощью описываемого блока (3). После чего полученный массив действительных
+        чисел проходит процедуру обратного дискретно-косинусного преобразования с помощью
+        соответствующего блока (4), результат которого выводится с помощью блока последовательного
+        вывода (5). В качестве сигнала срабатывания блоков преобразования и сигнала записи данных в
+        регистр используется сигнал готовности данных буфера. Результат работы схемы:<image
+          placement="break" href="images/3609_2.png" align="center" id="image_ugf_yzb_py"
+        />Запаздывание формируется за счет времени накопления заданного количества отсчетов в серии.
+        Чем больше частота работы схемы и чем меньше отсчетов в серии, тем меньше будет время
+        запаздывания. </p>
+    </section>
+    
+  </body>
+</topic>

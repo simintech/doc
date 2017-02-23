@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>dbgetsignalcaption</title>
+<shortdesc>Чтение названия сигнала в группе категории.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>sc = <funcname>dbgetsignalcaption</funcname>(cat, group, nmb);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>cat – имя категории;</p>
+      <p>group – имя группы сигналов внутри категории cat, в которой находится сигнал;</p>
+      <p>nmb – номер сигнала в группе. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>dbgetsignalcaption</codeph> – функция позволяет получить название сигнала с номером nmb,
+        который находится внутри группы group категории cat подключенной базы сигналов.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>sc - функция возвращает строковое значение, соответствующее названию указанного сигнала. В
+        случае отсутствия указанной группы или сигнала, возвращается пустое текстовое значение "". </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>sс = <funcname>dbgetsignalcaption</funcname>("Датчики", "D1", 11);</codeblock></section>
+<p>В результате выполнения данного скрипта, переменная sc получит текстовое значение,
+      соответствующее названию сигнала в номером 11 в группе <codeph>D1</codeph> категории
+        <codeph>Датчики</codeph>. </p>  
+  </body>
+</topic>

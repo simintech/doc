@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Идеальное транспортное запаздывание</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/0074.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/0074s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован | Си
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок векторизован, реализует математическую модель звена, динамика которого описывается
+      линейным уравнением (ЛУ) с запаздыванием:<image placement="break" href="images/0074_1.png"
+        align="center" id="image_wsc_dgx_3y"/>где <i>x<sub>i</sub></i>(<i>t</i>) – i-ый элемент
+      входного сигнала в блок, <i>x<sub>i</sub></i>(<i>t</i>-<i>T<sub>i</sub></i>) – значение
+        <i>i</i>-го элемента входного сигнала, запомненное в блоке <i>T<sub>i</sub></i>секунд назад,
+      по отношению к текущему модельному времени; <i>T<sub>i</sub></i> – элемент вектора времён
+      запаздывания, <i>y<sub>i</sub></i>(<i>t</i>) – элемент выходного сигнала из блока. При нулевых
+      начальных условиях динамика блока может быть представлена следующей передаточной функцией (для
+      скалярного варианта сигналов):<image placement="break" href="images/0074_2.png" align="center"
+        id="image_txg_pgx_3y"/>поэтому пиктограмма данного блока имеет аналогичный вид.</p>
+    <p>Размерности сигналов входа, выхода и вектора времён запаздывания должны совпадать. </p>
+    <section>
+      <title>Входы</title>
+      <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>input</uicontrol> - входной сигнал.</li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>output</uicontrol> - выходной преобразованный сигнал.</li>
+        </ul>
+      </p>
+    </section>
+    <section><title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Время запаздывания</uicontrol> – вектор времён запаздывания
+                <i>T<sub>i</sub></i> в секундах;</li>
+          <li><uicontrol>Начальный размер стека</uicontrol> – начальный размер массива, в котором
+            сохраняются входные данные блока. </li>
+        </ul>
+      </p></section>
+    <section><title>Параметры</title>
+      <p>нет</p></section>
+    <note>по умолчанию блок реализует «запаздывание» скалярного входного сигнала.</note>
+    
+  </body>
+</topic>

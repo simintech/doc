@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика - Трение качения  </title>
+  <body>
+    <table id="table_ypp_gbs_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4279/image001.jpg" height="32" width="32"
+                id="image_zpp_gbs_qy"/></entry>
+            <entry>Механика - Трение качения</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4279/image002.jpg" height="74" width="132"
+                id="image_aqp_gbs_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>В блоке реализован алгоритм вычисления силы трения качения между колесом и дорогой.</p>
+    <p>Реализовано два алгоритма вычисления коэффициента трения</p>
+    <ul id="ul_bqp_gbs_qy">
+      <li>· Постоянный</li>
+      <li>· Табличный</li>
+    </ul>
+    <p>В первом случае сила трения качения вычисляется согласно уравнению:</p>
+    <p><image href="images_old/4279/image003.gif" height="46" width="208" id="image_cqp_gbs_qy"/></p>
+    <table id="table_dqp_gbs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4279/image004.gif" height="22" width="12"
+                id="image_eqp_gbs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Сила трения качения</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4279/image005.gif" height="22" width="14"
+                id="image_fqp_gbs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Прижимная сила</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4279/image006.gif" height="22" width="11"
+                id="image_gqp_gbs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Скорость ступицы колеса</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4279/image007.gif" height="22" width="25"
+                id="image_hqp_gbs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Порог скорости</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4279/image008.gif" height="22" width="11"
+                id="image_iqp_gbs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения качения</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Во втором случае сила трения качения вычисляется согласно стандарту SAE Y2452:</p>
+    <p><image href="images_old/4279/image009.gif" height="23" width="255" id="image_jqp_gbs_qy"/>,
+      где</p>
+    <table id="table_kqp_gbs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4279/image010.gif" height="22" width="12"
+                id="image_lqp_gbs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Давление в колесе</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4279/image011.gif" height="22" width="85"
+                id="image_mqp_gbs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Коэффициенты аппроксимации</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Входные порты блока:</b></p>
+    <p>Блок имеет один математический входной порт (N), через который в модель поступает значение
+      прижимной силы, и один механический порт (F) поступательного движения.</p>
+    <p> </p>
+    <p><b>Выходные порты блока – отсутствуют.</b></p>
+    <p> </p>
+    <p><b>Свойства блока:</b></p>
+    <table id="table_nqp_gbs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Mtype</entry>
+            <entry>-</entry>
+            <entry>Тип вычисления коэффициента трения</entry>
+          </row>
+          <row>
+            <entry>Mu</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения</entry>
+          </row>
+          <row>
+            <entry>Vth</entry>
+            <entry>-</entry>
+            <entry>Порог скорости, м/с</entry>
+          </row>
+          <row>
+            <entry>P</entry>
+            <entry>-</entry>
+            <entry>Давление в шинах, Па</entry>
+          </row>
+          <row>
+            <entry>Alfa</entry>
+            <entry>-</entry>
+            <entry>Коэффициент аппроксимации Alfa</entry>
+          </row>
+          <row>
+            <entry>Beta</entry>
+            <entry>-</entry>
+            <entry>Коэффициент аппроксимации Beta</entry>
+          </row>
+          <row>
+            <entry>A</entry>
+            <entry>-</entry>
+            <entry>Коэффициент аппроксимации A</entry>
+          </row>
+          <row>
+            <entry>B</entry>
+            <entry>-</entry>
+            <entry>Коэффициент аппроксимации B</entry>
+          </row>
+          <row>
+            <entry>C</entry>
+            <entry>-</entry>
+            <entry>Коэффициент аппроксимации C</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_oqp_gbs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry><i>V</i></entry>
+            <entry>-</entry>
+            <entry>Скорость, м/с</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4279/image004.gif" height="22" width="12"
+                id="image_pqp_gbs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Сила трения, н </entry>
+          </row>
+          <row>
+            <entry>Q</entry>
+            <entry>-</entry>
+            <entry>Мощность на трение, Вт</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

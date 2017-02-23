@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Фильтр FFT </title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/3605.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/3605s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок предназначен для фильтрации цифрового сигнала с помощью прямого и обратного быстрых
+      преобразований Фурье. </p>
+    <section><title>Входы</title>
+    <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>RealDataIn</uicontrol> – вектор вещественных частей входного сигнала;</li>
+          <li><uicontrol>Sync</uicontrol> – вектор мнимых частей входного сигнала.</li>
+        </ul>
+      </p></section>
+    <section><title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>RealDataOut</uicontrol> – вектор вещественных частей выходного
+            сигнала;</li>
+          <li><uicontrol>ImagDataOut</uicontrol> – вектор мнимых частей выходного сигнала.</li>
+        </ul>
+      </p></section>
+    <section><title>Свойства:</title>
+      <p><ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Размер серии</uicontrol> – величина серии обрабатываемых данных;</li>
+          <li><uicontrol>Массив коэффициентов усиления</uicontrol> – значения коэффициентов усиления
+            для каждой части спектра.</li>
+        </ul>При каждом на каждом такте симуляции на выходе блока формируется сигнал, прошедший
+        через процедуру фильтрации. Процедура выполняется над дискретным спектром сигнала. Спектр
+        сигнала в диапазоне от 0 до половины частоты дискретизации делится на равные части в
+        соответствие с количеством коэффициентов усиления. К каждой части спектра применяется
+        соответствующий коэффициент усиления.</p></section>
+    <section><title>Параметры</title>
+      <p>нет</p></section>
+    <section>
+      <title>Пример</title>
+      <p>Работа блока показана в демонстрационном примере, расположенном по адресу
+          <filepath>%PROGRAMM_DIR%\Demo\Automatic\Обработка сигналов\fft
+          фильтрация.prt</filepath><image placement="break" href="images/3605_1.png" align="center"
+          id="image_el2_dcb_py"/>Здесь блок FFT – фильтра используется в некоторой схеме обработки
+        сигнала. Исходный сигнал представляет собой смесь двух синусоид и с частотами 1Гц и 4Гц
+        (Диаграмма 1). Блок FFT фильтра работает с сериями по 128 отсчетов на частоте 10Гц. Частота
+        задается сигналом меандра на входах SYNC. Функцию получения дискретного спектра выполняет
+        система, состоящая из буфера последовательного ввода а также блока прямого Фурье.
+        Коэффициенты усиления в фильтре установлены следующим образом: <codeph>1 1 0.5
+        0.5</codeph></p>
+      <p>Частоты подвергаемые фильтрации составляют 4 равномерно распределенных групп в диапазоне от
+        0 до 5Гц (половина частоты дискретизации). К каждой из групп применяется соответствующий
+        коэффициент усиления. Сигнал частотой 4Гц был отфильтрован с коэффициентом 0.5. <image
+          placement="break" href="images/3605_2.png" align="center" id="image_j2r_scb_py"/><image
+          placement="break" href="images/3605_3.png" align="center" id="image_jy3_5cb_py"/>При этом
+        спектр частот выглядит следующим образом: <image placement="break" href="images/3605_4.png"
+          align="center" id="image_bxq_vcb_py"/></p>
+    </section>
+    
+  </body>
+</topic>

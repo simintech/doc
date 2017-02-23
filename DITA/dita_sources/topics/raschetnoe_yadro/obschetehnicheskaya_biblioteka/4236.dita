@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика - Рычаг </title>
+  <body>
+    <table id="table_mct_byr_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4236/image001.png" height="32" width="32"
+                id="image_nct_byr_qy"/></entry>
+            <entry>Механика - Рычаг</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4236/image002.jpg" height="83" width="104"
+                id="image_oct_byr_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> Блок реализует расчет рычага в обобщенной форме. Блок имеет три механических порта (A, B и
+      C) поступательного движения. Любой порт может быть присоединен к неподвижной опоре, превращая
+      рычаг в рычаг первого (точка опоры на конце) или второго (точка опоры посередине) класса.</p>
+    <p> Математическая модель блока описывается следующими уравнениями:</p>
+    <p><image href="images_old/4236/image003.png" height="23" width="187" id="image_pct_byr_qy"/></p>
+    <p><image href="images_old/4236/image004.png" height="23" width="103" id="image_qct_byr_qy"/></p>
+    <p><image href="images_old/4236/image005.png" height="23" width="106" id="image_rct_byr_qy"/></p>
+    <p><image href="images_old/4236/image006.png" height="47" width="131" id="image_sct_byr_qy"/></p>
+    <p><image href="images_old/4236/image007.png" height="47" width="170" id="image_tct_byr_qy"/></p>
+    <table id="table_uct_byr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4236/image008.png" height="23" width="18"
+                id="image_vct_byr_qy"/>,<image href="images_old/4236/image009.png" height="23" width="45"
+                id="image_wct_byr_qy"/></entry>
+            <entry>-</entry>
+            <entry>скорости точек A, B и C</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4236/image010.png" height="23" width="70"
+                id="image_xct_byr_qy"/></entry>
+            <entry>-</entry>
+            <entry>силы в точках A, B и C</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4236/image011.png" height="23" width="63"
+                id="image_yct_byr_qy"/></entry>
+            <entry>-</entry>
+            <entry>длины плеч</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p><b>Входные порты блока:</b></p>
+    <p> Блок имеет три механических порта поступательного движения A, B, C. Любой порт может быть
+      присоединен к неподвижной опоре.</p>
+    <p>
+      <b>Выходные порты блока – отсутствуют.</b></p>
+    <p><b> Свойства блока:</b></p>
+    <table id="table_zct_byr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Lac</entry>
+            <entry>-</entry>
+            <entry>длина плеча AC, м</entry>
+          </row>
+          <row>
+            <entry>Lbc</entry>
+            <entry>-</entry>
+            <entry>длина плеча BC, м</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_adt_byr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Va</entry>
+            <entry>-</entry>
+            <entry>скорость точки A, м/c</entry>
+          </row>
+          <row>
+            <entry>Vb</entry>
+            <entry>-</entry>
+            <entry>скорость точки B, м/c</entry>
+          </row>
+          <row>
+            <entry>Vc</entry>
+            <entry>-</entry>
+            <entry>скорость точки C, м/c</entry>
+          </row>
+          <row>
+            <entry>Fa</entry>
+            <entry>-</entry>
+            <entry>сила в точке A, н</entry>
+          </row>
+          <row>
+            <entry>Fb</entry>
+            <entry>-</entry>
+            <entry>сила в точке B, н</entry>
+          </row>
+          <row>
+            <entry>Fc</entry>
+            <entry>-</entry>
+            <entry>сила в точке C, н</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

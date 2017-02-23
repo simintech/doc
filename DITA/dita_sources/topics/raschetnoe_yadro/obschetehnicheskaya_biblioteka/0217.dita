@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Коэффициент корреляции</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/0217.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/0217s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок реализует вычисление коэффициента корреляции двух входных сигналов. Коэффициент
+      корреляции подсчитывается по следующей формуле:<image placement="break"
+        href="images/0217_1.png" align="center" id="image_tj5_s1v_4y"/>где n – объем выборки
+      (количество значений), <i>x<sub>i</sub></i> – величина <i>i</i>-го значения первого входного
+      сигнала, <i>y<sub>i</sub></i> – величина <i>i</i>-го значения второго входного сигнала,
+        <i>M</i>(<i>x</i>) – математическое ожидание первого сигнала, <i>M</i>(<i>y</i>) –
+      математическое ожидание второго сигнала. </p>
+    <p>Коэффициент корреляции показывает, насколько сильна зависимость между двумя сигналами. Если
+      сигналы являются линейно зависимыми, то коэффициент корреляции по модулю равен 1. </p>
+    <section><title>Входы</title>
+    <p><ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>func 1</uicontrol> - первый входной сигнал.</li>
+          <li><uicontrol>func 2</uicontrol> - второй входной сигнал.</li>
+        </ul>Входные сигналы могут быть векторными, при этом их размерность должна быть
+        одинаковой.</p></section>
+    <section><title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>output</uicontrol> - выходной сигнал.Размерность выходного сигнала всегда
+            равна размерности входных сигналов. </li>
+        </ul>
+      </p></section>
+    <section><title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Размер серии</uicontrol> – значение N этого свойства определяет размер
+            серии в выборке.</li>
+          <li><uicontrol>Способ вывода данных:</uicontrol> По всей выборке - коэффициент корреляции
+            уточняется сразу же после получения очередного нового значения сигнала на входе в блок,
+            По сериям - коэффициент корреляции вычисляется по отдельным сериям, размера N.</li>
+          <li><uicontrol>Период квантования, c</uicontrol> – значение этого свойства определяет
+            длительность временного интервала между двумя последовательными считываниями значений
+            сигнала на входе блока. Если это свойство равно 0 (нулю), то считывание производится с
+            периодом, равным шагу интегрирования. </li>
+        </ul>
+      </p></section>
+    <section><title>Параметры</title>
+      <p>нет</p></section>
+    
+  </body>
+</topic>

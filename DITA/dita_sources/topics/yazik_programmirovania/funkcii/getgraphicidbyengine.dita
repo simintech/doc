@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getgraphicidbyengine </title>
+<shortdesc>Функция получения идентификатора графика в менеджере данных </shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>gid = <funcname>getgraphicidbyengine</funcname>(dm_id);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>dm_id – идентификатор объекта ввода-вывода (объекта в менеджере данных).</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getgraphicidbyengine</codeph> – функция позволяет получить идентификатор графика, по
+        идентификатору (<codeph>dm_id</codeph>) объекта в менеджере данных, содержащего этот график.
+        Идентификатор <codeph>dm_id</codeph> может быть получен с помощью функции
+          <codeph>getengineofblock</codeph>. При этом возвращаемый функцией идентификатор является
+        не идентификатором блока (получаемым, например, функцией <codeph>getobj</codeph>), а
+        идентификатором специфического содержимого объекта менеджера данных (окна графика). </p></section>
+<section>
+      <title>Результат:</title>
+      <p>gid – идентификатор объекта (графика). </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>initialization</kword>
+     eid = <funcname>getengineofblock</funcname>( TimeGraphic8 ); <comment>//получить id объекта в менеджере данных по id блока, с которым этот объект связан</comment>
+     gid = <funcname>getgraphicidbyengine</funcname>(eid);  <comment>//получение id графика по id объекта в менеджере данных</comment>
+     <funcname>setgraphicyauto</funcname>(gid,0,0); <comment>//отключение автомасштаба для графика</comment>
+<kword>end</kword>;
+<funcname>setgraphicyscales</funcname>(gid,0,(-1,1 + time/10)); <comment>//установить масштабы по оси Y</comment></codeblock></section>
+<p>В результате выполнения данного скрипта, на каждом шаге будет происходить изменение масштаба по
+      оси Y для нулевой (первой по порядку) шкалы на графике с именем <codeph>TimeGraph8</codeph>. </p>  
+  </body>
+</topic>

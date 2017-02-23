@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>HS – Тонкая стенка Тип 1 </title>
+  <body>
+    <table id="table_anf_rjy_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/2525/image001.png" height="32" width="32"
+                id="image_bnf_rjy_sy"/></entry>
+            <entry><b>HS</b><b>– Тонкая стенка Тип 1</b></entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/2525/image002.png" height="99" width="75"
+                id="image_cnf_rjy_sy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок представляет собой модель тонкой стенки с вычислением одной температуры по толщине.</p>
+    <p> </p>
+    <p><b>Свойства блока «</b><b>HS</b><b> – Тонкая стенка Тип 1»</b></p>
+    <table id="table_dnf_rjy_sy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_enf_rjy_sy">
+                <li>· Материал</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_fnf_rjy_sy">
+                <li>Material</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_gnf_rjy_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_hnf_rjy_sy">
+                <li>· Тип геометрии стенки</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_inf_rjy_sy">
+                <li>GeomType</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_jnf_rjy_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_knf_rjy_sy">
+                <li>· Толщина стенки, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_lnf_rjy_sy">
+                <li>s</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_mnf_rjy_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_nnf_rjy_sy">
+                <li>· Поверхность теплообмена изнутри, м²</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_onf_rjy_sy">
+                <li>F1</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_pnf_rjy_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_qnf_rjy_sy">
+                <li>· Поверхность теплообмена снаружи, м²</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_rnf_rjy_sy">
+                <li>F2</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_snf_rjy_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_tnf_rjy_sy">
+                <li>· Номера элементов изнутри</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_unf_rjy_sy">
+                <li>link1</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_vnf_rjy_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_wnf_rjy_sy">
+                <li>· Номера элементов снаружи</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_xnf_rjy_sy">
+                <li>link2</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ynf_rjy_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_znf_rjy_sy">
+                <li>· Тепловая связь внутри стенки</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_a4f_rjy_sy">
+                <li>isHeat1</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_b4f_rjy_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_c4f_rjy_sy">
+                <li>· Тепловая связь снаружи стенки</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_d4f_rjy_sy">
+                <li>isHeat2</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_e4f_rjy_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_f4f_rjy_sy">
+                <li>· Количество элементов разбиения по длине</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_g4f_rjy_sy">
+                <li>Nh</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_h4f_rjy_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_i4f_rjy_sy">
+                <li>· Начальная температура стенки, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_j4f_rjy_sy">
+                <li>Twall_0</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_k4f_rjy_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_l4f_rjy_sy">
+                <li>· Задать температуру в начальный момент времени</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_m4f_rjy_sy">
+                <li>SetInitTempFrom</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_n4f_rjy_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_o4f_rjy_sy">
+                <li>· Наружный радиус цилиндрической стенки, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_p4f_rjy_sy">
+                <li>R_out</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_q4f_rjy_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_r4f_rjy_sy">
+                <li>· Термическое сопротивление пленки изнутри, м²*К/Вт</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_s4f_rjy_sy">
+                <li>R_film_in</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_t4f_rjy_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_u4f_rjy_sy">
+                <li>· Термическое сопротивление пленки снаружи, м²*К/Вт</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_v4f_rjy_sy">
+                <li>R_film_out</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_w4f_rjy_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока «</b><b>HS</b><b> – Тонкая стенка Тип 1»</b></p>
+    <table id="table_x4f_rjy_sy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_y4f_rjy_sy">
+                <li>· Температура стенки, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_z4f_rjy_sy">
+                <li>_t_st</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_apf_rjy_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_bpf_rjy_sy">
+                <li>· Тепловой поток изнутри стенки, Вт/м²</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_cpf_rjy_sy">
+                <li>_qf_in</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_dpf_rjy_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_epf_rjy_sy">
+                <li>· Тепловой поток снаружи стенки, Вт/м²</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_fpf_rjy_sy">
+                <li>_qf_out</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_gpf_rjy_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Заметка</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/1006.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/1006s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| не расчетный
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок является сервисным и предоставляет возможность выполнить поясняющие текстовые сообщения
+      в любом месте любого схемного окна проекта. Для ввода текстового сообщения необходимо: <ul
+        id="ul_fpf_3zz_jy">
+        <li>перенести из палитры типовых блоков в схемное окно блок «Заметка», расположив его на
+          желаемое место;</li>
+        <li>выполнить двойной щелчок левой клавишей мыши на появившемся слове Текст;</li>
+        <li>в открывшемся окне текстового редактора ввести необходимые комментарии (заметку,
+          поясняющий схему текст и т.п.); </li>
+        <li>нажать на кнопку <uicontrol>Применить</uicontrol> в панели инструментов текстового
+          редактора. </li>
+      </ul></p>
+    <section><title>Входы</title>
+    <p>нет</p></section>
+    <section><title>Выходы</title>
+      <p>нет</p></section>
+    <section><title>Свойства:</title>
+      <p>нет</p></section>
+    <section><title>Параметры</title>
+      <p>нет</p></section>
+    <note><ol id="ol_obv_411_ky">
+        <li>Произвольный текст, который вставляется на схему, не влияет на расчет.</li>
+        <li>Шрифт, размер, цвет и другие характеристики введённого текстового сообщения можно
+          изменить в свойствах блока:</li>
+      </ol><image placement="break" href="images/1006_1.png" align="center" id="image_udk_r11_ky"
+      />Для вызова данного окна следует нажать правой кнопкой мыши на блоке в схемном окне и выбрать
+      пункт «Шрифт» в свойствах блока: <image placement="break" href="images/1006_2.png"
+        align="center" id="image_up4_s11_ky"/></note>
+    
+  </body>
+</topic>

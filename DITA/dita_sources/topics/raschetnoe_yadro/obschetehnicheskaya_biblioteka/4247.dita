@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика – Планетарный механизм с двумя парами звезда-планета  </title>
+  <body>
+    <table id="table_flk_sfs_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4247/image001.png" height="32" width="32"
+                id="image_glk_sfs_qy"/></entry>
+            <entry>Механика – Планетарный механизм с двумя парами звезда-планета</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4247/image002.png" height="87" width="133"
+                id="image_hlk_sfs_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>В блоке реализована модель планетарного механизма с двумя сателлитами. Схематически механизм
+      показан на рисунке 1. В состав планетарного механизма входят следующие пары: малая звездочка -
+      внутренний сателлит, большая звездочка – внешний сателлит, внутренний сателлит – внешний
+      сателлит, внешний сателлит – обод. Все элементы имеют общее водило. </p>
+    <p><image href="images_old/4247/image003.png" height="317" width="294" id="image_ilk_sfs_qy"/></p>
+    <p>Рисунок 1.</p>
+    <p>Модель планетарного механизма представлена в виде субмодели, структурная схема которой
+      приведена на рисунке 2. </p>
+    <p>Передаточное отношение для пары «внешний сателлит – обод» определяется следующим образом:</p>
+    <p><image href="images_old/4247/image004.png" height="46" width="121" id="image_jlk_sfs_qy"/></p>
+    <p>Передаточное отношение для пары «большая звездочка - внешний сателлит» определяется следующим
+      образом:</p>
+    <p><image href="images_old/4247/image005.png" height="42" width="119" id="image_klk_sfs_qy"/></p>
+    <p>Передаточное отношение для пары «малая звездочка - внутренний сателлит» определяется
+      следующим образом:</p>
+    <p><image href="images_old/4247/image006.png" height="46" width="167" id="image_llk_sfs_qy"/></p>
+    <p>Передаточное отношение для пары «внутренний сателлит - внешний сателлит» определяется
+      следующим образом:</p>
+    <p><image href="images_old/4247/image007.png" height="47" width="185" id="image_mlk_sfs_qy"/></p>
+    <p><image href="images_old/4247/image008.png" height="352" width="646" id="image_nlk_sfs_qy"/>
+      Рисунок 2.</p>
+    <p> </p>
+    <p>
+      <b>Входные порты блока:</b></p>
+    <p>Блок имеет четыре механических ненаправленных порта вращательного движения (С –водило, SS –
+      малая звездочка, SL – большая звездочка, R - обод).</p>
+    <p> </p>
+    <p><b>Выходные порты блока:</b></p>
+    <p>Блок имеет один математический порт, на который поступает значение потерь мощности.</p>
+    <p> </p>
+    <p><b>Свойства блока:</b></p>
+    <table id="table_olk_sfs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>GRSL</entry>
+            <entry>-</entry>
+            <entry>Отношение числа зубьев обода R и большой звезды SL Nr/Nsl</entry>
+          </row>
+          <row>
+            <entry>GRSS</entry>
+            <entry>-</entry>
+            <entry>Отношение числа зубьев обода R и малой звезды SS Nr/Nss</entry>
+          </row>
+          <row>
+            <entry>KSSP</entry>
+            <entry>-</entry>
+            <entry>КПД передачи малая звезда-планета</entry>
+          </row>
+          <row>
+            <entry>KSLP</entry>
+            <entry>-</entry>
+            <entry>КПД передачи большая звезда-планета</entry>
+          </row>
+          <row>
+            <entry>KRP</entry>
+            <entry>КПД передачи обод-планета</entry>
+          </row>
+          <row>
+            <entry>KPP</entry>
+            <entry>КПД передачи планета-планета</entry>
+          </row>
+          <row>
+            <entry>BSSP</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения пары малая звезда/водило</entry>
+          </row>
+          <row>
+            <entry>BSLP</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения пары большая звезда/водило</entry>
+          </row>
+          <row>
+            <entry>BRP</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения пары обод/водило</entry>
+          </row>
+          <row>
+            <entry>BPP</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения пары планета/водило</entry>
+          </row>
+          <row>
+            <entry>Qth</entry>
+            <entry>-</entry>
+            <entry>Порог мощности, Вт</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_plk_sfs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry><i>WC</i></entry>
+            <entry>-</entry>
+            <entry>Угловая скорость водила, рад/с</entry>
+          </row>
+          <row>
+            <entry><i>TC</i></entry>
+            <entry>-</entry>
+            <entry>Момент на водиле, н*м</entry>
+          </row>
+          <row>
+            <entry><i>WSL</i></entry>
+            <entry>-</entry>
+            <entry>Угловая скорость большой звездочки, рад/с</entry>
+          </row>
+          <row>
+            <entry><i>TSL</i></entry>
+            <entry>-</entry>
+            <entry>Момент на большой звездочке, н*м</entry>
+          </row>
+          <row>
+            <entry><i>WSS</i></entry>
+            <entry>-</entry>
+            <entry>Угловая скорость малой звездочки, рад/с</entry>
+          </row>
+          <row>
+            <entry><i>TSS</i></entry>
+            <entry>-</entry>
+            <entry>Момент на малой звездочке, н*м</entry>
+          </row>
+          <row>
+            <entry><i>WPO</i></entry>
+            <entry>-</entry>
+            <entry>Угловая скорость большой планеты, рад/с</entry>
+          </row>
+          <row>
+            <entry><i>TPO</i></entry>
+            <entry>-</entry>
+            <entry>Момент на большой планете, н*м</entry>
+          </row>
+          <row>
+            <entry><i>WPI</i></entry>
+            <entry>-</entry>
+            <entry>Угловая скорость малой планеты, рад/с</entry>
+          </row>
+          <row>
+            <entry><i>TPI</i></entry>
+            <entry>-</entry>
+            <entry>Момент на малой планете, н*м</entry>
+          </row>
+          <row>
+            <entry><i>WR</i></entry>
+            <entry> </entry>
+            <entry>Угловая скорость обода, рад/с</entry>
+          </row>
+          <row>
+            <entry><i>TR</i></entry>
+            <entry> </entry>
+            <entry>Момент на ободе, н*м</entry>
+          </row>
+          <row>
+            <entry><i>Q</i></entry>
+            <entry>-</entry>
+            <entry>Потери мощности, Вт</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

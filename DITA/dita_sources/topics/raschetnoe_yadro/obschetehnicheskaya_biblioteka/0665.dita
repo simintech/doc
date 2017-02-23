@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Преобразователь 2-фазного напряжения в 3-фазное</title>
+  <body>
+    <table id="table_a4n_1n4_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/0665.png" height="28" width="38" id="image_b4n_1n4_qy"
+              /></entry>
+            <entry>Преобразователь 2-фазного напряжения в 3-фазное</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry/>
+          </row>
+          <row>
+            <entry><image href="images_old/0665s.png" height="52" width="88" id="image_c4n_1n4_qy"
+              /></entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry/>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2">
+              <p>Блок реализует преобразование двухфазного напряжения в трёхфазное напряжение.
+                Значения напряжений на выходе вычисляются следующим образом:</p>
+              <p><image href="images_old/0665_html_510dde3f.gif" height="131" width="272" id="image_d4n_1n4_qy"
+                />(1)</p>
+              <p>где<image href="images_old/0665_html_174ad746.gif" height="23" width="106"
+                  id="image_e4n_1n4_qy"/>— фазные напряжения 2-фазного тока;</p>
+              <p><image href="images_old/0665_html_5775289a.gif" height="23" width="157" id="image_f4n_1n4_qy"
+                />— фазные напряжения 3-фазного тока.</p>
+              <p>Блок имеет 2 входных и 3 выходных порта. </p>
+              <p><b>В</b><b>ходные сигналы</b>:</p>
+              <ol id="ol_g4n_1n4_qy">
+                <li>
+                  <p>Напряжение<image href="images_old/0665_html_5360cd1e.gif" height="23" width="53"
+                      id="image_h4n_1n4_qy"/>, В.</p>
+                </li>
+                <li>
+                  <p>Напряжение<image href="images_old/0665_html_m724aeba1.gif" height="23" width="52"
+                      id="image_i4n_1n4_qy"/>, В.</p>
+                </li>
+              </ol>
+              <p><b>В</b><b>ыходны</b><b>е</b><b> сигналы</b>:</p>
+              <ol id="ol_j4n_1n4_qy">
+                <li>
+                  <p>Напряжение<image href="images_old/0665_html_mb324875.gif" height="23" width="52"
+                      id="image_k4n_1n4_qy"/>, В.</p>
+                </li>
+                <li>
+                  <p>Напряжение<image href="images_old/0665_html_m3de726e5.gif" height="23" width="52"
+                      id="image_l4n_1n4_qy"/>, В.</p>
+                </li>
+                <li>
+                  <p>Напряжение<image href="images_old/0665_html_58142518.gif" height="23" width="51"
+                      id="image_m4n_1n4_qy"/>, В.</p>
+                </li>
+              </ol>
+              <p><b>Примечание</b>: вместо фазных напряжений на входы можно подавать фазные токи для
+                преобразования 2-фазного тока в 3-фазный.</p>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>

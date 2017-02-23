@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика - Пружина поступательного движения </title>
+  <body>
+    <table id="table_ipw_35r_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4217/image001.png" height="32" width="32"
+                id="image_jpw_35r_qy"/></entry>
+            <entry>Механика - Пружина поступательного движения</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4217/image002.png" height="85" width="104"
+                id="image_kpw_35r_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>В блоке реализована математическая модель идеальной пружины с постоянным коэффициентом
+      жесткости, описываемая следующими уравнениями:</p>
+    <p><image href="images_old/4217/image003.png" height="24" width="73" id="image_lpw_35r_qy"/></p>
+    <p><image href="images_old/4217/image004.png" height="51" width="152" id="image_mpw_35r_qy"/></p>
+    <table id="table_npw_35r_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>F</entry>
+            <entry>-</entry>
+            <entry>сила пружины</entry>
+          </row>
+          <row>
+            <entry>K</entry>
+            <entry>-</entry>
+            <entry>коэффициент жесткости</entry>
+          </row>
+          <row>
+            <entry>S</entry>
+            <entry>-</entry>
+            <entry>деформация пружины</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4217/image005.png" height="24" width="19"
+                id="image_opw_35r_qy"/></entry>
+            <entry>-</entry>
+            <entry>скорость порта C</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4217/image006.png" height="24" width="19"
+                id="image_ppw_35r_qy"/></entry>
+            <entry>-</entry>
+            <entry>скорость порта R</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Входные порты блока:</b></p>
+    <p>Блок имеет два механических порта поступательного движения – C и R. Постулируется, что сила,
+      создаваемый пружиной, положителен, если перемещение S между портами C и R – положителен.</p>
+    <p><b>Выходные порты блока – отсутствуют.</b></p>
+    <p><b>Свойства блока:</b></p>
+    <table id="table_qpw_35r_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>K</entry>
+            <entry>-</entry>
+            <entry>коэффициент жесткости, <image href="images_old/4217/image007.png" height="33"
+                width="10" id="image_rpw_35r_qy"/></entry>
+          </row>
+          <row>
+            <entry>S0</entry>
+            <entry>-</entry>
+            <entry>начальная деформация пружины, м</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_spw_35r_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>F</entry>
+            <entry>-</entry>
+            <entry>сила, н</entry>
+          </row>
+          <row>
+            <entry>V</entry>
+            <entry>-</entry>
+            <entry>разность скоростей, м/с</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

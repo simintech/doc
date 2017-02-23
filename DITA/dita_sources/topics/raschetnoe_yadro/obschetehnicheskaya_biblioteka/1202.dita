@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>RS-триггер с приоритетом по установке</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/1202.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/1202s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован | Си
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок реализует RS-триггер с приоритетом по установке, т.е. если уровень логической единицы
+      присутствует на входах R и S, то выход принимает значение логической единицы:<image
+        placement="break" href="images/1202_1.png" align="center" id="image_kfl_svm_4y"/>где
+        <i>y</i>(<i>t</i>) – выходной сигнал блока, <i>y</i>(<i>t</i> - Δ<i>t</i>) – значение
+      выходного сигнала на предыдущем временном шаге интегрирования,
+        <i>x</i><sub><i>S</i></sub>(<i>t</i>), <i>x<sub>R</sub></i>(<i>t</i>) - первый и второй
+      входные сигналы блока (от английских слов Set и Reset – Установ и Сброс, соответственно). </p>
+    <section>
+      <title>Входы</title>
+      <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>S</uicontrol> - вход S триггера;</li>
+          <li><uicontrol>R</uicontrol> - вход сброса R.</li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>Y</uicontrol> - выход триггера.</li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Начальные условия</uicontrol> – начальные значение выхода;</li>
+          <li><uicontrol>Добавить инверсный выход</uicontrol> – указывает наличие инверсного
+            выхода.</li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <title>Параметры</title>
+      <p>нет</p>
+    </section>
+    
+  </body>
+</topic>

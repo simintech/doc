@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>HS – Тепловое граничное условие </title>
+  <body>
+    <table id="table_scp_dly_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/2523/image001.png" height="32" width="32"
+                id="image_tcp_dly_sy"/></entry>
+            <entry><b>HS</b><b>– Тепловое граничное условие</b></entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/2523/image002.png" height="83" width="88"
+                id="image_ucp_dly_sy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок подключается к тепловым структурам (стенкам) и формирует граничное условие второго или
+      третьего рода, имитируя канал с указанными параметрами теплоотдачи.</p>
+    <p> </p>
+    <p><b>Свойства блока «</b><b>HS</b><b> – Тепловое граничное условие»</b></p>
+    <table id="table_vcp_dly_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_wcp_dly_sy">
+                <li>·Число элементов</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_xcp_dly_sy">
+                <li>Count</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ycp_dly_sy">
+                <li>·Тип ГУ</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_zcp_dly_sy">
+                <li>type</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_adp_dly_sy">
+                <li>·Температура, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_bdp_dly_sy">
+                <li>t</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_cdp_dly_sy">
+                <li>·Коэффициент теплоотдачи, Вт/(м²*К)</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ddp_dly_sy">
+                <li>alfa</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_edp_dly_sy">
+                <li>·Плотность теплового потока, Вт/м²</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_fdp_dly_sy">
+                <li>qf</li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>

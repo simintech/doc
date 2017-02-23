@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>НЛ - Нечёткое И (конъюнкция) </title>
+  <body>
+    <table id="table_ens_ml4_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/3705/image001.png" height="32" width="32"
+                id="image_fns_ml4_qy"/></entry>
+            <entry><ph id="OLE_LINK1">НЛ - Нечёткое <b>И</b> (конъюнкция)</ph></entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/3705/image002.png" height="67" width="132"
+                id="image_gns_ml4_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок предназначен для формирования логических правил и расчета их результата применения в
+      системах нечеткой логики (активация правил).</p>
+    <p>Блок реализует расчет правила логики по процедуре нечеткой логической операции <b>И
+        </b>(<b>конъюнкция)</b>. На вход подаются значения функций принадлежности термов
+      лингвистических переменных, соединенных логическим <b>И</b>, результат – заключение правила,
+      умноженное на весовой коэффициент. В зависимости от параметра блока «<i>Метод активации</i>»
+      результат рассчитывается по следующим формулам:</p>
+    <p>1) Метод активации <i>Prod</i> (произведение):</p>
+    <p><image href="images_old/3705/image003.png" height="22" width="117" id="image_hns_ml4_qy"/></p>
+    <p>2) Метод активации <i>Min </i>(минимум):</p>
+    <p><image href="images_old/3705/image004.png" height="22" width="143" id="image_ins_ml4_qy"/></p>
+    <p> </p>
+    <p>где:</p>
+    <p>Y– значение выхода блока;</p>
+    <p><image href="images_old/3705/image005.png" height="22" width="47" id="image_jns_ml4_qy"/> –
+      значения входов;</p>
+    <p><image href="images_old/3705/image006.png" height="22" width="14" id="image_kns_ml4_qy"/> –
+      весовой коэффициент.</p>
+    <p> </p>
+    <p><b>Блок имеет два входа и один выход:</b></p>
+    <p>входные порты – значения функции принадлежности входных термов;</p>
+    <p>выходной порт – результат активации правила.</p>
+    <p> </p>
+    <p><b>Параметры блока</b></p>
+    <p>· Весовой коэффициент w – весовой коэффициент правила в общей базе правил.</p>
+    <p>· Метод активации:</p>
+    <ul id="ul_lns_ml4_qy">
+      <li>1) <i>Prod</i> (Произведение) расчет происходит по формуле 1</li>
+      <li>2) <i>Min </i>(Минимум) расчет происходит по формуле 2</li>
+      <li> </li>
+    </ul>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+  </body>
+</topic>

@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика - Контактное трение между двумя телами поступательного движения </title>
+  <body>
+    <table id="table_fcc_pbs_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4276/image001.jpg" height="32" width="32"
+                id="image_gcc_pbs_qy"/></entry>
+            <entry>Механика - Контактное трение между двумя телами поступательного движения</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4276/image002.jpg" height="74" width="132"
+                id="image_hcc_pbs_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>В блоке реализована модель трения между двумя проскальзывающими относительно друг друга
+      телами поступательного движения, между которыми действует прижимная сила.</p>
+    <p>Сила трения возникает, если прижимная сила больше заданного порового значения.</p>
+    <p>Для того, чтобы тела сцепились (двигались как одно целое), необходимо выполнение следующих
+      условий:</p>
+    <ul id="ul_icc_pbs_qy">
+      <li>· относительная скорость меньше заданного порога;</li>
+      <li>· сила меньше силы страгивания.</li>
+    </ul>
+    <p>Тела остаются сцепленными до тех пор, пока сила не станет больше силы страгивания.</p>
+    <p>Уравнения модели имеют следующий вид:</p>
+    <p><image href="images_old/4276/image003.gif" height="42" width="253" id="image_jcc_pbs_qy"/></p>
+    <p><image href="images_old/4276/image004.gif" height="22" width="108" id="image_kcc_pbs_qy"/></p>
+    <p><image href="images_old/4276/image005.gif" height="22" width="296" id="image_lcc_pbs_qy"/></p>
+    <p><image href="images_old/4276/image006.gif" height="43" width="246" id="image_mcc_pbs_qy"/></p>
+    <p><image href="images_old/4276/image007.gif" height="43" width="244" id="image_ncc_pbs_qy"/></p>
+    <p><image href="images_old/4276/image008.gif" height="43" width="418" id="image_occ_pbs_qy"/></p>
+    <table id="table_pcc_pbs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4276/image009.gif" height="22" width="12"
+                id="image_qcc_pbs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Сила трения</entry>
+          </row>
+          <row>
+            <entry>FB</entry>
+            <entry>-</entry>
+            <entry>Внешняя сила порт B</entry>
+          </row>
+          <row>
+            <entry>FF</entry>
+            <entry>-</entry>
+            <entry>Внешняя сила порт F</entry>
+          </row>
+          <row>
+            <entry>Fs</entry>
+            <entry>-</entry>
+            <entry>Максимальный сила страгивания</entry>
+          </row>
+          <row>
+            <entry>VB</entry>
+            <entry>-</entry>
+            <entry>Cкорость порт B</entry>
+          </row>
+          <row>
+            <entry>VF</entry>
+            <entry>-</entry>
+            <entry>Cкорость порт F</entry>
+          </row>
+          <row>
+            <entry><i>V</i></entry>
+            <entry>-</entry>
+            <entry>Относительная скорость</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4276/image010.gif" height="22" width="14"
+                id="image_rcc_pbs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Прижимная сила</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4276/image011.gif" height="22" width="11"
+                id="image_scc_pbs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Кинематический коэффициент контактного трения</entry>
+          </row>
+          <row>
+            <entry>B</entry>
+            <entry>-</entry>
+            <entry>Коэффициент вязкого трения</entry>
+          </row>
+          <row>
+            <entry>Vtol</entry>
+            <entry>-</entry>
+            <entry>Порог скорости</entry>
+          </row>
+          <row>
+            <entry>MB</entry>
+            <entry>-</entry>
+            <entry>Масса порта B</entry>
+          </row>
+          <row>
+            <entry>MF</entry>
+            <entry>-</entry>
+            <entry>Масса порта F</entry>
+          </row>
+          <row>
+            <entry>IsLock</entry>
+            <entry>-</entry>
+            <entry>Признак сцепления</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Входные порты блока:</b></p>
+    <p>Блок имеет один математический порт (N), через который в модель блока поступает значение
+      прижимной силы N.</p>
+    <p> </p>
+    <p><b>Выходные порты блока:</b></p>
+    <p>Блок имеет два механических порта (B и F) поступательного движения.</p>
+    <p> </p>
+    <p><b>Свойства блока:</b></p>
+    <table id="table_tcc_pbs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Mtype</entry>
+            <entry>-</entry>
+            <entry>Тип задания коэффициента трения (постоянный/табличный)</entry>
+          </row>
+          <row>
+            <entry>Mu</entry>
+            <entry>-</entry>
+            <entry>Кинетический коэффициент контактного трения</entry>
+          </row>
+          <row>
+            <entry>Mus</entry>
+            <entry>-</entry>
+            <entry>Отношение статического коэффициента к кинематическому</entry>
+          </row>
+          <row>
+            <entry>Vx</entry>
+            <entry>-</entry>
+            <entry>Массив скоростей (аргумент),м/с</entry>
+          </row>
+          <row>
+            <entry>My</entry>
+            <entry>-</entry>
+            <entry>Массив кинематических коэффициентов (функция)</entry>
+          </row>
+          <row>
+            <entry>Vtol</entry>
+            <entry>-</entry>
+            <entry>Порог скорости, м/с</entry>
+          </row>
+          <row>
+            <entry>Nth</entry>
+            <entry>-</entry>
+            <entry>Порог применимой силы, н</entry>
+          </row>
+          <row>
+            <entry>B</entry>
+            <entry>-</entry>
+            <entry>Коэффициент вязкого трения,<image href="images_old/4276/image012.gif" height="29"
+                width="17" id="image_ucc_pbs_qy"/></entry>
+          </row>
+          <row>
+            <entry>MB</entry>
+            <entry>-</entry>
+            <entry>Масса порта B, кг</entry>
+          </row>
+          <row>
+            <entry>VB0</entry>
+            <entry>-</entry>
+            <entry>Начальная скорость порта B, м/с</entry>
+          </row>
+          <row>
+            <entry>MF</entry>
+            <entry>-</entry>
+            <entry>Момент инерции порта F, кг</entry>
+          </row>
+          <row>
+            <entry>VF0</entry>
+            <entry>-</entry>
+            <entry>Начальная скорость порта F, м/с</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_vcc_pbs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry><i>VB</i></entry>
+            <entry>-</entry>
+            <entry>Скорость порта B, м/с</entry>
+          </row>
+          <row>
+            <entry><i>VF</i></entry>
+            <entry>-</entry>
+            <entry>Скорость порта F, м/с</entry>
+          </row>
+          <row>
+            <entry>FB</entry>
+            <entry>-</entry>
+            <entry>Сила порт B, <image href="images_old/4276/image013.gif" height="22" width="11"
+                id="image_wcc_pbs_qy"/></entry>
+          </row>
+          <row>
+            <entry>V</entry>
+            <entry>-</entry>
+            <entry>Относительная скорость, м/с</entry>
+          </row>
+          <row>
+            <entry>FF</entry>
+            <entry>-</entry>
+            <entry>Сила порт F, <image href="images_old/4276/image013.gif" height="22" width="11"
+                id="image_xcc_pbs_qy"/></entry>
+          </row>
+          <row>
+            <entry>FFR</entry>
+            <entry>-</entry>
+            <entry>Сила трения, <image href="images_old/4276/image013.gif" height="22" width="11"
+                id="image_ycc_pbs_qy"/></entry>
+          </row>
+          <row>
+            <entry>Q</entry>
+            <entry>-</entry>
+            <entry>Мощность на трение, Вт</entry>
+          </row>
+          <row>
+            <entry>NF</entry>
+            <entry>-</entry>
+            <entry>Прижимная сила, Н</entry>
+          </row>
+          <row>
+            <entry>IsLock</entry>
+            <entry>-</entry>
+            <entry>Признак сцепления</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

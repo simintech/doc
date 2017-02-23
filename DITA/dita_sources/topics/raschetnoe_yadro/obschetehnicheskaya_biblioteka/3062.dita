@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Условие выполнения субмодели</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/3062.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/3062s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован | Си
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок представляет собой механизм для заморозки и разморозки расчета субмодели в зависимости
+      от внешнего условия. Если внутри Субмодели разместить блок Условие выполнения субмодели, то у
+      субмодели появится дополнительный вход, а сама субмодель будет выполняться (расчитываться)
+      только в том случае, если на этот вход подается логическая 1. Если на новый вход субмодели
+      подается логический 0, то вся субмодель и все блоки, находящиеся внутри неё, замораживаются до
+      тех пор, пока на вход субмодели не станет вновь поступать логическая 1. </p>
+    
+  </body>
+</topic>

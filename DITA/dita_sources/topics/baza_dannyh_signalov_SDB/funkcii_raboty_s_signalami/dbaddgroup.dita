@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>dbaddgroup </title>
+<shortdesc>Функция добавления группы в базу сигналов в заданную категорию.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>dbaddgroup</funcname>(cat, group, tmplt);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>cat – переменная, типа string, содержащая имя категории, в которой нужно создать
+        группу;</p>
+      <p>group – переменная типа string, содержащая имя группы сигналов, которую нужно создать в
+        категории cat;</p>
+      <p>tmplt – флаг добавления сигналов шаблона. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>dbaddgroup</codeph> – функция создания группы сигналов с именем <codeph>group</codeph>,
+        внутри категории <codeph>cat</codeph>. При этом если <codeph>tmplt</codeph> имеет значение
+        1, то список сигналов для группы будет загружен из шаблона соответствующей категории.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>Функция возвращает число типа boolean: 1 – группа успешно добавлена, 0 – группа не была
+        добавлена (уже существует, либо не найдена указанная категория). </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> cn, gn:<rword>string</rword>;
+cn = "категория_1";
+gn = "группа_1";
+<funcname>dbaddgroup</funcname>(nm,gn,1);</codeblock></section>
+<p>В результате выполнения данного скрипта, в подключенной к проекту базе сигналов будет создана
+      новая группа с именем «группа_1» внутри категории с именем «категория_1», содержащая набор
+      шаблонных сигналов категории «категория1». </p>  
+  </body>
+</topic>

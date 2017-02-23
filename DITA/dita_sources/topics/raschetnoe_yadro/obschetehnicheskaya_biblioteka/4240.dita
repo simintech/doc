@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика - Гироскоп </title>
+  <body>
+    <table id="table_k5n_d1s_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4240/image001.png" height="32" width="32"
+                id="image_l5n_d1s_qy"/></entry>
+            <entry>Механика - Гироскоп</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4240/image002.jpg" height="79" width="118"
+                id="image_m5n_d1s_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> В блоке реализована следующая модель гироскопа – угловая скорость механического порта R
+      преобразуется в напряжение на электрических портах.</p>
+    <p> Уравнения модели гироскопа имеют следующий вид:</p>
+    <p><image href="images_old/4240/image003.png" height="23" width="122" id="image_n5n_d1s_qy"/></p>
+    <p><image href="images_old/4240/image004.png" height="44" width="225" id="image_o5n_d1s_qy"/></p>
+    <p><image href="images_old/4240/image005.png" height="23" width="156" id="image_p5n_d1s_qy"/></p>
+    <p><image href="images_old/4240/image006.png" height="23" width="134" id="image_q5n_d1s_qy"/>,
+      где</p>
+    <table id="table_r5n_d1s_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>K</entry>
+            <entry>-</entry>
+            <entry>Чувствительность</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4240/image007.png" height="23" width="18"
+                id="image_s5n_d1s_qy"/></entry>
+            <entry>-</entry>
+            <entry>значение выхода при нулевой скорости</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4240/image008.png" height="23" width="14"
+                id="image_t5n_d1s_qy"/></entry>
+            <entry>-</entry>
+            <entry>угловая скорость</entry>
+          </row>
+          <row>
+            <entry>B</entry>
+            <entry>-</entry>
+            <entry>частота среза</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4240/image009.png" height="23" width="36"
+                id="image_u5n_d1s_qy"/></entry>
+            <entry>-</entry>
+            <entry>минимальное значение датчика</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4240/image010.png" height="23" width="37"
+                id="image_v5n_d1s_qy"/></entry>
+            <entry>-</entry>
+            <entry>максимальное значение датчика</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4240/image011.png" height="23" width="60"
+                id="image_w5n_d1s_qy"/></entry>
+            <entry>-</entry>
+            <entry>признак учета инерционность</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p><b>Входные порты блока:</b></p>
+    <p> Блок имеет один механический порт (R) вращательного движения и один электрический входной
+      порт.</p>
+    <p>
+      <b>Выходные порты блока:</b></p>
+    <p> Блок имеет один электрический выходной порт.</p>
+    <p><b> Свойства блока:</b></p>
+    <table id="table_x5n_d1s_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>K</entry>
+            <entry>-</entry>
+            <entry>чувствительность, <image href="images_old/4240/image012.png" height="35" width="21"
+                id="image_y5n_d1s_qy"/></entry>
+          </row>
+          <row>
+            <entry>V0</entry>
+            <entry>-</entry>
+            <entry>значение выхода при W = 0, B</entry>
+          </row>
+          <row>
+            <entry>IsBand</entry>
+            <entry>-</entry>
+            <entry>учет инерционности, да/нет</entry>
+          </row>
+          <row>
+            <entry>B</entry>
+            <entry>-</entry>
+            <entry>частота среза, Гц</entry>
+          </row>
+          <row>
+            <entry>Vmin</entry>
+            <entry>-</entry>
+            <entry>минимальное значение датчика, B</entry>
+          </row>
+          <row>
+            <entry>Vmax</entry>
+            <entry>-</entry>
+            <entry>максимальное значение датчика, B</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_z5n_d1s_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>W</entry>
+            <entry>-</entry>
+            <entry>угловая скорость, рад/c</entry>
+          </row>
+          <row>
+            <entry>V</entry>
+            <entry>-</entry>
+            <entry>напряжение, B</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

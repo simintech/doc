@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика – Переменная инерция вращательного движения </title>
+  <body>
+    <table id="table_vh3_c3s_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4213/image001.png" height="32" width="32"
+                id="image_wh3_c3s_qy"/></entry>
+            <entry>Механика – Переменная инерция вращательного движения</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4213/image002.png" height="83" width="108"
+                id="image_xh3_c3s_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>В модели блока реализовано решение уравнения движения вращающегося тела с переменным моментом
+      инерции:</p>
+    <p><image href="images_old/4213/image003.png" height="43" width="84" id="image_ofr_str_qy"/></p>
+    <p><image href="images_old/4213/image004.png" height="47" width="72" id="image_pfr_str_qy"/></p>
+    <p><image href="images_old/4213/image005.png" height="22" width="132" id="image_qfr_str_qy"/>,
+      где</p>
+    <p>J – момент инерции, <image href="images_old/4213/image006.png" height="22" width="52"
+        id="image_rfr_str_qy"/>;</p>
+    <p><image href="images_old/4213/image007.png" height="22" width="14" id="image_sfr_str_qy"/> –
+      угловая скорость, <image href="images_old/4213/image008.png" height="29" width="21"
+        id="image_tfr_str_qy"/>;</p>
+    <p>T – момент, <image href="images_old/4213/image009.png" height="22" width="36"
+        id="image_ufr_str_qy"/>;</p>
+    <p><image href="images_old/4213/image010.png" height="22" width="33" id="image_vfr_str_qy"/> –
+      минимально возможный момент инерции, <image href="images_old/4213/image006.png" height="22"
+        width="52" id="image_wfr_str_qy"/>;</p>
+    <p> </p>
+    <p>
+      <b>Входные порты блока:</b></p>
+    <p> Блок имеет один математический входной порт, через который в модель поступает значение
+      момента инерции.</p>
+    <p> </p>
+    <p>
+      <b>Выходные порты блока:</b></p>
+    <p> Блок имеет один механический ненаправленный порт вращательного движения, через который на
+      вход блока поступают моменты от присоединенных блоков, а на выход – скорость вращения и
+      суммарный момент.</p>
+    <p> </p>
+    <p>
+      <b>Свойства блока:</b></p>
+    <p>Jmin – минимально возможный момент инерции, <image href="images_old/4213/image011.png" height="22"
+        width="44" id="image_xfr_str_qy"/>;</p>
+    <p>W0 - начальное значение инерции, кг*м2 *рад/с</p>
+    <p> </p>
+    <p>
+      <b>Параметры блока:</b></p>
+    <p>T – момент, <image href="images_old/4213/image009.png" height="22" width="36"
+        id="image_yfr_str_qy"/>;</p>
+    <p>W – угловая скорость, <image href="images_old/4213/image008.png" height="29" width="21"
+        id="image_zfr_str_qy"/>;</p>
+    <p>Q – мощность, Вт.</p>
+  </body>
+</topic>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>HS – В память </title>
+  <body>
+    <table id="table_q3z_qny_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/2532/image001.png" height="32" width="32"
+                id="image_r3z_qny_sy"/></entry>
+            <entry><b>HS</b><b>– В память</b></entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/2532/image002.png" height="44" width="151"
+                id="image_s3z_qny_sy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> Блок организует соединение между одним объектом и другим объектом расчетной схемы без явного
+      проведения линии связи между ними. Фактически блок «В память» именует линию связи, которую в
+      другом месте схемы можно продолжить при помощи ответного блока «Из памяти», указав в последнем
+      такое же имя.</p>
+  </body>
+</topic>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Порт входа</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/1003.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/1003s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован | Си
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок используется внутри <xref href="1002.dita" format="dita">Субмодели</xref> и определяет
+      наличие у неё входного порта. Служит для соединения внешней части схемы со схемой, находящейся
+      внутри Субмодели. Блок организует прием данных от типовых блоков и Субмоделей, внешних по
+      отношению к данной, а также передачу данных для преобразования типовыми блоками (или
+      Субмоделями) внутренней структуры данной субмодели. Количество блоков Порт входа автоматически
+      определяет количество входов в данную Субмодель. Порт входа может обрабатывать как скалярные,
+      так и векторные входные сигналы.</p>
+    <section><title>Свойства:</title>
+      <p>нет</p></section>
+    <section><title>Параметры</title>
+      <p>нет</p></section>
+    <note>рекомендуется сразу же после переноса блока из библиотеки блоков в Схемное окно присвоить
+      этому блоку уникальное имя: например, "Вход № 1". Для указания имени порта соединения
+      необходимо произвести двойной щелчок по блоку.</note>
+    
+  </body>
+</topic>

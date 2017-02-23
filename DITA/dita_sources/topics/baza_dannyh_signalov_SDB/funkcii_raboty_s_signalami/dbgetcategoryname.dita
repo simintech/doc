@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>dbgetcategoryname </title>
+<shortdesc>Чтение имени категории в базе.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>сn = <funcname>dbgetcategoryname</funcname>(nmb);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>nmb – номер категории в базе.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>dbgetcategoryname</codeph> – функция позволяет получить имя категории с номером nmb в
+        подключенной базе сигналов.  </p></section>
+<section>
+      <title>Результат:</title>
+      <p>сn - функция возвращает строковое значение, соответствующее имени указанного категории. В
+        случае отсутствия категории, функция возвращает пустое текстовое значение "".</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>cn = <funcname>dbgetcategoryname</funcname>(4);</codeblock></section>
+<p>В результате выполнения данного скрипта, переменная cn получит текстовое значение,
+      соответствующее имени категории с номером 4 в текущей подключенной базе сигналов. </p>  
+  </body>
+</topic>

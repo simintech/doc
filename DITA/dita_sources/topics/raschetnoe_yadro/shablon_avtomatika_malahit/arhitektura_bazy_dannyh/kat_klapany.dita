@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Описание категории (таблицы) «Клапаны» </title>
+  <body>
+    <p>В категории (таблице) «Клапаны» базы данных SimInTech хранится информация о клапанах,
+      управляемых КСУ ТС.</p>
+    <p>В таблице 1 приведено описание структуры категории «Клапаны».</p>
+    <p>Для категории "Клапаны" имя группы сигналов (записи) формируется по правилу:</p>
+    <p><b>&lt;group_name> = K&lt;vlv_num></b>, где</p>
+    <p>" K " – уникальный для клапанов префикс имени записи в БД;</p>
+    <p>&lt;vlv_num> – уникальный среди всех клапанов проекта КСУ ТС номер клапана.</p>
+    <p>Пример имени группы сигналов (записи) в категории "Клапаны":</p>
+    <p><b>K421</b> – клапан 421</p>
+    <p> </p>
+    <p>Таблица 1 – описание структуры категории «Клапаны»</p>
+    <table id="table_pxp_cms_qy">
+      <tgroup cols="6">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <colspec colnum="4" colname="col4"/>
+        <colspec colnum="5" colname="col5"/>
+        <colspec colnum="6" colname="col6"/>
+        <tbody>
+          <row>
+            <entry><b>Название поля</b></entry>
+            <entry><b>Имя поля</b></entry>
+            <entry><b>Тип данных</b></entry>
+            <entry><b>Значение</b></entry>
+            <entry><b>Способ хранения</b></entry>
+            <entry><b>Использование</b></entry>
+          </row>
+          <row>
+            <entry>Описание *</entry>
+            <entry>Descr</entry>
+            <entry>Текст</entry>
+            <entry> </entry>
+            <entry>Константа</entry>
+            <entry>Инф-ое</entry>
+          </row>
+          <row>
+            <entry>Принадлежность к ФГ *</entry>
+            <entry>FG_name</entry>
+            <entry>Строка</entry>
+            <entry>ФГ00</entry>
+            <entry>Константа</entry>
+            <entry>Инф-ое</entry>
+          </row>
+          <row>
+            <entry>Открыт</entry>
+            <entry>OT</entry>
+            <entry>Двоичное</entry>
+            <entry>Нет</entry>
+            <entry>Переменная</entry>
+            <entry>Штатное</entry>
+          </row>
+          <row>
+            <entry>Закрыт</entry>
+            <entry>ZK</entry>
+            <entry>Двоичное</entry>
+            <entry>Нет</entry>
+            <entry>Переменная</entry>
+            <entry>Штатное</entry>
+          </row>
+          <row>
+            <entry>Открыть</entry>
+            <entry>O</entry>
+            <entry>Двоичное</entry>
+            <entry>Нет</entry>
+            <entry>Переменная</entry>
+            <entry>Штатное</entry>
+          </row>
+          <row>
+            <entry>Закрыть</entry>
+            <entry>Z</entry>
+            <entry>Двоичное</entry>
+            <entry>Нет</entry>
+            <entry>Переменная</entry>
+            <entry>Штатное</entry>
+          </row>
+          <row>
+            <entry>Открыть Ду</entry>
+            <entry>DU_O</entry>
+            <entry>Двоичное</entry>
+            <entry>Нет</entry>
+            <entry>Переменная</entry>
+            <entry>Штатное</entry>
+          </row>
+          <row>
+            <entry>Открыть Ау</entry>
+            <entry>AU_O</entry>
+            <entry>Двоичное</entry>
+            <entry>Нет</entry>
+            <entry>Переменная</entry>
+            <entry>Штатное</entry>
+          </row>
+          <row>
+            <entry>Автомат. управление</entry>
+            <entry>AU</entry>
+            <entry>Двоичное</entry>
+            <entry>Нет</entry>
+            <entry>Переменная</entry>
+            <entry>Штатное</entry>
+          </row>
+          <row>
+            <entry>Закрыть Ау</entry>
+            <entry>AU_Z</entry>
+            <entry>Двоичное</entry>
+            <entry>Нет</entry>
+            <entry>Переменная</entry>
+            <entry>Штатное</entry>
+          </row>
+          <row>
+            <entry>Закрыть Ду</entry>
+            <entry>DU_Z</entry>
+            <entry>Двоичное</entry>
+            <entry>Нет</entry>
+            <entry>Переменная</entry>
+            <entry>Штатное</entry>
+          </row>
+          <row>
+            <entry>
+              <p>Несоответствие</p>
+              <p>положения</p>
+            </entry>
+            <entry>err</entry>
+            <entry>Двоичное</entry>
+            <entry>Нет</entry>
+            <entry>Переменная</entry>
+            <entry>Штатное</entry>
+          </row>
+          <row>
+            <entry>Пульт открыть Ду</entry>
+            <entry>PUL_DU_O</entry>
+            <entry>Двоичное</entry>
+            <entry>Нет</entry>
+            <entry>Переменная</entry>
+            <entry>Штатное</entry>
+          </row>
+          <row>
+            <entry>Пульт закрыть Ду</entry>
+            <entry>PUL_DU_Z</entry>
+            <entry>Двоичное</entry>
+            <entry>Нет</entry>
+            <entry>Переменная</entry>
+            <entry>Штатное</entry>
+          </row>
+          <row>
+            <entry>Пульт поставить на Ау</entry>
+            <entry>PUL_AU</entry>
+            <entry>Двоичное</entry>
+            <entry>Нет</entry>
+            <entry>Переменная</entry>
+            <entry>Штатное</entry>
+          </row>
+          <row>
+            <entry>Пульт засветка открыт</entry>
+            <entry>PUL_ZAS_OT</entry>
+            <entry>Двоичное</entry>
+            <entry>Нет</entry>
+            <entry>Переменная</entry>
+            <entry>Штатное</entry>
+          </row>
+          <row>
+            <entry>Пульт засветка закрыт</entry>
+            <entry>PUL_ZAS_ZK</entry>
+            <entry>Двоичное</entry>
+            <entry>Нет</entry>
+            <entry>Переменная</entry>
+            <entry>Штатное</entry>
+          </row>
+          <row>
+            <entry>Пульт засветка автомат</entry>
+            <entry>PUL_ZAS_AU</entry>
+            <entry>Двоичное</entry>
+            <entry>Нет</entry>
+            <entry>Переменная</entry>
+            <entry>Штатное</entry>
+          </row>
+          <row>
+            <entry>Пульт засветка несоответствие положения</entry>
+            <entry>PUL_ZAS_ERR</entry>
+            <entry>Двоичное</entry>
+            <entry>Нет</entry>
+            <entry>Переменная</entry>
+            <entry>Штатное</entry>
+          </row>
+          <row>
+            <entry>Время выдержки формирования сигнала несоответствие</entry>
+            <entry>Terr</entry>
+            <entry>Вещественное</entry>
+            <entry>10</entry>
+            <entry>Константа</entry>
+            <entry>Штатное</entry>
+          </row>
+          <row>
+            <entry>Положение клапана (модель)</entry>
+            <entry>pos</entry>
+            <entry>Вещественное</entry>
+            <entry>0</entry>
+            <entry>Переменная</entry>
+            <entry>Модель</entry>
+          </row>
+          <row>
+            <entry>Открыть местный пост (модель)</entry>
+            <entry>MP_O</entry>
+            <entry>Двоичное</entry>
+            <entry>Нет</entry>
+            <entry>Переменная</entry>
+            <entry>Модель</entry>
+          </row>
+          <row>
+            <entry>Закрыть местный пост (модель)</entry>
+            <entry>MP_Z</entry>
+            <entry>Двоичное</entry>
+            <entry>Нет</entry>
+            <entry>Переменная</entry>
+            <entry>Модель</entry>
+          </row>
+          <row>
+            <entry>Скорость хода, %/с (модель)</entry>
+            <entry>Vh</entry>
+            <entry>Вещественное</entry>
+            <entry>25</entry>
+            <entry>Константа</entry>
+            <entry>Модель</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

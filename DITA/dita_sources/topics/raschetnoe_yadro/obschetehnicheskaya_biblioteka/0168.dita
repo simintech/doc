@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Счётчик</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/0168.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/0168s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован | Си
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок реализует обработку вектора (подсчёт импульсов) действительных входных сигналов по
+      алгоритму одного из следующих вариантов:</p>
+    <p>Вариант 1 (опция "Внутри диапазона"): Если в процессе моделирования значение какого-то
+      действительного сигнала в векторе входных сигналов вошло в пределы заданного диапазона от
+        <i>x</i><sub>min</sub> до <i>x</i><sub>max</sub>, то к имеющемуся на этот момент показанию
+      счетчика по этому сигналу добавляется число 1. Это означает, что соответствующий элемент в
+      векторном выходном сигнале блока увеличивается на 1:<image placement="break"
+        href="images/0168_1.png" align="center" id="image_atx_zpg_4y"/>где <i><u>y</u></i>(<i>t</i>)
+      – выходной векторный сигнал блока, <i>x</i>(<i>t</i>) – входной векторный сигнал.</p>
+    <p>Вариант 2 (опция Вне диапазона): Если в процессе расчета значение какого-то действительного
+      сигнала в векторе входных сигналов вышло за пределы заданного диапазона от
+        <i>x</i><sub>min</sub> до <i>x</i><sub>max</sub>, то к имеющемуся на этот момент показанию
+      счетчика по этому сигналу добавляется число 1. Это означает, что соответствующий элемент в
+      векторном выходном сигнале блока увеличивается на 1:<image placement="break"
+        href="images/0168_2.png" align="center" id="image_esq_hqg_4y"/></p>
+    <section><title>Входы</title>
+    <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>input</uicontrol> - порт для входного сигнала.</li>
+        </ul>
+      </p></section>
+    <section><title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>output</uicontrol> - порт для десятичного количества входных
+            импульсов.</li>
+        </ul>
+      </p></section>
+    <section><title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Нижний предел нечувствительности</uicontrol> – <i>x</i><sub>min</sub>.</li>
+          <li><uicontrol>Верхний предел нечувствительности</uicontrol> –
+            <i>x</i><sub>max</sub>.</li>
+          <li><uicontrol>Счётчик если вход</uicontrol> – указатель вариантов работы блока. Счетчик
+            считает, если входной сигнал попадает в область "Внутри диапазона" или "Вне диапазона". </li>
+        </ul>
+      </p></section>
+    <section><title>Параметры</title>
+      <p>нет</p></section>
+    
+  </body>
+</topic>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Индуктивность переменная</title>
+  <body>
+    <table id="table_fvh_gyb_5y">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/3109.png" height="32" width="32" id="image_gvh_gyb_5y"
+              /></entry>
+            <entry>Индуктивность переменная</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry>| СЛАУ |</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/3109s.png" height="84" width="99" id="image_hvh_gyb_5y"
+              /></entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry></entry>
+           
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+           
+              <p>Блок представляет собой модель нелинейного сопротивления, описываемого следующим
+                дифференциальным уравнением:</p>
+              <p><image href="images_old/3109_html_7a861d29.gif" height="45" width="135" id="image_ivh_gyb_5y"
+                />,</p>
+              <p>где </p>
+              <p><image href="images_old/3109_html_3e8cbd78.gif" height="21" width="40" id="image_jvh_gyb_5y"
+                />– разность потенциалов;</p>
+              <p><image href="images_old/3109_html_m51c96cee.gif" height="21" width="42" id="image_kvh_gyb_5y"
+                />– индуктивность, <b>переменная</b> во времени (значение индуктивности подается на
+                входной порт блока «Управление»);</p>
+              <p><image href="images_old/3109_html_m2ed25e99.gif" height="21" width="36" id="image_lvh_gyb_5y"
+                />– ток.</p>
+              <p>Блок аналогичен блоку <i>Индуктивность идеальная</i>.</p>
+              <p><image href="images_old/3109_ris_1.png" height="420" width="626" id="image_mvh_gyb_5y"
+                /></p>
+              <p>Рисунок 1 – Внутренняя структура блока «Индуктивность переменная»</p>
+              <p>На рисунке 1 изображена графически представленная в среде разработки ПК «МВТУ-4»
+                схема аппроксимации индуктивности переменной.</p>
+              <p><b>Свойство</b>:</p>
+              <ul id="ul_nvh_gyb_5y">
+                <li>
+                  <p>Начальный ток, А – число, задающее начальное значение тока (для блока задержки
+                    на шаг интегрирования).</p>
+                </li>
+              </ul>
+              <p>Примеры заполнения диалогового окна свойств блока:</p>
+              <table id="table_ovh_gyb_5y">
+                <tgroup cols="2">
+                  <colspec colnum="1" colname="col1"/>
+                  <colspec colnum="2" colname="col2"/>
+                  <tbody>
+                    <row>
+                      <entry namest="col1" nameend="col2"><b>Числовое</b> задание свойств:</entry>
+                    </row>
+                    <row>
+                      <entry>Название</entry>
+                      <entry>Значение</entry>
+                    </row>
+                    <row>
+                      <entry>Начальный ток, А</entry>
+                      <entry>0.0</entry>
+                    </row>
+                    <row>
+                      <entry namest="col1" nameend="col2"><b>Именованное</b> задание
+                        свойств:</entry>
+                    </row>
+                    <row>
+                      <entry>Название</entry>
+                      <entry>Значение</entry>
+                    </row>
+                    <row>
+                      <entry>Начальный ток, А</entry>
+                      <entry>i0</entry>
+                    </row>
+                  </tbody>
+                </tgroup>
+              </table>
+              <p><b>Примечани</b><b>я</b>:</p>
+              <ol id="ol_pvh_gyb_5y">
+                <li>Свойство блока должно быть <i>скалярной</i> величиной.</li>
+                <li>Именованные свойства задаются как <i>локальные</i> переменные модели (или
+        субмодели) во вкладке <i>Параметры</i> или как глобальные сигналы проекта при помощи пункта
+        главного меню <i>Графика</i> → <i>Сигналы</i>.</li>
+              </ol>
+        
+  </body>
+</topic>

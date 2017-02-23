@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Буфер последовательного ввода данных </title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/3601.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/3601s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован  | Си
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок предназначен для накопления и выдачи в виде вектора, набора дискретных отсчетов входного
+      сигнала. </p>
+    <section><title>Входы</title>
+    <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>DataInput</uicontrol> – входной вектор вещественных частей входного
+            сигнала;</li>
+          <li><uicontrol>Sync</uicontrol> – вход для синхроимпульсов;</li>
+          <li><uicontrol>Reset</uicontrol> – вход для сигнала сброса; </li>
+        </ul>
+      </p></section>
+    <section><title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>DataOut</uicontrol> – вектор дискретных отсчетов сигнала;</li>
+          <li><uicontrol>Ready</uicontrol> – сигнал готовности данных в буфере; </li>
+        </ul>
+      </p></section>
+    <section><title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Размер серии</uicontrol> – величина формируемого вектора данных (целое
+            число); </li>
+        </ul>
+      </p></section>
+    <section><title>Параметры</title>
+      <p>нет</p></section>
+    <note>на порт 2 должны подаваться прямоугольные синхроимпульсы единичной амплитуды. Если частота
+      прихода синхроимпульсов неизменна, то она задает частоту дискретизации для блока. Срабатывание
+      блока происходит по переднему фронту синхроимпульсов. Блок заполняется отсчетами входного
+      сигнала. Каждый новый отсчет записывается в буфер по переднему фронту синхроимпульса. После
+      заполнения буфера вектор становится доступным по сигналу готовности данных в буфере в течении
+      одного такта дискретизации (до следующего синхроимпульса). </note>
+    
+  </body>
+</topic>

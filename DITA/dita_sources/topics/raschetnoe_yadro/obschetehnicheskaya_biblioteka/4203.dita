@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика - Пружина вращательного движения </title>
+  <body>
+    <table id="table_tlg_mrr_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4203/image001.png" height="32" width="32"
+                id="image_ulg_mrr_qy"/></entry>
+            <entry>Механика - Пружина вращательного движения</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4203/image002.png" height="79" width="74"
+                id="image_vlg_mrr_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>В блоке реализована математическая модель идеальной пружины с постоянным коэффициентом
+      жесткости, описываемая следующими уравнениями:</p>
+    <p><image href="images_old/4203/image003.png" height="24" width="75" id="image_wlg_mrr_qy"/>, где</p>
+    <table id="table_xlg_mrr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>T</entry>
+            <entry>-</entry>
+            <entry>момент пружины, н<image href="images_old/4203/image004.png" height="24" width="5"
+                id="image_ylg_mrr_qy"/>м</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4203/image005.png" height="24" width="13"
+                id="image_zlg_mrr_qy"/></entry>
+            <entry>-</entry>
+            <entry>угол между портами C и R, <image href="images_old/4203/image006.png" height="24"
+                width="30" id="image_amg_mrr_qy"/></entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4203/image007.png" height="24" width="23"
+                id="image_bmg_mrr_qy"/></entry>
+            <entry>-</entry>
+            <entry>угловая скорость порта C, <image href="images_old/4203/image008.png" height="31"
+                width="21" id="image_cmg_mrr_qy"/></entry>
+          </row>
+          <row>
+            <entry>K</entry>
+            <entry>-</entry>
+            <entry>коэффициент жесткости, <image href="images_old/4203/image009.png" height="36"
+                width="23" id="image_dmg_mrr_qy"/></entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4203/image010.png" height="24" width="23"
+                id="image_emg_mrr_qy"/></entry>
+            <entry>-</entry>
+            <entry>угловая скорость порта R, <image href="images_old/4203/image008.png" height="31"
+                width="21" id="image_fmg_mrr_qy"/></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Входные порты блока:</b></p>
+    <p>Блок имеет два механических порта вращательного движения – C и R. Постулируется, что момент,
+      создаваемый пружиной, положителен, если угол <image href="images_old/4203/image005.png" height="24"
+        width="13" id="image_gmg_mrr_qy"/> между портами C и R – положителен.</p>
+    <p><b>Выходные порты блока – отсутствуют.</b></p>
+    <p><b>Свойства блока:</b></p>
+    <table id="table_hmg_mrr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>K</entry>
+            <entry>-</entry>
+            <entry>коэффициент жесткости, <image href="images_old/4203/image009.png" height="36"
+                width="23" id="image_img_mrr_qy"/></entry>
+          </row>
+          <row>
+            <entry>Fi0</entry>
+            <entry>-</entry>
+            <entry>начальное значение угла, рад</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_jmg_mrr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Т</entry>
+            <entry>-</entry>
+            <entry>Момент, н*м</entry>
+          </row>
+          <row>
+            <entry>W</entry>
+            <entry>-</entry>
+            <entry>разность угловых скоростей, <image href="images_old/4203/image008.png" height="31"
+                width="21" id="image_kmg_mrr_qy"/></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

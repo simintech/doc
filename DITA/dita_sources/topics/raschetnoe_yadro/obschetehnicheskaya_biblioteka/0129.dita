@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Интегратор с ограничением и сбросом начальных условий</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/0129.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/0129s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован | Си
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок реализует интегрирование входного сигнала (сигналов) с ограничением на значение
+      интеграла и сбросом состояния:<image placement="break" href="images/0129_1.png" align="center"
+        id="image_fwf_qwx_3y"/>где <i>x<sub>i</sub></i>(<i>t</i>) – элементы вектора входного
+      сигнала, <i>y<sub>i</sub></i>(<i>t</i>) – элементы вектора выходного сигнала,
+        <i>t</i><sub>1</sub> и <i>t</i><sub>2</sub> – времена переключения начальных условий,
+        <i>k</i><sub>i</sub> – элемент вектора коэффициентов усиления. Блок реализует математическую
+      модель звена, динамика которого описывается линейным обыкновенным дифференциальным уравнением
+      (ОДУ) вида:<image placement="break" href="images/0129_2.png" align="center"
+        id="image_twn_zwx_3y"/>при наличии ограничений на значение выходного сигнала:<image
+        placement="break" href="images/0129_3.png" align="center" id="image_ucv_dxx_3y"/>Блок
+      выполняет интегрирование (в пределах ограничений) входного сигнала, поэтому пиктограмма блока
+      имеет вид передаточной функции идеального интегрирующего звена с «добавкой» символа
+      «меньше-равно» и словом reset. Размерности сигналов входа, выхода и вектора коэффициентов
+      должны совпадать. </p>
+    <section><title>Входы</title>
+    <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>input</uicontrol> - вход интегрируемого сигнала;</li>
+          <li><uicontrol>reset</uicontrol> - команда сброса значения;</li>
+          <li><uicontrol>Y0</uicontrol> - опциональный вход для начальных условий.</li>
+        </ul>
+      </p></section>
+    <section><title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>output</uicontrol> - проинтегрированный сигнал.</li>
+        </ul>
+      </p></section>
+    <section><title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li>Коэффициенты усиления – вектор коэффициентов <i>k<sub>i</sub></i>, на который
+            умножается входная величина;</li>
+          <li>Начальные условия – вектор начальных значений <i>y<sub>i</sub></i>(0) выходной
+            величины блока;</li>
+          <li>Минимальное значение – минимальное значение выхода <i>y</i><sub>min</sub>;</li>
+          <li>Максимальное значение – максимальное значение выхода <i>y</i><sub>max</sub>;</li>
+          <li>Начальные условия брать из – настройка, откуда блок будет считывать начальные условия,
+            а именно: из свойства «Начальные условия», или из дополнительного входного порта
+            Y0.</li>
+        </ul>
+      </p></section>
+    <section><title>Параметры</title>
+      <p>
+        <ul id="ul_t3c_l3t_2y">
+          <li><uicontrol>Динамические переменные</uicontrol> - внутренние переменные состояния
+            блока;</li>
+          <li><uicontrol>Производные</uicontrol> - внутренние переменные состояния блока.</li>
+        </ul>
+      </p>
+      <note>по умолчанию блок реализует интегрирование скалярного входного сигнала.</note></section>
+      <section><title>Пример</title>
+      <p>Интегрирование параболического сигнала, с ограничением на значение интеграла от -0,05 до
+        0,95. Каждые 10 секунд происходит сброс начальных условий в 0,1. Структурная схема:<image
+          placement="break" href="images/0129_4.png" align="center" id="image_jgx_kyx_3y"/>
+          Результат:<image placement="break" href="images/0129_5.png" align="center"
+          id="image_gzc_myx_3y"/> Из итогового графика видно, что в моменты подачи на управляющий
+        (второй порт) единичного сигнала происходит сброс значения интеграла к начальным условиям
+        равным в примере 0,1. При нулевом управляющем сигнале интегратор ведёт себя как
+        интегрирующее звено с наложенными ограничениями. </p></section>
+    
+  </body>
+</topic>

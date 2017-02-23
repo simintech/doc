@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>HS – Ротор </title>
+  <body>
+    <table id="table_asz_2rs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/2520/image001.png" height="32" width="32"
+                id="image_bsz_2rs_sy"/></entry>
+            <entry><b>HS</b><b>– Ротор</b></entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/2520/image002.png" height="54" width="114"
+                id="image_csz_2rs_sy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок реализует модель ротора, как есть динамику вращающейся массы (например, ротора турбины,
+      вала насоса и т. д.). В модели происходит решение уравнения моментов, с учетом инерции, трения
+      и текущих значений всех моментов, поступающих на входные порты с помощью механических связей.
+      Результатом решения являются вычисленные абсолютная и относительная частота вращения, которые
+      передаются обратно к присоединенным к ротору блокам, где вновь вычисляются значения,
+      действующих на ротор, моментов.</p>
+    <p>Если для ротора и присоединенного к нему оборудования установлены разные значения номинальных
+      частот, то подразумевается, что между ротором и оборудованием установлен идеальный редуктор. В
+      этом случае передача моментов между блоками происходит с учетом коэффициента передачи
+      редуктора.</p>
+    <p> </p>
+    <p><b>Свойства блока «HS – Ротор»</b></p>
+    <table id="table_dsz_2rs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_esz_2rs_sy">
+                <li>·Количество механических портов</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_fsz_2rs_sy">
+                <li>NMech</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_gsz_2rs_sy">
+                <li>·Момент инерции ротора, кг* м²</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_hsz_2rs_sy">
+                <li>J</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_isz_2rs_sy">
+                <li>·Номинальная частота вращения. Гц</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_jsz_2rs_sy">
+                <li>nnom</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ksz_2rs_sy">
+                <li>·Начальная частота вращения, Гц</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_lsz_2rs_sy">
+                <li>n0</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_msz_2rs_sy">
+                <li>·Момент трения, Н*м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_nsz_2rs_sy">
+                <li>Mtr</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_osz_2rs_sy">
+                <li>·Момент страгивания, Н*м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_psz_2rs_sy">
+                <li>Mstr</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_qsz_2rs_sy">
+                <li>·Порог частоты страгивания, отн</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_rsz_2rs_sy">
+                <li>Wstr</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ssz_2rs_sy">
+                <li>·Внешний расчет частоты</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_tsz_2rs_sy">
+                <li>IsRemote</li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока «HS – Ротор»</b></p>
+    <table id="table_usz_2rs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_vsz_2rs_sy">
+                <li>·Суммарный момент, Н*м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_wsz_2rs_sy">
+                <li>_moment</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_xsz_2rs_sy">
+                <li>·Момент трения, Н*м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ysz_2rs_sy">
+                <li>_mtr</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_zsz_2rs_sy">
+                <li>·Частота вращения абсолютная, Гц</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_atz_2rs_sy">
+                <li>_w_abs</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_btz_2rs_sy">
+                <li>·Частота вращения (относительная)</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ctz_2rs_sy">
+                <li>_w_otn</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_dtz_2rs_sy">
+                <li>·Суммарная мощность, Вт</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_etz_2rs_sy">
+                <li>_power</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ftz_2rs_sy">
+                <li>·Мощность на трение, Вт</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_gtz_2rs_sy">
+                <li>_ntr</li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок может быть соединен посредством механических связей со следующими блоками:</p>
+    <ul id="ul_htz_2rs_sy">
+      <li>· «HS – Электродвигатель»;</li>
+      <li>· «HS – Асинхронный электродвигатель»;</li>
+      <li>· «HS – Ступень турбины»;</li>
+      <li>· «HS – Ступень компрессора»;</li>
+      <li>· Насосы.</li>
+    </ul>
+    <p> </p>
+  </body>
+</topic>

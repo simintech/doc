@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Двигатель асинхронный</title>
+  <body>
+    <table id="table_od3_444_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/0662.png" height="34" width="38" id="image_pd3_444_qy"
+              /></entry>
+            <entry>Двигатель асинхронный</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry/>
+          </row>
+          <row>
+            <entry><image href="images_old/0662s.png" height="52" width="90" id="image_qd3_444_qy"
+              /></entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry/>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2">
+              <p>Блок реализует математическую модель асинхронного двигателя (ДА).</p>
+              <p>В системах автоматического регулирования применяют как трехфазные, так и двухфазные
+                асинхронные электродвигатели. Трехфазные ДА являются двигателями общепромышленного
+                применения, двухфазные ДА – это специальные двигатели, получившие название
+                исполнительных асинхронных двигателей (ИДА).</p>
+              <p><b>Расчетная схема и дифференциальные уравнения</b></p>
+              <p>Как двухфазные, так и трехфазные ДА принято описывать системой дифференциальных
+                уравнений в неподвижной системе координат<image href="images_old/0662_html_m1f1afa8f.gif"
+                  height="23" width="50" id="image_rd3_444_qy"/>. При этом трехфазные машины
+                приводят к двухфазным. Расчетная схема ДА представлена на рисунках 1 и 2:</p>
+              <p><image href="images_old/0662_1.png" height="421" width="500" id="image_sd3_444_qy"
+                /></p>
+              <p>Рисунок 1</p>
+              <p><image href="images_old/0662_2.png" height="214" width="622" id="image_td3_444_qy"
+                /></p>
+              <p>Рисунок 2</p>
+              <p>Система дифференциальных уравнении ДА для неподвижной системы координат, связанной
+                со статором, и вращающейся системы координат, связанной с ротором, имеет вид:</p>
+              <p><image href="images_old/0662_html_2c1c2428.gif" height="210" width="294" id="image_ud3_444_qy"
+                />(1)</p>
+              <p>где<image href="images_old/0662_html_496fc7bf.gif" height="23" width="56"
+                  id="image_vd3_444_qy"/>– активные сопротивления обмоток статора и ротора;</p>
+              <p><image href="images_old/0662_html_m4ab04288.gif" height="24" width="273" id="image_wd3_444_qy"
+                />– потокосцепления статора и ротора по осям<image href="images_old/0662_html_3e93e6f1.gif"
+                  height="11" width="20" id="image_xd3_444_qy"/>и<image
+                  href="images_old/0662_html_m514ceb4c.gif" height="18" width="18" id="image_yd3_444_qy"
+                />соответственно.</p>
+              <p>ЭДС вращения, вводимые в уравнения обмоток ротора, определяются как</p>
+              <p><image href="images_old/0662_html_m4b75832c.gif" height="53" width="247" id="image_zd3_444_qy"
+                />(2)</p>
+              <p>где<image href="images_old/0662_html_m7276de21.gif" height="21" width="28"
+                  id="image_a23_444_qy"/>– частота вращения ротора,<image
+                  href="images_old/0662_html_244621c0.gif" height="23" width="26" id="image_b23_444_qy"/>–
+                число пар полюсов,<image href="images_old/0662_html_10979481.gif" height="16" width="26"
+                  id="image_c23_444_qy"/>– частота вращения электромагнитного поля (частота
+                питающего напряжения),<image href="images_old/0662_html_6fe41663.gif" height="42" width="66"
+                  id="image_d23_444_qy"/>.</p>
+              <p>Потокосцепления обмоток машины равны:</p>
+              <p><image href="images_old/0662_html_m78db329c.gif" height="107" width="245"
+                  id="image_e23_444_qy"/>(3)</p>
+              <p>где<image href="images_old/0662_html_c8f8718.gif" height="23" width="62" id="image_f23_444_qy"
+                />– коэффициенты самоиндукции обмоток статора и ротора, <image
+                  href="images_old/0662_html_m707929ce.gif" height="23" width="28" id="image_g23_444_qy"/>–
+                коэффициент взаимоиндукции между контурами статора и ротора при совпадении их
+                осей.</p>
+              <p>Решая систему линейных уравнений (3), получаем:</p>
+              <p><image href="images_old/0662_html_m27752b2b.gif" height="234" width="296"
+                  id="image_h23_444_qy"/>(4)</p>
+              <p>Уравнение равновесия моментов:</p>
+              <p><image href="images_old/0662_html_2ab1235f.gif" height="44" width="239" id="image_i23_444_qy"
+                />(5)</p>
+              <p><image href="images_old/0662_html_25d69eba.gif" height="50" width="303" id="image_j23_444_qy"
+                />(6)</p>
+              <p>s — коэффициент скольжения вектора скорости вращения ротора относительно вектора
+                вращающегося магнитного поля.</p>
+              <p>При записи через потокосцепления и токи, электромагнитный момент для двухфазного ДА
+                равен:</p>
+              <p><image href="images_old/0662_html_m22322f07.gif" height="26" width="330" id="image_k23_444_qy"
+                />(7)</p>
+              <p>Электромагнитный момент для трехфазного ДА равен</p>
+              <p><image href="images_old/0662_html_m55e90147.gif" height="44" width="350" id="image_l23_444_qy"
+                />(8)</p>
+              <p><b>Уравнения состояния асинхронного электродвигателя</b></p>
+              <p>Результирующий магнитный поток, созданный какой-либо обмоткой обобщенной машины
+                принято подразделять на основной магнитный поток и поток рассеяния, например, поток,
+                созданный обмоткой статора, равен<image href="images_old/0662_html_4395f20f.gif" height="23"
+                  width="154" id="image_m23_444_qy"/>, где<image href="images_old/0662_html_m748ed562.gif"
+                  height="23" width="35" id="image_n23_444_qy"/>– основной магнитный поток, <image
+                  href="images_old/0662_html_e6b2a38.gif" height="23" width="37" id="image_o23_444_qy"/>– поток
+                рассеяния. Соответственно индуктивности обмоток можно разделить на основные и
+                индуктивности рассеяния:</p>
+              <p><image href="images_old/0662_html_3eba63a6.gif" height="23" width="322" id="image_p23_444_qy"
+                />(9)</p>
+              <p>и индуктивные сопротивления:</p>
+              <p><image href="images_old/0662_html_m6a4c360.gif" height="23" width="502" id="image_q23_444_qy"
+                /></p>
+              <p>Введем равенство:</p>
+              <p><image href="images_old/0662_html_69aa61ee.gif" height="23" width="282" id="image_r23_444_qy"
+                  />или<image href="images_old/0662_html_27660968.gif" height="23" width="275"
+                  id="image_s23_444_qy"/></p>
+              <p>где<image href="images_old/0662_html_m707929ce.gif" height="23" width="28"
+                  id="image_t23_444_qy"/>– индуктивность цепи намагничивания;</p>
+              <p><image href="images_old/0662_html_1f03836c.gif" height="23" width="27" id="image_u23_444_qy"
+                />– индуктивное сопротивление цепи намагничивания;</p>
+              <p><image href="images_old/0662_html_430c6196.gif" height="23" width="34" id="image_v23_444_qy"
+                />– индуктивность рассеяния обмотки статора;</p>
+              <p><image href="images_old/0662_html_60d3484d.gif" height="23" width="42" id="image_w23_444_qy"
+                />– приведенная индуктивность рассеяния обмотки ротора;</p>
+              <p><image href="images_old/0662_html_m20b613a3.gif" height="23" width="67" id="image_x23_444_qy"
+                />– индуктивность основного потока обмотки статора;</p>
+              <p><image href="images_old/0662_html_m20b613a3.gif" height="23" width="67" id="image_y23_444_qy"
+                />– приведенная индуктивность основного потока обмотки ротора;</p>
+              <p><image href="images_old/0662_html_765227dc.gif" height="23" width="122" id="image_z23_444_qy"
+                />– приведенные взаимоиндуктивности обмоток.</p>
+              <p>Систему уравнений ДА (1) – (7) запишем в форме Коши, одновременно заменяя токи
+                обмоток через функции потокосцеплений, а индуктивности обмоток через основные и
+                индуктивности рассеяния. Из системы уравнений (3) находим:</p>
+              <p><image href="images_old/0662_html_7e5757a6.gif" height="222" width="354" id="image_af3_444_qy"
+                />(10)</p>
+              <p>Заменяя токи в выражении (7) получаем</p>
+              <p><image href="images_old/0662_html_m47fe552a.gif" height="44" width="377" id="image_bf3_444_qy"
+                />(11)</p>
+              <p>где<image href="images_old/0662_html_691d5a1b.gif" height="23" width="29"
+                  id="image_cf3_444_qy"/>– число фаз питающего напряжения.</p>
+              <p>Подставляем полученные значения токов и момента в уравнения (1) и (4),
+                  обозначая<image href="images_old/0662_html_m8a0f3b5.gif" height="23" width="235"
+                  id="image_df3_444_qy"/>, имеем</p>
+              <p><image href="images_old/0662_html_7c2e1690.gif" height="313" width="591" id="image_ef3_444_qy"
+                />(12)</p>
+              <p>Уравнения (12) можно рассматривать как уравнения состояния ДА. В качестве
+                переменных состояния здесь выступают проекции потокосцеплений на ортогональные оси,
+                угловая скорость вращения ротора и угол поворота ротора. Внешними воздействиями на
+                двигатель являются напряжения статора (образующие вектор управления) и момент сил
+                сопротивления.</p>
+              <p>Блок имеет 3 входных и 3 выходных сигнала. </p>
+              <p><b>В</b><b>ходные сигналы</b>:</p>
+              <ol id="ol_ff3_444_qy">
+                <li>
+                  <p>Напряжение на обмотке статора<image href="images_old/0662_html_m18b447b5.gif" height="23"
+                      width="60" id="image_gf3_444_qy"/>в неподвижной системе координат, В.</p>
+                </li>
+                <li>
+                  <p>Напряжение на обмотке статора<image href="images_old/0662_html_m7e6efdc2.gif" height="24"
+                      width="58" id="image_hf3_444_qy"/>в неподвижной системе координат, В.</p>
+                </li>
+                <li>
+                  <p>Возмущающий момент <image href="images_old/0662_html_m31c733b1.gif" height="23" width="72"
+                      id="image_if3_444_qy"/>, Н·м.</p>
+                </li>
+              </ol>
+              <p><b>В</b><b>ыходны</b><b>е</b><b> сигналы</b>:</p>
+              <ol id="ol_jf3_444_qy">
+                <li>
+                  <p>Угол поворота вала<image href="images_old/0662_html_m5831b8e7.gif" height="21" width="40"
+                      id="image_kf3_444_qy"/>, рад.</p>
+                </li>
+                <li>
+                  <p>Угловая скорость (частота) вращения <image href="images_old/0662_html_m36e07c53.gif"
+                      height="21" width="47" id="image_lf3_444_qy"/>, рад/с.</p>
+                </li>
+                <li>
+                  <p>Электромеханический момент на валу ротора двигателя<image
+                      href="images_old/0662_html_5617edf.gif" height="23" width="48" id="image_mf3_444_qy"/>,
+                    Н·м;</p>
+                </li>
+              </ol>
+              <p>Дополнительно на третий выход можно выводить:</p>
+              <ol id="ol_nf3_444_qy">
+                <li>
+                  <p>Ток в обмотке статора<image href="images_old/0662_html_285a8b2d.gif" height="23"
+                      width="50" id="image_of3_444_qy"/>, А.</p>
+                </li>
+                <li>
+                  <p>Ток в обмотке статора<image href="images_old/0662_html_m15d807cf.gif" height="24"
+                      width="48" id="image_pf3_444_qy"/>, А.</p>
+                </li>
+              </ol>
+              <p><b>Свойства</b>:</p>
+              <ul id="ul_qf3_444_qy">
+                <li>
+                  <p>Сопротивление цепи статора<image href="images_old/0662_html_2c638df2.gif" height="23"
+                      width="26" id="image_rf3_444_qy"/>, Ом;</p>
+                </li>
+                <li>
+                  <p>Сопротивление цепи ротора<image href="images_old/0662_html_m23b777a.gif" height="23"
+                      width="27" id="image_sf3_444_qy"/>, Ом;</p>
+                </li>
+                <li>
+                  <p>Индуктивность цепи статора<image href="images_old/0662_html_46b8215c.gif" height="23"
+                      width="25" id="image_tf3_444_qy"/>, Гн;</p>
+                </li>
+                <li>
+                  <p>Индуктивность цепи ротора<image href="images_old/0662_html_666525c9.gif" height="23"
+                      width="26" id="image_uf3_444_qy"/>, Гн;</p>
+                </li>
+                <li>
+                  <p>Взаимная индуктивность<image href="images_old/0662_html_m707929ce.gif" height="23"
+                      width="28" id="image_vf3_444_qy"/>, Гн;</p>
+                </li>
+                <li>
+                  <p>Момент инерции, приведённый к валу ротора<image href="images_old/0662_html_3ac79029.gif"
+                      height="21" width="27" id="image_wf3_444_qy"/>, кг·м2.</p>
+                </li>
+                <li>
+                  <p>Число полюсов<image href="images_old/0662_html_244621c0.gif" height="23" width="26"
+                      id="image_xf3_444_qy"/>, шт.</p>
+                </li>
+                <li>
+                  <p>Число фаз питающего напряжения<image href="images_old/0662_html_691d5a1b.gif" height="23"
+                      width="29" id="image_yf3_444_qy"/>, шт.</p>
+                </li>
+                <li>
+                  <p>Начальный угол поворота ротора<image href="images_old/0662_html_m1db1b05d.gif" height="21"
+                      width="43" id="image_zf3_444_qy"/>, рад.</p>
+                </li>
+                <li>
+                  <p>Начальная частота вращения ротора<image href="images_old/0662_html_6fea424f.gif"
+                      height="21" width="51" id="image_ag3_444_qy"/>, рад/c.</p>
+                </li>
+                <li>
+                  <p>Начальное потокосцепление в обмотке q статора, В·с.</p>
+                </li>
+                <li>
+                  <p>Начальное потокосцепление в обмотке q ротора, В·с.</p>
+                </li>
+                <li>
+                  <p>Начальное потокосцепление в обмотке d статора, В·с.</p>
+                </li>
+                <li>
+                  <p>Начальное потокосцепление в обмотке d ротора, В·с.</p>
+                </li>
+                <li>
+                  <p>Дополнительный вывод.</p>
+                </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2"/>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>ac - Узел граничный </title>
+  <body>
+    <table id="table_p5b_bdw_ty">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/3402/image001.png" height="27" width="25"
+                id="image_q5b_bdw_ty"/></entry>
+            <entry>ac - Узел граничный</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/3402/image002.png" height="54" width="39"
+                id="image_r5b_bdw_ty"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок реализует модель источника постоянного потенциала. Используется в цепях c элементами
+      библиотеки «Электрика».</p>
+    <p> </p>
+    <p>Рекомендуется использовать в качестве «земли», для объединения элементов схемы в точке
+      нулевого потенциала, задав свойство блока равным нулю. </p>
+    <p> </p>
+    <p><b>Блок имеет 1 выходной порт:</b></p>
+    <p>1) Выход цепь 1.</p>
+    <p> </p>
+    <p><b>Свойства блока:</b></p>
+    <ul id="ul_s5b_bdw_ty">
+      <li>· Потенциал узла, В.</li>
+    </ul>
+    <p> </p>
+    <p><b>Параметры блока:</b></p>
+    <ul id="ul_t5b_bdw_ty">
+      <li>· Потенциал выхода, В.</li>
+    </ul>
+    <p> </p>
+  </body>
+</topic>

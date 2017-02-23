@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>HS – Подпитка </title>
+  <body>
+    <table id="table_bmk_2gs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/2508/image001.png" height="32" width="32"
+                id="image_cmk_2gs_sy"/></entry>
+            <entry><b>HS</b><b>– Подпитка</b></entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/2508/image002.png" height="63" width="92"
+                id="image_dmk_2gs_sy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок реализует модель подвода или отвода жидкости в некоторый участок рассматриваемого
+      контура с заданным массовым расходом, энтальпией (или температурой) и концентрациями пассивных
+      примесей.</p>
+    <p>Работа блока заключается в добавлении к массе теплоносителя внутреннего узла «добавленной»
+      массы теплоносителя с заданной энтальпией, на каждом шаге расчета:</p>
+    <p><image href="images_old/2508/image003.png" height="87" width="228" id="image_emk_2gs_sy"/></p>
+    <p>Таким образом, блок «HS – Подпитка» обязательно должен быть соединен с блоком «HS –
+      Внутренний узел», добавляя к последнему ещё одну гидравлическую связь, по которой и передается
+      значение расхода.</p>
+    <p> Величина заданного массового расхода подпитки может быть как положительной, так и
+      отрицательной. При этом, в первом случае, в контур будет добавляться теплоноситель с
+      параметрами, заданными в свойствах блока «HS - Подпитка». В случае же задания отрицательного
+      расхода, теплоноситель будет двигаться в обратном направлении, не втекая в контур, а наоборот
+      покидая его. Заданные в свойствах параметры теплоносителя при этом не используются.</p>
+    <p>Примечание: комбинацией граничного узла (задающего давление) и подпитки можно организовывать
+      соединение нескольких автономных теплогидравлических моделей (каждая из которых является
+      отдельным проектом) в единую расчетную модель, передавая значения параметров теплоносителя из
+      одной модели в другую через базу сигналов:</p>
+    <p>А) <image href="images_old/2508/image004.png" height="101" width="162" id="image_fmk_2gs_sy"/> Б)
+        <image href="images_old/2508/image005.png" height="82" width="182" id="image_gmk_2gs_sy"/></p>
+    <p>Расход, вычисленный между каналом и граничным узлом в схеме А, на каждом шаге передается и
+      записывается в блок подпитки схемы Б. Давление, вычисленное во внутреннем узле схемы Б,
+      передается и записывается в граничный узел схемы А. Передача энтальпии – зависит от
+      направления расхода: в прямом направлении (теплоноситель перетекает из схемы А в схему Б)
+      значение энтальпии граничного узла передается в подпитку; в обратном направлении значение
+      энтальпии внутреннего узла Б передается в граничный узел А. Передача значений организовывается
+      блоками типа «точка контроля» P,H для узлов и G для канала в схеме А и механизмом глобальных
+      сигналов базы данных. </p>
+    <p> </p>
+    <p><b>Свойства блока «HS - Подпитка»</b></p>
+    <table id="table_hmk_2gs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_imk_2gs_sy">
+                <li>·Расход, кг/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_jmk_2gs_sy">
+                <li>G</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_kmk_2gs_sy">
+                <li>·Энтальпия, Дж/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_lmk_2gs_sy">
+                <li>H</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_mmk_2gs_sy">
+                <li>·Температура, С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_nmk_2gs_sy">
+                <li>T</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_omk_2gs_sy">
+                <li>·Определяющий параметр</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_pmk_2gs_sy">
+                <li>DefineParam</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_qmk_2gs_sy">
+                <li>·Концентрации пассивных примесей, кг/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_rmk_2gs_sy">
+                <li>C_passive_tracer</li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока «HS - Подпитка»</b></p>
+    <table id="table_smk_2gs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_tmk_2gs_sy">
+                <li>·Расход, кг/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_umk_2gs_sy">
+                <li>_g</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_vmk_2gs_sy">
+                <li>·Энтальпия, Дж/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_wmk_2gs_sy">
+                <li>_h</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_xmk_2gs_sy">
+                <li>·Температура, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ymk_2gs_sy">
+                <li>_t</li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок может быть соединен посредством гидравлических связей со следующими блоками:</p>
+    <ul id="ul_zmk_2gs_sy">
+      <li>· «HS – Внутренний узел»;</li>
+    </ul>
+  </body>
+</topic>

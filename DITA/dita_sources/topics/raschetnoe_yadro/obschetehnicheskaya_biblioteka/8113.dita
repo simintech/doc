@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Задвижка с пневмоприводом</title>
+  <body>
+    <p><b>Задвижка с пневмоприводом - </b><i>точечный</i><i>неориентированный</i> элемент. Модель
+      предназначена для имитации задвижки, функционирующей с привязкой к блоку управления подсистемы
+      автоматики. </p>
+    <p><b>3.13.1Разрешенные связи элемента</b></p>
+    <p><b>Задвижка с пневмоприводом </b>устанавливается на элементы группы <i>Каналы</i>. </p>
+    <p><b>3.13.2Свойства элемента</b></p>
+    <p>Характеристики <b>Задвижки с пневмоприводом </b>и начальные условия для расчета задаются в
+      закладке <i>Свойства</i><i>объекта</i> (см. Таблица 4.13.2.22). </p>
+    <p><b>Таблица 4.13.2.22 </b>Параметры задвижки с пневмоприводом <table id="table2">
+        <tgroup cols="4">
+          <colspec colnum="1" colname="col1"/>
+          <colspec colnum="2" colname="col2"/>
+          <colspec colnum="3" colname="col3"/>
+          <colspec colnum="4" colname="col4"/>
+          <thead>
+            <row>
+              <entry><b>Параметр</b></entry>
+              <entry><b>Имя </b><b>(идентификатор)</b></entry>
+              <entry><b>Тип переменной</b></entry>
+              <entry><b>Интервал возможных значений</b></entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>Имя в БД</entry>
+              <entry>_Name</entry>
+              <entry>T</entry>
+              <entry>любое</entry>
+            </row>
+            <row>
+              <entry>Название на схеме </entry>
+              <entry>_Capt</entry>
+              <entry>T</entry>
+              <entry>любое</entry>
+            </row>
+            <row>
+              <entry>Редакция названия на схеме</entry>
+              <entry>Capt_Edit</entry>
+              <entry>P</entry>
+              <entry>[Нет, Да]</entry>
+            </row>
+            <row>
+              <entry>Название в две строки</entry>
+              <entry>_NumRows</entry>
+              <entry>P</entry>
+              <entry>[Нет, Да]</entry>
+            </row>
+            <row>
+              <entry>Положение, %</entry>
+              <entry>State</entry>
+              <entry>R</entry>
+              <entry>? 0</entry>
+            </row>
+            <row>
+              <entry>Имя файла</entry>
+              <entry>FileName</entry>
+              <entry>P</entry>
+              <entry>[гильотина с протечкой, гильотина, линейная, по умолчанию]</entry>
+            </row>
+            <row>
+              <entry>Номер элемента в канале</entry>
+              <entry>ElementNo</entry>
+              <entry>I</entry>
+              <entry>? 1</entry>
+            </row>
+            <row>
+              <entry>Имя таблицы БД</entry>
+              <entry>catname</entry>
+              <entry>T</entry>
+              <entry>любое</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></p>
+    <p><i>Примечание</i> - Серым цветом помечены строки обязательные для заполнения</p>
+    <p><i>Имя таблицы БД</i> может быть любой текстовый параметр, зависит от способа управления
+      клапаном. Значение по умолчанию – БУЗ.</p>
+  </body>
+</topic>

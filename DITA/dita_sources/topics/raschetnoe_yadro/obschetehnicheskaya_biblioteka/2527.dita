@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>HS – Цилиндрическая толстая стенка </title>
+  <body>
+    <table id="table_jb2_bky_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/2527/image001.png" height="32" width="32"
+                id="image_kb2_bky_sy"/></entry>
+            <entry><b>HS</b><b>– Цилиндрическая толстая стенка</b></entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/2527/image002.png" height="104" width="98"
+                id="image_lb2_bky_sy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок реализует модель тепловой структуры – цилиндрической стенки из заданного материала.
+      Предназначена для моделирования передачи тепловой энергии между наружной и внутренней
+      поверхностями стенки.</p>
+    <p>Включение блока в расчетную схему осуществляется подключением линий тепловых связей к одному
+      или обоим тепловым портам блока. В ходе расчета происходит динамическое установление теплового
+      баланса между внутренней и наружной поверхностями цилиндрической стенки, а также самим
+      материалом стенки. Материал стенки устанавливается в свойствах блока путем выбора файла,
+      содержащего соответствующую таблицу зависимости основных термодинамических характеристик
+      материала от температуры. Настройка количества и длины элементов стенки должна совпадать с
+      соответствующими настройками каналов, с которыми соединена стенка.</p>
+    <p>Блок может использоваться для моделирования теплообмена между внутренней и наружной частями
+      цилиндрической поверхности, например, канала круглого сечения. Таким образом связка
+      гидравлического канала с цилиндрической стенкой представляет собой модель трубы,
+      осуществляющей теплообмен с внешней средой.</p>
+    <p> </p>
+    <p><b>Свойства блока «</b><b>HS</b><b> – Цилиндрическая толстая стенка»</b></p>
+    <table id="table_mb2_bky_sy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_nb2_bky_sy">
+                <li>· Тепловая связь внутри стенки</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ob2_bky_sy">
+                <li>isHeat1</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_pb2_bky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_qb2_bky_sy">
+                <li>· Тепловая связь снаружи стенки</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_rb2_bky_sy">
+                <li>isHeat2</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_sb2_bky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_tb2_bky_sy">
+                <li>· Количество элементов по высоте</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ub2_bky_sy">
+                <li>Nh</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_vb2_bky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_wb2_bky_sy">
+                <li>· Количество элементов (колец) по радиусу</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_xb2_bky_sy">
+                <li>Nx</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_yb2_bky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_zb2_bky_sy">
+                <li>· Наружный радиус, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ac2_bky_sy">
+                <li>R2</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_bc2_bky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_cc2_bky_sy">
+                <li>· Толщина стенки, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_dc2_bky_sy">
+                <li>delta_wall</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ec2_bky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_fc2_bky_sy">
+                <li>· Материал</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_gc2_bky_sy">
+                <li>Material</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_hc2_bky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ic2_bky_sy">
+                <li>· Массив длин элементов, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_jc2_bky_sy">
+                <li>deltaH</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_kc2_bky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_lc2_bky_sy">
+                <li>· Внутренние связи</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_mc2_bky_sy">
+                <li>link1</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_nc2_bky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_oc2_bky_sy">
+                <li>· Наружные связи</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_pc2_bky_sy">
+                <li>link</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_qc2_bky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_rc2_bky_sy">
+                <li>· Объемное энерговыделение, Вт/м³</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_sc2_bky_sy">
+                <li>qv</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_tc2_bky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_uc2_bky_sy">
+                <li>· Количество стержней</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_vc2_bky_sy">
+                <li>N_rod</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_wc2_bky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_xc2_bky_sy">
+                <li>· Термическое сопротивление на внутр. пов-ти стенки, м²*К/Вт</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_yc2_bky_sy">
+                <li>R_term1</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_zc2_bky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ad2_bky_sy">
+                <li>· Термическое сопротивление на наруж. пов-ти стенки, м²*К/Вт</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_bd2_bky_sy">
+                <li>R_term2</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_cd2_bky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_dd2_bky_sy">
+                <li>· Начальная температура стенки</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ed2_bky_sy">
+                <li>Twall_0</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_fd2_bky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_gd2_bky_sy">
+                <li>· Задать температуру в начальный момент времени</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_hd2_bky_sy">
+                <li>SetInitTempFrom</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_id2_bky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока «</b><b>HS</b><b> – Цилиндрическая толстая стенка»</b></p>
+    <table id="table_jd2_bky_sy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_kd2_bky_sy">
+                <li>· Температура на внутренней границе, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ld2_bky_sy">
+                <li>_twall_bound_in</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_md2_bky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_nd2_bky_sy">
+                <li>· Температура на наружной границе, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_od2_bky_sy">
+                <li>_twall_bound_out</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_pd2_bky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_qd2_bky_sy">
+                <li>· Массив температур по толщине, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_rd2_bky_sy">
+                <li>_twall_array</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_sd2_bky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_td2_bky_sy">
+                <li>· Тепловой поток на внутренней границе, Вт/м²</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ud2_bky_sy">
+                <li>_qf_in</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_vd2_bky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_wd2_bky_sy">
+                <li>· Тепловой поток на наружной границе, Вт/ м²</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_xd2_bky_sy">
+                <li>_qf_out</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_yd2_bky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_zd2_bky_sy">
+                <li>· Температура стенки, усредненная по массе, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_a22_bky_sy">
+                <li>_t_wall_middle_m</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_b22_bky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

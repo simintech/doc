@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>ЭМ - Редуктор</title>
+  <body>
+    <table id="table_gnt_lq4_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/0253.png" height="22" width="32" id="image_hnt_lq4_qy"
+              /></entry>
+            <entry>ЭМ - Редуктор</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry>| субмодель |</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/0253s.png" height="82" width="67" id="image_int_lq4_qy"
+              /></entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry/>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2">
+              <p>Блок представляет собой параметризованную субмодель, реализующую типовую
+                математическую модель "Редуктор".</p>
+              <p>На <b>входы</b> блока подаются:</p>
+              <p>угол поворота вала двигателя q[рад],</p>
+              <p>угол поворота звена qn[рад]),</p>
+              <p>скорости первого и второго звена q'[рад/ сек] и q'n[рад/сек].</p>
+              <p><b>Выходом</b> модели является момент редуктора Qr[н*М].</p>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Гиперболический тангенс</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/0053.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/0053s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован | Си
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок возвращает выходное значение, вычисленное по формуле:<image placement="break"
+        href="images/0053_1.png" align="center" id="image_gwh_bpz_gy"/>  где <i>a</i>, <i>ω</i>,
+        <i>f</i>– амплитуда, круговая частота и фаза, <i>x</i>(<i>t</i>), <i>y</i>(<i>t</i>) –
+      входной и выходной сигналы. </p>
+    <section>
+      <title>Входы</title>
+      <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>input</uicontrol> - порт ввода аргумента функции.</li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>output</uicontrol> - порт вывода значения функции.</li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <title>Свойства:</title>
+      <p><ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Амплитуда</uicontrol> – коэффициент <i>a</i>.</li>
+          <li><uicontrol>Частота</uicontrol> – коэффициент <i>ω</i>.</li>
+          <li><uicontrol>Фаза</uicontrol> – коэффициент <i>f</i>.</li>
+        </ul>Свойства могут быть векторами, размерности которых должны быть равны размерности входа,
+        в этом случае на выходе будет также вектор.</p>
+    </section>
+    <section>
+      <title>Параметры</title>
+      <p>нет</p>
+    </section>
+    <note>
+      <ol id="ol_dtr_wnz_gy">
+        <li>По умолчанию данный блок реализует гиперболическое тангенциальное преобразование
+          входного скалярного сигнала со свойствами <i>a</i>=1, <i>ω</i>=1, <i>f</i>=1.</li>
+        <li>Именованные свойства могут быть заданы как локальные переменные модели (или субмодели) в
+          скрипте на языке программирования, как глобальные сигналы проекта при помощи пункта
+          главного меню <cmdname>Сервис → Сигналы</cmdname>, или как внешние сигналы проекта при
+          помощи подключаемой базы сигналов. </li>
+      </ol>
+    </note>
+  </body>
+</topic>

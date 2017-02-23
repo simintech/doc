@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Кнопка (Button) </title>
+  <body>
+    <p><image href="Button_images/image001.png" height="86" width="544" id="image_jfh_gn1_ry"/></p>
+    <p><image href="Button_images/image002.png" height="140" width="211" id="image_kfh_gn1_ry"/></p>
+    <p>Примитив Кнопка используется в качестве управляющего элемента с двумя дискретными
+      состояниями: кнопка нажата и кнопка отжата. Для каждого состояния можно задать числовое
+      значение. Так, если задать для ненажатого состояния значение «0», а для нажатого состояния
+      значение «1», то у ненажатой кнопки значение свойства ButtonName.Value будет равно нулю, а у
+      нажатой – единице. Управлять состоянием кнопки можно, задавая значения свойства
+      ButtonName.Value таким образом, чтобы они совпадали с пороговыми значениями.</p>
+    <p><b><i>Вставка</i></b></p>
+    <p>1. Кликнуть в панели примитивов по кнопке <image href="Button_images/image003.png" height="31"
+        width="31" id="image_lfh_gn1_ry"/>. </p>
+    <p>2. Кликнуть в поле окна проекта или графического редактора в месте вставки кнопки. Появится
+      прямоугольник с изображением выключателя. </p>
+    <p><b><i>Редактирование</i></b></p>
+    <p>1. Выделить кнопку, кликнув по ней. </p>
+    <p>2. Для перемещения кнопки навести на нее указатель мыши - изображение указателя изменится на
+      изображение указывающей руки, нажать ЛКМ и удерживая её переместить кнопку на новое место.</p>
+    <p>3. Для изменения высоты и ширины кнопки подвести указатель мыши к маркеру в одной из вершин
+      прямоугольника, описывающего кнопку – изображение указателя изменится на двунаправленную
+      стрелку, нажать ЛКМ и удерживая её переместить маркер на расстояние, соответствующее новому
+      размеру кнопки.</p>
+    <p><b><i>Свойства</i></b></p>
+    <p><image href="Button_images/image004.png" height="670" width="622" id="image_mfh_gn1_ry"/></p>
+    <table id="table_nfh_gn1_ry">
+      <tgroup cols="5">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <colspec colnum="4" colname="col4"/>
+        <colspec colnum="5" colname="col5"/>
+        <tbody>
+          <row>
+            <entry namest="col1" nameend="col2"><b>Название</b></entry>
+            <entry namest="col2" nameend="col3"><b>Имя</b></entry>
+            <entry namest="col3" nameend="col4"><b>Значение по умолчанию</b></entry>
+            <entry>
+              <p><b>Допустимые значения</b></p>
+              <p><b>{в скрипте} в окне свойств</b></p>
+            </entry>
+            <entry><b>Справка</b></entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2"><b>Имя объекта </b></entry>
+            <entry namest="col2" nameend="col3">Name</entry>
+            <entry namest="col3" nameend="col4">Button&lt;N></entry>
+            <entry>Непрерывная последовательность цифр и латинских букв</entry>
+            <entry>
+              <p>Данное имя используется для обращения к свойствам объекта, например, в скрипте:</p>
+              <p>Button3.Visible.</p>
+            </entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2"><b>Тип элемента</b></entry>
+            <entry namest="col2" nameend="col3">ClassName</entry>
+            <entry namest="col3" nameend="col4">Button</entry>
+            <entry>Значение предопределено</entry>
+            <entry>Тип объекта, определяющий его внешний вид объекта и набор свойств.</entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2"><b>Подсказка</b></entry>
+            <entry namest="col2" nameend="col3">Hint</entry>
+            <entry namest="col3" nameend="col4"><i>&lt;</i><i>нет</i><i>></i></entry>
+            <entry>Любой текст</entry>
+            <entry>Текст подсказки, всплывающей при наведении курсора мыши на объект.</entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2"><b>Отображать подсказку при
+              редактировании</b></entry>
+            <entry namest="col2" nameend="col3">ShowHintOnEdit</entry>
+            <entry namest="col3" nameend="col4">Нет</entry>
+            <entry>
+              <p>{0} Нет</p>
+              <p>{1} Да</p>
+            </entry>
+            <entry>Включает и отключает отображение всплывающей подсказки в режиме
+              редактирования.</entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2"><b>Видимость при выполнении</b></entry>
+            <entry namest="col2" nameend="col3">Visible</entry>
+            <entry namest="col3" nameend="col4">Да</entry>
+            <entry>
+              <p>{0} Нет</p>
+              <p>{1} Да</p>
+            </entry>
+            <entry>Включает и отключает отображение объекта в режиме «Индикация» при запуске
+              расчёта.</entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2"><b>Координаты точек</b></entry>
+            <entry namest="col2" nameend="col3">Points</entry>
+            <entry namest="col3" nameend="col4">[(X1,Y1),(X2,Y2), (X3,Y3), (X4,Y4)]</entry>
+            <entry>
+              <p>Значения float, имена сигналов, математические выражения:</p>
+              <p>[(56 , 104), (112 , src1),(coord3*k4 , 40),(44.33,54,23)]</p>
+            </entry>
+            <entry>Координаты вершин прямоугольника, описывающего изображение кнопки.</entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2"><b>Ссылка</b></entry>
+            <entry namest="col2" nameend="col3">Instance</entry>
+            <entry namest="col3" nameend="col4"><i>&lt;</i><i>нет</i><i>></i></entry>
+            <entry>Значения, задаваемые в окне «Выбор ссылки».</entry>
+            <entry>Вызов окна «Выбор ссылки». Объект используется в качестве чувствительной области
+              для вызова различных действий: переключения между страницами проекта, управления
+              другими блоками, открытия файлов и пр. </entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2"><b>Ссылка при редактировании</b></entry>
+            <entry namest="col2" nameend="col3">EditInstance</entry>
+            <entry namest="col3" nameend="col4">Нет</entry>
+            <entry>
+              <p>{0} Нет</p>
+              <p>{1} Да</p>
+            </entry>
+            <entry>Обработка объектом вызова ссылки в режиме редактирования.</entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2"><b>Действие для вывода ссылки</b></entry>
+            <entry namest="col2" nameend="col3">InstanceMode</entry>
+            <entry namest="col3" nameend="col4">Двойной щелчок</entry>
+            <entry>
+              <p>{0} Двойной щелчок</p>
+              <p>{1} Щелчок левой кнопкой</p>
+              <p>{2} Щелчок правой кнопкой</p>
+            </entry>
+            <entry>Выбор варианта активации ссылки.</entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2"><b>Ярлык</b></entry>
+            <entry namest="col2" nameend="col3">Tag</entry>
+            <entry namest="col3" nameend="col4">0</entry>
+            <entry>Любое целое число или интерпретируемое выражение</entry>
+            <entry>Метка в виде произвольного числа. Позволяет обращаться ко всем объектам с
+              одинаковым ярлыком при написании скриптов. Например, когда в процессе счета требуется
+              скрыть или показать группу объектов.</entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2"><b>Шаблон автозаполнения</b></entry>
+            <entry namest="col2" nameend="col3">Template</entry>
+            <entry namest="col3" nameend="col4"><i>&lt;</i><i>нет</i><i>></i></entry>
+            <entry>Подробнее о шаблонах автозаполнения.</entry>
+            <entry>Заданный в специальном формате текст, позволяющий автоматически создавать связи и
+              присваивать имена сигналам объекта.</entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2"><b>Номер решателя</b></entry>
+            <entry namest="col2" nameend="col3">Layer</entry>
+            <entry namest="col3" nameend="col4">0</entry>
+            <entry>Любое целое число или интерпретируемое выражение</entry>
+            <entry>Число, задающее номер расчетного ядра, которое производит расчет математической
+              модели объекта. Применяется при использовании нескольких расчетных программ. </entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2"><b>Скрипт инициализации объекта</b></entry>
+            <entry namest="col2" nameend="col3">OnInitScript</entry>
+            <entry namest="col3" nameend="col4"><i>&lt;</i><i>нет</i><i>></i></entry>
+            <entry>Текст скрипта</entry>
+            <entry>Текст скрипта, исполняемого непосредственно перед запуском расчёта.</entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2"><b>Скрипт исполнения объекта</b></entry>
+            <entry namest="col2" nameend="col3">OnRunScript</entry>
+            <entry namest="col3" nameend="col4"><i>&lt;</i><i>нет</i><i>></i></entry>
+            <entry>Текст скрипта</entry>
+            <entry>Текст скрипта, исполняемого при выполнении расчёта.</entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2"><b>Ширина</b></entry>
+            <entry namest="col2" nameend="col3">Width</entry>
+            <entry namest="col3" nameend="col4">32</entry>
+            <entry>Значения float, имена сигналов, математические выражения.</entry>
+            <entry>Ширина изображения кнопки. </entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2"><b>Высота</b></entry>
+            <entry namest="col2" nameend="col3">Height</entry>
+            <entry namest="col3" nameend="col4">44</entry>
+            <entry>Значения float, имена сигналов, математические выражения.</entry>
+            <entry>Высота изображения кнопки.</entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2"><b>Кнопка нажата</b></entry>
+            <entry namest="col2" nameend="col3">Down</entry>
+            <entry namest="col3" nameend="col4">Нет</entry>
+            <entry>
+              <p>{0} Нет</p>
+              <p>{1} Да</p>
+            </entry>
+            <entry>Задает состояние кнопки по умолчанию.</entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2"><b>Растровое изображение</b></entry>
+            <entry namest="col2" nameend="col3">RasterImage</entry>
+            <entry namest="col3" nameend="col4"><i>&lt;button.bmp></i></entry>
+            <entry>Имя файла с растровым изображениием в формате bmp, jpg, png.</entry>
+            <entry>
+              <p>Указывается графический файл с растровым изображением, которое должно отображаться
+                внутри объекта. Изображение должно содержать две равные по размеру картинки для
+                отжатой и нажатой кнопки. Для корректного отображения картинки в общем изображении
+                должны располагатьсяслева направо: сначала для отжатого состояния, затем для
+                нажатого.</p>
+              <p>Допускается использование одной картинки для обоих состояний. В этом случае нужно
+                дополнительно использовать свойство «Применять одну картинку / onepicture». </p>
+            </entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2"><b>Фиксация</b></entry>
+            <entry namest="col2" nameend="col3">Fixed</entry>
+            <entry namest="col3" nameend="col4">Да</entry>
+            <entry>
+              <p>{0} Нет</p>
+              <p>{1} Да</p>
+            </entry>
+            <entry>
+              <p>Выбор между двумя режимами работы кнопки: с фиксацией нажатого положения и с
+                возвратом после нажатия.</p>
+              <p>Для режима с возвратом можно задать задержку автоматического отжатия кнопки в
+                милисекундах в свойстве «Время сброса кнопки, мсек / ResetTime».</p>
+            </entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2"><b>Значение по умолчанию</b></entry>
+            <entry namest="col2" nameend="col3">UpValue</entry>
+            <entry namest="col3" nameend="col4">0</entry>
+            <entry>Значения float, имена сигналов, математические выражения.</entry>
+            <entry>
+              <p>Значение, которое будет записываться в свойство ButtonName.Value при отжатом
+                состоянии кнопки. </p>
+              <p>Следует иметь в виду, что истинное значение по умолчанию будет устанавливаться для
+                кнопки (т.е. для ButtonName.Value) исходя из состояния кнопки по умолчанию, которое
+                задается в свойстве «Кнопка нажата / Down».</p>
+            </entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2"><b>Значение при нажатии</b></entry>
+            <entry namest="col2" nameend="col3">DownValue</entry>
+            <entry namest="col3" nameend="col4">1</entry>
+            <entry>Значения float, имена сигналов, математические выражения.</entry>
+            <entry>Значение, которое будет записываться в свойство ButtonName.Value при нажатом
+              состоянии кнопки. </entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2"><b>Сохранять пропорции</b></entry>
+            <entry namest="col2" nameend="col3">Proportional</entry>
+            <entry namest="col3" nameend="col4">Нет</entry>
+            <entry>
+              <p>{0} Нет</p>
+              <p>{1} Да</p>
+            </entry>
+            <entry>Включает и отключает сохранение соотношения ширины и высоты изображения при
+              вписывании его в прямоугольные границы объекта.</entry>
+          </row>
+          <row>
+            <entry><b>Трёхмерность</b></entry>
+            <entry namest="col2" nameend="col3">Ctrl3d</entry>
+            <entry namest="col3" nameend="col4">Да</entry>
+            <entry namest="col4" nameend="col5">
+              <p>{0} Нет</p>
+              <p>{1} Да</p>
+            </entry>
+            <entry>Включает и отключает рамку с тенями вокруг кнопки для создания эффекта
+              трехмерности.</entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2"><b>Применять одну картинку</b></entry>
+            <entry namest="col2" nameend="col3">onepicture</entry>
+            <entry namest="col3" nameend="col4">Нет</entry>
+            <entry>
+              <p>{0} Нет</p>
+              <p>{1} Да</p>
+            </entry>
+            <entry>
+              <p>Включает и отключает статичное изображение для кнопки.</p>
+              <p>Если выбрано значение «Да», изображение кнопки не изменяется при нажатии.</p>
+            </entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2"><b>Толщина границы</b></entry>
+            <entry namest="col2" nameend="col3">BorderWidth</entry>
+            <entry namest="col3" nameend="col4">0</entry>
+            <entry>Значения float, имена сигналов, математические выражения.</entry>
+            <entry>Толщина абриса в пикселях. </entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2"><b>Время сброса кнопки, мсек</b></entry>
+            <entry namest="col2" nameend="col3">ResetTime</entry>
+            <entry namest="col3" nameend="col4">0</entry>
+            <entry>Ноль, натуральные значения, имена сигналов, математические выражения.</entry>
+            <entry>Время задержки перед автоматическим возвратом кнопки после нажатия. Применяется в
+              режиме работы кнопки без фиксации (свойство «Фиксация / Fixed»).</entry>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2"><b>Коэффициент прозрачности</b></entry>
+            <entry namest="col2" nameend="col3">Opacity</entry>
+            <entry namest="col3" nameend="col4">1</entry>
+            <entry>Значения float от 0 до 1.</entry>
+            <entry>
+              <p>0 – полностью прозрачный объект.</p>
+              <p>1 – полностью непрозрачный объект.</p>
+            </entry>
+          </row>
+          
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

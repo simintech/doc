@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика – Демпфер вращательного движения с переменными коэффициентами  </title>
+  <body>
+    <table id="table_nxg_ntr_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4211/image001.png" height="32" width="32"
+                id="image_oxg_ntr_qy"/></entry>
+            <entry>Механика – Демпфер вращательного движения с переменными коэффициентами</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4211/image002.png" height="83" width="108"
+                id="image_pxg_ntr_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> В блоке реализована математическая модель линейного вязкостного демпфера с переменным
+      коэффициентом демпфирования, описываемая следующими уравнениями:</p>
+    <p><image href="images_old/4211/image003.png" height="63" width="192" id="image_qxg_ntr_qy"/></p>
+    <p>T - момент демпфирования;</p>
+    <p>D - коэффициент демпфирования;</p>
+    <p><image href="images_old/4211/image004.png" height="22" width="14" id="image_rxg_ntr_qy"/> –
+      относительная угловая скорость;</p>
+    <p><image href="images_old/4211/image005.png" height="22" width="39" id="image_sxg_ntr_qy"/> –
+      минимально возможный коэффициент демпфирования;</p>
+    <p><image href="images_old/4211/image006.png" height="22" width="53" id="image_txg_ntr_qy"/> –
+      угловые скорости портов C и R, соответственно.</p>
+    <p> </p>
+    <p>
+      <b>Входные порты блока:</b></p>
+    <p> Блок имеет два механических порта (C и R) вращательного движения и один математический порт
+      B, через который в модель поступает значение коэффициента демпфирования D.</p>
+    <p> </p>
+    <p>
+      <b>Выходные порты блока – отсутствуют.</b></p>
+    <p> </p>
+    <p><b> Свойства блока:</b></p>
+    <table id="table_uxg_ntr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Dmin</entry>
+            <entry>-</entry>
+            <entry>минимальный коэффициент демпфирования, <image href="images_old/4211/image007.png"
+                height="32" width="34" id="image_vxg_ntr_qy"/></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока</b><b>:</b></p>
+    <table id="table_wxg_ntr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Т</entry>
+            <entry>-</entry>
+            <entry>момент демпфирования, <image href="images_old/4211/image008.png" height="22"
+                width="36" id="image_xxg_ntr_qy"/></entry>
+          </row>
+          <row>
+            <entry>W</entry>
+            <entry>-</entry>
+            <entry>относительная угловая скорость, <image href="images_old/4211/image009.png" height="29"
+                width="21" id="image_yxg_ntr_qy"/></entry>
+          </row>
+          <row>
+            <entry>Q</entry>
+            <entry>-</entry>
+            <entry>мощность демпфирования, Вт</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

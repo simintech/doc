@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика - Гибкий вал </title>
+  <body>
+    <table id="table_uf1_sds_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4260/image001.jpg" height="32" width="32"
+                id="image_vf1_sds_qy"/></entry>
+            <entry>Механика - Гибкий вал</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4260/image002.jpg" height="63" width="120"
+                id="image_wf1_sds_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>В блоке реализована модель упругого вала. Вал представляется в виде N последовательно
+      соединенных элементов, каждый из которых характеризуется своим моментом инерции, жесткостью
+      пружины и коэффициентом внутреннего демпфирования (см. рисунок 1).</p>
+    <p><image href="images_old/4260/image003.jpg" height="164" width="353" id="image_xf1_sds_qy"/></p>
+    <p>Рисунок 1 - Разбиение вала на элементы</p>
+    <p>Характеристики вала могут быть заданы либо вручную, либо на основе данных о свойствах
+      материала.</p>
+    <p>В первом случае задаются:</p>
+    <table id="table_yf1_sds_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>J</entry>
+            <entry>-</entry>
+            <entry>Момент инерции, кг*м</entry>
+          </row>
+          <row>
+            <entry>K</entry>
+            <entry>-</entry>
+            <entry>Коэффициент жесткости пружины, н*м/рад</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Во втором случае жесткость и момент инерции определяются по следующим формулам:</p>
+    <p><image href="images_old/4260/image004.gif" height="38" width="155" id="image_zf1_sds_qy"/></p>
+    <p><image href="images_old/4260/image005.gif" height="38" width="191" id="image_ag1_sds_qy"/></p>
+    <p><image href="images_old/4260/image006.gif" height="24" width="94" id="image_bg1_sds_qy"/></p>
+    <p><image href="images_old/4260/image007.gif" height="42" width="117" id="image_cg1_sds_qy"/></p>
+    <p> </p>
+    <table id="table_dg1_sds_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Jp</entry>
+            <entry>-</entry>
+            <entry>Полярный момент инерции элемента</entry>
+          </row>
+          <row>
+            <entry>Do</entry>
+            <entry>-</entry>
+            <entry>Внешний диаметр вала</entry>
+          </row>
+          <row>
+            <entry>Di</entry>
+            <entry>-</entry>
+            <entry>Внутренний диаметр вала</entry>
+          </row>
+          <row>
+            <entry>M</entry>
+            <entry>-</entry>
+            <entry>Масса элемента</entry>
+          </row>
+          <row>
+            <entry>L</entry>
+            <entry>-</entry>
+            <entry>Длина элемента</entry>
+          </row>
+          <row>
+            <entry>ρ</entry>
+            <entry>-</entry>
+            <entry>Плотность материала</entry>
+          </row>
+          <row>
+            <entry>G</entry>
+            <entry>-</entry>
+            <entry>Модуль упругости материала</entry>
+          </row>
+          <row>
+            <entry>K</entry>
+            <entry>-</entry>
+            <entry>Жесткость элемента</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Внутренний коэффициент демпфирования для одного элемента вала определяется на основе
+      заданного коэффициента демпфирования С и собственной частоты </p>
+    <p><image href="images_old/4260/image008.gif" height="22" width="101" id="image_eg1_sds_qy"/>,</p>
+    <p><image href="images_old/4260/image009.gif" height="66" width="97" id="image_fg1_sds_qy"/></p>
+    <p><b>Входные порты блока - отсутствуют</b></p>
+    <p>Если в модели определяются моменты (свойство Mod_Type), то блок имеет два механических
+      ненаправленных порта вращательного движения, через которые на вход модели блока поступают
+      скорости портов, а на выход - моменты, действующие на концы вала.</p>
+    <p><b>Выходные порты блока:</b></p>
+    <p>Если в модели определяются моменты (свойство Mod_Type), то блок имеет два механических
+      ненаправленных порта вращательного движения, через которые на вход блока поступают моменты от
+      присоединенных блоков, а на выход - скорости вращения на концах вала. </p>
+    <p>Кроме этого, блок имеет один математический порт, на который поступает вектор (размерностью
+      N) деформаций элементов вала в градусах. </p>
+    <p><b>Свойства блока:</b></p>
+    <table id="table_gg1_sds_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Mod_Type</entry>
+            <entry>-</entry>
+            <entry>Определяются скорости/моменты</entry>
+          </row>
+          <row>
+            <entry>Fi0</entry>
+            <entry>-</entry>
+            <entry>Начальный угол деформации, рад</entry>
+          </row>
+          <row>
+            <entry>W0</entry>
+            <entry>-</entry>
+            <entry>Начальная скорость деформации, рад/с</entry>
+          </row>
+          <row>
+            <entry>Bb</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения порт B, н*м*с/рад</entry>
+          </row>
+          <row>
+            <entry>Bf</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения порт F, н*м*с/рад</entry>
+          </row>
+          <row>
+            <entry>N</entry>
+            <entry>-</entry>
+            <entry>Число разбиений</entry>
+          </row>
+          <row>
+            <entry>ChType</entry>
+            <entry>-</entry>
+            <entry>Тип задания характеристик (вручную/свойства материала)</entry>
+          </row>
+          <row>
+            <entry>C</entry>
+            <entry>-</entry>
+            <entry>Коэффициент внутреннего демпфирования, н*м</entry>
+          </row>
+          <row>
+            <entry>J</entry>
+            <entry>-</entry>
+            <entry>Момент инерции, кг*м</entry>
+          </row>
+          <row>
+            <entry>K</entry>
+            <entry>-</entry>
+            <entry>Коэффициент жесткости пружины, н*м/рад</entry>
+          </row>
+          <row>
+            <entry>L</entry>
+            <entry>-</entry>
+            <entry>Длина вала, м</entry>
+          </row>
+          <row>
+            <entry>Do</entry>
+            <entry>-</entry>
+            <entry>Внешний диаметр вала, м</entry>
+          </row>
+          <row>
+            <entry>Di</entry>
+            <entry>-</entry>
+            <entry>Внутренний диаметр вала, м</entry>
+          </row>
+          <row>
+            <entry>Rho</entry>
+            <entry>-</entry>
+            <entry>Плотность материала, кг/м3</entry>
+          </row>
+          <row>
+            <entry>G</entry>
+            <entry>-</entry>
+            <entry>Модуль упругости материала, Па</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_hg1_sds_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Тb</entry>
+            <entry>-</entry>
+            <entry>Момент на ведущем валу, н*м</entry>
+          </row>
+          <row>
+            <entry>Wb</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость ведущего вала, рад/с</entry>
+          </row>
+          <row>
+            <entry>Тf</entry>
+            <entry>-</entry>
+            <entry>Момент на ведомом валу, н*м</entry>
+          </row>
+          <row>
+            <entry>Wf</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость ведомого вала, рад/с</entry>
+          </row>
+          <row>
+            <entry>Q</entry>
+            <entry>-</entry>
+            <entry>Небаланс мощности, Вт</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

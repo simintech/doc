@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Свойства воды и пара </title>
+  <body>
+    <table id="table_ztw_rj4_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/0354.png" height="32" width="32" id="image_a5w_rj4_qy"
+              /></entry>
+            <entry>Свойства воды и пара</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry>| скалярный |</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/0354s.png" height="67" width="133" id="image_b5w_rj4_qy"
+              /></entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry/>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2">
+              <p>Блок производит вычисление свойств воды и водяного пара по давлению (первый вход) и
+                второму параметру (энтальпия или температура - второй вход). </p>
+              <p><b>Свойства</b>:</p>
+              <ul id="ul_c5w_rj4_qy">
+                <li>
+                  <p>Фаза – фазовое состояние для которого рассчитываются свойства (вода, пар или
+                    смесь).</p>
+                </li>
+                <li>
+                  <p>Тип параметра на втором входе – энтальпия или температура.</p>
+                </li>
+                <li>
+                  <p>Выходные значения – список рассчитываемых блоком параметров на выходе.</p>
+                </li>
+                <li>
+                  <p>Начальное давление – значение давления, соотвествующее нулю на первом
+                    входе.</p>
+                </li>
+                <li>
+                  <p>Начальное значение 2-го входа – значение параметра, соответсвующее нулю на
+                    втором входе.</p>
+                </li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>

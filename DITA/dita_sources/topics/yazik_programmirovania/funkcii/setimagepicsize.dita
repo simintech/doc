@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>setimagepicsize</title>
+<shortdesc>Функция установки размера полотна для блока «Изображение с поворотом».</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>setimagepicsize</funcname>(block_id, x, y);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>block_id – идентификатор (имя) блока типа «Изображение с поворотом»;</p>
+      <p>x – размер полотна по оси абсцисс, в координатах схемного окна;</p>
+      <p>b – размер полотна по оси ординат, в координатах схемного окна.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>setimagepicsize</codeph> – функция установки размера отображаемого полотна блока
+        «Изображение с поворотом». Важно, что при этом устанавливается не физический размер блока на
+        схемном окне, а разрешение, отображаемого блоком изображения. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> w: <kword>integer</kword> = 512;
+<kword>var</kword> h: <kword>integer</kword> = 256;
+<funcname>setimagepicsize</funcname>(RotatedImage,w,h);
+//Выводим изображение на экран в картинку
+<kword>var</kword> bytes: <kword>intarray</kword>;
+bytes = (w*h)#(<funcname>getbgracolor</funcname>(<funcname>rand</funcname>*255,<funcname>rand</funcname>*255,<funcname>rand</funcname>*255,255));
+<funcname>setimagepicpixels</funcname>(RotatedImage,0,0,w,h,bytes);</codeblock></section>
+<p>В результате выполнения скрипта, блок с именем <codeph>RotatedImage</codeph>, будет произвольно
+      изменять свою окраску с заданным в параметрах проекта шагом перерисовки, независящим от
+      настроек решателя.</p>  
+  </body>
+</topic>

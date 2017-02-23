@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика – Волновой редуктор </title>
+  <body>
+    <table id="table_bzw_bfs_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4252/image001.png" height="32" width="32"
+                id="image_czw_bfs_qy"/></entry>
+            <entry>Механика – Волновой редуктор</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4252/image002.png" height="55" width="147"
+                id="image_dzw_bfs_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>В блоке реализована модель волнового редуктора (см. рис.1), характеризуемого передаточным
+      числом</p>
+    <p> </p>
+    <p><image href="images_old/4252/image003.png" height="46" width="140" id="image_ezw_bfs_qy"/></p>
+    <p> </p>
+    <table id="table_fzw_bfs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>g</entry>
+            <entry>-</entry>
+            <entry>передаточное число</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4252/image004.png" height="22" width="22"
+                id="image_gzw_bfs_qy"/></entry>
+            <entry>-</entry>
+            <entry>число зубьев обоймы</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4252/image005.png" height="22" width="22"
+                id="image_hzw_bfs_qy"/></entry>
+            <entry>-</entry>
+            <entry>число зубьев гибкого колеса</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p><image href="images_old/4252/image006.jpg" height="138" width="275" id="image_izw_bfs_qy"/></p>
+    <p>Рис.1</p>
+    <p> Модель редуктора накладывает следующее кинематическое ограничение:</p>
+    <p><image href="images_old/4252/image007.png" height="22" width="128" id="image_jzw_bfs_qy"/></p>
+    <p> Передача механической энергии описывается уравнениями:</p>
+    <p><image href="images_old/4252/image008.png" height="75" width="343" id="image_kzw_bfs_qy"/></p>
+    <p><image href="images_old/4252/image009.png" height="36" width="147" id="image_lzw_bfs_qy"/>,
+      где</p>
+    <p> </p>
+    <table id="table_mzw_bfs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>WB</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость ведущего вала</entry>
+          </row>
+          <row>
+            <entry>WF</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость ведомого вала</entry>
+          </row>
+          <row>
+            <entry>TB</entry>
+            <entry>-</entry>
+            <entry>Момент на ведущем валу</entry>
+          </row>
+          <row>
+            <entry>TF</entry>
+            <entry>-</entry>
+            <entry>Момент на ведомом валу</entry>
+          </row>
+          <row>
+            <entry>Qth</entry>
+            <entry>-</entry>
+            <entry>Порог мощности</entry>
+          </row>
+          <row>
+            <entry>μ</entry>
+            <entry>-</entry>
+            <entry>КПД редуктора</entry>
+          </row>
+          <row>
+            <entry>BB</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения подшипников ведущего вала</entry>
+          </row>
+          <row>
+            <entry>BF</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения подшипников ведомого вала</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Может быть задана явная или неявная схема решения уравнений модели. </p>
+    <p>В случае явной схемы считаются известными угловая скорость ведущего вала и момент на ведомом
+      вале. Для получения значений угловой скорости ведомого вала и момента на ведущем валу не
+      требуется решение нелинейного уравнения. </p>
+    <p>В случае неявной схемы считаются известными угловая скорость ведущего и ведомого вала. Для
+      получения значений момента на ведущем и ведомом валу требуется решение нелинейного
+      уравнения.</p>
+    <p>КПД может задаваться следующим образом в зависимости от параметра FrType (модель трения):</p>
+    <p>- без потерь;</p>
+    <p>- постоянный КПД;</p>
+    <p>- таблично заданный КПД;</p>
+    <p>- КПД зависит от нагрузки.</p>
+    <p>В первом случае КПД=1. Во втором случае КПД задается в виде константы. В третьем случае КПД
+      задается как табличная функция, аргументом которой является момент на ведомом колесе. В
+      четвертом случае зависимость КПД от момента на ведомом колесе имеет следующий вид:</p>
+    <p><image href="images_old/4252/image010.png" height="46" width="165" id="image_nzw_bfs_qy"/></p>
+    <p><image href="images_old/4252/image011.png" height="46" width="204" id="image_ozw_bfs_qy"/></p>
+    <p> </p>
+    <table id="table_pzw_bfs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Tid</entry>
+            <entry>-</entry>
+            <entry>Минимальный входной момент для передачи энергии</entry>
+          </row>
+          <row>
+            <entry>Tn</entry>
+            <entry>-</entry>
+            <entry>Номинальный момент на ведомом колесе</entry>
+          </row>
+          <row>
+            <entry>μn</entry>
+            <entry>-</entry>
+            <entry>КПД при номинальном моменте на ведомом колесе</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>
+      <b>Входные порты блока:</b></p>
+    <p>Если задана явная схема модели, то блок имеет один механический ненаправленный порт
+      вращательного движения B (ведущий вал). В противном случае добавляется еще один механический
+      ненаправленный порт вращательного движения F (ведомый вал).</p>
+    <p> </p>
+    <p><b>Выходные порты блока:</b></p>
+    <p>Если задана явная схема модели, то блок имеет один механический ненаправленный порт
+      вращательного движения F (ведомый вал). В любом случае блок имеет один математический порт, на
+      который поступает значение потерь мощности.</p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p><b>Свойства блока:</b></p>
+    <table id="table_qzw_bfs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Mod_Type</entry>
+            <entry>-</entry>
+            <entry>Тип модели</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4252/image004.png" height="22" width="22"
+                id="image_rzw_bfs_qy"/></entry>
+            <entry>-</entry>
+            <entry>число зубьев обоймы</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4252/image005.png" height="22" width="22"
+                id="image_szw_bfs_qy"/></entry>
+            <entry>-</entry>
+            <entry>число зубьев гибкого колеса</entry>
+          </row>
+          <row>
+            <entry>FrType</entry>
+            <entry>-</entry>
+            <entry>Модель трения</entry>
+          </row>
+          <row>
+            <entry>Kpd</entry>
+            <entry>-</entry>
+            <entry>КПД</entry>
+          </row>
+          <row>
+            <entry>Tx</entry>
+            <entry>-</entry>
+            <entry>Массив момента на ведомом вале (аргумент), н*м</entry>
+          </row>
+          <row>
+            <entry>Ey</entry>
+            <entry>-</entry>
+            <entry>Массив КПД (функция)</entry>
+          </row>
+          <row>
+            <entry>Tid</entry>
+            <entry>-</entry>
+            <entry>Минимальный входной момент для передачи энергии, н*м</entry>
+          </row>
+          <row>
+            <entry>Tn</entry>
+            <entry>-</entry>
+            <entry>Номинальный выходной момент, н*м</entry>
+          </row>
+          <row>
+            <entry>Kn</entry>
+            <entry>-</entry>
+            <entry>КПД при номинальном выходном моменте</entry>
+          </row>
+          <row>
+            <entry>Qth</entry>
+            <entry>-</entry>
+            <entry>Порог мощности, Вт</entry>
+          </row>
+          <row>
+            <entry>Bb</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения подшипников порт B, н*м*с/рад</entry>
+          </row>
+          <row>
+            <entry>Bf</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения подшипников порт F, н*м*с/рад</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_tzw_bfs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4252/image012.png" height="22" width="24"
+                id="image_uzw_bfs_qy"/></entry>
+            <entry>-</entry>
+            <entry>угловая скорость ведущего колеса, рад/с</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4252/image013.png" height="22" width="23"
+                id="image_vzw_bfs_qy"/></entry>
+            <entry>-</entry>
+            <entry>угловая скорость ведомого колеса, рад/с</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4252/image014.png" height="22" width="19"
+                id="image_wzw_bfs_qy"/></entry>
+            <entry>-</entry>
+            <entry>момент в зацеплении на ведущем колесе, <image href="images_old/4252/image015.png"
+                height="22" width="36" id="image_xzw_bfs_qy"/></entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4252/image016.png" height="22" width="19"
+                id="image_yzw_bfs_qy"/></entry>
+            <entry>-</entry>
+            <entry>момент в зацеплении на ведомом колесе, <image href="images_old/4252/image015.png"
+                height="22" width="36" id="image_zzw_bfs_qy"/></entry>
+          </row>
+          <row>
+            <entry>Q</entry>
+            <entry>-</entry>
+            <entry>потери мощности, Вт</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p> </p>
+  </body>
+</topic>

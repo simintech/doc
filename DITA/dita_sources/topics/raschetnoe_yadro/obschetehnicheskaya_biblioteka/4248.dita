@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика – Дифференциал </title>
+  <body>
+    <table id="table_k1q_nfs_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4248/image001.png" height="32" width="32"
+                id="image_l1q_nfs_qy"/></entry>
+            <entry>Механика – Дифференциал</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4248/image002.png" height="87" width="133"
+                id="image_m1q_nfs_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>В блоке реализована модель дифференциала. Схематически механизм показан на рисунке 1. В
+      состав дифференциала входят простой редуктор и две конические передачи, расположенные по
+      разные стороны. </p>
+    <p><image href="images_old/4248/image003.jpg" height="283" width="561" id="image_n1q_nfs_qy"/></p>
+    <p>Рисунок 1.</p>
+    <p>Модель дифференциала представлена в виде субмодели, структурная схема которой приведена на
+      рисунке 2. </p>
+    <p><image href="images_old/4248/image004.jpg" height="296" width="496" id="image_o1q_nfs_qy"/></p>
+    <p> Рисунок 2.</p>
+    <p> </p>
+    <p>
+      <b>Входные порты блока:</b></p>
+    <p>Блок имеет три механических ненаправленных порта вращательного движения (D –ведущий вал, SR –
+      правая звездочка, SL – левая звездочка).</p>
+    <p> </p>
+    <p><b>Выходные порты блока:</b></p>
+    <p>Блок имеет один математический порт, на который поступает значение потерь мощности.</p>
+    <p> </p>
+    <p><b>Свойства блока:</b></p>
+    <table id="table_p1q_nfs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Dir</entry>
+            <entry>-</entry>
+            <entry>Коронная шестерня расположена (справа/слева)</entry>
+          </row>
+          <row>
+            <entry>GCD</entry>
+            <entry>-</entry>
+            <entry>Отношение числа зубьев водила и ведущего вала NC/ND</entry>
+          </row>
+          <row>
+            <entry>GPS</entry>
+            <entry>-</entry>
+            <entry>Отношение числа зубьев планеты и звезды NP/NS</entry>
+          </row>
+          <row>
+            <entry>KCD</entry>
+            <entry>-</entry>
+            <entry>КПД пары водило/ведущий вал</entry>
+          </row>
+          <row>
+            <entry>KPS</entry>
+            <entry>-</entry>
+            <entry>КПД пары звезда/планета</entry>
+          </row>
+          <row>
+            <entry>BCD</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения пары водило/ведущий вал</entry>
+          </row>
+          <row>
+            <entry>BPS</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения пары обод/водило</entry>
+          </row>
+          <row>
+            <entry>QCD</entry>
+            <entry>-</entry>
+            <entry>Порог мощности пары водило/ведущий вал, Вт</entry>
+          </row>
+          <row>
+            <entry>QPS</entry>
+            <entry>-</entry>
+            <entry>Порог мощности пары звезда/планета, Вт</entry>
+          </row>
+          <row>
+            <entry>JP</entry>
+            <entry>-</entry>
+            <entry>Момент инерции планет, кг*м</entry>
+          </row>
+          <row>
+            <entry>JC</entry>
+            <entry>-</entry>
+            <entry>Момент инерции водила, кг*м</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_q1q_nfs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry><i>WC</i></entry>
+            <entry>-</entry>
+            <entry>Угловая скорость водила, рад/с</entry>
+          </row>
+          <row>
+            <entry><i>TC</i></entry>
+            <entry>-</entry>
+            <entry>Момент на водиле, н*м</entry>
+          </row>
+          <row>
+            <entry><i>WSL</i></entry>
+            <entry>-</entry>
+            <entry>Угловая скорость левой звездочки, рад/с</entry>
+          </row>
+          <row>
+            <entry><i>TSL</i></entry>
+            <entry>-</entry>
+            <entry>Момент на левой звездочке, н*м</entry>
+          </row>
+          <row>
+            <entry><i>WS</i><i>R</i></entry>
+            <entry>-</entry>
+            <entry>Угловая скорость правой звездочки, рад/с</entry>
+          </row>
+          <row>
+            <entry><i>TS</i><i>R</i></entry>
+            <entry>-</entry>
+            <entry>Момент на правой звездочке, н*м</entry>
+          </row>
+          <row>
+            <entry><i>Q</i></entry>
+            <entry>-</entry>
+            <entry>Потери мощности, Вт</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

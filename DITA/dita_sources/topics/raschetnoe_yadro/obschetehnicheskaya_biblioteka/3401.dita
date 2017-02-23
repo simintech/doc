@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>ac - Узел </title>
+  <body>
+    <table id="table_uxd_ycw_ty">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/3401/image001.png" height="15" width="36"
+                id="image_vxd_ycw_ty"/></entry>
+            <entry>ac - Узел</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/3401/image002.png" height="30" width="81"
+                id="image_wxd_ycw_ty"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок реализует модель узла электрической цепи. Используется для соединения двух элементов
+      (блоков библиотеки «Электрика») схемы.</p>
+    <p> </p>
+    <p>В свойствах блока можно задать начальное значение потенциала узла (начальные условия).</p>
+    <p>Выходной потенциал, рассчитываемый внутри модели, определяется относительно «земли» (точки
+      нулевого потенциала).</p>
+    <p> </p>
+    <p><b>Блок имеет 2 выходных порта:</b></p>
+    <p>1) Выход цепь 1;</p>
+    <p>2) Выход цепь 2.</p>
+    <p> </p>
+    <p><b>Свойства блока:</b></p>
+    <ul id="ul_xxd_ycw_ty">
+      <li>· Потенциал, В.</li>
+    </ul>
+    <p> </p>
+    <p><b>Параметры блока:</b></p>
+    <ul id="ul_yxd_ycw_ty">
+      <li>· Потенциал, В.</li>
+    </ul>
+  </body>
+</topic>

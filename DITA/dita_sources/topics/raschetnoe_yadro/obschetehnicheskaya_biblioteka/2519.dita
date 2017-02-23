@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>HS – Эжектор </title>
+  <body>
+    <table id="table_h3h_1qs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/2519/image001.png" height="32" width="32" id="image_i3h_1qs_sy"/></entry>
+            <entry><b>HS</b><b>– Эжектор</b></entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/2519/image002.png" height="102" width="119" id="image_j3h_1qs_sy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> Блок реализует модель эжектора.</p>
+    <p> </p>
+    <p><b>Свойства блока «HS – Эжектор»</b></p>
+    <table id="table_k3h_1qs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_l3h_1qs_sy">
+                <li>·Начальное давление, Па*1e3</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_m3h_1qs_sy">
+                <li>P0</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_n3h_1qs_sy">
+                <li>·Начальная энтальпия, кДж/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_o3h_1qs_sy">
+                <li>H0</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_p3h_1qs_sy">
+                <li>·Объем узла, м³</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_q3h_1qs_sy">
+                <li>V</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_r3h_1qs_sy">
+                <li>·Гидравлический диаметр, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_s3h_1qs_sy">
+                <li>Dg</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_t3h_1qs_sy">
+                <li>·Площадь поперечного сечения, м²</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_u3h_1qs_sy">
+                <li>S</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_v3h_1qs_sy">
+                <li>·Высотная отметка, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_w3h_1qs_sy">
+                <li>Z</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_x3h_1qs_sy">
+                <li>·Площадь линии подачи, м²</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_y3h_1qs_sy">
+                <li>EjectingS</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_z3h_1qs_sy">
+                <li>·Площадь линии отбора, м²</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ajh_1qs_sy">
+                <li>EjectedS</li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока «HS – Эжектор»</b></p>
+    <table id="table_bjh_1qs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_cjh_1qs_sy">
+                <li>·Давление, Па*1e3</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_djh_1qs_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ejh_1qs_sy">
+                <li>·Энтальпия, кДж/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_fjh_1qs_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_gjh_1qs_sy">
+                <li>·Температура, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_hjh_1qs_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ijh_1qs_sy">
+                <li>·Удельный объем, м³/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_jjh_1qs_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_kjh_1qs_sy">
+                <li>·Плотность, кг/м³</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ljh_1qs_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_mjh_1qs_sy">
+                <li>·Коэффициент теплоотдачи, Вт/(м²*К)</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_njh_1qs_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок может быть соединен посредством гидравлических связей со следующими блоками:</p>
+    <ul id="ul_ojh_1qs_sy">
+      <li>· «HS – Канал»;</li>
+      <li>· «HS - Труба»;</li>
+      <li>· «HS – Кольцевой зазор»;</li>
+      <li>· «HS – Насос с электроприводом в сборе»;</li>
+      <li>· «HS - Ссылка на объект»;</li>
+      <li>· «HS – Порт входа»;</li>
+      <li>· «HS – Порт выхода»;</li>
+      <li>· «HS – В память»;</li>
+      <li>· «HS – Из памяти».</li>
+    </ul>
+    <p> </p>
+  </body>
+</topic>

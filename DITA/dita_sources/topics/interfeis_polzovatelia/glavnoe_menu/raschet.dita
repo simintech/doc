@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Меню Расчёт </title>
+  <body>
+    <p>Содержит команды, предназначенные для настройки и управления расчетом проекта.</p>
+    <table id="table_f1d_4cf_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><b>Команда</b></entry>
+            <entry><b>Описание</b></entry>
+          </row>
+          <row>
+            <entry><b>Инициализация</b></entry>
+            <entry>Инициализирует расчёт текущего проекта.</entry>
+          </row>
+          <row>
+            <entry><b>Пуск</b></entry>
+            <entry>Запуск расчёта текущего проекта.</entry>
+          </row>
+          <row>
+            <entry><b>Сделать шаг</b></entry>
+            <entry>Запускает расчёт текущего проекта, а затем приостанавливает расчет при выполнении
+              одного шага.</entry>
+          </row>
+          <row>
+            <entry><b>Пауза</b></entry>
+            <entry>Приостанавливает расчёт текущего проекта.</entry>
+          </row>
+          <row>
+            <entry><b>Стоп</b></entry>
+            <entry>Останавливает расчёт текущего проекта..</entry>
+          </row>
+          <row>
+            <entry><b>Менеджер данных...</b></entry>
+            <entry>Открывает окно менеджера данных для текущего проекта.</entry>
+          </row>
+          <row>
+            <entry><b>Инспектор параметров...</b></entry>
+            <entry>Открывает окно параметров для выделенного на схемном окне блока.</entry>
+          </row>
+          <row>
+            <entry><b>Параметры расчета</b></entry>
+            <entry>Открывает окно параметров проекта.</entry>
+          </row>
+          <row>
+            <entry><b>Отладочная информация</b></entry>
+            <entry>Открывает окно с диагностической информацией и отладочными функциями (актуально
+              только на этапе проведения расчета или после выполнения расчета).</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>

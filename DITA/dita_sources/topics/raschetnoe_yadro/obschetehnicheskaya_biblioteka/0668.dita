@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Генератор 3-фазного напряжения</title>
+  <body>
+    <table id="table_x4g_nn4_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/0668.png" height="31" width="38" id="image_y4g_nn4_qy"
+              /></entry>
+            <entry>Генератор 3-фазного напряжения</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry/>
+          </row>
+          <row>
+            <entry><image href="images_old/0668s.png" height="45" width="85" id="image_z4g_nn4_qy"
+              /></entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry/>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2">
+              <p>Блок реализует модель трёх синусоидальных сигналов, сдвинутых по фазе на 120
+                градусов:</p>
+              <p><image href="images_old/0668_html_m7830a9d.gif" height="125" width="305" id="image_apg_nn4_qy"
+                /></p>
+              <p>где<image href="images_old/0668_html_m6ad0631e.gif" height="23" width="65"
+                  id="image_bpg_nn4_qy"/>— амплитуда синусоидального сигнала,</p>
+              <p><image href="images_old/0668_html_5775289a.gif" height="23" width="157" id="image_cpg_nn4_qy"
+                />— фазные напряжения 3-фазного тока (выходные сигналы),</p>
+              <p><image href="images_old/0668_html_5a060786.gif" height="21" width="21" id="image_dpg_nn4_qy"
+                />— частота сигналов.</p>
+              <p>Блок имеет 2 входных и 3 выходных порта. </p>
+              <p><b>В</b><b>ходны</b><b>е</b><b> сигналы</b>:</p>
+              <ol id="ol_epg_nn4_qy">
+                <li>
+                  <p>Частота<image href="images_old/0668_html_5a060786.gif" height="21" width="21"
+                      id="image_fpg_nn4_qy"/>, Гц.</p>
+                </li>
+                <li>
+                  <p>Напряжение<image href="images_old/0668_html_m6ad0631e.gif" height="23" width="65"
+                      id="image_gpg_nn4_qy"/>— амплитуда сигналов, В.</p>
+                </li>
+              </ol>
+              <p><b>Вы</b><b>ходные сигналы</b>:</p>
+              <ol id="ol_hpg_nn4_qy">
+                <li>
+                  <p>Напряжение<image href="images_old/0668_html_mb324875.gif" height="23" width="52"
+                      id="image_ipg_nn4_qy"/>, В.</p>
+                </li>
+                <li>
+                  <p>Напряжение<image href="images_old/0668_html_m3de726e5.gif" height="23" width="52"
+                      id="image_jpg_nn4_qy"/>, В.</p>
+                </li>
+                <li>
+                  <p>Напряжение<image href="images_old/0668_html_58142518.gif" height="23" width="51"
+                      id="image_kpg_nn4_qy"/>, В.</p>
+                </li>
+              </ol>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>

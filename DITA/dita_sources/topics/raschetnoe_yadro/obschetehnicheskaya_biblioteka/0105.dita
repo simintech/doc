@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Размножитель</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/0105.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/0105s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован | Си
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок реализует умножение входного скалярного сигнала (или элементов векторного входного
+      сигнала) на вектор-столбец (или векторы-столбцы) коэффициентов усиления.</p>
+    <p>Если на входе скалярный сигнал <i>u</i>(<i>t</i>), блок реализует функцию многоканального
+      усилительного звена:<image placement="break" href="images/0105_1.png" align="center"
+        id="image_h5z_1zq_gy"/> где <i>u</i>(<i>t</i>) – входной сигнал (скаляр),
+        <i>k</i><sub>i</sub> – элемент вектора-столбца коэффициентов усиления
+        <i>k</i>&#xA0;=&#xA0;[<i>k</i><sub>1</sub>, <i>k</i><sub>2</sub>, …, <i>k</i><sub>m</sub>],
+        <i>y</i><sub>i</sub>(<i>t</i>) – элемент выходного векторного сигнала
+        y(t)&#xA0;=&#xA0;[<i>y</i><sub>1</sub>(<i>t</i>), <i>y</i><sub>2</sub>(<i>t</i>),…
+          <i>y</i><sub><i>m</i></sub>(<i>t</i>)]. В этом случае размерность выходного сигнала
+      определяется размерностью вектора коэффициентов усиления.</p>
+    <p>Если на вход блока подается векторный сигнал (размерностью <i>n</i>≥2), то в качестве
+      коэффициентов размножения следует задавать соответствующее количество <i>n</i> вектор-столбцов
+      одинаковой размерности <i>m</i>. Количество векторов-столбцов коэффициентов размножения
+      обязательно должно быть равно размерности входного векторного сигнала. При этом блок реализует
+      преобразование входного векторного сигнала по алгоритму: <image placement="break"
+        href="images/0105_2.png" align="center" id="image_ahk_bbr_gy"/>Входной вектор
+        <i>u</i>(<i>t</i>), интерпретируемый как вектор-строка, преобразуется в матрицу размера
+        <i>n</i>&#215;<i>m</i>, каждый j-ый столбец которой получен из j-ого элемента входного
+      вектора умножением на j-ый вектор-столбец коэффициентов усиления. Затем матрица считывается по
+      строкам и полученный вектор <i>y</i>(<i>t</i>) подается на выход блока.</p>
+    <section><title>Входы</title>
+    <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>input</uicontrol> - порт входного вектора.</li>
+        </ul>
+      </p></section>
+    <section><title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>output</uicontrol> - порт выходного вектора.</li>
+        </ul>
+      </p></section>
+    <section><title>Свойства:</title>
+      <p><ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Коэффициенты размножения</uicontrol> - вектор (или векторы) коэффициентов
+            размножения <i>k</i>&#xA0;=&#xA0;[<i>k</i><sub>1</sub>, <i>k</i><sub>2</sub>, …,
+              <i>k</i><sub>m</sub>] или <i>k</i>&#xA0;=&#xA0;[[<i>k</i><sub>1 1</sub>,
+              <i>k</i><sub>1 2</sub>, …, <i>k</i><sub>1 m</sub>], [<i>k</i><sub>2 1</sub>,
+              <i>k</i><sub>2 2</sub>, …, <i>k</i><sub>2 m</sub>],…,[<i>k</i><sub>n 1</sub>,
+              <i>k</i><sub>n 2</sub>, …, <i>k</i><sub>n m</sub>].</li>
+        </ul>Предположим, что входной сигнал <i>x</i>(<i>t</i>)=[<i>x</i><sub>1</sub>(<i>t</i>),
+          <i>x</i><sub>2</sub>(<i>t</i>)] – 2-х жильный (N = 2). Необходимо размножить данный вектор
+        в 3 раза (M = 3), причем сигнал на 1-ой «жиле» входного вектора необходимо усилить в 2, 3 и
+        5 раз, а сигнал на 2-ой «жиле» входного вектора необходимо усилить в 4, 2 и 7 раз,
+        соответственно. Численный вид задания коэффициентов усиления: [[2,3,5], [4,2,7]]. Тогда
+        выходной вектор будет иметь значение: <image placement="break" href="images/0105_3.png"
+          align="center" id="image_r23_qcr_gy"/></p></section>
+    <section><title>Параметры</title>
+      <p>нет</p></section>
+    <note>
+      <ol id="ol_wfb_scr_gy">
+        <li>Размерность выходного сигнала равна произведению размерности входного сигнала и
+          количества векторов коэффициентов размножения – <i>n</i>&#215;<i>m</i>.</li>
+        <li>Именованные свойства могут быть заданы как локальные переменные модели (субмодели) в
+          скрипте на языке программирования, как глобальные сигналы проекта при помощи пункта
+          главного меню <cmdname>Сервис → Сигналы</cmdname>, или как внешние сигналы проекта при
+          помощи подключаемой базы сигналов. </li>
+      </ol>
+    </note>
+    
+  </body>
+</topic>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Внешняя DLL</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/3063.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/3063s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован | Си
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок является инструментом для подключения к расчетной схеме ранее скомпилированной
+      библиотеки. При этом достигается существенный прирост скорости расчета, а также возможность по
+      одному и тому же алгоритму обсчитывать несколько типовых объектов. Кроме этого, блок позволяет
+      вести расчет в несколько потоков. </p>
+    <section><title>Входы</title>
+    <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>input_n</uicontrol> - входной порт. Количество входных портов задается в
+            свойствах блока.</li>
+        </ul>
+      </p></section>
+    <section><title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>output_n</uicontrol> - выходной порт. Количество выходных портов задается в
+            свойствах блока.</li>
+        </ul>
+      </p></section>
+    <section><title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Количество портов</uicontrol> — количество входных сигналов в расчетную
+            схему (в DLL);</li>
+          <li><uicontrol>Массив размерностей выходов</uicontrol> — массив, в котором указываются
+            размерности выходов из DLL;</li>
+          <li><uicontrol>Имена загружаемых DLL</uicontrol> — имена предварительно скомпилированных
+            DLL, которые загружаются в схему. Указывается одна DLL или через точку с запятой
+            несколько DLL;</li>
+          <li><uicontrol>Имена оборудования</uicontrol> — имена оборудования (компонентов), которые
+            подставляются в входы/выходы схемы DLL. Одна DLL позволяет обсчитывать много объектов.
+            Имена указываются через точку с запятой;</li>
+          <li><uicontrol>Имена файлов проектов для отладки</uicontrol> — имена файлов проектов,
+            соответствующих загружаемым DLL, используются для отладки (в процессе расчета) схем,
+            заложенных в DLL;</li>
+          <li><uicontrol>Создавать по умолчанию не существующие переменные</uicontrol> — создавать
+            переменные в базе данных, которых не существует, для расчитываемого оборудования
+            (компонентов);</li>
+          <li><uicontrol>Количество потоков</uicontrol> — количество потоков, в которых будут
+            обсчитываться объекты (компотненты) по данной DLL. </li>
+        </ul>
+      </p></section>
+    <section><title>Параметры</title>
+      <p>нет</p></section>
+    
+  </body>
+</topic>

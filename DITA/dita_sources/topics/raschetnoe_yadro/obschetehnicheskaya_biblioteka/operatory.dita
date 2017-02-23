@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Операторы</title>
+  <body>
+    <p>В настоящем подразделе описаны блоки библиотеки «Операторы». Блоки библиотеки предназначены
+      для реализации в процессе моделирования простейших математических операций с сигналами. </p>
+  </body>
+</topic>

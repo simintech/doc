@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика – Ходовой винт </title>
+  <body>
+    <table id="table_nrv_v2s_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4254/image001.png" height="32" width="32"
+                id="image_orv_v2s_qy"/></entry>
+            <entry>Механика – Ходовой винт</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4254/image002.png" height="68" width="128"
+                id="image_prv_v2s_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>В блоке реализована модель ходового винта. Передаточное отношение определяется следующим
+      образом:</p>
+    <p><image href="images_old/4254/image003.png" height="22" width="90" id="image_qrv_v2s_qy"/></p>
+    <p>Уравнения модели имеют следующий вид:</p>
+    <p><image href="images_old/4254/image004.png" height="22" width="144" id="image_rrv_v2s_qy"/></p>
+    <p><image href="images_old/4254/image005.png" height="22" width="257" id="image_srv_v2s_qy"/></p>
+    <p><image href="images_old/4254/image006.png" height="22" width="296" id="image_trv_v2s_qy"/></p>
+    <p><image href="images_old/4254/image007.png" height="75" width="335" id="image_urv_v2s_qy"/></p>
+    <p><image href="images_old/4254/image008.png" height="47" width="231" id="image_vrv_v2s_qy"/></p>
+    <p> </p>
+    <table id="table_wrv_v2s_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>g</entry>
+            <entry>-</entry>
+            <entry>Передаточное число</entry>
+          </row>
+          <row>
+            <entry>L</entry>
+            <entry>-</entry>
+            <entry>Шаг винта</entry>
+          </row>
+          <row>
+            <entry>WS</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость винта</entry>
+          </row>
+          <row>
+            <entry>Vn</entry>
+            <entry>-</entry>
+            <entry>Скорость гайки</entry>
+          </row>
+          <row>
+            <entry>TS</entry>
+            <entry>-</entry>
+            <entry>Момент на винте</entry>
+          </row>
+          <row>
+            <entry>Fn</entry>
+            <entry>-</entry>
+            <entry>Сила на гайке</entry>
+          </row>
+          <row>
+            <entry>Qth</entry>
+            <entry>-</entry>
+            <entry>Порог мощности</entry>
+          </row>
+          <row>
+            <entry>μ</entry>
+            <entry>-</entry>
+            <entry>КПД передачи</entry>
+          </row>
+          <row>
+            <entry>BS</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения винта</entry>
+          </row>
+          <row>
+            <entry>Bn</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения гайки</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Могут быть заданы следующие схемы решения уравнений модели: </p>
+    <p>- неявная;</p>
+    <p>- явная винт;</p>
+    <p>- явная гайка.</p>
+    <p>В случае явной схемы для винта считаются известными скорость гайки и момент на винте. Для
+      получения значений угловой скорости винта и силы на гайке не требуется решение нелинейного
+      уравнения. </p>
+    <p>В случае явной схемы для гайки считаются известными угловая скорость винта и сила на гайке.
+      Для получения значений скорости гайки и момента на винте не требуется решение нелинейного
+      уравнения. </p>
+    <p>В случае неявной схемы считаются известными угловая скорость винта и скорость гайки. Для
+      получения значений момента на винте и силы на гайке требуется решение нелинейного
+      уравнения.</p>
+    <p>КПД может задаваться следующим образом в зависимости от параметра FrType (модель трения):</p>
+    <p>- без потерь;</p>
+    <p>- постоянный КПД;</p>
+    <p>- КПД - функция геометрии;</p>
+    <p>- КПД зависит от температуры.</p>
+    <p>В первом случае КПД =1. Во втором случае КПД задается в виде констант. В четвертом случае КПД
+      задается как табличная функция, аргументом которой является температура (параметр Temp в
+      свойствах блока). Во всех случаях различают значения КПД при передаче момента от винта к
+      гайке, и наоборот.</p>
+    <p>В случае задания КПД как функции геометрии используются следующие уравнения:</p>
+    <p><image href="images_old/4254/image009.png" height="47" width="214" id="image_xrv_v2s_qy"/></p>
+    <p><image href="images_old/4254/image010.png" height="47" width="251" id="image_yrv_v2s_qy"/></p>
+    <table id="table_zrv_v2s_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>α</entry>
+            <entry>-</entry>
+            <entry>Угол нормального давления, град</entry>
+          </row>
+          <row>
+            <entry>γ</entry>
+            <entry>-</entry>
+            <entry>Угол упреждения винта, град</entry>
+          </row>
+          <row>
+            <entry>K</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>
+      <b>Входные порты блока:</b></p>
+    <p>Если задана явная схема для винта, то блок имеет один механический ненаправленный порт
+      поступательного движения (N - гайка). Если задана явная схема для гайки, то блок имеет один
+      механический ненаправленный порт вращательного движения (S - винт). Если задана неявная схема,
+      то блок имеет один механический ненаправленный порт поступательного движения (N - гайка) и
+      один механический ненаправленный порт вращательного движения (S - винт).</p>
+    <p> </p>
+    <p><b>Выходные порты блока:</b></p>
+    <p>Если задана явная схема для гайки, то блок имеет один механический ненаправленный порт
+      поступательного движения (N - гайка). Если задана явная схема для винта, то блок имеет один
+      механический ненаправленный порт вращательного движения (S - винт). В любом случае блок имеет
+      один математический порт, на который поступает значение потерь мощности.</p>
+    <p> </p>
+    <p> </p>
+    <p><b>Свойства блока:</b></p>
+    <table id="table_asv_v2s_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Mod_Type</entry>
+            <entry>-</entry>
+            <entry>Тип модели</entry>
+          </row>
+          <row>
+            <entry>LS</entry>
+            <entry>-</entry>
+            <entry>Шаг винта, м</entry>
+          </row>
+          <row>
+            <entry>BS</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения винта, н*с/м</entry>
+          </row>
+          <row>
+            <entry>Bn</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения гайки, н*м*с/рад</entry>
+          </row>
+          <row>
+            <entry>Dir</entry>
+            <entry>-</entry>
+            <entry>Движение винта и гайки (одного знака/разных знаков)</entry>
+          </row>
+          <row>
+            <entry>FrType</entry>
+            <entry>-</entry>
+            <entry>Модель трения (без потерь/заданы КПД/КПД-функция геометрии/КПД-функция
+              температуры</entry>
+          </row>
+          <row>
+            <entry>ESN</entry>
+            <entry>-</entry>
+            <entry>КПД передачи энергии винт-гайка</entry>
+          </row>
+          <row>
+            <entry>ENS</entry>
+            <entry>-</entry>
+            <entry>КПД передачи энергии гайка-винт</entry>
+          </row>
+          <row>
+            <entry>Alfa</entry>
+            <entry>-</entry>
+            <entry>Угол нормального давления, град</entry>
+          </row>
+          <row>
+            <entry>Lam</entry>
+            <entry>-</entry>
+            <entry>Угол упреждения винта, град</entry>
+          </row>
+          <row>
+            <entry>K</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения</entry>
+          </row>
+          <row>
+            <entry>Temp</entry>
+            <entry>-</entry>
+            <entry>Температура</entry>
+          </row>
+          <row>
+            <entry>xE</entry>
+            <entry>-</entry>
+            <entry>Массив температур, С (аргумент)</entry>
+          </row>
+          <row>
+            <entry>yEs</entry>
+            <entry>-</entry>
+            <entry>Массив КПД винт-гайка</entry>
+          </row>
+          <row>
+            <entry>yEn</entry>
+            <entry>-</entry>
+            <entry>Массив КПД гайка -винт</entry>
+          </row>
+          <row>
+            <entry>Qth</entry>
+            <entry>-</entry>
+            <entry>Порог мощности, Вт</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_bsv_v2s_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4254/image011.png" height="22" width="21"
+                id="image_csv_v2s_qy"/></entry>
+            <entry>-</entry>
+            <entry>угловая скорость винта, рад/с</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4254/image012.png" height="22" width="17"
+                id="image_dsv_v2s_qy"/></entry>
+            <entry>-</entry>
+            <entry>скорость гайки, м/с</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4254/image013.png" height="22" width="17"
+                id="image_esv_v2s_qy"/></entry>
+            <entry>-</entry>
+            <entry>момент на винте, <image href="images_old/4254/image014.png" height="22" width="36"
+                id="image_fsv_v2s_qy"/></entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4254/image015.png" height="22" width="17"
+                id="image_gsv_v2s_qy"/></entry>
+            <entry>-</entry>
+            <entry>сила на гайке, <image href="images_old/4254/image016.png" height="22" width="11"
+                id="image_hsv_v2s_qy"/></entry>
+          </row>
+          <row>
+            <entry>Q</entry>
+            <entry>-</entry>
+            <entry>потери мощности, Вт</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

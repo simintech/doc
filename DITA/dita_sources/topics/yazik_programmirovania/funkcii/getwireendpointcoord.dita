@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>getwireendpointcoord </title>
+<shortdesc>Функция получения координаты конечной точки линии связи</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>w_end_coord = <funcname>getwireendpointcoord</funcname>(w_id);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>w_id – идентификатор линии связи. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>getwireendpointcoord</codeph> – функция получения координаты конечной точки линии связи с
+        идентификатором <codeph>w_id</codeph>. Конечной точкой может являться порт блока или точка
+        ветвления линий связи. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>w_end_coord – функция возвращает координаты в формате point, соответствующие точке
+        окончания линии связи с идентификатором w_id. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> w_start: <kword>point</kword>;
+p_id = <funcname>getblockportid</funcname>(mul_oper3,2);  <comment>//получение идентификатора порта</comment>
+w_id = <funcname>getportwireid</funcname>(p_id); <comment>//получение идентификатора линии связи, подключенной к порту</comment>
+w_end = <funcname>getwireendpointcoord</funcname>(w_id); <comment>//получение координат окончания линии</comment></codeblock></section>
+<p>В результате выполнения данного скрипта переменная w_end получит значение координат конечной
+      точки линии связи, подключенной к порту с номером 2 блока с именем mul_oper3. </p>  
+  </body>
+</topic>

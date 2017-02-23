@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>HS – Двухслойная толстая цилиндрическая стенка </title>
+  <body>
+    <table id="table_dxd_lky_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/2529/image001.png" height="32" width="32"
+                id="image_exd_lky_sy"/></entry>
+            <entry><b>HS</b><b>– Двухслойная толстая цилиндрическая стенка</b></entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/2529/image002.png" height="94" width="97"
+                id="image_fxd_lky_sy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Свойства блока «</b><b>HS</b><b> – Цилиндрическая толстая стенка с излучением»</b></p>
+    <table id="table_gxd_lky_sy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_hxd_lky_sy">
+                <li>· Тепловая связь внутри</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ixd_lky_sy">
+                <li>isHeat1</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_jxd_lky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_kxd_lky_sy">
+                <li>· Тепловая связь снаружи</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_lxd_lky_sy">
+                <li>isHeat2</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_mxd_lky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_nxd_lky_sy">
+                <li>· Количество элементов по длине</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_oxd_lky_sy">
+                <li>Nh</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_pxd_lky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_qxd_lky_sy">
+                <li>· Количество элементов (колец) по радиусу для 1 слоя</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_rxd_lky_sy">
+                <li>NR1</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_sxd_lky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_txd_lky_sy">
+                <li>· Количество элементов (колец) по радиусу для 2 слоя</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_uxd_lky_sy">
+                <li>NR2</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_vxd_lky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_wxd_lky_sy">
+                <li>· Внутренний радиус, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_xxd_lky_sy">
+                <li>R1</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_yxd_lky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_zxd_lky_sy">
+                <li>· Наружный радиус 1 слоя, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ayd_lky_sy">
+                <li>R2</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_byd_lky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_cyd_lky_sy">
+                <li>· Наружный радиус 2 слоя, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_dyd_lky_sy">
+                <li>R3</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_eyd_lky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_fyd_lky_sy">
+                <li>· Материал 1 слоя</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_gyd_lky_sy">
+                <li>Material1</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_hyd_lky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_iyd_lky_sy">
+                <li>· Материал 2 слоя</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_jyd_lky_sy">
+                <li>Material2</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_kyd_lky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_lyd_lky_sy">
+                <li>· Массив длин элементов, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_myd_lky_sy">
+                <li>deltaH</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_nyd_lky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_oyd_lky_sy">
+                <li>· Внутренние связи</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_pyd_lky_sy">
+                <li>link1</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_qyd_lky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_ryd_lky_sy">
+                <li>· Наружные связи</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_syd_lky_sy">
+                <li>link2</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_tyd_lky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_uyd_lky_sy">
+                <li>· Объемное энерговыделение в 1 слое, Вт/м³</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_vyd_lky_sy">
+                <li>qv1</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_wyd_lky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_xyd_lky_sy">
+                <li>· Объемное энерговыделение в 2 слое, Вт/м³</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_yyd_lky_sy">
+                <li>qv2</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_zyd_lky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_azd_lky_sy">
+                <li>· Количество стержней</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_bzd_lky_sy">
+                <li>N_rod</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_czd_lky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_dzd_lky_sy">
+                <li>· Термическое сопротивление на внутренней поверхности стенки, м²*К/Вт</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ezd_lky_sy">
+                <li>R_term1</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_fzd_lky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_gzd_lky_sy">
+                <li>· Термическое сопротивление на наружной поверхности стенки, м²*К/Вт</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_hzd_lky_sy">
+                <li>R_term2</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_izd_lky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока «</b><b>HS</b><b> – Цилиндрическая толстая стенка с излучением»</b></p>
+    <table id="table_jzd_lky_sy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_kzd_lky_sy">
+                <li>· Температура на внутренней границе, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_lzd_lky_sy">
+                <li>_twall_bound1</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_mzd_lky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_nzd_lky_sy">
+                <li>· Температура на границе слоев, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ozd_lky_sy">
+                <li>_twall_bound2</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_pzd_lky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_qzd_lky_sy">
+                <li>· Температура на наружной границе, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_rzd_lky_sy">
+                <li>_twall_bound3</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_szd_lky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_tzd_lky_sy">
+                <li>· Температура по толщине в 1 элементе, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_uzd_lky_sy">
+                <li>_twall_thickness_elem1</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_vzd_lky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_wzd_lky_sy">
+                <li>· Тепловой поток на внутренней границе, Вт/м²</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_xzd_lky_sy">
+                <li>_qf1</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_yzd_lky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_zzd_lky_sy">
+                <li>· Тепловой поток на наружной границе, Вт/м²</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_a12_lky_sy">
+                <li>_qf3</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_b12_lky_sy">
+                <li> </li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

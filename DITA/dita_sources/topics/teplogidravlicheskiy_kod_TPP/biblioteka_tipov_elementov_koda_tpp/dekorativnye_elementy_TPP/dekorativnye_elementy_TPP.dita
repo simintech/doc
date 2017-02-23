@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title><b>Декоративные элементы ТРР. Общее</b></title>
+  <body>
+    <p><b>Декоративные элементы ТРР</b> предназначены для маскировки элементов схемы при распечатке.
+      Они не несут никакой расчётной функциональности. </p>
+    <p>В теплогидравлическом расчетном коде ТПП запрограммировано несколько декоративных элементов
+      различного вида (см. Таблица 4.51.48). </p>
+    <p><b>Таблица 4.51.48 </b>Перечень декоратитвных элементов ТРР <table id="table1">
+        <tgroup cols="4">
+          <colspec colnum="1" colname="col1"/>
+          <colspec colnum="2" colname="col2"/>
+          <colspec colnum="3" colname="col3"/>
+          <colspec colnum="4" colname="col4"/>
+          <thead>
+            <row>
+              <entry>№ п/п</entry>
+              <entry>
+                <p><b>Изображение</b></p>
+                <p><b>в палитре блоков</b></p>
+              </entry>
+              <entry><b>Название иконки в палитре блоков</b></entry>
+              <entry><b>Векторное изображение в рабочей области схемы</b></entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>
+                <ol id="ol_bjk_dnr_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../../tpp_images/tpp_html_1c5fa012.png" id="image_cjk_dnr_sy"/></entry>
+              <entry>Маска теплообменника 1</entry>
+              <entry><image href="../../tpp_images/tpp_html_264b868.png" id="image_djk_dnr_sy"/></entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_ejk_dnr_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../../tpp_images/tpp_html_m1b2ec49.png" id="image_fjk_dnr_sy"/></entry>
+              <entry>Маска теплообменника 2</entry>
+              <entry><image href="../../tpp_images/tpp_html_63ef4729.png" id="image_gjk_dnr_sy"/></entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_hjk_dnr_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../../tpp_images/tpp_html_m243d0beb.png" id="image_ijk_dnr_sy"/></entry>
+              <entry>Маска теплообменника 3</entry>
+              <entry><image href="../../tpp_images/tpp_html_6c0a9810.png" id="image_jjk_dnr_sy"/></entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_kjk_dnr_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../../tpp_images/tpp_html_ma1b616e.png" id="image_ljk_dnr_sy"/></entry>
+              <entry>Маска теплообменника 4</entry>
+              <entry><image href="../../tpp_images/tpp_html_2cb48fdf.png" id="image_mjk_dnr_sy"/></entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_njk_dnr_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../../tpp_images/tpp_html_m7af62ff5.png" id="image_ojk_dnr_sy"/></entry>
+              <entry>Маска теплообменника 5</entry>
+              <entry><image href="../../tpp_images/tpp_html_m5273815c.png" id="image_pjk_dnr_sy"/></entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_qjk_dnr_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../../tpp_images/tpp_html_m32953f6c.png" id="image_rjk_dnr_sy"/></entry>
+              <entry>Маска теплообменника 6</entry>
+              <entry><image href="../../tpp_images/tpp_html_m3816079b.png" id="image_sjk_dnr_sy"/></entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_tjk_dnr_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../../tpp_images/tpp_html_13749f46.png" id="image_ujk_dnr_sy"/></entry>
+              <entry>Маска теплообменника 7</entry>
+              <entry><image href="../../tpp_images/tpp_html_m2d38d7e6.png" id="image_vjk_dnr_sy"/></entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_wjk_dnr_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../../tpp_images/tpp_html_2e5bf895.png" id="image_xjk_dnr_sy"/></entry>
+              <entry>Маска фильтра</entry>
+              <entry><image href="../../tpp_images/tpp_html_m29c1d38e.png" id="image_yjk_dnr_sy"/></entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_zjk_dnr_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../../tpp_images/tpp_html_m5b5ffbf7.png" id="image_akk_dnr_sy"/></entry>
+              <entry>Расходомерная шайба</entry>
+              <entry><image href="../../tpp_images/tpp_html_m4c1159fb.png" id="image_bkk_dnr_sy"/></entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_ckk_dnr_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../../tpp_images/tpp_html_m76161573.png" id="image_dkk_dnr_sy"/></entry>
+              <entry>Ограничитель расхода</entry>
+              <entry><image href="../../tpp_images/tpp_html_2a8fa148.png" id="image_ekk_dnr_sy"/></entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_fkk_dnr_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../../tpp_images/tpp_html_m652d3b3.png" id="image_gkk_dnr_sy"/></entry>
+              <entry>Пересечение трубопроводов</entry>
+              <entry><image href="../../tpp_images/tpp_html_e3c13aa.png" id="image_hkk_dnr_sy"/></entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_ikk_dnr_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../../tpp_images/tpp_html_221e27fb.png" id="image_jkk_dnr_sy"/></entry>
+              <entry>Изменение диаметра</entry>
+              <entry><image href="../../tpp_images/tpp_html_m5b1f66a8.png" id="image_kkk_dnr_sy"/></entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></p>
+    <p>Выбор соответствующего элемента происходит в закладке <i>Декоративные элементы ТРР</i> (см.
+      Рисунок 4.51.92). </p>
+    <p><image href="../../tpp_images/tpp_html_b60c639.png" id="image_lkk_dnr_sy"/></p>
+    <p><b>Рисунок 4.51.92</b> Выбор типа декоративного элемента</p>
+    <p><b>Декоративные элементы ТРР</b> не обладают специфическими свойствами. Допустимо изменять
+      только общие свойства элемента.</p>
+  </body>
+</topic>

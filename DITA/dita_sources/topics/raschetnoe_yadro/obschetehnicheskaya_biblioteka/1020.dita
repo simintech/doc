@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Чтение из списка сигналов</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/1020.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/1020s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован | Си
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок производит считывание данных из локального списка сигналов проекта (или из списка
+      сигналов подключенной БД). На выходе блока возвращается вектор, размерность которого равна
+      сумме размерностей сигналов, считываемых блоком.</p>
+    <section><title>Входы</title>
+    <p>нет</p></section>
+    <section><title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>output</uicontrol> - значение сигнала.</li>
+        </ul>
+      </p></section>
+    <section><title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Имена сигналов</uicontrol> – список имён сигналов, считываемых блоком.
+            Сигналы указываются через точку с запятой. В списке имён допустимо использовать
+            форматирование имён и создание запросов к БД.</li>
+          <li><uicontrol>Рассчитывать с задержкой на шаг</uicontrol> - читать из списка с задержкой
+            на 1 шаг интегрирования.</li>
+          <li><uicontrol>Автосброс</uicontrol>.</li>
+          <li><uicontrol>Порт для сортировки</uicontrol>.</li>
+        </ul>
+      </p></section>
+    <section><title>Параметры</title>
+      <p>нет</p></section>
+    
+  </body>
+</topic>

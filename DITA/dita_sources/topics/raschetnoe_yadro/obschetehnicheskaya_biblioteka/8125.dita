@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Генератор</title>
+  <body>
+    <p><b>Генератор - </b><i>точечный</i><i>неориентированный</i> элемент. Модель предназначена для
+      имитации нагрузки генератора на ротор.</p>
+    <p><b>3.25.1Разрешенные связи элемента</b></p>
+    <p><b>Генератор </b>при помощи соединительной линии (механической связи) связывается с элементом
+          <i>Ротор</i>. </p>
+    <p><b>3.25.2Свойства элемента</b></p>
+    <p>Характеристики <b>Генератора </b>и начальные условия для расчета задаются в закладке
+        <i>Свойства</i><i>объекта</i> (см. Таблица 4.25.2.34). </p>
+    <p><b>Таблица 4.25.2.34 </b>Параметры генератора <table id="table2">
+        <tgroup cols="4">
+          <colspec colnum="1" colname="col1"/>
+          <colspec colnum="2" colname="col2"/>
+          <colspec colnum="3" colname="col3"/>
+          <colspec colnum="4" colname="col4"/>
+          <thead>
+            <row>
+              <entry><b>Параметр</b></entry>
+              <entry><b>Имя </b><b>(идентификатор)</b></entry>
+              <entry><b>Тип переменной</b></entry>
+              <entry><b>Интервал возможных значений</b></entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>Аргумент момента двигателя</entry>
+              <entry>Mode</entry>
+              <entry>P</entry>
+              <entry>[Идеальный, Частота задана]</entry>
+            </row>
+            <row>
+              <entry>Частота вращения</entry>
+              <entry>n</entry>
+              <entry>R</entry>
+              <entry>? 0</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></p>
+    <p>Пример применения элемента <i>Генератор </i>для создания
+        Турбогенератор.</p>
+  </body>
+</topic>

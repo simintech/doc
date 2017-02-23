@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика – Инерция относительного вращательного движения </title>
+  <body>
+    <table id="table_mjy_xrr_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4207/image001.png" height="33" width="32"
+                id="image_njy_xrr_qy"/></entry>
+            <entry>Механика – Инерция относительного вращательного движения</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4207/image002.png" height="119" width="145"
+                id="image_ojy_xrr_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>В блоке реализована модель относительного движения двух вращающихся тел, описываемая
+      уравнениями:</p>
+    <p><image href="images_old/4207/image003.png" height="43" width="71" id="image_pjy_xrr_qy"/></p>
+    <p><image href="images_old/4207/image004.png" height="22" width="107" id="image_qjy_xrr_qy"/>,
+      где</p>
+    <p>T - момент, <image href="images_old/4207/image005.png" height="22" width="40"
+        id="image_rjy_xrr_qy"/>;</p>
+    <p>J - момент инерции;</p>
+    <p>W – относительная угловая скорость,<image href="images_old/4207/image006.png" height="29"
+        width="21" id="image_sjy_xrr_qy"/>;</p>
+    <p><image href="images_old/4207/image007.png" height="22" width="25" id="image_tjy_xrr_qy"/>,<image
+        href="images_old/4207/image008.png" height="22" width="29" id="image_ujy_xrr_qy"/> – угловые
+      скорости портов R и C, соответственно.</p>
+    <p> </p>
+    <p><b> Входные порты блока:</b></p>
+    <p> Блок имеет два механических порта (R и C) вращательного движения.</p>
+    <p> </p>
+    <p>
+      <b>Выходные порты блока – отсутствуют.</b></p>
+    <p> </p>
+    <p><b> Свойства блока:</b></p>
+    <p> </p>
+    <table id="table_vjy_xrr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>J</entry>
+            <entry>-</entry>
+            <entry>Момент инерции, <image href="images_old/4207/image009.png" height="22" width="44"
+                id="image_wjy_xrr_qy"/></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока</b><b>:</b></p>
+    <p> </p>
+    <table id="table_xjy_xrr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Т</entry>
+            <entry>-</entry>
+            <entry>момент, н*м</entry>
+          </row>
+          <row>
+            <entry>W</entry>
+            <entry>-</entry>
+            <entry>относительная угловая скорость, рад/с</entry>
+          </row>
+          <row>
+            <entry>Q</entry>
+            <entry>-</entry>
+            <entry>Мощность, Вт</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

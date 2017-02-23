@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Индуктивность идеальная</title>
+  <body>
+    <table id="table_flx_twb_5y">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/3108.png" height="32" width="32" id="image_glx_twb_5y"
+              /></entry>
+            <entry>Индуктивность идеальная</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry>| СЛАУ |</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/3108s.png" height="48" width="99" id="image_hlx_twb_5y"
+              /></entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry/>
+          </row>
+       </tbody>
+      </tgroup>
+    </table>
+         
+              <p>Блок представляет собой модель нелинейного сопротивления, описываемого следующим
+                дифференциальным уравнением:</p>
+              <p><image href="images_old/3108_html_m226140c4.gif" height="45" width="114" id="image_ilx_twb_5y"
+                />,</p>
+              <p>где </p>
+              <p><image href="images_old/3108_html_3e8cbd78.gif" height="21" width="40" id="image_jlx_twb_5y"
+                />– разность потенциалов;</p>
+              <p><image href="images_old/3108_html_7ebbee66.gif" height="21" width="20" id="image_klx_twb_5y"
+                />– индуктивность;</p>
+              <p><image href="images_old/3108_html_m2ed25e99.gif" height="21" width="36" id="image_llx_twb_5y"
+                />– ток.</p>
+              <p>Впрямую применять для вычисления токов блок типа «Интегратор» нельзя, так как это
+                приводит к задержке на шаг и несходимости численной схемы, реализованной в данной
+                методике построения электросетевых моделей. Поэтому здесь необходимо применять
+                неявную схему расчёта индуктивных (а также ёмкостных) элементов.</p>
+              <p>Данное дифференциальное уравнение может быть сведено к алгебраическому, путём
+                аппроксимации производной при помощи обратной формулы Эйлера в простейшем
+                случае:</p>
+              <p><image href="images_old/3108_html_m2687417b.gif" height="44" width="153" id="image_mlx_twb_5y"
+                />,</p>
+              <p>где:</p>
+              <p><image href="images_old/3108_html_94862ac.gif" height="23" width="46" id="image_nlx_twb_5y"/>–
+                разность потенциалов узлов на шаге n+1, к которым подключен данный элемент;</p>
+              <p><image href="images_old/3108_html_14c6b59e.gif" height="21" width="18" id="image_olx_twb_5y"
+                />– шаг интегрирования;</p>
+              <p><image href="images_old/3108_html_a7e9834.gif" height="23" width="42" id="image_plx_twb_5y"/>–
+                ток через элемент на шаге n+1;</p>
+              <p><image href="images_old/3108_html_2b8b39b0.gif" height="23" width="27" id="image_qlx_twb_5y"
+                />– ток через элемент на шаге n.</p>
+              <p>Соотвественно этому соотношению индуктивность может быть представлена как линейное
+                сопротивление с проводимостью равной:</p>
+              <p><image href="images_old/3108_html_11bd43cb.gif" height="44" width="51" id="image_rlx_twb_5y"
+                />,</p>
+              <p>с источником тока равным:</p>
+              <p><image href="images_old/3108_html_m2d4c02ba.gif" height="44" width="139" id="image_slx_twb_5y"
+                />.</p>
+              <p><image href="images_old/3108_ris_1.png" height="399" width="627" id="image_tlx_twb_5y"
+                /></p>
+              <p>Рисунок 1 – Внутренняя структура блока «Индуктивность идеальная»</p>
+              <p>На рисунке 1 изображена графически представленная в среде разработки ПК «МВТУ-4»
+                схема аппроксимации индуктивности, соотвествующая вышеприведённым соотношениям.</p>
+              <p><b>Свойства</b>:</p>
+              <ul id="ul_ulx_twb_5y">
+                <li>
+                  <p>Индуктивность, Гн – число, задающее значение индуктивности.</p>
+                </li>
+                <li>
+                  <p>Начальный ток, А – число, задающее начальное значение тока.</p>
+                </li>
+              </ul>
+              <p>Примеры заполнения диалогового окна свойств блока:</p>
+              <table id="table_vlx_twb_5y">
+                <tgroup cols="2">
+                  <colspec colnum="1" colname="col1"/>
+                  <colspec colnum="2" colname="col2"/>
+                  <tbody>
+                    <row>
+                      <entry namest="col1" nameend="col2"><b>Числовое</b> задание свойств:</entry>
+                    </row>
+                    <row>
+                      <entry>Название</entry>
+                      <entry>Значение</entry>
+                    </row>
+                    <row>
+                      <entry>Индуктивность, Гн</entry>
+                      <entry>0.6</entry>
+                    </row>
+                    <row>
+                      <entry>Начальный ток, А</entry>
+                      <entry>0.0</entry>
+                    </row>
+                    <row>
+                      <entry namest="col1" nameend="col2"><b>Именованное</b> задание
+                        свойств:</entry>
+                    </row>
+                    <row>
+                      <entry>Название</entry>
+                      <entry>Значение</entry>
+                    </row>
+                    <row>
+                      <entry>Индуктивность, Гн</entry>
+                      <entry>L0</entry>
+                    </row>
+                    <row>
+                      <entry>Начальный ток, А</entry>
+                      <entry>i0</entry>
+                    </row>
+                  </tbody>
+                </tgroup>
+              </table>
+              <p><b>Примечани</b><b>я</b>:</p>
+              <ol id="ol_wlx_twb_5y">
+                <li>
+                  <p>Свойства блока должны быть <i>скалярными</i> величинами.</p>
+                </li>
+                <li>
+                  <p>Именованные свойства задаются как <i>локальные</i> переменные модели (или
+                    субмодели) во вкладке <i>Параметры</i> или как глобальные сигналы проекта при
+                    помощи пункта главного меню <i>Графика</i> → <i>Сигналы</i>.</p>
+                </li>
+              </ol>
+         
+  </body>
+</topic>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Свойства воды: Ts=f(Ps)</title>
+  <body>
+    <table id="table_mcv_yj4_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/0361.png" height="32" width="32" id="image_ncv_yj4_qy"
+              /></entry>
+            <entry>Свойства воды: Ts=f(Ps)</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry>| векторизован | Cи|</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/0361s.png" height="67" width="165" id="image_ocv_yj4_qy"
+              /></entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry/>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2">
+              <p>Блок представляет собой субмодель, реализующую алгоритм линейной интерполяции
+                функции температуры воды на линии насыщения Ts от давления воды Ps (на линии
+                насыщения).</p>
+              <p><b>Примечание</b>: страница справки находится в разработке.</p>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>

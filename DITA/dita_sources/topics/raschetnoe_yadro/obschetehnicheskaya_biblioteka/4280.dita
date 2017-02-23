@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика - Трение сцепления  </title>
+  <body>
+    <table id="table_sv3_cbs_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4280/image001.jpg" height="32" width="32"
+                id="image_tv3_cbs_qy"/></entry>
+            <entry>Механика - Трение сцепления</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4280/image002.jpg" height="74" width="132"
+                id="image_uv3_cbs_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>В блоке реализована модель взаимодействия между протектором шины и дорожным покрытием.
+      Продольная сила вычисляется на основе магической формулы Пасейки (см. рисунок 1), выражение
+      для которой имеет следующий вид:</p>
+    <p><image href="images_old/4280/image003.jpg" height="221" width="385" id="image_vv3_cbs_qy"/></p>
+    <p>Рисунок 1</p>
+    <p> </p>
+    <p><image href="images_old/4280/image004.gif" height="22" width="594" id="image_wv3_cbs_qy"/></p>
+    <p><image href="images_old/4280/image005.gif" height="22" width="140" id="image_xv3_cbs_qy"/></p>
+    <p><image href="images_old/4280/image006.gif" height="46" width="109" id="image_yv3_cbs_qy"/></p>
+    <p> </p>
+    <table id="table_zv3_cbs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Rw</entry>
+            <entry>-</entry>
+            <entry>Радиус колеса</entry>
+          </row>
+          <row>
+            <entry>ω</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость колеса</entry>
+          </row>
+          <row>
+            <entry>Vx</entry>
+            <entry>-</entry>
+            <entry>Продольная скорость ступицы колеса</entry>
+          </row>
+          <row>
+            <entry>Vsx</entry>
+            <entry>-</entry>
+            <entry>Скорость проскальзывания</entry>
+          </row>
+          <row>
+            <entry>K</entry>
+            <entry>-</entry>
+            <entry>Проскальзывание</entry>
+          </row>
+          <row>
+            <entry>Fz</entry>
+            <entry>-</entry>
+            <entry>Вертикальная нагрузка на шину</entry>
+          </row>
+          <row>
+            <entry>Fx</entry>
+            <entry>-</entry>
+            <entry>Продольная сила, действующая на колесо в точке контакта</entry>
+          </row>
+          <row>
+            <entry>B,C,D,E</entry>
+            <entry>-</entry>
+            <entry>Эмпирические коэффициенты в формуле Пасейки</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>В блоке предусмотрено три способа вычисления коэффициентов B, C, D, E в формуле Пасейки
+      (свойство MType):</p>
+    <p>- коэффициенты из номинальных параметров;</p>
+    <p>- постоянные коэффициенты;</p>
+    <p>- коэффициенты зависят от нагрузки.</p>
+    <p>В первом случае задаются номинальная вертикальная нагрузка Fz0, максимальная продольная сила
+      и скольжение при Fz0.</p>
+    <p>Во втором случае задаются постоянные значения коэффициентов B, C, D, E в формуле Пасейки.</p>
+    <p>В третьем случае решается следующая система уравнений:</p>
+    <p><image href="images_old/4280/image007.gif" height="22" width="601" id="image_aw3_cbs_qy"/></p>
+    <p><image href="images_old/4280/image008.gif" height="22" width="153" id="image_bw3_cbs_qy"/></p>
+    <p><image href="images_old/4280/image009.gif" height="22" width="105" id="image_cw3_cbs_qy"/></p>
+    <p><image href="images_old/4280/image010.gif" height="22" width="99" id="image_dw3_cbs_qy"/></p>
+    <p><image href="images_old/4280/image011.gif" height="22" width="97" id="image_ew3_cbs_qy"/></p>
+    <p><image href="images_old/4280/image012.gif" height="22" width="223" id="image_fw3_cbs_qy"/></p>
+    <p><image href="images_old/4280/image013.gif" height="22" width="551" id="image_gw3_cbs_qy"/></p>
+    <p><image href="images_old/4280/image014.gif" height="22" width="434" id="image_hw3_cbs_qy"/></p>
+    <p><image href="images_old/4280/image015.gif" height="22" width="189" id="image_iw3_cbs_qy"/></p>
+    <p><image href="images_old/4280/image016.gif" height="22" width="233" id="image_jw3_cbs_qy"/></p>
+    <p><image href="images_old/4280/image017.gif" height="22" width="264" id="image_kw3_cbs_qy"/></p>
+    <p>Задаются массивы коэффициентов pCx, pDx, pEx, pHx, pVx, а также номинальная вертикальная
+      нагрузка колеса Fzn.</p>
+    <p> </p>
+    <p><b>Входные порты блока:</b></p>
+    <p>Блок имеет два механических ненаправленных порта поступательного движения (H - ступица, T -
+      протектор), и один математический порт, через который в модель поступает значение нагрузки N. </p>
+    <p> </p>
+    <p><b>Выходные порты блока:</b></p>
+    <p>Блок один математический порт, через который из модели поступает значение коэффициента
+      скольжения. </p>
+    <p> </p>
+    <p><b>Свойства блока:</b></p>
+    <table id="table_lw3_cbs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Vth</entry>
+            <entry>-</entry>
+            <entry>Порог скорости, рад/с</entry>
+          </row>
+          <row>
+            <entry>MType</entry>
+            <entry>-</entry>
+            <entry>Тип задания контактного трения</entry>
+          </row>
+          <row>
+            <entry>Fz0</entry>
+            <entry>-</entry>
+            <entry>Номинальная вертикальная нагрузка, Н</entry>
+          </row>
+          <row>
+            <entry>Fmax</entry>
+            <entry>-</entry>
+            <entry>Максимальная продольная сила при Fz0, Н</entry>
+          </row>
+          <row>
+            <entry>K0</entry>
+            <entry>-</entry>
+            <entry>Скольжение при Fmax, %</entry>
+          </row>
+          <row>
+            <entry>B</entry>
+            <entry>-</entry>
+            <entry>Коэффициент B магической формулы</entry>
+          </row>
+          <row>
+            <entry>C</entry>
+            <entry>-</entry>
+            <entry>Коэффициент C магической формулы</entry>
+          </row>
+          <row>
+            <entry>D</entry>
+            <entry>-</entry>
+            <entry>Коэффициент D магической формулы</entry>
+          </row>
+          <row>
+            <entry>E</entry>
+            <entry>-</entry>
+            <entry>Коэффициент E магической формулы</entry>
+          </row>
+          <row>
+            <entry>Fzn</entry>
+            <entry>-</entry>
+            <entry>Номинальная вертикальная нагрузка колеса, Н</entry>
+          </row>
+          <row>
+            <entry>pCx</entry>
+            <entry>-</entry>
+            <entry>Параметр для вычисления С, pCx1</entry>
+          </row>
+          <row>
+            <entry>pDx</entry>
+            <entry>-</entry>
+            <entry>Параметры для вычисления D, [pDx1, pDx2]</entry>
+          </row>
+          <row>
+            <entry>pEx</entry>
+            <entry>-</entry>
+            <entry>Параметры для вычисления E, [pEx1, pEx2,pEx3,pEx4]</entry>
+          </row>
+          <row>
+            <entry>pKx</entry>
+            <entry>-</entry>
+            <entry>Параметры для вычисления BCD, [pKx1, pKx2,pKx3]</entry>
+          </row>
+          <row>
+            <entry>pHx</entry>
+            <entry>-</entry>
+            <entry>Параметры для вычисления H, [pHx1, pHx2]</entry>
+          </row>
+          <row>
+            <entry>pVx</entry>
+            <entry>-</entry>
+            <entry>Параметры для вычисления V, [pVx1, pVx2]</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_mw3_cbs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Vt</entry>
+            <entry>-</entry>
+            <entry>Скорость протектора шины, м/с</entry>
+          </row>
+          <row>
+            <entry>Ft</entry>
+            <entry>-</entry>
+            <entry>Продольная сила на протектор, Н</entry>
+          </row>
+          <row>
+            <entry>Vh</entry>
+            <entry>-</entry>
+            <entry>Скорость ступицы, м/с</entry>
+          </row>
+          <row>
+            <entry>Fh</entry>
+            <entry>-</entry>
+            <entry>Продольная сила на ступицу, Н</entry>
+          </row>
+          <row>
+            <entry>Kx</entry>
+            <entry>-</entry>
+            <entry>Коэффициент скольжения</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

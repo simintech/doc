@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Описание процесса сборки расчетного модуля для QNX 6 и QNX 4</title>
+  <body>
+                  <p>Сборка по схеме расчётного модуля производится по следующему алгоритму:</p>
+              <p>А) Генератор кода ПК «МВТУ-4» по открытой схеме в указанной в настройках папке
+                создаёт следующие файлы:</p>
+              <p>&lt;имя программы>.h – файл в котором декларируются привязки переменных к нужным
+                структурам внутри расчётного модуля.</p>
+              <p>&lt;имя программы>.inc – файл исходного текста программы, сгенерированной по схеме
+                – главная вычислительная секция.</p>
+              <p>&lt;имя программы>_init.inc – файл исходного текста программы, сгенерированной по
+                схеме – секция инициализации начальных состояний переменных и констант.</p>
+              <p>&lt;имя программы>_state.inc – файл исходного текста программы, сгенерированной по
+                схеме – секция запоминания состояний (выполняется всегда строго после главной
+                секции).</p>
+              <p>Имя программы – это заданное в параметрах расчёта исходной схемы имя алгоритма
+                (расчётного модуля).</p>
+              <p>Б) Генератор кода ПК «МВТУ-4» запускает скрипт автоматической сборки (имя скрипта
+                может быть изменено в настройках окна «Инструменты автоматики» – см. Руководство
+                пользователя). Данный скрипт находится в папке выбранного в настройках генератора
+                кода шаблона кода и по умолчанию называется compile.bat. Данному скрипту сообщаются
+                следующие параметры: директория, куда были размещены сгенерированные генератором
+                кода файлы (*.inc и *.h), адрес сборочного сервера, пароль и логин для сборочного
+                сервера. Данный скрипт производит копирование сгенерированных генератором кода
+                файлов в директорию с исходным текстом расчётного модуля (&lt;директория шаблона
+                кода>\calc). Файлы копируются под фиксированными именами:</p>
+              <p>&lt;имя программы>.h → prog.h</p>
+              <p>&lt;имя программы>.inc → prog.inc</p>
+              <p>&lt;имя программы>_init.inc → init.inc</p>
+              <p>&lt;имя программы>_state.inc → state.inc</p>
+              <p>Далее данный скрипт запускает процедуру автоматической сборки из исходного кода
+                исполняемого файла расчётного модуля. В разработанных шаблонах кода скрипт сборки
+                исполняемого модуля называется build.bat. Ниже приведён текст скрипта сборки
+                compile.bat и скрипта компиляции build.bat применительно к QNX 6. Для ОС QNX 4
+                отличается только скрипт build.bat. </p>
+              <p>compile.bat:</p>
+              <p>REM Скрипт сборки расчётного модуля</p>
+              <p>REM формат команды compile.bat &lt;путь к исходникам\имя модуля></p>
+              <p>REM Копируем файлы исходного текста из заданной директории</p>
+              <p>call clear.bat</p>
+              <p>del /q %1</p>
+              <p>copy "%~1.inc" /B calc\prog.inc /B</p>
+              <p>copy "%~1.h" /B calc\prog.h /B</p>
+              <p>copy "%~1_init.inc" /B calc\init.inc /B</p>
+              <p>copy "%~1_state.inc" /B calc\state.inc /B</p>
+              <p>REM Компилируем DLL и пишем результат компиляции в отчёт</p>
+              <p>call build.bat 2>"%~1.log"</p>
+              <p>REM Копируем результат сборки обратно</p>
+              <p>copy calc\x86\o\calc /B %1 /B</p>
+              <p>build.bat для QNX6 – сборка производится кросс-компилятором на рабочем месте
+                пользователя:</p>
+              <p>REM Пакетная сборка расчётного модуля для QNX</p>
+              <p>REM Тут указываем пути к компилятору и вспомогательным программам</p>
+              <p>set path=%path%;"%QNX_HOST%\usr\bin\"</p>
+              <p>REM Собственно компиляция - для 6.4 под x86</p>
+              <p>i386-pc-nto-qnx6.4.0-gcc.exe -o calc\x86\o\calc calc\calcmain.c -fpack-struct=1
+                "-I%QNX_TARGET%\usr\include" -IDispExemod -Wconversion -l m</p>
+              <p>REM Собственно компиляция - для 6.5 под x86</p>
+              <p>i486-pc-nto-qnx6.5.0-gcc.exe -o calc\x86\o\calc calc\calcmain.c -fpack-struct=1
+                "-I%QNX_TARGET%\usr\include" -IDispExemod -Wconversion -l m</p>
+              <p>Как видно из вышеприведённого сборочного скрипта build.bat для QNX6 запускается
+                кросс-компилятор под выбранную платформу из директории средств разработки,
+                поставляемых вместе с QNX. При этом компиляция осуществляется в директорию calc
+                шаблона расчётного модуля, а потом скомпилированный расчётный модуль копируется (и
+                переименовывается) из неё обратно в директорию, куда были размещены файлы,
+                сгенерированные генератором кода ПК SimInTech (см. конец compile.bat).</p>
+              <p>build.bat для QNX4 – сборка производится нативным компилятором, непосредственно на
+                приборе (или специально выделенном под эти цели сборочном приборе):</p>
+              <p>REM Удалённая сборка не целевой (или промежуточной тестовой) системе для QNX4</p>
+              <p>REM синтаксис build.bat &lt;сервер> &lt;логин> &lt;пароль></p>
+              <p>pushd calc</p>
+              <p>del/q buildcmds.txt</p>
+              <p>del/q calc</p>
+              <p>REM Копирование задания на сборочный сервер</p>
+              <p>ECHO open %1 > ftpcmd.txt</p>
+              <p>ECHO %2>> ftpcmd.txt</p>
+              <p>ECHO %3>> ftpcmd.txt</p>
+              <p>ECHO binary>> ftpcmd.txt</p>
+              <p>ECHO rmdir calcsrc>> ftpcmd.txt</p>
+              <p>ECHO mkdir calcsrc>> ftpcmd.txt</p>
+              <p>ECHO cd calcsrc>> ftpcmd.txt</p>
+              <p>ECHO mput *.*>> ftpcmd.txt</p>
+              <p>ECHO quit>> ftpcmd.txt</p>
+              <p>ftp -s:ftpcmd.txt -i</p>
+              <p>REM Собственно сборка (соединение через telnet) - при помощи утилиты</p>
+              <p>ECHO %2> buildcmds.txt</p>
+              <p>ECHO %3>> buildcmds.txt</p>
+              <p>ECHO cd calcsrc>> buildcmds.txt</p>
+              <p>ECHO make>> buildcmds.txt</p>
+              <p>..\..\..\telbuilder %1 buildcmds.txt</p>
+              <p>REM Копирование скомпилированного со сборочного сервера домой</p>
+              <p>ECHO open %1 > ftpcmd.txt</p>
+              <p>ECHO %2>> ftpcmd.txt</p>
+              <p>ECHO %3>> ftpcmd.txt</p>
+              <p>ECHO binary>> ftpcmd.txt</p>
+              <p>ECHO cd calcsrc>> ftpcmd.txt</p>
+              <p>ECHO get calc calc>> ftpcmd.txt</p>
+              <p>ECHO quit>> ftpcmd.txt</p>
+              <p>ftp -s:ftpcmd.txt -i</p>
+              <p>del/q ftpcmd.txt</p>
+              <p>popd</p>
+              <p>Для QNX 4 файлы сгенерированные генератором кода сначала копируются в локальную
+                директорию calc шаблона кода QNX 4, затем по ftp вся локальная директория calc
+                копируется на сборочный сервер (прибор), там собирается нативным компилятором, а
+                результаты компиляции (исполняемый файл и лог компиляции) копируются по ftp обратно. </p>
+              <p>Также процесс сборки кода описан в Руководстве пользователя. </p>
+              <p>Сгенерированные генератором кода файлы (*.inc и *.h) подключаются к основному файлу
+                шаблона расчётного модуля calcmain.c при помощи операторов #include, ниже приведён
+                код подключения к базовой части сгенерированной части (фрагмент calcmain.c):</p>
+              <p>#include &lt;stdio.h></p>
+              <p>#include &lt;string.h></p>
+              <p>#include &lt;stdlib.h></p>
+              <p>#include &lt;malloc.h></p>
+              <p>#include &lt;signal.h></p>
+              <p>#include &lt;string.h></p>
+              <p>#include &lt;fcntl.h></p>
+              <p>#include &lt;sys/mman.h></p>
+              <p>#include &lt;sys/kernel.h></p>
+              <p>#include &lt;process.h></p>
+              <p>#include &lt;math.h></p>
+              <p>#pragma pack (1)</p>
+              <p>#include "c_types.h"</p>
+              <p><b>#include "prog.h"</b></p>
+              <p>#define STR_LEN 80</p>
+              <p>#define OK 0x01</p>
+              <p>#include "main_struct.h"</p>
+              <p>EXPORTED_FUNC INIT_FUNC( double step,</p>
+              <p> double time,</p>
+              <p> ptr_array* ext_vars_addr,</p>
+              <p> double_array* din_vars,</p>
+              <p> double_array* derivates,</p>
+              <p> double_array* alg_vars,</p>
+              <p> double_array* alg_funcs,</p>
+              <p> t_state_vars* state_vars,</p>
+              <p> t_consts* consts</p>
+              <p> )</p>
+              <p>{ int ret;</p>
+              <p><b>#include "init.inc"</b></p>
+              <p>return ret;</p>
+              <p>};</p>
+              <p>EXPORTED_FUNC RUN_FUNC(</p>
+              <p> int action,</p>
+              <p> double step,</p>
+              <p> double time,</p>
+              <p> ptr_array* ext_vars_addr,</p>
+              <p> double_array* din_vars,</p>
+              <p> double_array* derivates,</p>
+              <p> double_array* alg_vars,</p>
+              <p> double_array* alg_funcs,</p>
+              <p> t_state_vars* state_vars,</p>
+              <p> t_consts* consts,</p>
+              <p> t_local* locals</p>
+              <p> )</p>
+              <p>{ int ret;</p>
+              <p><b>#include "prog.inc"</b></p>
+              <p>return ret;</p>
+              <p>};</p>
+              <p>EXPORTED_FUNC STATE_FUNC(</p>
+              <p> int action,</p>
+              <p> double step,</p>
+              <p> double time,</p>
+              <p> ptr_array* ext_vars_addr,</p>
+              <p> double_array* din_vars,</p>
+              <p> double_array* derivates,</p>
+              <p> double_array* alg_vars,</p>
+              <p> double_array* alg_funcs,</p>
+              <p> t_state_vars* state_vars,</p>
+              <p> t_consts* consts,</p>
+              <p> t_local* locals</p>
+              <p> )</p>
+              <p>{ int ret;</p>
+              <p><b>#include "state.inc"</b></p>
+              <p>return ret;</p>
+              <p>};</p>
+              <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+              <p>Сам алгоритм генерации кода для отдельных блоков схемы находится в библиотеке
+                get_lib.dll, исходные тексты которой находятся в папке &lt;директория установки
+                программы>\source\MBTY\AVRORA_GEN\</p>
+              <p>В общем виде процесс генерации кода выглядит следующим образом:</p>
+              <p>- графическая оболочка загружает схему</p>
+              <p>- математическое ядро mbtylib.dll анализирует правильность задания параметров и
+                сортирует схему</p>
+              <p>- математическое ядро подгружает для каждого из блоков модуль генерации кода из
+                библиотеки генерации кода get_lib.dll. </p>
+              <p>- математическое ядро вызывает процедуры генерации кода последовательно для всех
+                блоков из библиотеки генерации кода get_lib.dll.</p>
+              <p>Собственно алгоритмы формирования текста для каждого из блоков находятся в модуле
+                Blocks.pas в директории &lt;директория установки
+                программы>\source\MBTY\AVRORA_GEN</p>
+  </body>
+</topic>

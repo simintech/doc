@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Распаковка матрицы</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/0021.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/0021s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован | Си
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок реализует преобразование одного входного векторного сигнала на несколько векторных
+      выходных сигналов согласно алгоритму:<image placement="break" href="images/0021_1.png"
+        align="center" id="image_utm_fjs_gy"/> или <image placement="break" href="images/0021_2.png"
+        align="center" id="image_ym3_gjs_gy"/>где <i>y</i>(<i>t</i>) – векторный выходной сигнал,
+        <i>u</i>(<i>t</i>) – векторный входной сигнал. Входной вектор <i>u</i>(<i>t</i>),
+      интерпретируемый как матрица размера [<i>N</i>&#215;<i>M</i>] и «запакованная» по строкам или
+      столбцам (в зависимости от варианта запаковки), преобразуется в <i>M</i> или <i>N</i>
+      векторных выходов <i>y</i><sub>j</sub>(<i>t</i>) (в зависимости от варианта распаковки: по
+      строкам или по столбцам). </p>
+    <section><title>Входы</title>
+    <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>inport</uicontrol> - порт для входного векторного сигнала.</li>
+        </ul>
+      </p></section>
+    <section><title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>outport_n</uicontrol> - выходной порт для строки матрицы. Количество
+            выходов блока равно количеству строк или столбцов входной матрицы, в зависимости от
+            настроек свойств блока.</li>
+        </ul>
+      </p></section>
+    <section><title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Число строк в матрице</uicontrol> – число <i>M</i>. </li>
+          <li><uicontrol>Число столбцов в матрице</uicontrol> – число <i>N</i>. </li>
+          <li><uicontrol>Матрица запакована по</uicontrol> – вариант запаковки входной матрицы: по
+            строкам или по столбцам.</li>
+          <li><uicontrol>Матрицу распаковать по</uicontrol> – вариант «распаковки» входной матрицы. </li>
+        </ul>
+      </p></section>
+    <section><title>Параметры</title>
+      <p>нет</p></section>
+    <note>
+      <ol id="ol_bjm_dpx_gy">
+        <li>По умолчанию блок распаковывает матрицу размером [2&#215;2] и формирует два выходных
+          сигнала (размерностью 2 каждый). При этом матрица запакована и распаковывается по
+          строкам.</li>
+        <li>Именованные свойства могут быть заданы как локальные переменные модели (субмодели) в
+          скрипте на языке программирования, как глобальные сигналы проекта при помощи пункта
+          главного меню <cmdname>Сервис → Сигналы</cmdname>, или как внешние сигналы проекта при
+          помощи подключаемой базы сигналов. </li>
+      </ol>
+    </note>
+    
+  </body>
+</topic>

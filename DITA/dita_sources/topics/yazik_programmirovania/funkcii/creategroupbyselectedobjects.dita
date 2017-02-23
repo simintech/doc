@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>creategroupbyselectedobjects </title>
+<shortdesc>Функция объединения выделенных объектов в группу </shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>group_id = <funcname>creategroupbyselectedobjects</funcname>(page_id, flag);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>page_id – идентификатор страницы, на которой находятся выделенные объекты;</p>
+      <p>flag – флаг привязки формируемой группы к координатной сетке. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>creategroupbyselectedobjects</codeph> – функция объединения, выделенных на странице
+          <codeph>page_id</codeph>, объектов в группу и получения ее идентификатора. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>group_id – функция возвращает значение идентификатора сформированной группы. </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><funcname>selectallbycontainerid</funcname>(<funcname>getcurrentpageid</funcname>);
+group_id = <funcname>creategroupbyselectedobjects</funcname>(<funcname>getcurrentpageid</funcname>,1);</codeblock></section>
+<p>В результате выполнения данного скрипта происходит выделение всех объектов, расположенных на
+      текущей активной странице и объединение их в группу с присвоением переменной
+        <codeph>group_id</codeph> идентификатора созданной группы. </p>  
+  </body>
+</topic>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Интегратор с изменяемыми начальными условиями</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/0114.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/0114s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован | Си
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок реализует интегрирование входного сигнала (сигналов):<image placement="break"
+        href="images/0114_1.png" align="center" id="image_cjz_m5x_3y"/>где
+        <i>x<sub>i</sub></i>(<i>t</i>) – элементы вектора входного сигнала,
+        <i>y<sub>i</sub></i>(<i>t</i>) – элементы вектора выходного сигнала, <i>t</i><sub>1</sub> и
+        <i>t</i><sub>2</sub> – времена переключения начальных условий. При <i>t</i> =
+          <i>t<sub>1</sub></i> происходит установление новых начальных условий и при
+        <i>t</i><sub>1</sub> &lt; <i>t</i> &lt; <i>t</i><sub>2</sub> выполняется интегрирование
+      сигналов входного вектора с этими новыми начальными условиями. При <i>t</i> =
+        <i>t</i><sub>2</sub> происходит очередное изменение начальных условий и при <i>t</i> >
+        <i>t</i><sub>2</sub> выполняется очередной этап интегрирования с новыми начальными условиями
+      вплоть до нового очередного изменения начальных условий. Переключение начальных условий
+      производится только при изменении управляющего сигнала с одного значения, например, с 1 на
+      другое, например, 2, или наоборот, с 2 на 1. Размерности интегрируемого сигнала и сигнала
+      начальных условий должны быть одинаковыми, например, если вектор входа – “трехжильный”, то и
+      сигнал начальных условий тоже “трехжильный”. </p>
+    <section><title>Входы</title>
+    <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>input</uicontrol> - интегрируемый векторный сигнал; </li>
+          <li><uicontrol>control</uicontrol> -  управляющий сигнал;</li>
+          <li><uicontrol>new_out0</uicontrol> - вектор новых начальных условий. </li>
+        </ul>
+      </p></section>
+    <section><title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>output</uicontrol> - выходной сигнал.</li>
+        </ul>
+      </p></section>
+    <section><title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Способ сброса</uicontrol> - позволяет выбрать момент выполнения
+            сброса.</li>
+        </ul>
+      </p></section>
+    <section><title>Параметры</title>
+      <p>
+        <ul id="ul_t3c_l3t_2y">
+          <li><uicontrol>Динамические переменные</uicontrol> - внутренние переменные состояния
+            блока;</li>
+          <li><uicontrol>Производные</uicontrol> - внутренние переменные состояния блока.</li>
+        </ul>
+      </p>
+      <note>
+        <ol id="ol_m5v_pvx_3y">
+          <li>По умолчанию данный блок реализует интегрирование скалярного входного сигнала.</li>
+          <li>Рекомендуется (хотя и не обязательно) использовать значения управляющих сигналов 0 и
+            1, поскольку их формирование легко реализуется типовыми логическими блоками. </li>
+        </ol>
+      </note></section>
+    
+  </body>
+</topic>

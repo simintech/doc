@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Компенсатор 3-х объёмный</title>
+  <body>
+    <p><b>Компенсатор 3-х объёмный - </b><i>точечный</i><i>неориентированный</i> элемент. Модель
+      предназначена для имитации процессов в объёмах, в том числе при нестандартных
+      теплоносителях.</p>
+    <p>Примером использования модели <b>Компенсатор 3-х объёмный</b> служит парогенератор ВВЭР. </p>
+    <p><b>3.29.1Разрешенные связи элемента</b></p>
+    <p><b>Компенсатор 3-х объёмный </b>соединяется с элементом группы<i>Баки</i> - <i>Узлом компенсатора, </i>который в свою
+      очередь соединяется с элементами группы <i>Каналы</i> (см. п.
+      3.31). </p>
+    <p><b>3.29.2Свойства элемента</b></p>
+    <p>Характеристики <b>Компенсатора 3-х объёмного</b> и начальные условия для расчета задаются в
+      закладке <i>Свойства</i><i>объекта</i> (см. Таблица 4.29.2.39). </p>
+    <p><b>Таблица 4.29.2.39 </b>Параметры компенсатора 3-х объёмного <table id="table2">
+        <tgroup cols="4">
+          <colspec colnum="1" colname="col1"/>
+          <colspec colnum="2" colname="col2"/>
+          <colspec colnum="3" colname="col3"/>
+          <colspec colnum="4" colname="col4"/>
+          <thead>
+            <row>
+              <entry><b>Параметр</b></entry>
+              <entry><b>Имя </b><b>(идентификатор)</b></entry>
+              <entry><b>Тип переменной</b></entry>
+              <entry><b>Интервал возможных значений</b></entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>Объём 1-й части, м^3</entry>
+              <entry>V1</entry>
+              <entry>R</entry>
+              <entry>? 0</entry>
+            </row>
+            <row>
+              <entry>Объём 2-й части, м^3</entry>
+              <entry>V2</entry>
+              <entry>R</entry>
+              <entry>? 0</entry>
+            </row>
+            <row>
+              <entry>Объём 3-й части, м^3</entry>
+              <entry>V3</entry>
+              <entry>R</entry>
+              <entry>? 0</entry>
+            </row>
+            <row>
+              <entry>Мольная доля гелия</entry>
+              <entry>MHe</entry>
+              <entry>R</entry>
+              <entry>? 0</entry>
+            </row>
+            <row>
+              <entry>Давление, кгс/см^2</entry>
+              <entry>P</entry>
+              <entry>R</entry>
+              <entry>? 0</entry>
+            </row>
+            <row>
+              <entry>Энтальпия 1-го объёма, ккал/кг</entry>
+              <entry>H_1</entry>
+              <entry>R</entry>
+              <entry>? 0</entry>
+            </row>
+            <row>
+              <entry>Энтальпия газового объёма, ккал/кг</entry>
+              <entry>H_2</entry>
+              <entry>R</entry>
+              <entry>? 0</entry>
+            </row>
+            <row>
+              <entry>Коэффициент теплообмена 1-го объёма и газа</entry>
+              <entry>AKTO</entry>
+              <entry>R</entry>
+              <entry>? 0</entry>
+            </row>
+            <row>
+              <entry>Кэффициент перемешивания 1 и 2 объёмов</entry>
+              <entry>FBIX</entry>
+              <entry>R</entry>
+              <entry>? 0</entry>
+            </row>
+            <row>
+              <entry>Площадь сечения, м^2</entry>
+              <entry>FKO</entry>
+              <entry>R</entry>
+              <entry>? 0</entry>
+            </row>
+            <row>
+              <entry>Площадь сечения клапана, м^2</entry>
+              <entry>FKL</entry>
+              <entry>R</entry>
+              <entry>? 0</entry>
+            </row>
+            <row>
+              <entry>Скорость открытия клапана, 1/с</entry>
+              <entry>Vkl</entry>
+              <entry>R</entry>
+              <entry>? 0</entry>
+            </row>
+            <row>
+              <entry>Давление открытия, кгс/см^2</entry>
+              <entry>Popen</entry>
+              <entry>R</entry>
+              <entry>? 0</entry>
+            </row>
+            <row>
+              <entry>Давление закрытия, кгс/см^2</entry>
+              <entry>Pclose</entry>
+              <entry>R</entry>
+              <entry>? 0</entry>
+            </row>
+            <row>
+              <entry>Количество тепловых портов</entry>
+              <entry>Nheat</entry>
+              <entry>I</entry>
+              <entry>? 0</entry>
+            </row>
+            <row>
+              <entry>Конц. Бора в 1-м объёме </entry>
+              <entry>bor_1</entry>
+              <entry>R</entry>
+              <entry>? 0</entry>
+            </row>
+            <row>
+              <entry>Гидравлический диаметр жидкого объёма, м</entry>
+              <entry>dg1</entry>
+              <entry>R</entry>
+              <entry>? 0</entry>
+            </row>
+            <row>
+              <entry>Гидравлический диаметр газового объёма, м</entry>
+              <entry>dg2</entry>
+              <entry>R</entry>
+              <entry>? 0</entry>
+            </row>
+            <row>
+              <entry>Отметка низа КО, м</entry>
+              <entry>otmko</entry>
+              <entry>R</entry>
+              <entry>? 0</entry>
+            </row>
+            <row>
+              <entry>Количество вертикальных труб</entry>
+              <entry>antrub</entry>
+              <entry>I</entry>
+              <entry>? 0</entry>
+            </row>
+            <row>
+              <entry>Занятый объём, м^3</entry>
+              <entry>SKO1</entry>
+              <entry>R</entry>
+              <entry>? 0</entry>
+            </row>
+            <row>
+              <entry>Уровень, м</entry>
+              <entry>SKO2</entry>
+              <entry>R</entry>
+              <entry>? 0</entry>
+            </row>
+            <row>
+              <entry>Относительная площадь теплообмена по воде</entry>
+              <entry>SKO3</entry>
+              <entry>R</entry>
+              <entry>[0, 1]</entry>
+            </row>
+            <row>
+              <entry>Относительная площадь теплообмена по пару</entry>
+              <entry>SKO4</entry>
+              <entry>R</entry>
+              <entry>[0, 1]</entry>
+            </row>
+            <row>
+              <entry>Зафиксировать индекс</entry>
+              <entry>is_const_index</entry>
+              <entry>P</entry>
+              <entry>[Нет, Да]</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></p>
+    <p>Пример применения элемента <i>Компенсатор 3-х
+        объемный</i> при создании <i>Теплообменника смешивающего
+          типа</i>.</p>
+    <p>Пример применения элемента <i>Компенсатор 3-х
+        объемный</i> при создании<i>Теплообменника поверхностного
+          типа</i>.</p>
+  </body>
+</topic>

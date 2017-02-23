@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Графические примитивы </title>
+  <body>
+    <p><image href="primitives_images/image001.png" height="86" width="544" id="image_fhh_gh1_ry"
+      /></p>
+    <p>Графические примитивы — это набор графических объектов, доступных пользователю в графической
+      оболочке SimInTech, и предназначенных для создания статических и анимированных изображений и
+      надписей. Графические примитивы могут вставляться как в схемное окно проекта, так и в
+      различные графические контейнеры, создаваемые средствами графического редактора.</p>
+    <p>Список графических примитивов SimInTech</p>
+    <table id="table_ghh_gh1_ry">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="primitives_images/image002.png" height="31" width="31"
+                id="image_hhh_gh1_ry"/></entry>
+            <entry>Отменить/Снять выделение</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image003.png" height="31" width="31"
+                id="image_ihh_gh1_ry"/></entry>
+            <entry>Точка</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image004.png" height="31" width="31"
+                id="image_jhh_gh1_ry"/></entry>
+            <entry>Прямая</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image005.png" height="31" width="31"
+                id="image_khh_gh1_ry"/></entry>
+            <entry>Полилиния</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image006.png" height="31" width="31"
+                id="image_lhh_gh1_ry"/></entry>
+            <entry>Труба</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image007.png" height="31" width="31"
+                id="image_mhh_gh1_ry"/></entry>
+            <entry>Дуга</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image008.png" height="31" width="31"
+                id="image_nhh_gh1_ry"/></entry>
+            <entry>Полидуга</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image009.png" height="31" width="31"
+                id="image_ohh_gh1_ry"/></entry>
+            <entry>Полигон</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image010.png" height="31" width="31"
+                id="image_phh_gh1_ry"/></entry>
+            <entry>Полилиния</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image011.png" height="31" width="31"
+                id="image_qhh_gh1_ry"/></entry>
+            <entry>Прямоугольник</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image012.png" height="31" width="31"
+                id="image_rhh_gh1_ry"/></entry>
+            <entry>Залитый прямоугольник</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image013.png" height="31" width="31"
+                id="image_shh_gh1_ry"/></entry>
+            <entry>Маскировочный прямоугольник</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image014.png" height="31" width="31"
+                id="image_thh_gh1_ry"/></entry>
+            <entry>Круг</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image015.png" height="31" width="31"
+                id="image_uhh_gh1_ry"/></entry>
+            <entry>Окружность</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image016.png" height="31" width="31"
+                id="image_vhh_gh1_ry"/></entry>
+            <entry>Залитый эллипс</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image017.png" height="31" width="31"
+                id="image_whh_gh1_ry"/></entry>
+            <entry>Эллипс</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image018.png" height="31" width="31"
+                id="image_xhh_gh1_ry"/></entry>
+            <entry>Сектор</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image019.png" height="31" width="31"
+                id="image_yhh_gh1_ry"/></entry>
+            <entry>Сегмент</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image020.png" height="31" width="31"
+                id="image_zhh_gh1_ry"/></entry>
+            <entry>Часовая шкала</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image021.png" height="31" width="31"
+                id="image_a3h_gh1_ry"/></entry>
+            <entry>Стрелочный прибор</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image022.png" height="31" width="31"
+                id="image_b3h_gh1_ry"/></entry>
+            <entry>Линейная шкала</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image023.png" height="31" width="31"
+                id="image_c3h_gh1_ry"/></entry>
+            <entry>Линейный прибор</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image024.png" height="31" width="31"
+                id="image_d3h_gh1_ry"/></entry>
+            <entry>Растровое изображение</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image025.png" height="31" width="31"
+                id="image_e3h_gh1_ry"/></entry>
+            <entry>Изображение с поворотом</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image026.png" height="31" width="31"
+                id="image_f3h_gh1_ry"/></entry>
+            <entry>Картинка из файла</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image027.png" height="31" width="31"
+                id="image_g3h_gh1_ry"/></entry>
+            <entry>Набор изображений</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image028.png" height="31" width="31"
+                id="image_h3h_gh1_ry"/></entry>
+            <entry>Кнопка</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image029.png" height="31" width="31"
+                id="image_i3h_gh1_ry"/></entry>
+            <entry>Текст</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image030.png" height="31" width="31"
+                id="image_j3h_gh1_ry"/></entry>
+            <entry>Повёрнутый текст</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image031.png" height="31" width="31"
+                id="image_k3h_gh1_ry"/></entry>
+            <entry>Вставить из файла</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image032.png" height="31" width="31"
+                id="image_l3h_gh1_ry"/></entry>
+            <entry>Пустая группа</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image033.png" height="31" width="31"
+                id="image_m3h_gh1_ry"/></entry>
+            <entry>Список групп</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image034.png" height="31" width="31"
+                id="image_n3h_gh1_ry"/></entry>
+            <entry>Сенсор</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image035.png" height="31" width="31"
+                id="image_o3h_gh1_ry"/></entry>
+            <entry>Звук</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image036.png" height="31" width="31"
+                id="image_p3h_gh1_ry"/></entry>
+            <entry>Редактор</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image037.png" height="31" width="31"
+                id="image_q3h_gh1_ry"/></entry>
+            <entry>Комбинированный редактор</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image038.png" height="31" width="31"
+                id="image_r3h_gh1_ry"/></entry>
+            <entry>Радиогруппа</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image039.png" height="31" width="31"
+                id="image_s3h_gh1_ry"/></entry>
+            <entry>График</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image040.png" height="31" width="31"
+                id="image_t3h_gh1_ry"/></entry>
+            <entry>OLE-объект</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image041.png" height="31" width="31"
+                id="image_u3h_gh1_ry"/></entry>
+            <entry>Документ MS Word</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image042.png" height="31" width="31"
+                id="image_v3h_gh1_ry"/></entry>
+            <entry>«Горячая» клавиша</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image043.png" height="31" width="31"
+                id="image_w3h_gh1_ry"/></entry>
+            <entry>Чекбокс</entry>
+          </row>
+          <row>
+            <entry><image href="primitives_images/image044.png" height="31" width="31"
+                id="image_x3h_gh1_ry"/></entry>
+            <entry>GIF-анимация</entry>
+          </row>
+          <row>
+            <entry> </entry>
+            <entry>AutoLabel</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Графические примитивы обладают набором свойств. Часть этих свойств является общей для всех
+      графических объектов SimInTech, другие свойства отражают отличительные особенности своих
+      объектов.</p>
+    <p><image href="primitives_images/image045.png" height="731" width="586" id="image_y3h_gh1_ry"
+      /></p>
+    <p>Пример окна со списком свойств графического примитива</p>
+    <p>Свойство «Координаты точек / Points», несмотря на наличие его у всех графических примитивов,
+      имеет различные форматы для определённых групп примитивов.</p>
+    <p><image href="primitives_images/image046.png" height="215" width="354" id="image_z3h_gh1_ry"
+      /></p>
+    <p>Распределение координат в свойстве «Координаты точек / Points» для прямоугольных объектов</p>
+    <p>Для прямоугольных объектов в данном свойстве указываются координаты центра, середины правой
+      стороны и середины верхней стороны прямоугольника. Для задания линейных размеров прямоугольных
+      примитивов более предпочтительно пользоваться свойствами «Ширина / Width» и «Высота / Height».
+      При этом надо учитывать, что изменение размеров будет происходить симметрично относительно
+      центральной точки прямоугольника.</p>
+    <p><image href="primitives_images/image047.png" height="103" width="292" id="image_ajh_gh1_ry"
+      /></p>
+    <p>Распределение координат в свойстве «Координаты точек / Points» для линейных объектов</p>
+    <p>Для линейных объектов указываются координаты вершин линии, дуги или ломанной.</p>
+    <p><image href="primitives_images/image048.png" height="98" width="201" id="image_bjh_gh1_ry"
+      /></p>
+    <p>Распределение координат в свойстве «Координаты точек / Points» для круговых объектов</p>
+    <p>Для круговых объектов задаются координаты центра и точки на окружности, по которой
+      определяется радиус.</p>
+    <p>Возможности по манипуляции графическими примитивами описаны в соответствующем разделе.</p>
+    <p>По аналогии с блоками из библиотек SimInTech графические примитивы могут использоваться в
+      качестве ссылок посредством настройки свойства «Ссылка / Instance».</p>
+    <p>Ряд свойств могут принимать ограниченный набор значений из предлагаемого списка. Например,
+      свойство «Видимость при выполнении / Visible» может иметь два значения «Нет» и «Да», а
+      свойство «Стиль линии / PenStyle» – пять: «Сплошная», «Штриховая», «Пунктирная»,
+      «Штрихпунктирная», «С двумя точками». Для корректного задания этим свойствам значений в
+      скрипте нужно указывать порядковый номер требуемого варианта из списка с учтом того, что
+      пункты списка нумеруются с нуля. Например, если нужно задать стиль линии «Штрихпунктирная» для
+      объекта Line12, то в скрипте нужно написать следующее:</p>
+    <p>Line12.PenStyle = 3</p>
+    <p>Свойства с вариантами значений «Нет» и «Да» тоже подчиняются этому правилу: «Нет»
+      соответствует нулю, а «Да» – единице.</p>
+  </body>
+</topic>

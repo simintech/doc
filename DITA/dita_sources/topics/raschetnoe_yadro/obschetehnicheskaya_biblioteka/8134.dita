@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Теплообменник кожухотрубный тип 1 TPP</title>
+  <body>
+    <p><b>Теплообменник кожухотрубный тип 1 TPP - </b><i>распределённый</i><i>ориентированный</i>
+      элемент. Модель предназначена для имитации теплообменников без уровня.</p>
+    <p><b>3.34.1Разрешенные связи элемента</b></p>
+    <p><b>Теплообменник кожухотрубный тип 1 TPP </b>связывается с элементами группы <i>Каналы.</i></p>
+    <p><b>3.34.2Свойства элемента</b></p>
+    <p>Характеристики <b>Теплообменника кожухотрубного тип 1 TPP</b> и начальные условия для расчета
+      задаются в закладке <i>Свойства</i><i>объекта</i> (см. Таблица 4.34.2.45). </p>
+    <p><b>Таблица 4.34.2.45 </b>Параметры теплообменника кожухотрубного тип 1 TPP <table id="table2">
+        <tgroup cols="4">
+          <colspec colnum="1" colname="col1"/>
+          <colspec colnum="2" colname="col2"/>
+          <colspec colnum="3" colname="col3"/>
+          <colspec colnum="4" colname="col4"/>
+          <thead>
+            <row>
+              <entry><b>Параметр</b></entry>
+              <entry><b>Имя </b><b>(идентификатор)</b></entry>
+              <entry><b>Тип переменной</b></entry>
+              <entry><b>Интервал возможных значений</b></entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>Количество элементов</entry>
+              <entry>Count</entry>
+              <entry>I</entry>
+              <entry>? 1</entry>
+            </row>
+            <row>
+              <entry>Длина трубки</entry>
+              <entry>L</entry>
+              <entry>R</entry>
+              <entry>> 0</entry>
+            </row>
+            <row>
+              <entry>Внешний диаметр трубки</entry>
+              <entry>d</entry>
+              <entry>R</entry>
+              <entry>> 0</entry>
+            </row>
+            <row>
+              <entry>Толщина стенки</entry>
+              <entry>s</entry>
+              <entry>R</entry>
+              <entry>> 0</entry>
+            </row>
+            <row>
+              <entry>Число трубок</entry>
+              <entry>n</entry>
+              <entry>I</entry>
+              <entry>>= 1</entry>
+            </row>
+            <row>
+              <entry>Тип решетки</entry>
+              <entry>rType</entry>
+              <entry>P</entry>
+              <entry>[Треугольная, Квадратная]</entry>
+            </row>
+            <row>
+              <entry>Шаг решетки</entry>
+              <entry>sr</entry>
+              <entry>R</entry>
+              <entry>> 0</entry>
+            </row>
+            <row>
+              <entry>Материал трубки</entry>
+              <entry>Material</entry>
+              <entry>P</entry>
+              <entry>18ХН9Т</entry>
+            </row>
+            <row>
+              <entry>Тип течения</entry>
+              <entry>fType</entry>
+              <entry>P</entry>
+              <entry>[Прямоток, Противоток]</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></p>
+  </body>
+</topic>

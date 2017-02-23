@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Управляемая проводимость</title>
+  <body>
+    <table id="table_n4b_s5b_5y">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/3107.png" height="32" width="32" id="image_o4b_s5b_5y"
+              /></entry>
+            <entry>Управляемая проводимость</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry>| СЛАУ |</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/3107s.png" height="84" width="99" id="image_p4b_s5b_5y"
+              /></entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry/>
+           
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+         
+              <p>Блок аналогичен блоку <i>Сопротивление электрическое линейное</i> (описываемого
+                законом Ома), с единственным отличием – сопротивление элемента не является
+                константой:</p>
+              <p><image href="images_old/3107_html_mdfc6466.gif" height="48" width="149" id="image_q4b_s5b_5y"
+                />,</p>
+              <p>где:</p>
+              <p><image href="images_old/3107_html_m29fba398.gif" height="23" width="93" id="image_r4b_s5b_5y"
+                />– потенциалы узлов, к которым подключен данный элемент;</p>
+              <p><image href="images_old/3107_html_m351f6618.gif" height="21" width="43" id="image_s4b_s5b_5y"
+                />– значение сопротивления, <b>изменяющееся</b> во времени (проводимость, подаваемая
+                на управляющий вход – величина, обратная сопротивлению);</p>
+              <p><image href="images_old/3107_html_548d37ea.gif" height="21" width="40" id="image_t4b_s5b_5y"
+                />– ток через элемент.</p>
+              <p>Внутренняя структура данного блока приведена на рисунке 1:</p>
+              <p><image href="images_old/3107_ris_1.png" height="370" width="388" id="image_u4b_s5b_5y"
+                /></p>
+              <p>Рисунок 1 – Внутренняя структура блока «Управляемая проводимость»</p>
+              <p>Данный блок при помощи блоков для создания ненаправленных соединений передаёт в
+                подключенные к данному элементу внутренние узлы электрической схемы значения
+                проводимости (KJ), котороедолжно быть подано на управляющий вход, и значения токов
+                (Isrc), равные нулю. При этом с первого входа значение своего номера узла (NSELF)
+                передаётся как значение соседнего номера узла (NJ) и наоборот.</p>
+              <p><b>Свойства</b>: для работы блока свойства задавать не требуется.</p>
+      
+  </body>
+</topic>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>HS – Критическое истечение </title>
+  <body>
+    <table id="table_xxf_ngs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/2524/image001.png" height="32" width="32"
+                id="image_yxf_ngs_sy"/></entry>
+            <entry><b>HS</b><b>– Критическое истечение</b></entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/2524/image002.png" height="91" width="85"
+                id="image_zxf_ngs_sy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок реализует модель течи из трубопровода под давлением. Блок рассчитывает массовый расход
+      критического истечения <b>воды или пароводяной смеси</b> из определённого места контура.</p>
+    <p>Поскольку блок реализован аналогично блоку типа «подпитка», то он может и должен быть
+      подключен только к блоку типа «внутренний узел».</p>
+    <p>Расход вычисляется по следующей формуле (см. D. Bestion, “Document de Synthesis CATHARE,”
+      CENG/SETh/LEMh-EM Report 88-129 (1988)):</p>
+    <p> </p>
+    <p><image href="images_old/2524/image003.png" height="41" width="426" id="image_ayf_ngs_sy"/></p>
+    <p><image href="images_old/2524/image004.png" height="22" width="222" id="image_byf_ngs_sy"/></p>
+    <p>где:</p>
+    <p><i>x</i> – удельная энтальпия, <image href="images_old/2524/image005.png" height="22" width="80"
+        id="image_cyf_ngs_sy"/>,</p>
+    <p><image href="images_old/2524/image006.png" height="22" width="15" id="image_dyf_ngs_sy"/> –
+      давление теплоносителя в узле (если теплоноситель уже находится на линии насыщения) или
+      давление насыщения для данной температуры теплоносителя в узле (если параметры теплоносителя
+      находятся ниже линии насыщения).</p>
+    <p><i>Pp</i> – значение противодавления, заданное в свойствах блока,</p>
+    <p><i>P</i> – давление в узле.</p>
+    <p><image href="images_old/2524/image007.png" height="34" width="59" id="image_eyf_ngs_sy"/> –
+      площадь проходного сечения (полностью открытой) течи (диаметр d задается в свойствах
+      блока),</p>
+    <p><i>state</i> – степень раскрытия течи (задается в свойствах блока),</p>
+    <p><image href="images_old/2524/image008.png" height="22" width="11" id="image_fyf_ngs_sy"/><i> –
+      </i>коэффициент расхода (задается как <i>mu </i>в свойствах блока),</p>
+    <p><image href="images_old/2524/image009.png" height="22" width="11" id="image_gyf_ngs_sy"/><i> –
+      </i>плотность теплоносителя (в узле).</p>
+    <p> </p>
+    <p>Примечание: блок может быть использован и для других теплоносителей, кроме воды и водяного
+      пара, однако расчет будет неверным. В этом случае можно либо скорректировать формулу
+      поправочным коэффициентом mu, либо воспользоваться блоком типа «подпитка», вычисляя расход в
+      нём по какой-либо другой зависимости.</p>
+    <p> </p>
+    <p> </p>
+    <p><b>Свойства блока «HS – Критическое истечение»</b></p>
+    <table id="table_hyf_ngs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_iyf_ngs_sy">
+                <li>·Диаметр канала, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_jyf_ngs_sy">
+                <li>d</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_kyf_ngs_sy">
+                <li>·Коэффициент расхода</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_lyf_ngs_sy">
+                <li>mu</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_myf_ngs_sy">
+                <li>·Степень раскрытия течи, %</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_nyf_ngs_sy">
+                <li>state</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_oyf_ngs_sy">
+                <li>·Противодавление, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_pyf_ngs_sy">
+                <li>Pp</li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока «HS – Критическое истечение»</b></p>
+    <table id="table_qyf_ngs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_ryf_ngs_sy">
+                <li>·Расход истечения, кг/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_syf_ngs_sy">
+                <li>_g</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_tyf_ngs_sy">
+                <li>·Энтальпия истечения, Дж/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_uyf_ngs_sy">
+                <li>_h</li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок реализует следующие механизмы связи с другими блоками:</p>
+    <ul id="ul_vyf_ngs_sy">
+      <li>· гидравлическая связь;</li>
+    </ul>
+    <p>Посредством гидравлической связи может соединяться со следующими блоками:</p>
+    <ul id="ul_wyf_ngs_sy">
+      <li>· «HS – Внутренний узел».</li>
+    </ul>
+    <p> </p>
+  </body>
+</topic>

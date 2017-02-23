@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Функционирование программного обеспечения рабочего места разработчика</title>
+  <body>
+   
+              <p>Упрощенный алгоритм функционирования ПО рабочего места разработчика приведен на
+                рисунке:</p>
+              <p><image href="../rp-images/rp-2-ris-1.png" height="907" width="795"
+                  id="image_apr_dzs_qy"/></p>
+              <p>Схема взаимосвязи между расчетными модулями рабочего места разработчика:</p>
+              <p><image href="../rp-images/rp-2-ris-2.png" height="557" width="639"
+                  id="image_bpr_dzs_qy"/></p>
+  </body>
+</topic>

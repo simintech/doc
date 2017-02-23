@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>dbsetsignalevalstring </title>
+<shortdesc>Установка интерпретируемого значения для сигнала в базе.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>res = <funcname>dbsetsignalevalstring</funcname>(cat, group, name, frml);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>cat – имя категории;</p>
+      <p>nmb – имя группы в категории; </p>
+      <p>name – имя сигнала;</p>
+      <p>frml – интерпретируемое выражение, результатом которого на каждом шаге будет текущее
+        значение сигнала. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>dbsetsignalevalstring</codeph> – функция задания интерпретируемого выражения
+          <codeph>frml</codeph> для сигнала с именем <codeph>name</codeph>, расположенного в группе
+          <codeph>group</codeph> категории <codeph>cat</codeph>.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>res - функция возвращает двоичную единицу, если задание интерпретируемого выражения прошло
+        успешно, и ноль в противном случае.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>res = <funcname>dbsetsignalevalstring</funcname>("Датчики","D1","Property7", "D1_Property1+D1_Property2");</codeblock></section>
+<p>В результате выполнения данного скрипта, интерпретируемым значением сигнала
+        <codeph>Property7</codeph> будет установлена строка
+        <codeph>"D1_Property1+D1_Property2"</codeph>.</p>  
+  </body>
+</topic>

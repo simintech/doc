@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика - Контактное трение между двумя телами вращательного движения </title>
+  <body>
+    <table id="table_h2m_rbs_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4275/image001.jpg" height="32" width="32"
+                id="image_i2m_rbs_qy"/></entry>
+            <entry>Механика - Контактное трение между двумя телами вращательного движения</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4275/image002.jpg" height="95" width="122"
+                id="image_j2m_rbs_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>В блоке реализована модель трения между двумя проскальзывающими относительно друг друга
+      телами вращения, между которыми действует прижимная сила.</p>
+    <p>Момент трения возникает, если прижимная сила больше заданного порового значения.</p>
+    <p>Для того, чтобы тела сцепились (двигались как одно целое), необходимо выполнение следующих
+      условий:</p>
+    <ul id="ul_k2m_rbs_qy">
+      <li>· относительная угловая скорость меньше заданного порога;</li>
+      <li>· крутящий момент меньше момента страгивания.</li>
+    </ul>
+    <p>Тела остаются сцепленными до тех пор, пока крутящий момент не станет больше момента
+      страгивания.</p>
+    <p>Уравнения модели имеют следующий вид:</p>
+    <p><image href="images_old/4275/image003.gif" height="51" width="142" id="image_l2m_rbs_qy"/></p>
+    <p><image href="images_old/4275/image004.gif" height="46" width="308" id="image_m2m_rbs_qy"/></p>
+    <p><image href="images_old/4275/image005.gif" height="24" width="158" id="image_n2m_rbs_qy"/></p>
+    <p><image href="images_old/4275/image006.gif" height="22" width="294" id="image_o2m_rbs_qy"/></p>
+    <p><image href="images_old/4275/image007.gif" height="43" width="241" id="image_p2m_rbs_qy"/></p>
+    <p><image href="images_old/4275/image008.gif" height="43" width="239" id="image_q2m_rbs_qy"/></p>
+    <p><image href="images_old/4275/image009.gif" height="43" width="411" id="image_r2m_rbs_qy"/></p>
+    <table id="table_s2m_rbs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4275/image010.gif" height="24" width="24"
+                id="image_t2m_rbs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Момент трения</entry>
+          </row>
+          <row>
+            <entry>TB</entry>
+            <entry>-</entry>
+            <entry>Внешний момент на ведущей полумуфте</entry>
+          </row>
+          <row>
+            <entry>TF</entry>
+            <entry>-</entry>
+            <entry>Внешний момент на ведомой полумуфте</entry>
+          </row>
+          <row>
+            <entry>Ts</entry>
+            <entry>-</entry>
+            <entry>Максимальный момент страгивания</entry>
+          </row>
+          <row>
+            <entry>WB</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость ведущей полумуфты</entry>
+          </row>
+          <row>
+            <entry>WF</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость ведомой полумуфты</entry>
+          </row>
+          <row>
+            <entry><i>W</i></entry>
+            <entry>-</entry>
+            <entry>Относительная угловая скорость</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4275/image011.gif" height="22" width="14"
+                id="image_u2m_rbs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Прижимная сила</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4275/image012.gif" height="24" width="36"
+                id="image_v2m_rbs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Эффективный радиус</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4275/image013.gif" height="22" width="15"
+                id="image_w2m_rbs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Внешний радиус диска</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4275/image014.gif" height="22" width="13"
+                id="image_x2m_rbs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Внутренний радиус диска</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4275/image015.gif" height="22" width="11"
+                id="image_y2m_rbs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Кинематический коэффициент контактного трения</entry>
+          </row>
+          <row>
+            <entry>B</entry>
+            <entry>-</entry>
+            <entry>Коэффициент вязкого трения</entry>
+          </row>
+          <row>
+            <entry>Wtol</entry>
+            <entry>-</entry>
+            <entry>Порог скорости</entry>
+          </row>
+          <row>
+            <entry>JB</entry>
+            <entry>-</entry>
+            <entry>Момент инерции порта B</entry>
+          </row>
+          <row>
+            <entry>JF</entry>
+            <entry>-</entry>
+            <entry>Момент инерции порта F</entry>
+          </row>
+          <row>
+            <entry>IsLock</entry>
+            <entry>-</entry>
+            <entry>Признак сцепления</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Входные порты блока:</b></p>
+    <p>Блок имеет один математический порт (N), через который в модель блока поступает значение
+      прижимной силы N.</p>
+    <p> </p>
+    <p><b>Выходные порты блока:</b></p>
+    <p>Блок имеет два механических порта (B и F) вращательного движения.</p>
+    <p> </p>
+    <p><b>Свойства блока:</b></p>
+    <table id="table_z2m_rbs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4275/image016.gif" height="22" width="22"
+                id="image_afm_rbs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Внешний радиус диска, м</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4275/image017.gif" height="22" width="18"
+                id="image_bfm_rbs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Внутренний радиус диска, м</entry>
+          </row>
+          <row>
+            <entry>Mtype</entry>
+            <entry>-</entry>
+            <entry>Тип задания коэффициента трения (постоянный/табличный)</entry>
+          </row>
+          <row>
+            <entry>Mu</entry>
+            <entry>-</entry>
+            <entry>Кинетический коэффициент контактного трения</entry>
+          </row>
+          <row>
+            <entry>Mus</entry>
+            <entry>-</entry>
+            <entry>Отношение статического коэффициента к кинематическому</entry>
+          </row>
+          <row>
+            <entry>Vx</entry>
+            <entry>-</entry>
+            <entry>Массив скоростей (аргумент), рад/с</entry>
+          </row>
+          <row>
+            <entry>My</entry>
+            <entry>-</entry>
+            <entry>Массив кинематических коэффициентов (функция)</entry>
+          </row>
+          <row>
+            <entry>Wtol</entry>
+            <entry>-</entry>
+            <entry>Порог скорости, рад/с</entry>
+          </row>
+          <row>
+            <entry>Nth</entry>
+            <entry>-</entry>
+            <entry>Порог применимой силы, н</entry>
+          </row>
+          <row>
+            <entry>B</entry>
+            <entry>-</entry>
+            <entry>Коэффициент вязкого трения,<image href="images_old/4275/image018.gif" height="32"
+                width="29" id="image_cfm_rbs_qy"/></entry>
+          </row>
+          <row>
+            <entry>JB</entry>
+            <entry>-</entry>
+            <entry>Момент инерции порта B, кг*м2</entry>
+          </row>
+          <row>
+            <entry>WB0</entry>
+            <entry>-</entry>
+            <entry>Начальная скорость порта B, рад/с</entry>
+          </row>
+          <row>
+            <entry>JF</entry>
+            <entry>-</entry>
+            <entry>Момент инерции порта F, кг*м2</entry>
+          </row>
+          <row>
+            <entry>WF0</entry>
+            <entry>-</entry>
+            <entry>Начальная скорость порта F, рад/с</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_dfm_rbs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4275/image019.gif" height="22" width="28"
+                id="image_efm_rbs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Угловая скорость порта B, рад/с</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4275/image020.gif" height="22" width="29"
+                id="image_ffm_rbs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Угловая скорость порта F, рад/с</entry>
+          </row>
+          <row>
+            <entry>Tb</entry>
+            <entry>-</entry>
+            <entry>Момент порта B, <image href="images_old/4275/image021.gif" height="22" width="36"
+                id="image_gfm_rbs_qy"/></entry>
+          </row>
+          <row>
+            <entry>W</entry>
+            <entry>-</entry>
+            <entry>Относительная угловая скорость, рад/с</entry>
+          </row>
+          <row>
+            <entry>Tf</entry>
+            <entry>-</entry>
+            <entry>Момент порта F, <image href="images_old/4275/image021.gif" height="22" width="36"
+                id="image_hfm_rbs_qy"/></entry>
+          </row>
+          <row>
+            <entry>Tfr</entry>
+            <entry>-</entry>
+            <entry>Момент трения, <image href="images_old/4275/image021.gif" height="22" width="36"
+                id="image_ifm_rbs_qy"/></entry>
+          </row>
+          <row>
+            <entry>Q</entry>
+            <entry>-</entry>
+            <entry>Мощность на трение, Вт</entry>
+          </row>
+          <row>
+            <entry>Nf</entry>
+            <entry>-</entry>
+            <entry>Прижимная сила, Н</entry>
+          </row>
+          <row>
+            <entry>IsLock</entry>
+            <entry>-</entry>
+            <entry>Признак сцепления</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

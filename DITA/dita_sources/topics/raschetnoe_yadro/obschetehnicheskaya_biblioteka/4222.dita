@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика – Нелинейный демпфер поступательного движения </title>
+  <body>
+    <table id="table_grj_5vr_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4222/image001.png" height="32" width="32"
+                id="image_hrj_5vr_qy"/></entry>
+            <entry>Механика – Нелинейный демпфер поступательного движения</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4222/image002.png" height="108" width="141"
+                id="image_irj_5vr_qy"/>
+            </entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>В блоке реализована модель нелинейного демпфера поступательного движения. При этом момент
+      задается как функция относительной скорости одним из следующих способов:</p>
+    <ul id="ul_jrj_5vr_qy">
+      <li>· В виде полинома пятой степени;</li>
+      <li>· В виде таблично заданной функции.</li>
+    </ul>
+    <p>Для полиномиальной зависимости выбирается один из следующих типов параметризации:</p>
+    <ul id="ul_krj_5vr_qy">
+      <li>· Симметричная;</li>
+      <li>· Несимметричная.</li>
+    </ul>
+    <p>В случае симметричной параметризации уравнения модели имеют следующий вид:</p>
+    <p><image href="images_old/4222/image003.png" height="22" width="457" id="image_lrj_5vr_qy"/>,
+      где</p>
+    <p> </p>
+    <table id="table_mrj_5vr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>F</entry>
+            <entry>-</entry>
+            <entry>сила, <image href="images_old/4222/image004.png" height="22" width="11"
+                id="image_nrj_5vr_qy"/></entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4222/image005.png" height="19" width="83"
+                id="image_orj_5vr_qy"/></entry>
+            <entry>-</entry>
+            <entry>разность скоростей, <image href="images_old/4222/image006.png" height="22" width="30"
+                id="image_prj_5vr_qy"/></entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4222/image007.png" height="22" width="117"
+                id="image_qrj_5vr_qy"/></entry>
+            <entry>-</entry>
+            <entry>коэффициенты полинома</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>В случае несимметричной параметризации уравнения модели имеют следующий вид:</p>
+    <p><image href="images_old/4222/image008.png" height="50" width="410" id="image_rrj_5vr_qy"/>,
+      где</p>
+    <p> </p>
+    <table id="table_srj_5vr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4222/image009.png" height="24" width="160"
+                id="image_trj_5vr_qy"/></entry>
+            <entry>-</entry>
+            <entry>коэффициенты полинома для <image href="images_old/4222/image010.png" height="22"
+                width="45" id="image_urj_5vr_qy"/></entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4222/image011.png" height="22" width="162"
+                id="image_vrj_5vr_qy"/></entry>
+            <entry>-</entry>
+            <entry>коэффициенты полинома для <image href="images_old/4222/image012.png" height="22"
+                width="52" id="image_wrj_5vr_qy"/></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Входные порты блока:</b></p>
+    <p>Блок имеет два механических порта поступательного движения – C и R.</p>
+    <p> </p>
+    <p><b>Выходные порты блока – отсутствуют.</b></p>
+    <p> </p>
+    <p><b>Свойства блока:</b></p>
+    <table id="table_xrj_5vr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>par_type</entry>
+            <entry>-</entry>
+            <entry>тип параметризации</entry>
+          </row>
+          <row>
+            <entry>sym_type</entry>
+            <entry>-</entry>
+            <entry>симметрия</entry>
+          </row>
+          <row>
+            <entry>B</entry>
+            <entry>-</entry>
+            <entry>вектор коэффициентов демпфирования, <image href="images_old/4222/image013.png"
+                height="29" width="17" id="image_yrj_5vr_qy"/></entry>
+          </row>
+          <row>
+            <entry>Bp</entry>
+            <entry>-</entry>
+            <entry>вектор коэффициентов демпфирования для <image href="images_old/4222/image010.png"
+                height="22" width="45" id="image_zrj_5vr_qy"/>, <image
+                href="images_old/4222/image013.png" height="29" width="17" id="image_asj_5vr_qy"
+              /></entry>
+          </row>
+          <row>
+            <entry>Bn</entry>
+            <entry>-</entry>
+            <entry>вектор коэффициентов демпфирования <image href="images_old/4222/image014.png"
+                height="22" width="45" id="image_bsj_5vr_qy"/>, <image
+                href="images_old/4222/image013.png" height="29" width="17" id="image_csj_5vr_qy"
+              /></entry>
+          </row>
+          <row>
+            <entry>Vx</entry>
+            <entry>-</entry>
+            <entry>вектор скоростей, <image href="images_old/4222/image015.png" height="29" width="9"
+                id="image_dsj_5vr_qy"/></entry>
+          </row>
+          <row>
+            <entry>Fy</entry>
+            <entry>-</entry>
+            <entry>вектор силы демпфирования, <image href="images_old/4222/image004.png" height="22"
+                width="11" id="image_esj_5vr_qy"/></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_fsj_5vr_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>F</entry>
+            <entry>-</entry>
+            <entry>сила, <image href="images_old/4222/image004.png" height="22" width="11"
+                id="image_gsj_5vr_qy"/></entry>
+          </row>
+          <row>
+            <entry>V</entry>
+            <entry>-</entry>
+            <entry>разность скоростей, <image href="images_old/4222/image006.png" height="22" width="30"
+                id="image_hsj_5vr_qy"/></entry>
+          </row>
+          <row>
+            <entry>Q</entry>
+            <entry>-</entry>
+            <entry>мощность демпфирования, Вт</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

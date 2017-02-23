@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Описание категории (таблицы) «АЗ»</title>
+  <body>
+    <p>В категории (таблице) «АЗ» базы данных хранится информация об алгоритмах аварийной защиты
+      реактора.</p>
+    <p>В таблице 1 приведено описание структуры категории «АЗ».</p>
+    <p>Для категории "АЗ" имя группы сигналов формируется по правилу:</p>
+    <p><b>&lt;group_name> = AZ_&lt;az_name></b>, где</p>
+    <p>"AZ_" – уникальный для аварийной сигнализации префикс имени записи в БД;</p>
+    <p>&lt;az_name> – имя аварийной защиты.</p>
+    <p> </p>
+    <table id="table_m3h_qms_qy">
+      <tgroup cols="6">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <colspec colnum="4" colname="col4"/>
+        <colspec colnum="5" colname="col5"/>
+        <colspec colnum="6" colname="col6"/>
+        <tbody>
+          <row>
+            <entry namest="col1" nameend="col6">Таблица 1 – описание структуры категории
+              «АЗ»</entry>
+          </row>
+          <row>
+            <entry><b>Название поля</b></entry>
+            <entry>
+              <p><b>Имя</b></p>
+              <p><b>поля</b></p>
+            </entry>
+            <entry>
+              <p><b>Тип</b></p>
+              <p><b>данных</b></p>
+            </entry>
+            <entry><b>Значение</b></entry>
+            <entry>
+              <p><b>Способ</b></p>
+              <p><b>хранения</b></p>
+            </entry>
+            <entry><b>Использование</b></entry>
+          </row>
+          <row>
+            <entry>Описание *</entry>
+            <entry>Descr</entry>
+            <entry>Текст</entry>
+            <entry> </entry>
+            <entry>Константа</entry>
+            <entry>Инф-ое</entry>
+          </row>
+          <row>
+            <entry>Сработала</entry>
+            <entry>ON</entry>
+            <entry>Двоичное</entry>
+            <entry>Нет</entry>
+            <entry>Переменная</entry>
+            <entry>Штатное</entry>
+          </row>
+          <row>
+            <entry>Первопричина</entry>
+            <entry>AZ1</entry>
+            <entry>Двоичное</entry>
+            <entry>Нет</entry>
+            <entry>Переменная</entry>
+            <entry>Штатное</entry>
+          </row>
+          <row>
+            <entry>Сброс</entry>
+            <entry>Sbr</entry>
+            <entry>Двоичное</entry>
+            <entry>Нет</entry>
+            <entry>Переменная</entry>
+            <entry>Штатное</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+  </body>
+</topic>

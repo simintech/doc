@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Cтруктура и состав каталога установки</title>
+  <body>
+    
+              <p>Путь каталога установки по умолчанию определен как:</p>
+              <p><b>C:\SimInTech</b></p>
+              <p>При установке в каталоге SimInTech будут созданы следующие элементы:</p>
+              <table id="table_kr1_bsn_qy">
+                <tgroup cols="2">
+                  <colspec colnum="1" colname="col1"/>
+                  <colspec colnum="2" colname="col2"/>
+                  <tbody>
+                    <row>
+                      <entry namest="col1" nameend="col2">
+                        <ul id="ul_lr1_bsn_qy">
+                          <li>
+                            <p>папки, которые содержат:</p>
+                          </li>
+                        </ul>
+                      </entry>
+                    </row>
+                    <row>
+                      <entry>bin</entry>
+                      <entry>– исполняемые файлы, файлы настроек и библиотек, необходимые для
+                        функционирования программы;</entry>
+                    </row>
+                    <row>
+                      <entry>Demo</entry>
+                      <entry>– демонстрационные примеры выполненных в SimInTech проектов;</entry>
+                    </row>
+                    <row>
+                      <entry>doc</entry>
+                      <entry>– документация по SimInTech, не вошедшая в справку;</entry>
+                    </row>
+                    <row>
+                      <entry>Projects</entry>
+                      <entry>– пользовательские проекты;</entry>
+                    </row>
+                    <row>
+                      <entry>Source</entry>
+                      <entry>– исходные коды открытых частей SimInTech;</entry>
+                    </row>
+                    <row>
+                      <entry namest="col1" nameend="col2">
+                        <ul id="ul_mr1_bsn_qy">
+                          <li>
+                            <p>файлы:</p>
+                          </li>
+                        </ul>
+                      </entry>
+                    </row>
+                    <row>
+                      <entry>SimInTech.url</entry>
+                      <entry>– ссылка на официальную страницу компании-разработчика
+                        SimInTech;</entry>
+                    </row>
+                    <row>
+                      <entry>uninst.exe</entry>
+                      <entry>– программа удаления SimInTech.</entry>
+                    </row>
+                  </tbody>
+                </tgroup>
+              </table>
+              <p>Различные версии SimInTech (профессиональная, демонстрационная, учебная) имеют
+      единую файловую структуру. На экранной копии ниже представлена структура каталога установки
+        <b>SimInTech</b>:<image placement="break" href="images/root_html_4173903.png" align="center"
+        id="image_t4c_3sn_qy"/></p>
+  </body>
+</topic>

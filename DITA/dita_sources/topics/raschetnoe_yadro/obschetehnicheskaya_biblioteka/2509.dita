@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>HS – Граничный узел </title>
+  <body>
+    <table id="table_avl_zfs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/2509/image001.png" height="32" width="32"
+                id="image_bvl_zfs_sy"/></entry>
+            <entry><b>HS</b><b>– Граничный узел</b></entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/2509/image002.png" height="83" width="74"
+                id="image_cvl_zfs_sy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок реализует модель узла (контрольного объема) типа граничного условия по давлению и
+      энтальпии, с постоянными геометрическими характеристиками.</p>
+    <p>Позволяет моделировать некоторую граничную область, являющуюся внешней (смежной) системой или
+      окружающей средой по отношению к присоединенному контуру. Расход в каждом участке контура
+      формируется под действием разности давлений, поэтому в зависимости от давления на
+      противоположном конце канала, теплоноситель может как «вытекать» из граничного узла, так и
+      «втекать» в него. При этом, вытекающий (из узла) теплоноситель будет обладать параметрами,
+      заданными в свойствах блока. Втекающий же в узел теплоноситель будет изменять энтальпию
+      теплоносителя в пределах контрольного объема.</p>
+    <p>Подключение граничного узла к контуру происходит аналогично подключению внутреннего узла:</p>
+    <p><image href="images_old/2509/image003.png" height="182" width="244" id="image_dvl_zfs_sy"/></p>
+    <p>При этом узел будет «держать» давление в данной точке расчетной схемы. В процессе расчета
+      допустимо задавать новые значения давления в граничном узле, либо задавать его через сигнал
+      проекта, меняя значение сигнала. Желательно не допускать сильных скачков давления в граничном
+      узле, для устойчивости расчетной схемы. </p>
+    <p>Оранжевый шестиугольник является дочерним нерасчетным блоком, который только отображает
+      значения свойств P и T (или H, если определяющий параметр энтальпия), заданные в граничном
+      узле. При необходимости он может быть удалён со схемы, и это не повлияет на расчет.</p>
+    <p>Свойства и параметры блока аналогичны свойствам и параметрам внутреннего узла.</p>
+    <p>Примечание: комбинацией граничного узла (задающего давление) и подпитки можно организовывать
+      соединение нескольких автономных теплогидравлических моделей (каждая из которых является
+      отдельным проектом) в единую расчетную модель, передавая значения параметров теплоносителя из
+      одной модели в другую через базу сигналов:</p>
+    <p>А) <image href="images_old/2509/image004.png" height="101" width="162" id="image_evl_zfs_sy"/> Б)
+        <image href="images_old/2509/image005.png" height="82" width="182" id="image_fvl_zfs_sy"/></p>
+    <p>Расход, вычисленный между каналом и граничным узлом в схеме А, на каждом шаге передается и
+      записывается в блок подпитки схемы Б. Давление, вычисленное во внутреннем узле схемы Б,
+      передается и записывается в граничный узел схемы А. Передача энтальпии – зависит от
+      направления расхода: в прямом направлении (теплоноситель перетекает из схемы А в схему Б)
+      значение энтальпии граничного узла передается в подпитку; в обратном направлении значение
+      энтальпии внутреннего узла Б передается в граничный узел А. Передача значений организовывается
+      блоками типа «точка контроля» P,H для узлов и G для канала в схеме А и механизмом глобальных
+      сигналов базы данных. </p>
+    <p> </p>
+    <p> </p>
+    <p><b>Свойства блока «HS – Граничный узел»</b></p>
+    <table id="table_gvl_zfs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_hvl_zfs_sy">
+                <li>·Давление, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ivl_zfs_sy">
+                <li>P</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_jvl_zfs_sy">
+                <li>·Энтальпия, Дж/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_kvl_zfs_sy">
+                <li>H</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_lvl_zfs_sy">
+                <li>·Температура, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_mvl_zfs_sy">
+                <li>T</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_nvl_zfs_sy">
+                <li>·Определяющий параметр</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ovl_zfs_sy">
+                <li>DefineParam</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_pvl_zfs_sy">
+                <li>·Объем узла, м³</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_qvl_zfs_sy">
+                <li>V</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_rvl_zfs_sy">
+                <li>·Гидравлический диаметр, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_svl_zfs_sy">
+                <li>Dg</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_tvl_zfs_sy">
+                <li>·Проходное сечение, м²</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_uvl_zfs_sy">
+                <li>S</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_vvl_zfs_sy">
+                <li>·Высотная отметка, м</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_wvl_zfs_sy">
+                <li>Z</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_xvl_zfs_sy">
+                <li>·Теплоноситель</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_yvl_zfs_sy">
+                <li>coolant</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_zvl_zfs_sy">
+                <li>·Объемное энерговыделение, Вт/м³</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_awl_zfs_sy">
+                <li>qv</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_bwl_zfs_sy">
+                <li>·Концентрация пассивных примесей, кг/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_cwl_zfs_sy">
+                <li>C_passive_tracer_0</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_dwl_zfs_sy">
+                <li>·Характеристика жёсткости стенок узла dV/dP, м³/Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_ewl_zfs_sy">
+                <li>dVdP</li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока «HS – Граничный узел»</b></p>
+    <table id="table_fwl_zfs_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry>
+              <ul id="ul_gwl_zfs_sy">
+                <li>·Давление, Па</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_hwl_zfs_sy">
+                <li>_p</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_iwl_zfs_sy">
+                <li>·Энтальпия, Дж/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_jwl_zfs_sy">
+                <li>_h</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_kwl_zfs_sy">
+                <li>·Температура, °С</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_lwl_zfs_sy">
+                <li>_t</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_mwl_zfs_sy">
+                <li>·Удельный объём, м³/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_nwl_zfs_sy">
+                <li>_v</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_owl_zfs_sy">
+                <li>·Плотность, кг/м³</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_pwl_zfs_sy">
+                <li>_rho</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_qwl_zfs_sy">
+                <li>·Расходы по веткам, кг/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_rwl_zfs_sy">
+                <li>_g</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_swl_zfs_sy">
+                <li>·Расход подпитки в узел, кг/с</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_twl_zfs_sy">
+                <li>_gp</li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry>
+              <ul id="ul_uwl_zfs_sy">
+                <li>·Концентрации пассивных примесей, кг/кг</li>
+              </ul>
+            </entry>
+            <entry>
+              <ul id="ul_vwl_zfs_sy">
+                <li>_c_passive_tracer</li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок может быть соединен посредством гидравлических связей со следующими блоками:</p>
+    <ul id="ul_wwl_zfs_sy">
+      <li>· «HS – Канал»;</li>
+      <li>· «HS – Труба»;</li>
+      <li>· «HS – Кольцевой зазор»;</li>
+      <li>· «HS – Ссылка на объект»;</li>
+      <li>· «HS – Порт входа»;</li>
+      <li>· «HS – Порт выхода»;</li>
+      <li>· «HS – В память»;</li>
+      <li>· «HS – Из памяти».</li>
+    </ul>
+    <p> </p>
+  </body>
+</topic>

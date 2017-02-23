@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Библиотека элементов кода TPP</title>
+  <body>
+    <p>Моделирование работы ЯЭУ или других теплогидравлических систем в коде TPP начинается с
+      создания технологической блок-схемы в графическом окне редактирования модели (часто можно
+      встретить определение расчетная или нодализационная схема). Данная схема собирается из
+      описываемых в соответствии с определенными требованиями элементов, которые можно разделить на
+      следующие основные группы (см. Рисунок 3.1.18): </p>
+    <ul id="ul_bdw_rpl_sy">
+      <li>
+        <p>Субструктуры;</p>
+      </li>
+      <li>
+        <p>Технологические блоки TPP;</p>
+      </li>
+      <li>
+        <p>Контроль параметров TPP;</p>
+      </li>
+      <li>
+        <p>Датчики TPP;</p>
+      </li>
+      <li>
+        <p>Декоративные элементы TPP.</p>
+      </li>
+    </ul>
+    <p><image href="../tpp_images/tpp_html_m1be38378.png" id="image_cdw_rpl_sy"/></p>
+    <p><b>Рисунок 3.1.18</b> Закладки групп элементов кода TPP</p>
+    <p>Элементы объединяются в нодализационную схему по определенным правилам при помощи допустимых
+      связей. </p>
+    <p>Каждый элемент из библиотеки имеет два изображения: </p>
+    <ul id="ul_ddw_rpl_sy">
+      <li>
+        <p>растровое - в палитре блоков;</p>
+      </li>
+      <li>
+        <p>векторное - на технологической блок-схеме.</p>
+      </li>
+    </ul>
+    <p>Список реализованных в SimInTech элементов кода TPP с указанием соответствующих им пиктограмм
+      в модуле графического интерфейса приведен ниже (см. Таблица 3.1.5). </p>
+    <p><b>Таблица</b> 3.1.5Перечень расчетных элементов кода TPP <table id="table1">
+        <tgroup cols="3">
+          <colspec colnum="1" colname="col1"/>
+          <colspec colnum="2" colname="col2"/>
+          <colspec colnum="3" colname="col3"/>
+          <thead>
+            <row>
+              <entry>№</entry>
+              <entry>
+                <p><b>Изображение</b></p>
+                <p><b>в палитре блоков</b></p>
+              </entry>
+              <entry><b>Название</b></entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>
+                <dl>
+                  <dlentry>
+                    <dt/>
+                    <dd/>
+                  </dlentry>
+                </dl>
+              </entry>
+              <entry namest="col2" nameend="col3"><b>Субструктуры</b></entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_edw_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_25517216.png" id="image_fdw_rpl_sy"/></entry>
+              <entry>Cубмодель МВТУ</entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_gdw_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_m6bdebdda.png" id="image_hdw_rpl_sy"/></entry>
+              <entry>Субмодель TPP</entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_idw_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_4bba308b.png" id="image_jdw_rpl_sy"/></entry>
+              <entry>Порт входа TPP</entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_kdw_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_m32de0030.png" id="image_ldw_rpl_sy"/></entry>
+              <entry>Порт выхода TPP</entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_mdw_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_m59c880ed.png" id="image_ndw_rpl_sy"/></entry>
+              <entry>В память TPP</entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_odw_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_m457a8b8e.png" id="image_pdw_rpl_sy"/></entry>
+              <entry>Из памяти TPP</entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_qdw_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_5280e9c7.png" id="image_rdw_rpl_sy"/></entry>
+              <entry>Переход на другой лист TPP</entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_sdw_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_m6491386d.png" id="image_tdw_rpl_sy"/></entry>
+              <entry>Переход с другого листа TPP</entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_udw_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_45700983.png" id="image_vdw_rpl_sy"/></entry>
+              <entry>Комментарий</entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_wdw_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_1bfdeab2.png" id="image_xdw_rpl_sy"/></entry>
+              <entry>Заметка</entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_ydw_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry namest="col2" nameend="col3"><b>Технологические блоки TPP</b></entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_zdw_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_m3a292e1a.png" id="image_a2w_rpl_sy"/></entry>
+              <entry>Узлы</entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_b2w_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_m4e3d290d.png" id="image_c2w_rpl_sy"/></entry>
+              <entry>Каналы</entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_d2w_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_m327ff02a.png" id="image_e2w_rpl_sy"/></entry>
+              <entry>Арматура</entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_f2w_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_m54dd53d9.png" id="image_g2w_rpl_sy"/></entry>
+              <entry>Элементы турбонасосных агрегатов</entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_h2w_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_m760e33a.png" id="image_i2w_rpl_sy"/></entry>
+              <entry>Баки</entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_j2w_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_m25c37384.png" id="image_k2w_rpl_sy"/></entry>
+              <entry>Теплообмен</entry>
+            </row>
+            <row>
+              <entry>
+                <dl>
+                  <dlentry>
+                    <dt/>
+                    <dd/>
+                  </dlentry>
+                </dl>
+              </entry>
+              <entry namest="col2" nameend="col3"><b>Контроль параметров TPP</b></entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_l2w_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_14e102ad.png" id="image_m2w_rpl_sy"/></entry>
+              <entry>Контроль P в узле</entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_n2w_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_m26ed214a.png" id="image_o2w_rpl_sy"/></entry>
+              <entry>Контроль P, L в баке</entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_p2w_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_m53971118.png" id="image_q2w_rpl_sy"/></entry>
+              <entry>Контроль P, H, T в узле</entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_r2w_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_744cad6b.png" id="image_s2w_rpl_sy"/></entry>
+              <entry>Контроль G в канале</entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_t2w_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_m7eb6fba2.png" id="image_u2w_rpl_sy"/></entry>
+              <entry>Контроль степени открытия задвижки</entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_v2w_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_2aec9201.png" id="image_w2w_rpl_sy"/></entry>
+              <entry>Контроль n и dP насоса</entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_x2w_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_7b793c2b.png" id="image_y2w_rpl_sy"/></entry>
+              <entry>Контроль высотной отметки узла</entry>
+            </row>
+            <row>
+              <entry>
+                <dl>
+                  <dlentry>
+                    <dt/>
+                    <dd/>
+                  </dlentry>
+                </dl>
+              </entry>
+              <entry namest="col2" nameend="col3"><b>Датчики TPP</b></entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_z2w_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_37a57e5b.png" id="image_afw_rpl_sy"/></entry>
+              <entry>Датчик давления в узле</entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_bfw_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_m12765ce.png" id="image_cfw_rpl_sy"/></entry>
+              <entry>Датчик температуры в узле TPP</entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_dfw_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_5bde7093.png" id="image_efw_rpl_sy"/></entry>
+              <entry>Датчик давления в КО TPP</entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_ffw_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_41acf7c5.png" id="image_gfw_rpl_sy"/></entry>
+              <entry>Датчик температуры пара в КО TPP</entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_hfw_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_m122af68f.png" id="image_ifw_rpl_sy"/></entry>
+              <entry>Датчик уровня в КО TPP</entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_jfw_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_4dc8e6fa.png" id="image_kfw_rpl_sy"/></entry>
+              <entry>Датчик массового расхода в канале TPP</entry>
+            </row>
+            <row>
+              <entry>
+                <dl>
+                  <dlentry>
+                    <dt/>
+                    <dd/>
+                  </dlentry>
+                </dl>
+              </entry>
+              <entry namest="col2" nameend="col3"><b>Декоративные элементы
+                    TPP</b></entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_lfw_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_57b0d9c7.png" id="image_mfw_rpl_sy"/></entry>
+              <entry>Маска теплообменника 1</entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_nfw_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_15176684.png" id="image_ofw_rpl_sy"/></entry>
+              <entry>Маска теплообменника 2</entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_pfw_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_51419dd9.png" id="image_qfw_rpl_sy"/></entry>
+              <entry>Маска теплообменника 3</entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_rfw_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_m67091aac.png" id="image_sfw_rpl_sy"/></entry>
+              <entry>Маска теплообменника 4</entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_tfw_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_m4db38d71.png" id="image_ufw_rpl_sy"/></entry>
+              <entry>Маска теплообменника 5</entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_vfw_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_2cce51c2.png" id="image_wfw_rpl_sy"/></entry>
+              <entry>Маска теплообменника 6</entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_xfw_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_35636b6b.png" id="image_yfw_rpl_sy"/></entry>
+              <entry>Маска теплообменника 7</entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_zfw_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_m3a07d363.png" id="image_agw_rpl_sy"/></entry>
+              <entry>Маска фильтра</entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_bgw_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_44cdf958.png" id="image_cgw_rpl_sy"/></entry>
+              <entry>Расходомерная шайба</entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_dgw_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_m42c3aa87.png" id="image_egw_rpl_sy"/></entry>
+              <entry>Ограничитель расхода</entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_fgw_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_41d16b6b.png" id="image_ggw_rpl_sy"/></entry>
+              <entry>Пересечение трубопроводов</entry>
+            </row>
+            <row>
+              <entry>
+                <ol id="ol_hgw_rpl_sy">
+                  <li/>
+                </ol>
+              </entry>
+              <entry><image href="../tpp_images/tpp_html_m416031b8.png" id="image_igw_rpl_sy"/></entry>
+              <entry>Изменение диаметра</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></p>
+  </body>
+</topic>

@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика - Амортизатор </title>
+  <body>
+    <table id="table_kvc_nds_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4262/image001.jpg" height="32" width="32"
+                id="image_lvc_nds_qy"/></entry>
+            <entry>Механика - Амортизатор</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4262/image002.jpg" height="63" width="120"
+                id="image_mvc_nds_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>В блоке реализована модель пружинно-демпферной системы, в состав которой входит пружина,
+      демпфер, ограничитель, а также учитывается кулоновская сила трения (см. рисунок).</p>
+    <p><image href="images_old/4262/image003.jpg" height="108" width="313" id="image_nvc_nds_qy"/></p>
+    <p>Уравнения модели имеют следующий вид:</p>
+    <p><image href="images_old/4262/image004.gif" height="24" width="184" id="image_ovc_nds_qy"/></p>
+    <p><image href="images_old/4262/image005.gif" height="24" width="103" id="image_pvc_nds_qy"/>
+    </p>
+    <p><image href="images_old/4262/image006.gif" height="22" width="91" id="image_qvc_nds_qy"/>
+    </p>
+    <p><image href="images_old/4262/image007.gif" height="46" width="190" id="image_rvc_nds_qy"/></p>
+    <p><image href="images_old/4262/image008.gif" height="66" width="339" id="image_svc_nds_qy"/>
+    </p>
+    <p><image href="images_old/4262/image009.gif" height="22" width="113" id="image_tvc_nds_qy"/></p>
+    <p><image href="images_old/4262/image010.gif" height="22" width="275" id="image_uvc_nds_qy"/></p>
+    <p><image href="images_old/4262/image011.gif" height="32" width="219" id="image_vvc_nds_qy"/>,</p>
+    <p><image href="images_old/4262/image012.gif" height="43" width="223" id="image_wvc_nds_qy"/></p>
+    <p><image href="images_old/4262/image013.gif" height="43" width="394" id="image_xvc_nds_qy"/></p>
+    <p> </p>
+    <table id="table_yvc_nds_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>F</entry>
+            <entry>-</entry>
+            <entry>Внутренняя сила трения</entry>
+          </row>
+          <row>
+            <entry>Fspr</entry>
+            <entry>-</entry>
+            <entry>Сила пружины</entry>
+          </row>
+          <row>
+            <entry>Fd</entry>
+            <entry>-</entry>
+            <entry>Сила демпфирования</entry>
+          </row>
+          <row>
+            <entry>Fc</entry>
+            <entry>-</entry>
+            <entry>Кулоновская сила</entry>
+          </row>
+          <row>
+            <entry>Fs</entry>
+            <entry>-</entry>
+            <entry>Максимальная сила страгивания</entry>
+          </row>
+          <row>
+            <entry>FHS</entry>
+            <entry>-</entry>
+            <entry>Сила упора</entry>
+          </row>
+          <row>
+            <entry>K</entry>
+            <entry>-</entry>
+            <entry>Коэффициент жесткости пружины</entry>
+          </row>
+          <row>
+            <entry>B</entry>
+            <entry>-</entry>
+            <entry>Коэффициент демпфирования</entry>
+          </row>
+          <row>
+            <entry>Fk</entry>
+            <entry>-</entry>
+            <entry>Прижимная сила</entry>
+          </row>
+          <row>
+            <entry>Mu</entry>
+            <entry>-</entry>
+            <entry>Кинематический коэффициент контактного трения</entry>
+          </row>
+          <row>
+            <entry>Ks</entry>
+            <entry>-</entry>
+            <entry>Отношение статического коэффициента к кинематическому</entry>
+          </row>
+          <row>
+            <entry>Vth</entry>
+            <entry>-</entry>
+            <entry>Порог скорости</entry>
+          </row>
+          <row>
+            <entry>Lb</entry>
+            <entry>-</entry>
+            <entry>Нижний упор</entry>
+          </row>
+          <row>
+            <entry>Ub</entry>
+            <entry>-</entry>
+            <entry>Верхний упор</entry>
+          </row>
+          <row>
+            <entry>Khs</entry>
+            <entry>-</entry>
+            <entry>Коэффициент жесткости упора</entry>
+          </row>
+          <row>
+            <entry>Bhs</entry>
+            <entry>-</entry>
+            <entry>Коэффициент демпфирования упора</entry>
+          </row>
+          <row>
+            <entry>Mr</entry>
+            <entry>-</entry>
+            <entry>Масса порта R</entry>
+          </row>
+          <row>
+            <entry>Mc</entry>
+            <entry>-</entry>
+            <entry>Масса порта C</entry>
+          </row>
+          <row>
+            <entry>Vr</entry>
+            <entry>-</entry>
+            <entry>Скорость порта R</entry>
+          </row>
+          <row>
+            <entry>Vc</entry>
+            <entry>-</entry>
+            <entry>Скорость порта С</entry>
+          </row>
+          <row>
+            <entry>Fr</entry>
+            <entry>-</entry>
+            <entry>Суммарная внешняя сила на порт R</entry>
+          </row>
+          <row>
+            <entry>Fc</entry>
+            <entry>-</entry>
+            <entry>Суммарная внешняя сила на порт С</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Входные порты блока - отсутствуют</b></p>
+    <p> </p>
+    <p><b>Выходные порты блока:</b></p>
+    <p>Блок имеет два механических ненаправленных порта поступательного движения, через которые на
+      вход блока поступают силы от присоединенных блоков, а на выход - скорости портов R и C. </p>
+    <p> </p>
+    <p><b>Свойства блока:</b></p>
+    <table id="table_zvc_nds_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>K</entry>
+            <entry>-</entry>
+            <entry>Коэффициент жесткости пружины, н/м</entry>
+          </row>
+          <row>
+            <entry>B</entry>
+            <entry>-</entry>
+            <entry>Коэффициент демпфирования, н*с/м</entry>
+          </row>
+          <row>
+            <entry>Fk</entry>
+            <entry>-</entry>
+            <entry>Прижимная сила, н</entry>
+          </row>
+          <row>
+            <entry>Mu</entry>
+            <entry>-</entry>
+            <entry>Кинематический коэффициент контактного трения</entry>
+          </row>
+          <row>
+            <entry>Ks</entry>
+            <entry>-</entry>
+            <entry>Отношение статического коэффициента к кинематическому</entry>
+          </row>
+          <row>
+            <entry>Vth</entry>
+            <entry>-</entry>
+            <entry>Порог скорости, м/с</entry>
+          </row>
+          <row>
+            <entry>Lb</entry>
+            <entry>-</entry>
+            <entry>Нижний упор, м</entry>
+          </row>
+          <row>
+            <entry>Ub</entry>
+            <entry>-</entry>
+            <entry>Верхний упор, м</entry>
+          </row>
+          <row>
+            <entry>Khs</entry>
+            <entry>-</entry>
+            <entry>Коэффициент жесткости упора, н/м</entry>
+          </row>
+          <row>
+            <entry>Bhs</entry>
+            <entry>-</entry>
+            <entry>Коэффициент демпфирования упора, н*с/м</entry>
+          </row>
+          <row>
+            <entry>Mr</entry>
+            <entry>-</entry>
+            <entry>Масса порта R, кг</entry>
+          </row>
+          <row>
+            <entry>Vr0</entry>
+            <entry>-</entry>
+            <entry>Начальная скорость порта R, м/с</entry>
+          </row>
+          <row>
+            <entry>Mc</entry>
+            <entry>-</entry>
+            <entry>Масса порта C, кг</entry>
+          </row>
+          <row>
+            <entry>Vc0</entry>
+            <entry>-</entry>
+            <entry>Начальная скорость порта C, м/с</entry>
+          </row>
+          <row>
+            <entry>X0</entry>
+            <entry>-</entry>
+            <entry>Начальная деформация, м</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_awc_nds_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Ffr</entry>
+            <entry>-</entry>
+            <entry>Сила трения, н</entry>
+          </row>
+          <row>
+            <entry>V</entry>
+            <entry>-</entry>
+            <entry>Относительная скорость, м/с</entry>
+          </row>
+          <row>
+            <entry>Q</entry>
+            <entry>-</entry>
+            <entry>Мощность на трение, Вт</entry>
+          </row>
+          <row>
+            <entry>X</entry>
+            <entry>-</entry>
+            <entry>Деформация, м</entry>
+          </row>
+          <row>
+            <entry>IsLock</entry>
+            <entry>-</entry>
+            <entry>Признак сцепления</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

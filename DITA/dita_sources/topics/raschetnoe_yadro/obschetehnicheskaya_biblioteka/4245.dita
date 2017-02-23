@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Механика - Планетарная передача планета-планета </title>
+  <body>
+    <table id="table_t2w_zfs_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4245/image001.jpg" height="32" width="32"
+                id="image_u2w_zfs_qy"/></entry>
+            <entry>Механика - Планетарная передача планета-планета</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4245/image002.jpg" height="54" width="120"
+                id="image_v2w_zfs_qy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>В блоке реализована модель планетарного механизма с двумя степенями свободы, включающего в
+      себя водило и два сателлита - внешний и внутренний.</p>
+    <p>Сателлиты жестко соединены с водилом и одновременно вращаются вокруг собственных осей. </p>
+    <p>Схематически планетарная передача представлена на рисунке:</p>
+    <p><image href="images_old/4245/image003.jpg" height="224" width="642" id="image_w2w_zfs_qy"/></p>
+    <p>Уравнения модели имеют следующий вид:</p>
+    <p><image href="images_old/4245/image004.gif" height="22" width="290" id="image_x2w_zfs_qy"/></p>
+    <p><image href="images_old/4245/image005.gif" height="75" width="366" id="image_y2w_zfs_qy"/></p>
+    <p><image href="images_old/4245/image006.gif" height="22" width="147" id="image_z2w_zfs_qy"/></p>
+    <p><image href="images_old/4245/image007.gif" height="22" width="199" id="image_afw_zfs_qy"/></p>
+    <p><image href="images_old/4245/image008.gif" height="26" width="97" id="image_bfw_zfs_qy"/>, где</p>
+    <table id="table_cfw_zfs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/4245/image009.gif" height="22" width="98"
+                id="image_dfw_zfs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Угловые скорости внешнего сателлита, внутреннего сателлита и водила,
+              соответственно</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4245/image010.gif" height="22" width="85"
+                id="image_efw_zfs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Моменты на внешнем сателлите, внутреннем сателлите и водиле,
+              соответственно</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4245/image011.gif" height="22" width="26"
+                id="image_ffw_zfs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Передаточное отношение <image href="images_old/4245/image012.gif" height="22"
+                width="67" id="image_gfw_zfs_qy"/></entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4245/image013.gif" height="26" width="24"
+                id="image_hfw_zfs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Момент трения подшипников водила</entry>
+          </row>
+          <row>
+            <entry><i>B</i></entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения подшипников водила</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4245/image014.gif" height="22" width="11"
+                id="image_ifw_zfs_qy"/></entry>
+            <entry>-</entry>
+            <entry>КПД пары сателлитов</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/4245/image015.gif" height="22" width="27"
+                id="image_jfw_zfs_qy"/></entry>
+            <entry>-</entry>
+            <entry>Пороговое значение мощности</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Входные порты блока:</b></p>
+    <p>Блок имеет три механических порта (C - водило, PO - внешний сателлит, PI - внутренний
+      сателлит) вращательного движения.</p>
+    <p><b>Выходные порты блока:</b></p>
+    <p>Блок имеет один математический порт, на который поступает значение потерь мощности.</p>
+    <p> </p>
+    <p><b>Свойства блока:</b></p>
+    <table id="table_kfw_zfs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>G</entry>
+            <entry>-</entry>
+            <entry>Коэффициент передачи <image href="images_old/4245/image012.gif" height="22" width="67"
+                id="image_lfw_zfs_qy"/></entry>
+          </row>
+          <row>
+            <entry>Kpd</entry>
+            <entry>-</entry>
+            <entry>КПД пары внешний сателлит- внутренний сателлит</entry>
+          </row>
+          <row>
+            <entry>Qth</entry>
+            <entry>-</entry>
+            <entry>Пороговое значение мощности, Вт</entry>
+          </row>
+          <row>
+            <entry>B</entry>
+            <entry>-</entry>
+            <entry>Коэффициент трения подшипников водила, <image href="images_old/4245/image016.gif"
+                height="32" width="29" id="image_mfw_zfs_qy"/></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p><b>Параметры блока:</b></p>
+    <table id="table_nfw_zfs_qy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Wc</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость водила, рад/с</entry>
+          </row>
+          <row>
+            <entry>Tc</entry>
+            <entry>-</entry>
+            <entry>Момент на водиле, <image href="images_old/4245/image017.gif" height="22" width="36"
+                id="image_ofw_zfs_qy"/></entry>
+          </row>
+          <row>
+            <entry>Wpo</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость внешнего сателлита, рад/с</entry>
+          </row>
+          <row>
+            <entry>Tpo</entry>
+            <entry>-</entry>
+            <entry>Момент на внешнем сателлите, <image href="images_old/4245/image017.gif" height="22"
+                width="36" id="image_pfw_zfs_qy"/></entry>
+          </row>
+          <row>
+            <entry>Wpi</entry>
+            <entry>-</entry>
+            <entry>Угловая скорость внутреннего сателлита, рад/с</entry>
+          </row>
+          <row>
+            <entry>Tpi</entry>
+            <entry>-</entry>
+            <entry>Момент на внутреннем сателлита, <image href="images_old/4245/image017.gif" height="22"
+                width="36" id="image_qfw_zfs_qy"/></entry>
+          </row>
+          <row>
+            <entry>Q</entry>
+            <entry>-</entry>
+            <entry>Потери мощности, Вт</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+  </body>
+</topic>

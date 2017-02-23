@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Внутренний узел </title>
+  <body>
+    <p><b>Внутренный узел </b>– <i>точечный неориентированный</i> элемент.</p>
+    <p><b>3.2.1 Разрешенные связи элемента</b></p>
+    <p><b>Внутренний узел</b> связывается с элементами других типов. Разрешенные формы представления
+      указаны ниже (см. Таблица 4.2.1.6). </p>
+    <p><b>Таблица 4.2.1.6</b> Соединение внутреннего узла <table id="table2">
+        <tgroup cols="3">
+          <colspec colnum="1" colname="col1"/>
+          <colspec colnum="2" colname="col2"/>
+          <colspec colnum="3" colname="col3"/>
+          <tbody>
+            <row>
+              <entry><b>Компонент связующего элемента</b></entry>
+              <entry><b>Тип связи</b></entry>
+              <entry><b>Связуемый элемент</b></entry>
+            </row>
+            <row>
+              <entry morerows="2">Порт внутреннего узла</entry>
+              <entry morerows="2">
+                <p>соединительная линия </p>
+                <p>(гидравлическая связь)</p>
+              </entry>
+              <entry>
+                
+                 
+                    группа <i>Узлы</i>:
+                  
+                
+                <ul id="ul_tvl_gsl_sy">
+                  <li>граничный узел P; </li>
+                  <li>граничный узел G.</li>
+                </ul>
+              </entry>
+            </row>
+            <row>
+              <entry>
+                группа <i>Каналы</i>:
+                
+                <ul id="ul_uvl_gsl_sy">
+                  <li>канал общего вида; </li>
+                  <li>прямая труба; </li>
+                  <li>межтрубное пространство; </li>
+                  <li>фиктивный канал.</li>
+                </ul>
+              </entry>
+            </row>
+            <row>
+              <entry>
+               группа <i>Теплообмен</i>:
+                <ul id="ul_vvl_gsl_sy">
+                  <li>тепловое граничное условие; </li>
+                  <li>теплообменник кожухотрубный тип 1 TPP; </li>
+                  <li>теплообменник кожухотрубный тип 2 TPP.</li>
+                </ul>
+              </entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></p>
+    <p><b>3.2.2Свойства элемента</b></p>
+    <p>Характеристики <b>Внутреннего узла</b> и начальные условия для расчета задаются в закладке
+        <i>Свойства</i> редактора свойств объекта (см. Таблица 4.2.2.7). </p>
+    <p><b>Таблица 4.2.2.7</b> Параметры внутреннего узла <table id="table3">
+        <tgroup cols="4">
+          <colspec colnum="1" colname="col1"/>
+          <colspec colnum="2" colname="col2"/>
+          <colspec colnum="3" colname="col3"/>
+          <colspec colnum="4" colname="col4"/>
+          <thead>
+            <row>
+              <entry><b>Параметр</b></entry>
+              <entry><b>Имя/ Идентификатор</b></entry>
+              <entry><b>Тип переменной</b></entry>
+              <entry><b>Интервал возможных значений</b></entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>Начальная энтальпия</entry>
+              <entry>Start_ent</entry>
+              <entry>R</entry>
+              <entry>> 0</entry>
+            </row>
+            <row>
+              <entry>Гидравлический диаметр</entry>
+              <entry>Gidr_D</entry>
+              <entry>R</entry>
+              <entry>> 0</entry>
+            </row>
+            <row>
+              <entry>Толщина стенки</entry>
+              <entry>Sten</entry>
+              <entry>R</entry>
+              <entry>> 0</entry>
+            </row>
+            <row>
+              <entry>Проходное сечение</entry>
+              <entry>Sechen</entry>
+              <entry>R</entry>
+              <entry>? 0</entry>
+            </row>
+            <row>
+              <entry>Длина участка</entry>
+              <entry>Dlina</entry>
+              <entry>R</entry>
+              <entry>? 0</entry>
+            </row>
+            <row>
+              <entry>Поверхность теплообмена</entry>
+              <entry>F</entry>
+              <entry>R</entry>
+              <entry>? 0</entry>
+            </row>
+            <row>
+              <entry>Высотная отметка</entry>
+              <entry>Z</entry>
+              <entry>R</entry>
+              <entry>[-1, 1]</entry>
+            </row>
+            <row>
+              <entry>Начальная конц. бора</entry>
+              <entry>bor</entry>
+              <entry>R</entry>
+              <entry>? 0</entry>
+            </row>
+            <row>
+              <entry>Материал</entry>
+              <entry>Material</entry>
+              <entry>T</entry>
+              <entry>[18ХН9Т, Ст20]</entry>
+            </row>
+            <row>
+              <entry>Координата X</entry>
+              <entry>X</entry>
+              <entry>R</entry>
+              <entry>любое</entry>
+            </row>
+            <row>
+              <entry>Координата Y</entry>
+              <entry>Y</entry>
+              <entry>R</entry>
+              <entry>любое</entry>
+            </row>
+            <row>
+              <entry>Начальное давление</entry>
+              <entry>Start_pres</entry>
+              <entry>R</entry>
+              <entry>> 0</entry>
+            </row>
+            <row>
+              <entry>Коэффициент сопротивления</entry>
+              <entry>Soprot</entry>
+              <entry>R</entry>
+              <entry>>= 0</entry>
+            </row>
+            <row>
+              <entry>Другой теплоноситель</entry>
+              <entry>IsMainNode</entry>
+              <entry>P</entry>
+              <entry>[нет, да]</entry>
+            </row>
+            <row>
+              <entry>Тип теплоносителя</entry>
+              <entry>FluidType</entry>
+              <entry>T</entry>
+              <entry>[Воздух, Гелий, Масло, Свинец]</entry>
+            </row>
+            <row>
+              <entry>Зафиксировать индекс</entry>
+              <entry>is_const_index</entry>
+              <entry>P</entry>
+              <entry>[нет, да]</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></p>
+  </body>
+</topic>

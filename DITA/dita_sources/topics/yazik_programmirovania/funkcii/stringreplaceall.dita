@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>stringreplaceall </title>
+<shortdesc>Функция замены текста.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>rs = <funcname>stringreplaceall</funcname>(SourceString, OldPattern, NewPattern);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>SourceString – исходная текстовая строка;</p>
+      <p>OldPattern – выражение, которое необходимо заменить;</p>
+      <p>NewPattern – выражение, которым необходимо заменить. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>stringreplaceall</codeph> – функция позволяет произвести замену фрагмента текста
+          <codeph>OldPattern</codeph> на фрагмент <codeph>NewPattern</codeph> внутри строки
+          <codeph>SourceString</codeph>. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>rs - функция возвращает итоговую строку, получившуюся после проведенной замены в строке
+          <codeph>SourceString</codeph>.</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock>rs = <funcname>StringReplaceAll</funcname>(<funcname>DBGetGroupNames</funcname>("Датчики"), Chr(13),";");</codeblock></section>
+<p>В результате выполнения данного скрипта, переменная rs получит текстовое значение, состоящее из
+      перечисления, через точку с запятой, имен групп сигналов в категории
+        <uicontrol>Датчики</uicontrol>. </p>  
+  </body>
+</topic>

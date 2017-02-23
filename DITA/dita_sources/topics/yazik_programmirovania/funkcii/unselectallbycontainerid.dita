@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>unselectallbycontainerid </title>
+<shortdesc>Функция снятия выделения в указанном контейнере </shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock>group_id = <funcname>unselectallbycontainerid</funcname>(page_id);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>page_id – идентификатор страницы, на которой необходимо снять выделение. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>unselectallbycontainerid</codeph> – функция снимает выделения объектов на странице с
+        идентификатором <codeph>page_id</codeph>. </p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><funcname>selectallbycontainerid</funcname>(<funcname>getcurrentpageid</funcname>);
+<kword>if</kword> a=1 <kword>then</kword> <funcname>creategroupbyselectedobjects</funcname>(<funcname>getcurrentpageid</funcname>,1) <kword>else</kword>
+<funcname>unselectallbycontainerid</funcname>(<funcname>getcurrentpageid</funcname>);</codeblock></section>
+<p>В результате выполнения данного скрипта происходит выделение всех объектов, расположенных на
+      текущей активной странице и если переменная <codeph>а</codeph>=1, то объекты выделяются в
+      группу. В противном случае выделение снимается. </p>  
+  </body>
+</topic>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Фазовый портрет</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/1010.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/1010s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок имеет два входа, реализует отображение текущих результатов моделирования на фазовой
+      плоскости для одной пары или одновременно для нескольких пар фазовых переменных. Может
+      использоваться как при локальном моделировании, так и при удаленной отладке, для отображения
+      значений сигналов, вычисленных на целевой системе. Блок имеет два векторизованных входа: для
+      каждой точки значение абсциссы берётся с первого входа, значение ординаты – со второго входа.
+      Размерности входных сигналов должны быть одинаковыми. Блок использует графическое окно,
+      аналогичное блоку Временной график. Размерности входов должны совпадать.</p>
+    <section><title>Входы</title>
+    <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>inport1</uicontrol> - вход для значений абсцисс;</li>
+          <li><uicontrol>inport2</uicontrol> - вход для значений ординат.</li>
+        </ul>
+      </p></section>
+    <section><title>Выходы</title>
+      <p>нет</p></section>
+    <section><title>Свойства:</title>
+      <p>нет</p></section>
+    <section><title>Параметры</title>
+      <p>
+        <ul id="ul_t3c_l3t_2y">
+          <li><uicontrol>Вход1</uicontrol> - вектор значений по оси абсцисс;</li>
+          <li><uicontrol>Вход2</uicontrol> - вестор значений по оси ординат.</li>
+        </ul>
+      </p></section>
+    
+  </body>
+</topic>

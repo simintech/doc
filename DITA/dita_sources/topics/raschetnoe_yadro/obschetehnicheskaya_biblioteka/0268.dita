@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>МНК-аппроксимация</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/0268.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/0268s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок предназначен для аппроксимации таблично заданных функций методом наименьших квадратов
+      (МНК). Блок имеет три векторных входа и два векторных выхода.</p>
+    <section><title>Входы</title>
+      <ul id="ul_z5d_h3t_2y">
+        <li><uicontrol>args_table</uicontrol> - порт для массива значений аргументов таблично
+          заданных функций размерностью <i>N</i><sub><i>pnt</i></sub>.</li>
+        <li><uicontrol>func_table</uicontrol> - порт для массива значений таблично заданных функций
+          размерностью <i>N<sub>pnt</sub></i>&#215;<i>N<sub>fun</sub>
+          </i>(таким образом, может одновременно проводится аппроксимация нескольких функций,
+          заданных в одних и тех же точках по независимому аргументу).  </li>
+        <li><uicontrol>args</uicontrol> - порт для массива точек аргументов размерностью
+              <i>N<sub>arg</sub></i>, в которых необходимо вычислить значение аппроксимируемых
+          функций.</li>
+      </ul></section>
+    <section><title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>output</uicontrol> - порт для вычисленных после проведения аппроксимации
+            значений функций в точках, заданных в третьем входном порте. Размер этого выхода равен
+                <i>N<sub>arg</sub></i>&#215;<i>N<sub>fun</sub></i>.</li>
+          <li><uicontrol>approx_koeff</uicontrol> - порт для вывода значений коэффициентов
+            аппроксимирующих полиномов (в порядке возрастания степеней). Размер этого выхода равен
+              (<i>Order</i>+1)⋅<i>N<sub>fun</sub></i>.</li>
+        </ul>
+      </p></section>
+    <section><title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Функция формы</uicontrol>:<ol id="ol_hdk_hty_gy">
+              <li>Полином <i>a</i>[<i>m</i>]⋅<i>x<sup>m</sup></i>, <i>m</i>=0...<i>Order</i>.</li>
+              <li><i>a</i>[<i>m</i>]⋅sin(<i>m</i>⋅<i>π</i>⋅<i>x</i>),
+                <i>m</i>=0...<i>Order</i>.</li>
+              <li><i>a</i>[<i>m</i>]⋅(1-<i>x</i>)⋅<i>x</i><sup><i>m</i></sup>,
+                  <i>m</i>=0...<i>Order</i>.</li>
+            </ol></li>
+          <li>Порядок аппроксимации – <i>Order</i>;</li>
+          <li>Число точек аппроксимируемой функции – <i>N<sub>pnt</sub></i>;</li>
+          <li>Число функций – <i>N<sub>fun</sub></i>.</li>
+        </ul>
+      </p></section>
+    <section><title>Параметры</title>
+      <p>нет</p></section>
+    
+  </body>
+</topic>

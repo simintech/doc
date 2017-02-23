@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Межтрубное пространство</title>
+  <body>
+    <p><b>Межтрубное пространство - </b>упрощенная модель <i>Канала
+          общего вида</i> круглого сечения, моделирует прямолинейный не имеющий поворотов
+      участок трубопровода. Каждому элементу теплогидравлический расчетныйм код ТПП по умолчанию
+      задает имя, например, InterTube16, которое может быть изменено пользователем. </p>
+    <p>Данным элементом удобно моделировать прямолинейные участки трубопроводов, имеющие любую
+      ориентацию в пространстве. </p>
+    <p><b>Межтрубное пространство</b>- <i>ориентированный</i> элемент. Направление течения фаз
+      теплоносителя от входа к выходу считается положительным, в обратном направлении –
+      отрицательным; скорости фаз имеют соответствующие знаки. </p>
+    <p><b>Межтрубное пространство</b><b>-</b><i>распределенный</i> элемент, который в общем случае
+      может быть разбит на расчетные ячейки. Их количество и размеры определяются в соответствующем
+      разделе редактора свойств объекта (см. Таблица 4.8.2.17). </p>
+    <ul id="ul_m1j_xxl_sy">
+      <li><b>3.8.1Разрешенные связи элемента</b></li>
+    </ul>
+    <p><b>Межтрубное пространство </b>связывается с элементами других типов. Разрешенные формы
+      представления указаны ниже (см. Таблица 4.8.1.16). </p>
+    <p><b>Таблица 4.8.1.16</b> Соединение межтрубного пространства с другими элементами </p>
+    <table id="table_n1j_xxl_sy">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <thead>
+          <row>
+            <entry><b>Компонент связующего элемента</b></entry>
+            <entry><b>Тип связи</b></entry>
+            <entry><b>Связуемый элемент</b></entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry morerows="2">
+              <p>Вход/ выход </p>
+              <p>прямой трубы</p>
+            </entry>
+            <entry morerows="2">
+              <p>соединительная линия </p>
+              <p>(гидравлическая связь)</p>
+            </entry>
+            <entry>Узел любого типа</entry>
+          </row>
+          <row>
+            <entry>Канал любого типа</entry>
+          </row>
+          <row>
+            <entry>Любой тип бака</entry>
+          </row>
+          <row>
+            <entry morerows="1">Расчетная область (тело) прямой трубы</entry>
+            <entry morerows="1">подчиненный элемент</entry>
+            <entry>Любой элемент турбонасосных
+              агрегатов</entry>
+          </row>
+          <row>
+            <entry>Любой тип арматуры</entry>
+          </row>
+          <row>
+            <entry>Тепловой порт</entry>
+            <entry>
+              <p>Соединительная линия </p>
+              <p>(тепловая связь)</p>
+            </entry>
+            <entry>
+              <p>Группа <i>Каналы</i>:</p>
+              <ul id="ul_o1j_xxl_sy">
+                <li>Канал общего вида; </li>
+                <li>Прямая труба; </li>
+                <li>Межтрубное пространство.</li>
+              </ul>
+              <p>Группа <i>Баки</i>:</p>
+              <ul id="ul_p1j_xxl_sy">
+                <li>Компенсатор 2-х объемный; </li>
+                <li>Компенсатор 3-х объемный.</li>
+              </ul>
+              <p>Группа <i>Теплообмен</i>:</p>
+              <ul id="ul_q1j_xxl_sy">
+                <li>Тепловое граничное условие</li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Особенности описания соединения <b>Межтрубного пространства</b> с другими элементами
+      приведены ниже (см. п. 3.8.2.1). </p>
+    <ul id="ul_r1j_xxl_sy">
+      <li><b>3.8.2 Свойства элемента</b></li>
+    </ul>
+    <p>Характеристики элемента <b>Межтрубное пространство </b>и начальные условия для расчета
+      задаются в закладке <i>Свойства</i><i>объекта</i> (см. Таблица 4.8.2.17). </p>
+    <p><b>Таблица 4.8.2.17 </b>Параметры межтрубного пространства </p>
+    <table id="table_s1j_xxl_sy">
+      <tgroup cols="4">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <colspec colnum="4" colname="col4"/>
+        <thead>
+          <row>
+            <entry><b>Параметр</b></entry>
+            <entry><b>Имя </b><b>(идентификатор)</b></entry>
+            <entry><b>Тип переменной</b></entry>
+            <entry><b>Интервал возможных значений</b></entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>Количество участков</entry>
+            <entry>Count</entry>
+            <entry>I</entry>
+            <entry>? 1</entry>
+          </row>
+          <row>
+            <entry>Количество трубок</entry>
+            <entry>nTube</entry>
+            <entry>I</entry>
+            <entry>? 1</entry>
+          </row>
+          <row>
+            <entry>Диаметр трубы</entry>
+            <entry>D</entry>
+            <entry>R</entry>
+            <entry>? 0</entry>
+          </row>
+          <row>
+            <entry>Длина трубы</entry>
+            <entry>Dlina</entry>
+            <entry>R</entry>
+            <entry>? 0</entry>
+          </row>
+          <row>
+            <entry>Толщина стенки</entry>
+            <entry>Sten</entry>
+            <entry>R</entry>
+            <entry>> 0</entry>
+          </row>
+          <row>
+            <entry>Тип решётки</entry>
+            <entry>RType</entry>
+            <entry>P</entry>
+            <entry>[Треугольная, Квадратная]</entry>
+          </row>
+          <row>
+            <entry>Шаг решётки</entry>
+            <entry>h</entry>
+            <entry>R</entry>
+            <entry>? 0</entry>
+          </row>
+          <row>
+            <entry>Перепад высот</entry>
+            <entry>dZ</entry>
+            <entry>R</entry>
+            <entry>? 0</entry>
+          </row>
+          <row>
+            <entry>Перепад по X</entry>
+            <entry>dX</entry>
+            <entry>R</entry>
+            <entry>? 0</entry>
+          </row>
+          <row>
+            <entry>Перепад по Y</entry>
+            <entry>dY</entry>
+            <entry>R</entry>
+            <entry>? 0</entry>
+          </row>
+          <row>
+            <entry>Прямое местное сопротивление</entry>
+            <entry>Soprot</entry>
+            <entry>R</entry>
+            <entry>? 0</entry>
+          </row>
+          <row>
+            <entry>Начальная конц. бора</entry>
+            <entry>Bor</entry>
+            <entry>R</entry>
+            <entry>? 0</entry>
+          </row>
+          <row>
+            <entry>Обратное местное сопротивление</entry>
+            <entry>InvSopr</entry>
+            <entry>R</entry>
+            <entry>? 0</entry>
+          </row>
+          <row>
+            <entry>Материал</entry>
+            <entry>Material</entry>
+            <entry>T</entry>
+            <entry>[18ХН9Т, Ст20]</entry>
+          </row>
+          <row>
+            <entry>Тепловая связь</entry>
+            <entry>Nheatport</entry>
+            <entry>P</entry>
+            <entry>[нет, да]</entry>
+          </row>
+          <row>
+            <entry>Массив элементов тепловой связи</entry>
+            <entry>HeatElements</entry>
+            <entry>I, ARR</entry>
+            <entry>> 0</entry>
+          </row>
+          <row>
+            <entry>Начальный расход</entry>
+            <entry>G0</entry>
+            <entry>R</entry>
+            <entry>? 0</entry>
+          </row>
+          <row>
+            <entry>Номера выводимых элементов</entry>
+            <entry>OutArray</entry>
+            <entry>I</entry>
+            <entry>[1, Self Count]</entry>
+          </row>
+          <row>
+            <entry>Шероховатость 1-й структуры</entry>
+            <entry>Rz1</entry>
+            <entry>R</entry>
+            <entry>> 0</entry>
+          </row>
+          <row>
+            <entry>Зафиксировать индекс</entry>
+            <entry>is_const_index</entry>
+            <entry>P</entry>
+            <entry>[нет, да]</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Массив формата [1,2,3,4] показывает с каким элементом чужого канала соединяется <b>Межтрубное
+        пространство</b>. </p>
+    <ul id="ul_t1j_xxl_sy">
+      <li><b><i>3.8.2.1 Особенности соединения межтрубного пространства</i></b></li>
+    </ul>
+    <p>Для создания тепловой связи <b>Межтрубного пространства</b> с другим элементом следует
+      выполнить определенную последовательность действий. Зайти в свойства объекта (см. Таблица
+      4.8.2.17), в соответствующей строке параметров в выпадающем меню выбрать значение «<b>Да</b>»
+      (см. Рисунок 4.8.41). </p>
+    <image placement="break" href="tpp_images/tpp_html_m11d314fa.png" align="center"
+      id="image_tyg_lyl_sy"/>
+    <p><b>Рисунок 4.8.41</b> Задание теплового порта межтрубного пространства</p>
+    <p>При закрытии окна редактирования свойств объекта кнопкой «Применить» или «Пуск» на
+      изображении <b>Прямой трубы</b> на технологической блок-схеме появится красная точка –
+      тепловой порт HEATPORT (см. Рисунок 4.8.42). </p>
+    <image placement="break" href="tpp_images/tpp_html_130fcc8d.png" align="center"
+      id="image_o2j_myl_sy"/>
+    <p><b>Рисунок 4.8.42</b> Графическое отображение теплового порта межтрубного пространства</p>
+    <p>При выборе данной точки левой клавишей «мыши» появится соединительная линия красного цвета.
+      Она предназначена для связи теплового порта с другим тепловым портом или единственным портом
+          <i>Теплового граничного условия TPP</i> (см. Рисунок
+      4.8.43). </p>
+    <image placement="break" href="tpp_images/tpp_html_405fb2ef.png" align="center"
+      id="image_e1k_nyl_sy"/>
+    <p><b>Рисунок 4.8.43</b> Тепловая связь межтрубного пространства</p>
+    <p>В общем случае тепловой порт может быть соединен либо с другим тепловым портом, либо с
+          <i>Тепловым граничным условием</i> или <i>Компенсатором 2-х объемным/ Компенсатор 3-х объемным</i>. С <i>Фиктивным
+          каналом TPP</i> тепловой порт не соединяется.</p>
+    <p>Пример применения элемента <i>Межтрубное
+        пространство </i>для создания Теплообменника
+        смешивающего типа.</p>
+  </body>
+</topic>

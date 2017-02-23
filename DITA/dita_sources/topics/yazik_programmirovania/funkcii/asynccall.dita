@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>asynccall </title>
+<shortdesc>Выполнение произвольной функции асинхронно. </shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>asynccall</funcname>(func)</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>func - произвольная функция в соответствие с ее синтаксисом.</p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>asynccall</codeph> – функция позволяет запустить произвольную функцию (процедуру) в
+        асинхронном режиме, то есть продолжить выполнение скрипта не дожидаясь завершения ее
+        функции.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>нет</p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>function</kword> <funcname>func1</funcname>(x)
+     func1 = <funcname>sin</funcname>(x*<kword>time</kword>);
+<kword>end</kword>;
+
+<funcname>asynccall</funcname>(<funcname>func1</funcname>(10));
+…</codeblock></section>
+<p>В примере объявляется пользовательская функция, после чего происходит ее асинхронный вызов и
+      сразу же продолжается выполнение скрипта. Выполнение функции <codeph>func1</codeph> происходит
+      в общем расчетном потоке. </p>  
+  </body>
+</topic>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>HS – Из памяти </title>
+  <body>
+    <table id="table_n43_gpy_sy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/2535/image001.png" height="32" width="32"
+                id="image_o43_gpy_sy"/></entry>
+            <entry><b>HS</b><b>– Из памяти</b></entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry><image href="images_old/2535/image002.png" height="41" width="152"
+                id="image_p43_gpy_sy"/></entry>
+            <entry> </entry>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry> </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p> </p>
+    <p>Блок организует продолжение линии связи, которая в другом месте схемы окончилась блоком «В
+      память», таким образом продолжая её без явного проведения линии связи на схеме.</p>
+    <p>Это бывает удобно, например, при создании сложных расчетных схем с разветвлёнными в
+      пространстве трубопроводами, либо в случае организации одной расчетной схемы на нескольких
+      листах.</p>
+  </body>
+</topic>

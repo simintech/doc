@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v4b_tyc_rf">
+<title>dbdelsignal </title>
+<shortdesc>Функция уничтожения сигнала в базе.</shortdesc>
+<body>
+<section>
+      <title>Синтаксис:</title>
+      <codeblock><funcname>dbdelsignal</funcname>(cat, group, signal);</codeblock>
+    </section>
+<section>
+      <title>Аргументы:</title>
+      <p>cat – переменная, типа string, содержащая имя категории, в которой содержится удаляемый
+        сигнал;</p>
+      <p>group – переменная типа string, содержащая имя группы сигналов внутри категории cat, в
+        которой содержится удаляемый сигнал;</p>
+      <p>signal – переменная типа string, содержащая имя удаляемого сигнала, содержащегося в группе
+        group и категории cat. </p>
+    </section>
+<section><title>Описание:</title>
+<p><codeph>dbdelsignal</codeph> – функция позволяет удалять определенные сигналы из подключенной к
+        проекту базы данных.</p></section>
+<section>
+      <title>Результат:</title>
+      <p>Функция возвращает число типа boolean: 1 – сигнал успешно удален, 0 – сигнал не была
+        удалена (не найден в указанной группе). </p>
+    </section>  
+<section><title>Пример:</title>
+<codeblock><kword>var</kword> nm1, nm2:<rword>string</rword>;
+nm1="cat1";
+nm2="group1";
+aaa=<funcname>dbdelgroup</funcname>(nm1, nm2);</codeblock></section>
+<p>В результате выполнения данного скрипта, из подключенной к проекту базы сигналов будет удалена
+      группа с именем «group1», расположенная в категории «cat1». </p>  
+  </body>
+</topic>

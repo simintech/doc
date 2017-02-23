@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Круговой интегратор</title>
+  <body>
+    <table frame="bottom" colsep="1" rowsep="0" id="table_rck_dts_2y">
+      <tgroup cols="3" align="center">
+        <colspec colname="c1" colnum="1" colwidth="1*"/>
+        <colspec colname="c2" colnum="2" colwidth="1.11*"/>
+        <colspec colname="newCol3" colnum="3" colwidth="50*"/>
+        <tbody>
+          <row>
+            <entry valign="bottom"><image placement="inline" href="images/0080.png"
+                id="image_rxc_2ts_2y"/></entry>
+            <entry valign="bottom"><image placement="inline" href="images/0080s.png"
+                id="image_hm4_2ts_2y"/></entry>
+            <entry valign="middle" align="left" morerows="1"><codeph>| Векторизован | Си
+              |</codeph></entry>
+          </row>
+          <row>
+            <entry valign="top"><codeph>в&#xA0;палитре</codeph></entry>
+            <entry valign="top"><codeph>на&#xA0;схеме</codeph></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <p>Блок векторизован, реализует математическую модель звена, динамика которого описывается
+      линейным обыкновенным дифференциальным уравнением (ОДУ) вида:<image placement="break"
+        href="images/0080_1.png" align="center" id="image_jdw_pby_3y"/>где
+        <i>x<sub>i</sub></i>(<i>t</i>) – i-ый элемент входного сигнала в блок, <i>k<sub>i</sub></i>
+      – элемент вектора коэффициентов усиления, <i>y<sub>i</sub></i>(<i>t</i>) – элемент выходного
+      сигнала из блока. Причем выходная функция <i>y<sub>i</sub></i>(<i>t</i>) принимает значение в
+      диапазоне от 0 до 2Pi, описывая движение выходной величины по замкнутой окружности При нулевых
+      начальных условиях динамика блока может быть представлена следующей передаточной
+        функцией:<image placement="break" href="images/0080_2.png" align="center"
+        id="image_kdb_yby_3y"/> поэтому в пиктограмме блока имеется изображение передаточной функции
+      идеального интегрирующего звена. </p>
+    <section>
+      <title>Входы</title>
+      <p>
+        <ul id="ul_z5d_h3t_2y">
+          <li><uicontrol>input</uicontrol> - входной сигнал.</li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <title>Выходы</title>
+      <p>
+        <ul id="ul_l4p_sht_2y">
+          <li><uicontrol>output</uicontrol> - выходной преобразованный сигнал.</li>
+        </ul>
+      </p>
+    </section>
+    <section><title>Свойства:</title>
+      <p>
+        <ul id="ul_gmt_j3t_2y">
+          <li><uicontrol>Коэффициенты усиления</uicontrol> – вектор коэффициентов
+              <i>k<sub>i</sub></i>, на который умножается входная величина;</li>
+          <li><uicontrol>Начальные условия</uicontrol> – вектор начальных значений
+              <i>y<sub>i</sub></i>(0) выходной величины блока.  </li>
+        </ul>
+      </p></section>
+    <section><title>Параметры</title>
+      <p>
+        <ul id="ul_t3c_l3t_2y">
+          <li><uicontrol>Динамические переменные</uicontrol> - внутренние переменные состояния
+            блока;</li>
+          <li><uicontrol>Производные</uicontrol> - внутренние переменные состояния блока.</li>
+        </ul>
+      </p>
+      <note>по умолчанию блок реализует интегрирование скалярного входного сигнала.</note></section>
+    
+  </body>
+</topic>

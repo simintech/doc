@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_x5n_gv5_qf">
+  <title>Свойства воды и пара на линии насыщения </title>
+  <body>
+    <table id="table_l2b_wj4_qy">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry><image href="images_old/0353.png" height="32" width="32" id="image_m2b_wj4_qy"
+              /></entry>
+            <entry>Свойства воды и пара на линии насыщения</entry>
+          </row>
+          <row>
+            <entry>в палитре</entry>
+            <entry>| скалярный |</entry>
+          </row>
+          <row>
+            <entry><image href="images_old/0353s.png" height="67" width="133" id="image_n2b_wj4_qy"
+              /></entry>
+            <entry/>
+          </row>
+          <row>
+            <entry>на схеме</entry>
+            <entry/>
+          </row>
+          <row>
+            <entry namest="col1" nameend="col2">
+              <p>Блок производит вычисление свойств воды или водяного пара по давлению на линии
+                насыщения.</p>
+              <p><b>Свойства:</b></p>
+              <ul id="ul_o2b_wj4_qy">
+                <li>
+                  <p>Фаза – фазовое состояние для которого рассчитываются свойства (вода, пар или
+                    смесь).</p>
+                </li>
+                <li>
+                  <p>Выходные значения – список рассчитываемых блоком параметров на выходе.</p>
+                </li>
+                <li>
+                  <p>Начальное давление – значение давления, соотвествующее нулю на входе.</p>
+                </li>
+              </ul>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </body>
+</topic>
